@@ -1,0 +1,248 @@
+{
+  "ticker": "ORVR3",
+  "name": "Orizon Valorização de Resíduos S.A. (OrizonVR)",
+  "sector": "Saneamento/resíduos – ecoparques, gestão integrada, biometano e créditos de carbono",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "ORVR3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "revenue_2025": 3400.0,
+      "net_debt": 2339.0,
+      "shares_outstanding_mn": 624.9
+    },
+    "notes": "(1) Incorporação da Vital/GBio/Orbis concluída em 11/06/2026: a CVM só consolida 1 mês da Vital e inclui receita de construção (ICPC-01). Receita-base 2025 = pró-forma combinada ajustada ex-ICPC-01 ≈ R$ 3.400 mi (Orizon legado CVM R$ 1.050 mi + Vital ~R$ 2.350 mi estimada a partir do 2T25 pró-forma de R$ 572,7 mi; a companhia não divulgou o anual da Vital no release). (2) Dívida líquida = R$ 2.241 mi da companhia (dívida bruta R$ 3.785,5 mi − caixa R$ 1.544,3 mi) + arrendamentos R$ 98 mi; a CVM soma R$ 276 mi de impostos/fornecedores marcados por erro dentro da conta 2.02.01 (ND CVM 2.588 superestimada). (3) Ações: CVM traz 137.324 (em milhares, pré-desdobramento). Desdobramento 1:4 em 11/08/2026 → 549,3 mi; somo 75,6 mi de ações dos bônus ORVR11 (preço de exercício R$ 13,2325 pós-split; janela mai–set/2027; ~R$ 1,0 bi) = 624,9 mi diluídas, com a entrada de R$ 1.000 mi em 2027 em equity_issuance_mn."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.165,
+      0.14,
+      0.11,
+      0.09,
+      0.08
+    ],
+    "ebitda_margin": [
+      0.32,
+      0.345,
+      0.36,
+      0.37,
+      0.375
+    ],
+    "da_pct_revenue": [
+      0.085,
+      0.09,
+      0.095,
+      0.095,
+      0.095
+    ],
+    "capex_pct_revenue": [
+      0.3,
+      0.22,
+      0.16,
+      0.13,
+      0.12
+    ],
+    "nwc_pct_revenue": 0.1,
+    "cost_of_net_debt": [
+      0.145,
+      0.15,
+      0.145,
+      0.14,
+      0.13
+    ],
+    "other_financial": [
+      30,
+      30,
+      25,
+      20,
+      15
+    ],
+    "tax_rate": [
+      0.28,
+      0.29,
+      0.3,
+      0.3,
+      0.3
+    ],
+    "minority_share_ni": 0.23,
+    "payout": [
+      0.0,
+      0.15,
+      0.25,
+      0.35,
+      0.4
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      1000,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.055,
+    "roic": 0.14,
+    "roe": 0.15
+  },
+  "wacc": {
+    "kd_pre_tax": 0.155,
+    "target_debt_weight": 0.25
+  },
+  "adjustments": {
+    "other_debt_like": 30.0,
+    "non_operating_assets": 1310.0,
+    "minority_value": 1200.0,
+    "notes": "non_operating_assets = R$ 470 mi + R$ 840 mi. R$ 840 mi = valor presente (a 25%, ~0,8 ano) dos ~R$ 1,0 bi do exercício dos bônus ORVR11 (ações já diluídas; DCF e EV/EBITDA usam a dívida pré-emissão). R$ 470 mi = valor presente (~60% do saldo) do recebível da Ecourbis contra a Prefeitura de SP (reequilíbrio de 2024; R$ 784,3 mi corrigidos por IPCA em 120 parcelas mensais) — fora do EBITDA e excluído da dívida líquida pela companhia. other_debt_like = outorgas a pagar (R$ 29 mi). minority_value econômico (não o contábil de R$ 401 mi): minoritários detêm ~32% do EBITDA da Vital (Ecourbis 36,7%, Recife 30%, Titara/São Luís 50% etc.) e ~10% do legado → ~23–25% do lucro; R$ 1.200 mi ≈ 25% do equity consolidado médio entre DCF a Ke 25% (~R$ 1,4 bi) e múltiplos de mercado (~R$ 11 bi), ponderado 2:1 — estimativa."
+  },
+  "target_multiples": {
+    "pe": 18.0,
+    "ev_ebitda": 9.0,
+    "pbv": 1.8,
+    "rationale": "OrizonVR negociou ~10–13x EV/EBITDA (ativo de infraestrutura com contratos longos e opcionalidade de biometano/carbono); pares globais de resíduos (Waste Management, Republic) 13–16x. Uso 9x EV/EBITDA e 18x P/L (lucro deprimido por D&A e juros) pelo juro real alto e pela integração da Vital."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.03,
+      "ebitda_margin_shift": -0.025,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.02,
+      "narrative": "Atraso no ramp-up das 7 plantas de biometano, sinergias da Vital não vêm e bônus não são exercidos (sem R$ 1 bi)."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.015,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Mandato de biometano (Combustível do Futuro) e mercado regulado de carbono valorizam o biogás; novas concessões de gestão integrada."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.03,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.015
+  },
+  "debt_profile": {
+    "gross_debt_mn": 3786,
+    "pct_floating_cdi": 0.6,
+    "avg_cost": "Debêntures CDI+ e IPCA+ (Orizon); Vital trouxe linhas bancárias curtas e financiamentos de equipamentos prefixados >15% a.a.",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -10,
+    "notes": "~60% da dívida bruta estimada pós-fixada (CDI) e parte IPCA; com caixa de R$ 1,5 bi em CDI, exposição líquida ~R$ 0,8 bi → −R$ 8 a −12 mi/ano no lucro por +100 bp (estimativa; % CDI não divulgado no release). Juro real alto pesa mais via valuation."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.218,
+    "ebitda_margin_avg_5y": 0.404,
+    "roe_avg_5y": -0.084,
+    "payout_avg_5y": 0.0,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.173,
+      "ebitda_margin": 0.287,
+      "net_income_mn": 103.1,
+      "net_debt_ebitda": 1.8
+    },
+    "notes": "Histórico (Orizon legado) não é comparável: margem EBITDA 45–47% em 2023–25 vs. ~29–34% do combinado com a Vital (gestão integrada e coleta, intensivas em mão de obra). 2T26 = pró-forma combinado ajustado (receita R$ 981,7 mi, EBITDA aj. R$ 281,7 mi, lucro aj. R$ 103,1 mi; contábil R$ 26,1 mi). Projeto crescimento de 16,5%→8% (ramp-up de biometano: 3 plantas operando, 7 em construção; LRCAP R$ 79 mi/ano; reajustes reais de gate-fee) e margem 31%→37%. ROE histórico negativo (prejuízos 2021–22); nunca pagou dividendos."
+  },
+  "guidance": "Sem guidance numérico. Alavancagem reportada 1,8x DL/EBITDA LTM pró-forma (R$ 1.239,5 mi). Bônus ORVR11 (~R$ 1,0 bi, mai–set/2027), 7 plantas de biometano e URE Barueri entrando a partir do fim de 2026; aquisição de 51% do aterro de Rondonópolis (EV R$ 45,4 mi). Gestão sinaliza que dividendos podem entrar na alocação de capital com a desalavancagem.",
+  "dividend_policy": "Nunca distribuiu dividendos relevantes (mínimo estatutário de 25% sobre lucro ajustado, absorvido por prejuízos acumulados — lucros acumulados ainda negativos em R$ 720 mi). Release do 2T26: dividendos 'podem passar a compor a estratégia'. Projeto 0% em 2026 subindo a 40% em 2030.",
+  "election_impact": "Queda de −25% é basicamente prêmio de risco/juro real: ativo de infraestrutura de prazo longo (contratos e concessões de 20–30 anos) e capex pesado, valorado por fluxo distante. Fundamental: a dívida (~R$ 2,3 bi) é em grande parte CDI/IPCA — custo sobe, mas contratos e gate-fees são indexados à inflação (ganho real de 3,8% no 2T26). Um 4º mandato de Lula é, no micro, neutro a positivo: agenda verde (Combustível do Futuro com mandato de biometano, mercado regulado de carbono — Lei 15.042/2024, ITMOs), fechamento de lixões e novas PPPs/concessões municipais, crédito do BNDES/Fundo Clima. Riscos: municípios (contraparte) com aperto fiscal e Ecourbis dependente da Prefeitura de SP. O valor intrínseco mudou pouco; o preço reflete o custo de capital.",
+  "summary": "Após incorporar a Vital, virou a maior plataforma de resíduos da América Latina (30 ecoparques, 3,9 Mt/trimestre), com EBITDA pró-forma LTM de R$ 1,24 bi e alavancagem de 1,8x. Crescimento contratado em biometano e créditos de carbono, mas capex alto, minoritários relevantes e retorno sobre capital ainda baixo; a 25% de Ke não sobra margem de segurança.",
+  "thesis": [
+    "Ativo quase monopolista regional (aterros licenciados) com gate-fee indexado e ganho real (R$ 90,4/t, +3,8% real a/a no 2T26).",
+    "Biometano: 130 mil m³/dia no 2T26 (Jaboatão >85 mil e Paulínia >100 mil m³/dia já em ago/26) + 7 plantas em construção com off-taker contratado.",
+    "Desalavancagem: bônus ORVR11 trazem ~R$ 1,0 bi em 2027; LRCAP de R$ 79 mi/ano de receita fixa (IPCA, 10 anos).",
+    "Sinergias com a Vital (suprimentos, G&A, biogás nos aterros incorporados) ainda não estão no número."
+  ],
+  "risks": [
+    "Execução e ramp-up das plantas de biometano (curvas dependem das redes de gás dos off-takers).",
+    "Minoritários relevantes (~25% do lucro) e governança pós-fusão (Growth/Queiroz Galvão como novo acionista relevante, Gama FIP).",
+    "Contraparte municipal (gestão integrada, Ecourbis/Prefeitura de SP) e risco regulatório de concessões.",
+    "Capex elevado (~R$ 1,2–1,3 bi em 2026) e ROIC ainda baixo; diluição dos bônus a R$ 13,23.",
+    "Preço de créditos de carbono voluntários deprimido."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (meados de nov/2026) — primeiro trimestre cheio com a Vital",
+    "Entrada em operação de Itapevi, Tremembé, Macaúbas, Juiz de Fora e expansão da Metagás (2026/27)",
+    "Exercício dos bônus ORVR11 (mai–set/2027)",
+    "Regulamentação do mandato de biometano e do SBCE"
+  ],
+  "key_data": [
+    {
+      "label": "Receita pró-forma 2T26",
+      "value": "R$ 981,7 mi",
+      "context": "+17,3% a/a (ajustada ex-ICPC-01); legado R$ 349,1 mi, Vital R$ 632,5 mi"
+    },
+    {
+      "label": "EBITDA ajustado pró-forma 2T26",
+      "value": "R$ 281,7 mi (28,7%)",
+      "context": "LTM pró-forma R$ 1.239,5 mi"
+    },
+    {
+      "label": "Dívida líquida 2T26",
+      "value": "R$ 2.241 mi",
+      "context": "1,8x EBITDA; exclui recebível Ecourbis de R$ 784 mi"
+    },
+    {
+      "label": "Biometano",
+      "value": "130,3 mil m³/dia",
+      "context": "2T26; 3 plantas operando e 7 em construção"
+    },
+    {
+      "label": "Ações",
+      "value": "549,3 mi (+75,6 mi dos bônus)",
+      "context": "desdobramento 1:4 em 11/08/2026"
+    },
+    {
+      "label": "Preço 26/10 ~12h",
+      "value": "R$ 15,72",
+      "context": "−24,6% no dia; sexta R$ 20,84; 30/06 R$ 19,78 ajustado"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Release de Resultados 2T26 OrizonVR (RI)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/9267dc34-24be-4623-bcda-2414abcbda9a/257e5556-4090-b46e-67bb-9e3c26c4251b?origin=2"
+    },
+    {
+      "title": "Release de Resultados 4T25 OrizonVR (RI)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/9267dc34-24be-4623-bcda-2414abcbda9a/5994b0b9-0b0f-fe5f-905a-94ca4ae36b2f?origin=2"
+    },
+    {
+      "title": "Central de Resultados OrizonVR",
+      "url": "https://ri.orizonvr.com.br/informacoes-financeiras/central-de-resultados/"
+    },
+    {
+      "title": "Dados CVM padronizados (data/hist/ORVR3.json)",
+      "url": "https://dados.cvm.gov.br/"
+    }
+  ],
+  "confidence": "baixa-média — base pró-forma combinada depende de estimativa do anual da Vital; valor econômico dos minoritários e do recebível Ecourbis são julgamentos; consenso não consultado (busca web esgotada)."
+}

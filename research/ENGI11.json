@@ -13,10 +13,10 @@
  ],
  "overrides": {
   "base": {
-   "revenue_2025": 29384.6,
-   "net_debt": 30779.0
+   "revenue_2025": 29129.6,
+   "net_debt": 31334.0
   },
-  "notes": "Receita-base = 'receita líquida ajustada' FY2025 do release 4T25 (R$ 29.384,6 mi): exclui receita de construção (ICPC 01, margem ~zero; DVA 7.01.03 = R$ 5.694 mi), VNR (ativo financeiro indenizável, não caixa, R$ 630 mi) e a receita societária da transmissão (substituída pela regulatória). CVM FY2025 = R$ 35.441 mi. EBITDA-base coerente = EBITDA ajustado recorrente FY2025 R$ 8.198 mi (27,9%). Dívida líquida-base = DL CVM 2T26 (R$ 32.879 mi, inclui arrendamentos) menos ~R$ 2,1 bi pró-forma da venda (reciclagem) de parte da transmissão por R$ 2,3 bi (ativos já classificados como mantidos para venda no 2T26; release diz redução de 0,2x DL/EBITDA). Unit = 1 ON + 4 PN (confirmado: R$ 0,10/ação = R$ 0,50/unit); 2.515,3 mi ações = 503,1 mi units equivalentes."
+  "notes": "Receita-base = 'receita líquida ajustada' FY2025 do release 4T25 (R$ 29.384,6 mi): exclui receita de construção (ICPC 01, margem ~zero; DVA 7.01.03 = R$ 5.694 mi), VNR (ativo financeiro indenizável, não caixa, R$ 630 mi) e a receita societária da transmissão (substituída pela regulatória). CVM FY2025 = R$ 35.441 mi. EBITDA-base coerente = EBITDA ajustado recorrente FY2025 R$ 8.198 mi (27,9%). Dívida líquida-base = DL CVM 2T26 (R$ 32.879 mi, inclui arrendamentos) menos ~R$ 2,1 bi pró-forma da venda (reciclagem) de parte da transmissão por R$ 2,3 bi (ativos já classificados como mantidos para venda no 2T26; release diz redução de 0,2x DL/EBITDA). Unit = 1 ON + 4 PN (confirmado: R$ 0,10/ação = R$ 0,50/unit); 2.515,3 mi ações = 503,1 mi units equivalentes. REVISÃO (red team G11, 26/10/2026): corrigida dupla contagem da venda dos 5 ativos de transmissão à Taesa (EV R$ 2.293 mi; equity ~R$ 1.545 mi; dívida líquida das SPEs R$ 748 mi; RAP ~R$ 291 mi). (1) A dívida das SPEs já saiu da DL CVM do 2T26 (IFRS 5: passivos mantidos para venda R$ 1.313 mi na conta 2.01.07.01, fora de 2.01.04/2.02.01; a DL da companhia de R$ 32.530 mi reconcilia com a CVM + derivativos − créditos setoriais, sem essa dívida). No fechamento, a DL cai só pelo equity recebido: DL-base 32.879 − 1.545 = R$ 31.334 mi, antes 30.779. Os '0,2x' do release equivalem ao EV inteiro (2.293/10.664), e parte disso já ocorreu na reclassificação. (2) O EBITDA regulatório dos ativos vendidos (~R$ 210 mi em 2025 = 74% da RAP, corrigido por IPCA) e a receita (ROL ~R$ 255 mi) foram retirados da base: revenue_2025 29.384,6 → 29.129,6 e margem −0,38 a −0,47 p.p. a cada ano. capex% e D&A% foram reescalonados para manter os valores em R$, porque os ativos estão operacionais e têm D&A societário ~0 (ativo de contrato). Original em research/review/ENGI11.orig.json."
  },
  "projection": {
   "years": [
@@ -34,25 +34,25 @@
    0.065
   ],
   "ebitda_margin": [
-   0.27,
-   0.28,
-   0.285,
-   0.29,
-   0.29
+   0.2653,
+   0.2756,
+   0.2808,
+   0.2861,
+   0.2862
   ],
   "da_pct_revenue": [
-   0.074,
-   0.076,
-   0.078,
-   0.08,
-   0.08
+   0.0746,
+   0.0767,
+   0.0787,
+   0.0807,
+   0.0807
   ],
   "capex_pct_revenue": [
-   0.22,
-   0.21,
-   0.2,
-   0.19,
-   0.18
+   0.2219,
+   0.2118,
+   0.2018,
+   0.1917,
+   0.1816
   ],
   "nwc_pct_revenue": 0.05,
   "cost_of_net_debt": [

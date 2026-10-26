@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, type ReactNode } from "react";
 import { HBarChart } from "@/components/charts/Bars";
 import { num, pct, signClass } from "@/lib/format";
-import { TestCharts } from "./TestCharts";
+import { AltCharts, ConsensusChart, CrashCharts, FactorCharts, PortfolioCharts, RobustCharts, SuiteTiles } from "./TestCharts";
 
 export function Md({ html, collapsed = true }: { html?: string; collapsed?: boolean }) {
   const [open, setOpen] = useState(!collapsed);
@@ -38,7 +38,7 @@ function Review({ rows }: { rows: any[] }) {
   const reviewed = rows.filter((r) => r.has_review);
   const changed = rows.filter((r) => r.changed);
   const deltas = changed
-    .filter((r) => r.before.irr !== null && r.after.irr !== null)
+    .filter((r) => r.before.irr !== null && r.after.irr !== null && Math.abs(r.after.irr - r.before.irr) >= 0.0005)
     .map((r) => ({ label: r.ticker, value: r.after.irr - r.before.irr, sub: `TIR ${pct(r.before.irr, 1)} → ${pct(r.after.irr, 1)}` }))
     .sort((a, b) => a.value - b.value);
   return (
@@ -114,11 +114,35 @@ function Review({ rows }: { rows: any[] }) {
   );
 }
 
+function Decisions({ data }: { data: any }) {
+  const rv = (data.review || []) as any[];
+  const changed = rv.filter((r) => r.changed).length;
+  const dropped = (data.dropped || []) as { ticker: string; reasons: string[] }[];
+  const items: [string, string][] = [
+    ["Premissas", `${changed} das ${rv.length} avaliações tiveram premissas corrigidas pela revisão independente; a conclusão de quem bate o Ke de 25% quase não mudou.`],
+    ["Pesos do valuation", "Incorporadoras passaram a DDM 50%, P/L-alvo 30% e DCF 20%; bancos a DDM 60% e P/VP 40%. Nos demais setores as duas baterias discordaram e o padrão 50/25/25 ficou."],
+    ["Escore multifator", "Momentum de 12 meses entrou com 10%; valor e qualidade cederam 5 p.p. cada. Pesos otimizados não se sustentaram fora da amostra."],
+    ["Seleção", `${(data.opportunities || []).join(", ")}.${dropped.length ? ` Saíram ${dropped.map((d) => d.ticker).join(" e ")}: chance de o valor justo superar o preço abaixo de 45%.` : ""}`],
+    ["Código e dados", "Corrigidos: escala das ações da CVM, ano reapresentado zerado, 4º trimestre com bases misturadas, TIR sem raiz, holdings fora do Ke escolhido e preços das controladas fixados na foto das 13h02."],
+  ];
+  return (
+    <div className="panel divide-y divide-hairline">
+      {items.map(([k, v]) => (
+        <div key={k} className="grid grid-cols-1 gap-1 px-4 py-3 sm:grid-cols-[180px_1fr] sm:gap-4">
+          <div className="text-[13px] font-semibold text-ink">{k}</div>
+          <div className="text-[13.5px] text-ink-2">{v}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function TestsView({ data, html, consensusHtml }: { data: any; html: Record<string, string>; consensusHtml: string[] }) {
   return (
     <div className="space-y-10">
       <nav className="no-print flex flex-wrap gap-1 text-[13px]">
         {[
+          ["decisoes", "O que mudou"],
           ["revisao", "Revisão independente"],
           ["fatores", "Backtest de fatores"],
           ["crashes", "Depois de crashes"],
@@ -133,32 +157,41 @@ export function TestsView({ data, html, consensusHtml }: { data: any; html: Reco
           </a>
         ))}
       </nav>
+      <Section id="decisoes" title="O que mudou no estudo por causa dos testes">
+        <Decisions data={data} />
+      </Section>
       <Section id="revisao" title="Revisão independente das 59 avaliações" sub="Um segundo analista por setor auditou premissas, contas e coerência com o histórico da CVM, corrigindo erros nos dois sentidos.">
         <Review rows={data.review || []} />
       </Section>
-      <TestCharts data={data} />
       <Section id="fatores" title="Backtest de fatores (2017–2026)" sub="Quais características previram retorno nas ações brasileiras, mês a mês, e que pesos funcionam fora da amostra.">
+        <FactorCharts f={data.factor} />
         <Md html={html.factor_backtest} />
       </Section>
-      <Section id="crashes" title="O que funcionou depois de outros crashes" sub="Joesley Day, Covid e outros dias de queda forte: que tipo de ação se recuperou mais.">
+      <Section id="crashes" title="O que funcionou depois de outros crashes" sub="Joesley Day, Covid, eleição de 2022 e outros dias de queda forte: que tipo de ação se recuperou mais.">
+        <CrashCharts c={data.crash} />
         <Md html={html.crash_study} />
       </Section>
-      <Section id="robustez" title="Robustez a pesos e premissas" sub="Quanto o ranking e as oportunidades mudam com os pesos do valuation, o Ke, a perpetuidade e os múltiplos.">
+      <Section id="robustez" title="Robustez a pesos e premissas" sub="Quanto o ranking e as oportunidades mudam com os pesos do valuation, o Ke, a perpetuidade, os múltiplos, a margem e o custo da dívida.">
+        <RobustCharts rb={data.robust} />
         <Md html={html.robustness} />
       </Section>
       <Section id="metodos" title="Métodos alternativos de valuation" sub="Lucro residual, EVA, APV, FCFE e múltiplos justificados contra os métodos do estudo.">
+        <AltCharts a={data.alt} />
         <Md html={html.alt_methods} />
       </Section>
       <Section id="carteira" title="Carteira e testes de estresse" sub="Como dimensionar as posições e o que acontece em cenários de juros, câmbio e bolsa.">
+        <PortfolioCharts p={data.portfolio} />
         <Md html={html.portfolio} />
       </Section>
-      <Section id="consenso" title="Comparação com o consenso de mercado" sub="Preços-alvo e lucros esperados pelos bancos contra o estudo, que usa Ke de 25%.">
+      <Section id="consenso" title="Comparação com o consenso de mercado" sub="Preços-alvo dos bancos contra o valor justo final do estudo, que usa Ke de 25%.">
+        <ConsensusChart rows={data.consensus || []} />
         {consensusHtml.map((h, i) => (
           <Md key={i} html={h} />
         ))}
       </Section>
       <Section id="suite" title="Testes automatizados do código" sub="Paridade do motor TypeScript com o Python, integridade dos dados da CVM e da B3, saídas do modelo e rotas do site.">
-        <Md html={html.test_report} collapsed={false} />
+        <SuiteTiles s={data.suite} />
+        <Md html={html.test_report} />
       </Section>
     </div>
   );

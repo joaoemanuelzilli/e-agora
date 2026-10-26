@@ -1,0 +1,238 @@
+{
+ "ticker": "GMAT3",
+ "name": "Grupo Mateus S.A.",
+ "sector": "Varejo alimentar multiformato (Norte/Nordeste) — atacarejo, varejo, atacado B2B, eletro",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "GMAT3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 5252
+  },
+  "notes": "PROBLEMA DE DADO: o pipeline CVM não capturou o passivo de arrendamento IFRS-16 do Mateus, que está em 2.01.05.02.05 'Passivos de arrendamento CP' (R$ 250,9 mi) e 2.02.02.02.03 'Passivos de arrendamento LP' (R$ 3.908,6 mi) — balance.leases = 0. net_debt sobrescrita = DL CVM R$ 1.092,8 mi (dívida 2.724,4 incl. 'financiamento por arrendamento' de R$ 593,5 mi − caixa 1.631,6) + arrendamentos R$ 4.159,4 mi = R$ 5.252 mi. Base FY2025 (R$ 38.424 mi) consolida o Novo Atacarejo (70%? participação de não controladores R$ 1.160,6 mi) só a partir do 3T25 → crescimento de 2026 inclui ~2 trimestres de efeito consolidação. 2T25 foi reapresentado (CPC 23: novo critério de custeio de estoques/CMV, divulgado no 3T25). Capex = caixa (~1,9–2,4% da RL) + adições de direito de uso (~0,9%). other_financial captura AVP/encargos não ligados à DL (~R$ 320 mi/ano)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.05,
+   0.07,
+   0.08,
+   0.08,
+   0.07
+  ],
+  "ebitda_margin": [
+   0.066,
+   0.069,
+   0.071,
+   0.072,
+   0.072
+  ],
+  "da_pct_revenue": [
+   0.0175,
+   0.0175,
+   0.0175,
+   0.0175,
+   0.0175
+  ],
+  "capex_pct_revenue": [
+   0.028,
+   0.032,
+   0.033,
+   0.033,
+   0.033
+  ],
+  "nwc_pct_revenue": 0.1,
+  "cost_of_net_debt": [
+   0.12,
+   0.125,
+   0.125,
+   0.12,
+   0.115
+  ],
+  "other_financial": [
+   -320,
+   -340,
+   -360,
+   -380,
+   -400
+  ],
+  "tax_rate": [
+   0.08,
+   0.1,
+   0.12,
+   0.15,
+   0.18
+  ],
+  "minority_share_ni": 0.02,
+  "payout": [
+   0.25,
+   0.25,
+   0.3,
+   0.3,
+   0.35
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.12,
+  "roe": 0.14
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.3
+ },
+ "adjustments": {
+  "other_debt_like": 419,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = antecipação de recebíveis do Novo Mateus em jun/26 (R$ 360,6 mi, citada no release) + tributos parcelados CP+LP (R$ 57,9 mi). Minoritários pelo valor contábil (R$ 1.160,6 mi, Novo Atacarejo)."
+ },
+ "target_multiples": {
+  "pe": 8.0,
+  "ev_ebitda": 5.0,
+  "pbv": 0.9,
+  "rationale": "8x P/L e 5,0x EV/EBITDA IFRS-16 (DL incl. arrendamentos) sobre 2027E. Pré-eleição (R$ 5,30, mkt cap ~R$ 12,2 bi) negociava ~7,5x P/L LTM (inflado por crédito fiscal de 2025) e ~6,7x EV/EBITDA IFRS-16 LTM; em 2022–24 o papel negociou a ~12–18x P/L. Desconto pela queda de SSS, governança (reapresentação de estoques) e Ke 25%."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.006,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "SSS segue negativo em 2027, integração do Novo Atacarejo (margem 5,1%) decepciona e incentivos de ICMS/subvenção são derrubados (IR efetivo sobe)."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.005,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Renda no Nordeste (transferências, salário mínimo) reacelera consumo, Novo Atacarejo converge para 7% e a expansão volta a 20+ lojas/ano."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.005,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.004
+ },
+ "debt_profile": {
+  "gross_debt_mn": 2724,
+  "pct_floating_cdi": null,
+  "avg_cost": "não verificado (empréstimos R$ 1.285 mi + debêntures R$ 846 mi + financiamento por arrendamento R$ 594 mi)",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 1530,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -10,
+  "notes": "Exposição líquida a CDI pequena: dívida R$ 2,7 bi − caixa R$ 1,6 bi + recebíveis antecipados R$ 0,36 bi ≈ R$ 1,45 bi → +100 bp ≈ −R$ 15 mi antes de IR, ≈ −R$ 13 mi no lucro (~1–1,5% do lucro 2027E; IR efetivo baixo). Arrendamentos (R$ 4,2 bi, ~10% a.a. implícito) são contratuais. 'next_24m' = dívida circulante (12 meses) — R$ 1,53 bi, concentração de curto prazo relevante."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.254,
+  "ebitda_margin_avg_5y": 0.075,
+  "roe_avg_5y": 0.15,
+  "payout_avg_5y": 0.03,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.122,
+   "ebitda_margin": 0.069,
+   "net_income_mn": 237,
+   "net_debt_ebitda": 1.97
+  },
+  "notes": "CAGR 2020–25 de 25,4% (expansão agressiva + aquisição do Novo Atacarejo em 2025) não é repetível: capex de novas lojas caiu 50% no 1S26 e o SSS está em −8,0% (2T26; efeito da redução do canal 'Balcão' e consumo fraco). Projetamos 5% em 2026 (2 trimestres de consolidação) e 7–8% depois. Margem EBITDA IFRS-16 média 2021–25 = 7,5%; 2T26 6,9% (Novo Atacarejo 5,1%); premissa volta a 7,2% só em 2029. ROE médio 15% (2025 inflado por reversão de provisão de IR sobre subvenções). Payout histórico ~3–8% (JCP de R$ 339 mi declarado em dez/25). DL/EBITDA 2T26 incl. arrendamentos = 1,97x (5.252/2.670); ex-arrendamentos 0,51x pré-IFRS16 (companhia)."
+ },
+ "guidance": "Sem guidance numérico encontrado. Release 2T26 (13/08/2026): 'rigor na alocação de capital diante do atual patamar das taxas de juros' (capex −36,5% no 2T26), unificação de bandeiras em PE/PB/AL (Novo Atacarejo/Novo Mercatto), início em farmácias (Mix Toureiro Farma, jun/26).",
+ "dividend_policy": "Mínimo estatutário 25% (base: lucro ajustado). Historicamente reinvestiu quase tudo: dividendos pagos R$ 81 mi (2024) e R$ 146 mi (2025); JCP de R$ 285,7 mi constituído no 1S25 e R$ 338,8 mi a pagar em dez/25 (convertido em aumento de capital em 2026 — capital social +R$ 338,8 mi).",
+ "election_impact": "Queda de ~33% é mais beta/fluxo (small cap, ICON −27%) do que juros: alavancagem financeira baixa (DL ex-arrendamentos 0,5x). O que muda de fato: (1) o Mateus é o nome mais exposto à renda do Norte/Nordeste — um 4º mandato tende a preservar Bolsa Família, salário mínimo com ganho real e isenção de IR até R$ 5 mil, positivo para volume; (2) inflação de alimentos/câmbio e juros altos encarecem crédito ao pequeno varejista (B2B, 48 mil clientes/mês) e pressionam inadimplência; (3) reforma tributária elimina gradualmente incentivos de ICMS (2029–32), e a tese do IR baixo depende de decisões judiciais sobre a Lei 14.789/23. O problema principal é micro e anterior à eleição: SSS −8% e margem em queda (8,8% → 6,9% a/a).",
+ "summary": "Varejista multiformato dominante no Norte/Nordeste (313 unidades, RL R$ 9,9 bi no 2T26) com balanço folgado, mas em fase ruim: SSS −8%, margem EBITDA IFRS-16 6,9% (vs 8,8%) e lucro −39% a/a, além de reapresentação contábil de estoques em 2025. Barato em múltiplos (~5x EV/EBITDA IFRS-16), mas a recuperação de margem é premissa, não fato. TIR implícita ~13,5% (≈11% pré-eleição); ROE de ~9–10% não sustenta Ke 25%.",
+ "thesis": [
+  "Balanço: DL ex-arrendamentos R$ 1,1 bi (0,5x EBITDA pré-IFRS16) — menos sensível ao CDI que Assaí.",
+  "Melhora sequencial: margem EBITDA 5,8% (1T26) → 6,9% (2T26), despesas −1,3% t/t; margem bruta do Novo Atacarejo +2,3 p.p. t/t.",
+  "Exposição à renda do Nordeste (transferências, salário mínimo) e potencial de sinergias com Novo Atacarejo (PE/PB/AL)."
+ ],
+ "risks": [
+  "SSS negativo persistente (−7,7% no 1S26) e consumo de baixa renda endividado.",
+  "Governança/contabilidade: reapresentação de estoques/CMV (3T25/2T26) e dependência do controlador.",
+  "Tributário: IR efetivo baixo depende de exclusão de subvenções de ICMS (liminares/jurisprudência sobre a Lei 14.789/23) e de incentivos que a reforma elimina até 2033.",
+  "Capital de giro pesado (estoques 67 dias; recebíveis B2B) e R$ 1,5 bi de dívida vencendo em 12 meses."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (data não verificada; campanha de aniversário de 40 anos em ago/26).",
+  "Normalização da base do canal Balcão a partir do 1T27 (SSS volta a positivo?)."
+ ],
+ "key_data": [
+  {
+   "label": "Receita líquida 2T26",
+   "value": "R$ 9.852 mi (+12,2%)",
+   "context": "SSS −8,0%; consolidação do Novo Atacarejo"
+  },
+  {
+   "label": "EBITDA IFRS-16 2T26",
+   "value": "R$ 681,6 mi (6,9%)",
+   "context": "pré-IFRS16 R$ 523,5 mi (5,3%) vs 7,6% no 2T25"
+  },
+  {
+   "label": "Lucro líquido 2T26",
+   "value": "R$ 236,8 mi (−39,3%)",
+   "context": "1S26 R$ 449,7 mi"
+  },
+  {
+   "label": "DL ex-arrendamentos / EBITDA pré-IFRS16",
+   "value": "0,51x",
+   "context": "incl. arrendamentos (R$ 4,16 bi): ~2,0x EBITDA IFRS-16"
+  },
+  {
+   "label": "Unidades",
+   "value": "313 (234 de varejo alimentar)",
+   "context": "11 inaugurações no 1S26"
+  },
+  {
+   "label": "Preço 26/10 11h55",
+   "value": "R$ 3,54 (−33%)",
+   "context": "pré-eleição R$ 5,30; mkt cap ~R$ 8,2 bi"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Grupo Mateus — Release de Resultados 2T26 (13/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/8ea287f8-ae0a-4b88-b20b-80c1f1b86a1e/759380ab-906c-cfb2-3d52-43e262f436d1?origin=2"
+  },
+  {
+   "title": "Grupo Mateus — ITR 2T26 (nota 3.1 reapresentação; tributos)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/8ea287f8-ae0a-4b88-b20b-80c1f1b86a1e/bd4a2608-b719-c378-c9e6-048e239d0bab?origin=2"
+  },
+  {
+   "title": "CVM — ITR/DFP padronizados (data/hist/GMAT3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "baixa-média — números do 2T26 conferidos no release/ITR, mas sem pesquisa externa (consenso, contexto da reapresentação, perfil da dívida); premissa central (recuperação de margem e SSS) ainda não aparece nos números."
+}

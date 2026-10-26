@@ -1,0 +1,395 @@
+# Estudo de crashes 2016–2026: o que previu a recuperação das ações brasileiras
+
+Gerado em 2026-10-26T16:35:37 por `pipeline/tests/crash_study.py` (reexecutável; ~1 min). Dados completos, por episódio e por ação, em `data/tests/crash_study.json`. Retornos de preço ajustados por desdobramentos/grupamentos (sem proventos). Estudo quantitativo, não é recomendação.
+
+## Conclusões
+
+1. **Amostra.** 17 dias de choque em 7 crises (2017–2025): todos os pregões com Ibovespa ≤ −4% desde 2017 (16; o de 02/02/2016 ficou de fora por não ter um ano de histórico no COTAHIST) mais o pós-eleição de 31/10/2022. São 81–137 ações por episódio, todas com fundamentos CVM point-in-time. A inferência honesta é por crise (n = 7, ou 6 em 12m), porque os 11 dias da Covid compartilham a mesma janela futura.
+2. **Mercado.** Depois dos choques, o Ibovespa subiu em média +11,5% em 3m, +13,1% em 6m e +18,9% em 12m (média por crise). Nas crises de pânico o 6m foi +23,2%; nas duas eleitorais (2022 e dez/2025), -0,5%, com o universo de ações (peso igual) em -9,9%.
+3. **O que previu a recuperação, comprando no fechamento do dia do choque:**
+   - **A sobrerreação idiossincrática reverte, mas devagar.** O resíduo da queda contra fatores (beta, alavancagem, tamanho e setor) tem coeficiente φ de -0,07 em 5 pregões (t -0,6), -0,42 em 1m, -0,67 em 3m (t -3,3) e -1,44 em 6m (t -2,7). Em média, cerca de 2/3 da queda "excessiva" volta em 3 meses e toda ela em 6 meses (φ ≤ −1: os perdedores passam a ganhar). Quase nada volta na primeira semana. O IC de Spearman é -0,096 em 3m e -0,093 em 6m, negativo em 6 das 7 crises em 6m. A cesta do quintil de resíduo mais negativo bateu o universo em +3,8% em 3m e +5,7% em 6m. A exceção é dez/2025 (Flávio), em que os perdedores continuaram perdendo (-17,3% contra o Ibovespa em 6m).
+   - **O beta depende do regime.** Nos pânicos (greve 2018, Covid, 2ª onda), beta alto foi o melhor preditor (IC 6m 0,27). Nos choques eleitorais foi o pior (IC -0,27). A cesta de beta alto superou o Ibovespa em +4,3% em 6m na média, mas perdeu -12,0% em 2022 e -28,0% em 2025, com drawdown de 12m de -28,8% contra -17,4% do índice. "Comprar a maior queda absoluta" (+5,9% em 6m, -26,1% em 2025) tem o mesmo perfil.
+   - **Valor (E/P + B/P) ajuda em geral, e mais nas crises políticas.** IC 6m de 0,055 em todas as crises, 0,114 nas políticas e 0,185 nas eleitorais. Só o B/P tem IC 12m de 0,23. A cesta barata ficou +13,3% acima do Ibovespa em 12m, com excesso positivo em 6m em 6 de 7 crises. Na regressão conjunta, o E/P perde força para B/P e ROE (E/P ≈ B/P × ROE), por isso o modelo usa o composto.
+   - **Exportadoras (hedge cambial)** superaram em quase todas as crises: +13,2 p.p. em 3m na regressão conjunta (t 5,6). Exceções no IC de 6m: Greve 2018.
+   - **Qualidade e baixa alavancagem não protegem na recuperação.** A cesta de ROE alto rendeu -4,1% contra o Ibovespa em 6m (positiva em 1 de 7 crises) e a de DL/EBITDA baixa, -3,2%. Nos choques eleitorais, porém, o ROE teve IC 0,13 e as estatais 0,24: é nesse regime que qualidade e o desconto político pagam.
+   - **Momentum 12−1** tem IC 6m de 0,108, concentrado nos pânicos (0,19). **Tamanho:** small caps recuperam mais em 12m (IC -0,078), exceto nas eleições, em que as grandes foram melhor (0,12).
+   - **A partir do fundo do episódio** (não observável em tempo real) lidera o "junk rally": beta (IC 1m 0,23), DL/EBITDA alta (0,14), ROE baixo (-0,10) e B/P alto (0,15 em 6m). Comprar beta só compensa se o fundo já passou. O fundo do Ibovespa veio de 2 a 32 pregões depois do primeiro dia de cada crise (na Covid, em 23/03/2020).
+4. **Viés de sobrevivência é pequeno nos sinais de mercado.** No universo amplo (top 150 por ADTV, inclui deslistadas) o beta tem coeficiente 0,108, o resíduo -0,73 e o momentum 0,034. Só entre sobreviventes: 0,094, -0,64 e 0,035. Os fundamentos só existem para sobreviventes, então isso não pode ser testado para eles.
+5. **Fora da amostra (deixa uma crise de fora),** o modelo combinado com pesos de regime tem IC médio de 0,143 em 3m (positivo em 7 de 7 crises; 2022: 0,14, 2025: 0,02) e de 0,193 em 12m. O spread Q5−Q1 é +9,3% em 3m. Em 6m o modelo é fraco (0,055), por isso o ranking usa 3m.
+6. **Hoje (Ibovespa -14,6%) é um choque eleitoral com magnitude de pânico.** A queda contra fatores tem R² de 0,75: o beta explica a maior parte (coeficiente -0,187 por unidade de beta) e as exportadoras caíram 11 p.p. menos. O resíduo de hoje foi limitado à faixa histórica [-10,4%, +10,3%] (10% da cobertura está abaixo dela). Como os dois regimes discordam em beta, ROE, alavancagem e tamanho, o modelo recomendado dá peso 2 às crises políticas, encolhe cada coeficiente por max(0, 1 − 1/t²) e fica com o que é robusto aos dois: reversão do resíduo, valor, momentum e exportadoras.
+
+## Pesos recomendados para o regime atual
+
+Escore composto em z (postos normalizados na seção cruzada de hoje). Os pesos vêm do IC de Spearman médio de 3m e 6m a partir do choque, por crise, com Fama-MacBeth ponderado (crises políticas com peso 2), encolhimento max(0, 1 − 1/t²) e normalização Σ|w| = 1. Peso negativo no resíduo significa que quanto mais a ação caiu além do previsto pelos fatores, melhor.
+
+| Característica | IC 6m todas | IC 6m pânico | IC 6m políticas | IC 6m eleitorais | IC 3m–6m recom. | t | **Peso** | Peso nas 59 (sem exportadora) | Indicativo eleitoral |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Resíduo do dia (fatores) | -0,093 | -0,104 | -0,085 | -0,043 | -0,088 | -2,4 | **-0,20** | -0,42 | -0,04 |
+| Beta de baixa | 0,059 | 0,272 | -0,101 | -0,270 | 0,004 | 0,1 | **0,00** | 0,00 | -0,22 |
+| Valor (E/P+B/P) | 0,055 | -0,023 | 0,114 | 0,185 | 0,097 | 2,7 | **0,23** | 0,48 | 0,15 |
+| ROE | -0,038 | -0,166 | 0,058 | 0,134 | 0,009 | 0,2 | **0,00** | 0,00 | 0,11 |
+| DL/EBITDA | 0,017 | 0,129 | -0,067 | -0,051 | -0,006 | -0,2 | **0,00** | 0,00 | -0,04 |
+| Tamanho (log VM) | -0,029 | -0,051 | -0,012 | 0,122 | -0,014 | -0,2 | **0,00** | 0,00 | 0,10 |
+| Momentum 12−1 | 0,108 | 0,190 | 0,047 | 0,018 | 0,070 | 1,1 | **0,05** | 0,10 | 0,01 |
+| Exportadora | 0,154 | 0,181 | 0,135 | 0,142 | 0,201 | 7,4 | **0,53** | 0,00 | 0,12 |
+| Estatal | 0,032 | -0,017 | 0,069 | 0,240 | 0,055 | 0,8 | **0,00** | 0,00 | 0,20 |
+
+A coluna "indicativo eleitoral" usa só 2022 e 2025 (n = 2, sem significância), como cenário de estresse caso o choque vire uma reprecificação duradoura de regime, a exemplo de 2022 e de dez/2025. Nesse cenário o beta pesa contra, e ROE, estatais e tamanho pesam a favor. Beta, ROE, DL/EBITDA, tamanho e estatal ficam com peso zero no central porque o sinal se inverte entre regimes.
+
+## Ranking "regime de crise" das 59 empresas (26/10/2026)
+
+Retorno esperado = retorno médio do universo depois dos choques (3m: +6,6%; Ibovespa +10,3%, pesos de regime) mais Σ coeficiente × (característica − média de hoje). Os coeficientes são Fama-MacBeth por crise, com pesos de regime e encolhimento. O intervalo de 80% combina a dispersão entre crises (aplicando os coeficientes de cada crise) com o ruído idiossincrático (σ 3m = +16,2%). Os cenários "pânico" e "eleitoral" aplicam os coeficientes médios desses regimes, sem encolhimento. Correlação de postos do ranking 3m com o de 6m: 0,90; com o de 12m: 0,89; com o escore z: 0,82; com o cenário eleitoral: 0,34.
+
+### Top 10
+
+| # | Ticker | Queda hoje | Resíduo fatores | Beta | Valor (z) | Esperado 3m | IC 80% 3m | vs Ibov 3m | Esperado 6m | Esperado 12m | Pânico 3m | Eleitoral 3m | Escore z (pos.) |
+|---:|---|---:|---:|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|
+| 1 | BEEF3 | -20,8% | -5,0% | 1,21 | -0,13 | +20,6% | -6% a +47% | +10,3% | +21,3% | +41,8% | +24,1% | +12,0% | 1,33 (1) |
+| 2 | CEAB3 | -46,9% | -10,7% | 1,69 | 0,95 | +9,5% | -21% a +40% | -0,8% | +12,8% | +25,1% | +20,2% | -5,8% | 0,20 (5) |
+| 3 | SBFG3 | -48,2% | -7,1% | 1,88 | 1,67 | +9,1% | -24% a +42% | -1,2% | +12,0% | +26,5% | +21,8% | -7,4% | 0,30 (2) |
+| 4 | B3SA3 | -36,1% | -12,2% | 1,54 | -1,60 | +8,9% | -23% a +41% | -1,4% | +11,9% | +12,9% | +25,6% | -3,2% | -0,20 (30) |
+| 5 | CYRE3 | -43,4% | -7,2% | 1,89 | 0,67 | +8,0% | -25% a +41% | -2,3% | +11,2% | +17,3% | +24,2% | -7,8% | 0,13 (8) |
+| 6 | SIMH3 | -58,7% | -14,9% | 2,14 | -0,74 | +7,7% | -30% a +46% | -2,5% | +11,1% | +21,0% | +30,7% | -11,9% | -0,03 (20) |
+| 7 | INTB3 | -25,8% | -7,4% | 1,17 | 0,17 | +7,7% | -18% a +34% | -2,6% | +13,9% | +20,0% | +14,6% | -4,5% | 0,09 (11) |
+| 8 | ECOR3 | -58,6% | -7,3% | 2,45 | -0,34 | +7,6% | -34% a +49% | -2,6% | +8,6% | +15,2% | +31,0% | -14,2% | -0,07 (22) |
+| 9 | VULC3 | -21,7% | -0,5% | 1,00 | 1,01 | +7,6% | -16% a +31% | -2,7% | +7,0% | +14,0% | +5,8% | +0,8% | -0,03 (19) |
+| 10 | GMAT3 | -29,2% | -7,3% | 1,11 | 0,89 | +7,5% | -17% a +32% | -2,8% | +9,9% | +18,1% | +10,7% | -3,8% | 0,15 (7) |
+
+### Todas as 59
+
+| # | Ticker | Grupo | Queda hoje | Resíduo fatores | Beta | E/P | B/P | ROE | DL/EBITDA | Mom. 12−1 | Esp. 3m | IC 80% 3m | Esp. 6m | Esp. 12m | Eleitoral 3m | Escore z |
+|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---:|---:|---:|---:|
+| 1 | BEEF3 | G12_diversos | -20,8% | -5,0% | 1,21 | +10,8% | 0,37 | +29,0% | 3,0 | -41% | +20,6% | -6% a +47% | +21,3% | +41,8% | +12,0% | 1,33 |
+| 2 | CEAB3 | G03_varejo_massa | -46,9% | -10,7% | 1,69 | +13,5% | 0,92 | +14,8% | — | -44% | +9,5% | -21% a +40% | +12,8% | +25,1% | -5,8% | 0,20 |
+| 3 | SBFG3 | G03_varejo_massa | -48,2% | -7,1% | 1,88 | +16,0% | 1,22 | +13,1% | 2,4 | -30% | +9,1% | -24% a +42% | +12,0% | +26,5% | -7,4% | 0,30 |
+| 4 | B3SA3 | G10_financeiro | -36,1% | -12,2% | 1,54 | +4,5% | 0,16 | +28,5% | -0,6 | +44% | +8,9% | -23% a +41% | +11,9% | +12,9% | -3,2% | -0,20 |
+| 5 | CYRE3 | G06_incorp_media_alta | -43,4% | -7,2% | 1,89 | +13,2% | 0,72 | +18,3% | 0,5 | +10% | +8,0% | -25% a +41% | +11,2% | +17,3% | -7,8% | 0,13 |
+| 6 | SIMH3 | G01_locacao | -58,7% | -14,9% | 2,14 | -1,9% | 0,61 | -3,1% | 3,0 | -4% | +7,7% | -30% a +46% | +11,1% | +21,0% | -11,9% | -0,03 |
+| 7 | INTB3 | G12_diversos | -25,8% | -7,4% | 1,17 | +9,2% | 0,51 | +18,1% | -0,9 | +29% | +7,7% | -18% a +34% | +13,9% | +20,0% | -4,5% | 0,09 |
+| 8 | ECOR3 | G02_infra_energia | -58,6% | -7,3% | 2,45 | +6,0% | 0,45 | +13,3% | 4,1 | +12% | +7,6% | -34% a +49% | +8,6% | +15,2% | -14,2% | -0,07 |
+| 9 | VULC3 | G04_moda_consumo | -21,7% | -0,5% | 1,00 | +18,6% | 0,53 | +35,1% | 0,8 | -34% | +7,6% | -16% a +31% | +7,0% | +14,0% | +0,8% | -0,03 |
+| 10 | GMAT3 | G05_alimentar_farma | -29,2% | -7,3% | 1,11 | +13,3% | 0,92 | +14,5% | 2,0 | -21% | +7,5% | -17% a +32% | +9,9% | +18,1% | -3,8% | 0,15 |
+| 11 | PLPL3 | G07_incorp_mcmv | -32,6% | +1,7% | 1,70 | +17,8% | 0,65 | +27,3% | 0,4 | -54% | +7,5% | -22% a +37% | +7,0% | +15,8% | -3,4% | -0,11 |
+| 12 | VAMO3 | G01_locacao | -54,8% | -16,9% | 1,69 | +4,0% | 0,42 | +9,6% | 3,0 | +28% | +7,4% | -25% a +40% | +12,1% | +18,7% | -11,4% | 0,12 |
+| 13 | HAPV3 | G09_educacao_saude | -43,4% | -16,7% | 1,16 | -4,1% | 11,46 | -0,4% | 3,5 | -80% | +7,3% | -20% a +35% | +10,5% | +23,2% | -6,8% | 0,26 |
+| 14 | MGLU3 | G03_varejo_massa | -53,9% | -11,2% | 2,04 | +0,9% | 1,13 | +0,8% | 2,2 | -24% | +7,0% | -29% a +43% | +11,2% | +18,6% | -12,9% | 0,04 |
+| 15 | EZTC3 | G06_incorp_media_alta | -37,7% | -5,2% | 1,69 | +9,8% | 0,97 | +10,2% | -0,0 | +11% | +7,0% | -24% a +38% | +11,9% | +19,5% | -8,3% | 0,09 |
+| 16 | GGPS3 | G12_diversos | -27,1% | -6,1% | 1,16 | +7,4% | 0,36 | +20,4% | 1,0 | -25% | +6,8% | -17% a +31% | +8,4% | +11,4% | -4,1% | -0,23 |
+| 17 | PGMN3 | G05_alimentar_farma | -45,9% | -3,7% | 2,11 | +8,4% | 0,87 | +9,6% | 2,2 | -0% | +6,8% | -29% a +43% | +9,3% | +17,6% | -11,6% | -0,00 |
+| 18 | BBAS3 | G10_financeiro | -28,9% | -6,2% | 1,15 | +8,7% | 1,32 | +6,6% | — | +6% | +6,7% | -15% a +29% | +8,0% | +16,2% | +6,7% | 0,20 |
+| 19 | MDNE3 | G06_incorp_media_alta | -35,1% | +3,4% | 1,95 | +17,8% | 0,73 | +24,4% | 0,4 | -6% | +6,6% | -25% a +39% | +6,6% | +13,3% | -6,5% | -0,04 |
+| 20 | ALUP11 | G11_utilities | -19,1% | -5,0% | 0,78 | +10,9% | 0,76 | +14,4% | 2,6 | +2% | +6,3% | -17% a +29% | +8,1% | +14,6% | -3,3% | 0,04 |
+| 21 | VIVA3 | G04_moda_consumo | -28,0% | -2,1% | 1,25 | +9,2% | 0,50 | +18,4% | 0,9 | -23% | +6,2% | -19% a +31% | +7,4% | +12,0% | -4,5% | -0,18 |
+| 22 | LREN3 | G03_varejo_massa | -34,8% | -2,9% | 1,65 | +10,7% | 0,74 | +14,4% | 0,5 | -22% | +6,2% | -22% a +35% | +7,4% | +11,5% | -6,9% | -0,07 |
+| 23 | RENT3 | G01_locacao | -39,5% | -6,8% | 1,58 | +5,9% | 0,47 | +12,6% | 2,3 | +8% | +6,0% | -23% a +35% | +7,4% | +9,6% | -9,2% | -0,11 |
+| 24 | HYPE3 | G05_alimentar_farma | -25,8% | -5,1% | 1,06 | +9,1% | 0,75 | +12,1% | 2,1 | +11% | +5,9% | -18% a +30% | +8,2% | +13,3% | -5,6% | 0,03 |
+| 25 | SMFT3 | G08_shoppings_lazer | -34,0% | -6,9% | 1,17 | +4,5% | 0,40 | +11,3% | 2,8 | -32% | +5,9% | -19% a +31% | +7,0% | +10,6% | -6,9% | -0,24 |
+| 26 | BBDC4 | G10_financeiro | -24,1% | -2,3% | 1,21 | +11,3% | 0,84 | +13,4% | — | +2% | +5,9% | -19% a +31% | +4,3% | +8,7% | -2,2% | -0,01 |
+| 27 | BRSR6 | G10_financeiro | -19,2% | +5,7% | 1,12 | +22,1% | 1,59 | +13,9% | — | +29% | +5,7% | -18% a +29% | +5,1% | +16,4% | +8,7% | 0,19 |
+| 28 | MULT3 | G08_shoppings_lazer | -25,5% | +1,7% | 1,38 | +7,5% | 0,37 | +20,5% | 1,9 | +15% | +5,7% | -21% a +32% | +3,9% | +7,2% | -3,4% | -0,34 |
+| 29 | MOVI3 | G01_locacao | -53,6% | -1,1% | 2,51 | +5,8% | 0,52 | +11,1% | 2,6 | +15% | +5,6% | -36% a +48% | +6,0% | +9,6% | -15,0% | -0,22 |
+| 30 | ENGI11 | G11_utilities | -29,1% | -6,4% | 1,18 | +4,5% | 0,58 | +7,8% | 3,7 | +14% | +5,5% | -20% a +31% | +7,0% | +11,2% | -8,6% | -0,09 |
+| 31 | JHSF3 | G06_incorp_media_alta | -19,1% | +6,3% | 1,26 | +23,2% | 0,82 | +28,4% | 0,7 | +97% | +5,3% | -20% a +31% | +5,5% | +10,0% | -3,3% | 0,12 |
+| 32 | MOTV3 | G02_infra_energia | -31,4% | -0,1% | 1,52 | +9,6% | 0,44 | +21,9% | 3,5 | +14% | +5,3% | -22% a +33% | +2,9% | +4,6% | -7,4% | -0,19 |
+| 33 | YDUQ3 | G09_educacao_saude | -39,6% | -3,0% | 1,63 | +3,2% | 0,82 | +3,9% | 2,6 | -9% | +5,3% | -25% a +35% | +7,9% | +14,5% | -11,1% | -0,21 |
+| 34 | TEND3 | G07_incorp_mcmv | -21,1% | +17,0% | 1,92 | +16,7% | 0,44 | +37,6% | 0,4 | +17% | +5,2% | -26% a +36% | +2,1% | +4,0% | -5,7% | -0,45 |
+| 35 | BPAC11 | G10_financeiro | -30,7% | -0,4% | 1,69 | +6,0% | 0,27 | +22,2% | — | +37% | +5,1% | -26% a +36% | +2,3% | -0,3% | -6,1% | -0,38 |
+| 36 | RADL3 | G05_alimentar_farma | -25,6% | -3,7% | 1,20 | +3,8% | 0,21 | +18,4% | 1,6 | +2% | +5,0% | -20% a +30% | +5,3% | +2,8% | -6,7% | -0,47 |
+| 37 | RDOR3 | G09_educacao_saude | -20,1% | -2,9% | 1,09 | +5,1% | 0,22 | +23,3% | 0,6 | -7% | +4,8% | -18% a +28% | +4,4% | +0,3% | -4,8% | -0,46 |
+| 38 | SBSP3 | G11_utilities | -19,3% | -3,2% | 1,04 | +7,2% | 0,40 | +17,8% | 2,2 | +7% | +4,8% | -18% a +28% | +4,2% | +3,3% | -5,4% | -0,23 |
+| 39 | ASAI3 | G05_alimentar_farma | -37,5% | +0,1% | 1,80 | +5,2% | 0,34 | +15,2% | 3,6 | +22% | +4,5% | -27% a +36% | +3,0% | +3,2% | -11,3% | -0,38 |
+| 40 | COGN3 | G09_educacao_saude | -35,2% | +3,9% | 1,83 | +11,3% | 2,21 | +5,1% | 2,2 | -19% | +4,5% | -28% a +37% | +3,9% | +11,6% | -9,5% | 0,06 |
+| 41 | AZZA3 | G04_moda_consumo | -35,3% | +1,5% | 1,72 | +6,3% | 1,56 | +4,0% | 1,9 | -40% | +4,4% | -26% a +35% | +4,5% | +10,6% | -9,6% | -0,13 |
+| 42 | DIRR3 | G07_incorp_mcmv | -22,4% | +10,1% | 1,67 | +14,2% | 0,39 | +36,8% | 0,2 | -34% | +4,4% | -24% a +33% | -0,5% | -1,4% | -3,8% | -0,47 |
+| 43 | ALOS3 | G08_shoppings_lazer | -23,5% | +2,8% | 1,35 | +5,3% | 0,73 | +7,3% | 1,7 | +22% | +4,3% | -22% a +31% | +4,0% | +8,2% | -5,7% | -0,26 |
+| 44 | CURY3 | G07_incorp_mcmv | -17,1% | +8,9% | 1,39 | +11,0% | 0,17 | +66,4% | -0,2 | -13% | +4,0% | -21% a +29% | -0,3% | -4,6% | -3,0% | -0,61 |
+| 45 | ALPA4 | G04_moda_consumo | -23,3% | +3,0% | 1,32 | +6,1% | 0,31 | +19,4% | 0,7 | +34% | +4,0% | -22% a +30% | +4,5% | +2,6% | -7,2% | -0,43 |
+| 46 | TOTS3 | G12_diversos | -16,0% | +1,8% | 0,94 | +5,6% | 0,21 | +26,1% | 1,8 | -14% | +4,0% | -19% a +27% | +1,6% | -1,7% | -4,0% | -0,57 |
+| 47 | AURE3 | G11_utilities | -32,5% | -4,8% | 1,21 | -6,8% | 0,72 | -9,5% | 5,8 | +15% | +3,7% | -23% a +30% | +5,5% | +9,0% | -12,0% | -0,25 |
+| 48 | IGTI11 | G08_shoppings_lazer | -21,0% | +8,0% | 1,47 | +6,7% | 0,52 | +12,9% | 1,7 | +15% | +3,5% | -24% a +31% | +0,9% | +3,6% | -5,5% | -0,44 |
+| 49 | ANIM3 | G09_educacao_saude | -45,6% | +10,5% | 2,62 | +8,1% | 1,27 | +6,4% | 2,8 | -3% | +3,2% | -40% a +46% | +0,8% | +6,0% | -15,5% | -0,32 |
+| 50 | NATU3 | G04_moda_consumo | -28,3% | -3,2% | 1,24 | -24,5% | 1,16 | -21,1% | 2,3 | -6% | +3,2% | -23% a +29% | +6,3% | +8,9% | -11,6% | -0,27 |
+| 51 | EQTL3 | G11_utilities | -26,6% | -3,3% | 1,12 | +1,6% | 0,43 | +3,7% | 4,9 | +10% | +3,1% | -22% a +28% | +2,6% | +2,0% | -10,7% | -0,37 |
+| 52 | RAIL3 | G02_infra_energia | -18,0% | +0,5% | 0,99 | +3,5% | 0,42 | +8,5% | — | +3% | +2,9% | -20% a +26% | +3,0% | +1,1% | -7,5% | -0,42 |
+| 53 | VBBR3 | G02_infra_energia | -9,8% | +11,6% | 1,17 | +11,8% | 0,55 | +21,5% | 1,6 | +82% | +2,0% | -23% a +27% | -0,7% | -3,8% | -6,1% | -0,31 |
+| 54 | ORVR3 | G12_diversos | -25,2% | +3,2% | 1,34 | +0,4% | 0,42 | +1,0% | 4,7 | +23% | +1,7% | -26% a +29% | +0,8% | +0,0% | -12,8% | -0,54 |
+| 55 | CPLE3 | G11_utilities | -12,5% | +6,6% | 1,10 | +6,1% | 0,47 | +13,0% | 2,8 | +29% | +1,7% | -23% a +26% | -0,9% | -4,1% | -7,9% | -0,41 |
+| 56 | TTEN3 | G12_diversos | -19,4% | +12,6% | 1,08 | +8,3% | 0,71 | +11,8% | 7,4 | -29% | +1,6% | -27% a +30% | -4,5% | -2,6% | -7,0% | -0,49 |
+| 57 | MRVE3 | G07_incorp_mcmv | -39,5% | +8,3% | 1,82 | -12,4% | 0,99 | -12,6% | 6,9 | -19% | +0,7% | -33% a +34% | -2,5% | -1,3% | -15,6% | -0,59 |
+| 58 | CVCB3 | G08_shoppings_lazer | -31,9% | +10,4% | 2,05 | -16,1% | 0,39 | -40,8% | 0,7 | -18% | -0,1% | -36% a +35% | +1,1% | -0,7% | -17,8% | -0,91 |
+| 59 | CSAN3 | G02_infra_energia | -42,9% | +2,0% | 1,76 | -43,4% | 0,24 | -179,0% | 8,5 | -34% | -0,7% | -34% a +33% | -3,2% | -8,4% | -20,0% | -0,94 |
+
+Coeficientes usados (3m, recomendado; t ponderado por crise; "usado" = encolhido):
+
+| Variável | Média | t | Usado | Pânico | Eleitoral |
+|---|---:|---:|---:|---:|---:|
+| Beta de baixa | 0,0487 | 1,1 | 0,0069 | 0,1525 | -0,0541 |
+| Resíduo do dia (fatores) | -0,4029 | -2,0 | -0,3063 | -0,5520 | -0,0571 |
+| Valor (E/P+B/P) | 0,0137 | 1,3 | 0,0061 | 0,0026 | 0,0110 |
+| ROE | 0,0132 | 2,8 | 0,0115 | 0,0037 | 0,0237 |
+| DL/EBITDA | -0,0043 | -0,6 | 0,0000 | -0,0066 | -0,0061 |
+| Tamanho (log VM) | -0,0108 | -1,7 | -0,0072 | -0,0003 | -0,0011 |
+| Momentum 12−1 | 0,0021 | 0,2 | 0,0000 | 0,0117 | -0,0063 |
+| Exportadora | 0,1291 | 5,2 | 0,1244 | 0,1444 | 0,1455 |
+| Financeira | 0,0182 | 1,7 | 0,0121 | 0,0342 | 0,0338 |
+| Estatal | 0,0079 | 0,2 | 0,0000 | -0,0169 | 0,0951 |
+
+## Episódios
+
+Dias com Ibovespa ≤ −4% desde 2016 (o COTAHIST começa em 04/01/2016):
+
+| Data | Ibovespa | Evento | Usado |
+|---|---:|---|---|
+| 2016-02-02 | -4,9% | Petróleo/China (sem histórico prévio no COTAHIST: excluído) | não |
+| 2017-05-18 | -8,8% | Joesley Day (delação JBS/Temer) | sim |
+| 2018-05-28 | -4,5% | Greve dos caminhoneiros | sim |
+| 2020-02-26 | -7,0% | Covid: primeiro dia após o Carnaval | sim |
+| 2020-03-05 | -4,7% | Covid | sim |
+| 2020-03-06 | -4,1% | Covid | sim |
+| 2020-03-09 | -12,2% | Covid + guerra de preços do petróleo | sim |
+| 2020-03-11 | -7,6% | Covid: OMS declara pandemia | sim |
+| 2020-03-12 | -14,8% | Covid: circuit breakers | sim |
+| 2020-03-16 | -13,9% | Covid: circuit breaker | sim |
+| 2020-03-18 | -10,3% | Covid: circuit breaker | sim |
+| 2020-03-23 | -5,2% | Covid: fundo do Ibovespa | sim |
+| 2020-03-27 | -5,5% | Covid | sim |
+| 2020-04-24 | -5,5% | Demissão de Moro (dentro da janela da Covid) | sim |
+| 2020-10-28 | -4,2% | Segunda onda da Covid na Europa | sim |
+| 2021-02-22 | -4,9% | Intervenção na Petrobras (troca do CEO) | sim |
+| 2025-12-05 | -4,3% | Candidatura de Flávio Bolsonaro (eleição 2026) | sim |
+
+Episódios analisados (inclui 31/10/2022). Fundo = mínima do Ibovespa em [t0, t0+63 pregões]. R² = regressão cross-section da queda do dia contra fatores.
+
+| Data | Crise | Ibov dia | N | Fundo | Ibov até fundo | Ibov 1m | 3m | 6m | 12m | Universo 6m | R² queda |
+|---|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
+| 2017-05-18 | Joesley 2017 | -8,8% | 81 | 2017-06-21 | -1,4% | +0,7% | +11,4% | +19,2% | +28,1% | +23,4% | 0,75 |
+| 2018-05-28 | Greve 2018 | -4,5% | 87 | 2018-06-18 | -7,3% | -6,3% | +3,4% | +19,1% | +29,0% | +17,3% | 0,43 |
+| 2020-02-26 | Covid 2020 | -7,0% | 96 | 2020-03-23 | -39,9% | -26,5% | -17,8% | -4,8% | +6,6% | -10,0% | 0,39 |
+| 2020-03-05 | Covid 2020 | -4,7% | 96 | 2020-03-23 | -37,8% | -32,0% | -7,4% | -1,5% | +11,7% | -5,6% | 0,35 |
+| 2020-03-06 | Covid 2020 | -4,1% | 96 | 2020-03-23 | -35,1% | -24,4% | -0,4% | +3,3% | +17,2% | -1,2% | 0,17 |
+| 2020-03-09 | Covid 2020 | -12,2% | 96 | 2020-03-23 | -26,1% | -11,3% | +12,4% | +16,2% | +32,5% | +11,8% | 0,40 |
+| 2020-03-11 | Covid 2020 | -7,6% | 96 | 2020-03-23 | -25,4% | -8,8% | +8,9% | +16,0% | +34,8% | +9,4% | 0,24 |
+| 2020-03-12 | Covid 2020 | -14,8% | 96 | 2020-03-23 | -12,4% | +8,6% | +27,3% | +35,5% | +60,1% | +28,3% | 0,42 |
+| 2020-03-16 | Covid 2020 | -13,9% | 96 | 2020-03-23 | -10,7% | +10,8% | +34,3% | +40,9% | +59,2% | +38,0% | 0,41 |
+| 2020-03-18 | Covid 2020 | -10,3% | 96 | 2020-03-23 | -5,0% | +18,1% | +44,4% | +49,6% | +70,0% | +58,3% | 0,57 |
+| 2020-03-23 | Covid 2020 | -5,2% | 96 | 2020-03-23 | +0,0% | +25,3% | +48,5% | +53,0% | +83,8% | +58,4% | 0,21 |
+| 2020-03-27 | Covid 2020 | -5,5% | 96 | 2020-04-03 | -5,3% | +13,3% | +29,4% | +28,9% | +60,0% | +28,4% | 0,24 |
+| 2020-04-24 | Covid 2020 | -5,5% | 96 | 2020-04-24 | +0,0% | +13,5% | +35,9% | +34,4% | +58,2% | +35,4% | 0,47 |
+| 2020-10-28 | 2ª onda 2020 | -4,2% | 98 | 2020-10-30 | -1,5% | +16,0% | +24,0% | +25,7% | +9,9% | +24,3% | 0,39 |
+| 2021-02-22 | Petrobras 2021 | -4,9% | 102 | 2021-02-26 | -2,3% | +0,5% | +10,1% | +4,3% | -0,6% | +6,3% | 0,18 |
+| 2022-10-31 | Eleição 2022 | +1,3% | 134 | 2022-12-16 | -11,4% | -4,4% | -2,2% | -9,4% | +1,8% | -15,4% | 0,35 |
+| 2025-12-05 | Flávio 2025 | -4,3% | 137 | 2025-12-17 | -0,0% | +3,8% | +13,9% | +8,3% | — | -4,3% | 0,60 |
+
+## O que previu a recuperação: IC de Spearman univariado por regime
+
+Média por crise (t entre parênteses, só para "todas"). Regimes definidos pela natureza do choque: políticas = Joesley 2017, Petrobras 2021, Eleição 2022 e Flávio 2025; eleitorais = 2022 e 2025; pânico = greve 2018, Covid 2020 e 2ª onda 2020.
+
+| Característica | 1m | 3m | 6m | 12m | 6m pânico | 6m políticas | 6m eleitorais | Do fundo 1m | Do fundo 6m |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Beta de baixa | -0,098 (-1,3) | 0,026 (0,3) | 0,059 (0,6) | 0,058 (0,6) | 0,272 | -0,101 | -0,270 | 0,229 | 0,217 |
+| Resíduo do dia (fatores) | -0,082 (-2,4) | -0,096 (-3,2) | -0,093 (-2,7) | -0,091 (-2,5) | -0,104 | -0,085 | -0,043 | -0,103 | -0,071 |
+| Resíduo do dia (beta) | -0,137 (-1,9) | -0,107 (-2,0) | -0,060 (-1,0) | -0,054 (-0,7) | -0,053 | -0,066 | -0,096 | -0,078 | 0,039 |
+| Retorno do dia | -0,104 (-1,2) | -0,122 (-1,5) | -0,096 (-0,9) | -0,097 (-2,4) | -0,231 | 0,005 | 0,030 | -0,219 | -0,046 |
+| E/P | 0,084 (1,6) | 0,063 (1,4) | 0,011 (0,2) | 0,100 (1,8) | -0,124 | 0,112 | 0,200 | -0,002 | -0,040 |
+| B/P | 0,058 (0,7) | 0,112 (2,3) | 0,100 (2,9) | 0,232 (5,7) | 0,092 | 0,106 | 0,117 | 0,146 | 0,146 |
+| Valor (E/P+B/P) | 0,082 (1,2) | 0,101 (2,9) | 0,055 (1,2) | 0,185 (4,4) | -0,023 | 0,114 | 0,185 | 0,083 | 0,052 |
+| ROE | 0,079 (1,3) | -0,006 (-0,1) | -0,038 (-0,7) | -0,040 (-0,7) | -0,166 | 0,058 | 0,134 | -0,101 | -0,129 |
+| DL/EBITDA | -0,035 (-0,5) | 0,018 (0,3) | 0,017 (0,4) | 0,038 (0,7) | 0,129 | -0,067 | -0,051 | 0,136 | 0,080 |
+| Tamanho (log VM) | 0,006 (0,1) | -0,002 (-0,0) | -0,029 (-0,5) | -0,078 (-5,7) | -0,051 | -0,012 | 0,122 | -0,030 | -0,112 |
+| Liquidez (log ADTV) | 0,034 (0,9) | 0,076 (1,6) | -0,008 (-0,2) | -0,101 (-1,7) | 0,027 | -0,035 | 0,032 | 0,089 | -0,054 |
+| Momentum 12−1 | -0,067 (-1,0) | 0,069 (0,9) | 0,108 (2,1) | 0,022 (0,4) | 0,190 | 0,047 | 0,018 | 0,049 | 0,114 |
+| Exportadora | 0,156 (3,7) | 0,261 (8,8) | 0,154 (1,9) | 0,181 (1,4) | 0,181 | 0,135 | 0,142 | 0,092 | 0,072 |
+| Financeira | 0,010 (0,2) | 0,028 (0,7) | 0,030 (0,5) | 0,018 (0,3) | 0,006 | 0,049 | 0,142 | 0,064 | 0,032 |
+| Estatal | 0,061 (1,6) | 0,048 (1,0) | 0,032 (0,4) | 0,066 (0,7) | -0,017 | 0,069 | 0,240 | 0,102 | 0,005 |
+| Consumo cíclico | -0,182 (-2,8) | -0,156 (-2,5) | -0,088 (-1,1) | -0,124 (-1,9) | -0,085 | -0,091 | -0,281 | -0,034 | 0,054 |
+| Utilidade pública | 0,064 (1,3) | 0,004 (0,1) | 0,003 (0,0) | 0,066 (0,8) | -0,029 | 0,026 | 0,192 | -0,051 | -0,084 |
+
+IC 6m por crise:
+
+| Característica | Joesley 2017 | Greve 2018 | Covid 2020 | 2ª onda 2020 | Petrobras 2021 | Eleição 2022 | Flávio 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Beta de baixa | 0,177 | 0,428 | 0,354 | 0,033 | -0,043 | -0,208 | -0,332 |
+| Resíduo do dia (fatores) | -0,200 | -0,104 | -0,081 | -0,127 | -0,053 | -0,163 | 0,078 |
+| Resíduo do dia (beta) | -0,103 | 0,051 | -0,034 | -0,176 | 0,034 | -0,331 | 0,138 |
+| Retorno do dia | -0,157 | -0,301 | -0,206 | -0,186 | 0,116 | -0,360 | 0,420 |
+| E/P | -0,032 | -0,094 | -0,172 | -0,106 | 0,078 | 0,207 | 0,193 |
+| B/P | -0,006 | 0,135 | -0,036 | 0,176 | 0,194 | 0,163 | 0,072 |
+| Valor (E/P+B/P) | -0,047 | 0,027 | -0,120 | 0,025 | 0,133 | 0,209 | 0,161 |
+| ROE | -0,037 | -0,103 | -0,160 | -0,236 | 0,002 | 0,147 | 0,120 |
+| DL/EBITDA | -0,044 | 0,237 | 0,006 | 0,146 | -0,122 | -0,050 | -0,051 |
+| Tamanho (log VM) | -0,143 | 0,098 | -0,052 | -0,199 | -0,150 | 0,054 | 0,190 |
+| Liquidez (log ADTV) | -0,005 | 0,046 | 0,154 | -0,118 | -0,199 | -0,060 | 0,125 |
+| Momentum 12−1 | 0,205 | 0,170 | 0,335 | 0,064 | -0,054 | -0,008 | 0,044 |
+| Exportadora | 0,135 | -0,235 | 0,346 | 0,431 | 0,118 | 0,041 | 0,244 |
+| Financeira | -0,071 | 0,247 | -0,177 | -0,053 | -0,018 | 0,134 | 0,151 |
+| Estatal | -0,121 | 0,369 | -0,204 | -0,215 | -0,082 | 0,272 | 0,209 |
+| Consumo cíclico | 0,289 | 0,011 | -0,035 | -0,230 | -0,089 | -0,232 | -0,330 |
+| Utilidade pública | -0,223 | 0,230 | -0,172 | -0,145 | -0,057 | 0,153 | 0,232 |
+
+## Regressão multivariada a partir do dia do choque (Fama-MacBeth por crise)
+
+Coeficiente médio por crise (t). OLS por episódio com erros HC3; beta e resíduo em unidades de retorno; demais características em escore normal de postos; dummies 0/1; retorno futuro winsorizado a 1%/99%.
+
+| Variável | 1m | 3m | 6m | 12m |
+|---|---:|---:|---:|---:|
+| Intercepto | -0,015 (-0,7) | -0,019 (-0,6) | -0,022 (-0,5) | -0,007 (-0,1) |
+| Beta de baixa | -0,004 (-0,1) | 0,071 (1,3) | 0,099 (1,3) | 0,102 (1,1) |
+| Resíduo do dia (fatores) | -0,264 (-1,6) | -0,435 (-2,4) | -1,182 (-2,3) | -1,208 (-2,8) |
+| Valor (E/P+B/P) | 0,002 (0,5) | 0,011 (1,3) | 0,011 (1,6) | 0,040 (3,1) |
+| ROE | 0,005 (1,3) | 0,011 (2,6) | 0,000 (0,1) | 0,006 (0,3) |
+| DL/EBITDA | -0,004 (-0,7) | -0,005 (-0,7) | -0,019 (-1,6) | -0,024 (-1,1) |
+| Tamanho (log VM) | -0,003 (-0,6) | -0,009 (-1,6) | -0,028 (-1,5) | -0,064 (-2,7) |
+| Momentum 12−1 | -0,006 (-0,7) | 0,004 (0,4) | 0,027 (1,6) | 0,029 (1,1) |
+| Exportadora | 0,065 (4,4) | 0,132 (5,6) | 0,192 (2,1) | 0,372 (2,1) |
+| Financeira | 0,005 (0,5) | 0,022 (2,1) | 0,031 (1,4) | 0,066 (2,3) |
+| Estatal | 0,016 (1,3) | 0,003 (0,1) | 0,004 (0,1) | 0,020 (0,1) |
+| R² médio | 0,34 | 0,35 | 0,41 | 0,46 |
+| Episódios / crises | 17 / 7 | 17 / 7 | 17 / 7 | 16 / 6 |
+
+## Regressão multivariada a partir do fundo do episódio (Fama-MacBeth por crise)
+
+Coeficiente médio por crise (t). OLS por episódio com erros HC3; beta e resíduo em unidades de retorno; demais características em escore normal de postos; dummies 0/1; retorno futuro winsorizado a 1%/99%.
+
+| Variável | 1m | 3m | 6m | 12m |
+|---|---:|---:|---:|---:|
+| Intercepto | 0,017 (1,0) | -0,005 (-0,1) | -0,014 (-0,3) | 0,033 (0,4) |
+| Beta de baixa | 0,084 (2,0) | 0,174 (2,0) | 0,249 (2,4) | 0,228 (1,6) |
+| Resíduo do dia (fatores) | -0,447 (-1,7) | -0,912 (-1,9) | -0,972 (-1,7) | -1,211 (-2,3) |
+| Valor (E/P+B/P) | -0,000 (-0,0) | 0,009 (1,2) | 0,016 (3,3) | 0,048 (2,2) |
+| ROE | 0,002 (0,4) | 0,008 (2,0) | 0,000 (0,0) | 0,004 (0,2) |
+| DL/EBITDA | 0,007 (2,8) | 0,000 (0,0) | -0,007 (-0,3) | -0,007 (-0,2) |
+| Tamanho (log VM) | -0,010 (-1,1) | -0,018 (-1,6) | -0,047 (-2,5) | -0,095 (-3,2) |
+| Momentum 12−1 | -0,006 (-0,6) | 0,013 (0,7) | 0,031 (1,2) | 0,030 (0,9) |
+| Exportadora | 0,047 (2,9) | 0,073 (2,1) | 0,139 (1,2) | 0,353 (1,6) |
+| Financeira | 0,020 (1,4) | 0,041 (1,7) | 0,040 (1,4) | 0,096 (2,0) |
+| Estatal | 0,016 (1,0) | -0,009 (-0,3) | -0,028 (-0,4) | -0,010 (-0,1) |
+| R² médio | 0,38 | 0,42 | 0,44 | 0,45 |
+| Episódios / crises | 17 / 7 | 17 / 7 | 17 / 7 | 16 / 6 |
+
+Robustez com E/P e B/P separados (a partir do choque): 3m: E/P -0,008 (t -0,9), B/P 0,018 (t 1,8), ROE 0,024 (t 2,8); 6m: E/P -0,044 (t -1,6), B/P 0,047 (t 1,6), ROE 0,045 (t 1,8); 12m: E/P -0,055 (t -1,0), B/P 0,090 (t 2,3), ROE 0,075 (t 1,5).
+
+## A sobrerreação reverte? Em quanto tempo?
+
+r(t0→t0+h) = a + b·beta + φ(h)·resíduo, por episódio, com Fama-MacBeth por crise. φ = −1 é reversão total; φ = 0, nenhuma.
+
+| h (pregões) | φ resíduo fatores | t | % crises com φ < 0 | φ resíduo beta |
+|---:|---:|---:|---:|---:|
+| 1 | -0,189 | -3,0 | 1,00 | -0,219 |
+| 2 | -0,161 | -1,8 | 0,71 | -0,136 |
+| 3 | -0,113 | -1,6 | 0,86 | -0,099 |
+| 5 | -0,069 | -0,6 | 0,71 | -0,107 |
+| 10 | -0,102 | -0,8 | 0,43 | -0,205 |
+| 21 | -0,418 | -2,5 | 0,71 | -0,530 |
+| 42 | -0,585 | -2,6 | 0,86 | -0,577 |
+| 63 | -0,671 | -3,3 | 0,86 | -0,608 |
+| 126 | -1,444 | -2,7 | 0,86 | -1,000 |
+| 189 | -1,590 | -2,6 | 0,86 | -0,705 |
+| 252 | -1,755 | -4,3 | 1,00 | -0,943 |
+
+Cesta do quintil de resíduo mais negativo menos o universo (peso igual, acumulado, em pregões):
+
+| Crise | 0 | 1 | 2 | 5 | 10 | 21 | 42 | 63 | 126 | 189 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **Média** | +0,0% | +0,6% | +0,7% | +0,4% | +0,8% | +1,0% | +2,5% | +3,8% | +5,7% | +7,6% |
+| Joesley 2017 | +0,0% | +0,9% | +0,2% | +0,2% | +0,4% | +0,1% | +1,9% | +4,9% | +6,3% | +18,1% |
+| Greve 2018 | +0,0% | +1,4% | +2,0% | +1,2% | +0,8% | +2,1% | +4,7% | +5,5% | +2,5% | -1,6% |
+| Covid 2020 | +0,0% | +0,3% | +0,4% | +0,0% | +0,4% | +2,2% | +2,8% | +7,4% | +9,3% | +9,2% |
+| 2ª onda 2020 | +0,0% | +0,4% | -0,0% | -1,1% | -0,0% | +0,2% | +0,0% | -0,1% | +12,0% | +10,5% |
+| Petrobras 2021 | +0,0% | +0,9% | +1,0% | +1,1% | +0,6% | +2,7% | +9,5% | +8,8% | +9,4% | +12,9% |
+| Eleição 2022 | +0,0% | +0,2% | +0,8% | +0,5% | +2,4% | +1,5% | -0,6% | +0,7% | +5,0% | +5,5% |
+| Flávio 2025 | +0,0% | +0,3% | +0,6% | +0,8% | +1,4% | -1,6% | -0,9% | -0,6% | -4,7% | -1,5% |
+
+## Estratégias: cesta comprada no fechamento do dia do choque (quintil, peso igual) vs Ibovespa
+
+Média por crise (cada crise pesa 1). Excesso = cesta − Ibovespa; L/S = quintil escolhido − quintil oposto; MDD = drawdown máximo em 12 meses.
+
+| Estratégia | 1m | 3m | 6m | 12m | Excesso 3m | Excesso 6m | Excesso 12m | % crises excesso 6m > 0 | L/S 6m | MDD 12m | MDD Ibov |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Quintil de maior resíduo negativo (contra fatores) | +0,5% | +11,5% | +16,3% | +25,4% | +0,1% | +3,2% | +6,6% | 0,71 | +8,4% | -21,6% | -17,4% |
+| Quintil de maior resíduo negativo (contra beta) | +1,6% | +10,2% | +12,4% | +18,3% | -1,3% | -0,7% | -0,5% | 0,57 | +3,9% | -21,0% | -17,4% |
+| Maior queda absoluta no dia | +1,6% | +13,1% | +19,0% | +29,0% | +1,6% | +5,9% | +10,1% | 0,86 | +12,9% | -24,4% | -17,4% |
+| Mais barato (E/P + B/P) | +1,6% | +10,7% | +13,9% | +32,2% | -0,8% | +0,8% | +13,3% | 0,86 | +4,0% | -17,8% | -17,4% |
+| Maior qualidade (ROE) | +1,3% | +8,4% | +9,0% | +11,6% | -3,1% | -4,1% | -7,2% | 0,14 | -7,6% | -20,6% | -17,4% |
+| Menor alavancagem (DL/EBITDA, não financeiras) | -1,5% | +7,0% | +9,9% | +15,2% | -4,5% | -3,2% | -3,6% | 0,43 | -0,5% | -19,3% | -17,4% |
+| Maior beta de baixa | -1,2% | +11,5% | +17,4% | +31,5% | +0,1% | +4,3% | +12,6% | 0,71 | +10,7% | -28,8% | -17,4% |
+| Menor beta de baixa | -0,2% | +6,0% | +6,8% | +13,5% | -5,5% | -6,3% | -5,4% | 0,14 | -10,7% | -14,2% | -17,4% |
+
+Excesso de 6m por crise:
+
+| Estratégia | Joesley 2017 | Greve 2018 | Covid 2020 | 2ª onda 2020 | Petrobras 2021 | Eleição 2022 | Flávio 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Quintil de maior resíduo negativo (contra fatores) | +10,5% | +0,8% | +7,4% | +10,6% | +11,4% | -1,0% | -17,3% |
+| Quintil de maior resíduo negativo (contra beta) | +6,3% | -8,3% | +5,6% | +12,4% | -3,1% | +2,0% | -19,9% |
+| Maior queda absoluta no dia | +15,8% | +9,6% | +11,0% | +23,9% | +2,1% | +5,0% | -26,1% |
+| Mais barato (E/P + B/P) | +3,7% | +3,4% | +1,7% | +0,6% | +1,9% | +1,5% | -7,4% |
+| Maior qualidade (ROE) | +0,4% | -3,2% | -8,3% | -3,8% | -2,0% | -2,4% | -9,6% |
+| Menor alavancagem (DL/EBITDA, não financeiras) | +4,8% | -2,6% | +3,0% | -8,9% | +3,7% | -7,8% | -15,0% |
+| Maior beta de baixa | +14,0% | +15,3% | +22,1% | +11,5% | +7,2% | -12,0% | -28,0% |
+| Menor beta de baixa | -2,3% | -11,0% | -18,6% | -3,0% | +4,3% | -4,9% | -8,9% |
+
+## Viés de sobrevivência
+
+Modelo: r_6m ~ beta_baixa + resid_beta + momentum + liquidez (top 150 emissores por ADTV, inclui deslistadas). Coeficientes Fama-MacBeth por crise (t):
+
+| Variável | Universo amplo | Só sobreviventes (negociadas em set–out/2026) |
+|---|---:|---:|
+| Intercepto | -0,008 (-0,2) | 0,003 (0,1) |
+| Beta de baixa | 0,108 (1,3) | 0,094 (1,2) |
+| Resíduo do dia (beta) | -0,728 (-1,2) | -0,642 (-0,8) |
+| Momentum 12−1 | 0,034 (2,5) | 0,035 (1,7) |
+| Liquidez (log ADTV) | -0,009 (-0,7) | -0,002 (-0,2) |
+
+| Episódio | N amplo | N sobreviventes | 6m sobreviventes | 6m não sobreviventes |
+|---|---:|---:|---:|---:|
+| 2017-05-18 | 150 | 101 | +21,1% | +18,5% |
+| 2018-05-28 | 150 | 109 | +17,1% | +46,9% |
+| 2020-02-26 | 150 | 113 | -10,2% | -10,8% |
+| 2020-03-05 | 150 | 113 | -5,5% | -6,1% |
+| 2020-03-06 | 150 | 113 | -1,0% | -1,4% |
+| 2020-03-09 | 150 | 114 | +13,1% | +14,1% |
+| 2020-03-11 | 150 | 113 | +10,8% | +11,4% |
+| 2020-03-12 | 150 | 113 | +30,1% | +34,0% |
+| 2020-03-16 | 150 | 113 | +40,8% | +43,3% |
+| 2020-03-18 | 150 | 114 | +63,3% | +72,9% |
+| 2020-03-23 | 150 | 114 | +63,4% | +64,4% |
+| 2020-03-27 | 150 | 113 | +30,4% | +26,8% |
+| 2020-04-24 | 150 | 113 | +38,8% | +34,3% |
+| 2020-10-28 | 150 | 114 | +25,2% | +26,3% |
+| 2021-02-22 | 150 | 116 | +3,5% | +4,2% |
+| 2022-10-31 | 150 | 122 | -16,1% | +7,2% |
+| 2025-12-05 | 150 | 144 | -6,2% | -24,2% |
+
+## Validação fora da amostra (deixa uma crise de fora)
+
+O modelo é treinado nas outras crises (FM com encolhimento) e aplicado à seção cruzada da crise deixada de fora.
+
+| Horizonte | Pesos | IC médio | IC médio nas políticas | Q5−Q1 médio | % crises IC > 0 |
+|---|---|---:|---:|---:|---:|
+| 3m | todos | 0,139 | 0,104 | +10,6% | 0,86 |
+| 3m | recomendado | 0,143 | 0,119 | +9,3% | 1,00 |
+| 6m | todos | 0,040 | -0,005 | +11,8% | 0,43 |
+| 6m | recomendado | 0,055 | 0,027 | +14,7% | 0,71 |
+| 12m | todos | 0,168 | 0,214 | +32,8% | 0,83 |
+| 12m | recomendado | 0,193 | 0,239 | +36,8% | 0,83 |
+
+| Crise | 3m recom. | 6m recom. | 12m recom. |
+|---|---:|---:|---:|
+| Joesley 2017 | IC 0,15 / +6,2% | IC 0,08 / +11,1% | IC 0,30 / +46,4% |
+| Greve 2018 | IC 0,17 / +9,3% | IC -0,28 / -15,6% | IC -0,16 / -17,3% |
+| Covid 2020 | IC 0,17 / +11,1% | IC 0,26 / +28,0% | IC 0,30 / +78,4% |
+| 2ª onda 2020 | IC 0,18 / +15,8% | IC 0,29 / +60,3% | IC 0,30 / +71,7% |
+| Petrobras 2021 | IC 0,16 / +6,3% | IC 0,03 / +7,6% | IC 0,24 / +22,7% |
+| Eleição 2022 | IC 0,14 / +11,8% | IC 0,03 / +4,5% | IC 0,18 / +18,9% |
+| Flávio 2025 | IC 0,02 / +4,8% | IC -0,03 / +6,6% | IC — / — |
+
+## Limitações
+
+- **Poucos episódios independentes.** São 7 crises (6 com 12m), apenas 2 eleitorais e 3 de pânico. Os t por crise têm 3–6 graus de liberdade e os 11 dias da Covid contam como um evento só (o t "por dia" no JSON é ingênuo). A classificação dos regimes (político/eleitoral/pânico) e o peso 2 das crises políticas são escolhas a priori, não estimadas.
+- **Hoje está fora da amostra em magnitude.** O Ibovespa caiu −14,8%, só comparável a 12 e 16/03/2020, e 59 ações caíram ≥ 20%. O resíduo foi limitado à faixa histórica e a extrapolação linear de φ para quedas desse tamanho não é testada.
+- **Sobrevivência.** Os fundamentos (E/P, B/P, ROE, DL/EBITDA) existem só para empresas listadas hoje (`data/hist`). O teste no universo amplo, que inclui deslistadas, cobre só sinais de mercado. Uma deslistagem é tratada como saída pelo último preço.
+- **Retorno de preço, sem proventos.** Isso subestima valor e ações de dividendo alto em ~DY por ano. Os efeitos de E/P e B/P provavelmente estão subestimados.
+- **Fundamentos point-in-time com defasagem fixa** (45 dias para trimestres, 90 dias para o anual). Na Covid isso usa o FY2018, porque o FY2019 só entra em 30/03/2020. Em 31/10/2022 usa o fluxo do FY2021 com o balanço do 2T22 (o ITR na base começa em 2022). O valor de mercado histórico vem da série de ações da CVM, corrigida de escala e recuada por desdobramentos.
+- **Classificações manuais.** Exportadora = Materiais Básicos (exceto Dexco/Irani), petróleo E&P/integrada e uma lista explícita, sem distribuidoras. Estatal é point-in-time (Eletrobras até 06/2022, Sabesp até 07/2024, Copel até 08/2023, BR Distribuidora até 07/2019). Setores seguem a classificação atual da B3.
+- **Costura de ISINs** em renomeações, por continuidade de preço 1:1 ± 20%, mesma classe e volume compatível (lista em `stitched_chains`). Pode errar em papéis ilíquidos fora do universo principal.
+- **Os retornos de hoje são uma foto intradiária** (`data/market/*.json`, stats.today) e o ranking muda com o fechamento. O valuation (`data/app/overview.json`) não entra no modelo, só como referência no JSON: este ranking é uma sobreposição de regime de crise, não um ranking de valor justo.
+- **Intervalos largos.** O intervalo de 80% é dominado pela trajetória do mercado (o nível vem da média pós-choque, que vai de −10% a +50% entre crises). O ranking relativo é mais confiável do que o nível do retorno esperado.

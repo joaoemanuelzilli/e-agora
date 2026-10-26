@@ -16,6 +16,10 @@ KE = 0.25
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 
 
+def pct1(x):
+    return "—" if x is None else f"{x * 100:.1f}%".replace(".", ",")
+
+
 def load(p):
     try:
         return json.load(open(p))
@@ -147,16 +151,30 @@ def projections(m):
 
 def engine(m):
     """Entradas compactas para o motor TS recalcular valor justo (Ke) e TIR com preço ao vivo."""
-    if not m or m.get("template") == "holding":
-        return {"template": "holding", "fair_value": m.get("fair_value") if m else None,
-                "nav_mkt_share": m.get("nav_mkt_share") if m else None}
+    if not m:
+        return {"template": "holding", "fair_value": None, "nav_mkt_share": None}
+    if m.get("template") == "holding":
+        # SOTP com o motor de cada controlada avaliada pelo estudo, para o TS refazer a soma das partes em outro Ke
+        comps = []
+        for c in m.get("components") or []:
+            sub = None
+            if c.get("method") == "fair" and c.get("ticker"):
+                sm = load(ROOT / "data" / "model" / f"{c['ticker']}.json")
+                if sm and sm.get("template") != "holding" and sm.get("fair_value") is not None:
+                    sub = engine(sm)
+            comps.append({"ticker": c.get("ticker"), "stake": c.get("stake"), "method": c.get("method"),
+                          "value_100": c.get("value_mkt_100") if sub else c.get("value_fair_100"), "engine": sub})
+        sh = m.get("shares") or {}
+        return {"template": "holding", "fair_value": m.get("fair_value"), "nav_mkt_share": m.get("nav_mkt_share"),
+                "g": m.get("g"), "n_sh": sh.get("outstanding_mn"), "per_unit": sh.get("per_unit"),
+                "hnd": m.get("holding_net_debt"), "hcost": m.get("holding_cost_mn"), "components": comps}
     pr = m.get("proj") or {}
     sh = m.get("shares") or {}
     e = {"template": m.get("template"), "ke_base": KE, "g": m.get("g"), "roe_T": m.get("roe_T"),
          "f26": pr.get("f26"), "taus": m.get("taus"), "tau_T": m.get("tau_T"),
          "div": pr.get("dividends"), "ni_last": (pr.get("ni_controlling") or [None])[-1],
          "eps": m.get("eps"), "dps": m.get("dps"), "n_sh": sh.get("outstanding_mn"), "per_unit": sh.get("per_unit"),
-         "values_share": m.get("values_share"), "weights": m.get("weights"), "pe_target": None}
+         "values_share": m.get("values_share"), "weights": m.get("weights"), "pe_target": m.get("pe_target")}
     if m.get("template") != "financial":
         d = m.get("dcf") or {}
         e.update({"fcff": pr.get("fcff"), "nopat_last": (pr.get("ebit") or [0])[-1] * (1 - (pr.get("tax_rate") or [0.3])[-1]),
@@ -200,6 +218,11 @@ def main():
         hist5 = (h.get("annual") or {})
         roe5 = [((hist5.get(f"FY{y}") or {}).get("ratios") or {}).get("roe") for y in range(2021, 2026)]
         roe5 = [x for x in roe5 if x is not None]
+        # PL negativo na janela (ex.: BEEF3 em 2024) tira o sentido do ROE: fica indisponível; extremos limitados
+        eq5 = [(hist5.get(f"FY{y}") or {}).get("equity_controlling") for y in range(2020, 2026)]
+        if any(e is not None and e <= 0 for e in eq5):
+            roe5 = []
+        roe5 = [min(0.7, max(-0.5, x)) for x in roe5]
         val = m or {}
         proj = projections(val) if m else None
         row = {
@@ -249,6 +272,7 @@ def main():
                                                   "multiples_history", "dps_history", "dividends_b3", "sector")},
                "quant": {"piotroski": pz, "altman": az, "interest_cov": r(cov_int, 2)},
                "research": rs, "notes_md": note.read_text() if note.exists() else None,
+               "review_md": (ROOT / "research" / "review" / f"{tk}.md").read_text() if (ROOT / "research" / "review" / f"{tk}.md").exists() else None,
                "report": load(ROOT / "research" / "reports" / f"{tk}.json"),
                "dividendos": div_by.get(tk)}
         docs.append(doc)
@@ -259,9 +283,13 @@ def main():
     z_s = zscore([(-(x["nd_ebitda"] if x["nd_ebitda"] is not None else 2.5) + ((x["altman"] or {}).get("z") or 5) / 3) if x["template"] != "financial" else None for x in rows])
     z_o = zscore([-(x["today"] or {}).get("xsec_residual") if (x["today"] or {}).get("xsec_residual") is not None else None for x in rows])
     z_p = zscore([x["prob_mc"] for x in rows])
+    z_m = zscore([x["mom_12_1"] for x in rows])
+    # pesos: momentum 12-1 entra com 10% (IC positivo no backtest 2017–26 e no estudo de crashes); valor e qualidade
+    # cedem 5 p.p. cada. Os pesos otimizados não se sustentaram fora da amostra (data/tests/factor_backtest.md).
     for i, x in enumerate(rows):
-        comp = {"valor": z_val[i], "upside": z_up[i], "qualidade": z_q[i], "solidez": z_s[i], "sobrerreacao": z_o[i], "probabilidade": z_p[i]}
-        w = {"valor": 0.30, "upside": 0.10, "qualidade": 0.20, "solidez": 0.15, "sobrerreacao": 0.10, "probabilidade": 0.15}
+        comp = {"valor": z_val[i], "upside": z_up[i], "qualidade": z_q[i], "solidez": z_s[i], "sobrerreacao": z_o[i],
+                "probabilidade": z_p[i], "momentum": z_m[i]}
+        w = {"valor": 0.25, "upside": 0.10, "qualidade": 0.15, "solidez": 0.15, "sobrerreacao": 0.10, "probabilidade": 0.15, "momentum": 0.10}
         tot = sum(w[k] for k, v in comp.items() if v is not None)
         x["scores"] = comp
         x["score"] = round(sum(w[k] * v for k, v in comp.items() if v is not None) / tot, 3) if tot else None
@@ -275,12 +303,23 @@ def main():
     def low_conf(x):
         c = (x.get("confidence") or "").lower().strip()
         return c.startswith("baixa") and not c.startswith("baixa-m") and not c.startswith("baixa a m")
-    opp = [x for x in ranked if (x["irr_implied"] or -1) >= 0.20 and (x["prob_mc"] or 0) >= 0.45
-           and ((x["altman"] or {}).get("zone") != "risco") and not low_conf(x)][:8]
-    # relatórios são documentos datados: se existirem, a lista fica congelada nas empresas com relatório
-    reported = {p.stem for p in (ROOT / "research" / "reports").glob("*.json") if not p.stem.startswith("_")}
-    if reported:
-        opp = [x for x in ranked if x["ticker"] in reported]
+    def fails(x):
+        out = []
+        if (x["irr_implied"] or -1) < 0.20:
+            out.append(f"TIR de dono de {pct1(x['irr_implied'])}, abaixo do corte de 20%")
+        if (x["prob_mc"] or 0) < 0.45:
+            out.append(f"chance de o valor justo superar o preço de {pct1(x['prob_mc'])}, abaixo do corte de 45%")
+        if (x["altman"] or {}).get("zone") == "risco":
+            out.append("Altman Z″ na zona de risco")
+        if low_conf(x):
+            out.append("confiança do analista baixa")
+        return out
+    # a regra vale para os números revisados; relatório de quem saiu continua publicado, com o motivo
+    opp = [x for x in ranked if not fails(x)][:8]
+    reported = sorted(p.stem for p in (ROOT / "research" / "reports").glob("*.json") if not p.stem.startswith("_"))
+    opp_set = {x["ticker"] for x in opp}
+    by_tk = {x["ticker"]: x for x in rows}
+    dropped = [{"ticker": t, "reasons": fails(by_tk[t])} for t in reported if t not in opp_set and t in by_tk]
     # macro ao vivo no build (o app também atualiza em tempo real)
     def sgs(code, n=1):
         d = get_json(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.{code}/dados/ultimos/{n}?formato=json")
@@ -293,7 +332,8 @@ def main():
     sector_stats = sorted([{"setor": k, "n": len(v), "median": float(np.median(v)), "mean": float(np.mean(v))} for k, v in sectors.items()], key=lambda d: d["median"])
     overview = {"generated_at": datetime.now().isoformat(timespec="seconds"), "ke": KE, "valuation_date": "2026-10-26",
                 "companies": rows, "opportunities": [x["ticker"] for x in opp],
-                "opportunity_rule": "TIR de dono ≥ 20%, P(valor justo > preço) ≥ 45% no Monte Carlo, fora da zona de risco do Altman Z″ e confiança do analista diferente de baixa; ordenadas pelo escore multifator. Seleção feita com os preços das 12h55 de 26/10/2026.",
+                "reports": reported, "opportunities_dropped": dropped,
+                "opportunity_rule": "TIR de dono ≥ 20%, P(valor justo > preço) ≥ 45% no Monte Carlo, fora da zona de risco do Altman Z″ e confiança do analista diferente de baixa; ordenadas pelo escore multifator. Seleção com os preços das 13h02 de 26/10/2026, depois da revisão independente das premissas.",
                 "market": {k: mk.get(k) for k in ("ibov_today", "ibov_daily_return_stats", "worst_days", "crash_forward_stats", "crash_threshold",
                                                    "elections", "drawdowns_25", "ibov_weekly", "ibov_return_hist", "indices_last", "crash_paths", "election_paths")},
                 "xsec": mk["xsec"], "sectors": mk["sectors"], "sector_stats": sector_stats, "macro": macro,

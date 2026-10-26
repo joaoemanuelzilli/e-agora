@@ -118,10 +118,10 @@
   "notes": "Swaps líquidos já abatidos via overrides.base.net_debt. Fornecedores-montadoras (R$ 10,7 bi no 2T26, R$ 8,7 bi em dez/25) tratados como capital de giro operacional, não dívida; parte do aumento de R$ 2,0 bi no 1S26 deve reverter no 2S26 (embutido no capex 2026E)."
  },
  "target_multiples": {
-  "pe": 10.0,
-  "ev_ebitda": 4.7,
+  "pe": 8.5,
+  "ev_ebitda": 4.25,
   "pbv": 1.4,
-  "rationale": "P/L: RENT3 negociou a ~11x o lucro ajustado 2025 em 12/08/26 (R$ 34,10), ~13x em 30/06 (R$ 41,54) e ~17x na véspera da eleição (R$ 52,42) — cálculo próprio com preços B3 (COTAHIST) e lucro CVM/release. Alvo 10x 2027E = desconto ao piso recente para refletir CDI ~14–15% por mais tempo e depreciação em alta. EV/EBITDA: hoje ~3,9x e pré-eleição ~5,3x o EBITDA 2027E; alvo 4,7x (consistente com P/L ~10x dada a DL de ~R$ 34 bi). P/VP 1,4x vs 1,24x hoje (ROE ~15%)."
+  "rationale": "P/L: RENT3 negociou a ~11x o lucro ajustado 2025 em 12/08/26 (R$ 34,10), ~13x em 30/06 (R$ 41,54) e ~17x na véspera da eleição (R$ 52,42) — cálculo próprio com preços B3 (COTAHIST) e lucro CVM/release. Sobre o LPA 2027E do modelo (R$ 4,03), esses preços equivalem a 8,5x (12/08), 10,3x (30/06) e 13,0x (23/10). Alvo 8,5x 2027E = o piso de 12/08 na mesma base (revisão independente de 26/10: o alvo anterior de 10x comparava múltiplo projetado com múltiplo histórico e ficava acima do piso que pretendia descontar). EV/EBITDA 2027E: 4,25x em 12/08, ~4,1x hoje e ~5,45x na véspera; alvo 4,25x, coerente com P/L 8,5x dada a DL de ~R$ 33,6 bi. P/VP 1,4x vs 1,29x hoje (ROE ~15%)."
  },
  "scenarios": {
   "bear": {

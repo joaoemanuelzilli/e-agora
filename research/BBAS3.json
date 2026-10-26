@@ -12,8 +12,10 @@
   }
  ],
  "overrides": {
-  "base": {},
-  "notes": "Sem override. Lucro CVM (contábil consolidado) é bem menor que o 'lucro ajustado' gerencial: 2T26 CVM R$ 2.398 mi vs contábil do release R$ 3.175 mi vs ajustado R$ 3.900 mi; FY2025 CVM R$ 13.698 mi vs ajustado ≈ R$ 20,6 bi (1T25 ~7,3 + 2T25 ~3,8 + 3T25 ~3,8 + 4T25 ~5,7, derivado das variações publicadas). As premissas de ROE são sobre lucro AJUSTADO e PL CVM (consistente: 2T26 ajustado anualizado / PL médio CVM = 8,3% = RSPL reportado). Payout aplicado sobre o ajustado."
+  "base": {
+   "equity_controlling_2025": 180969
+  },
+  "notes": "[Revisão G10, 26/10] PL-base pró-forma: o motor projeta o PL a partir do FY2025 (R$ 189.208 mi) acumulando o lucro AJUSTADO retido, o que levava o PL 2026E a R$ 201,0 bi; mas o PL CVM CAIU no 1S26 para R$ 186.079 mi (2T26) apesar de R$ 7,3 bi de lucro ajustado (LL CVM menor + ORA negativo ≈ −R$ 8,2 bi de 'vazamento' no semestre). Override equity_controlling_2025 = PL 2T26 CVM − lucro ajustado retido do 1S26 (7.300 × 0,7) = R$ 180.969 mi, e ROE 2026 de abertura 8,9% → 9,3% para manter o LL 2026E em R$ 16,8 bi; assim PL 2026E = R$ 192,8 bi = PL 2T26 + 2S26 retido. ROEs 2027–30 mantidos (mesmos ROEs médios de 10,6% → 13,4%). Original em research/review/BBAS3.orig.json. — Nota original: Lucro CVM (contábil consolidado) é bem menor que o 'lucro ajustado' gerencial: 2T26 CVM R$ 2.398 mi vs contábil do release R$ 3.175 mi vs ajustado R$ 3.900 mi; FY2025 CVM R$ 13.698 mi vs ajustado ≈ R$ 20,6 bi (1T25 ~7,3 + 2T25 ~3,8 + 3T25 ~3,8 + 4T25 ~5,7, derivado das variações publicadas). As premissas de ROE são sobre lucro AJUSTADO e PL CVM (consistente: 2T26 ajustado anualizado / PL médio CVM = 8,3% = RSPL reportado). Payout aplicado sobre o ajustado."
  },
  "projection": {
   "years": [
@@ -33,7 +35,7 @@
  },
  "financial_projection": {
   "roe": [
-   0.089,
+   0.093,
    0.11,
    0.125,
    0.135,
@@ -116,16 +118,16 @@
    "net_income_mn": 3900,
    "net_debt_ebitda": null
   },
-  "notes": "revenue_cagr_5y aqui = CAGR do PL controlador CVM 2020–25 (8,6%). ROE CVM 2021–25: 13,7/18,4/18,2/15,1/7,4% (média 14,6%); ROE ajustado médio ~18% (2022–24 ~21%). Payout CVM (caixa/contábil) 39–68%; payout declarado caiu para 30% em 2025. Projeção: 2026E LL ajustado R$ 16,8 bi (1S26 R$ 7,3 bi + 2S26E R$ 9,5 bi) — ABAIXO do guidance revisado R$ 18–22 bi; 2027 R$ 22,1 bi (ROE ~10,6% s/ PL médio), 2030 R$ 35,4 bi (13,4%). Abaixo da média histórica por intervenção, Res. 4.966 e crédito."
+  "notes": "revenue_cagr_5y aqui = CAGR do PL controlador CVM 2020–25 (8,6%). ROE CVM 2021–25: 13,7/18,4/18,2/15,1/7,4% (média 14,6%); ROE ajustado médio ~18% (2022–24 ~21%). Payout CVM (caixa/contábil) 39–68%; payout declarado caiu para 30% em 2025. Projeção: 2026E LL ajustado R$ 16,8 bi (1S26 R$ 7,3 bi + 2S26E R$ 9,5 bi) — ABAIXO do guidance revisado R$ 18–22 bi; 2027 R$ 21,2 bi (ROE ~10,6% s/ PL médio), 2030 R$ 34,0 bi (13,4%) — após revisão (PL-base pró-forma; antes 22,1 e 35,4 bi). Abaixo da média histórica por intervenção, Res. 4.966 e crédito."
  },
  "guidance": "Guidance 2026 (fev/26): LL ajustado R$ 22–26 bi; carteira +0,5% a +4,5%; MFB +4% a +8%; custo do crédito R$ 53–58 bi. Revisado em 13/05/2026: LL ajustado R$ 18–22 bi; custo do crédito R$ 65–70 bi; MFB +7% a +11%. Mantido no 2T26 (13/08/26). 1S26 realizado: LL ajustado R$ 7,3 bi; custo do crédito R$ 37,4 bi. BTG vê nova revisão 'questão de tempo'. 3T26 em 11/11/2026.",
  "dividend_policy": "Payout reduzido para 30% em 2025 (de ~40–45% em 2022–24) para preservar capital; JCP trimestral (1T26 ~R$ 465,7 mi aprovados; 2T26 JCP complementar R$ 584,9 mi). Payout 2026 oficial não confirmado nesta rodada — assumo 30% em 2026–27, 35% em 2028 e 40% em 2029–30 (premissa sinalizada). Restrição: CET1 11,27% (2T26) vs 12,23% em dez/25; Basileia 13,91%.",
  "election_impact": "−31% (R$ 24,72→17,01; market cap ~R$ 141 bi→~R$ 97 bi; P/VP 0,76x→0,52x). Parte é o mesmo de-rating do setor, parte é risco estatal específico de um 4º mandato: (i) crédito direcionado/renegociações (MP 1.376/26: até R$ 100 bi do agro para 113 mil clientes, sendo R$ 36,7 bi vencidos); (ii) pressão por spreads menores — cada 2 pp de corte em 20% da carteira (R$ 1,31 tri) ≈ −R$ 5,2 bi/ano antes de IR (~−2 pp de ROE); (iii) cada +1 pp de custo de crédito no agro (R$ 418 bi) ≈ −R$ 4,2 bi/ano antes de IR (~−1,5 pp ROE); (iv) payout baixo para preservar capital. Precedente Dilma (CVM): ROE 17,0% em 2015 → 8,3% em 2016. Na margem, a queda de hoje equivale a precificar ROE de longo prazo ~3,5 pp menor (Gordon com Ke constante) — próximo do que modelo (14% terminal vs ~18% médio ajustado 2021–25).",
- "summary": "BB está no fundo do ciclo de crédito (RSPL 8,3% no 2T26, inadimplência 5,61%, agro 6,27%, PF 8,41%) e agora soma risco de intervenção num 4º mandato. A ~0,53x PL e ~4,5x P/L 2027E parece barato, mas com Ke de 25% e ROE normalizado de ~14% o P/VP justo é ~0,45x: preço perto do justo (TIR implícita ~20–21%); TIR 3 anos ~32% só se o ROE normalizar para ~13% e o múltiplo voltar a 5x P/L — aposta binária na normalização do agro/PF e na ausência de intervenção.",
+ "summary": "BB está no fundo do ciclo de crédito (RSPL 8,3% no 2T26, inadimplência 5,61%, agro 6,27%, PF 8,41%) e agora soma risco de intervenção num 4º mandato. A ~0,54x PL e ~4,7x P/L 2027E parece barato, mas com Ke de 25% e ROE normalizado de ~14% o P/VP justo é ~0,45x: preço perto do justo (TIR implícita ~20%); TIR 3 anos ~29% só se o ROE normalizar para ~13% e o múltiplo voltar a 5x P/L — aposta binária na normalização do agro/PF e na ausência de intervenção.",
  "thesis": [
   "Lucro já em recuperação: LL ajustado R$ 3,9 bi no 2T26 (+13,9% t/t, acima do consenso de R$ 3,6 bi); formação de inadimplência agro caiu de R$ 7,18 bi para R$ 5,72 bi.",
   "Renegociação com apoio do governo (MP 1.376/26, até R$ 100 bi) e 70% das novas operações do Plano Safra com alienação fiduciária.",
-  "Valuation: ~0,52–0,54x PL CVM e ~4,5x P/L 2027E (R$ 22 bi); cada 1 pp de ROE normalizado vale ~R$ 10 bi de valor a Ke 25% (0,05x PL)."
+  "Valuation: ~0,52–0,54x PL CVM e ~4,7x P/L 2027E (R$ 21,2 bi); cada 1 pp de ROE normalizado vale ~R$ 10 bi de valor a Ke 25% (0,05x PL)."
  ],
  "risks": [
   "Intervenção estatal (spreads, crédito direcionado, renegociações, governança) — maior risco num 4º mandato.",

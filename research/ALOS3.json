@@ -12,8 +12,10 @@
   }
  ],
  "overrides": {
-  "base": {},
-  "notes": "Base CVM FY2025 mantida (receita 2.859,1; EBITDA 2.174,2). A D&A contábil (~22% da receita) inclui a amortização da mais-valia/ágio da fusão brMalls (2023), não caixa e sem relação com reposição; na projeção uso D&A econômica de 8% da receita (≈ capex de manutenção/revitalização) para que o NOPAT da perpetuidade e o 'lucro' do motor reflitam a geração recorrente (≈ FFO). Consequência: o LL projetado (~R$1,25 bi em 2026) é próximo do FFO (2T26 R$340,8 mi; R$0,68/ação), não do LL contábil (~R$0,9 bi). IR efetivo 10% (SPEs no lucro presumido)."
+  "base": {
+   "net_debt": 4410.91
+  },
+  "notes": "Base CVM FY2025 mantida (receita 2.859,1; EBITDA 2.174,2). A D&A contábil (~22% da receita) inclui a amortização da mais-valia/ágio da fusão brMalls (2023), não caixa e sem relação com reposição; na projeção uso D&A econômica de 8% da receita (≈ capex de manutenção/revitalização) para que o NOPAT da perpetuidade e o 'lucro' do motor reflitam a geração recorrente (≈ FFO). Consequência: o LL projetado (~R$1,25 bi em 2026) é próximo do FFO (2T26 R$340,8 mi; R$0,68/ação), não do LL contábil (~R$0,9 bi). [Revisão 26/10] (i) DL-base = DL CVM 30/06 (R$3.680,9 mi, com arrendamentos e dívida em 'outras obrigações') + R$730 mi das 5 parcelas de R$0,2919/ação com data-com antes de hoje e pagas depois de 30/06 (dc 22/06, 23/07, 21/08, 22/09, 22/10; pagas 02/07–04/11; R$438 mi já em 'dividendos a pagar' + 2 aprovadas em 15/09): saem do caixa para acionistas antigos e, na DL, passam a gerar juros no DDM/P/L (antes eram 4 parcelas, R$584 mi, só no ajuste estático). (ii) IR 15%: com a D&A econômica (sem a amortização da mais-valia), o IR consistente é o corrente (CVM 3.08.01: R$195 mi em 2025, R$107 mi no 1S26 ≈ 7% da receita ≈ 14–16% do LAIR sem PPA); os 7–10% contábeis incluíam o crédito de IR diferido da própria amortização da mais-valia."
  },
  "projection": {
   "years": [
@@ -67,15 +69,15 @@
    0
   ],
   "tax_rate": [
-   0.1,
-   0.1,
-   0.1,
-   0.1,
-   0.1
+   0.15,
+   0.15,
+   0.15,
+   0.15,
+   0.15
   ],
-  "minority_share_ni": 0.02,
+  "minority_share_ni": 0.06,
   "payout": [
-   0.43,
+   0.58,
    0.95,
    0.95,
    0.95,
@@ -106,16 +108,16 @@
   "target_debt_weight": 0.17
  },
  "adjustments": {
-  "other_debt_like": 584,
+  "other_debt_like": 197.82,
   "non_operating_assets": 0,
-  "minority_value": null,
-  "notes": "other_debt_like = 4 parcelas mensais de proventos (~R$146 mi cada; data-ex jul, ago, 23/09 e 23/10/26) que saem do caixa após 30/06 para acionistas antigos. Payout 2026 (stub) 0,43 ≈ parcelas que cabem ao comprador (23/11 e dez). Venda de fatias ao Kinea ALLOS Malls FII (R$0,6–1,0 bi a cap rate ~9,5%, assinada 23/10/26) NÃO incluída no caso-base: depende de captação mínima de R$600 mi pelo FII após o choque (upside: a Ke 25% vender NOI a ~10,5x é muito acretivo). Derivativos (R$180 mi, nota do líder) e obrigações por aquisição remanescentes não somados (saldo não confirmado)."
+  "minority_value": 320,
+  "notes": "other_debt_like = derivativos passivos (CVM 2.02.02.02.10: R$180,2 mi em 30/06/26) + obrigações por compra de ativos (R$2,5 + 15,1 mi). As 5 parcelas de proventos já fora do alcance do comprador (R$730 mi) foram para a DL-base (overrides). Payout 2026 (stub) 0,58 ≈ R$290 mi = 2 parcelas que cabem ao comprador (dc 23/11, R$0,2919, e dez/26 no guidance de R$0,27–0,29). Minoritários: 6% do LL (CVM: R$36,4 mi no 1S26, R$17,7 mi no 2T26, após a queda do PL de minoritários de R$753 mi para R$96 mi no 1T26) e valor econômico R$320 mi (≈6% do equity DCF; o contábil de R$96 mi não sustenta lucro de ~R$71 mi/ano). Venda de fatias ao Kinea ALLOS Malls FII (R$0,6–1,0 bi a cap rate ~9,5%, assinada 23/10/26) NÃO incluída no caso-base: depende de captação mínima de R$600 mi pelo FII após o choque (sensibilidade: venda de R$0,8 bi → justo +R$0,7)."
  },
  "target_multiples": {
-  "pe": 9.5,
-  "ev_ebitda": 7.5,
+  "pe": 10.5,
+  "ev_ebitda": 8.0,
   "pbv": 1.0,
-  "rationale": "P/L aplicado ao 'lucro' do motor ≈ FFO (D&A econômica). Pré-eleição: P/FFO LTM ~12,8x (R$35,14 / FFO ~R$2,75) → 7,8%+3pp = 10,8% → ~9,3x; EV/EBITDA LTM 9,9x (EV R$21,3 bi / EBITDA CVM R$2.141 mi) → 10,1%+3pp → ~7,6x. Hoje: P/FFO ~9,5x; EV/EBITDA ~7,8x. Safra (ago/26): alvo R$36, outperform."
+  "rationale": "Mesma regra (+300 bp no rendimento do múltiplo pré-eleição), na mesma base em que o motor aplica. O 'lucro' do motor = FFO − D&A econômica (8% da receita) ≈ AFFO, não FFO: AFFO LTM ≈ FFO R$1.375 mi − R$232 mi = R$1.143 mi (R$2,29/ação) → P/AFFO pré-eleição 15,4x (R$35,14) → 6,5%+3pp = 9,5% → 10,5x. EV pré-eleição com todos os itens que a ponte desconta: mcap R$17,57 bi + DL R$3,68 bi + parcelas declaradas R$0,73 bi + derivativos/aquisições R$0,20 bi + minoritários R$0,32 bi = R$22,5 bi / EBITDA CVM LTM R$2.141 mi = 10,5x → 9,5%+3pp → 8,0x. (Antes: 9,5x P/FFO e 7,5x sobre EV sem esses itens.) Safra (ago/26): alvo R$36, outperform."
  },
  "scenarios": {
   "bear": {

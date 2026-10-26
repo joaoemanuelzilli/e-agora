@@ -1,0 +1,258 @@
+{
+ "ticker": "ASAI3",
+ "name": "Assaí Atacadista (Sendas Distribuidora S.A.)",
+ "sector": "Varejo alimentar / atacarejo (cash & carry)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "ASAI3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Base CVM mantida (receita FY2025 R$ 77.307 mi; DL 2T26 R$ 22.520 mi = dívida 16.282 + arrendamentos 10.711 − caixa 4.473). Conferido com o release 2T26 (dívida bruta líquida de derivativos R$ 15.749 mi; DL ex-arrendamento R$ 11.276 mi). Ajustes fora da base em 'adjustments'. Capex modelado = capex caixa + adições de direito de uso (IFRS-16, ~1,4% da RL) para que a dívida de arrendamento não 'amortize sozinha' no motor. Margem EBITDA 2026 (8,9%) inclui créditos extemporâneos de PIS/COFINS (~R$ 567 mi brutos no 1S26) e créditos recorrentes (~R$ 110 mi/tri); a partir de 2027 (CBS substitui PIS/COFINS) assumimos margem sem esses créditos (7,8%–8,0%)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.016,
+   0.05,
+   0.055,
+   0.055,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.089,
+   0.078,
+   0.079,
+   0.08,
+   0.08
+  ],
+  "da_pct_revenue": [
+   0.024,
+   0.024,
+   0.024,
+   0.024,
+   0.024
+  ],
+  "capex_pct_revenue": [
+   0.023,
+   0.027,
+   0.03,
+   0.03,
+   0.03
+  ],
+  "nwc_pct_revenue": 0.02,
+  "cost_of_net_debt": [
+   0.13,
+   0.136,
+   0.134,
+   0.128,
+   0.124
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.25,
+   0.26,
+   0.27,
+   0.27,
+   0.27
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.25,
+   0.25,
+   0.3,
+   0.35,
+   0.4
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.14,
+  "roe": 0.18
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.5
+ },
+ "adjustments": {
+  "other_debt_like": 2082,
+  "non_operating_assets": 533,
+  "minority_value": null,
+  "notes": "other_debt_like = recebíveis descontados R$ 1.123 mi (a própria companhia soma à DL para medir alavancagem) + fornecedores-convênio (risco sacado) R$ 959 mi (conservador). non_operating_assets = derivativos ativos de hedge da dívida R$ 533 mi (o release apresenta a dívida bruta líquida deles). Participação de ~16,5% na FIC (R$ 297 mi contábil, após impairment de R$ 521 mi no 4T25) não somada: a equivalência já está no EBIT CVM."
+ },
+ "target_multiples": {
+  "pe": 8.0,
+  "ev_ebitda": 5.0,
+  "pbv": 1.5,
+  "rationale": "Múltiplos de estresse, coerentes com Ke 25%: P/L 8x e EV/EBITDA (IFRS-16, dívida incl. arrendamentos) 5,0x sobre 2027E. Referências: pré-eleição (R$ 13,80) a ação negociava ~13x o lucro LTM 2T26 (R$ 965 mi) e ~5,7x EV/EBITDA LTM IFRS-16 (EV ≈ R$ 18,5 bi mkt cap + R$ 22,5 bi DL); em 2024–25 o papel oscilou entre ~10x e ~15x P/L. Usamos piso do intervalo por causa da alavancagem e do juro real alto."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.006,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "CDI ~16% até 2028 (curva atual), consumo de baixa renda fraco e guerra de preços no atacarejo; desalavancagem trava em ~2,3x."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.004,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Selic volta a ~11% em 2028, renda das classes C/D sustentada por transferências, maturação das lojas convertidas e farmácias levam margem a 8,4%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.004,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.003
+ },
+ "debt_profile": {
+  "gross_debt_mn": 16282,
+  "pct_floating_cdi": null,
+  "avg_cost": "≈CDI+0,5–1,0% (estimado pelos encargos do 2T26: R$ 583 mi sobre dívida média ~R$ 15,9 bi; não confirmado na nota de dívida)",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 2176,
+  "covenant_nd_ebitda": 3.0
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -92,
+  "notes": "Exposição líquida a CDI ≈ DL ex-arrendamentos R$ 11,3 bi + recebíveis descontados R$ 1,1 bi = R$ 12,4 bi → +100 bp = −R$ 124 mi antes de IR, ≈ −R$ 92 mi no lucro (≈ −8% do lucro 2027E). Arrendamentos (R$ 10,7 bi) têm taxa contratual (~11,6% implícita), não flutuam com o CDI. 'next_24m_maturities_mn' = dívida circulante (12 meses) do balanço 2T26; cronograma completo não verificado."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.165,
+  "ebitda_margin_avg_5y": 0.073,
+  "roe_avg_5y": 0.138,
+  "payout_avg_5y": 0.13,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.009,
+   "ebitda_margin": 0.097,
+   "net_income_mn": 484,
+   "net_debt_ebitda": 3.63
+  },
+  "notes": "CAGR 2020–25 de 16,5% inflado pelas conversões de 66 hipermercados Extra (2022–24); expansão agora é ~5–10 lojas/ano (guidance 2026: 5 lojas, capex R$ 700 mi) → projetamos 5–5,5% a.a. (SSS ≈ inflação de alimentos + área). Margem EBITDA IFRS-16 CVM: 7,8% (21), 7,0% (22), 7,2% (23), 7,4% (24), 7,0% (25; 7,6% ex-impairment FIC) → premissa terminal 8,0%, em linha com a média ex-créditos. ROE 5 anos de 31% é distorcido pelo PL minúsculo pós-cisão (2021–22); média 2023–25 = 13,8%. Payout histórico baixo (0–26%) por prioridade à desalavancagem; mínimo estatutário 25% do lucro ajustado. DL/EBITDA 2T26 (CVM, incl. arrendamentos) 3,6x; no conceito da companhia (pré-IFRS-16, incl. recebíveis) 2,37x vs covenant 3,0x."
+ },
+ "guidance": "4T25 (12/02/2026): 5 novas lojas em 2026, capex ~R$ 700 mi, possíveis revisões de portfólio e sale-leaseback; meta de alavancagem 2025 (2,60x) cumprida com 2,56x. 2T26: 25 farmácias Assaí Farma em SP até o fim de 2026 (potencial 250). Sem meta numérica de alavancagem para 2026 encontrada.",
+ "dividend_policy": "Mínimo estatutário de 25% do lucro líquido ajustado. JCP de R$ 140 mi (R$ 0,104/ação) referente a 2025, pago em 26/06/2026 (data-com 06/01/2026). Dividendos/JCP pagos (DFC): R$ 118 mi (2023), R$ 0 (2024), R$ 128 mi (2025). Recompras pequenas (R$ 26–92 mi/ano).",
+ "election_impact": "Queda de ~40% é sobretudo canal juros: dívida líquida ex-arrendamentos de R$ 11,3 bi (+R$ 1,1 bi de recebíveis descontados) quase toda em CDI e ~R$ 10,7 bi de arrendamentos; cada +100 bp de CDI tira ~R$ 90 mi do lucro (~8%), e a curva (DI1F28 14,95%) adia a queda da Selic que sustentava a tese de desalavancagem. Lado micro: um 4º mandato tende a manter transferências de renda (Bolsa Família, salário mínimo com ganho real, isenção de IR até R$ 5 mil) que sustentam o fluxo de clientes de baixa renda e o B2B de pequenos comerciantes — positivo para volume, mas inflação de alimentos/câmbio pressiona ticket e trade down. O valor operacional (EBITDA ~R$ 6,2 bi LTM) mudou pouco; o valor do equity é muito sensível ao custo da dívida (alavancagem 3,6x incl. arrendamentos).",
+ "summary": "Maior atacarejo do país (313 lojas, faturamento R$ 84,7 bi em 2025), operação resiliente (fluxo recorde de 40 mi clientes/mês, ganho de share) e desalavancando (2,37x no 2T26 vs 3,17x). Equity é uma opção alavancada sobre os juros: a R$ 8,23 negocia ~8x P/L 2027E, mas o motor com Ke 25% depende de a desalavancagem continuar. Com minhas premissas, o preço de hoje embute TIR de ~14,5% (vs Ke 25%; ~11% no preço pré-eleição).",
+ "thesis": [
+  "Geração de caixa livre de R$ 2,7 bi em 12 meses com capex cortado (R$ 816 mi LTM) — DL+recebíveis caiu R$ 1,4 bi em 12 meses (R$ 13,8 → 12,4 bi).",
+  "Cada 100 bp de queda do CDI adiciona ~R$ 90 mi ao lucro (~8%); se a Selic voltar a ~12% em 2028, o lucro pode dobrar vs 2025 (R$ 497 mi contábil).",
+  "Ganho de market share (+0,3 p.p. mesmas lojas no 2T26) e 138 lojas abertas nos últimos 5 anos ainda maturando; novas avenidas (marca própria, farmácia, serviços financeiros pós-FIC em 2028)."
+ ],
+ "risks": [
+  "Juros: curva atual (DI1F29 15,4%) mantém despesa financeira em ~R$ 3 bi/ano (incl. arrendamentos) e posterga a desalavancagem.",
+  "Consumo de baixa renda pressionado (endividamento das famílias >80% — CNC jun/26) e SSS fraco (+0,9% no 2T26; −0,9% no 1T26).",
+  "Margem de 2026 inflada por créditos de PIS/COFINS não recorrentes (~R$ 567 mi brutos no 1S26); reforma tributária (CBS a partir de 2027) muda a dinâmica de créditos.",
+  "Concorrência (Atacadão/Carrefour, Mateus, regionais) e entrada de farmácias em supermercados também trazem competição para novos negócios."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (data não verificada; ~início de nov/26) — alavancagem e SSS.",
+  "Sale-leaseback/monetização de ativos sinalizada para 2026.",
+  "Trajetória do Copom e da curva DI pós-eleição; aprovação pelo BC da cisão da FIC (serviços financeiros próprios)."
+ ],
+ "key_data": [
+  {
+   "label": "Receita bruta 2T26",
+   "value": "R$ 21,4 bi (+2,4% a/a)",
+   "context": "SSS +0,9% ex-calendário; fluxo +3,4%"
+  },
+  {
+   "label": "EBITDA aj. pré-IFRS-16 2T26",
+   "value": "R$ 1.071 mi (5,6%)",
+   "context": "pós-IFRS-16 R$ 1.880 mi (9,8%) incl. ~R$ 403 mi de créditos PIS/COFINS"
+  },
+  {
+   "label": "Lucro líquido 2T26",
+   "value": "R$ 537 mi contábil pré-IFRS16 / R$ 484 mi IFRS-16",
+   "context": "recorrente pré-IFRS16 R$ 344 mi (+93,6%)"
+  },
+  {
+   "label": "Alavancagem (DL+recebíveis)/EBITDA pré-IFRS16",
+   "value": "2,37x",
+   "context": "vs 3,17x 2T25; covenant 3,0x"
+  },
+  {
+   "label": "DL CVM incl. arrendamentos / EBITDA LTM",
+   "value": "3,6x",
+   "context": "R$ 22,5 bi / R$ 6,2 bi"
+  },
+  {
+   "label": "Lojas",
+   "value": "313",
+   "context": "11 aberturas em 12 meses; guidance 5 em 2026"
+  },
+  {
+   "label": "Preço 26/10 11h55",
+   "value": "R$ 8,23 (−40%)",
+   "context": "pré-eleição R$ 13,80; mkt cap ~R$ 11,0 bi"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Assaí — Divulgação de Resultados 2T26 (06/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/ec14f0ab-c5d4-4b12-a413-b6cc7475ed98/ecd60f65-8e70-bf69-5d12-d9615573ce8f?origin=2"
+  },
+  {
+   "title": "Assaí — Apresentação 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/ec14f0ab-c5d4-4b12-a413-b6cc7475ed98/776bffb1-4a43-97b7-df44-f113ff9545a5?origin=2"
+  },
+  {
+   "title": "Assaí — Apresentação 4T25 (12/02/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/ec14f0ab-c5d4-4b12-a413-b6cc7475ed98/8c8e64ad-36ae-f165-dcdc-1b3812d4a0af?origin=2"
+  },
+  {
+   "title": "Assaí — Transcrição call 4T25",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/ec14f0ab-c5d4-4b12-a413-b6cc7475ed98/d232fc60-79fa-8dd6-3fed-dc74f79cf01f?origin=2"
+  },
+  {
+   "title": "Money Times — JCP de R$ 140 mi (dez/2025)",
+   "url": "https://www.moneytimes.com.br/assai-asai3-pagara-r-140-milhoes-em-jcp-veja-condicoes/"
+  },
+  {
+   "title": "Visno — Assaí encerra 2025 com alavancagem de 2,56x",
+   "url": "https://visnoinvest.com.br/news/11335/assai-asai3-encerra-2025-com-alavancagem-de-aproximadamente-256x-abaixo-do-guidance-de-260x"
+  },
+  {
+   "title": "CVM — ITR/DFP padronizados (data/hist/ASAI3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média — números operacionais e de balanço conferidos no release 2T26 e na CVM; incertezas: trajetória do CDI (domina o valor do equity), recorrência dos créditos fiscais e perfil detalhado da dívida (não verificado)."
+}

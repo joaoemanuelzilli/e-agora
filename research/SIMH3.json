@@ -164,7 +164,7 @@
     "value_mn": 67
    }
   ],
-  "holding_net_debt_mn": 1689,
+  "holding_net_debt_mn": 1989,
   "holding_cost_mn": 40
  },
  "terminal": {
@@ -180,7 +180,7 @@
   "other_debt_like": 0,
   "non_operating_assets": 0,
   "minority_value": null,
-  "notes": "DL da holding = R$ 1.389 mi no 2T26 (dívida bruta R$ 6.038 mi incl. derivativos de hedge na curva R$ 1.216 mi; caixa R$ 4.649 mi) + R$ 300 mi estimados para o TRS (total return swap, nocional R$ 526 mi, custo CDI+3,63%, venc. set/27, referenciado em SIMH3/MOVI3/VAMO3/JSLG3/AMOB3; MTM −R$ 232 mi em 30/06, excluído pela empresa da DL). Estimativa do MTM de hoje: cesta ~10–15% abaixo de 30/06 + carrego → −R$ 280 a −330 mi (margem depositada R$ 183 mi em CDB em 30/06). Custo de holding R$ 40 mi/ano (despesas administrativas da controladora R$ 25,7 mi no 1S26, líquidas de outras receitas recorrentes) capitalizado a 1/(25%−5%) = 5x. Carrego negativo da holding (dívida a 18,8% a.a. vs caixa a ~CDI) não foi capitalizado à parte: a dívida líquida é subtraída ao valor de face, e a 25% de Ke uma dívida a 18,8% vale abaixo da face — os dois efeitos se compensam aproximadamente."
+  "notes": "DL da holding = R$ 1.389 mi no 2T26 (dívida bruta R$ 6.038 mi incl. derivativos de hedge na curva R$ 1.216 mi; caixa R$ 4.649 mi) + R$ 300 mi estimados para o TRS (total return swap, nocional R$ 526 mi, custo CDI+3,63%, venc. set/27, referenciado em SIMH3/MOVI3/VAMO3/JSLG3/AMOB3; MTM −R$ 232 mi em 30/06, excluído pela empresa da DL). Estimativa do MTM de hoje: cesta ~10–15% abaixo de 30/06 + carrego → −R$ 280 a −330 mi (margem depositada R$ 183 mi em CDB em 30/06). Custo de holding R$ 40 mi/ano (despesas administrativas da controladora R$ 25,7 mi no 1S26, líquidas de outras receitas recorrentes) capitalizado a 1/(25%−5%) = 5x. Carrego negativo da holding (revisão independente de 26/10): dívida bruta de R$ 6.038 mi a 18,8% a.a. contra caixa de R$ 4.649 mi a ~CDI (spread de ~4–4,3 p.p.). A tese anterior de que isso se compensava com a dívida valer abaixo da face a Ke 25% tinha o sinal trocado: a Ke 25% o caixa (rende ~CDI) também vale abaixo da face, e cai mais que a dívida. Valor econômico a 25% (bullet de 4 anos = prazo médio): dívida R$ 5.154 mi − caixa R$ 3.496 mi = DL econômica de R$ 1.658 mi (+R$ 269 mi vs face); com consumo linear do caixa até meados de 2031: +R$ 272–340 mi; perpétuo: +R$ 362–548 mi. Somados +R$ 300 mi (centro da faixa finita) → DL da holding usada = 1.389 + 300 (TRS) + 300 (carrego) = R$ 1.989 mi."
  },
  "target_multiples": {
   "pe": null,

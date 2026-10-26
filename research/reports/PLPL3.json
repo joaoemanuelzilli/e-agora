@@ -1,7 +1,7 @@
 {
   "ticker": "PLPL3",
-  "headline": "A R$ 5,68, a Plano&Plano negocia a 1,0x o valor patrimonial e 3,7x o lucro 2027E, e o preço embute receita caindo ~7% ao ano até 2030 — num MCMV que acabou de ser ampliado e ganhou quatro anos de continuidade com Lula.",
-  "verdict": "Entra no ranking pela combinação de preço e probabilidade: TIR de dono de 25,4% (acima do Ke de 25%), valor justo de R$ 6,94 (+22% sobre R$ 5,68, preço de referência do estudo às ~12h55 de 26/10/2026) e 77% de probabilidade de o valor superar o preço em 5.000 simulações. É, porém, a tese de maior risco micro do grupo: a margem bruta já caía antes da eleição (−4,8 p.p. a/a no 2T26) e o Piotroski é 2/9 — o retorno depende de a margem convergir à do backlog (37,5%).",
+  "headline": "A R$ 5,70, a Plano&Plano negocia a 1,0x o valor patrimonial e 3,9x o lucro 2027E, e o preço embute receita crescendo só 1,7% ao ano até 2030 — num MCMV que acabou de ser ampliado e ganhou quatro anos de continuidade com Lula.",
+  "verdict": "É a 4ª das cinco oportunidades no escore multifator, praticamente empatada com MDNE3 (0,901 contra 0,903): tem a maior TIR de dono do grupo (25,2%, a única acima do Ke de 25%, por 0,2 p.p.), mas o pior momentum (−56% de out/25 a set/26). O valor justo é R$ 6,37 (DDM 50%, P/L-alvo 30%, DCF 20%), +12% sobre R$ 5,70 (foto das 13h02 de 26/10/2026); a TIR em 3 anos é de 37,5% e 65% das 5.000 simulações superam o preço. É, porém, a tese de maior risco micro do grupo: a margem bruta já caía antes da eleição (−4,8 p.p. a/a no 2T26) e o Piotroski é 2/9, o menor das cinco — o retorno depende de a margem convergir à do backlog (37,5%).",
   "reasons": [
     {
       "title": "MCMV ampliado sustenta volume e preço",
@@ -12,19 +12,19 @@
       }
     },
     {
-      "title": "Preço embute contração, não crescimento",
-      "body": "No DCF reverso (motor do estudo, Ke 25%), o preço de R$ 5,68 só se justifica com receita caindo 6,7% a.a. em 2026–30, contra +6,4% a.a. na nossa base — que já é ~1/5 do CAGR histórico de 29,5% (CVM, 2020–25).",
+      "title": "Preço embute receita quase estagnada",
+      "body": "No DCF reverso (motor do estudo, Ke 25%), o preço de R$ 5,70 só se justifica com receita crescendo 1,7% a.a. em 2026–30 — abaixo do INCC de 6,6% em 12 meses —, contra +6,4% a.a. na nossa base, que já é ~1/5 do CAGR histórico de 29,5% (CVM, 2020–25).",
       "metric": {
         "label": "Crescimento de receita implícito no preço",
-        "value": "−6,7% a.a."
+        "value": "+1,7% a.a."
       }
     },
     {
       "title": "Múltiplos no piso histórico",
-      "body": "P/VP de 1,03x contra média de 5 anos de 2,85x e P/L UDM de 3,8x contra 7,3x (série mensal de múltiplos, B3/CVM). O valor de mercado (R$ 1,15 bi) é praticamente o patrimônio líquido de R$ 1,12 bi da controladora (CVM 2T26).",
+      "body": "P/VP de 1,04x contra média de 5 anos de 2,92x e P/L UDM de 3,8x contra 7,3x (série mensal de múltiplos, B3/CVM). O valor de mercado (R$ 1,16 bi) é praticamente o patrimônio líquido de R$ 1,12 bi da controladora (CVM 2T26).",
       "metric": {
         "label": "P/VP atual vs média 5 anos",
-        "value": "1,03x vs 2,85x"
+        "value": "1,04x vs 2,92x"
       }
     },
     {
@@ -45,38 +45,38 @@
     },
     {
       "title": "Lucro baixo ainda paga o preço rápido",
-      "body": "Mesmo com LL 2026E de R$ 269 mi no modelo (abaixo dos R$ 305 mi UDM da CVM e dos R$ 397 mi do Santander), o P/L 2027E é 3,7x e o dividend yield projetado é de 7,0%, 9,4% e 14,5% em 2026–28 ao preço de R$ 5,68 (payout de 30% subindo a 45%).",
+      "body": "Mesmo com LL 2026E de R$ 250 mi no modelo (já com o IR do RET corrigido na revisão independente; abaixo dos R$ 305 mi UDM da CVM e dos R$ 397 mi do Santander), o P/L 2027E é 3,9x e o dividend yield projetado é de 6,5%, 9,0% e 14,3% em 2026–28 ao preço de R$ 5,70 (payout de 30% subindo a 45%).",
       "metric": {
         "label": "P/L 2027E",
-        "value": "3,7x"
+        "value": "3,9x"
       }
     }
   ],
   "statistics": [
     {
       "title": "A queda vs. beta e vs. fatores",
-      "body": "Na foto do estudo, PLPL3 caía 33,0% contra −24,9% previstos pelo beta de baixa (1,72): resíduo de −8,1 p.p., z = −3,0 — a maior parte é beta, mas houve componente idiossincrático. No modelo multifator do pregão (147 ações; beta, alavancagem, tamanho e setor; R² = 0,71), a queda prevista era −36,5%: resíduo de +3,6 p.p., i.e., o excesso é explicado por ser small cap de beta alto, não por notícia nova.",
-      "stat": "resíduo vs beta −8,1 p.p. (z = −3,0); vs multifator +3,6 p.p."
+      "body": "Na foto do estudo (13h02), PLPL3 caía 32,6% contra −25,2% previstos pelo beta de baixa (1,72): resíduo de −7,5 p.p., z = −2,8 — a maior parte é beta, mas houve componente idiossincrático. No modelo multifator do pregão (147 ações; beta, alavancagem, tamanho e setor; R² = 0,71), a queda prevista era −36,8%: resíduo de +4,2 p.p., i.e., o excesso é explicado por ser small cap de beta alto, não por notícia nova.",
+      "stat": "resíduo vs beta −7,5 p.p. (z = −2,8); vs multifator +4,2 p.p."
     },
     {
-      "title": "Múltiplos ~1,4–1,9 desvio-padrão abaixo da média",
-      "body": "Contra a série mensal de 5 anos, o P/VP de 1,03x tem z = −1,89 (percentil 2%), o EV/EBITDA de 2,95x tem z = −1,40 (percentil 3%) e o P/L de 3,77x tem z = −1,38 (percentil 5%).",
-      "stat": "z(P/VP, 5a) = −1,89; percentil 2%"
+      "title": "Múltiplos ~1,5–2,1 desvios-padrão abaixo da média",
+      "body": "Contra a série mensal de 5 anos, o P/VP de 1,04x tem z = −2,15 (o menor nível da série), o EV/EBITDA de 2,96x tem z = −1,51 (percentil 2%) e o P/L de 3,79x tem z = −1,48 (percentil 3%).",
+      "stat": "z(P/VP, 5a) = −2,15; mínima da série"
     },
     {
       "title": "Monte Carlo favorável, mas com cauda",
-      "body": "Em 5.000 simulações (DP de 5 p.p. no crescimento, 2 p.p. na margem e 0,75 p.p. no g; correlação crescimento×margem 0,5), o valor fica entre R$ 4,95 (p10) e R$ 9,34 (p90), mediana R$ 6,92; 77% dos cenários superam R$ 5,68.",
-      "stat": "P(valor > R$ 5,68) = 77%; p10–p90 R$ 4,95–9,34"
+      "body": "Em 5.000 simulações (DP de 5 p.p. no crescimento, 2 p.p. na margem e 0,75 p.p. no g; correlação crescimento×margem 0,5), o valor fica entre R$ 4,35 (p10) e R$ 8,78 (p90), mediana R$ 6,34; 65% dos cenários superam R$ 5,70.",
+      "stat": "P(valor > R$ 5,70) = 65%; p10–p90 R$ 4,35–8,78"
     },
     {
-      "title": "DCF reverso: o mercado precifica encolhimento",
-      "body": "Mantidas margens e demais premissas, o preço de R$ 5,68 exige deslocamento de −13,1 p.p. no crescimento anual, ou seja, receita caindo 6,7% a.a. até 2030 — cenário pior que o de 2021–22 da própria empresa, quando a receita cresceu 17–41% a.a.",
-      "stat": "crescimento implícito −6,7% a.a. vs +6,4% na base"
+      "title": "DCF reverso: o mercado precifica estagnação",
+      "body": "Mantidas margens e demais premissas, o preço de R$ 5,70 exige deslocamento de −4,7 p.p. no crescimento anual, ou seja, receita crescendo só 1,7% a.a. até 2030 — cenário bem pior que o de 2021–22 da própria empresa, quando a receita cresceu 17–41% a.a.",
+      "stat": "crescimento implícito +1,7% a.a. vs +6,4% na base"
     },
     {
-      "title": "Sensibilidade e assimetria",
-      "body": "O valor varia de R$ 8,84 (Ke 20%) a R$ 5,77 (Ke 30%); a margem pesa mais: −3 p.p. de margem levam o valor a R$ 4,92. Cenário bear (30% de probabilidade) vale R$ 4,71 (−17%), bull (20%) R$ 8,75 (+54%); valor ponderado R$ 6,63 (+17%).",
-      "stat": "bear −17% / bull +54%; ponderado +17%"
+      "title": "Métodos, sensibilidade e assimetria",
+      "body": "Por método, o DDM vale R$ 5,75 (só ~1% acima do preço, daí a TIR de dono colada no Ke), o P/L-alvo (4,5x) R$ 6,60 e o DCF R$ 7,58. O valor combinado varia de R$ 8,01 (Ke 20%) a R$ 5,39 (Ke 30%); a margem pesa mais: −3 p.p. levam o valor a R$ 4,60. Bear (30% de probabilidade) vale R$ 4,14 (−27%), bull (20%) R$ 8,14 (+43%); valor ponderado R$ 6,06 (+6%).",
+      "stat": "bear −27% / bull +43%; ponderado +6%"
     },
     {
       "title": "Histórico de crashes e eleições (Ibovespa)",
@@ -87,8 +87,8 @@
   "risks": [
     {
       "title": "Deterioração micro já em curso",
-      "body": "Antes da eleição a ação já caía 45% em 12 meses: margem bruta ajustada de 29,7% (−4,8 p.p. a/a), LL atribuível de R$ 53 mi no 2T26 (−37% a/a), queima de caixa de R$ 94,5 mi no trimestre (CFO UDM −R$ 88 mi, CVM) e Piotroski 2/9; o BTG alertou para cortes relevantes de estimativas 2026–27.",
-      "mitigant": "O modelo já incorpora LL 2026E 26% abaixo do de 2025 e margem abaixo da média histórica; a margem REF de 37,5% dá colchão. Sinal de alerta: margem bruta ajustada abaixo de 28% no 3T26."
+      "body": "Antes da eleição a ação já caía 45% em 12 meses: margem bruta ajustada de 29,7% (−4,8 p.p. a/a), LL atribuível de R$ 53 mi no 2T26 (−37% a/a), queima de caixa de R$ 94,5 mi no trimestre (CFO UDM −R$ 88 mi, CVM) e Piotroski 2/9; o BTG alertou para cortes relevantes de estimativas 2026–27. Pela revisão independente, sem recuperação da margem a TIR de dono cai a 23,1%, e a 21,7% com a margem do 1S26 — ambas abaixo do Ke.",
+      "mitigant": "O modelo já incorpora LL 2026E 31% abaixo do de 2025 e margem abaixo da média histórica; a margem REF de 37,5% dá colchão. Sinal de alerta: margem bruta ajustada abaixo de 28% no 3T26."
     },
     {
       "title": "Custo de obra e câmbio",
@@ -151,5 +151,5 @@
       "event": "Prévia operacional do 4T26"
     }
   ],
-  "bottom_line": "Para investidor tolerante a risco, com horizonte de 2–3 anos e posição pequena: a tese funciona se a margem bruta parar de cair no 3T26 e o caixa voltar a ser gerado em 2027; se a margem seguir abaixo de 28%, o desconto vira armadilha de valor."
+  "bottom_line": "Para investidor tolerante a risco, com horizonte de 2–3 anos e posição pequena: com a TIR de dono colada no Ke (25,2%), não há folga — a tese funciona se a margem bruta parar de cair no 3T26 e o caixa voltar a ser gerado em 2027; se a margem seguir abaixo de 28%, o desconto vira armadilha de valor."
 }

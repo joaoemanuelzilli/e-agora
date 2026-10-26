@@ -1,0 +1,256 @@
+{
+ "ticker": "SMFT3",
+ "name": "Smartfit Escola de Ginástica e Dança S.A.",
+ "sector": "Serviços ao consumidor / academias (América Latina)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "SMFT3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Base CVM FY2025 (receita 7.241,7; EBITDA IFRS-16 3.455,1). Convenção IFRS-16 do motor: EBITDA sem aluguel, DL inclui R$6,53 bi de arrendamentos. Para não superavaliar, capex_pct_revenue = capex físico + ADIÇÕES DE DIREITO DE USO (novos contratos/remensurações: R$1.590 mi em 2025 = 22% da receita; R$819 mi no 1S26), pois a D&A projetada inclui a depreciação do direito de uso (~R$794 mi em 2025). Em 2025: capex físico 32,9% + ROU 22,0% = 54,9% da receita."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.2,
+   0.17,
+   0.15,
+   0.13,
+   0.11
+  ],
+  "ebitda_margin": [
+   0.48,
+   0.485,
+   0.49,
+   0.495,
+   0.5
+  ],
+  "da_pct_revenue": [
+   0.24,
+   0.24,
+   0.24,
+   0.24,
+   0.24
+  ],
+  "capex_pct_revenue": [
+   0.5,
+   0.45,
+   0.4,
+   0.35,
+   0.31
+  ],
+  "nwc_pct_revenue": 0.0,
+  "cost_of_net_debt": [
+   0.117,
+   0.12,
+   0.12,
+   0.117,
+   0.113
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.18,
+   0.2,
+   0.22,
+   0.24,
+   0.25
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.25,
+   0.3,
+   0.3,
+   0.35,
+   0.4
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.055,
+  "roic": 0.15,
+  "roe": 0.2
+ },
+ "wacc": {
+  "kd_pre_tax": 0.13,
+  "target_debt_weight": 0.4
+ },
+ "adjustments": {
+  "other_debt_like": 40,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = JCP de R$40 mi (data-ex 04/09/26, pago 30/10/26) aos acionistas antigos. 'Outros passivos' de dívida pelo critério das debêntures (R$24 mi: earn-outs, opções de minoritários) ignorados por imaterialidade. Aquisição da Evolve (60%, ago/26) e Buddha Spa (até R$32 mi) não modeladas à parte."
+ },
+ "target_multiples": {
+  "pe": 12.0,
+  "ev_ebitda": 5.5,
+  "pbv": 2.0,
+  "rationale": "Regra 'choque de juros neutro'. Pré-eleição (R$24,92): P/L recorrente LTM ~18,6x (LL recorrente R$822 mi) → 5,4%+3pp → ~12x; EV/EBITDA IFRS-16 LTM ~6,8x (EV R$26,2 bi c/ arrendamentos / EBITDA R$3.859 mi) → 14,8%+3pp → ~5,6x. Hoje: P/L recorrente ~11,8x; EV/EBITDA pré-IFRS16 ~5,5x (DL ajustada R$4,6 bi / EBITDA R$2,6 bi)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.05,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.02,
+   "narrative": "Juros altos em Brasil e México travam a expansão, competição de low-cost e agregadores (Wellhub/TotalPass) derruba ticket; safras novas maturam mais devagar."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.03,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.02,
+   "narrative": "Expansão de 330–350 academias/ano mantida com maturação forte; câmbio fraco eleva receita em R$ da operação internacional (~53% das unidades)."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.04,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.02
+ },
+ "debt_profile": {
+  "gross_debt_mn": 7217,
+  "pct_floating_cdi": 0.58,
+  "avg_cost": "Brasil CDI+0,65–1,05% (15ª emissão, jul/26); México TIIE+spread (sindicalizado novo); demais países taxas locais",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 1471,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -17,
+  "notes": "DL ajustada R$4,61 bi, 44% no Brasil (~R$2,0 bi em CDI) → −R$20 mi antes de IR por +100 bp no CDI (~−R$17 mi no lucro, ~2% do LL recorrente). Arrendamentos (R$6,5 bi) têm taxa fixa por contrato (2,25%–19,41%), mas reajustam por inflação."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.4196,
+  "ebitda_margin_avg_5y": 0.425,
+  "roe_avg_5y": 0.043,
+  "payout_avg_5y": 0.372,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.216,
+   "ebitda_margin": 0.48,
+   "net_income_mn": 156.1,
+   "net_debt_ebitda": 2.82
+  },
+  "notes": "CAGR 5a de 42% parte da base Covid (2020); 2022→2025 = 35% a.a.; 2T26 +21,6% a/a. Premissa desacelera de 20% (2026) para 11% (2030) — CAGR ~15% — com 330–350 aberturas/ano sobre base crescente. Margem IFRS-16 2025 47,7% (pré-IFRS16 ~32%); premissa 48→50% com maturação (66% das próprias Smart Fit maduras). ROE médio 4,3% (2021–25) inclui prejuízos Covid; ROE LTM 11,7%. DL/EBITDA 2,82x inclui arrendamentos; pela definição da empresa (ex-imóveis) 1,78x."
+ },
+ "guidance": "Guidance de aberturas 2026: 330–350 academias, ~80% próprias (Fato Relevante mar/26; reiterado no 2T26). Até jul/26: 98 aberturas, 134 obras e >200 contratos assinados para 2026–27. Sem guidance de capex/EBITDA. Liability management: 15ª emissão (R$1 bi, CDI+0,65/0,75/1,05%, 5–10 anos) para resgatar a 8ª emissão e notas comerciais (resgate anunciado 06/10/26).",
+ "dividend_policy": "Mínimo estatutário via JCP: pagos 2023 R$269 mi; 2024 R$51 mi; 2025 R$188 mi; 1S26 R$148 mi; JCP de R$40 mi aprovado 31/08/26 (ex 04/09, pago 30/10/26). Recompra de R$53 mi no 1S26. Prioridade de alocação é expansão, não proventos.",
+ "election_impact": "Queda de −37% tem dois canais macro: (i) duration/taxa de desconto — é a ação de maior crescimento do grupo e quase todo o valor está na perpetuidade; (ii) custo de capital da expansão (dívida de R$7,2 bi, 58% no Brasil em CDI). O câmbio é a favor: ~53% das academias e ~56% da dívida líquida estão fora do Brasil (México e AL) — o real 9,5% mais fraco aumenta a receita/EBITDA traduzidos (mas encarece equipamentos importados). Micro intacto: 2.170 academias (+19% a/a), clientes 5,6 mi, margem bruta caixa recorde 51,9%. O que de fato muda: Selic mais alta por mais tempo encarece a expansão financiada com dívida e pode forçar desaceleração; a tese de crescimento não depende de política federal.",
+ "summary": "Líder de academias low-cost na América Latina (2.170 unidades em 16 países; 5,6 mi de clientes), receita +22% a/a e EBITDA pré-IFRS16 de R$2,6 bi (32% de margem). A Ke de 25% o caso é difícil: ~55% da receita é reinvestida (capex + novos arrendamentos), o FCFF é negativo até ~2028 e o valor vem da perpetuidade. Barata em P/L (~12x recorrente), mas não fecha 25% sem manter crescimento alto por muitos anos.",
+ "thesis": [
+  "Crescimento estrutural: 352 academias em 12 meses, 66% das próprias maduras, Plano Black 70% da base; receita LTM R$8,05 bi (+22%).",
+  "Câmbio é hedge natural: ~47% das unidades no Brasil, 23% México, 30% outros países; real fraco eleva resultados em R$.",
+  "P/L recorrente LTM ~11,8x e EV/EBITDA pré-IFRS16 ~5,5x após a queda — múltiplos de empresa madura para um negócio crescendo ~20%.",
+  "Liquidez: caixa R$2,6 bi; DL ajustada/EBITDA 1,20x (critério das debêntures)."
+ ],
+ "risks": [
+  "Intensidade de capital: capex físico ~33% + novos arrendamentos ~20% da receita; FCFF negativo enquanto acelera.",
+  "Juros altos no Brasil (e México) encarecem a expansão; debêntures em CDI.",
+  "Competição (redes low-cost, agregadores Wellhub/TotalPass) e saturação em praças maduras; base de clientes no Brasil caiu 2% a/a no 2T26.",
+  "Câmbio: equipamentos importados em US$ encarecem o capex por academia.",
+  "Valuation muito sensível a g e ROIC terminais."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (~início de nov/26): ritmo de aberturas no 2S (70–75% do ano).",
+  "Guidance de aberturas 2027 (tipicamente no 4T/1T).",
+  "Efeito de tradução cambial positivo nos resultados do 4T26."
+ ],
+ "key_data": [
+  {
+   "label": "Preço / variação hoje",
+   "value": "R$15,80 (−36,6%)",
+   "context": "sexta R$24,92; 613,7 mi ações"
+  },
+  {
+   "label": "Academias (2T26)",
+   "value": "2.170",
+   "context": "+19% a/a; Brasil 1.025, México 488, outros 657"
+  },
+  {
+   "label": "EBITDA pré-IFRS16 LTM",
+   "value": "R$2,6 bi (32,0%)",
+   "context": "IFRS-16 LTM R$3,86 bi"
+  },
+  {
+   "label": "DL ajustada / EBITDA",
+   "value": "1,20x (1,78x ex-IFRS16 imóveis)",
+   "context": "DL c/ arrendamentos R$10,9 bi"
+  },
+  {
+   "label": "Capex 2T26",
+   "value": "R$624,6 mi",
+   "context": "+37% a/a; LTM ~R$2,7 bi"
+  },
+  {
+   "label": "Lucro recorrente LTM",
+   "value": "R$822 mi",
+   "context": "P/L ~11,8x"
+  },
+  {
+   "label": "Guidance aberturas 2026",
+   "value": "330–350",
+   "context": "98 até jul/26"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Smart Fit — Divulgação de resultados 2T26 (RI)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/757d3905-6a2d-496a-bbb0-32ddd17de6a0/f949e040-5053-254d-6a03-2865a71a132a?origin=2"
+  },
+  {
+   "title": "Smart Fit — ITR 2T26 (nota 14, arrendamentos)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/757d3905-6a2d-496a-bbb0-32ddd17de6a0/e6ace007-95e4-6270-6e1f-a5f49597a415?origin=2"
+  },
+  {
+   "title": "Smart Fit — Aviso de JCP 31/08/26",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/SMFT3/48905/"
+  },
+  {
+   "title": "InfoMoney — Smart Fit 2T26 sólido, mas ações caem",
+   "url": "https://www.infomoney.com.br/mercados/smart-fit-smft3-apresenta-resultados-solidos-no-2t-mas-por-que-acoes-caem-forte/amp/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizadas (data/hist, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — cotação ao vivo (API oficial)",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/"
+  }
+ ],
+ "confidence": "média — dados do release/ITR; a avaliação é dominada por premissas de longo prazo (ritmo de expansão, ROIC das safras, g) e pela forma de tratar arrendamentos."
+}

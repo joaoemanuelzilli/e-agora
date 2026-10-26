@@ -26,6 +26,11 @@ export type Engine = {
   eq_bridge_extra?: number;
   fair_value?: number | null;
   nav_mkt_share?: number | null;
+  pe_target?: number | null;
+  // holding (SOTP): controladas avaliadas pelo estudo trazem o próprio motor
+  hnd?: number | null;
+  hcost?: number | null;
+  components?: { ticker?: string | null; stake?: number | null; method?: string | null; value_100?: number | null; engine?: Engine | null }[];
 };
 
 export type Today = {
@@ -98,6 +103,8 @@ export type Overview = {
   valuation_date: string;
   companies: Row[];
   opportunities: string[];
+  reports?: string[];
+  opportunities_dropped?: { ticker: string; reasons: string[] }[];
   market: MarketStats;
   xsec: XSec;
   sectors: Record<string, { setor?: string; subsetor?: string; segmento?: string }>;

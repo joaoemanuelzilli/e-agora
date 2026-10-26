@@ -307,6 +307,7 @@ const FACTOR: Record<string, string> = {
   solidez: "Solidez (dívida, Altman)",
   sobrerreacao: "Sobrerreação (resíduo da queda)",
   probabilidade: "Probabilidade (Monte Carlo)",
+  momentum: "Momentum (12 meses até a eleição)",
 };
 
 export function Quant({ doc }: { doc: any }) {
@@ -362,7 +363,11 @@ export function Quant({ doc }: { doc: any }) {
         <div>
           <div className="label">Beta de baixa (3 anos) e em crises</div>
           <div className="num text-[18px] font-semibold">
-            {num(st.beta_down_3y, 2)} <span className="text-[13px] font-normal text-muted">/ {num(st.beta_crash_10y, 2)}</span>
+            {num(st.beta_down_3y, 2)}{" "}
+            <span className="text-[13px] font-normal text-muted" title={st.beta_crash_10y_raw != null ? `bruto ${num(st.beta_crash_10y_raw, 2)}, encolhido em direção ao beta de baixa` : undefined}>
+              / {num(st.beta_crash_10y, 2)}
+              {st.n_crash_days ? ` em ${st.n_crash_days} dias de crash` : ""}
+            </span>
           </div>
         </div>
         <div>

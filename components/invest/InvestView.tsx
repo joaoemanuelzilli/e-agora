@@ -8,13 +8,19 @@ import { ddmPerShare, fairValue, irrImplied } from "@/lib/valuation";
 import type { Row } from "@/lib/types";
 
 export type Monitor = { kpi: string; threshold: string; next?: string };
-type Scheme = "iguais" | "vol" | "tir";
+export type StudyPortfolio = {
+  sleeve: { ticker: string; w: number }[];
+  sizing?: { entry_equity?: number; full_equity_if_vol_normalizes?: number; target_equity?: number } | null;
+  cdi?: number | null;
+};
+type Scheme = "iguais" | "vol" | "tir" | "estudo";
 
-const SCHEMES: { id: Scheme; label: string; note: string }[] = [
+const BASE_SCHEMES: { id: Scheme; label: string; note: string }[] = [
   { id: "iguais", label: "Pesos iguais", note: "mesmo valor em cada ação" },
   { id: "vol", label: "Inverso da volatilidade", note: "mais peso nas menos voláteis" },
   { id: "tir", label: "TIR acima da meta", note: "mais peso em quem rende mais que o Ke" },
 ];
+const STUDY_SCHEME = { id: "estudo" as Scheme, label: "Carteira do estudo", note: "máximo Sharpe + paridade de risco" };
 
 const up2 = (v: number) => Math.ceil(v * 100 - 1e-6) / 100;
 const down2 = (v: number) => Math.floor(v * 100 + 1e-6) / 100;
@@ -61,7 +67,10 @@ function capWeights(raw: Record<string, number>, cap: number): Record<string, nu
   return w;
 }
 
-export function InvestView({ rows, opps, monitors }: { rows: Row[]; opps: string[]; monitors: Record<string, Monitor[]> }) {
+export function InvestView({ rows, opps, monitors, portfolio }: { rows: Row[]; opps: string[]; monitors: Record<string, Monitor[]>; portfolio?: StudyPortfolio | null }) {
+  const sleeve = useMemo(() => Object.fromEntries((portfolio?.sleeve || []).map((x) => [x.ticker, x.w])), [portfolio]);
+  const SCHEMES = portfolio?.sleeve?.length ? [STUDY_SCHEME, ...BASE_SCHEMES] : BASE_SCHEMES;
+  const [capital, setCapital] = useState(0);
   const { rows: live, ke, asOf } = useLiveRows(rows);
   const [amount, setAmount] = useState(100000);
   const [scheme, setScheme] = useState<Scheme>("iguais");
@@ -74,7 +83,7 @@ export function InvestView({ rows, opps, monitors }: { rows: Row[]; opps: string
       const s = JSON.parse(localStorage.getItem("investir") || "null");
       if (s) {
         if (s.amount > 0) setAmount(s.amount);
-        if (SCHEMES.some((x) => x.id === s.scheme)) setScheme(s.scheme);
+        if ([...BASE_SCHEMES, STUDY_SCHEME].some((x) => x.id === s.scheme)) setScheme(s.scheme);
         if ([0.1, 0.15, 0.2, 0.25].includes(s.cap)) setCap(s.cap);
         if (Array.isArray(s.sel) && s.sel.length) setSel(s.sel.filter((t: unknown) => typeof t === "string"));
         setLadder(!!s.ladder);
@@ -108,11 +117,13 @@ export function InvestView({ rows, opps, monitors }: { rows: Row[]; opps: string
   const chosen = sel.map((t) => byT[t]).filter((x) => x && x.price);
   const raw: Record<string, number> = {};
   chosen.forEach((x) => {
-    if (scheme === "iguais") raw[x.r.ticker] = 1;
+    if (scheme === "estudo") raw[x.r.ticker] = sleeve[x.r.ticker] ?? 0;
+    else if (scheme === "iguais") raw[x.r.ticker] = 1;
     else if (scheme === "vol") raw[x.r.ticker] = 1 / Math.max(0.15, x.r.vol_1y ?? 0.4);
     else raw[x.r.ticker] = Math.max(0.01, (x.r.L.irr ?? 0) - (ke - 0.05));
   });
-  const weights = capWeights(raw, Math.max(cap, chosen.length ? 1 / chosen.length : 1));
+  // a carteira do estudo já respeita os limites dela (20% por ação e 40% por setor sobre o capital total)
+  const weights = capWeights(raw, scheme === "estudo" ? 1 : Math.max(cap, chosen.length ? 1 / chosen.length : 1));
   const orders = chosen.map((x) => {
     const wgt = weights[x.r.ticker] ?? 0;
     const value = amount * wgt;
@@ -141,12 +152,66 @@ export function InvestView({ rows, opps, monitors }: { rows: Row[]; opps: string
   const keLabel = `${Math.round(ke * 100)}%`;
   const ladderRows = enriched
     .filter((x) => sel.includes(x.r.ticker) && x.price)
+    .sort((a, b) => (b.dist ?? -9) - (a.dist ?? -9))
     .map((x) => ({ ticker: x.r.ticker, price: x.price as number, ceiling: x.ceiling, strong: x.strong, fair: x.r.L.fair, pre: x.r.prev_close }));
   const all = [...enriched].sort((a, b) => (b.dist ?? -9) - (a.dist ?? -9));
   const toggle = (t: string) => setSel((s) => (s.includes(t) ? s.filter((x) => x !== t) : [...s, t]));
 
+  const entry = portfolio?.sizing?.entry_equity ?? null;
+  const full = portfolio?.sizing?.full_equity_if_vol_normalizes ?? null;
   return (
     <div className="space-y-8">
+      {entry !== null && (
+        <section className="panel p-5">
+          <h2 className="h3">Quanto do capital pôr em ações</h2>
+          <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-12">
+            <div className="grid grid-cols-3 gap-4 md:col-span-7">
+              <div>
+                <div className="label">Agora</div>
+                <div className="num text-[24px] font-semibold">{pct(entry, 0)}</div>
+                <div className="text-[12px] text-muted">meio Kelly com a volatilidade de crise</div>
+              </div>
+              <div>
+                <div className="label">Volatilidade normal</div>
+                <div className="num text-[24px] font-semibold">até {pct(full, 0)}</div>
+                <div className="text-[12px] text-muted">subir aos poucos, em ordens escalonadas</div>
+              </div>
+              <div>
+                <div className="label">Resto</div>
+                <div className="num text-[24px] font-semibold">CDI</div>
+                <div className="text-[12px] text-muted">{portfolio?.cdi ? `${pct(portfolio.cdi, 2)} ao ano` : "caixa"}</div>
+              </div>
+            </div>
+            <div className="md:col-span-5">
+              <label className="label" htmlFor="capital">
+                Seu capital total
+              </label>
+              <div className="mt-1 flex items-center gap-2">
+                <span className="text-[15px] text-muted">R$</span>
+                <input
+                  id="capital"
+                  type="number"
+                  min={0}
+                  step={10000}
+                  value={capital || ""}
+                  placeholder="0"
+                  onChange={(e) => setCapital(Math.max(0, Number(e.target.value) || 0))}
+                  className="num w-full rounded border border-hairline bg-surface px-3 py-1.5 text-[16px] outline-none focus:border-accent"
+                />
+                <button
+                  type="button"
+                  disabled={!capital}
+                  onClick={() => setAmount(Math.round(capital * entry))}
+                  className="whitespace-nowrap rounded bg-accent px-3 py-1.5 text-[13px] font-medium text-white disabled:opacity-40"
+                >
+                  Usar {capital ? brl(capital * entry, 0) : pct(entry, 0)}
+                </button>
+              </div>
+              <div className="mt-1 text-[12px] text-muted">Preenche o valor a investir abaixo com a parcela de agora.</div>
+            </div>
+          </div>
+        </section>
+      )}
       <section className="panel p-5">
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -176,7 +241,10 @@ export function InvestView({ rows, opps, monitors }: { rows: Row[]; opps: string
                 <button
                   key={s.id}
                   type="button"
-                  onClick={() => setScheme(s.id)}
+                  onClick={() => {
+                    setScheme(s.id);
+                    if (s.id === "estudo" && portfolio?.sleeve?.length) setSel(portfolio.sleeve.map((x) => x.ticker));
+                  }}
                   aria-pressed={scheme === s.id}
                   className={`rounded border px-3 py-1.5 text-left text-[13px] ${scheme === s.id ? "border-accent bg-accent text-white" : "border-hairline text-ink-2 hover:bg-surface-2"}`}
                 >

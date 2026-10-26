@@ -35,11 +35,11 @@
     "value_mn": null
    },
    {
-    "name": "Compass (PASS3) — 76,18%",
+    "name": "Compass (PASS3) — 76,18% (a mercado na foto de 13:02)",
     "ticker": "PASS3",
     "stake": 0.7618,
-    "method": "market",
-    "value_mn": null,
+    "method": "fixed",
+    "value_mn": 14590.9,
     "shares_mn": 714.190095
    },
    {
@@ -73,7 +73,7 @@
   ],
   "holding_net_debt_mn": 12231,
   "holding_cost_mn": 180,
-  "notes": "Participações: Rumo 30,0% (equivalência 2T26 156/lucro 520); Compass 76,18% pós-IPO de mai/2026 (release); Moove 70% (equivalência 138/lucro 197); Radar 50%/Tellus 20%/Janus 20%. DL da holding = dívida líquida expandida 9.217 (debêntures/NC 9.919 + bônus perpétuos 2.621 + prefs Cosan Dez 3.871 + MTM 74 − caixa 7.268) + TRS de ações da Rumo 3.014 = 12.231 (30/06/2026). Moove 100% = R$ 4,0 bi (estimativa: ~6x lucro LTM ~R$ 0,6–0,7 bi e ~4–5x EBITDA LTM ~R$ 1,4 bi menos DL ~R$ 2,0 bi pela alavancagem de 1,4x; LTM estimado a partir de 6M26/6M25 — não há múltiplo de transação recente). Radar = R$ 5,6 bi (parcela Cosan do laudo de R$ 18,1 bi, 2T26) × 0,8 (desconto de 20% por iliquidez/laudo; inclui os R$ 586 mi da venda de 12% do portfólio com fechamento previsto até 30/10/2026). TUP São Luís = proposta vinculante de R$ 300 mi (+ earn-out não considerado). Raízen = 0: investimento zerado em 31/12/2025, recuperação extrajudicial homologada (jul/2026) e a participação está na Cosan Nove, onde as prefs do Itaú têm valor de resgate de R$ 2.660 mi; a 44% de um valor de mercado de ~R$ 3,6 bi (RAIZ4 R$ 0,35 × 10.352,5 mi ações), o valor residual para a Cosan é ~zero. Custo de holding: G&A R$ 42 mi no 2T26 (anualizado ~R$ 170 mi) → R$ 180 mi/ano, capitalizado a (Ke − g)."
+  "notes": "Participações: Rumo 30,0% (equivalência 2T26 156/lucro 520); Compass 76,18% pós-IPO de mai/2026 (release); Moove 70% (equivalência 138/lucro 197); Radar 50%/Tellus 20%/Janus 20%. DL da holding = dívida líquida expandida 9.217 (debêntures/NC 9.919 + bônus perpétuos 2.621 + prefs Cosan Dez 3.871 + MTM 74 − caixa 7.268) + TRS de ações da Rumo 3.014 = 12.231 (30/06/2026). Moove 100% = R$ 4,0 bi (estimativa: ~6x lucro LTM ~R$ 0,6–0,7 bi e ~4–5x EBITDA LTM ~R$ 1,4 bi menos DL ~R$ 2,0 bi pela alavancagem de 1,4x; LTM estimado a partir de 6M26/6M25 — não há múltiplo de transação recente). Radar = R$ 5,6 bi (parcela Cosan do laudo de R$ 18,1 bi, 2T26) × 0,8 (desconto de 20% por iliquidez/laudo; inclui os R$ 586 mi da venda de 12% do portfólio com fechamento previsto até 30/10/2026). TUP São Luís = proposta vinculante de R$ 300 mi (+ earn-out não considerado). Raízen = 0: investimento zerado em 31/12/2025, recuperação extrajudicial homologada (jul/2026) e a participação está na Cosan Nove, onde as prefs do Itaú têm valor de resgate de R$ 2.660 mi; a 44% de um valor de mercado de ~R$ 3,6 bi (RAIZ4 R$ 0,35 × 10.352,5 mi ações), o valor residual para a Cosan é ~zero. Custo de holding: G&A R$ 42 mi no 2T26 (anualizado ~R$ 170 mi) → R$ 180 mi/ano, capitalizado a (Ke − g). [Revisão G02, 26/10/2026] Compass passou de 'market' para 'fixed' = valor de mercado NA FOTO DO ESTUDO: PASS3 R$ 20,43 às 13:02 (B3 DailyFluctuationHistory; a foto data/market/quotes.json é de 13:02:40) × 714,19 mi ações = 14.590,9 (100%). Motivo: PASS3 não está em quotes.json, então com EAGORA_SNAPSHOT=1 o motor buscava a cotação AO VIVO — o valor publicado usou ~R$ 20,84 (≈15:17) contra a CSAN3 da foto de 13:02, e uma nova rodada às 16:07 usaria R$ 19,72 (SOTP R$ 2,00): o resultado dependia da hora de execução e misturava horários."
  },
  "terminal": {
   "g": 0.05,

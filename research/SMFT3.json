@@ -106,16 +106,16 @@
   "target_debt_weight": 0.4
  },
  "adjustments": {
-  "other_debt_like": 40,
+  "other_debt_like": 77.3,
   "non_operating_assets": 0,
   "minority_value": null,
-  "notes": "other_debt_like = JCP de R$40 mi (data-ex 04/09/26, pago 30/10/26) aos acionistas antigos. 'Outros passivos' de dívida pelo critério das debêntures (R$24 mi: earn-outs, opções de minoritários) ignorados por imaterialidade. Aquisição da Evolve (60%, ago/26) e Buddha Spa (até R$32 mi) não modeladas à parte."
+  "notes": "other_debt_like = JCPs com data-com antes de hoje e pagos depois de 30/06: dc 03/06/26 (R$0,0652/ação, pago 31/07; R$37,3 mi em 'Dividendos e JCP a pagar' em 30/06) + dc 03/09/26 (R$0,0654/ação ≈ R$40 mi, pago 30/10/26). 'Outros passivos' de dívida pelo critério das debêntures (R$24 mi: earn-outs, opções de minoritários) ignorados por imaterialidade. Aquisição da Evolve (60%, ago/26) e Buddha Spa (até R$32 mi) não modeladas à parte. Nota: o JCP declarado de 2025 foi ~R$620 mi (R$0,8417/ação em dez/25), dos quais ~R$377 mi reinvestidos em ações no 1T26 (+18,9 mi ações, já na contagem de 613,7 mi); os 'R$188 mi' de 2025 são o caixa pago."
  },
  "target_multiples": {
-  "pe": 12.0,
+  "pe": 13.3,
   "ev_ebitda": 5.5,
   "pbv": 2.0,
-  "rationale": "Regra 'choque de juros neutro'. Pré-eleição (R$24,92): P/L recorrente LTM ~18,6x (LL recorrente R$822 mi) → 5,4%+3pp → ~12x; EV/EBITDA IFRS-16 LTM ~6,8x (EV R$26,2 bi c/ arrendamentos / EBITDA R$3.859 mi) → 14,8%+3pp → ~5,6x. Hoje: P/L recorrente ~11,8x; EV/EBITDA pré-IFRS16 ~5,5x (DL ajustada R$4,6 bi / EBITDA R$2,6 bi)."
+  "rationale": "Regra 'choque de juros neutro', na mesma base do LPA do motor (CVM/IFRS-16). Pré-eleição (R$24,92 × 613,7 mi = R$15,3 bi): P/L CVM LTM 22,3x (LL controlador LTM R$686,5 mi) → 4,5%+3pp = 7,5% → 13,3x. (O 12x anterior saía do P/L 'recorrente' de 18,6x sobre LL recorrente de R$822 mi — base que exclui itens estruturais, como o efeito IFRS-16 — mas era aplicado ao LPA CVM do motor.) EV/EBITDA IFRS-16 LTM ~6,8x (EV R$26,2 bi c/ arrendamentos / EBITDA R$3.859 mi) → 14,8%+3pp → ~5,6x (uso 5,5x). Hoje: P/L CVM LTM ~14,7x; EV/EBITDA IFRS-16 ~5,5x."
  },
  "scenarios": {
   "bear": {

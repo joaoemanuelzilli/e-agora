@@ -7,6 +7,7 @@ Saída: data/market/dividends.json
 """
 import base64
 import json
+import os
 import sys
 import time
 from collections import defaultdict
@@ -270,6 +271,9 @@ def main(raw_b3):
     det = json.load(open(raw / "details.json")) if (raw / "details.json").exists() else {}
 
     def fetch(iss):
+        cache = raw / "dividends" / f"{iss}.json"
+        if os.environ.get("EAGORA_SNAPSHOT") == "1" and cache.exists():  # rodada da foto: histórico já baixado
+            return iss, json.load(open(cache)).get("rows") or []
         s = sup.get(iss) or {}
         used, rows = history(name_variants(s.get("tradingName"), det.get(iss)))
         json.dump({"name": used, "rows": rows}, open(raw / "dividends" / f"{iss}.json", "w"), ensure_ascii=False)

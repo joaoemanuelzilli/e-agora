@@ -256,8 +256,19 @@ def flows_bs(t, ftype):
     return f, b
 
 
+def _filled(doc, tab):
+    """Reapresentação útil: DRE com receita e resultado diferentes de zero; DFC/DVA com algum valor não nulo."""
+    if not tab:
+        return False
+    if doc == "DRE":
+        rev = v(tab, "3.01")
+        res = [x for x in (v(tab, "3.11"), v(tab, "3.09"), v(tab, "3.05")) if not np.isnan(x)]
+        return not np.isnan(rev) and abs(rev) > 0 and any(abs(x) > 0 for x in res)
+    return any(pd.notna(x[1]) and abs(float(x[1])) > 0 for x in tab.values())
+
+
 def company(store, cnpj, ticker):
-    out = {"annual": {}, "q_ytd": {}, "q_3m": {}, "bs_q": {}, "raw_src": {}}
+    out = {"annual": {}, "annual_orig": {}, "q_ytd": {}, "q_3m": {}, "bs_q": {}, "raw_src": {}}
     ftype = None
     # anual: DFP Y (ÚLTIMO) com preferência pela reapresentação na DFP Y+1 (PENÚLTIMO)
     dfp_dre = store.get(("dfp", "DRE", "con"))
@@ -268,14 +279,17 @@ def company(store, cnpj, ticker):
         t = period_tables(store, "dfp", cnpj, dt, basis)
         if not t:
             continue
+        t_orig = dict(t)
         if y < 2025:
             t2 = period_tables(store, "dfp", cnpj, dt_next, choose_basis(store, "dfp", cnpj, dt_next), ordem="PENÚLTIMO")
             for doc, tab in t2.items():
-                if doc in ("DRE", "DFC_MI", "DVA") and len(tab) >= 0.8 * len(t.get(doc, {})):
+                if doc in ("DRE", "DFC_MI", "DVA") and len(tab) >= 0.8 * len(t.get(doc, {})) and _filled(doc, tab):
                     t[doc] = tab
         ftype = fin_type(t.get("DRE", {})) or ftype
         f, b = flows_bs(t, ftype)
         out["annual"][f"FY{y}"] = {**f, **b, "basis": basis}
+        f0, _ = flows_bs(t_orig, ftype) if t_orig is not t else (f, b)
+        out["annual_orig"][f"FY{y}"] = f0  # mesma base do ITR do ano, para derivar o 4T
         out["raw_src"][f"FY{y}"] = t
     # trimestral (ITR): DRE 3 meses e YTD; DFC/DVA YTD; balanço
     itr = store.get(("itr", "DRE", "con"))
@@ -334,7 +348,7 @@ def build_quarters(c):
                     prev_ytd = None
                     continue
             else:
-                ytd = c["annual"].get(f"FY{y}")
+                ytd = (c.get("annual_orig") or {}).get(f"FY{y}") or c["annual"].get(f"FY{y}")
                 if ytd is None or prev_ytd is None or f"{y}Q3" not in c["q_ytd"]:
                     continue
             row = {}
@@ -349,6 +363,13 @@ def build_quarters(c):
                         row[k] = val
                 if not np.isnan(row.get("ebit", np.nan)) and not np.isnan(row.get("d_and_a", np.nan)):
                     row["ebitda"] = row["ebit"] + row["d_and_a"]
+            # D&A (sempre ≥ 0) e receita de não financeira negativas no trimestre derivado = bases misturadas: lacuna
+            if row.get("d_and_a") is not None and not np.isnan(row["d_and_a"]) and row["d_and_a"] < -0.5:
+                row["d_and_a"] = np.nan
+                row["ebitda"] = np.nan
+            if c.get("ftype") is None and row.get("revenue") is not None and not np.isnan(row["revenue"]) and row["revenue"] < -0.5:
+                for k in FLOW_KEYS:
+                    row[k] = np.nan
             quarters[key] = row
             prev_ytd = ytd
     return quarters
@@ -464,41 +485,62 @@ def main(raw, fca_csv, universe_json, coverage_json, out_dir, supplement_json=No
             bs_latest["date"] = f"{years[-1][2:]}-12-31"
         # ações
         cs = caps[caps.CNPJ_CIA == cnpj].sort_values(["DT_REFER", "VERSAO"])
-        shares_hist = []
+        raw_sh = []
+        nz = lambda x: 0.0 if x is None or np.isnan(x) else float(x)
         for dt, g in cs.groupby("DT_REFER"):
             r = g.iloc[-1]
             tot = r.QT_ACAO_TOTAL_CAP_INTEGR
-            tes = r.QT_ACAO_TOTAL_TESOURO if not np.isnan(r.QT_ACAO_TOTAL_TESOURO) else 0
             if tot and not np.isnan(tot):
-                shares_hist.append({"date": dt, "total": float(tot), "treasury": float(tes), "outstanding": float(tot - tes),
-                                    "on": float(r.QT_ACAO_ORDIN_CAP_INTEGR - (r.QT_ACAO_ORDIN_TESOURO if not np.isnan(r.QT_ACAO_ORDIN_TESOURO) else 0)),
-                                    "pn": float(r.QT_ACAO_PREF_CAP_INTEGR - (r.QT_ACAO_PREF_TESOURO if not np.isnan(r.QT_ACAO_PREF_TESOURO) else 0))})
-        # ações: total corrente oficial da B3 × (1 − fração em tesouraria da CVM); escala da CVM detectada contra a B3
+                raw_sh.append({"date": dt, "tot": float(tot), "tes": nz(r.QT_ACAO_TOTAL_TESOURO),
+                               "on": nz(r.QT_ACAO_ORDIN_CAP_INTEGR), "on_t": nz(r.QT_ACAO_ORDIN_TESOURO),
+                               "pn": nz(r.QT_ACAO_PREF_CAP_INTEGR), "pn_t": nz(r.QT_ACAO_PREF_TESOURO)})
+        # ações: total corrente oficial da B3 × (1 − fração em tesouraria da CVM); escala da CVM (unidades × milhares)
+        # decidida registro a registro: o último contra a B3, os anteriores contra o vizinho seguinte já corrigido
         sp = (supp or {}).get(tk[:4]) or {}
         b3_total = float(str(sp.get("totalNumberShares", "0")).replace(".", "") or 0)
         b3_on = float(str(sp.get("numberCommonShares", "0")).replace(".", "") or 0)
         b3_pn = float(str(sp.get("numberPreferredShares", "0")).replace(".", "") or 0)
-        scale = 1.0
-        if shares_hist and b3_total:
-            r = b3_total / shares_hist[-1]["total"]
-            scale = 1000.0 if 300 < r < 30000 else 1.0
-        for h in shares_hist:
-            for kk in ("total", "treasury", "outstanding", "on", "pn"):
-                h[kk] = h[kk] * scale
+        shares_hist = [None] * len(raw_sh)
+        nxt = b3_total or None
+        near = lambda a, b: bool(a and b) and abs(a / b - 1) < 0.05
+        for i in range(len(raw_sh) - 1, -1, -1):
+            rr = raw_sh[i]
+            s_i = 1.0
+            if nxt and rr["tot"]:
+                q = nxt / rr["tot"]
+                s_i = 1000.0 if 300 < q < 30000 else (0.001 if 1 / 30000 < q < 1 / 300 else 1.0)
+                if s_i == 1.0 and not (0.5 < q < 2) and i > 0 and i < len(raw_sh) - 1:
+                    # registro isolado fora da escala dos vizinhos (ex.: BRSR6 set/25, GMAT3 jun/22): se o anterior,
+                    # na mesma escala, bate com o seguinte, o do meio é erro de preenchimento e repete o seguinte
+                    prev = raw_sh[i - 1]["tot"]
+                    if any(near(prev * k, nxt) for k in (1.0, 1000.0, 0.001)):
+                        nx = shares_hist[i + 1]
+                        shares_hist[i] = {**nx, "date": rr["date"], "repaired": True}
+                        continue
+            t_s = s_i
+            if s_i == 1000.0 and rr["tot"] and rr["tes"] / rr["tot"] > 0.25:  # tesouraria em unidades com total em milhares (ex.: TEND3)
+                t_s = 1.0
+            tot, tes = rr["tot"] * s_i, rr["tes"] * t_s
+            shares_hist[i] = {"date": rr["date"], "total": tot, "treasury": tes, "outstanding": tot - tes,
+                              "on": rr["on"] * s_i - rr["on_t"] * t_s, "pn": rr["pn"] * s_i - rr["pn_t"] * t_s, "cvm_scale": s_i}
+            nxt = tot
+        scale = shares_hist[-1]["cvm_scale"] if shares_hist else 1.0
         if shares_hist and b3_total:
             last = shares_hist[-1]
             tr = last["treasury"] / last["total"] if last["total"] else 0.0
-            if tr > 0.25 and scale == 1000.0:  # tesouraria reportada em unidades com total em milhares (ex.: TEND3)
-                tr = tr / 1000.0
-                for h in shares_hist:
-                    h["treasury"] = h["treasury"] / 1000.0
-                    h["outstanding"] = h["total"] - h["treasury"]
-            tot_on = last["on"] + 0.0
-            cvm_on_tot = tot_on + 0.0
-            shares_now = {"date": "B3 atual", "source": "B3 (ações emitidas) × (1 − tesouraria/total CVM " + last["date"] + ")",
-                          "total": b3_total, "treasury_ratio": tr, "outstanding": b3_total * (1 - tr),
-                          "on": b3_on * (1 - tr), "pn": b3_pn * (1 - tr), "cvm_scale": scale,
-                          "cvm_outstanding": last["outstanding"], "b3_vs_cvm": b3_total / last["total"] if last["total"] else None}
+            ratio = b3_total / last["total"] if last["total"] else 1.0
+            if abs(ratio - 1) < 0.05:
+                # emissão/cancelamento depois do balanço: o cancelamento sai da tesouraria (não contar duas vezes)
+                tes_now = max(0.0, last["treasury"] - max(0.0, last["total"] - b3_total))
+                out_now = b3_total - tes_now
+                tr_now = tes_now / b3_total
+            else:  # desdobramento, grupamento ou bonificação: a tesouraria acompanha a proporção
+                tr_now = tr
+                out_now = b3_total * (1 - tr)
+            shares_now = {"date": "B3 atual", "source": "B3 (ações emitidas) − tesouraria CVM " + last["date"] + " (líquida de cancelamentos posteriores)",
+                          "total": b3_total, "treasury_ratio": tr_now, "outstanding": out_now,
+                          "on": b3_on * (1 - tr_now), "pn": b3_pn * (1 - tr_now), "cvm_scale": scale,
+                          "cvm_outstanding": last["outstanding"], "b3_vs_cvm": ratio}
         else:
             shares_now = shares_hist[-1] if shares_hist else None
         info = cad.loc[cnpj] if cnpj in cad.index else None

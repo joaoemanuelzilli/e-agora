@@ -56,10 +56,10 @@
     "nwc_pct_revenue": 0.1,
     "cost_of_net_debt": [
       0.21,
+      0.21,
+      0.21,
       0.205,
-      0.2,
-      0.19,
-      0.18
+      0.2
     ],
     "other_financial": [
       0,
@@ -111,7 +111,7 @@
     "other_debt_like": 0.0,
     "non_operating_assets": 720.0,
     "minority_value": null,
-    "notes": "non_operating_assets = valor presente (a 25%, ~1,2 ano) dos R$ 930 mi do exercício dos bônus — o DCF e o EV/EBITDA usam a dívida pré-emissão, e as ações já estão diluídas (1.178,1 mi). Minoritários a valor contábil (R$ 603 mi). Custo da dívida líquida de 18–21% porque a dívida bruta (R$ 29,3 bi, ~70% em US$) é o dobro da líquida: juros de bonds/debêntures (~10,7% sobre a bruta) contra caixa (~US$, ~4%), mais custo de hedge cambial e de commodities e taxas (R$ 514 mi LTM). Resultado financeiro LTM ex-variação cambial = −R$ 3,7 bi (25,6% da DL); 'conceito caixa' −R$ 2,96 bi (20,5%)."
+    "notes": "non_operating_assets = valor presente (a 25%, ~1,2 ano) dos R$ 930 mi do exercício dos bônus — o DCF e o EV/EBITDA usam a dívida pré-emissão, e as ações já estão diluídas (1.178,1 mi). Minoritários a valor contábil (R$ 603 mi). Custo da dívida líquida de 18–21% porque a dívida bruta (R$ 29,3 bi, ~70% em US$) é o dobro da líquida: juros de bonds/debêntures (~10,7% sobre a bruta) contra caixa (~US$, ~4%), mais custo de hedge cambial e de commodities e taxas (R$ 514 mi LTM). Resultado financeiro LTM ex-variação cambial = −R$ 3,7 bi (25,6% da DL); 'conceito caixa' −R$ 2,96 bi (20,5%). [Revisão G12, 26/10/2026] cost_of_net_debt 21/20,5/20/19/18% → 21/21/21/20,5/20%. A queda original para 18% embutia Selic em queda (Focus pré-choque). A curva DI de hoje (F28 14,95%, F29 15,36%, F31 15,66%) implica CDI a termo de ~15,2–16% em 2027–30, acima do CDI médio do 1S26 (~14,6%), quando o custo contábil da DL rodou a ~22–23% (1T26 −766, 2T26 −757 sobre DL média de 13,3–14,1 bi). Mantive 21% até 2028 e só 1 p.p. de queda em 2029–30 (crédito a recompras de bonds/redução da dívida bruta). Não há tendência de 'de-grossing' até agora: a dívida bruta subiu de 27,8 para 29,3 bi no 1S26."
   },
   "target_multiples": {
     "pe": 6.0,
@@ -171,11 +171,11 @@
   },
   "guidance": "Sem guidance numérico de resultado. Política financeira: proteger ≥50% da exposição cambial de longo prazo; caixa de R$ 14,9 bi cobre amortizações até 2029; recompra de bonds (US$ 618 mi desde 2025) e alongamento (Notas 2036, US$ 600 mi a 7,5%).",
   "dividend_policy": "Estatuto: 25% do lucro líquido ajustado; política de jan/2025 prevê 50% se a alavancagem fechar o ano ≤2,5x DL/EBITDA. CFO afirmou manter o mínimo mesmo com alavancagem menor. Dividendos intercalares de R$ 162,1 mi em dez/2025; nada relevante em 2024 (prejuízo). Projeto 25% (2026–27), 35% (2028) e 50% a partir de 2029, quando a DL/EBITDA projetada cai abaixo de 2,5x.",
-  "election_impact": "Paradoxo aparente: exportadora que caiu −24% com o dólar +9,5%. Os números dizem que o câmbio é positivo para o valor: ~57% da receita bruta é exportação e ~43% da receita vem de operações fora do Brasil (Argentina, Paraguai, Uruguai, Colômbia, Chile, Austrália) — o EBITDA é majoritariamente dolarizado. A dívida é ~70% em US$ (R$ 20,4 bi), mas a empresa protege ≥50% da exposição de longo prazo e o resultado de hedge compensa a variação cambial (1T26: +R$ 251 mi de variação vs −R$ 243 mi de hedge). Logo, o choque cambial aumenta pouco a dívida líquida em R$ e eleva o EBITDA em R$ com defasagem. A queda é beta/alavancagem: o equity é só ~20% do EV (EV ~R$ 18 bi, mercado ~R$ 3,2 bi) — uma alta de 1–2 p.p. no custo de capital derruba o equity em 20%+. Canais reais negativos: (i) dívida em R$ (R$ 8,9 bi) e carrego do hedge ficam mais caros com CDI alto; (ii) relação Lula–Trump (tarifas dos EUA, 12% da exportação) e China (salvaguarda com cota de 1,106 Mt para o Brasil em 2026 e tarifa de 55% acima da cota). Fluxo estrangeiro vendendo Brasil amplifica. Fundamental intacto ou melhor; risco é de balanço, não de operação.",
-  "summary": "Maior exportadora de carne bovina da América do Sul (receita LTM R$ 57,2 bi; EBITDA R$ 4,9 bi; 2,9x DL/EBITDA). A R$ 3,2 o mercado paga ~3,6x EV/EBITDA e ~4x P/L 2027E; o dólar alto ajuda o EBITDA e a dívida em US$ é hedgeada. É a única do grupo cuja TIR implícita se aproxima de 25%, mas é alavancada e cíclica — opção, não posição de convicção.",
+  "election_impact": "Paradoxo aparente: exportadora que caiu −20,8% (13h02) com o dólar +9,5%. Os números dizem que o câmbio não é negativo para o valor: ~57% da receita bruta é exportação e ~43% da receita vem de operações fora do Brasil (Argentina, Paraguai, Uruguai, Colômbia, Chile, Austrália) — o EBITDA é majoritariamente dolarizado. A dívida é ~70% em US$ (R$ 20,4 bi), mas a empresa protege ≥50% da exposição de longo prazo e o resultado de hedge compensa a variação cambial (1T26: +R$ 251 mi de variação vs −R$ 243 mi de hedge). Logo, o choque cambial aumenta pouco a dívida líquida em R$ e eleva o EBITDA em R$ com defasagem; no teste da revisão (dólar a R$ 5,49, ~+R$ 0,5 bi de DL na parcela não hedgeada), os dois efeitos quase se anulam (valor justo R$ 5,38 vs R$ 5,44 na base). A queda é beta/alavancagem: o equity é só ~21% do EV (EV R$ 19,0 bi; mercado ~R$ 3,4 bi, R$ 4,0 bi diluído) — Ke de 30% em vez de 25% leva o valor justo a R$ 3,87 (−29%). Canais reais negativos: (i) dívida em R$ (R$ 8,9 bi) e carrego do hedge ficam mais caros com CDI alto — a revisão manteve o custo da dívida líquida em 21% até 2028; (ii) relação Lula–Trump (tarifas dos EUA, 12% da exportação) e China (salvaguarda com cota de 1,106 Mt para o Brasil em 2026 e tarifa de 55% acima da cota). Fluxo estrangeiro vendendo Brasil amplifica. Fundamental intacto ou melhor; risco é de balanço, não de operação.",
+  "summary": "Maior exportadora de carne bovina da América do Sul (receita LTM R$ 57,2 bi; EBITDA R$ 4,9 bi; 2,9x DL/EBITDA). A R$ 3,38 (13h02) o mercado paga 3,9x EV/EBITDA e 6,0x P/L 2027E; o dólar alto ajuda o EBITDA e a dívida em US$ é hedgeada. Valor justo de R$ 5,44 (+61%), mas TIR de dono de 24,5%, praticamente igual à Ke de 25% (a única do grupo perto disso): alavancada e cíclica — opção, não posição de convicção.",
   "thesis": [
-    "Câmbio a favor: ~57% da receita bruta é exportação e operações fora do Brasil são ~43% — dólar +9,5% eleva EBITDA em R$; dívida em US$ hedgeada (≥50%).",
-    "Valuation extremo: EV/EBITDA LTM ~3,6x e P/L 2027E ~4x vs. média histórica de 5–6x EV/EBITDA.",
+    "Câmbio a favor do EBITDA: ~57% da receita bruta é exportação e operações fora do Brasil são ~43% — dólar +9,5% eleva EBITDA em R$; dívida em US$ hedgeada (≥50%). No valor, o efeito é quase neutro (teste da revisão com dólar a R$ 5,49: R$ 5,38).",
+    "Valuation de crise: EV/EBITDA LTM 3,9x e P/L 2027E 6,0x a R$ 3,38, vs. média de 5,05x EV/EBITDA em 5 anos; valor justo R$ 5,44 (+61%), com TIR de dono de 24,5% (≈ Ke).",
     "Margem EBITDA muito estável (8,8–9,5% por 5 anos) graças à arbitragem entre 7 países de origem.",
     "Gestão de passivos: US$ 618 mi de bonds recomprados desde 2025, Notas 2036 a 7,5%, caixa R$ 14,9 bi cobre vencimentos até 2029."
   ],
@@ -223,9 +223,9 @@
       "context": "+187 mi bônus a ~R$ 4,97 até 1S28 (modelo usa 1.178,1 mi diluídas)"
     },
     {
-      "label": "Preço 26/10 ~12h",
-      "value": "R$ 3,23",
-      "context": "−24,4% no dia; sexta R$ 4,27"
+      "label": "Preço 26/10 13h02",
+      "value": "R$ 3,38",
+      "context": "−20,8% no dia; sexta R$ 4,27"
     }
   ],
   "sources": [

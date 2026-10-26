@@ -300,7 +300,7 @@ function Drop({ doc }: { doc: any }) {
   );
 }
 
-export function CompanyView({ doc, isOpp, notesHtml }: { doc: any; isOpp: boolean; notesHtml?: string }) {
+export function CompanyView({ doc, isOpp, notesHtml, reviewHtml }: { doc: any; isOpp: boolean; notesHtml?: string; reviewHtml?: string }) {
   return (
     <div className="space-y-8">
       <CompanyHeader doc={doc} isOpp={isOpp} />
@@ -338,7 +338,7 @@ export function CompanyView({ doc, isOpp, notesHtml }: { doc: any; isOpp: boolea
       </div>
       <div>
         <SectionTitle id="fontes" title="Fontes e dossiê" />
-        <Sources doc={doc} notesHtml={notesHtml} />
+        <Sources doc={doc} notesHtml={notesHtml} reviewHtml={reviewHtml} />
       </div>
     </div>
   );

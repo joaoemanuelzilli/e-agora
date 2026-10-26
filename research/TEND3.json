@@ -173,11 +173,11 @@
   "guidance": "Guidance 2026 (revisado em 04/08/2026): EBITDA ajustado do segmento Tenda R$ 1,1–1,2 bi (antes R$ 0,95–1,05 bi); vendas líquidas do segmento R$ 5,5–6,0 bi (antes R$ 5,0–5,5 bi); LL consolidado R$ 600–660 mi (antes R$ 520–600 mi). Alea: teto de gastos de R$ 80 mi em 2026.",
   "dividend_policy": "Estatuto: mínimo de 25%. Retomada de proventos após o turnaround: R$ 100 mi (R$ 0,8252/ação, ref. 3T25, pago 07/01/2026) e R$ 78 mi (R$ 0,6363/ação, ref. 1S26, ex 13/08/2026, pagamento 30/12/2026). Recompra de até 5 mi ações (até 30/09/2026). Payout caixa 2025: 14%.",
   "election_impact": "TEND3 −21%: canal macro (Ke) + algum micro. A Tenda é a mais exposta à Faixa 1–2 (subsídio FGTS e, em parte, FAR/OGU), o que é positivo com Lula (programa-símbolo) mas negativo se o fiscal apertar. Tem DL baixa (R$ 339 mi), porém R$ 515 mi de cessões, custo financeiro CDI e um equity swap sobre a própria ação que gera perda com a queda de hoje. 3T26 mostrou distratos +55% t/t (greve da Caixa e crédito mais rígido). Setor: o MCMV é financiado majoritariamente pelo FGTS (fundo parafiscal, fora do Orçamento, juros fixados pelo Conselho Curador e não pela Selic). Orçamento FGTS 2026: R$ 160,5 bi (habitação R$ 144,5 bi; descontos/subsídios elevados a R$ 13 bi em 10/09/2026); plurianual aprovado em nov/25: habitação R$ 144,5 bi em 2027 e R$ 139,5 bi em 2028–29 (nominal estável/queda) — o Conselho revisa 2027–29 no fim de out/26. Portaria MCID 333/2026 elevou renda (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000) e tetos (F3 R$ 400 mil; F4 R$ 600 mil). Um 4º mandato Lula reduz o risco de corte do programa (era um risco no cenário Flávio) — positivo para volume. O que piora de fato: (i) custo de capital/Ke e DI longo (+300 bp) → múltiplos; (ii) dívidas e cessões indexadas ao CDI; (iii) fiscal: Faixa 1 (FAR/OGU) e Faixa 4 (Fundo Social) dependem do Tesouro; FGTS é procíclico (arrecadação 8% da folha) e sofre com saques extraordinários; (iv) câmbio +9,5% → insumos (aço, cobre, PVC) e INCC (já 6,6% em 12m, mão de obra 7,6%).",
-  "summary": "Turnaround entregue (margem bruta ajustada 37%, guidance de LL elevado para R$ 600–660 mi) e maior beneficiária do foco do governo na Faixa 1–2. A R$ 22,50–24,00 (intradia) negocia ~4,5x o LL 2026E; o risco é execução (Alea, distratos) e o fiscal, não a demanda.",
+  "summary": "Turnaround entregue (margem bruta ajustada 37%, guidance de LL elevado para R$ 600–660 mi) e maior beneficiária do foco do governo na Faixa 1–2. A R$ 22,38 (13h02) negocia 4,4x o LL 2026E; valor justo de R$ 26,81 (+19,8%) e TIR de dono de 24,5%, pouco abaixo do Ke de 25%. O risco é execução (margem, Alea, distratos) e o fiscal, não a demanda.",
   "thesis": [
     "Guidance 2026 elevado: LL consolidado R$ 600–660 mi e EBITDA ajustado Tenda R$ 1,1–1,2 bi (04/08/2026).",
     "Margem bruta ajustada 37,3% no 2T26 (Tenda ex-Pode Entrar 40,4%), +3,9 p.p. a/a — preços reajustados e tetos maiores do MCMV.",
-    "Valuation: ~4,5x LL 2026E e ~1,8–1,9x P/VP ao preço de hoje, com retomada de dividendos (R$ 178 mi declarados em 8 meses).",
+    "Valuation: a R$ 22,38 (13h02), 4,4x o LL 2026E, 3,9x o 2027E e 1,78x P/VP; valor justo de R$ 26,81 (+19,8%; DDM 50%, P/L-alvo 30%, DCF 20%) e TIR de dono de 24,5%, pouco abaixo do Ke de 25%; retomada de dividendos (R$ 178 mi declarados em 8 meses).",
     "Faixas 1–2 (renda até R$ 5.000) são o núcleo político do MCMV no 4º mandato; subsídio FGTS 2026 elevado a R$ 13 bi."
   ],
   "risks": [
@@ -215,8 +215,8 @@
     },
     {
       "label": "P/L 2026E ao preço de hoje",
-      "value": "≈4,2–4,9x",
-      "context": "R$ 22,50–24,00 × 122,5 mi / LL guidance R$ 600–660 mi"
+      "value": "≈4,2–4,6x",
+      "context": "R$ 22,38 (13h02) × 122,5 mi / LL guidance R$ 600–660 mi (modelo: 4,4x)"
     }
   ],
   "sources": [

@@ -15,7 +15,7 @@
   "base": {
    "revenue_2025": 41000
   },
-  "notes": "revenue_2025 = receita líquida FY2025 ex-4Bio (vendida à Profarma; concluída em 04/05/2026), estimada em R$ 41,0 bi: FY2025 CVM R$ 44.250 mi − 4Bio ~R$ 3,25 bi (1S25 4Bio = R$ 1.535 mi pela reapresentação do ITR 2T26; 2S25 estimado). A base CVM FY2025 ainda consolida a 4Bio. Atenção: o fim do ICMS-ST em SP (2026) elevou as deduções (13,4% da receita bruta no 2T26 vs 6,8% no 2T25): receita líquida cresce menos que a bruta (+9,8% vs +18,3% no 2T26) e a margem sobre a líquida sobe mecanicamente. ebitda_margin = EBITDA IFRS-16 (EBIT 3.05 + D&A) MENOS o AVP de compras (~0,55% da RL, ~R$ 65 mi/tri), que a RD lança no resultado financeiro; o mesmo valor foi retirado do custo da dívida → lucro líquido inalterado e FCFF não superestimado (a própria RD deduz o AVP no seu fluxo de caixa). Capex = caixa (~3,1% da RL) + adições de direito de uso (~2,4% da RL)."
+  "notes": "revenue_2025 = receita líquida FY2025 ex-4Bio (vendida à Profarma; concluída em 04/05/2026), estimada em R$ 41,0 bi: FY2025 CVM R$ 44.250 mi − 4Bio ~R$ 3,25 bi (1S25 4Bio = R$ 1.535 mi pela reapresentação do ITR 2T26; 2S25 estimado). A base CVM FY2025 ainda consolida a 4Bio. Atenção: o fim do ICMS-ST em SP (2026) elevou as deduções (13,4% da receita bruta no 2T26 vs 6,8% no 2T25): receita líquida cresce menos que a bruta (+9,8% vs +18,3% no 2T26) e a margem sobre a líquida sobe mecanicamente. ebitda_margin = EBITDA IFRS-16 (EBIT 3.05 + D&A) MENOS o AVP de compras (~0,55% da RL, ~R$ 65 mi/tri), que a RD lança no resultado financeiro; o mesmo valor foi retirado do custo da dívida → lucro líquido inalterado e FCFF não superestimado (a própria RD deduz o AVP no seu fluxo de caixa). Capex = caixa (~3,1% da RL) + adições de direito de uso (~2,4% da RL). [Revisão G05 26/10/2026] Adições de direito de uso recalibradas de ~2,4% para ~3,1% da RL (capex +0,7 p.p.). ΔPassivo de arrendamento + principal pago (DFC 6.03.05; os juros vêm à parte, em 6.01.03.03): 2023 197 + 823 = 1.019 (3,0% da RL); 2024 488 + 859 = 1.346 (3,5%); 2025 542 + 921 = 1.463 (3,3%; 3,6% ex-4Bio); 1S26 174 + 490 = 664 (3,1%, subestimado pela baixa dos arrendamentos da 4Bio). Usado o piso da faixa (3,1%)."
  },
  "projection": {
   "years": [
@@ -47,11 +47,11 @@
    0.048
   ],
   "capex_pct_revenue": [
-   0.055,
-   0.055,
-   0.054,
-   0.053,
-   0.052
+   0.062,
+   0.062,
+   0.061,
+   0.06,
+   0.059
   ],
   "nwc_pct_revenue": 0.13,
   "cost_of_net_debt": [
@@ -172,7 +172,7 @@
  "guidance": "Reafirmado no 2T26 (04/08/2026): 330–350 aberturas brutas em 2026 (329 nos últimos 12 meses). Sem guidance de margem/lucro. Fim do ICMS-ST em SP deve liberar caixa adicional (recuperação de ICMS-ST sobre estoques).",
  "dividend_policy": "Distribui JCP trimestralmente + dividendos complementares; mínimo estatutário 25%. No 2T26 anunciou R$ 154,5 mi em JCP e R$ 47,6 mi em dividendos. Pagos em caixa: R$ 466 mi (2023), R$ 475 mi (2024), R$ 653 mi (2025) — 40–50% do lucro. Recompras pontuais (R$ 73 mi em 2021 e 2024).",
  "election_impact": "Queda de ~27% com fundamentos pouco afetados: alavancagem baixa (0,8x DL ajustada/EBITDA pré-IFRS16; dívida 100% CDI de só R$ 3,5 bi) → +100 bp no CDI custa ~1,5% do lucro. O canal é de múltiplo/beta (ação de duration longa — negociava ~20x P/L 2027E pré-eleição) e de fluxo estrangeiro. Micro de um 4º mandato: Farmácia Popular ampliado (gratuidade) e renda das classes C/D (salário mínimo, isenção de IR até R$ 5 mil) sustentam volume de genéricos/crônicos; CMED segue fórmula legal (reajuste médio 2,8% em 2026) — risco de reajustes abaixo da inflação é regulatório, não eleitoral novo; câmbio mais alto pressiona custo dos laboratórios, não da RD diretamente. Risco estrutural já em curso: Lei 15.357/2026 autoriza farmácias em supermercados (Assaí abriu as primeiras em jul/26).",
- "summary": "Líder absoluta do varejo farma (3.687 farmácias, 19,7% de share nacional, R$ 12,8 bi de receita bruta no 2T26, +18%) com balanço folgado e alta conversão de caixa. A R$ 14,85 negocia ~15x P/L 2027E — pela primeira vez em muitos anos perto de um múltiplo 'normal' —, mas com Ke 25% o crescimento de ~12% a.a. ainda não basta para fechar a conta sem expansão de múltiplo. TIR implícita ~12% hoje (≈10,7% pré-eleição): a queda foi de múltiplo, não de fundamento.",
+ "summary": "Líder absoluta do varejo farma (3.687 farmácias, 19,7% de share nacional, R$ 12,8 bi de receita bruta no 2T26, +18%) com balanço folgado e alta conversão de caixa. A R$ 14,85 negocia ~15x P/L 2027E — pela primeira vez em muitos anos perto de um múltiplo 'normal' —, mas com Ke 25% o crescimento de ~12% a.a. ainda não basta para fechar a conta sem expansão de múltiplo. TIR implícita ~12% hoje (≈10,5% pré-eleição): a queda foi de múltiplo, não de fundamento.",
  "thesis": [
   "Crescimento estrutural: MSSS de lojas maduras +10,9% no 2T26 (8,1 p.p. acima do CMED), market share +1,7 p.p. a/a, digital 31% das vendas.",
   "Balanço: DL ajustada R$ 3,0 bi (0,8x), FCF positivo de R$ 550 mi no 2T26; queda da ação é de múltiplo, não de solvência.",

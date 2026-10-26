@@ -67,7 +67,7 @@ export default function Page() {
         </Block>
         <Block title="Valor justo">
           <p>
-            Combinação ponderada. Industriais: DCF 50%, DDM 25%, múltiplos 25%. Bancos: DDM 50%, múltiplos (P/L e P/VP) 50%. Holdings: soma das partes com controladas a valor justo do próprio estudo ou a mercado. Valores negativos contam como zero no peso.
+            Combinação ponderada. Industriais: DCF 50%, DDM 25%, múltiplos 25%. Incorporadoras: DDM 50%, P/L-alvo 30%, DCF 20%, porque o fluxo de caixa oscila com terreno, recebíveis e juros capitalizados. Bancos: DDM 60%, P/VP-alvo 40%. Holdings: soma das partes com controladas a valor justo do próprio estudo (recalculada no Ke escolhido) ou a mercado. Valores negativos contam como zero no peso. Os pesos setoriais só mudaram onde as duas baterias de teste concordaram (página Testes).
           </p>
           <F>DDM: VP(dividendos 2026–30, Ke) + Lucro<sub>2030</sub> × (1 + g) × (1 − g / ROE) ÷ (Ke − g)</F>
           <p>Múltiplos-alvo (P/L, EV/EBITDA, P/VP) definidos pelos analistas com base na média de 5 anos e em pares. Graham e Bazin aparecem só como referência.</p>
@@ -92,7 +92,7 @@ export default function Page() {
             <span className="font-medium text-ink">Decomposição da queda:</span> beta de baixa (dias de queda do Ibovespa, 3 anos) × variação do índice; regressão cross-section das {ov.xsec.n} ações do universo em beta, dívida/EBITDA, porte e dummies de setor, exportadora e estatal (R² = {Math.round(ov.xsec.r2 * 100)}%). O resíduo mede o que a queda teve de específico.
           </p>
           <p>
-            <span className="font-medium text-ink">Fatores:</span> escore multifator em z-scores dentro da cobertura: valor (TIR de dono, 30%), qualidade (ROE de 5 anos e Piotroski, 20%), solidez (dívida e Altman Z″ de emergentes, 15%), probabilidade (Monte Carlo, 15%), upside (10%) e sobrerreação (resíduo da regressão, 10%).
+            <span className="font-medium text-ink">Fatores:</span> escore multifator em z-scores dentro da cobertura: valor (TIR de dono, 25%), qualidade (ROE de 5 anos e Piotroski, 15%), solidez (dívida e Altman Z″ de emergentes, 15%), probabilidade (Monte Carlo, 15%), upside (10%), sobrerreação (resíduo da regressão, 10%) e momentum de 12 meses (10%), pesos revistos pelo backtest de fatores de 2017–2026.
           </p>
           <p>
             <span className="font-medium text-ink">Event study:</span> retornos do Ibovespa 1, 3, 6 e 12 meses após os piores dias desde 1998, após cada eleição presidencial e após quedas de 25% ou mais; histórico de cada ação nos crashes desde 2016. Múltiplos históricos mensais (P/L, P/VP, EV/EBITDA) com média, desvio e z-score do nível atual.

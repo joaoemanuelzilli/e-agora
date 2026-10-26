@@ -16,7 +16,7 @@ export default function Page() {
   const html: Record<string, string> = {};
   for (const [k, v] of Object.entries(t.md || {})) html[k] = mdToSafeHtml(v as string | null);
   const consensusHtml = (t.consensus_md || []).map((m: string) => mdToSafeHtml(m));
-  const review = (t.review || []).map((r: AnyObj) => ({ ...r, md: undefined, html: r.md ? mdToSafeHtml(r.md) : "" }));
+  const review = t.review || [];
   return (
     <div className="space-y-6">
       <header>

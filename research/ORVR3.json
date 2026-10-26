@@ -15,9 +15,10 @@
     "base": {
       "revenue_2025": 3400.0,
       "net_debt": 2339.0,
-      "shares_outstanding_mn": 624.9
+      "shares_outstanding_mn": 624.9,
+      "equity_controlling_2025": 4851.7
     },
-    "notes": "(1) Incorporação da Vital/GBio/Orbis concluída em 11/06/2026: a CVM só consolida 1 mês da Vital e inclui receita de construção (ICPC-01). Receita-base 2025 = pró-forma combinada ajustada ex-ICPC-01 ≈ R$ 3.400 mi (Orizon legado CVM R$ 1.050 mi + Vital ~R$ 2.350 mi estimada a partir do 2T25 pró-forma de R$ 572,7 mi; a companhia não divulgou o anual da Vital no release). (2) Dívida líquida = R$ 2.241 mi da companhia (dívida bruta R$ 3.785,5 mi − caixa R$ 1.544,3 mi) + arrendamentos R$ 98 mi; a CVM soma R$ 276 mi de impostos/fornecedores marcados por erro dentro da conta 2.02.01 (ND CVM 2.588 superestimada). (3) Ações: CVM traz 137.324 (em milhares, pré-desdobramento). Desdobramento 1:4 em 11/08/2026 → 549,3 mi; somo 75,6 mi de ações dos bônus ORVR11 (preço de exercício R$ 13,2325 pós-split; janela mai–set/2027; ~R$ 1,0 bi) = 624,9 mi diluídas, com a entrada de R$ 1.000 mi em 2027 em equity_issuance_mn."
+    "notes": "(1) Incorporação da Vital/GBio/Orbis concluída em 11/06/2026: a CVM só consolida 1 mês da Vital e inclui receita de construção (ICPC-01). Receita-base 2025 = pró-forma combinada ajustada ex-ICPC-01 ≈ R$ 3.400 mi (Orizon legado CVM R$ 1.050 mi + Vital ~R$ 2.350 mi estimada a partir do 2T25 pró-forma de R$ 572,7 mi; a companhia não divulgou o anual da Vital no release). (2) Dívida líquida = R$ 2.241 mi da companhia (dívida bruta R$ 3.785,5 mi − caixa R$ 1.544,3 mi) + arrendamentos R$ 98 mi; a CVM soma R$ 276 mi de impostos/fornecedores marcados por erro dentro da conta 2.02.01 (ND CVM 2.588 superestimada). (3) Ações: CVM traz 137.324 (em milhares, pré-desdobramento). Desdobramento 1:4 em 11/08/2026 → 549,3 mi; somo 75,6 mi de ações dos bônus ORVR11 (preço de exercício R$ 13,2325 pós-split; janela mai–set/2027; ~R$ 1,0 bi) = 624,9 mi diluídas, com a entrada de R$ 1.000 mi em 2027 em equity_issuance_mn. (4) [Revisão G12, 26/10/2026] equity_controlling_2025 = R$ 4.851,7 mi (PL controlador CVM de 30/06/2026, já combinado com a Vital). O PL de 31/12/2025 da CVM (R$ 1.442 mi) é só do legado e, combinado com o lucro pró-forma de 2026, inflava o ROE 2026E (10,7% → 7,0%). Não afeta valor justo nem TIR."
   },
   "projection": {
     "years": [
@@ -110,10 +111,10 @@
     "target_debt_weight": 0.25
   },
   "adjustments": {
-    "other_debt_like": 30.0,
+    "other_debt_like": 75.0,
     "non_operating_assets": 1310.0,
     "minority_value": 1200.0,
-    "notes": "non_operating_assets = R$ 470 mi + R$ 840 mi. R$ 840 mi = valor presente (a 25%, ~0,8 ano) dos ~R$ 1,0 bi do exercício dos bônus ORVR11 (ações já diluídas; DCF e EV/EBITDA usam a dívida pré-emissão). R$ 470 mi = valor presente (~60% do saldo) do recebível da Ecourbis contra a Prefeitura de SP (reequilíbrio de 2024; R$ 784,3 mi corrigidos por IPCA em 120 parcelas mensais) — fora do EBITDA e excluído da dívida líquida pela companhia. other_debt_like = outorgas a pagar (R$ 29 mi). minority_value econômico (não o contábil de R$ 401 mi): minoritários detêm ~32% do EBITDA da Vital (Ecourbis 36,7%, Recife 30%, Titara/São Luís 50% etc.) e ~10% do legado → ~23–25% do lucro; R$ 1.200 mi ≈ 25% do equity consolidado médio entre DCF a Ke 25% (~R$ 1,4 bi) e múltiplos de mercado (~R$ 11 bi), ponderado 2:1 — estimativa."
+    "notes": "non_operating_assets = R$ 470 mi + R$ 840 mi. R$ 840 mi = valor presente (a 25%, ~0,8 ano) dos ~R$ 1,0 bi do exercício dos bônus ORVR11 (ações já diluídas; DCF e EV/EBITDA usam a dívida pré-emissão). R$ 470 mi = valor presente (~60% do saldo) do recebível da Ecourbis contra a Prefeitura de SP (reequilíbrio de 2024; R$ 784,3 mi corrigidos por IPCA em 120 parcelas mensais) — fora do EBITDA e excluído da dívida líquida pela companhia. other_debt_like = outorgas a pagar (R$ 29 mi). minority_value econômico (não o contábil de R$ 401 mi): minoritários detêm ~32% do EBITDA da Vital (Ecourbis 36,7%, Recife 30%, Titara/São Luís 50% etc.) e ~10% do legado → ~23–25% do lucro; R$ 1.200 mi ≈ 25% do equity consolidado médio entre DCF a Ke 25% (~R$ 1,4 bi) e múltiplos de mercado (~R$ 11 bi), ponderado 2:1 — estimativa. [Revisão G12, 26/10/2026] other_debt_like 30 → 75: outorgas a pagar (18,1 CP + 11,1 LP) + parcelamento de impostos (22,9 CP + 22,6 LP), que a especificação manda tratar como debt-like e estavam de fora. Não incluídos (natureza não verificada): impostos a recolher LP de R$ 257,1 mi e fornecedores LP de R$ 19,1 mi (lançados na conta 2.02.01) e débitos com partes relacionadas LP de R$ 184,3 mi."
   },
   "target_multiples": {
     "pe": 18.0,

@@ -106,10 +106,10 @@
     "target_debt_weight": 0.0
   },
   "adjustments": {
-    "other_debt_like": 300,
+    "other_debt_like": 220,
     "non_operating_assets": 0,
-    "minority_value": 850,
-    "notes": "other_debt_like R$ 300 mi = dividendos já 'ex' e ainda não refletidos no caixa do balanço-base: R$ 0,4545/ação complementar 2025 (≈R$ 140 mi, ex 04/02/26, pagamento 31/12/26) + R$ 0,6168/ação do 1S26 (R$ 190 mi, ex 14/08, pago 08/09/26) − R$ 30 mi já provisionados em 'dividendos a pagar'. Sem passivo de cessão. minority_value R$ 850 mi = ~12% do LL (sócios em SPEs) × valor do equity 100% (≈R$ 7,3 bi); o valor contábil (R$ 394 mi) subestima o direito dos minoritários com ROE de 70%."
+    "minority_value": 900,
+    "notes": "other_debt_like R$ 300 mi = dividendos já 'ex' e ainda não refletidos no caixa do balanço-base: R$ 0,4545/ação complementar 2025 (≈R$ 140 mi, ex 04/02/26, pagamento 31/12/26) + R$ 0,6168/ação do 1S26 (R$ 190 mi, ex 14/08, pago 08/09/26) − R$ 30 mi já provisionados em 'dividendos a pagar'. Sem passivo de cessão. minority_value R$ 850 mi = ~12% do LL (sócios em SPEs) × valor do equity 100% (≈R$ 7,3 bi); o valor contábil (R$ 394 mi) subestima o direito dos minoritários com ROE de 70%. [Revisão independente 26/10: other_debt_like 300→220. O PL controlador caiu R$ 300 mi em dividendos no 1S26 (1T26 R$ 160 mi + complementar 2025 R$ 140 mi), a DFC mostra R$ 270 mi pagos e o balanço R$ 30 mi a pagar em 30/06: o caixa-base já reflete R$ 270 mi pagos, e só saem depois R$ 30 mi + R$ 190 mi (1S26, pago 08/09) = R$ 220 mi. minority_value 850→900 = 12% × equity 100% do próprio DCF (R$ 7.501 mi).]"
   },
   "target_multiples": {
     "pe": 7.0,

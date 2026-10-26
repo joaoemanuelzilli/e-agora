@@ -14,3 +14,5 @@ __pycache__/
 .vercel
 .DS_Store
 npm-debug.log*
+# saídas brutas da suíte de testes
+data/tests/raw/

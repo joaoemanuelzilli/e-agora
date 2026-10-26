@@ -13,7 +13,7 @@
  ],
  "overrides": {
   "base": {},
-  "notes": "Base CVM mantida (receita FY2025 R$ 77.307 mi; DL 2T26 R$ 22.520 mi = dívida 16.282 + arrendamentos 10.711 − caixa 4.473). Conferido com o release 2T26 (dívida bruta líquida de derivativos R$ 15.749 mi; DL ex-arrendamento R$ 11.276 mi). Ajustes fora da base em 'adjustments'. Capex modelado = capex caixa + adições de direito de uso (IFRS-16, ~1,4% da RL) para que a dívida de arrendamento não 'amortize sozinha' no motor. Margem EBITDA 2026 (8,9%) inclui créditos extemporâneos de PIS/COFINS (~R$ 567 mi brutos no 1S26) e créditos recorrentes (~R$ 110 mi/tri); a partir de 2027 (CBS substitui PIS/COFINS) assumimos margem sem esses créditos (7,8%–8,0%)."
+  "notes": "Base CVM mantida (receita FY2025 R$ 77.307 mi; DL 2T26 R$ 22.520 mi = dívida 16.282 + arrendamentos 10.711 − caixa 4.473). Conferido com o release 2T26 (dívida bruta líquida de derivativos R$ 15.749 mi; DL ex-arrendamento R$ 11.276 mi). Ajustes fora da base em 'adjustments'. Capex modelado = capex caixa + adições de direito de uso (IFRS-16, ~1,4% da RL) para que a dívida de arrendamento não 'amortize sozinha' no motor. Margem EBITDA 2026 (8,9%) inclui créditos extemporâneos de PIS/COFINS (~R$ 567 mi brutos no 1S26) e créditos recorrentes (~R$ 110 mi/tri); a partir de 2027 (CBS substitui PIS/COFINS) assumimos margem sem esses créditos (7,8%–8,0%). [Revisão G05 26/10/2026] cost_of_net_debt recalibrado. A versão anterior (13,0% em 2026) anualizava só o 2T26 (−R$ 732 mi), que teve ~R$ 70 mi de atualização monetária de créditos tributários (release 2T26, 'Outras receitas e atualizações monetárias' +125 vs +15 no 1T26). O 1S26 realizado já soma −R$ 1.602 mi, e o recorrente ex-efeito é −R$ 3,34 bi/ano (15,2% da DL) com CDI ~14,75%: encargos da dívida 1.183, arrendamentos 617 (~11,6%), antecipação 40, caixa +98. 2026 = 1S26 real + 2S26 com CDI ~13,8% ⇒ −R$ 3,22 bi (14,3%). 2027–30 = parte fixa (~R$ 1,5 bi: arrendamentos + spreads) + exposição a CDI (~R$ 12,4 bi, decrescente com a desalavancagem) × CDI do analista (14,5/14/13/12,5%) ⇒ 14,7/14,4/13,8/13,5%."
  },
  "projection": {
   "years": [
@@ -53,11 +53,11 @@
   ],
   "nwc_pct_revenue": 0.02,
   "cost_of_net_debt": [
-   0.13,
-   0.136,
-   0.134,
-   0.128,
-   0.124
+   0.143,
+   0.147,
+   0.144,
+   0.138,
+   0.135
   ],
   "other_financial": [
    0,
@@ -115,7 +115,7 @@
   "pe": 8.0,
   "ev_ebitda": 5.0,
   "pbv": 1.5,
-  "rationale": "Múltiplos de estresse, coerentes com Ke 25%: P/L 8x e EV/EBITDA (IFRS-16, dívida incl. arrendamentos) 5,0x sobre 2027E. Referências: pré-eleição (R$ 13,80) a ação negociava ~13x o lucro LTM 2T26 (R$ 965 mi) e ~5,7x EV/EBITDA LTM IFRS-16 (EV ≈ R$ 18,5 bi mkt cap + R$ 22,5 bi DL); em 2024–25 o papel oscilou entre ~10x e ~15x P/L. Usamos piso do intervalo por causa da alavancagem e do juro real alto."
+  "rationale": "Múltiplos de estresse, coerentes com Ke 25%: P/L 8x e EV/EBITDA (IFRS-16, dívida incl. arrendamentos) 5,0x sobre 2027E. Referências: pré-eleição (R$ 13,80) a ação negociava ~19x o lucro LTM 2T26 (R$ 965 mi; ~17–19x 2027E) e ~6,6x EV/EBITDA LTM IFRS-16 (EV ≈ R$ 18,5 bi mkt cap + R$ 22,5 bi DL = R$ 41 bi / R$ 6,2 bi); em 2024–25 o papel oscilou entre ~10x e ~15x P/L. Usamos piso do intervalo por causa da alavancagem e do juro real alto."
  },
  "scenarios": {
   "bear": {
@@ -170,7 +170,7 @@
  "guidance": "4T25 (12/02/2026): 5 novas lojas em 2026, capex ~R$ 700 mi, possíveis revisões de portfólio e sale-leaseback; meta de alavancagem 2025 (2,60x) cumprida com 2,56x. 2T26: 25 farmácias Assaí Farma em SP até o fim de 2026 (potencial 250). Sem meta numérica de alavancagem para 2026 encontrada.",
  "dividend_policy": "Mínimo estatutário de 25% do lucro líquido ajustado. JCP de R$ 140 mi (R$ 0,104/ação) referente a 2025, pago em 26/06/2026 (data-com 06/01/2026). Dividendos/JCP pagos (DFC): R$ 118 mi (2023), R$ 0 (2024), R$ 128 mi (2025). Recompras pequenas (R$ 26–92 mi/ano).",
  "election_impact": "Queda de ~40% é sobretudo canal juros: dívida líquida ex-arrendamentos de R$ 11,3 bi (+R$ 1,1 bi de recebíveis descontados) quase toda em CDI e ~R$ 10,7 bi de arrendamentos; cada +100 bp de CDI tira ~R$ 90 mi do lucro (~8%), e a curva (DI1F28 14,95%) adia a queda da Selic que sustentava a tese de desalavancagem. Lado micro: um 4º mandato tende a manter transferências de renda (Bolsa Família, salário mínimo com ganho real, isenção de IR até R$ 5 mil) que sustentam o fluxo de clientes de baixa renda e o B2B de pequenos comerciantes — positivo para volume, mas inflação de alimentos/câmbio pressiona ticket e trade down. O valor operacional (EBITDA ~R$ 6,2 bi LTM) mudou pouco; o valor do equity é muito sensível ao custo da dívida (alavancagem 3,6x incl. arrendamentos).",
- "summary": "Maior atacarejo do país (313 lojas, faturamento R$ 84,7 bi em 2025), operação resiliente (fluxo recorde de 40 mi clientes/mês, ganho de share) e desalavancando (2,37x no 2T26 vs 3,17x). Equity é uma opção alavancada sobre os juros: a R$ 8,23 negocia ~8x P/L 2027E, mas o motor com Ke 25% depende de a desalavancagem continuar. Com minhas premissas, o preço de hoje embute TIR de ~14,5% (vs Ke 25%; ~11% no preço pré-eleição).",
+ "summary": "Maior atacarejo do país (313 lojas, faturamento R$ 84,7 bi em 2025), operação resiliente (fluxo recorde de 40 mi clientes/mês, ganho de share) e desalavancando (2,37x no 2T26 vs 3,17x). Equity é uma opção alavancada sobre os juros: a R$ 8,23 negocia ~12x P/L 2027E, mas o motor com Ke 25% depende de a desalavancagem continuar. Com minhas premissas, o preço de hoje embute TIR de ~13,5% (vs Ke 25%; ~10,5% no preço pré-eleição).",
  "thesis": [
   "Geração de caixa livre de R$ 2,7 bi em 12 meses com capex cortado (R$ 816 mi LTM) — DL+recebíveis caiu R$ 1,4 bi em 12 meses (R$ 13,8 → 12,4 bi).",
   "Cada 100 bp de queda do CDI adiciona ~R$ 90 mi ao lucro (~8%); se a Selic voltar a ~12% em 2028, o lucro pode dobrar vs 2025 (R$ 497 mi contábil).",

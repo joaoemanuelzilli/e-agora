@@ -94,10 +94,11 @@ export function Thesis({ doc }: { doc: any }) {
   );
 }
 
-export function Sources({ doc, notesHtml }: { doc: any; notesHtml?: string }) {
+export function Sources({ doc, notesHtml, reviewHtml }: { doc: any; notesHtml?: string; reviewHtml?: string }) {
   const rs = doc.research || {};
   const src = (rs.sources || []) as { title: string; url: string }[];
   const [open, setOpen] = useState(false);
+  const [openRv, setOpenRv] = useState(false);
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
       <div className="panel p-4 lg:col-span-5">
@@ -121,12 +122,24 @@ export function Sources({ doc, notesHtml }: { doc: any; notesHtml?: string }) {
             {open ? "Recolher" : "Expandir"}
           </button>
         </div>
+        {reviewHtml && <p className="mt-1 text-[12px] text-muted">Escrito antes da revisão independente de 26/10; os números do painel já incorporam as correções.</p>}
         {notesHtml ? (
           <div className={`dossier mt-3 ${open ? "" : "max-h-[260px] overflow-hidden [mask-image:linear-gradient(to_bottom,black_70%,transparent)]"}`} dangerouslySetInnerHTML={{ __html: notesHtml }} />
         ) : (
           <p className="mt-2 text-[12.5px] text-muted">Sem dossiê.</p>
         )}
       </div>
+      {reviewHtml && (
+        <div className="panel p-4 lg:col-span-12">
+          <div className="flex items-center justify-between">
+            <div className="h3">Revisão independente (26/10)</div>
+            <button type="button" onClick={() => setOpenRv((v) => !v)} className="no-print rounded border border-hairline px-2 py-0.5 text-[12px] text-ink-2 hover:bg-surface-2">
+              {openRv ? "Recolher" : "Expandir"}
+            </button>
+          </div>
+          <div className={`dossier mt-3 ${openRv ? "" : "max-h-[220px] overflow-hidden [mask-image:linear-gradient(to_bottom,black_70%,transparent)]"}`} dangerouslySetInnerHTML={{ __html: reviewHtml }} />
+        </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,277 @@
+{
+  "ticker": "CURY3",
+  "name": "Cury Construtora e Incorporadora S.A.",
+  "sector": "Construção civil / Incorporação residencial econômica (MCMV)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "CURY3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem ajustes na base CVM (receita FY2025 R$ 5.399 mi; EBITDA = EBIT 3.05 + D&A DVA = R$ 1.303 mi). O EBITDA do release soma juros capitalizados (R$ 9,5 mi no 1S26) — diferença irrelevante (<1% da receita). Ações: 308,05 mi (CVM = B3). EBITDA projetado está na base 'ex-juros capitalizados' (+0,3 p.p. vs EBITDA CVM), com o mesmo valor deduzido em other_financial."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.21,
+      0.13,
+      0.1,
+      0.08,
+      0.07
+    ],
+    "ebitda_margin": [
+      0.243,
+      0.238,
+      0.233,
+      0.233,
+      0.228
+    ],
+    "da_pct_revenue": [
+      0.006,
+      0.006,
+      0.006,
+      0.006,
+      0.006
+    ],
+    "capex_pct_revenue": [
+      0.007,
+      0.007,
+      0.007,
+      0.007,
+      0.007
+    ],
+    "nwc_pct_revenue": 0.32,
+    "cost_of_net_debt": [
+      0.135,
+      0.135,
+      0.125,
+      0.12,
+      0.115
+    ],
+    "other_financial": [
+      -109.6,
+      -122.1,
+      -129.4,
+      -136.3,
+      -143.2
+    ],
+    "tax_rate": [
+      0.115,
+      0.115,
+      0.115,
+      0.115,
+      0.115
+    ],
+    "minority_share_ni": 0.12,
+    "payout": [
+      0.75,
+      0.8,
+      0.8,
+      0.8,
+      0.85
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.4,
+    "roe": 0.45
+  },
+  "wacc": {
+    "kd_pre_tax": 0.15,
+    "target_debt_weight": 0.0
+  },
+  "adjustments": {
+    "other_debt_like": 300,
+    "non_operating_assets": 0,
+    "minority_value": 850,
+    "notes": "other_debt_like R$ 300 mi = dividendos já 'ex' e ainda não refletidos no caixa do balanço-base: R$ 0,4545/ação complementar 2025 (≈R$ 140 mi, ex 04/02/26, pagamento 31/12/26) + R$ 0,6168/ação do 1S26 (R$ 190 mi, ex 14/08, pago 08/09/26) − R$ 30 mi já provisionados em 'dividendos a pagar'. Sem passivo de cessão. minority_value R$ 850 mi = ~12% do LL (sócios em SPEs) × valor do equity 100% (≈R$ 7,3 bi); o valor contábil (R$ 394 mi) subestima o direito dos minoritários com ROE de 70%."
+  },
+  "target_multiples": {
+    "pe": 7.0,
+    "ev_ebitda": 5.4,
+    "pbv": 4.0,
+    "rationale": "P/L pré-eleição de 9,1x o LL UDM (R$ 32,50; LL UDM R$ 1.099 mi; P/VP 6,0x). Com DI longo ~15,7% e Ke de 25%, aplicamos desconto: P/L 7,0x 2027E (P/L justo por Gordon com payout 75%, g 5% e Ke 25% ≈ 4–5x em regime; o prêmio vem do crescimento 2026–28 e ROE >60%). EV/EBITDA 5,5x coerente com P/L 7x + caixa líquido + minoritários. P/VP 4,0x ≈ (ROE 70% − g)/(Ke − g) com ROE convergindo a 45–50%. EV/EBITDA-alvo reescalonado de 5,5x para 5,4x por estar agora na base EBITDA ex-juros capitalizados (mesmo P/L implícito)."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.05,
+      "ebitda_margin_shift": -0.025,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "FGTS 2027–29 nominal estável/menor, crédito associativo travado e INCC acima do repasse de preço: volume estagna e margem volta a ~20%."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.03,
+      "ebitda_margin_shift": 0.01,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Novas altas de teto (F3/F4) e orçamento FGTS maior em 2027; Cury sustenta VSO ~40% e margem bruta ~40%."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.05,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.002
+  },
+  "debt_profile": {
+    "gross_debt_mn": 1343,
+    "pct_floating_cdi": null,
+    "avg_cost": "não divulgado no material lido (SFH/CRI; 86,7% no longo prazo, vencimentos até 2035)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": 2,
+    "notes": "Caixa líquido de R$ 291 mi: +100 bp de CDI ≈ +R$ 3 mi pré-IR (supondo dívida e caixa pós-fixados). Sensibilidade real está na demanda/funding (FGTS tem taxa fixa) e no Ke."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.3637,
+    "ebitda_margin_avg_5y": 0.2173,
+    "roe_avg_5y": 0.6185,
+    "payout_avg_5y": 0.7634,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.2555,
+      "ebitda_margin": 0.2289,
+      "net_income_mn": 270.4,
+      "net_debt_ebitda": -0.19
+    },
+    "notes": "CAGR de receita 2020–25 de 36% (boom do MCMV a partir de 2023); projetamos ~11,7% a.a. 2025–30 (2026 +21% já visível: 1S26 +29%, REF R$ 8,8 bi), desacelerando com orçamento FGTS nominal estável. Margem EBITDA 5a média 21,7% (2025: 24,1%; 1S26: 24,2%); projeção 24% → 22,5% (normalização parcial; margem REF 43,5% sustenta o curto prazo). ROE 5a 62%; payout caixa 5a 76% (2025: 139%, antecipação antes da tributação de dividendos); usamos 70–80%. Imposto efetivo 11,5% (RET). AJUSTE JUROS CAPITALIZADOS (padronização G06/G07): +0,3 p.p. no ebitda_margin em todos os anos e −0,3% da receita (R$ 20–28 mi/ano) em other_financial, LL inalterado; fonte: release 2T26: juros capitalizados apropriados ao custo de R$ 9,5 mi no 1S26 = 0,29% da ROL (margem bruta 39,5% → 39,8% ajustada). Margem EBITDA na base CVM (antes do ajuste): 24,0%; 23,5%; 23,0%; 23,0%; 22,5%. WACC sem benefício fiscal da dívida quando há dívida (RET): ver wacc.notes."
+  },
+  "guidance": "Sem guidance formal de resultado. Política explícita: remuneração ao acionista como prioridade de alocação; conversão LL→caixa operacional de 72% UDM (release 2T26).",
+  "dividend_policy": "Estatuto: mínimo de 25% do LL ajustado. Prática: distribuições trimestrais/semestrais elevadas. B3: R$ 0,8565/ação (1S25, pago 04/12/25), R$ 1,8601 (anual 2025, pago 23/12/25), R$ 0,4545 (complementar 2025, ex 04/02/26, paga 31/12/26), R$ 0,5194 (1T26, pago 28/05/26) e R$ 0,6168 (1S26, R$ 190 mi, pago 08/09/26). Dividendos UDM 2T26: R$ 1.323 mi (release). Payout caixa 2023 68%, 2024 74%, 2025 139%. Lei 15.270/2025 passou a reter 10% sobre dividendos > R$ 50 mil/mês a PF desde 2026.",
+  "election_impact": "CURY3 −23%: queda quase toda macro (Ke/DI e beta). A Cury tem caixa líquido (R$ 291 mi), dívida pequena e 30 trimestres seguidos de geração de caixa; ~todo o volume é crédito associativo Caixa/FGTS (taxa fixa), com parte em Faixa 3/4 e média renda em SP/RJ (estas mais sensíveis a SBPE/juros). Um 4º mandato Lula tende a manter/ampliar o MCMV — o canal micro é neutro a positivo; o risco real é fiscal/FGTS em 2027–29 e custo (INCC). O valor intrínseco a Ke 25% muda pouco frente a sexta; o preço caiu 23%. Setor: o MCMV é financiado majoritariamente pelo FGTS (fundo parafiscal, fora do Orçamento, juros fixados pelo Conselho Curador e não pela Selic). Orçamento FGTS 2026: R$ 160,5 bi (habitação R$ 144,5 bi; descontos/subsídios elevados a R$ 13 bi em 10/09/2026); plurianual aprovado em nov/25: habitação R$ 144,5 bi em 2027 e R$ 139,5 bi em 2028–29 (nominal estável/queda) — o Conselho revisa 2027–29 no fim de out/26. Portaria MCID 333/2026 elevou renda (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000) e tetos (F3 R$ 400 mil; F4 R$ 600 mil). Um 4º mandato Lula reduz o risco de corte do programa (era um risco no cenário Flávio) — positivo para volume. O que piora de fato: (i) custo de capital/Ke e DI longo (+300 bp) → múltiplos; (ii) dívidas e cessões indexadas ao CDI; (iii) fiscal: Faixa 1 (FAR/OGU) e Faixa 4 (Fundo Social) dependem do Tesouro; FGTS é procíclico (arrecadação 8% da folha) e sofre com saques extraordinários; (iv) câmbio +9,5% → insumos (aço, cobre, PVC) e INCC (já 6,6% em 12m, mão de obra 7,6%).",
+  "summary": "Melhor operadora do MCMV listada: ROE de 74%, caixa líquido, margem bruta ~40% e payout alto. A Ke de 25%, o valor justo depende pouco da perpetuidade (fluxo de dividendos de curto prazo pesa muito), e a queda de 23% foi macro — o MCMV sai fortalecido com Lula.",
+  "thesis": [
+    "ROE UDM de 73,6% e margem bruta ajustada 39,8% (2T26) com caixa líquido de R$ 290,6 mi: negócio que se autofinancia e distribui 70–80% do lucro.",
+    "Visibilidade: receita a apropriar R$ 8,83 bi (margem REF 43,5%), landbank R$ 26,1 bi; 3T26 com vendas líquidas +11,4% e 30º trimestre de geração de caixa (R$ 253,6 mi).",
+    "Política: 4º mandato Lula mantém o MCMV como prioridade (tetos F3 R$ 400 mil e F4 R$ 600 mil desde abr/26; subsídio FGTS 2026 elevado a R$ 13 bi).",
+    "Ao preço de hoje (R$ 25–26,5 intradia): ~7x LL 2026E, ~6,5x 2027E e DY de 10–13% a.a. com payout de 75–80%."
+  ],
+  "risks": [
+    "Orçamento FGTS 2027–29 nominal estável/menor (R$ 144,5 bi → R$ 139,5 bi) limita volume; decisão do Conselho Curador no fim de out/26.",
+    "INCC (12m 6,6%; mão de obra 7,6%) e câmbio +9,5% pressionam custo; despesas comerciais já subiram para 9,9% da ROL no 2T26.",
+    "Concentração geográfica (RMSP/RMRJ) e dependência de um único agente financeiro (Caixa, crédito associativo; greve em set/26 afetou repasses no setor).",
+    "Fiscal: Faixa 1/FAR e subsídios dependem do Tesouro; uma crise fiscal no 4º mandato pode forçar ajuste no programa."
+  ],
+  "catalysts": [
+    "Reunião do Conselho Curador do FGTS (orçamento 2027–29), fim de out/2026",
+    "Resultado 3T26 (novembro/2026)",
+    "Anúncio de dividendos do 2S26 (fev/2027, padrão histórico)"
+  ],
+  "key_data": [
+    {
+      "label": "ROE UDM 2T26",
+      "value": "73,6%",
+      "context": "release 2T26"
+    },
+    {
+      "label": "Caixa líquido 2T26",
+      "value": "R$ 290,6 mi",
+      "context": "dívida bruta R$ 1.343 mi, 86,7% no LP"
+    },
+    {
+      "label": "Receita a apropriar",
+      "value": "R$ 8.831 mi",
+      "context": "margem REF 43,5%"
+    },
+    {
+      "label": "Dividendos UDM",
+      "value": "R$ 1.323 mi",
+      "context": "+R$ 190 mi anunciados em ago/26"
+    },
+    {
+      "label": "P/L UDM ao preço de hoje",
+      "value": "≈7,0–7,4x",
+      "context": "R$ 25,00–26,50 (intradia) × 308,05 mi ações / LL UDM R$ 1.099 mi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "InfoMoney — Conselho do FGTS aprova orçamento de R$ 160,5 bi para 2026 (habitação R$ 144,5 bi)",
+      "url": "https://www.infomoney.com.br/economia/conselho-do-fgts-aprova-orcamento-de-r-1605-bi-para-2026-alta-anual-de-54/"
+    },
+    {
+      "title": "Movimento Econômico — FGTS amplia em R$ 500 mi os descontos do MCMV 2026 (R$ 12,5 bi → R$ 13 bi), 11/09/2026",
+      "url": "https://movimentoeconomico.com.br/habitacao/2026/09/11/mcmv-governo-amplia-em-r-500-milhoes-subsidios-para-habitacao-popular/"
+    },
+    {
+      "title": "Registro de Imóveis — R$ 500 milhões reforçam MCMV; piso de R$ 12,5 bi para 2027",
+      "url": "https://www.registrodeimoveis.org.br/r-500-milhoes-reforcam-minha-casa-minha-vida"
+    },
+    {
+      "title": "Bora Investir (B3) — MCMV: novo teto de renda e de preços (Faixa 3 R$ 400 mil; Faixa 4 R$ 600 mil)",
+      "url": "https://borainvestir.b3.com.br/web-stories/minha-casa-minha-vida-veja-novo-teto-de-renda-e-de-precos-de-imoveis/"
+    },
+    {
+      "title": "Sul21/Agência Brasil — novas faixas de renda MCMV (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000)",
+      "url": "https://sul21.com.br/?p=289296"
+    },
+    {
+      "title": "FGV IBRE/Sinduscon-SP — INCC-M set/26 (12m 6,61%; mão de obra 7,63%)",
+      "url": "https://sindusconsp.com.br/wp-content/uploads/2026/09/INCC-M_FGV_press-release_Set26.pdf"
+    },
+    {
+      "title": "Mattos Filho — Mercado imobiliário e Reforma Tributária (RET até 2028)",
+      "url": "https://www.mattosfilho.com.br/unico/mercado-imobiliario-reforma-tributaria/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais, consultado em 26/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    },
+    {
+      "title": "Cury — Release de resultados 2T26 (11/08/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/702b9586-4f10-4a79-a7e6-232ce8803136/8ffb3865-6cf8-f750-d1d6-aafbd22c8925?origin=2"
+    },
+    {
+      "title": "Visno Invest — Cury registra vendas líquidas de R$ 2 bi no 3T26 (prévia 08/10/2026)",
+      "url": "https://visnoinvest.com.br/news/15622/cury-cury3-registra-vendas-liquidas-de-r-2-bi-no-3t26"
+    },
+    {
+      "title": "Investidor10 — comunicado prévia 3T26 Cury",
+      "url": "https://investidor10.com.br/acoes/link_comunicado/CURY3/50637/"
+    },
+    {
+      "title": "Forbes — Cury anuncia R$ 190 mi em dividendos (ago/2026)",
+      "url": "https://forbes.com.br/forbes-money/forbes-real-estate/2026/08/cury-cury3-anuncia-r-190-milhoes-em-dividendos/"
+    },
+    {
+      "title": "InfoMoney — JPMorgan eleva Cury e Direcional a compra e rebaixa MRV",
+      "url": "https://www.infomoney.com.br/mercados/jpmorgan-eleva-cury-e-direcional-a-compra-e-rebaixa-mrv-a-neutra-cury3-e-dirr3-sobem/"
+    }
+  ],
+  "confidence": "alta nos dados (CVM + release); média-alta na projeção — maior incerteza é o orçamento FGTS 2027–29 e o custo de obra, não o balanço."
+}

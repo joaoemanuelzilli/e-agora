@@ -58,9 +58,9 @@
     "cost_of_net_debt": [
       0.155,
       0.155,
-      0.145,
-      0.135,
-      0.13
+      0.155,
+      0.155,
+      0.155
     ],
     "other_financial": [
       -837.4,
@@ -107,7 +107,7 @@
   "wacc": {
     "kd_pre_tax": 0.242,
     "target_debt_weight": 0.45,
-    "notes": "Kd real 16% (CDI ~14,5% + 1,5–2%) sem benefício fiscal: a maior parte da receita é tributada pelo RET sobre a receita, logo juros não geram escudo; 0,16/0,66 = 0,242."
+    "notes": "Kd real 16% (CDI ~14,5% + 1,5–2%) sem benefício fiscal: a maior parte da receita é tributada pelo RET sobre a receita, logo juros não geram escudo; 0,16/0,66 = 0,242. [Revisão independente 26/10: custo da DL na projeção mantido em 15,5% a.a. em 2026–30 (antes 15,5/15,5/14,5/13,5/13,0%): a queda para 13% supunha cortes de Selic que a curva DI de hoje não precifica (DI1F29 15,36%, DI1F31 15,66%). A queda de custo pela saída da Resia segue em other_financial.]"
   },
   "adjustments": {
     "other_debt_like": 0,

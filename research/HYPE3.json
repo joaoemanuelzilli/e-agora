@@ -12,8 +12,10 @@
   }
  ],
  "overrides": {
-  "base": {},
-  "notes": "Base CVM mantida (RL FY2025 R$ 7.699 mi, deprimida pelo programa de redução de estoques no canal — 1T25 teve RL de só R$ 1.081 mi; DL 2T26 R$ 5.903,5 mi, igual ao release). Crescimento de 2026 (+18,6%) é majoritariamente efeito base (1S26 R$ 4.354 mi vs 1S25 R$ 3.235 mi). Sem arrendamentos relevantes. Ações: 704,0 mi após aumento de capital privado de R$ 1,5 bi homologado no fim do 1T26 (~70,5 mi novas ações, ≈ R$ 21,3/ação implícito)."
+  "base": {
+   "net_debt": 6887
+  },
+  "notes": "Base CVM mantida (RL FY2025 R$ 7.699 mi, deprimida pelo programa de redução de estoques no canal — 1T25 teve RL de só R$ 1.081 mi; DL 2T26 R$ 5.903,5 mi, igual ao release). Crescimento de 2026 (+18,6%) é majoritariamente efeito base (1S26 R$ 4.354 mi vs 1S25 R$ 3.235 mi). Sem arrendamentos relevantes. Ações: 704,0 mi após aumento de capital privado de R$ 1,5 bi homologado no fim do 1T26 (~70,5 mi novas ações, ≈ R$ 21,3/ação implícito). [Revisão G05 26/10/2026] (1) net_debt = 5.903,5 + JCP/dividendos declarados a pagar 983,9 = 6.887: o JCP já ex-direito sai do caixa nos próximos meses. Como other_debt_like ele entrava na ponte do DCF/múltiplos, mas não na trajetória da DL do motor, e o DDM ignorava o custo financeiro desse desembolso. A soma DL + debt-like é a mesma de antes (7.344). (2) cost_of_net_debt recalibrado ao custo efetivo observado na CVM: resultado financeiro total / DL média = 10,2% (1T25), 11,2%, 12,3%, 12,1% (4T25), ~12,1% (1T26, ajustado pela entrada do aumento de capital no fim do trimestre) e 11,6% (2T26), com CDI de 13,2–14,9% ⇒ ~CDI − 2,8 p.p. (parte subsidiada TJLP/TR/FCO e IPCA). Antes: kd × DL + outros ≈ 15% da DL (~CDI + 0,5 p.p.). Agora: CDI do grupo (14,5/14/13/12,5%) − 2,5 p.p., com other_financial mantido e o JCP financiado a ~CDI. 2026 = 1S26 real (−403) + 2S26 ≈ −R$ 762 mi."
  },
  "projection": {
   "years": [
@@ -53,11 +55,11 @@
   ],
   "nwc_pct_revenue": 0.25,
   "cost_of_net_debt": [
-   0.135,
-   0.14,
-   0.135,
-   0.13,
-   0.125
+   0.102,
+   0.114,
+   0.108,
+   0.096,
+   0.089
   ],
   "other_financial": [
    -60,
@@ -106,10 +108,10 @@
   "target_debt_weight": 0.28
  },
  "adjustments": {
-  "other_debt_like": 1441,
+  "other_debt_like": 457,
   "non_operating_assets": 0,
   "minority_value": null,
-  "notes": "other_debt_like = JCP/dividendos declarados e não pagos R$ 983,9 mi (passivo com acionistas já ex-direito em 30/06/2026) + cessão de créditos por fornecedores (risco sacado) R$ 457,3 mi. Não somamos como ativo os créditos fiscais (prejuízos fiscais com efeito-caixa de R$ 5.666,9 mi; ágio fiscal R$ 156,8 mi → R$ 53,3 mi de IR) porque já estão refletidos na alíquota efetiva baixa até 2030 — são upside além de 2030."
+  "notes": "other_debt_like = cessão de créditos por fornecedores (risco sacado) R$ 457,3 mi. Os JCP/dividendos declarados e não pagos (R$ 983,9 mi, já ex-direito em 30/06/2026) passaram para a DL-base (overrides.base.net_debt) na revisão G05. Não somamos como ativo os créditos fiscais (prejuízos fiscais com efeito-caixa de R$ 5.666,9 mi; ágio fiscal R$ 156,8 mi → R$ 53,3 mi de IR) porque já estão refletidos na alíquota efetiva baixa até 2030 — são upside além de 2030."
  },
  "target_multiples": {
   "pe": 9.0,

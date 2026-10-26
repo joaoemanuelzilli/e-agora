@@ -10,6 +10,7 @@ const NAV = [
   { href: "/dividendos", label: "Dividendos" },
   { href: "/mercado", label: "Mercado" },
   { href: "/metodologia", label: "Metodologia" },
+  { href: "/testes", label: "Testes" },
 ];
 
 function pctTxt(x: number | null | undefined, d = 2) {

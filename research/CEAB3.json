@@ -106,10 +106,10 @@
   "target_debt_weight": 0.3
  },
  "adjustments": {
-  "other_debt_like": 0,
+  "other_debt_like": 139.8,
   "non_operating_assets": 0,
   "minority_value": null,
-  "notes": "Risco sacado de R$ 281,7 mi (jun/26; R$ 421,2 mi no 4T25) tratado como capital de giro (custo em AVP de fornecedores no resultado financeiro, refletido em other_financial). Sem antecipação de recebíveis desde 2023 (Fitch: ~R$ 700 mi de recebíveis de cartões de terceiros livres). JCP de 2025 a pagar (R$ 139,8 mi em 30/06/26) já é passivo e está no caixa da DL-base — saída futura não ajustada (efeito ~R$ 0,47/ação)."
+  "notes": "Risco sacado de R$ 281,7 mi (jun/26; R$ 421,2 mi no 4T25) tratado como capital de giro (custo em AVP de fornecedores no resultado financeiro, refletido em other_financial). Sem antecipação de recebíveis desde 2023 (Fitch: ~R$ 700 mi de recebíveis de cartões de terceiros livres). [Revisão 26/10] JCP do exercício 2025 a pagar em 30/06/26 (R$ 139,8 mi; data-com 23/12/2025, pago em 31/08/2026 segundo a B3) agora em other_debt_like: o caixa estava na DL-base, mas o JCP foi para quem tinha a ação em dez/25, não para o comprador de hoje (efeito −R$ 0,47/ação no DCF e no EV/EBITDA)."
  },
  "target_multiples": {
   "pe": 7.0,
@@ -169,13 +169,13 @@
   "notes": "CAGR 2020–25 de 14,3% parte da base da pandemia; 2019–25 = 7,1% a.a.; 3 anos = 8,9% a.a. Projetamos 2,6% em 2026 (1S26 +0,9%: vestuário +5,6% no 2T26, mas eletrônicos/beleza −37% com o fim da telefonia; 2S26 ~+4%) e 6,5–8% em 2027–30 com 15–20 lojas/ano (área +4–6% a.a.), média 6,7%. Margem EBITDA IFRS-16 média 2021–25 de 17,5% (CVM corrigida pela depreciação de direito de uso; inclui não recorrentes); a margem ajustada pós-IFRS16 foi 8,7% (2021) → 12,4% → 16,2% → 19,0% → 19,7% (2025); LTM ajustada 19,6%. Projetamos 19,5% (2026–27, câmbio e crédito compensando renda) → 20,5% (2030), sem extrapolar a sequência de 20 trimestres de expansão da margem bruta. Margem do 2T26 na tabela é a reportada (24,1%; ajustada 20,9% sem reversão de PIS/COFINS de ~R$ 81 mi); DL/EBITDA = DL c/ arrendamentos R$ 1.944 mi / EBITDA IFRS-16 LTM corrigido ~R$ 1.705 mi. ROE CVM médio 2021–25 de 8,5% (16,7% em 2025; ajustado 13,4%); projetado 12–14%. Payout médio baixo (sem proventos 2021–23; JCP de 23% do lucro de 2024 e 27% do de 2025). Regra IFRS-16: capex = capex caixa (guidance R$ 680 mi em 2026 = 8,3% da receita; 7–8% em 2027–30) + adições de direito de uso ≈ principal de arrendamento (pagamento DFC R$ 545,5 mi em 2025 − juros ~R$ 185 mi ≈ R$ 360 mi ≈ 4,5% da receita). Alíquota efetiva 15–24% (2025: 19% contábil e ~12,5% no ajustado, com JCP)."
  },
  "guidance": "Investor Day de 26/08/2026 (ciclo 'Full Power' 2027–30): 15–20 aberturas/ano (60–80 lojas de 1.500–1.600 m², ~80% em shoppings de cidades até 500 mil hab. no S/SE/CO) e 100–120 reformas; capex de R$ 680 mi em 2026 e 7–8% da receita em 2027–30 (inclui R$ 200–300 mi em logística); ROIC mínimo >18% nos novos projetos; conversão de caixa 20% melhor em 2030 vs 2026; DL/EBITDA até 0,5x em 2030; digital 15% das vendas; C&A Pay com 19 mi de clientes ativos. Sem guidance de receita, margem ou lucro.",
- "dividend_policy": "Estatuto: dividendo mínimo obrigatório (percentual não verificado; a Fitch assume payout de 25% a partir de 2026). Sem proventos de 2021 a 2023. JCP do exercício 2024: R$ 105,0 mi (R$ 0,3447/ação; caixa R$ 101,9 mi pago no 4T25). JCP do exercício 2025: R$ 158 mi brutos (R$ 0,5216/ação; data-base 23/12/2025; R$ 139,8 mi ainda a pagar em 30/06/26, data a confirmar). Recompras: R$ 32,4 mi (2024), R$ 36,0 mi (2025), R$ 70,4 mi (1S26); 4º programa (05/05/2026) de até 10 mi ações (4,9% do free float) até 08/11/2027, ~85% executado no 2T26. Modelo: payout 30% → 45%, crescente à medida que o capex de expansão perde peso.",
+ "dividend_policy": "Estatuto: dividendo mínimo obrigatório (percentual não verificado; a Fitch assume payout de 25% a partir de 2026). Sem proventos de 2021 a 2023. JCP do exercício 2024: R$ 105,0 mi (R$ 0,3447/ação; caixa R$ 101,9 mi pago no 4T25). JCP do exercício 2025: R$ 158 mi brutos (R$ 0,5216/ação; data-base 23/12/2025; R$ 139,8 mi a pagar em 30/06/26, pagos em 31/08/2026 segundo a B3). Recompras: R$ 32,4 mi (2024), R$ 36,0 mi (2025), R$ 70,4 mi (1S26); 4º programa (05/05/2026) de até 10 mi ações (4,9% do free float) até 08/11/2027, ~85% executado no 2T26. Modelo: payout 30% → 45%, crescente à medida que o capex de expansão perde peso.",
  "election_impact": "Queda de ~44–47% (R$ 13,84 → ~R$ 7,3–7,8) reflete beta de consumo doméstico/small cap e reversão do rali pré-eleição. Canais que mudam o valor: (i) câmbio — ~30% da produção é importada (cálculo a partir de ~70% de compras locais) e encarece em 2027; (ii) juros — efeito direto pequeno (DL ex-arrendamentos R$ 170 mi), maior via inadimplência do C&A Pay; (iii) a Cofra (controladora, ~31%) já vendeu ações e pode vender mais. Contrapontos pró-consumo: isenção de IR até R$ 5 mil (desde jan/26), salário mínimo e reforço do Bolsa Família (+R$ 22,7 bi em 2027 segundo o Morgan Stanley) atingem exatamente a classe C/D, núcleo do público; real mais fraco encarece o cross-border. Nosso lucro 2027E (R$ 512 mi) fica ~10–20% abaixo das estimativas pré-eleição (UBS R$ 566 mi; BBI ~R$ 640 mi implícito) — dano fundamental muito menor que a queda.",
- "summary": "Varejo de moda de massa (341 lojas, C&A Pay) que virou a chave em 2024–25 (margem bruta em alta por 20 trimestres; lucro ajustado recorde de R$ 471 mi em 2025), com DL ex-arrendamentos de só R$ 170 mi. A queda de ~44–47% excede o dano fundamental (câmbio sobre ~30% de importados e crédito do C&A Pay), e o público C/D é o mais beneficiado por isenção de IR e transferências. Valor justo ~R$ 7,2 ≈ preço; TIR de dono ~21% (a maior do grupo) com P/L 2027E ~4,3x; em 3 anos ~54% se o P/L voltar a 7x.",
+ "summary": "Varejo de moda de massa (341 lojas, C&A Pay) que virou a chave em 2024–25 (margem bruta em alta por 20 trimestres; lucro ajustado recorde de R$ 471 mi em 2025), com DL ex-arrendamentos de só R$ 170 mi. A queda de ~47% no dia (R$ 13,84 → R$ 7,35 às 13h02) excede o dano fundamental (câmbio sobre ~30% de importados e crédito do C&A Pay), e o público C/D é o mais beneficiado por isenção de IR e transferências. Valor justo R$ 6,91 (6% abaixo do preço, já descontando o JCP de 2025 pago em ago/26); TIR de dono 21,1% (a maior do grupo) com P/L 2027E ~4,3x; em 3 anos 52,8% se o P/L voltar a 7x. Saiu da seleção na revisão: P(valor > preço) de 43,9% no Monte Carlo, abaixo do corte de 45%.",
  "thesis": [
   "Virada operacional comprovada: margem bruta consolidada 52,4% (2023) → 55,5% (2025) → 58,1% (2T26); EBITDA ajustado IFRS-16 de R$ 1.090 mi (2023) para R$ 1.576 mi (2025); lucro ajustado R$ 471 mi em 2025 (+57,5%).",
-  "Balanço leve: dívida bruta R$ 952 mi vs caixa R$ 782 mi (DL ex-arrendamentos R$ 170 mi, 0,2x EBITDA pré-IFRS16); 5ª emissão de até R$ 500 mi (AA(bra), Fitch) para alongar o vencimento de 2027.",
-  "Valuation de crise: P/L 2027E ~4,3x e P/VP ~0,58x; JCP de 2025 equivale a ~7% do preço; recompra em curso (até 10 mi ações).",
+  "Balanço leve: dívida bruta R$ 952 mi vs caixa R$ 782 mi (DL ex-arrendamentos R$ 170 mi em jun/26, 0,2x EBITDA pré-IFRS16; ~R$ 310 mi pró-forma após o JCP de R$ 139,8 mi pago em 31/08/26); 5ª emissão de até R$ 500 mi (AA(bra), Fitch) para alongar o vencimento de 2027.",
+  "Valuation de crise: a R$ 7,35 (13h02 de 26/10), P/L 2027E ~4,3x, P/VP ~0,58x e TIR de dono de 21,1%, mas valor justo de R$ 6,91 (−6%) e P(valor > preço) de 43,9%, abaixo do corte de 45%; recompra em curso (até 10 mi ações). O JCP de 2025 (R$ 0,5216/ação) foi pago em 31/08/26 a quem tinha a ação em 23/12/25 — não é retorno para quem compra hoje; o próximo JCP deve ser declarado em dez/26.",
   "Plano 2027–30 (Investor Day 26/08/26): 60–80 lojas novas, digital a 15% das vendas e C&A Pay com 19 mi de clientes, com ROIC mínimo >18% nos novos projetos."
  ],
  "risks": [
@@ -189,13 +189,13 @@
   "Resultado do 3T26 (data a confirmar; início de nov/2026).",
   "Liquidação da 5ª emissão e pré-pagamento da 3ª (alonga 2027).",
   "Verão/Black Friday/Natal com renda disponível maior (isenção de IR).",
-  "Pagamento do JCP de 2025 e declaração do JCP de 2026 (dez/26); recompra."
+  "Declaração do JCP de 2026 (dez/26; o JCP de 2025 já foi pago em 31/08/26); recompra."
  ],
  "key_data": [
   {
-   "label": "Preço 26/10 ~12h (B3)",
-   "value": "R$ ~7,3–7,8",
-   "context": "−44% a −47% no dia; R$ 13,84 em 23/10"
+   "label": "Preço 26/10 13h02 (B3, foto do estudo)",
+   "value": "R$ 7,35",
+   "context": "−46,9% no dia; R$ 13,84 em 23/10"
   },
   {
    "label": "Lucro ajustado 2025 / contábil 2025",
@@ -210,7 +210,7 @@
   {
    "label": "DL ex-arrendamentos / c/ arrendamentos",
    "value": "R$ 170 mi / R$ 1.944 mi",
-   "context": "0,2x EBITDA pré-IFRS16; 1,1x EBITDA IFRS-16"
+   "context": "jun/26: 0,2x EBITDA pré-IFRS16; 1,1x EBITDA IFRS-16; ~R$ 310 mi ex-arrendamentos após o JCP pago em 31/08"
   },
   {
    "label": "ROIC LTM (empresa)",
@@ -223,9 +223,14 @@
    "context": "28,2% das vendas"
   },
   {
-   "label": "P/L 2027E / P/VP (a ~R$ 7,3)",
-   "value": "~4,3x / ~0,58x",
+   "label": "P/L 2027E / P/VP (a R$ 7,35)",
+   "value": "4,3x / 0,58x",
    "context": "modelo"
+  },
+  {
+   "label": "Valor justo / TIR de dono (Ke 25%)",
+   "value": "R$ 6,91 (−6%) / 21,1%",
+   "context": "TIR 3 anos 52,8% (P/L 7x); P(valor > preço) 43,9% < 45%: fora da seleção"
   },
   {
    "label": "Capex guidance",

@@ -13,7 +13,7 @@
  ],
  "overrides": {
   "base": {},
-  "notes": "Base CVM mantida (RL FY2025 R$ 14.906 mi; DL 2T26 R$ 3.374 mi = dívida 1.581 + arrendamentos 1.906 − caixa 113), conferida com o release 2T26. ebitda_margin = EBITDA IFRS-16 CVM MENOS o AVP de compras (~1,0% da RL; R$ 153 mi LTM, que a companhia deduz no seu fluxo de caixa gerencial e lança no resultado financeiro); o mesmo valor foi retirado do custo da dívida (lucro inalterado, FCFF não superestimado). Capex = caixa (~2,3–2,6% da RL) + adições de direito de uso (~1,3%)."
+  "notes": "Base CVM mantida (RL FY2025 R$ 14.906 mi; DL 2T26 R$ 3.374 mi = dívida 1.581 + arrendamentos 1.906 − caixa 113), conferida com o release 2T26. ebitda_margin = EBITDA IFRS-16 CVM MENOS o AVP de compras (~1,0% da RL; R$ 153 mi LTM, que a companhia deduz no seu fluxo de caixa gerencial e lança no resultado financeiro); o mesmo valor foi retirado do custo da dívida (lucro inalterado, FCFF não superestimado). Capex = caixa (~2,3–2,6% da RL) + adições de direito de uso (~1,3%). [Revisão G05 26/10/2026] cost_of_net_debt 2027–30 recalibrado. O resultado financeiro ex-AVP do 1S26 anualizado (−R$ 524 mi = 15,5% da DL) tem parte fixa relevante (juros de arrendamento ~R$ 183 mi a ~9,6%, DFC 6.01.01.07) e exposição a CDI de só ~R$ 1,8 bi (DL ex-arrendamentos 1,47 bi + recebíveis antecipados 0,32 bi). Por isso a trajetória anterior (15/14/13,5/13% em 2027–30, com DL quase estável) exigia um CDI de ~13,8/11,8/10,6/9,3%, abaixo até do Focus pré-choque e muito abaixo da curva (~15–16%). Agora: mesmo caminho de CDI documentado no grupo (ASAI3: 14,5/14/13/12,5%) ⇒ 15,4/15,2/14,8/14,7%."
  },
  "projection": {
   "years": [
@@ -54,10 +54,10 @@
   "nwc_pct_revenue": 0.15,
   "cost_of_net_debt": [
    0.15,
-   0.15,
-   0.14,
-   0.135,
-   0.13
+   0.154,
+   0.152,
+   0.148,
+   0.147
   ],
   "other_financial": [
    0,
@@ -170,7 +170,7 @@
  "guidance": "Sem guidance numérico. Release 2T26 (03/08/2026): desalavancagem é prioridade de curto prazo; 'gradual aceleração no ritmo de aberturas' ao longo de 2026 e ritmo maior a partir de 2027 (novo CD na PB). Programa de recompra de até 7 mi de ações (16/06–16/12/2026).",
  "dividend_policy": "Mínimo estatutário 25%. Pagos em caixa (DFC): R$ 82 mi (2023), R$ 43 mi (2024), R$ 176 mi (2025); R$ 103 mi nos 12m até o 2T26 (~31% do lucro). Capital reforçado em 2026: aumento privado de R$ 144,5 mi a R$ 5,51/ação (homologado 24/02/2026) + oferta pública precificada em 10/03/2026 (ações: 660 mi → 720 mi); integralizações de R$ 488,5 mi nos 12m até o 2T26.",
  "election_impact": "Queda de ~45% mistura beta de small cap e juros: DL+recebíveis de R$ 1,8 bi (1,8x) e arrendamentos de R$ 1,9 bi; despesa financeira (ex-AVP) ~R$ 0,5 bi/ano contra EBITDA pré-IFRS16 ~R$ 1 bi — o lucro é muito sensível ao CDI. Micro de um 4º mandato é neutro/positivo: base no Nordeste (62% das lojas), clientes C/D e de cuidado contínuo se beneficiam de Farmácia Popular (4,2% das vendas, +1 p.p. a/a), salário mínimo e isenção de IR; CMED segue fórmula (2,7% no 2T26). Valor operacional mudou pouco; o equity (a R$ 2,99, mkt cap ~R$ 2,2 bi) precifica estresse de crédito que o balanço (12 trimestres de desalavancagem, capital recém-reforçado) não mostra.",
- "summary": "3ª maior rede de farmácias (1.695 lojas, 6,7% de share, 20,8% no Nordeste) com margem recorde (6,5% pré-IFRS16 no 2T26) e 12 trimestres de desalavancagem. A R$ 2,99 negocia ~6x P/L LTM e ~4x EV/EBITDA IFRS-16; é o nome do grupo onde o preço caiu muito mais que o valor — mas o lucro ainda é fino e sensível a juros. TIR implícita ~20% hoje (≈14% pré-eleição) — a mais próxima da meta de 25% no grupo.",
+ "summary": "3ª maior rede de farmácias (1.695 lojas, 6,7% de share, 20,8% no Nordeste) com margem recorde (6,5% pré-IFRS16 no 2T26) e 12 trimestres de desalavancagem. A R$ 2,99 negocia ~6x P/L LTM e ~4x EV/EBITDA IFRS-16; é o nome do grupo onde o preço caiu muito mais que o valor — mas o lucro ainda é fino e sensível a juros. TIR implícita ~19,5% hoje (≈13,5% pré-eleição) — a mais próxima da meta de 25% no grupo.",
  "thesis": [
   "Alavancagem operacional comprovada: despesas com vendas caíram para 21,3% da RB (−0,4 p.p.) e EBITDA aj. +15,4% com receita +9,3% no 2T26.",
   "Desalavancagem: DL+recebíveis/EBITDA de 5,6x (pico 1T23) para 1,8x; aumento de capital de 2026 reduz risco de refinanciamento (97% da dívida no longo prazo).",

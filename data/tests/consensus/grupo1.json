@@ -1,0 +1,3078 @@
+{
+ "grupo": 1,
+ "data": "2026-10-26",
+ "nota": "Alvos publicados em 2026, quase todos antes do choque eleitoral e com Ke de mercado (~14–17%; a Genial explicita 14,2% em ALPA4), horizonte de 12 meses ou fim de 2026/2027. O estudo usa Ke de 25% e preço da foto pós-choque.",
+ "metodologia": {
+  "consenso_mediano": "mediana dos alvos da FactSet via TradingView (scanner.tradingview.com/brazil/scan, campos price_target_*, recommendation_*), consultada em 26/10/2026 ~15h50",
+  "classificacao": "valor justo do estudo vs mediana do consenso: abaixo < −10%; alinhado ±10%; acima > +10%. Mesma régua para lucro/EBITDA",
+  "lucro_2027": "proxy = estimativa NTM (próximos 12 meses) da FactSet; números de casas individuais em estimativas_imprensa",
+  "sensibilidade_ke": "valor justo do motor a Ke 20% e 15% e o Ke que iguala o valor justo à mediana do consenso (bisseção entre g+1 p.p. e 25%)"
+ },
+ "limitacoes": [
+  "Subagentes indisponíveis; buscas feitas diretamente (WebSearch/WebFetch).",
+  "Itens com verificado=false vieram só do resumo da busca ou de páginas bloqueadas (403).",
+  "A base (ajustado/reportado) do lucro de consenso não é informada pela FactSet/TradingView; holdings (SIMH3, CSAN3) não têm lucro comparável no estudo.",
+  "Nenhuma revisão pós-eleição (26/10) foi encontrada; os alvos tendem a ser cortados nos próximos dias."
+ ],
+ "empresas": [
+  {
+   "ticker": "RENT3",
+   "nome": "LOCALIZA",
+   "preco_ref": 31.73,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 52.42,
+   "valor_justo_estudo": 17.503,
+   "upside_estudo": -0.4484,
+   "tir_implicita_estudo": 0.1469,
+   "consenso_mediano": 56,
+   "consenso_medio": 57.54,
+   "faixa": [
+    37.5,
+    76
+   ],
+   "n_analistas": 14,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-RENT3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 11,
+    "sobreponderar": 0,
+    "neutra": 3,
+    "subponderar": 0,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.21
+   },
+   "recomendacao": "11 compra, 0 sobreponderar, 3 neutra, 0 subponderar, 0 venda (FactSet, n=14)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=14)": 56,
+    "FactSet/TradingView (média, n=14)": 57.54,
+    "BTG Pactual (2026-08-10)": 63.0,
+    "Itaú BBA (2026-08-10)": 54.0,
+    "BB Investimentos (2026-08-10)": 50.0,
+    "JPMorgan (2026-10-13)": 70.0,
+    "XP (2026 (n/d))": 62.0
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "BTG Pactual",
+     "recomendacao": "compra",
+     "alvo": 63.0,
+     "alvo_anterior": 65.0,
+     "horizonte": null,
+     "data": "2026-08-10",
+     "url": "https://www.seudinheiro.com/2026/empresas/localiza-rent3-cai-dois-digitos-no-ano-e-btg-defende-que-a-acao-esta-inegavelmente-barata-mas-ha-pontos-de-atencao-giov/",
+     "verificado": true,
+     "obs": "pós-2T26"
+    },
+    {
+     "casa": "Itaú BBA",
+     "recomendacao": "compra",
+     "alvo": 54.0,
+     "alvo_anterior": null,
+     "horizonte": "2026",
+     "data": "2026-08-10",
+     "url": "https://www.seudinheiro.com/2026/empresas/localiza-rent3-cai-dois-digitos-no-ano-e-btg-defende-que-a-acao-esta-inegavelmente-barata-mas-ha-pontos-de-atencao-giov/",
+     "verificado": true,
+     "obs": "citado na mesma matéria; 2T26 'levemente negativo'"
+    },
+    {
+     "casa": "BB Investimentos",
+     "recomendacao": "compra",
+     "alvo": 50.0,
+     "alvo_anterior": null,
+     "horizonte": "fim de 2026",
+     "data": "2026-08-10",
+     "url": "https://www.seudinheiro.com/2026/empresas/localiza-rent3-cai-dois-digitos-no-ano-e-btg-defende-que-a-acao-esta-inegavelmente-barata-mas-ha-pontos-de-atencao-giov/",
+     "verificado": true,
+     "obs": "citado na mesma matéria"
+    },
+    {
+     "casa": "JPMorgan",
+     "recomendacao": "neutra (rebaixada de overweight)",
+     "alvo": 70.0,
+     "alvo_anterior": 65.0,
+     "horizonte": "dez/2027 (revisão setorial)",
+     "data": "2026-10-13",
+     "url": "https://bpmoney.com.br/?p=426331",
+     "verificado": true,
+     "obs": "rebaixou após alta de 52% em 4 semanas; cita depreciação maior e seminovos"
+    },
+    {
+     "casa": "XP",
+     "recomendacao": "n/d",
+     "alvo": 62.0,
+     "alvo_anterior": 39.0,
+     "horizonte": "fim de 2026",
+     "data": "2026 (n/d)",
+     "url": "https://conteudos.xpi.com.br/acoes/rent3/analise/",
+     "verificado": false,
+     "obs": "página da XP devolveu 403; número só no resumo da busca"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 62.0,
+   "estudo_vs_consenso": -0.6874,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.7649,
+   "consenso_lucro": {
+    "lucro_2026_mn": 4289.3,
+    "ebitda_2026_mn": 15809.1,
+    "receita_2026_mn": 49943.0,
+    "lpa_2026": 4.006,
+    "dpa_2026": 1.956,
+    "lucro_ntm_mn": 4457.3,
+    "ebitda_ntm_mn": 14748.6,
+    "lpa_ntm": 4.257,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [
+    {
+     "fonte": "BTG Pactual",
+     "metrica": "lucro_liquido",
+     "ano": 2026,
+     "valor_mn": 4300,
+     "base": "n/d",
+     "data": "2026-08-10",
+     "url": "https://www.seudinheiro.com/2026/empresas/localiza-rent3-cai-dois-digitos-no-ano-e-btg-defende-que-a-acao-esta-inegavelmente-barata-mas-ha-pontos-de-atencao-giov/"
+    },
+    {
+     "fonte": "BTG Pactual",
+     "metrica": "lucro_liquido",
+     "ano": 2027,
+     "valor_mn": 4900,
+     "base": "n/d",
+     "data": "2026-08-10",
+     "url": "https://www.seudinheiro.com/2026/empresas/localiza-rent3-cai-dois-digitos-no-ano-e-btg-defende-que-a-acao-esta-inegavelmente-barata-mas-ha-pontos-de-atencao-giov/"
+    }
+   ],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 49093.4,
+     "2027": 51548.0
+    },
+    "ebitda": {
+     "2026": 15611.7,
+     "2027": 16804.7
+    },
+    "lucro_controlador": {
+     "2026": 4089.3,
+     "2027": 4455.4
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.0466,
+    "ebitda_2026_estudo_vs_consenso": -0.0125,
+    "receita_2026_estudo_vs_consenso": -0.017,
+    "lucro_2027_estudo_vs_ntm": -0.0004,
+    "ebitda_2027_estudo_vs_ntm": 0.1394,
+    "classificacao_lucro_2026": "alinhado",
+    "classificacao_lucro_2027": "alinhado"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 23.6,
+    "valor_justo_ke15": 34.8,
+    "ke_que_iguala_mediana_do_consenso": "~0.105-0.11",
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos; RENT3: Ke 15/20% do dossiê (versão do app)"
+   },
+   "principal_fator": "Ke + premissas",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.175,
+     0.05,
+     0.075,
+     0.07,
+     0.065
+    ],
+    "margem_ebitda": [
+     0.318,
+     0.326,
+     0.328,
+     0.33,
+     0.33
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 8.5,
+     "ev_ebitda": 4.25
+    }
+   },
+   "explicacao": "Projeções operacionais alinhadas ao consenso: lucro 2026E −5%, EBITDA 2026E −1%, lucro 2027E igual ao NTM (BTG: R$ 4,9 bi em 2027). A diferença está no desconto. Com ROE estrutural de ~15–16% abaixo do Ke de 25%, o P/VP justo fica em ~0,5x. A Ke 15% o motor daria R$ 34,8, e para chegar à mediana de R$ 56 seria preciso Ke de ~10–11% ou ROE bem maior por mais tempo. Os alvos são de antes do choque: o JPMorgan pôs R$ 70 em 13/10, depois de alta de 52%.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://bpmoney.com.br/?p=426331",
+    "https://conteudos.xpi.com.br/acoes/rent3/analise/",
+    "https://www.seudinheiro.com/2026/empresas/localiza-rent3-cai-dois-digitos-no-ano-e-btg-defende-que-a-acao-esta-inegavelmente-barata-mas-ha-pontos-de-atencao-giov/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-RENT3/forecast/"
+   ],
+   "obs_estudo": "data/model/RENT3.json foi regravado às 15h56 com valor justo de R$ 15,89 (múltiplos revistos em research/RENT3.json); o app (data/app/companies/RENT3.json, 15h17) ainda mostra R$ 17,50, usado aqui."
+  },
+  {
+   "ticker": "MOVI3",
+   "nome": "MOVIDA",
+   "preco_ref": 8.67,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 18.67,
+   "valor_justo_estudo": 4.1945,
+   "upside_estudo": -0.5162,
+   "tir_implicita_estudo": 0.1963,
+   "consenso_mediano": 16.5,
+   "consenso_medio": 17.19,
+   "faixa": [
+    8.3,
+    27.7
+   ],
+   "n_analistas": 12,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-MOVI3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 7,
+    "sobreponderar": 0,
+    "neutra": 4,
+    "subponderar": 1,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.46
+   },
+   "recomendacao": "7 compra, 0 sobreponderar, 4 neutra, 1 subponderar, 0 venda (FactSet, n=12)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=12)": 16.5,
+    "FactSet/TradingView (média, n=12)": 17.19,
+    "Citi (2026-10-20)": 22.0,
+    "Itaú BBA (2026-10-19)": 25.0,
+    "Safra (2026-06-15)": 13.8,
+    "XP (2026 (n/d))": 16.0,
+    "BB-BI (2026-08 (2T26))": 13.0
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "Citi",
+     "recomendacao": "compra",
+     "alvo": 22.0,
+     "alvo_anterior": 13.4,
+     "horizonte": null,
+     "data": "2026-10-20",
+     "url": "https://bpmoney.com.br/?p=428970",
+     "verificado": true,
+     "obs": "após a prévia do 3T26"
+    },
+    {
+     "casa": "Itaú BBA",
+     "recomendacao": "compra",
+     "alvo": 25.0,
+     "alvo_anterior": 15.0,
+     "horizonte": "fim de 2027",
+     "data": "2026-10-19",
+     "url": "https://bpmoney.com.br/?p=428298",
+     "verificado": true,
+     "obs": "−1 p.p. na Selic média ≈ +15% no lucro de 2027"
+    },
+    {
+     "casa": "Safra",
+     "recomendacao": "compra (elevada de neutra)",
+     "alvo": 13.8,
+     "alvo_anterior": 11.3,
+     "horizonte": "12 meses",
+     "data": "2026-06-15",
+     "url": "https://www.moneytimes.com.br/movida-movi3-safra-ve-ponta-de-entrada-atrativo-e-projeta-salto-de-43-das-acoes-nos-proximos-12-meses-lils/",
+     "verificado": true,
+     "obs": ""
+    },
+    {
+     "casa": "XP",
+     "recomendacao": "compra",
+     "alvo": 16.0,
+     "alvo_anterior": null,
+     "horizonte": "fim de 2026",
+     "data": "2026 (n/d)",
+     "url": "https://euqueroinvestir.com/acoes/movida-xp-ve-eficiencia-e-eleva-o-preco-alvo",
+     "verificado": false,
+     "obs": "data não confirmada"
+    },
+    {
+     "casa": "BB-BI",
+     "recomendacao": "compra",
+     "alvo": 13.0,
+     "alvo_anterior": null,
+     "horizonte": "fim de 2027",
+     "data": "2026-08 (2T26)",
+     "url": "https://investalk.bb.com.br/noticias/mercado/MOVI-2T26",
+     "verificado": false,
+     "obs": "página devolveu 403"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 16.0,
+   "estudo_vs_consenso": -0.7458,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.9031,
+   "consenso_lucro": {
+    "lucro_2026_mn": 555.4,
+    "ebitda_2026_mn": 6666.2,
+    "receita_2026_mn": 15735.8,
+    "lpa_2026": 1.44,
+    "dpa_2026": 0.31,
+    "lucro_ntm_mn": 680.6,
+    "ebitda_ntm_mn": 7097.2,
+    "lpa_ntm": 1.689,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [
+    {
+     "fonte": "Safra",
+     "metrica": "lucro_liquido",
+     "ano": 2026,
+     "valor_mn": 602,
+     "base": "n/d",
+     "data": "2026-06-15",
+     "url": "https://www.moneytimes.com.br/movida-movi3-safra-ve-ponta-de-entrada-atrativo-e-projeta-salto-de-43-das-acoes-nos-proximos-12-meses-lils/"
+    },
+    {
+     "fonte": "Safra",
+     "metrica": "lucro_liquido",
+     "ano": 2027,
+     "valor_mn": 1000,
+     "base": "n/d",
+     "data": "2026-06-15",
+     "url": "https://www.moneytimes.com.br/movida-movi3-safra-ve-ponta-de-entrada-atrativo-e-projeta-salto-de-43-das-acoes-nos-proximos-12-meses-lils/"
+    },
+    {
+     "fonte": "Safra",
+     "metrica": "ebitda",
+     "ano": 2026,
+     "valor_mn": 6300,
+     "base": "consolidado",
+     "data": "2026-06-15",
+     "url": "https://www.moneytimes.com.br/movida-movi3-safra-ve-ponta-de-entrada-atrativo-e-projeta-salto-de-43-das-acoes-nos-proximos-12-meses-lils/"
+    },
+    {
+     "fonte": "Safra",
+     "metrica": "ebitda",
+     "ano": 2027,
+     "valor_mn": 6800,
+     "base": "consolidado",
+     "data": "2026-06-15",
+     "url": "https://www.moneytimes.com.br/movida-movi3-safra-ve-ponta-de-entrada-atrativo-e-projeta-salto-de-43-das-acoes-nos-proximos-12-meses-lils/"
+    }
+   ],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 15258.9,
+     "2027": 16174.5
+    },
+    "ebitda": {
+     "2026": 6637.6,
+     "2027": 7116.8
+    },
+    "lucro_controlador": {
+     "2026": 504.6,
+     "2027": 703.1
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.0915,
+    "ebitda_2026_estudo_vs_consenso": -0.0043,
+    "receita_2026_estudo_vs_consenso": -0.0303,
+    "lucro_2027_estudo_vs_ntm": 0.0331,
+    "ebitda_2027_estudo_vs_ntm": 0.0028,
+    "classificacao_lucro_2026": "alinhado",
+    "classificacao_lucro_2027": "alinhado"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 8.71,
+    "valor_justo_ke15": 16.31,
+    "ke_que_iguala_mediana_do_consenso": 0.1491,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "Ke (o motor chega ao consenso com Ke de ~12–15%)",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.04,
+     0.06,
+     0.06,
+     0.055,
+     0.05
+    ],
+    "margem_ebitda": [
+     0.435,
+     0.44,
+     0.44,
+     0.44,
+     0.44
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 6.5,
+     "ev_ebitda": 3.3
+    }
+   },
+   "explicacao": "É o caso em que a diferença vem praticamente só do Ke. Lucro 2026E −9%, EBITDA igual e lucro 2027E +3% contra o NTM. A Ke 15% o motor dá R$ 16,3, contra mediana de R$ 16,5. Os alvos mais altos (Itaú BBA R$ 25 em 19/10, Citi R$ 22 em 20/10) saíram no auge do 'trade eleitoral' e contavam com Selic menor: para o Itaú BBA, −1 p.p. vale +15% no lucro 2027. O estudo já usa CDI de 14,5% em 2027.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://bpmoney.com.br/?p=428298",
+    "https://bpmoney.com.br/?p=428970",
+    "https://euqueroinvestir.com/acoes/movida-xp-ve-eficiencia-e-eleva-o-preco-alvo",
+    "https://investalk.bb.com.br/noticias/mercado/MOVI-2T26",
+    "https://www.moneytimes.com.br/movida-movi3-safra-ve-ponta-de-entrada-atrativo-e-projeta-salto-de-43-das-acoes-nos-proximos-12-meses-lils/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-MOVI3/forecast/"
+   ]
+  },
+  {
+   "ticker": "VAMO3",
+   "nome": "VAMOS",
+   "preco_ref": 2.9,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 6.41,
+   "valor_justo_estudo": 0.955,
+   "upside_estudo": -0.6707,
+   "tir_implicita_estudo": 0.1527,
+   "consenso_mediano": 5.75,
+   "consenso_medio": 6.46,
+   "faixa": [
+    4.1,
+    10
+   ],
+   "n_analistas": 12,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-VAMO3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 7,
+    "sobreponderar": 0,
+    "neutra": 4,
+    "subponderar": 1,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.46
+   },
+   "recomendacao": "7 compra, 0 sobreponderar, 4 neutra, 1 subponderar, 0 venda (FactSet, n=12)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=12)": 5.75,
+    "FactSet/TradingView (média, n=12)": 6.46,
+    "Itaú BBA (2026-10-20)": 9.0,
+    "Bradesco BBI (2026-07-19)": 6.0
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "Itaú BBA",
+     "recomendacao": "compra",
+     "alvo": 9.0,
+     "alvo_anterior": 5.0,
+     "horizonte": null,
+     "data": "2026-10-20",
+     "url": "https://bpmoney.com.br/mercado/acoes/vamo3-dispara-trade-eleitoral-itau-bba-preco-alvo-47/",
+     "verificado": true,
+     "obs": "'trade eleitoral'; −1 p.p. na Selic de 2027 ≈ +10% no lucro; P/L 2028E 6,6x"
+    },
+    {
+     "casa": "Bradesco BBI",
+     "recomendacao": "compra",
+     "alvo": 6.0,
+     "alvo_anterior": null,
+     "horizonte": "dez/2026",
+     "data": "2026-07-19",
+     "url": "https://moneytimes.com.br/vamos-vamo3-bradesco-bbi-ve-acao-descontada-e-potencial-de-alta-de-quase-90-lils/",
+     "verificado": true,
+     "obs": "ação a R$ 3,17 na época"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 7.5,
+   "estudo_vs_consenso": -0.8339,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.9828,
+   "consenso_lucro": {
+    "lucro_2026_mn": 481.5,
+    "ebitda_2026_mn": 3969.4,
+    "receita_2026_mn": 6509.8,
+    "lpa_2026": 0.397,
+    "dpa_2026": 0.098,
+    "lucro_ntm_mn": 654.9,
+    "ebitda_ntm_mn": 4240.8,
+    "lpa_ntm": 0.539,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [
+    {
+     "fonte": "Guidance da companhia (não é consenso)",
+     "metrica": "ebitda",
+     "ano": 2026,
+     "valor_mn": 3875,
+     "base": "ponto médio de R$ 3,75–4,0 bi",
+     "data": "2026-08-12",
+     "url": "research/notes/VAMO3.md"
+    }
+   ],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 6383.1,
+     "2027": 6766.1
+    },
+    "ebitda": {
+     "2026": 3874.5,
+     "2027": 4161.1
+    },
+    "lucro_controlador": {
+     "2026": 391.8,
+     "2027": 472.2
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.1863,
+    "ebitda_2026_estudo_vs_consenso": -0.0239,
+    "receita_2026_estudo_vs_consenso": -0.0195,
+    "lucro_2027_estudo_vs_ntm": -0.279,
+    "ebitda_2027_estudo_vs_ntm": -0.0188,
+    "classificacao_lucro_2026": "abaixo",
+    "classificacao_lucro_2027": "abaixo"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 1.89,
+    "valor_justo_ke15": 3.62,
+    "ke_que_iguala_mediana_do_consenso": 0.114,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "Ke + premissas",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.109,
+     0.06,
+     0.06,
+     0.055,
+     0.05
+    ],
+    "margem_ebitda": [
+     0.607,
+     0.615,
+     0.615,
+     0.615,
+     0.615
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 7.0,
+     "ev_ebitda": 3.8
+    }
+   },
+   "explicacao": "Ke mais lucro menor. O EBITDA bate com o consenso (−2%, no ponto médio do guidance), mas o lucro fica 19% abaixo em 2026 e 28% abaixo do NTM, porque o estudo usa custo da dívida de 17,2% → 16,3% com a curva pós-choque e crescimento limitado pela alavancagem de 3x. A Ke 15% o motor dá R$ 3,6, contra R$ 5,75. O alvo de R$ 9 do Itaú BBA (20/10) supunha corte de Selic (−1 p.p. = +10% no lucro).",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://bpmoney.com.br/mercado/acoes/vamo3-dispara-trade-eleitoral-itau-bba-preco-alvo-47/",
+    "https://moneytimes.com.br/vamos-vamo3-bradesco-bbi-ve-acao-descontada-e-potencial-de-alta-de-quase-90-lils/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-VAMO3/forecast/",
+    "research/notes/VAMO3.md"
+   ]
+  },
+  {
+   "ticker": "SIMH3",
+   "nome": "SIMPAR",
+   "preco_ref": 6.87,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 16.65,
+   "valor_justo_estudo": 4.349,
+   "upside_estudo": -0.367,
+   "tir_implicita_estudo": null,
+   "consenso_mediano": 17.5,
+   "consenso_medio": 18.14,
+   "faixa": [
+    8.5,
+    27
+   ],
+   "n_analistas": 7,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-SIMH3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 4,
+    "sobreponderar": 0,
+    "neutra": 3,
+    "subponderar": 0,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.43
+   },
+   "recomendacao": "4 compra, 0 sobreponderar, 3 neutra, 0 subponderar, 0 venda (FactSet, n=7)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=7)": 17.5,
+    "FactSet/TradingView (média, n=7)": 18.14,
+    "BTG Pactual (2026-05 (pós-1T26))": 11.0,
+    "Safra (2026-05 (pós-1T26))": 12.4
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "BTG Pactual",
+     "recomendacao": "compra",
+     "alvo": 11.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-05 (pós-1T26)",
+     "url": "https://euqueroinvestir.com/acoes/resultado-da-simpar-divide-btg-e-safra",
+     "verificado": false,
+     "obs": "só no resumo da busca"
+    },
+    {
+     "casa": "Safra",
+     "recomendacao": "neutra",
+     "alvo": 12.4,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-05 (pós-1T26)",
+     "url": "https://euqueroinvestir.com/acoes/resultado-da-simpar-divide-btg-e-safra",
+     "verificado": false,
+     "obs": "só no resumo da busca"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 11.7,
+   "estudo_vs_consenso": -0.7515,
+   "classificacao": "abaixo",
+   "upside_consenso": 1.5473,
+   "consenso_lucro": {
+    "lucro_2026_mn": 182.0,
+    "ebitda_2026_mn": 13777.7,
+    "receita_2026_mn": 48511.7,
+    "lpa_2026": 0.174,
+    "dpa_2026": 0,
+    "lucro_ntm_mn": null,
+    "ebitda_ntm_mn": null,
+    "lpa_ntm": null,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [],
+   "projecoes_estudo_mn": null,
+   "comparacao_lucro": {
+    "obs": "holding avaliada por SOTP; o estudo não projeta lucro consolidado"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 7.33,
+    "valor_justo_ke15": 12.5,
+    "ke_que_iguala_mediana_do_consenso": 0.1199,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos; rodada das 16h00, antes da revisão de research/RAIL3 e research/SIMH3 (o recálculo com os arquivos atuais dá Ke 25%%: SIMH3 R$ 3,83 e CSAN3 R$ 2,01)"
+   },
+   "principal_fator": "Ke + premissas",
+   "premissas_estudo": {
+    "crescimento_receita": null,
+    "margem_ebitda": null,
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": null,
+     "ev_ebitda": null
+    }
+   },
+   "explicacao": "É uma holding (SOTP), sem lucro comparável. O estudo põe Movida e Vamos no valor justo a Ke 25% (R$ 4,19 e R$ 0,95), e o mercado as avalia pelos próprios alvos (~R$ 16,5 e ~R$ 5,75). Com tudo a Ke 15%, o SOTP sobe para ~R$ 12,5. O resto da diferença é a dívida da holding mais o TRS (R$ 1,69 bi) e o custo de holding. Os únicos alvos de 2026 achados na imprensa são de mai/26, antes do rali (BTG R$ 11; Safra neutra R$ 12,40). A mediana da FactSet (R$ 17,5, máximo R$ 27) sugere revisões feitas durante o rali.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://euqueroinvestir.com/acoes/resultado-da-simpar-divide-btg-e-safra",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-SIMH3/forecast/"
+   ],
+   "obs_estudo": "research/SIMH3.json e research/RAIL3.json foram alterados às 16h04–16h07, depois do app (15h17); o recálculo em memória com os arquivos atuais dá R$ 3,83 (SIMH3) e R$ 2,01 (CSAN3). Aqui vale o app."
+  },
+  {
+   "ticker": "ECOR3",
+   "nome": "ECORODOVIAS",
+   "preco_ref": 5.45,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 13.15,
+   "valor_justo_estudo": 2.1462,
+   "upside_estudo": -0.6062,
+   "tir_implicita_estudo": 0.1723,
+   "consenso_mediano": 13.7,
+   "consenso_medio": 13.67,
+   "faixa": [
+    8.6,
+    19
+   ],
+   "n_analistas": 12,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-ECOR3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 9,
+    "sobreponderar": 0,
+    "neutra": 3,
+    "subponderar": 0,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.25
+   },
+   "recomendacao": "9 compra, 0 sobreponderar, 3 neutra, 0 subponderar, 0 venda (FactSet, n=12)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=12)": 13.7,
+    "FactSet/TradingView (média, n=12)": 13.67,
+    "Safra (2026-09-08)": 10.8,
+    "Citi (2026-05-27)": 10.0,
+    "Bradesco BBI (2026-07-29)": 16.0,
+    "JPMorgan (2026 (n/d))": 11.5,
+    "BTG Pactual (2026-03 (pós-4T25))": 14.0
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "Safra",
+     "recomendacao": "compra",
+     "alvo": 10.8,
+     "alvo_anterior": 12.1,
+     "horizonte": null,
+     "data": "2026-09-08",
+     "url": "https://bpmoney.com.br/?p=420740",
+     "verificado": true,
+     "obs": "TIR real estimada 15,7% (NTN-B 2037 + 807 bp); na mesma nota o Citi mantém a ação como top pick"
+    },
+    {
+     "casa": "Citi",
+     "recomendacao": "compra (elevada de neutra)",
+     "alvo": 10.0,
+     "alvo_anterior": 11.0,
+     "horizonte": "fim de 2026",
+     "data": "2026-05-27",
+     "url": "https://www.moneytimes.com.br/para-o-citi-ecorodovias-ecor3-voltou-a-ser-atrativa-apos-forte-correcao-das-acoes-lils/",
+     "verificado": true,
+     "obs": ""
+    },
+    {
+     "casa": "Bradesco BBI",
+     "recomendacao": "compra",
+     "alvo": 16.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-07-29",
+     "url": "https://euqueroinvestir.com/acoes/ecorodovias-2t26",
+     "verificado": true,
+     "obs": "TIR implícita ~17,5% (NTN-B + 9,6 p.p.)"
+    },
+    {
+     "casa": "JPMorgan",
+     "recomendacao": "overweight (elevada de neutra)",
+     "alvo": 11.5,
+     "alvo_anterior": 11.0,
+     "horizonte": "fim de 2026",
+     "data": "2026 (n/d)",
+     "url": "https://www.infomoney.com.br/?p=3278161",
+     "verificado": false,
+     "obs": "data não confirmada"
+    },
+    {
+     "casa": "BTG Pactual",
+     "recomendacao": "compra",
+     "alvo": 14.0,
+     "alvo_anterior": 11.0,
+     "horizonte": null,
+     "data": "2026-03 (pós-4T25)",
+     "url": "https://euqueroinvestir.com/acoes/ecorodovias-ecor3-potencial-alta-55-btg/",
+     "verificado": false,
+     "obs": "só no resumo da busca"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 11.5,
+   "estudo_vs_consenso": -0.8433,
+   "classificacao": "abaixo",
+   "upside_consenso": 1.5138,
+   "consenso_lucro": {
+    "lucro_2026_mn": 323.1,
+    "ebitda_2026_mn": 5655.8,
+    "receita_2026_mn": 7604.0,
+    "lpa_2026": 0.479,
+    "dpa_2026": 0.181,
+    "lucro_ntm_mn": null,
+    "ebitda_ntm_mn": 6154.8,
+    "lpa_ntm": 1.126,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [
+    {
+     "fonte": "Itaú BBA (antigo)",
+     "metrica": "ebitda",
+     "ano": 2026,
+     "valor_mn": 5600,
+     "base": "n/d",
+     "data": "2025-10-17",
+     "url": "https://www.suno.com.br/noticias/?p=629047"
+    }
+   ],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 7628.5,
+     "2027": 8849.0
+    },
+    "ebitda": {
+     "2026": 5568.8,
+     "2027": 6415.6
+    },
+    "lucro_controlador": {
+     "2026": 314.8,
+     "2027": 477.3
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.0257,
+    "ebitda_2026_estudo_vs_consenso": -0.0154,
+    "receita_2026_estudo_vs_consenso": 0.0032,
+    "lucro_2027_estudo_vs_ntm": null,
+    "ebitda_2027_estudo_vs_ntm": 0.0424,
+    "lucro_ntm_implicito_lpa_mn": 783.0,
+    "lucro_2027_estudo_vs_ntm_implicito": -0.3906,
+    "classificacao_lucro_2026": "alinhado",
+    "classificacao_lucro_2027": "abaixo"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 2.47,
+    "valor_justo_ke15": 3.11,
+    "ke_que_iguala_mediana_do_consenso": 0.0854,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "premissas/método (nem Ke de mercado fecha a diferença)",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.03,
+     0.16,
+     0.13,
+     0.11,
+     0.1
+    ],
+    "margem_ebitda": [
+     0.73,
+     0.725,
+     0.74,
+     0.75,
+     0.76
+    ],
+    "g": 0.035,
+    "multiplos_alvo": {
+     "pe": 6.0,
+     "ev_ebitda": 5.3
+    }
+   },
+   "explicacao": "Aqui pesam mais as premissas e o método que o Ke. Lucro e EBITDA de 2026 batem (−3% e −2%), mas o lucro 2027E fica ~39% abaixo do NTM implícito no LPA. No estudo o DCF é negativo: capex de R$ 5–6,5 bi/ano, FCFF negativo até 2029, ROIC terminal = WACC e alavancagem colada no covenant de 4,75x. Mesmo a Ke 15% o justo seria R$ 3,1; o motor só chega à mediana com Ke de ~8,5%. As casas modelam concessão a concessão e viam, aos preços de jul–set, TIR real de 15,7% (Safra, NTN-B + 8,1 p.p.) a ~17,5% (BBI, NTN-B + 9,6 p.p.), acima de 20% nominal. O DDM do estudo dá TIR de 17,9% ao preço de hoje, bem mais baixo: as casas projetam fluxos ao acionista maiores e supõem que as novas concessões criam valor.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://bpmoney.com.br/?p=420740",
+    "https://euqueroinvestir.com/acoes/ecorodovias-2t26",
+    "https://euqueroinvestir.com/acoes/ecorodovias-ecor3-potencial-alta-55-btg/",
+    "https://www.infomoney.com.br/?p=3278161",
+    "https://www.moneytimes.com.br/para-o-citi-ecorodovias-ecor3-voltou-a-ser-atrativa-apos-forte-correcao-das-acoes-lils/",
+    "https://www.suno.com.br/noticias/?p=629047",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-ECOR3/forecast/"
+   ]
+  },
+  {
+   "ticker": "MOTV3",
+   "nome": "MOTIVA SA",
+   "preco_ref": 13.85,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 20.2,
+   "valor_justo_estudo": 5.3432,
+   "upside_estudo": -0.6142,
+   "tir_implicita_estudo": 0.1314,
+   "consenso_mediano": 20.2,
+   "consenso_medio": 19.63,
+   "faixa": [
+    15,
+    24
+   ],
+   "n_analistas": 10,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-MOTV3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 7,
+    "sobreponderar": 0,
+    "neutra": 3,
+    "subponderar": 0,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.3
+   },
+   "recomendacao": "7 compra, 0 sobreponderar, 3 neutra, 0 subponderar, 0 venda (FactSet, n=10)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=10)": 20.2,
+    "FactSet/TradingView (média, n=10)": 19.63,
+    "BTG Pactual (2026-07-30)": 20.0,
+    "Safra (2026-07-30)": 18.3,
+    "Citi (2026-07-30)": 16.2,
+    "Santander (2026-04-15)": 22.5,
+    "Goldman Sachs (2026-03-20)": 15.7
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "BTG Pactual",
+     "recomendacao": "compra",
+     "alvo": 20.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-07-30",
+     "url": "https://www.moneytimes.com.br/motiva-motv3-agrada-mercado-e-acao-sobe-mais-de-o-que-dizem-os-analistas-lils/",
+     "verificado": true,
+     "obs": "pós-2T26"
+    },
+    {
+     "casa": "Safra",
+     "recomendacao": "compra",
+     "alvo": 18.3,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-07-30",
+     "url": "https://www.moneytimes.com.br/motiva-motv3-agrada-mercado-e-acao-sobe-mais-de-o-que-dizem-os-analistas-lils/",
+     "verificado": true,
+     "obs": "pós-2T26"
+    },
+    {
+     "casa": "Citi",
+     "recomendacao": "compra",
+     "alvo": 16.2,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-07-30",
+     "url": "https://www.moneytimes.com.br/motiva-motv3-agrada-mercado-e-acao-sobe-mais-de-o-que-dizem-os-analistas-lils/",
+     "verificado": true,
+     "obs": "pós-2T26"
+    },
+    {
+     "casa": "Santander",
+     "recomendacao": "outperform",
+     "alvo": 22.5,
+     "alvo_anterior": null,
+     "horizonte": "2026",
+     "data": "2026-04-15",
+     "url": "https://guiadoinvestidor.com.br/?p=385077",
+     "verificado": true,
+     "obs": ""
+    },
+    {
+     "casa": "Goldman Sachs",
+     "recomendacao": "neutra (elevada de venda)",
+     "alvo": 15.7,
+     "alvo_anterior": null,
+     "horizonte": "fim de 2026",
+     "data": "2026-03-20",
+     "url": "https://www.infomoney.com.br/?p=3260127",
+     "verificado": true,
+     "obs": ""
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 18.3,
+   "estudo_vs_consenso": -0.7355,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.4585,
+   "consenso_lucro": {
+    "lucro_2026_mn": 2715.5,
+    "ebitda_2026_mn": 10288.5,
+    "receita_2026_mn": 15496.7,
+    "lpa_2026": 1.322,
+    "dpa_2026": 0.587,
+    "lucro_ntm_mn": 2461.7,
+    "ebitda_ntm_mn": 10709.2,
+    "lpa_ntm": 1.209,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [
+    {
+     "fonte": "Consenso Bloomberg (trimestral)",
+     "metrica": "lucro_liquido_ajustado_2T26",
+     "ano": 2026,
+     "valor_mn": 541,
+     "base": "ajustado, só o 2T26 (realizado: R$ 663 mi)",
+     "data": "2026-07-30",
+     "url": "https://www.moneytimes.com.br/motiva-motv3-agrada-mercado-e-acao-sobe-mais-de-o-que-dizem-os-analistas-lils/"
+    }
+   ],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 14908.3,
+     "2027": 16697.3
+    },
+    "ebitda": {
+     "2026": 9094.1,
+     "2027": 10352.3
+    },
+    "lucro_controlador": {
+     "2026": 2227.2,
+     "2027": 2653.1
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.1798,
+    "ebitda_2026_estudo_vs_consenso": -0.1161,
+    "receita_2026_estudo_vs_consenso": -0.038,
+    "lucro_2027_estudo_vs_ntm": 0.0778,
+    "ebitda_2027_estudo_vs_ntm": -0.0333,
+    "classificacao_lucro_2026": "abaixo",
+    "classificacao_lucro_2027": "alinhado"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 7.0,
+    "valor_justo_ke15": 11.42,
+    "ke_que_iguala_mediana_do_consenso": 0.1026,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "Ke + premissas",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.08,
+     0.12,
+     0.1,
+     0.08,
+     0.07
+    ],
+    "margem_ebitda": [
+     0.61,
+     0.62,
+     0.63,
+     0.635,
+     0.64
+    ],
+    "g": 0.04,
+    "multiplos_alvo": {
+     "pe": 8.5,
+     "ev_ebitda": 7.0
+    }
+   },
+   "explicacao": "Ke mais método. Lucro 2026E 18% abaixo e EBITDA 12% abaixo: o consenso provavelmente inclui não recorrentes (compra vantajosa de R$ 750 mi da Minas_SP) e parte dos aeroportos (hipótese, a FactSet não abre a base), enquanto o estudo é recorrente e sem aeroportos. Em 2027 o estudo fica 8% acima do NTM. O DCF do estudo é negativo (capex de R$ 6–7 bi/ano e ROIC terminal ≈ WACC de 17,9%). A Ke 15% o motor dá R$ 11,4, e só chega à mediana de R$ 20,2 com Ke de ~10%.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://guiadoinvestidor.com.br/?p=385077",
+    "https://www.infomoney.com.br/?p=3260127",
+    "https://www.moneytimes.com.br/motiva-motv3-agrada-mercado-e-acao-sobe-mais-de-o-que-dizem-os-analistas-lils/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-MOTV3/forecast/"
+   ]
+  },
+  {
+   "ticker": "RAIL3",
+   "nome": "RUMO S.A.",
+   "preco_ref": 15.27,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 18.62,
+   "valor_justo_estudo": 4.8882,
+   "upside_estudo": -0.6799,
+   "tir_implicita_estudo": 0.1032,
+   "consenso_mediano": 22,
+   "consenso_medio": 20.23,
+   "faixa": [
+    12,
+    24
+   ],
+   "n_analistas": 13,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-RAIL3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 9,
+    "sobreponderar": 0,
+    "neutra": 3,
+    "subponderar": 0,
+    "venda": 1,
+    "nota_media_1_compra_3_venda": 1.38
+   },
+   "recomendacao": "9 compra, 0 sobreponderar, 3 neutra, 0 subponderar, 1 venda (FactSet, n=13)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=13)": 22,
+    "FactSet/TradingView (média, n=13)": 20.23,
+    "JPMorgan (2026-10-13)": 23.5,
+    "Itaú BBA (2026-08-26)": 20.5,
+    "XP (página de ação da Rico) (2026-06-27 (foto da página))": 22.0
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "JPMorgan",
+     "recomendacao": "overweight (elevada de neutra)",
+     "alvo": 23.5,
+     "alvo_anterior": 19.5,
+     "horizonte": null,
+     "data": "2026-10-13",
+     "url": "https://bpmoney.com.br/?p=426331",
+     "verificado": true,
+     "obs": "~6,3x EV/EBITDA 2027E"
+    },
+    {
+     "casa": "Itaú BBA",
+     "recomendacao": "compra",
+     "alvo": 20.5,
+     "alvo_anterior": 20.5,
+     "horizonte": "fim de 2026",
+     "data": "2026-08-26",
+     "url": "https://bpmoney.com.br/?p=418970",
+     "verificado": true,
+     "obs": "alvo mantido; capex R$ 4,7 bi/ano em 2027–28"
+    },
+    {
+     "casa": "XP (página de ação da Rico)",
+     "recomendacao": "compra",
+     "alvo": 22.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-06-27 (foto da página)",
+     "url": "https://riconnect.rico.com.vc/acoes/rail3/",
+     "verificado": false,
+     "obs": "só no resumo da busca"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 22.0,
+   "estudo_vs_consenso": -0.7778,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.4407,
+   "consenso_lucro": {
+    "lucro_2026_mn": 1868.5,
+    "ebitda_2026_mn": 8117.8,
+    "receita_2026_mn": 14788.7,
+    "lpa_2026": 1.011,
+    "dpa_2026": 0.248,
+    "lucro_ntm_mn": 2505.4,
+    "ebitda_ntm_mn": 8782.6,
+    "lpa_ntm": 1.437,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [
+    {
+     "fonte": "Itaú BBA",
+     "metrica": "ebitda",
+     "ano": 2026,
+     "valor_mn": 8200,
+     "base": "n/d",
+     "data": "2026-08-26",
+     "url": "https://bpmoney.com.br/?p=418970"
+    },
+    {
+     "fonte": "Itaú BBA",
+     "metrica": "ebitda",
+     "ano": 2027,
+     "valor_mn": 9000,
+     "base": "n/d; 3% acima do consenso",
+     "data": "2026-08-26",
+     "url": "https://bpmoney.com.br/?p=418970"
+    },
+    {
+     "fonte": "Consenso implícito na nota do Itaú BBA (9.000 / 1,03)",
+     "metrica": "ebitda",
+     "ano": 2027,
+     "valor_mn": 8738,
+     "base": "derivado",
+     "data": "2026-08-26",
+     "url": "https://bpmoney.com.br/?p=418970"
+    }
+   ],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 14817.1,
+     "2027": 15706.2
+    },
+    "ebitda": {
+     "2026": 8371.7,
+     "2027": 9031.0
+    },
+    "lucro_controlador": {
+     "2026": 1941.8,
+     "2027": 2144.8
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": 0.0392,
+    "ebitda_2026_estudo_vs_consenso": 0.0313,
+    "receita_2026_estudo_vs_consenso": 0.0019,
+    "lucro_2027_estudo_vs_ntm": -0.1439,
+    "ebitda_2027_estudo_vs_ntm": 0.0283,
+    "classificacao_lucro_2026": "alinhado",
+    "classificacao_lucro_2027": "abaixo"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 5.43,
+    "valor_justo_ke15": 8.67,
+    "ke_que_iguala_mediana_do_consenso": 0.0814,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos; rodada das 16h00, antes da revisão de research/RAIL3 e research/SIMH3 (o recálculo com os arquivos atuais dá Ke 25%%: SIMH3 R$ 3,83 e CSAN3 R$ 2,01)"
+   },
+   "principal_fator": "premissas/método (nem Ke de mercado fecha a diferença)",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.07,
+     0.06,
+     0.06,
+     -0.057,
+     0.034
+    ],
+    "margem_ebitda": [
+     0.565,
+     0.575,
+     0.585,
+     0.605,
+     0.61
+    ],
+    "g": 0.045,
+    "multiplos_alvo": {
+     "pe": 12.0,
+     "ev_ebitda": 6.5
+    }
+   },
+   "explicacao": "As projeções operacionais batem: lucro 2026E +4%, EBITDA 2026E +3%, EBITDA 2027E de R$ 9,03 bi contra R$ 9,0 bi do Itaú BBA e ~R$ 8,74 bi de consenso. O lucro 2027E fica 14% abaixo do NTM. A diferença está na economia de longo prazo e no desconto: ROIC de ~10% contra WACC de 18% deixa o DCF negativo. A Ke 15% o motor dá R$ 8,7 e só chega à mediana de R$ 22 com Ke de ~8%. Os alvos são de antes do choque (JPMorgan R$ 23,50 em 13/10).",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://bpmoney.com.br/?p=418970",
+    "https://bpmoney.com.br/?p=426331",
+    "https://riconnect.rico.com.vc/acoes/rail3/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-RAIL3/forecast/"
+   ]
+  },
+  {
+   "ticker": "CSAN3",
+   "nome": "COSAN",
+   "preco_ref": 2.97,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 5.2,
+   "valor_justo_estudo": 2.1572,
+   "upside_estudo": -0.2737,
+   "tir_implicita_estudo": null,
+   "consenso_mediano": 4.5,
+   "consenso_medio": 4.98,
+   "faixa": [
+    4,
+    8
+   ],
+   "n_analistas": 7,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-CSAN3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 3,
+    "sobreponderar": 0,
+    "neutra": 4,
+    "subponderar": 0,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.57
+   },
+   "recomendacao": "3 compra, 0 sobreponderar, 4 neutra, 0 subponderar, 0 venda (FactSet, n=7)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=7)": 4.5,
+    "FactSet/TradingView (média, n=7)": 4.98,
+    "Bradesco BBI (2026-08-17)": 4.6,
+    "BofA (2026-06-18)": 5.5
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "Bradesco BBI",
+     "recomendacao": "compra",
+     "alvo": 4.6,
+     "alvo_anterior": 7.0,
+     "horizonte": "fim de 2027",
+     "data": "2026-08-17",
+     "url": "https://euqueroinvestir.com/acoes/bbi-corta-preco-alvo-cosan",
+     "verificado": true,
+     "obs": "pós-2T26 (prejuízo de R$ 320 mi)"
+    },
+    {
+     "casa": "BofA",
+     "recomendacao": "compra (retomada de cobertura)",
+     "alvo": 5.5,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-06-18",
+     "url": "https://www.moneytimes.com.br/bank-of-america-volta-a-recomendar-cosan-csan3-apostando-em-geracao-de-caixa-dividendos-e-venda-de-ativos-pads/",
+     "verificado": true,
+     "obs": "DL da holding ~R$ 9,5 bi no fim de 2026"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 5.05,
+   "estudo_vs_consenso": -0.5206,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.5152,
+   "consenso_lucro": {
+    "lucro_2026_mn": -1045.8,
+    "ebitda_2026_mn": 16713.1,
+    "receita_2026_mn": 72408.9,
+    "lpa_2026": 0.029,
+    "dpa_2026": 0,
+    "lucro_ntm_mn": 5500.1,
+    "ebitda_ntm_mn": 16076.4,
+    "lpa_ntm": 1.394,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [],
+   "projecoes_estudo_mn": null,
+   "comparacao_lucro": {
+    "obs": "holding avaliada por SOTP; o estudo não projeta lucro consolidado"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 2.16,
+    "valor_justo_ke15": 2.46,
+    "ke_que_iguala_mediana_do_consenso": "<0.060",
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos; rodada das 16h00, antes da revisão de research/RAIL3 e research/SIMH3 (o recálculo com os arquivos atuais dá Ke 25%%: SIMH3 R$ 3,83 e CSAN3 R$ 2,01)"
+   },
+   "principal_fator": "premissas/SOTP (o Ke quase não mexe no valor)",
+   "premissas_estudo": {
+    "crescimento_receita": null,
+    "margem_ebitda": null,
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": null,
+     "ev_ebitda": null
+    }
+   },
+   "explicacao": "É uma holding (SOTP), e a diferença quase não depende do Ke (R$ 2,46 a Ke 15%). Ela vem da Rumo, que o estudo avalia no valor justo (R$ 4,89/ação, contra R$ 15 na tela e ~R$ 22 de alvo), da Compass a preço pós-choque, de descontos em Moove e Radar e da dívida da holding com o TRS (R$ 12,2 bi). O lucro de consenso não é comparável (2026: −R$ 1,0 bi; NTM: +R$ 5,5 bi, provavelmente com vendas de ativos). Alvos de 2026: BBI R$ 4,60 (17/08, fim de 2027) e BofA R$ 5,50 (18/06).",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://euqueroinvestir.com/acoes/bbi-corta-preco-alvo-cosan",
+    "https://www.moneytimes.com.br/bank-of-america-volta-a-recomendar-cosan-csan3-apostando-em-geracao-de-caixa-dividendos-e-venda-de-ativos-pads/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-CSAN3/forecast/"
+   ],
+   "obs_estudo": "research/SIMH3.json e research/RAIL3.json foram alterados às 16h04–16h07, depois do app (15h17); o recálculo em memória com os arquivos atuais dá R$ 3,83 (SIMH3) e R$ 2,01 (CSAN3). Aqui vale o app."
+  },
+  {
+   "ticker": "VBBR3",
+   "nome": "VIBRA",
+   "preco_ref": 32.3,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 35.82,
+   "valor_justo_estudo": 8.4723,
+   "upside_estudo": -0.7377,
+   "tir_implicita_estudo": 0.1028,
+   "consenso_mediano": 43,
+   "consenso_medio": 41.56,
+   "faixa": [
+    27,
+    48
+   ],
+   "n_analistas": 15,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-VBBR3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 11,
+    "sobreponderar": 0,
+    "neutra": 4,
+    "subponderar": 0,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.27
+   },
+   "recomendacao": "11 compra, 0 sobreponderar, 4 neutra, 0 subponderar, 0 venda (FactSet, n=15)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=15)": 43,
+    "FactSet/TradingView (média, n=15)": 41.56,
+    "XP (2026-07-30)": 39.0,
+    "Morgan Stanley (2026-07-15)": 41.0,
+    "Itaú BBA (2026-07-07)": 40.0
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "XP",
+     "recomendacao": "compra",
+     "alvo": 39.0,
+     "alvo_anterior": 37.0,
+     "horizonte": null,
+     "data": "2026-07-30",
+     "url": "https://www.moneytimes.com.br/vibra-vbbr3-xp-eleva-preco-alvo-para-r-39-e-ve-2t26-forte-para-grandes-distribuidoras-veja-projecoes/",
+     "verificado": true,
+     "obs": "EBITDA/m³: R$ 297 (2026E) e R$ 191 (2027E)"
+    },
+    {
+     "casa": "Morgan Stanley",
+     "recomendacao": "overweight",
+     "alvo": 41.0,
+     "alvo_anterior": 34.0,
+     "horizonte": null,
+     "data": "2026-07-15",
+     "url": "https://www.moneytimes.com.br/vibra-vbbr3-segue-favorita-do-morgan-stanley-que-eleva-preco-alvo-saiba-mais/",
+     "verificado": false,
+     "obs": "só no resumo da busca"
+    },
+    {
+     "casa": "Itaú BBA",
+     "recomendacao": "compra",
+     "alvo": 40.0,
+     "alvo_anterior": 35.0,
+     "horizonte": null,
+     "data": "2026-07-07",
+     "url": "https://www.moneytimes.com.br/qual-e-a-mais-atrativa-itau-bba-eleva-precos-alvo-de-vibra-vbbr3-e-ultrapar-ugpa3-apsa/",
+     "verificado": false,
+     "obs": "só no resumo da busca"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 40.0,
+   "estudo_vs_consenso": -0.803,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.3313,
+   "consenso_lucro": {
+    "lucro_2026_mn": 6755.2,
+    "ebitda_2026_mn": 12623.1,
+    "receita_2026_mn": 221539.9,
+    "lpa_2026": 5.828,
+    "dpa_2026": 1.943,
+    "lucro_ntm_mn": 5246.4,
+    "ebitda_ntm_mn": 11045.9,
+    "lpa_ntm": 4.925,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [
+    {
+     "fonte": "XP",
+     "metrica": "ebitda_por_m3_RS",
+     "ano": 2026,
+     "valor_mn": 297,
+     "base": "R$/m³ (não é R$ mi)",
+     "data": "2026-07-30",
+     "url": "https://www.moneytimes.com.br/vibra-vbbr3-xp-eleva-preco-alvo-para-r-39-e-ve-2t26-forte-para-grandes-distribuidoras-veja-projecoes/"
+    },
+    {
+     "fonte": "XP",
+     "metrica": "ebitda_por_m3_RS",
+     "ano": 2027,
+     "valor_mn": 191,
+     "base": "R$/m³ (não é R$ mi)",
+     "data": "2026-07-30",
+     "url": "https://www.moneytimes.com.br/vibra-vbbr3-xp-eleva-preco-alvo-para-r-39-e-ve-2t26-forte-para-grandes-distribuidoras-veja-projecoes/"
+    }
+   ],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 204201.0,
+     "2027": 196033.0
+    },
+    "ebitda": {
+     "2026": 10618.5,
+     "2027": 6665.1
+    },
+    "lucro_controlador": {
+     "2026": 5158.5,
+     "2027": 2361.2
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.2364,
+    "ebitda_2026_estudo_vs_consenso": -0.1588,
+    "receita_2026_estudo_vs_consenso": -0.0783,
+    "lucro_2027_estudo_vs_ntm": -0.5499,
+    "ebitda_2027_estudo_vs_ntm": -0.3966,
+    "classificacao_lucro_2026": "abaixo",
+    "classificacao_lucro_2027": "abaixo"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 11.38,
+    "valor_justo_ke15": 16.77,
+    "ke_que_iguala_mediana_do_consenso": 0.0809,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "premissas/método (nem Ke de mercado fecha a diferença)",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.08,
+     -0.04,
+     0.045,
+     0.045,
+     0.045
+    ],
+    "margem_ebitda": [
+     0.052,
+     0.034,
+     0.034,
+     0.034,
+     0.034
+    ],
+    "g": 0.045,
+    "multiplos_alvo": {
+     "pe": 7.5,
+     "ev_ebitda": 6.0
+    }
+   },
+   "explicacao": "É a maior divergência de premissas do grupo. O estudo normaliza a margem para ~R$ 155/m³ (3,4% de margem EBITDA) a partir de 2027, e a XP projeta R$ 191/m³. Assim o lucro 2027E do estudo (R$ 2,4 bi) fica 55% abaixo do NTM (R$ 5,2 bi). Em 2026 o estudo também fica abaixo (lucro −24%, EBITDA −16%), por supor margem de ~3,5% no 2S26. A Ke 15% o motor dá R$ 16,8; o Ke implícito de ~8% mostra que o consenso supõe margem extraordinária mais duradoura.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://www.moneytimes.com.br/qual-e-a-mais-atrativa-itau-bba-eleva-precos-alvo-de-vibra-vbbr3-e-ultrapar-ugpa3-apsa/",
+    "https://www.moneytimes.com.br/vibra-vbbr3-segue-favorita-do-morgan-stanley-que-eleva-preco-alvo-saiba-mais/",
+    "https://www.moneytimes.com.br/vibra-vbbr3-xp-eleva-preco-alvo-para-r-39-e-ve-2t26-forte-para-grandes-distribuidoras-veja-projecoes/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-VBBR3/forecast/"
+   ]
+  },
+  {
+   "ticker": "MGLU3",
+   "nome": "MAGAZ LUIZA",
+   "preco_ref": 5.85,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 12.69,
+   "valor_justo_estudo": 1.3077,
+   "upside_estudo": -0.7765,
+   "tir_implicita_estudo": 0.0636,
+   "consenso_mediano": 11.2,
+   "consenso_medio": 10.77,
+   "faixa": [
+    4,
+    16
+   ],
+   "n_analistas": 14,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-MGLU3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 4,
+    "sobreponderar": 0,
+    "neutra": 7,
+    "subponderar": 1,
+    "venda": 2,
+    "nota_media_1_compra_3_venda": 1.89
+   },
+   "recomendacao": "4 compra, 0 sobreponderar, 7 neutra, 1 subponderar, 2 venda (FactSet, n=14)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=14)": 11.2,
+    "FactSet/TradingView (média, n=14)": 10.77,
+    "Itaú BBA (2026-10-13)": 16.0,
+    "Citi (2026-07-29)": 6.0
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "Itaú BBA",
+     "recomendacao": "compra (elevada de neutra)",
+     "alvo": 16.0,
+     "alvo_anterior": 10.0,
+     "horizonte": "fim de 2027",
+     "data": "2026-10-13",
+     "url": "https://bpmoney.com.br/mercado/acoes/itau-bba-eleva-magazine-luiza-mglu3-para-compra-veja-os-motivos/",
+     "verificado": true,
+     "obs": "ganho de participação de mercado; lucro 2027E com benefícios fiscais"
+    },
+    {
+     "casa": "Citi",
+     "recomendacao": "neutra/alto risco",
+     "alvo": 6.0,
+     "alvo_anterior": 6.5,
+     "horizonte": null,
+     "data": "2026-07-29",
+     "url": "https://bpmoney.com.br/mercado/mglu3-citi-reduz-preco-alvo-balanco-2t26/",
+     "verificado": true,
+     "obs": "cortou o lucro de 2026 em 9% e o de 2027 em 16%"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 11.0,
+   "estudo_vs_consenso": -0.8832,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.9145,
+   "consenso_lucro": {
+    "lucro_2026_mn": 135.0,
+    "ebitda_2026_mn": 2961.1,
+    "receita_2026_mn": 39574.8,
+    "lpa_2026": 0.209,
+    "dpa_2026": 0.063,
+    "lucro_ntm_mn": 442.8,
+    "ebitda_ntm_mn": 3225.8,
+    "lpa_ntm": 0.447,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [
+    {
+     "fonte": "Itaú BBA",
+     "metrica": "lucro_liquido",
+     "ano": 2027,
+     "valor_mn": 776,
+     "base": "com benefícios fiscais (subvenção/IVA); LAIR 2027E R$ 475 mi",
+     "data": "2026-10-13",
+     "url": "https://bpmoney.com.br/mercado/acoes/itau-bba-eleva-magazine-luiza-mglu3-para-compra-veja-os-motivos/"
+    },
+    {
+     "fonte": "XP vs consenso (trimestral)",
+     "metrica": "lucro_liquido_3T26",
+     "ano": 2026,
+     "valor_mn": -33,
+     "base": "XP projeta −R$ 33 mi no 3T26; consenso +R$ 31 mi",
+     "data": "2026-10",
+     "url": "https://www.suno.com.br/noticias/magalu-mglu3-balancos-3t26-xp-acoes-alerta/"
+    }
+   ],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 39090.4,
+     "2027": 41044.9
+    },
+    "ebitda": {
+     "2026": 3127.2,
+     "2027": 3324.6
+    },
+    "lucro_controlador": {
+     "2026": -449.6,
+     "2027": -334.0
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": null,
+    "ebitda_2026_estudo_vs_consenso": 0.0561,
+    "receita_2026_estudo_vs_consenso": -0.0122,
+    "lucro_2027_estudo_vs_ntm": null,
+    "ebitda_2027_estudo_vs_ntm": 0.0306,
+    "obs": "sinais opostos ou base ≤ 0: estudo -450 vs consenso 135 (R$ mi)",
+    "obs_2027": "sinais opostos: estudo -334 vs NTM 443 (R$ mi)",
+    "classificacao_lucro_2026": "abaixo",
+    "classificacao_lucro_2027": "abaixo"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 1.34,
+    "valor_justo_ke15": 1.58,
+    "ke_que_iguala_mediana_do_consenso": 0.0654,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "premissas/método (nem Ke de mercado fecha a diferença)",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.01,
+     0.05,
+     0.05,
+     0.05,
+     0.05
+    ],
+    "margem_ebitda": [
+     0.08,
+     0.081,
+     0.082,
+     0.083,
+     0.084
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 10.0,
+     "ev_ebitda": 4.5
+    }
+   },
+   "explicacao": "A diferença é de premissas, não de Ke (Ke implícito ~6,5%). O estudo projeta prejuízo em 2026–28 (−R$ 450 mi, −R$ 334 mi, −R$ 226 mi), com custo de antecipação de recebíveis de R$ 1,35 bi/ano e margem de 8,0–8,4%. O consenso espera lucro: +R$ 135 mi em 2026 e +R$ 443 mi no NTM; o Itaú BBA projeta R$ 776 mi em 2027, com benefícios fiscais. O EBITDA de 2026 bate (+6%). O próprio consenso está dividido: 4 compra, 7 neutra, 3 subponderar/venda; o Citi é neutro com alvo de R$ 6.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://bpmoney.com.br/mercado/acoes/itau-bba-eleva-magazine-luiza-mglu3-para-compra-veja-os-motivos/",
+    "https://bpmoney.com.br/mercado/mglu3-citi-reduz-preco-alvo-balanco-2t26/",
+    "https://www.suno.com.br/noticias/magalu-mglu3-balancos-3t26-xp-acoes-alerta/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-MGLU3/forecast/"
+   ]
+  },
+  {
+   "ticker": "SBFG3",
+   "nome": "GRUPO SBF",
+   "preco_ref": 5.88,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 11.36,
+   "valor_justo_estudo": 4.5893,
+   "upside_estudo": -0.2195,
+   "tir_implicita_estudo": 0.2098,
+   "consenso_mediano": 16,
+   "consenso_medio": 16,
+   "faixa": [
+    13,
+    23
+   ],
+   "n_analistas": 7,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-SBFG3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 6,
+    "sobreponderar": 0,
+    "neutra": 1,
+    "subponderar": 0,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.14
+   },
+   "recomendacao": "6 compra, 0 sobreponderar, 1 neutra, 0 subponderar, 0 venda (FactSet, n=7)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=7)": 16,
+    "FactSet/TradingView (média, n=7)": 16,
+    "XP (2026-06-26)": 16.0,
+    "Safra (2026-04-15)": 15.5
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "XP",
+     "recomendacao": "compra",
+     "alvo": 16.0,
+     "alvo_anterior": 20.0,
+     "horizonte": null,
+     "data": "2026-06-26",
+     "url": "https://www.seudinheiro.com/2026/empresas/camisa-da-selecao-brasileira-esgota-e-reforca-aposta-da-xp-no-grupo-sbf-sbfg3-dono-da-centauro-e-da-nike-no-brasil-lvgb/",
+     "verificado": true,
+     "obs": "P/L 5,6x 2026E e 4,5x 2027E; EBITDA e lucro de 2027 cortados em 12–13%"
+    },
+    {
+     "casa": "Safra",
+     "recomendacao": "compra (elevada de neutra)",
+     "alvo": 15.5,
+     "alvo_anterior": 16.5,
+     "horizonte": null,
+     "data": "2026-04-15",
+     "url": "https://www.moneytimes.com.br/grupo-sbf-sbfg3-safra-ve-relacao-risco-retorno-cada-vez-mais-favoravel-veja-o-que-fazer-com-a-acao-lmrs/",
+     "verificado": true,
+     "obs": "P/L 2026E 5,7x"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 15.75,
+   "estudo_vs_consenso": -0.7132,
+   "classificacao": "abaixo",
+   "upside_consenso": 1.7211,
+   "consenso_lucro": {
+    "lucro_2026_mn": 441.8,
+    "ebitda_2026_mn": 1085.4,
+    "receita_2026_mn": 8783.0,
+    "lpa_2026": 1.892,
+    "dpa_2026": 0.306,
+    "lucro_ntm_mn": null,
+    "ebitda_ntm_mn": 992.5,
+    "lpa_ntm": 1.963,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [
+    {
+     "fonte": "Bradesco BBI (antigo)",
+     "metrica": "lucro_liquido",
+     "ano": 2026,
+     "valor_mn": 486,
+     "base": "n/d",
+     "data": "2025-10",
+     "url": "research/notes/SBFG3.md"
+    }
+   ],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 8664.8,
+     "2027": 9011.4
+    },
+    "ebitda": {
+     "2026": 1213.1,
+     "2027": 1198.5
+    },
+    "lucro_controlador": {
+     "2026": 403.3,
+     "2027": 320.4
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.0871,
+    "ebitda_2026_estudo_vs_consenso": 0.1177,
+    "receita_2026_estudo_vs_consenso": -0.0135,
+    "lucro_2027_estudo_vs_ntm": null,
+    "ebitda_2027_estudo_vs_ntm": 0.2076,
+    "lucro_ntm_implicito_lpa_mn": 453.0,
+    "lucro_2027_estudo_vs_ntm_implicito": -0.2924,
+    "classificacao_lucro_2026": "alinhado",
+    "classificacao_lucro_2027": "abaixo"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 6.44,
+    "valor_justo_ke15": 9.79,
+    "ke_que_iguala_mediana_do_consenso": 0.1076,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "Ke + premissas",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.12,
+     0.04,
+     0.07,
+     0.075,
+     0.07
+    ],
+    "margem_ebitda": [
+     0.14,
+     0.133,
+     0.137,
+     0.14,
+     0.14
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 6.0,
+     "ev_ebitda": 4.5
+    }
+   },
+   "explicacao": "Ke mais lucro de 2027 menor. Em 2026 o estudo fica perto do consenso (lucro −9%; EBITDA +12%, diferença de critério de IFRS 16). Para 2027 projeta queda do lucro (R$ 320 mi, contra R$ 403 mi em 2026), pela base forte da Copa em 2026, receita de +4%, margem de 14,0% → 13,3% e alíquota de IR de 0% → 20%. Isso fica ~29% abaixo do NTM implícito no LPA; a XP já tinha cortado o lucro de 2027 em 12–13% e vê P/L de 4,5x. A Ke 15% o motor dá R$ 9,8, contra mediana de R$ 16 (só 7 casas, 6 em compra).",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://www.moneytimes.com.br/grupo-sbf-sbfg3-safra-ve-relacao-risco-retorno-cada-vez-mais-favoravel-veja-o-que-fazer-com-a-acao-lmrs/",
+    "https://www.seudinheiro.com/2026/empresas/camisa-da-selecao-brasileira-esgota-e-reforca-aposta-da-xp-no-grupo-sbf-sbfg3-dono-da-centauro-e-da-nike-no-brasil-lvgb/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-SBFG3/forecast/",
+    "research/notes/SBFG3.md"
+   ]
+  },
+  {
+   "ticker": "CEAB3",
+   "nome": "CEA MODAS",
+   "preco_ref": 7.35,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 13.84,
+   "valor_justo_estudo": 7.1964,
+   "upside_estudo": -0.0209,
+   "tir_implicita_estudo": 0.2109,
+   "consenso_mediano": 17,
+   "consenso_medio": 16.77,
+   "faixa": [
+    13.5,
+    19
+   ],
+   "n_analistas": 11,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-CEAB3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 11,
+    "sobreponderar": 0,
+    "neutra": 0,
+    "subponderar": 0,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1
+   },
+   "recomendacao": "11 compra, 0 sobreponderar, 0 neutra, 0 subponderar, 0 venda (FactSet, n=11)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=11)": 17,
+    "FactSet/TradingView (média, n=11)": 16.77,
+    "XP (2026-10-19)": 17.0,
+    "BTG Pactual (2026-08-05)": 19.0,
+    "Citi (2026-08-05)": 18.0,
+    "Bradesco BBI (2026-08-05)": 16.0,
+    "Safra (2026-08-05)": 15.5
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "XP",
+     "recomendacao": "compra",
+     "alvo": 17.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-10-19",
+     "url": "https://www.moneytimes.com.br/acoes-do-varejo-de-moda-estao-baratas-xp-ve-gatilho-para-renner-lren3-ca-ceab3-e-riachuelo-riaa3-lmrs/",
+     "verificado": true,
+     "obs": "lucro de 2027 cortado em 2%"
+    },
+    {
+     "casa": "BTG Pactual",
+     "recomendacao": "compra",
+     "alvo": 19.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-08-05",
+     "url": "https://www.moneytimes.com.br/ca-ceab3-cai-mais-de-7-com-falta-de-consenso-entre-analistas-sobre-o-balanco-o-que-fazer-com-as-acoes-agora-lils/",
+     "verificado": true,
+     "obs": "pós-2T26"
+    },
+    {
+     "casa": "Citi",
+     "recomendacao": "compra/alto risco",
+     "alvo": 18.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-08-05",
+     "url": "https://www.moneytimes.com.br/ca-ceab3-cai-mais-de-7-com-falta-de-consenso-entre-analistas-sobre-o-balanco-o-que-fazer-com-as-acoes-agora-lils/",
+     "verificado": true,
+     "obs": "pós-2T26"
+    },
+    {
+     "casa": "Bradesco BBI",
+     "recomendacao": "compra",
+     "alvo": 16.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-08-05",
+     "url": "https://www.moneytimes.com.br/ca-ceab3-cai-mais-de-7-com-falta-de-consenso-entre-analistas-sobre-o-balanco-o-que-fazer-com-as-acoes-agora-lils/",
+     "verificado": true,
+     "obs": "pós-2T26"
+    },
+    {
+     "casa": "Safra",
+     "recomendacao": "compra",
+     "alvo": 15.5,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-08-05",
+     "url": "https://www.moneytimes.com.br/ca-ceab3-cai-mais-de-7-com-falta-de-consenso-entre-analistas-sobre-o-balanco-o-que-fazer-com-as-acoes-agora-lils/",
+     "verificado": true,
+     "obs": "pós-2T26"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 17.0,
+   "estudo_vs_consenso": -0.5767,
+   "classificacao": "abaixo",
+   "upside_consenso": 1.3129,
+   "consenso_lucro": {
+    "lucro_2026_mn": 501.9,
+    "ebitda_2026_mn": 1520.1,
+    "receita_2026_mn": 8289.3,
+    "lpa_2026": 1.715,
+    "dpa_2026": 0.443,
+    "lucro_ntm_mn": 503.6,
+    "ebitda_ntm_mn": 1611.8,
+    "lpa_ntm": 1.544,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [
+    {
+     "fonte": "UBS BB (pré-eleição)",
+     "metrica": "lucro_liquido",
+     "ano": 2027,
+     "valor_mn": 566,
+     "base": "n/d",
+     "data": "2026-08/10 (pré-eleição)",
+     "url": "research/notes/CEAB3.md"
+    },
+    {
+     "fonte": "Bradesco BBI/Ágora (pré-eleição)",
+     "metrica": "lucro_liquido",
+     "ano": 2027,
+     "valor_mn": 640,
+     "base": "aprox.",
+     "data": "2026-08-27",
+     "url": "https://acionista.com.br/wp-content/uploads/2026/08/20260827-cfn-ceab3-3e31ec96-462f-447c-a662-5067cae02831.pdf"
+    }
+   ],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 8190.5,
+     "2027": 8722.9
+    },
+    "ebitda": {
+     "2026": 1597.2,
+     "2027": 1701.0
+    },
+    "lucro_controlador": {
+     "2026": 481.8,
+     "2027": 511.6
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.04,
+    "ebitda_2026_estudo_vs_consenso": 0.0507,
+    "receita_2026_estudo_vs_consenso": -0.0119,
+    "lucro_2027_estudo_vs_ntm": 0.0159,
+    "ebitda_2027_estudo_vs_ntm": 0.0553,
+    "classificacao_lucro_2026": "alinhado",
+    "classificacao_lucro_2027": "alinhado"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 9.34,
+    "valor_justo_ke15": 13.44,
+    "ke_que_iguala_mediana_do_consenso": 0.1264,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "Ke (o motor chega ao consenso com Ke de ~12–15%)",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.026,
+     0.065,
+     0.08,
+     0.08,
+     0.075
+    ],
+    "margem_ebitda": [
+     0.195,
+     0.195,
+     0.2,
+     0.203,
+     0.205
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 7.0,
+     "ev_ebitda": 3.8
+    }
+   },
+   "explicacao": "A diferença é sobretudo Ke. Lucro 2026E −4%, lucro 2027E +2% contra o NTM e EBITDA +5%. Fica abaixo, porém, das estimativas pré-eleição de 2027 do UBS (R$ 566 mi) e do BBI (~R$ 640 mi). A Ke 15% o motor dá R$ 13,4, e o motor chega à mediana com Ke de ~12,6%. O valor justo ≈ preço (−2%): o estudo vê o papel 'no preço' para 25%, e o consenso (11 compra) vê +131%.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://acionista.com.br/wp-content/uploads/2026/08/20260827-cfn-ceab3-3e31ec96-462f-447c-a662-5067cae02831.pdf",
+    "https://www.moneytimes.com.br/acoes-do-varejo-de-moda-estao-baratas-xp-ve-gatilho-para-renner-lren3-ca-ceab3-e-riachuelo-riaa3-lmrs/",
+    "https://www.moneytimes.com.br/ca-ceab3-cai-mais-de-7-com-falta-de-consenso-entre-analistas-sobre-o-balanco-o-que-fazer-com-as-acoes-agora-lils/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-CEAB3/forecast/",
+    "research/notes/CEAB3.md"
+   ]
+  },
+  {
+   "ticker": "LREN3",
+   "nome": "LOJAS RENNER",
+   "preco_ref": 9.51,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 14.58,
+   "valor_justo_estudo": 9.0618,
+   "upside_estudo": -0.0471,
+   "tir_implicita_estudo": 0.2012,
+   "consenso_mediano": 17,
+   "consenso_medio": 16.62,
+   "faixa": [
+    13,
+    20
+   ],
+   "n_analistas": 13,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-LREN3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 8,
+    "sobreponderar": 0,
+    "neutra": 4,
+    "subponderar": 1,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.42
+   },
+   "recomendacao": "8 compra, 0 sobreponderar, 4 neutra, 1 subponderar, 0 venda (FactSet, n=13)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=13)": 17,
+    "FactSet/TradingView (média, n=13)": 16.62,
+    "XP (2026-10-19)": 18.0,
+    "Safra (2026-08-31)": 15.0,
+    "Itaú BBA (2026-06)": 18.0,
+    "Ativa (2026-06)": 18.0
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "XP",
+     "recomendacao": "compra",
+     "alvo": 18.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-10-19",
+     "url": "https://www.moneytimes.com.br/acoes-do-varejo-de-moda-estao-baratas-xp-ve-gatilho-para-renner-lren3-ca-ceab3-e-riachuelo-riaa3-lmrs/",
+     "verificado": true,
+     "obs": "lucro de 2027 cortado em 13%"
+    },
+    {
+     "casa": "Safra",
+     "recomendacao": "compra (outperform)",
+     "alvo": 15.0,
+     "alvo_anterior": 20.5,
+     "horizonte": null,
+     "data": "2026-08-31",
+     "url": "https://www.moneytimes.com.br/smart-fit-lojas-renner-vivara-natura-safra-ajusta-preco-alvo-e-recomenda-compra-para-duas-varejistas-mlem/",
+     "verificado": true,
+     "obs": "crescimento da receita de varejo cortado para 4–8% (de 9–13%)"
+    },
+    {
+     "casa": "Itaú BBA",
+     "recomendacao": "compra (elevada de neutra)",
+     "alvo": 18.0,
+     "alvo_anterior": 16.0,
+     "horizonte": "fim de 2026",
+     "data": "2026-06",
+     "url": "https://www.moneytimes.com.br/lojas-renner-lren3-itau-bba-eleva-preco-alvo-e-recomenda-compra-mas-indica-preferencia-por-outro-nome-do-setor-lmrs/",
+     "verificado": false,
+     "obs": "lucro 2026–27 elevado em 4%; só no resumo da busca"
+    },
+    {
+     "casa": "Ativa",
+     "recomendacao": "compra",
+     "alvo": 18.0,
+     "alvo_anterior": 19.0,
+     "horizonte": "fim de 2026",
+     "data": "2026-06",
+     "url": "https://acionista.com.br/wp-content/uploads/2026/06/LREN3-Atualizacao-de-estimativas.pdf",
+     "verificado": false,
+     "obs": "só no resumo da busca"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 18.0,
+   "estudo_vs_consenso": -0.467,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.7876,
+   "consenso_lucro": {
+    "lucro_2026_mn": 1493.7,
+    "ebitda_2026_mn": 2916.6,
+    "receita_2026_mn": 16102.6,
+    "lpa_2026": 1.541,
+    "dpa_2026": 0.947,
+    "lucro_ntm_mn": 1499.2,
+    "ebitda_ntm_mn": 2967.1,
+    "lpa_ntm": 1.527,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 16383.5,
+     "2027": 17530.3
+    },
+    "ebitda": {
+     "2026": 3145.6,
+     "2027": 3418.4
+    },
+    "lucro_controlador": {
+     "2026": 1464.2,
+     "2027": 1591.3
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.0197,
+    "ebitda_2026_estudo_vs_consenso": 0.0785,
+    "receita_2026_estudo_vs_consenso": 0.0174,
+    "lucro_2027_estudo_vs_ntm": 0.0614,
+    "ebitda_2027_estudo_vs_ntm": 0.1521,
+    "classificacao_lucro_2026": "alinhado",
+    "classificacao_lucro_2027": "alinhado"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 10.77,
+    "valor_justo_ke15": 14.17,
+    "ke_que_iguala_mediana_do_consenso": 0.128,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "Ke (o motor chega ao consenso com Ke de ~12–15%)",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.035,
+     0.07,
+     0.08,
+     0.08,
+     0.075
+    ],
+    "margem_ebitda": [
+     0.192,
+     0.195,
+     0.198,
+     0.201,
+     0.203
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 9.0,
+     "ev_ebitda": 5.0
+    }
+   },
+   "explicacao": "A diferença é sobretudo Ke, e é a menor do grupo (−47%). Lucro 2026E −2%, lucro 2027E +6% contra o NTM, EBITDA +8% (critério de IFRS 16). A Ke 15% o motor dá R$ 14,2, e chega à mediana de R$ 17 com Ke de ~12,8%. Os alvos são pré-choque, mas já vinham caindo: a XP (19/10) cortou o lucro de 2027 em 13% e o Safra (31/08) baixou o alvo de R$ 20,50 para R$ 15.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://acionista.com.br/wp-content/uploads/2026/06/LREN3-Atualizacao-de-estimativas.pdf",
+    "https://www.moneytimes.com.br/acoes-do-varejo-de-moda-estao-baratas-xp-ve-gatilho-para-renner-lren3-ca-ceab3-e-riachuelo-riaa3-lmrs/",
+    "https://www.moneytimes.com.br/lojas-renner-lren3-itau-bba-eleva-preco-alvo-e-recomenda-compra-mas-indica-preferencia-por-outro-nome-do-setor-lmrs/",
+    "https://www.moneytimes.com.br/smart-fit-lojas-renner-vivara-natura-safra-ajusta-preco-alvo-e-recomenda-compra-para-duas-varejistas-mlem/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-LREN3/forecast/"
+   ]
+  },
+  {
+   "ticker": "AZZA3",
+   "nome": "AZZAS 2154",
+   "preco_ref": 16.5,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 25.52,
+   "valor_justo_estudo": 6.8991,
+   "upside_estudo": -0.5819,
+   "tir_implicita_estudo": 0.1268,
+   "consenso_mediano": 27.5,
+   "consenso_medio": 26.21,
+   "faixa": [
+    14,
+    40
+   ],
+   "n_analistas": 12,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-AZZA3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 7,
+    "sobreponderar": 0,
+    "neutra": 4,
+    "subponderar": 1,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.46
+   },
+   "recomendacao": "7 compra, 0 sobreponderar, 4 neutra, 1 subponderar, 0 venda (FactSet, n=12)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=12)": 27.5,
+    "FactSet/TradingView (média, n=12)": 26.21,
+    "BTG Pactual (2026-08-13)": 40.0,
+    "UBS BB (2026-04)": 25.0,
+    "Citi (2026-01)": 28.0,
+    "JPMorgan (2026 (n/d))": 24.6
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "BTG Pactual",
+     "recomendacao": "compra",
+     "alvo": 40.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-08-13",
+     "url": "https://mercadoeconsumo.com.br/13/08/2026/mc-capital/azzas-2154-btg-mantem-compra-mas-aguarda-sinais-de-normalizacao-das-vendas-apos-2t-fraco/amp/",
+     "verificado": false,
+     "obs": "anterior à cisão (fato relevante de 02/09/2026); também no dossiê"
+    },
+    {
+     "casa": "UBS BB",
+     "recomendacao": "neutra (rebaixada de compra)",
+     "alvo": 25.0,
+     "alvo_anterior": 33.0,
+     "horizonte": null,
+     "data": "2026-04",
+     "url": "https://www.moneytimes.com.br/azzas-2154-azza3-ubs-bb-rebaixa-varejista-e-corta-preco-alvo-de-olho-na-pressao-sobre-a-receita-veja-lmrs/",
+     "verificado": false,
+     "obs": "só no resumo da busca"
+    },
+    {
+     "casa": "Citi",
+     "recomendacao": "neutra/alto risco (rebaixada de compra)",
+     "alvo": 28.0,
+     "alvo_anterior": 45.0,
+     "horizonte": null,
+     "data": "2026-01",
+     "url": "https://www.moneytimes.com.br/azzas-2154-azza3-citi-corta-r-17-do-preco-alvo-e-rebaixa-acao-o-que-preocupa-lmrs/",
+     "verificado": false,
+     "obs": "só no resumo da busca"
+    },
+    {
+     "casa": "JPMorgan",
+     "recomendacao": "neutra (equal-weight)",
+     "alvo": 24.6,
+     "alvo_anterior": 36.0,
+     "horizonte": null,
+     "data": "2026 (n/d)",
+     "url": "https://acionista.com.br/azzas-2154-azza3-tem-preco-alvo-cortado-em-36-pelo-jpmorgan/",
+     "verificado": false,
+     "obs": "LPA 2026E cortado em 36%; página devolveu 403"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 26.5,
+   "estudo_vs_consenso": -0.7491,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.6667,
+   "consenso_lucro": {
+    "lucro_2026_mn": 480.7,
+    "ebitda_2026_mn": 1574.6,
+    "receita_2026_mn": 11486.3,
+    "lpa_2026": 2.336,
+    "dpa_2026": 0.78,
+    "lucro_ntm_mn": 280.9,
+    "ebitda_ntm_mn": 1532.6,
+    "lpa_ntm": 1.973,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 11181.2,
+     "2027": 11628.5
+    },
+    "ebitda": {
+     "2026": 983.9,
+     "2027": 1221.0
+    },
+    "lucro_controlador": {
+     "2026": -63.9,
+     "2027": 148.7
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": null,
+    "ebitda_2026_estudo_vs_consenso": -0.3751,
+    "receita_2026_estudo_vs_consenso": -0.0266,
+    "lucro_2027_estudo_vs_ntm": -0.4706,
+    "ebitda_2027_estudo_vs_ntm": -0.2033,
+    "obs": "sinais opostos ou base ≤ 0: estudo -64 vs consenso 481 (R$ mi)",
+    "classificacao_lucro_2026": "abaixo",
+    "classificacao_lucro_2027": "abaixo"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 9.78,
+    "valor_justo_ke15": 15.1,
+    "ke_que_iguala_mediana_do_consenso": 0.1018,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "Ke + premissas",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     -0.054,
+     0.04,
+     0.06,
+     0.06,
+     0.06
+    ],
+    "margem_ebitda": [
+     0.088,
+     0.105,
+     0.115,
+     0.12,
+     0.125
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 10.0,
+     "ev_ebitda": 5.0
+    }
+   },
+   "explicacao": "Premissas, Ke e cisão. O estudo projeta prejuízo em 2026 (−R$ 64 mi, contra +R$ 481 mi do consenso), porque não reconhece crédito de IR diferido (alíquota mínima de 0%) e trata MDR e AVP como custo. O EBITDA do estudo é 'econômico', líquido de MDR e AVP (~3 p.p. da receita); daí fica 38% abaixo do consenso em 2026, com receita de −5,4%. O lucro 2027E fica 47% abaixo do NTM. A Ke 15% o motor dá R$ 15,1, e chega à mediana de R$ 27,5 com Ke de ~10%. Os alvos mais altos são de antes da cisão (BTG R$ 40, 13/08); UBS (abr), Citi (jan) e JPMorgan foram para neutro, com alvos de R$ 24,60–28.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://acionista.com.br/azzas-2154-azza3-tem-preco-alvo-cortado-em-36-pelo-jpmorgan/",
+    "https://mercadoeconsumo.com.br/13/08/2026/mc-capital/azzas-2154-btg-mantem-compra-mas-aguarda-sinais-de-normalizacao-das-vendas-apos-2t-fraco/amp/",
+    "https://www.moneytimes.com.br/azzas-2154-azza3-citi-corta-r-17-do-preco-alvo-e-rebaixa-acao-o-que-preocupa-lmrs/",
+    "https://www.moneytimes.com.br/azzas-2154-azza3-ubs-bb-rebaixa-varejista-e-corta-preco-alvo-de-olho-na-pressao-sobre-a-receita-veja-lmrs/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-AZZA3/forecast/"
+   ]
+  },
+  {
+   "ticker": "VIVA3",
+   "nome": "VIVARA S.A.",
+   "preco_ref": 19.47,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 27.03,
+   "valor_justo_estudo": 13.3123,
+   "upside_estudo": -0.3163,
+   "tir_implicita_estudo": 0.1537,
+   "consenso_mediano": 32,
+   "consenso_medio": 32.67,
+   "faixa": [
+    29,
+    38
+   ],
+   "n_analistas": 12,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-VIVA3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 10,
+    "sobreponderar": 0,
+    "neutra": 2,
+    "subponderar": 0,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.17
+   },
+   "recomendacao": "10 compra, 0 sobreponderar, 2 neutra, 0 subponderar, 0 venda (FactSet, n=12)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=12)": 32,
+    "FactSet/TradingView (média, n=12)": 32.67,
+    "Safra (2026-08-31)": 23.0,
+    "XP (2026-06-17)": 35.0
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "Safra",
+     "recomendacao": "neutra",
+     "alvo": 23.0,
+     "alvo_anterior": 24.0,
+     "horizonte": null,
+     "data": "2026-08-31",
+     "url": "https://www.moneytimes.com.br/smart-fit-lojas-renner-vivara-natura-safra-ajusta-preco-alvo-e-recomenda-compra-para-duas-varejistas-mlem/",
+     "verificado": true,
+     "obs": "P/L 2027E 7,8x"
+    },
+    {
+     "casa": "XP",
+     "recomendacao": "n/d (compra em notas anteriores)",
+     "alvo": 35.0,
+     "alvo_anterior": 38.0,
+     "horizonte": null,
+     "data": "2026-06-17",
+     "url": "https://www.moneytimes.com.br/xp-corta-preco-alvo-e-perspectiva-de-lucro-para-vivara-viva3-destacando-tres-fatores-de-pressao-para-empresa-rens/",
+     "verificado": true,
+     "obs": "lucro 2026–27 cortado em 6,5–12%; EBITDA ajustado em 5–7%"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 29.0,
+   "estudo_vs_consenso": -0.584,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.6436,
+   "consenso_lucro": {
+    "lucro_2026_mn": 609.3,
+    "ebitda_2026_mn": 897.2,
+    "receita_2026_mn": 3336.5,
+    "lpa_2026": 2.571,
+    "dpa_2026": 0.413,
+    "lucro_ntm_mn": 629.4,
+    "ebitda_ntm_mn": 947.2,
+    "lpa_ntm": 2.57,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 3329.2,
+     "2027": 3628.9
+    },
+    "ebitda": {
+     "2026": 925.5,
+     "2027": 997.9
+    },
+    "lucro_controlador": {
+     "2026": 534.5,
+     "2027": 590.5
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.1228,
+    "ebitda_2026_estudo_vs_consenso": 0.0315,
+    "receita_2026_estudo_vs_consenso": -0.0022,
+    "lucro_2027_estudo_vs_ntm": -0.0618,
+    "ebitda_2027_estudo_vs_ntm": 0.0535,
+    "classificacao_lucro_2026": "abaixo",
+    "classificacao_lucro_2027": "alinhado"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 16.09,
+    "valor_justo_ke15": 21.59,
+    "ke_que_iguala_mediana_do_consenso": 0.1105,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "Ke + premissas",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.1,
+     0.09,
+     0.09,
+     0.08,
+     0.07
+    ],
+    "margem_ebitda": [
+     0.278,
+     0.275,
+     0.28,
+     0.28,
+     0.28
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 9.5,
+     "ev_ebitda": 6.5
+    }
+   },
+   "explicacao": "Ke mais lucro um pouco menor. Lucro 2026E −12%, lucro 2027E −6% contra o NTM, EBITDA +3%. A Ke 15% o motor dá R$ 21,6, abaixo da mediana de R$ 32; o Ke implícito é de ~11%. Também pesa o P/L-alvo de 9,5x, contra ~11x pré-eleição. O alvo mais perto do estudo é o do Safra (neutro, R$ 23, 31/08).",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://www.moneytimes.com.br/smart-fit-lojas-renner-vivara-natura-safra-ajusta-preco-alvo-e-recomenda-compra-para-duas-varejistas-mlem/",
+    "https://www.moneytimes.com.br/xp-corta-preco-alvo-e-perspectiva-de-lucro-para-vivara-viva3-destacando-tres-fatores-de-pressao-para-empresa-rens/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-VIVA3/forecast/"
+   ]
+  },
+  {
+   "ticker": "VULC3",
+   "nome": "VULCABRAS",
+   "preco_ref": 12.49,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 15.96,
+   "valor_justo_estudo": 9.7049,
+   "upside_estudo": -0.223,
+   "tir_implicita_estudo": 0.1743,
+   "consenso_mediano": 20.5,
+   "consenso_medio": 21,
+   "faixa": [
+    18,
+    25
+   ],
+   "n_analistas": 6,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-VULC3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 5,
+    "sobreponderar": 0,
+    "neutra": 1,
+    "subponderar": 0,
+    "venda": 0,
+    "nota_media_1_compra_3_venda": 1.17
+   },
+   "recomendacao": "5 compra, 0 sobreponderar, 1 neutra, 0 subponderar, 0 venda (FactSet, n=6)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=6)": 20.5,
+    "FactSet/TradingView (média, n=6)": 21,
+    "Itaú BBA (2026-08-05)": 20.0,
+    "Santander (2026-08-05)": 26.0,
+    "Consenso Bloomberg (via Monte Bravo) (2026-05)": 22.6
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "Itaú BBA",
+     "recomendacao": "outperform",
+     "alvo": 20.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-08-05",
+     "url": "https://www.moneytimes.com.br/vulcabras-vulc3-ceo-explica-efeitos-da-guerra-e-da-copa-no-2t26-veja-o-que-dizem-analistas-lmrs/",
+     "verificado": true,
+     "obs": "pós-2T26"
+    },
+    {
+     "casa": "Santander",
+     "recomendacao": "outperform",
+     "alvo": 26.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-08-05",
+     "url": "https://www.moneytimes.com.br/vulcabras-vulc3-ceo-explica-efeitos-da-guerra-e-da-copa-no-2t26-veja-o-que-dizem-analistas-lmrs/",
+     "verificado": true,
+     "obs": "pós-2T26"
+    },
+    {
+     "casa": "Consenso Bloomberg (via Monte Bravo)",
+     "recomendacao": "n/d",
+     "alvo": 22.6,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-05",
+     "url": "research/notes/VULC3.md",
+     "verificado": false,
+     "obs": "agregado, citado no dossiê"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 23.0,
+   "estudo_vs_consenso": -0.5266,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.6413,
+   "consenso_lucro": {
+    "lucro_2026_mn": 575.0,
+    "ebitda_2026_mn": 830.6,
+    "receita_2026_mn": 3944.4,
+    "lpa_2026": 1.885,
+    "dpa_2026": 0.792,
+    "lucro_ntm_mn": null,
+    "ebitda_ntm_mn": null,
+    "lpa_ntm": null,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [
+    {
+     "fonte": "Itaú BBA",
+     "metrica": "lucro_liquido",
+     "ano": 2026,
+     "valor_mn": 565,
+     "base": "3,3% abaixo do consenso",
+     "data": "2026-08-05",
+     "url": "https://www.moneytimes.com.br/vulcabras-vulc3-ceo-explica-efeitos-da-guerra-e-da-copa-no-2t26-veja-o-que-dizem-analistas-lmrs/"
+    },
+    {
+     "fonte": "Itaú BBA",
+     "metrica": "lucro_liquido",
+     "ano": 2027,
+     "valor_mn": 642,
+     "base": "4,8% abaixo do consenso",
+     "data": "2026-08-05",
+     "url": "https://www.moneytimes.com.br/vulcabras-vulc3-ceo-explica-efeitos-da-guerra-e-da-copa-no-2t26-veja-o-que-dizem-analistas-lmrs/"
+    },
+    {
+     "fonte": "Consenso implícito na nota do Itaú BBA (565 / 0,967)",
+     "metrica": "lucro_liquido",
+     "ano": 2026,
+     "valor_mn": 584,
+     "base": "derivado",
+     "data": "2026-08-05",
+     "url": "https://www.moneytimes.com.br/vulcabras-vulc3-ceo-explica-efeitos-da-guerra-e-da-copa-no-2t26-veja-o-que-dizem-analistas-lmrs/"
+    },
+    {
+     "fonte": "Consenso implícito na nota do Itaú BBA (642 / 0,952)",
+     "metrica": "lucro_liquido",
+     "ano": 2027,
+     "valor_mn": 674,
+     "base": "derivado",
+     "data": "2026-08-05",
+     "url": "https://www.moneytimes.com.br/vulcabras-vulc3-ceo-explica-efeitos-da-guerra-e-da-copa-no-2t26-veja-o-que-dizem-analistas-lmrs/"
+    }
+   ],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 3916.3,
+     "2027": 4268.8
+    },
+    "ebitda": {
+     "2026": 814.6,
+     "2027": 896.4
+    },
+    "lucro_controlador": {
+     "2026": 529.0,
+     "2027": 593.0
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.08,
+    "ebitda_2026_estudo_vs_consenso": -0.0193,
+    "receita_2026_estudo_vs_consenso": -0.0071,
+    "lucro_2027_estudo_vs_ntm": null,
+    "ebitda_2027_estudo_vs_ntm": null,
+    "lucro_2027_consenso_implicito_imprensa_mn": 674,
+    "lucro_2027_estudo_vs_ntm_implicito": -0.1202,
+    "classificacao_lucro_2026": "alinhado",
+    "classificacao_lucro_2027": "abaixo"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 11.76,
+    "valor_justo_ke15": 15.86,
+    "ke_que_iguala_mediana_do_consenso": 0.1223,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "Ke (o motor chega ao consenso com Ke de ~12–15%)",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.1,
+     0.09,
+     0.08,
+     0.07,
+     0.065
+    ],
+    "margem_ebitda": [
+     0.208,
+     0.21,
+     0.215,
+     0.215,
+     0.215
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 8.0,
+     "ev_ebitda": 6.0
+    }
+   },
+   "explicacao": "Ke mais crescimento um pouco menor. Lucro 2026E −8% contra a FactSet e −6% contra o Itaú BBA (R$ 565 mi). O lucro 2027E (R$ 593 mi) fica 12% abaixo do consenso implícito na nota do Itaú BBA (~R$ 674 mi) e 8% abaixo do próprio Itaú BBA (R$ 642 mi). A Ke 15% o motor dá R$ 15,9, e chega à mediana de R$ 20,5 com Ke de ~12%. Só 6 casas cobrem o papel.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://www.moneytimes.com.br/vulcabras-vulc3-ceo-explica-efeitos-da-guerra-e-da-copa-no-2t26-veja-o-que-dizem-analistas-lmrs/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-VULC3/forecast/",
+    "research/notes/VULC3.md"
+   ]
+  },
+  {
+   "ticker": "ALPA4",
+   "nome": "ALPARGATAS",
+   "preco_ref": 12.99,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 16.94,
+   "valor_justo_estudo": 6.5267,
+   "upside_estudo": -0.4976,
+   "tir_implicita_estudo": 0.1128,
+   "consenso_mediano": 17.5,
+   "consenso_medio": 18.21,
+   "faixa": [
+    15,
+    21
+   ],
+   "n_analistas": 7,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-ALPA4/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 2,
+    "sobreponderar": 0,
+    "neutra": 4,
+    "subponderar": 0,
+    "venda": 1,
+    "nota_media_1_compra_3_venda": 1.86
+   },
+   "recomendacao": "2 compra, 0 sobreponderar, 4 neutra, 0 subponderar, 1 venda (FactSet, n=7)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=7)": 17.5,
+    "FactSet/TradingView (média, n=7)": 18.21,
+    "Genial (2026-09 (ref. 08/09/2026))": 14.0,
+    "BofA (2026-01)": 16.0
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "Genial",
+     "recomendacao": "neutra (início de cobertura)",
+     "alvo": 14.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-09 (ref. 08/09/2026)",
+     "url": "https://analisa.genialinvestimentos.com.br/acoes/ALPA4/Alpargatas-ALPA4--Iniciacao-de-Cobertura-Reconstrucao-do-Internacional-tese-real-mas-ja-precificado",
+     "verificado": false,
+     "obs": "FCFE com Ke de 14,2% e g real de 2,5%; só no resumo da busca"
+    },
+    {
+     "casa": "BofA",
+     "recomendacao": "compra (elevada de neutra)",
+     "alvo": 16.0,
+     "alvo_anterior": 13.0,
+     "horizonte": null,
+     "data": "2026-01",
+     "url": "https://www.moneytimes.com.br/alpargatas-alpa4-bofa-eleva-acao-para-compra-e-aponta-3-motivos-para-ficar-na-dona-da-havaianas-lmrs/",
+     "verificado": false,
+     "obs": "só no resumo da busca"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 15.0,
+   "estudo_vs_consenso": -0.627,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.3472,
+   "consenso_lucro": {
+    "lucro_2026_mn": 713.2,
+    "ebitda_2026_mn": 1102.8,
+    "receita_2026_mn": 4981.7,
+    "lpa_2026": 1.058,
+    "dpa_2026": 0.655,
+    "lucro_ntm_mn": 821.4,
+    "ebitda_ntm_mn": 1226.7,
+    "lpa_ntm": 1.225,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 5044.2,
+     "2027": 5498.2
+    },
+    "ebitda": {
+     "2026": 1084.5,
+     "2027": 1182.1
+    },
+    "lucro_controlador": {
+     "2026": 648.6,
+     "2027": 700.7
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.0906,
+    "ebitda_2026_estudo_vs_consenso": -0.0166,
+    "receita_2026_estudo_vs_consenso": 0.0125,
+    "lucro_2027_estudo_vs_ntm": -0.1469,
+    "ebitda_2027_estudo_vs_ntm": -0.0364,
+    "classificacao_lucro_2026": "alinhado",
+    "classificacao_lucro_2027": "abaixo"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 7.6,
+    "valor_justo_ke15": 9.74,
+    "ke_que_iguala_mediana_do_consenso": 0.0947,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "Ke + premissas",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     0.105,
+     0.09,
+     0.075,
+     0.07,
+     0.065
+    ],
+    "margem_ebitda": [
+     0.215,
+     0.215,
+     0.215,
+     0.215,
+     0.215
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 11.0,
+     "ev_ebitda": 7.5
+    }
+   },
+   "explicacao": "Ke mais premissas. Lucro 2026E −9% e lucro 2027E −15% contra o NTM: o estudo mantém a margem EBITDA estável em 21,5% e usa P/L-alvo de 11x. A Genial, que explicita Ke de 14,2% e g real de 2,5%, chega a R$ 14 (neutra); o motor do estudo daria R$ 9,7 a Ke 15%. Logo, além do Ke, o estudo é mais conservador que as casas no lucro. O consenso é morno: 2 compra, 4 neutra, 1 venda; a mediana de R$ 17,5 vem de só 7 casas.",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://analisa.genialinvestimentos.com.br/acoes/ALPA4/Alpargatas-ALPA4--Iniciacao-de-Cobertura-Reconstrucao-do-Internacional-tese-real-mas-ja-precificado",
+    "https://www.moneytimes.com.br/alpargatas-alpa4-bofa-eleva-acao-para-compra-e-aponta-3-motivos-para-ficar-na-dona-da-havaianas-lmrs/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-ALPA4/forecast/"
+   ]
+  },
+  {
+   "ticker": "NATU3",
+   "nome": "NATURA",
+   "preco_ref": 5.66,
+   "preco_ref_obs": "foto do estudo em 26/10/2026 (~11h50, B3)",
+   "fechamento_23_10": 7.9,
+   "valor_justo_estudo": 2.8059,
+   "upside_estudo": -0.5043,
+   "tir_implicita_estudo": 0.1264,
+   "consenso_mediano": 10,
+   "consenso_medio": 10.19,
+   "faixa": [
+    7,
+    17.3
+   ],
+   "n_analistas": 12,
+   "consenso_fonte": "FactSet via TradingView, alvos de 12 meses das casas com recomendação nos últimos 3 meses; consultado em 26/10/2026 ~15h50 (https://www.tradingview.com/symbols/BMFBOVESPA-NATU3/forecast/)",
+   "recomendacoes_consenso": {
+    "compra": 1,
+    "sobreponderar": 0,
+    "neutra": 10,
+    "subponderar": 0,
+    "venda": 1,
+    "nota_media_1_compra_3_venda": 2
+   },
+   "recomendacao": "1 compra, 0 sobreponderar, 10 neutra, 0 subponderar, 1 venda (FactSet, n=12)",
+   "alvos": {
+    "FactSet/TradingView (mediana, n=12)": 10,
+    "FactSet/TradingView (média, n=12)": 10.19,
+    "JPMorgan (2026-09-30)": 8.5,
+    "Safra (2026-08-31)": 8.5,
+    "Itaú BBA (2026-08-11)": 10.0,
+    "Citi (2026-08-11)": 10.0,
+    "BTG Pactual (2026-08-11)": 12.0,
+    "XP (2026-05)": 13.5
+   },
+   "alvos_detalhe": [
+    {
+     "casa": "JPMorgan",
+     "recomendacao": "neutra (rebaixada de overweight)",
+     "alvo": 8.5,
+     "alvo_anterior": 11.0,
+     "horizonte": "dez/2027",
+     "data": "2026-09-30",
+     "url": "https://bpmoney.com.br/?p=423651",
+     "verificado": true,
+     "obs": "P/L-alvo de 7x 2027E e 6x 2028E; LPA cortado em ~15%"
+    },
+    {
+     "casa": "Safra",
+     "recomendacao": "neutra",
+     "alvo": 8.5,
+     "alvo_anterior": 9.0,
+     "horizonte": null,
+     "data": "2026-08-31",
+     "url": "https://www.moneytimes.com.br/smart-fit-lojas-renner-vivara-natura-safra-ajusta-preco-alvo-e-recomenda-compra-para-duas-varejistas-mlem/",
+     "verificado": true,
+     "obs": "P/L 2027E 9,5x"
+    },
+    {
+     "casa": "Itaú BBA",
+     "recomendacao": "n/d",
+     "alvo": 10.0,
+     "alvo_anterior": 10.0,
+     "horizonte": null,
+     "data": "2026-08-11",
+     "url": "https://bpmoney.com.br/?p=416173",
+     "verificado": true,
+     "obs": "alvo mantido pós-2T26"
+    },
+    {
+     "casa": "Citi",
+     "recomendacao": "neutra",
+     "alvo": 10.0,
+     "alvo_anterior": 12.0,
+     "horizonte": null,
+     "data": "2026-08-11",
+     "url": "https://bpmoney.com.br/?p=416173",
+     "verificado": true,
+     "obs": "corte de R$ 12 para R$ 10 em jul/26"
+    },
+    {
+     "casa": "BTG Pactual",
+     "recomendacao": "n/d",
+     "alvo": 12.0,
+     "alvo_anterior": null,
+     "horizonte": null,
+     "data": "2026-08-11",
+     "url": "https://bpmoney.com.br/?p=416173",
+     "verificado": true,
+     "obs": "pós-2T26"
+    },
+    {
+     "casa": "XP",
+     "recomendacao": "compra",
+     "alvo": 13.5,
+     "alvo_anterior": 14.0,
+     "horizonte": null,
+     "data": "2026-05",
+     "url": "https://www.moneytimes.com.br/natura-natu3-xp-passa-a-tesoura-no-preco-alvo-e-acao-recua-2-ainda-vale-comprar-apsa/",
+     "verificado": false,
+     "obs": "pós-1T26; só no resumo da busca"
+    }
+   ],
+   "mediana_alvos_imprensa_2026": 10.0,
+   "estudo_vs_consenso": -0.7194,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.7668,
+   "consenso_lucro": {
+    "lucro_2026_mn": 235.3,
+    "ebitda_2026_mn": 2724.2,
+    "receita_2026_mn": 21456.0,
+    "lpa_2026": 0.102,
+    "dpa_2026": 0.162,
+    "lucro_ntm_mn": null,
+    "ebitda_ntm_mn": 2879.4,
+    "lpa_ntm": 0.757,
+    "fonte": "FactSet via TradingView (scanner.tradingview.com, campos *_estimate_fy e *_ntm)",
+    "data": "2026-10-26",
+    "nota": "FY = exercício 2026; NTM = próximos 12 meses (nov/26–out/27, ~80% de 2027), usado como proxy de 2027. Base (ajustado/reportado) não informada pela fonte; mistura casas que cobrem lucro e EBITDA com definições diferentes."
+   },
+   "estimativas_imprensa": [],
+   "projecoes_estudo_mn": {
+    "receita": {
+     "2026": 20841.4,
+     "2027": 22091.9
+    },
+    "ebitda": {
+     "2026": 2250.9,
+     "2027": 2651.0
+    },
+    "lucro_controlador": {
+     "2026": 152.3,
+     "2027": 420.1
+    }
+   },
+   "comparacao_lucro": {
+    "lucro_2026_estudo_vs_consenso": -0.3527,
+    "ebitda_2026_estudo_vs_consenso": -0.1737,
+    "receita_2026_estudo_vs_consenso": -0.0286,
+    "lucro_2027_estudo_vs_ntm": null,
+    "ebitda_2027_estudo_vs_ntm": -0.0793,
+    "lucro_ntm_implicito_lpa_mn": 1040.0,
+    "lucro_2027_estudo_vs_ntm_implicito": -0.5962,
+    "classificacao_lucro_2026": "abaixo",
+    "classificacao_lucro_2027": "abaixo"
+   },
+   "sensibilidade_ke_motor": {
+    "valor_justo_ke20": 3.71,
+    "valor_justo_ke15": 5.37,
+    "ke_que_iguala_mediana_do_consenso": 0.0972,
+    "obs": "motor do estudo (pipeline/model.py) rodado em memória com as mesmas premissas, mudando só o Ke (WACC derivado); sem gravar arquivos"
+   },
+   "principal_fator": "Ke + premissas",
+   "premissas_estudo": {
+    "crescimento_receita": [
+     -0.045,
+     0.06,
+     0.055,
+     0.05,
+     0.05
+    ],
+    "margem_ebitda": [
+     0.108,
+     0.12,
+     0.128,
+     0.132,
+     0.135
+    ],
+    "g": 0.05,
+    "multiplos_alvo": {
+     "pe": 11.0,
+     "ev_ebitda": 6.0
+    }
+   },
+   "explicacao": "Premissas mais Ke. Lucro 2026E −35% e EBITDA −17%. Em 2027 o estudo projeta LPA de ~R$ 0,31 (R$ 420 mi), contra NTM implícito de ~R$ 0,76 (≈R$ 1,0 bi) e P/L-alvo de 7x do JPMorgan sobre 2027 (LPA implícito de ~R$ 1,2): o consenso supõe recuperação mais rápida da margem da Avon e desalavancagem. A Ke 15% o motor dá R$ 5,4, e chega à mediana de R$ 10 com Ke de ~9,7%. O consenso é neutro (10 de 12 casas).",
+   "pos_eleicao": "Nenhuma revisão de alvo publicada em 26/10/2026 foi localizada (busca até ~16h); alvos e estimativas acima são anteriores ao choque.",
+   "fontes": [
+    "https://bpmoney.com.br/?p=416173",
+    "https://bpmoney.com.br/?p=423651",
+    "https://www.moneytimes.com.br/natura-natu3-xp-passa-a-tesoura-no-preco-alvo-e-acao-recua-2-ainda-vale-comprar-apsa/",
+    "https://www.moneytimes.com.br/smart-fit-lojas-renner-vivara-natura-safra-ajusta-preco-alvo-e-recomenda-compra-para-duas-varejistas-mlem/",
+    "https://www.tradingview.com/symbols/BMFBOVESPA-NATU3/forecast/"
+   ]
+  }
+ ],
+ "resumo": {
+  "empresas": 18,
+  "com_consenso_factset": 18,
+  "com_alvos_de_2026_na_imprensa": 18,
+  "com_alvo_2026_verificado": 15,
+  "classificacao": {
+   "abaixo": [
+    "RENT3",
+    "MOVI3",
+    "VAMO3",
+    "SIMH3",
+    "ECOR3",
+    "MOTV3",
+    "RAIL3",
+    "CSAN3",
+    "VBBR3",
+    "MGLU3",
+    "SBFG3",
+    "CEAB3",
+    "LREN3",
+    "AZZA3",
+    "VIVA3",
+    "VULC3",
+    "ALPA4",
+    "NATU3"
+   ],
+   "alinhado": [],
+   "acima": []
+  },
+  "faixa_estudo_vs_consenso": [
+   -0.8832,
+   -0.467
+  ],
+  "maiores_divergencias": [
+   {
+    "ticker": "MGLU3",
+    "estudo_vs_consenso": -0.8832,
+    "principal_fator": "premissas/método (nem Ke de mercado fecha a diferença)"
+   },
+   {
+    "ticker": "ECOR3",
+    "estudo_vs_consenso": -0.8433,
+    "principal_fator": "premissas/método (nem Ke de mercado fecha a diferença)"
+   },
+   {
+    "ticker": "VAMO3",
+    "estudo_vs_consenso": -0.8339,
+    "principal_fator": "Ke + premissas"
+   },
+   {
+    "ticker": "VBBR3",
+    "estudo_vs_consenso": -0.803,
+    "principal_fator": "premissas/método (nem Ke de mercado fecha a diferença)"
+   },
+   {
+    "ticker": "RAIL3",
+    "estudo_vs_consenso": -0.7778,
+    "principal_fator": "premissas/método (nem Ke de mercado fecha a diferença)"
+   },
+   {
+    "ticker": "SIMH3",
+    "estudo_vs_consenso": -0.7515,
+    "principal_fator": "Ke + premissas"
+   }
+  ],
+  "menores_divergencias": [
+   {
+    "ticker": "CEAB3",
+    "estudo_vs_consenso": -0.5767,
+    "principal_fator": "Ke (o motor chega ao consenso com Ke de ~12–15%)"
+   },
+   {
+    "ticker": "VULC3",
+    "estudo_vs_consenso": -0.5266,
+    "principal_fator": "Ke (o motor chega ao consenso com Ke de ~12–15%)"
+   },
+   {
+    "ticker": "CSAN3",
+    "estudo_vs_consenso": -0.5206,
+    "principal_fator": "premissas/SOTP (o Ke quase não mexe no valor)"
+   },
+   {
+    "ticker": "LREN3",
+    "estudo_vs_consenso": -0.467,
+    "principal_fator": "Ke (o motor chega ao consenso com Ke de ~12–15%)"
+   }
+  ],
+  "fator_principal": {
+   "Ke (o motor chega ao consenso com Ke de ~12–15%)": [
+    "MOVI3",
+    "CEAB3",
+    "LREN3",
+    "VULC3"
+   ],
+   "Ke + premissas": [
+    "RENT3",
+    "VAMO3",
+    "SIMH3",
+    "MOTV3",
+    "SBFG3",
+    "AZZA3",
+    "VIVA3",
+    "ALPA4",
+    "NATU3"
+   ],
+   "premissas/SOTP (o Ke quase não mexe no valor)": [
+    "CSAN3"
+   ],
+   "premissas/método (nem Ke de mercado fecha a diferença)": [
+    "ECOR3",
+    "RAIL3",
+    "VBBR3",
+    "MGLU3"
+   ]
+  },
+  "lucro_2026_classificacao": {
+   "abaixo": [
+    "VAMO3",
+    "MOTV3",
+    "VBBR3",
+    "MGLU3",
+    "AZZA3",
+    "VIVA3",
+    "NATU3"
+   ],
+   "alinhado": [
+    "RENT3",
+    "MOVI3",
+    "ECOR3",
+    "RAIL3",
+    "SBFG3",
+    "CEAB3",
+    "LREN3",
+    "VULC3",
+    "ALPA4"
+   ],
+   "acima": []
+  },
+  "lucro_2027_classificacao": {
+   "abaixo": [
+    "VAMO3",
+    "ECOR3",
+    "RAIL3",
+    "VBBR3",
+    "MGLU3",
+    "SBFG3",
+    "AZZA3",
+    "VULC3",
+    "ALPA4",
+    "NATU3"
+   ],
+   "alinhado": [
+    "RENT3",
+    "MOVI3",
+    "MOTV3",
+    "CEAB3",
+    "LREN3",
+    "VIVA3"
+   ],
+   "acima": []
+  }
+ }
+}

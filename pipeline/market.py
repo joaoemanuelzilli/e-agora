@@ -4,6 +4,7 @@ Uso: python pipeline/market.py <cotahist_csv_gz> <dir_raw_b3> <quotes_json>
 Saídas: data/market/{TICKER}.json, data/market/_market.json, data/market/quotes.json
 """
 import json
+import os
 import math
 import sys
 from datetime import date, datetime, timedelta
@@ -85,7 +86,15 @@ def main(cot_path, raw_b3, quotes_json):
     q = json.load(open(quotes_json))
     rows = q["rows"]
     quotes = {r["ticker"]: {**(r.get("quote") or {}), "name": r["name"], "indices": r["indices"]} for r in rows}
-    json.dump({"fetched_at": q["fetched_at"], **quotes}, open(OUT / "quotes.json", "w"), ensure_ascii=False)
+    # cotações extras fixadas na mesma foto (controladas fora do universo e Ibovespa): data/market/_quotes_extra.json
+    extra = {}
+    if (OUT / "_quotes_extra.json").exists():
+        extra = {k: v for k, v in json.load(open(OUT / "_quotes_extra.json")).items() if isinstance(v, dict)}
+    snap_out = {"fetched_at": q["fetched_at"], **quotes}
+    for k, v in extra.items():
+        if k not in snap_out and k != "IBOV":
+            snap_out[k] = {**v, "extra": True}
+    json.dump(snap_out, open(OUT / "quotes.json", "w"), ensure_ascii=False)
     cov = {r["ticker"] for r in json.load(open(ROOT / "research" / "_coverage.json"))["coverage"]}
 
     df = pd.read_csv(cot_path, parse_dates=["date"])
@@ -94,14 +103,17 @@ def main(cot_path, raw_b3, quotes_json):
     ib_today = quotes.get("IBOV", {}).get("price")
     ibov_chg_today = None
     # IBOV ao vivo vem do fetch separado (quotes não traz índice); usa API B3 se disponível
-    try:
-        from urllib.request import Request, urlopen
-        with urlopen(Request("https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/IBOV", headers={"User-Agent": "Mozilla/5.0"}), timeout=15) as r:
-            d = json.loads(r.read().decode())
-        s = d["Trad"][0]["scty"]["SctyQtn"]
-        ib_today, ibov_chg_today = s["curPrc"], s["prcFlcn"] / 100
-    except Exception:
-        pass
+    if os.environ.get("EAGORA_SNAPSHOT") == "1" and extra.get("IBOV"):  # rodada final: Ibovespa da mesma foto
+        ib_today, ibov_chg_today = extra["IBOV"]["price"], extra["IBOV"]["chg_pct"] / 100
+    else:
+        try:
+            from urllib.request import Request, urlopen
+            with urlopen(Request("https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/IBOV", headers={"User-Agent": "Mozilla/5.0"}), timeout=15) as r:
+                d = json.loads(r.read().decode())
+            s = d["Trad"][0]["scty"]["SctyQtn"]
+            ib_today, ibov_chg_today = s["curPrc"], s["prcFlcn"] / 100
+        except Exception:
+            pass
     ib_ret = ibov.pct_change().dropna()
 
     # ------------------------------------------------ séries por ticker (via ISIN, cobre troca de código)
@@ -182,9 +194,14 @@ def main(cot_path, raw_b3, quotes_json):
         pr_px = float(pre_rally.iloc[-1]) if len(pre_rally) else None
         beta_use = bd[1] if np.isfinite(bd[1]) else b2[1]
         exp = beta_use * ibov_chg_today if ibov_chg_today is not None else None
+        # beta nos dias de crash: poucas observações (8–15 dias) dão extremos; encolhe em direção ao beta de baixa
+        # de 3 anos com peso de 20 dias (o bruto fica em beta_crash_10y_raw)
+        bc_raw = float(bc[1]) if np.isfinite(bc[1]) else None
+        b_ref = float(bd[1]) if np.isfinite(bd[1]) else float(b2[1])
+        bc_shr = (len(cr) * bc_raw + 20 * b_ref) / (len(cr) + 20) if bc_raw is not None else None
         stats[tk] = {
             "beta_2y_daily": float(b2[1]), "beta_3y_weekly": float(bw[1]) if np.isfinite(bw[1]) else None,
-            "beta_down_3y": float(bd[1]) if np.isfinite(bd[1]) else None, "beta_crash_10y": float(bc[1]) if np.isfinite(bc[1]) else None,
+            "beta_down_3y": float(bd[1]) if np.isfinite(bd[1]) else None, "beta_crash_10y": bc_shr, "beta_crash_10y_raw": bc_raw,
             "n_crash_days": int(len(cr)), "idio_vol": idio, "vol_1y": vol1y, "max_dd_10y": float(dd),
             "high_52w_pre": hi52, "dist_high_now": (px_now / hi52 - 1) if px_now else None,
             "ret_ytd_pre": float(last_px / ytd0.iloc[-1] - 1) if len(ytd0) else None,
@@ -360,13 +377,23 @@ def main(cot_path, raw_b3, quotes_json):
     print("saltos não explicados (cobertura):", json.dumps(warn)[:1500])
 
 
-def shares_at(hh, d, events):
-    """Ações em circulação (base da época) na data d: último registro CVM ≤ d, ajustado por eventos entre o registro e d."""
+def shares_at(hh, d, events, listed=None):
+    """Ações em circulação (base da época) na data d: último registro CVM ≤ d, ajustado por eventos entre o registro e d.
+    Registro anterior à estreia na bolsa (estrutura pré-IPO ou pré-relistagem) não vale depois dela: usa o primeiro
+    registro posterior à listagem, desfazendo os eventos entre d e esse registro."""
     hist = hh.get("shares_history") or []
     best = None
     for h in hist:
         if pd.Timestamp(h["date"]) <= d:
             best = h
+    if listed is not None and d >= listed and (best is None or pd.Timestamp(best["date"]) < listed - pd.Timedelta(days=31)):
+        after = [h for h in hist if pd.Timestamp(h["date"]) >= listed - pd.Timedelta(days=31)]
+        if after and pd.Timestamp(after[0]["date"]) <= listed + pd.Timedelta(days=400):
+            n = after[0]["outstanding"]
+            for dcom, mult in events:
+                if d < dcom <= pd.Timestamp(after[0]["date"]):
+                    n /= mult
+            return n
     if best is None and hist:
         best = hist[0]
     if best is None:
@@ -425,8 +452,10 @@ def multiples_history(hh, raw, events, q):
     per_unit = hh.get("shares_per_unit") or 1
     months = raw["close"].resample("ME").last().dropna()
     months = months[months.index >= pd.Timestamp("2016-01-01")]
+    months = months[months.index <= pd.Timestamp(TODAY)]  # mês corrente incompleto: o ponto ao vivo de hoje o substitui
+    listed = raw["close"].dropna().index.min()
     for d, px in months.items():
-        n = shares_at(hh, d, events)
+        n = shares_at(hh, d, events, listed)
         f = fundamentals_at(hh, d)
         if not n or not f:
             continue

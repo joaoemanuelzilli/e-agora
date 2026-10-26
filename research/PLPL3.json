@@ -60,9 +60,9 @@
       0.125
     ],
     "other_financial": [
-      -72.2,
-      -75.8,
-      -80.4,
+      -98.6,
+      -93.9,
+      -85.4,
       -85.2,
       -89.4
     ],
@@ -109,8 +109,8 @@
   "adjustments": {
     "other_debt_like": 100,
     "non_operating_assets": 0,
-    "minority_value": 200,
-    "notes": "other_debt_like = dividendo de R$ 100 mi (R$ 0,4928/ação, anual 2025) pago em 01/07/2026, após o balanço-base. Cessões de recebíveis (R$ 304 mi) não entram como dívida (compensadas pelos recebíveis cedidos). minority_value R$ 200 mi ≈ 13% do LL × equity 100%."
+    "minority_value": 230,
+    "notes": "other_debt_like = dividendo de R$ 100 mi (R$ 0,4928/ação, anual 2025) pago em 01/07/2026, após o balanço-base. Cessões de recebíveis (R$ 304 mi) não entram como dívida (compensadas pelos recebíveis cedidos). minority_value R$ 200 mi ≈ 13% do LL × equity 100%. [Revisão independente 26/10: minority_value 200→230 = 13% × equity 100% do próprio DCF (R$ 1.769 mi), coerente com a regra desta nota.]"
   },
   "target_multiples": {
     "pe": 4.5,
@@ -166,14 +166,14 @@
       "net_income_mn": 53.0,
       "net_debt_ebitda": 0.38
     },
-    "notes": "CAGR de receita 2020–25 de 29,5%; projetamos ~6,4% a.a. 2025–30 (lançamentos 2026 cortados; Santander −11%). Margem EBITDA 5a média 15,5%, mas 1S26 caiu a 11,2% (margem bruta ajustada 29,7% no 2T26, −4,8 p.p. a/a, por custos das safras 2024 e Pode Entrar); projetamos 12% em 2026 e retorno gradual a 14,5% em 2029–30, abaixo da média 5a (margem REF 37,5%). ROE 5a 45% → UDM 28%. Payout 5a médio 31%; usamos 30% (2026, ainda queimando caixa) subindo a 50%. Imposto efetivo 17–22%. AJUSTE JUROS CAPITALIZADOS (padronização G06/G07): +2,0 p.p. no ebitda_margin em todos os anos e −2,0% da receita (R$ 72–89 mi/ano) em other_financial, LL inalterado; fonte: 2T26: margem bruta CVM 27,7% vs ajustada 29,7% (ex-encargos financeiros apropriados ao custo) = 2,0 p.p.. Margem EBITDA na base CVM (antes do ajuste): 12,0%; 13,0%; 14,0%; 14,5%; 14,5%. WACC sem benefício fiscal da dívida quando há dívida (RET): ver wacc.notes."
+    "notes": "CAGR de receita 2020–25 de 29,5%; projetamos ~6,4% a.a. 2025–30 (lançamentos 2026 cortados; Santander −11%). Margem EBITDA 5a média 15,5%, mas 1S26 caiu a 11,2% (margem bruta ajustada 29,7% no 2T26, −4,8 p.p. a/a, por custos das safras 2024 e Pode Entrar); projetamos 12% em 2026 e retorno gradual a 14,5% em 2029–30, abaixo da média 5a (margem REF 37,5%). ROE 5a 45% → UDM 28%. Payout 5a médio 31%; usamos 30% (2026, ainda queimando caixa) subindo a 50%. Imposto efetivo 17–22%. AJUSTE JUROS CAPITALIZADOS (padronização G06/G07): +2,0 p.p. no ebitda_margin em todos os anos e −2,0% da receita (R$ 72–89 mi/ano) em other_financial, LL inalterado; fonte: 2T26: margem bruta CVM 27,7% vs ajustada 29,7% (ex-encargos financeiros apropriados ao custo) = 2,0 p.p.. Margem EBITDA na base CVM (antes do ajuste): 12,0%; 13,0%; 14,0%; 14,5%; 14,5%. WACC sem benefício fiscal da dívida quando há dívida (RET): ver wacc.notes. [Revisão independente 26/10: o IR do RET incide sobre a receita (IR/ROL 2,6% em 2025; 2,8–3,0% nos trimestres de 2026; alíquota efetiva de 30% no 1S26). 19% sobre o LAIR deprimido dava só 2,0% da ROL em 2026 e 2,2% em 2027; o excesso para 2,6% da ROL (R$ 21/15/4 mi em 2026/27/28) foi somado a other_financial (−26,4/−18,1/−5,0 pré-IR), para não distorcer a FCFF. other_financial antes: −72,2/−75,8/−80,4/−85,2/−89,4.]"
   },
   "guidance": "Sem guidance formal no material consultado. Medidas anunciadas: comitê de margem, redução de descontos e revisão de projetos menos rentáveis (via bpmoney/Santander).",
   "dividend_policy": "Estatuto: mínimo de 25%. Proventos: R$ 200 mi pagos no 1T25 (ref. 2024; ≈58% do LL 2024) e R$ 100 mi (R$ 0,4928/ação, ref. 2025, aprovado 22/12/2025, pago 01/07/2026; ≈28% do LL 2025). Payout caixa: 2023 12%, 2024 34%, 2025 55%.",
   "election_impact": "PLPL3 −39%: mistura de macro (Ke, beta de small cap, liquidez de R$ 21 mi/dia) com problema micro preexistente — margem bruta em queda, LL do 2T26 −37% a/a e queima de caixa de R$ 94,5 mi no trimestre. Concentrada na RMSP e com projetos do Pode Entrar (prefeitura de SP) de margem baixa; o MCMV forte com Lula ajuda volume, mas não resolve custo. Setor: o MCMV é financiado majoritariamente pelo FGTS (fundo parafiscal, fora do Orçamento, juros fixados pelo Conselho Curador e não pela Selic). Orçamento FGTS 2026: R$ 160,5 bi (habitação R$ 144,5 bi; descontos/subsídios elevados a R$ 13 bi em 10/09/2026); plurianual aprovado em nov/25: habitação R$ 144,5 bi em 2027 e R$ 139,5 bi em 2028–29 (nominal estável/queda) — o Conselho revisa 2027–29 no fim de out/26. Portaria MCID 333/2026 elevou renda (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000) e tetos (F3 R$ 400 mil; F4 R$ 600 mil). Um 4º mandato Lula reduz o risco de corte do programa (era um risco no cenário Flávio) — positivo para volume. O que piora de fato: (i) custo de capital/Ke e DI longo (+300 bp) → múltiplos; (ii) dívidas e cessões indexadas ao CDI; (iii) fiscal: Faixa 1 (FAR/OGU) e Faixa 4 (Fundo Social) dependem do Tesouro; FGTS é procíclico (arrecadação 8% da folha) e sofre com saques extraordinários; (iv) câmbio +9,5% → insumos (aço, cobre, PVC) e INCC (já 6,6% em 12m, mão de obra 7,6%).",
-  "summary": "Caso de deterioração micro anterior à eleição (margem bruta −4,8 p.p., LL −37%, queima de caixa) amplificada pela liquidez. A R$ 5,23–5,55 (intradia) negocia ~1x o VP e ~4x um LL normalizado; só é oportunidade se a margem convergir à do backlog (37,5%).",
+  "summary": "Caso de deterioração micro anterior à eleição (margem bruta −4,8 p.p., LL −37%, queima de caixa) amplificada pela liquidez. A R$ 5,70 (foto das 13h02) negocia a ~1,0x o VP e 3,9x o LL 2027E; valor justo de R$ 6,37 (+12%) e TIR de dono de 25,2%, colada no Ke — só é oportunidade se a margem convergir à do backlog (37,5%).",
   "thesis": [
-    "Preço de R$ 5,23–5,43 ≈ 1,0x o VP (R$ 1.118 mi) e ~3,5x o LL UDM de R$ 305 mi.",
+    "Preço de R$ 5,70 (foto das 13h02) ≈ 1,0x o VP (R$ 1.118 mi) e 3,8x o LL UDM de R$ 305 mi.",
     "Margem REF de 37,5% vs margem bruta ajustada corrente de 29,7%: se as safras novas entrarem, há espaço para recuperar 3–5 p.p.",
     "Landbank de R$ 34,5 bi (1T26) e entrada em Goiânia diversificam a dependência de SP; MCMV fortalecido com Lula."
   ],
@@ -205,9 +205,9 @@
       "context": "R$ 110,5 mi ex-cessões"
     },
     {
-      "label": "P/VP ao preço de hoje",
-      "value": "≈0,95–0,99x",
-      "context": "R$ 5,23–5,43 (intradia) × 202,95 mi / PL controlador R$ 1.118 mi"
+      "label": "P/VP ao preço de referência",
+      "value": "1,04x",
+      "context": "R$ 5,70 (foto das 13h02) × 202,95 mi / PL controlador R$ 1.118 mi"
     }
   ],
   "sources": [

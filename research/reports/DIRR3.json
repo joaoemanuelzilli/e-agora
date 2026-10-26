@@ -1,7 +1,7 @@
 {
   "ticker": "DIRR3",
-  "headline": "A Direcional caiu 22,6% e negocia a 4,9x o lucro 2027E — com o P/L UDM 2,2 desvios-padrão abaixo da média de 5 anos —, ROE de 40% e a marca principal no centro do MCMV ampliado.",
-  "verdict": "A R$ 8,74 (preço de referência do estudo às ~12h55 de 26/10/2026), a TIR de dono é de 21,8% e o valor justo de R$ 9,08 (+4%): entra no ranking pela TIR acima de 20%, pelo balanço sólido (Altman 6,6; DL/EBITDA 0,23x) e por múltiplos em mínimas históricas, não por grande desconto ao valor justo. A probabilidade de valor acima do preço é de 57% no Monte Carlo; é um caso de carry (DY projetado de 7–14%) mais do que de reprecificação.",
+  "headline": "Após a revisão, a Direcional saiu da seleção: a R$ 8,97, o valor justo é de R$ 8,59 e só 40,5% dos cenários superam o preço — sobra um caso de dividendos, a 5,1x o lucro 2027E.",
+  "verdict": "A R$ 8,97 (foto do estudo às 13h02 de 26/10/2026), o valor justo é de R$ 8,59 (−4%) e a TIR de dono, de 21,4%: acima do piso de 20%, mas abaixo do Ke de 25%, só alcançado a R$ 7,33 (valor do DDM). Com os minoritários corrigidos pela revisão (R$ 1,0 → 1,2 bi) e a nova ponderação das incorporadoras (DDM 50%, P/L-alvo 30%, DCF 20%), a probabilidade de valor acima do preço caiu a 40,5% no Monte Carlo, abaixo do corte de 45%: DIRR3 saiu da seleção. Se merecer atenção, é só como caso de dividendos (DY projetado de 7–14% em 2026–28), não de desconto.",
   "reasons": [
     {
       "title": "Marca Direcional no centro do MCMV",
@@ -21,18 +21,18 @@
     },
     {
       "title": "Múltiplos nas mínimas de 5 anos",
-      "body": "P/L UDM de 5,4x contra média de 5 anos de 11,8x e EV/EBITDA de 4,2x contra 7,6x (série mensal B3/CVM), ambos no percentil 0. Ao preço de referência, P/L 2027E de 4,9x.",
+      "body": "P/L UDM de 5,4x contra média de 5 anos de 11,9x e EV/EBITDA de 4,2x contra 7,6x (série mensal B3/CVM), ambos no percentil 0. A R$ 8,97, P/L 2027E de 5,1x, abaixo do P/L-alvo de 6,0x (R$ 10,64); mas, a Ke de 25%, o DDM — 50% do valor justo — dá R$ 7,33.",
       "metric": {
         "label": "P/L UDM vs média 5 anos",
-        "value": "5,4x vs 11,8x"
+        "value": "5,4x vs 11,9x"
       }
     },
     {
       "title": "Retorno ao acionista elevado",
-      "body": "Pagou R$ 1,56 bi em dividendos em 2025 (DFC/CVM), incluindo R$ 1,55/ação em 23/12/2025 (B3), e aprovou em 11/08/2026 recompra de até 32 mi ações (~6% do capital). Com payout de 40% em 2026 e 60–65% depois, o DY projetado é de 7,4%, 12,2% e 14,3% em 2026–28.",
+      "body": "Pagou R$ 1,56 bi em dividendos em 2025 (DFC/CVM), incluindo R$ 1,55/ação em 23/12/2025 (B3), e aprovou em 11/08/2026 recompra de até 32 mi ações (~6% do capital). Com payout de 40% em 2026 e 60–65% depois — abaixo do FCFE/LL de 65–75% do próprio modelo, segundo a revisão —, o DY projetado é de 7,2%, 11,9% e 14,0% em 2026–28.",
       "metric": {
-        "label": "DY projetado 2027E (a R$ 8,74)",
-        "value": "12,2%"
+        "label": "DY projetado 2027E (a R$ 8,97)",
+        "value": "11,9%"
       }
     },
     {
@@ -45,7 +45,7 @@
     },
     {
       "title": "Riva tem valor de referência transacionado",
-      "body": "A venda dos 5% remanescentes da Riva à Riza por R$ 151 mi (anunciada em out/2025, Suno) implica a Riva (100%) em ≈R$ 3,0 bi — cerca de 2/3 do valor de mercado da Direcional inteira (R$ 4,54 bi ao preço de referência), sem contar a marca Direcional.",
+      "body": "A venda de 5% da Riva à Riza por R$ 151 mi (out/2025, Suno) implica a Riva (100%) em ≈R$ 3,0 bi — quase 2/3 do valor de mercado da Direcional (R$ 4,66 bi a R$ 8,97), sem contar a marca principal. Mas parte da Riva é da Riza: essa fatia, com a dos sócios de SPEs, está nos minoritários que a revisão elevou para R$ 1,2 bi.",
       "metric": {
         "label": "Valor implícito da Riva (100%)",
         "value": "≈R$ 3,0 bi"
@@ -55,28 +55,28 @@
   "statistics": [
     {
       "title": "A queda foi beta, não fundamento",
-      "body": "DIRR3 caía 22,6% na foto do estudo contra −23,6% previstos pelo beta de baixa (1,63): resíduo de +1,0 p.p. (z = +0,5), estatisticamente nulo. No modelo multifator do pregão (147 ações, R² = 0,71), a previsão era −32,9%: resíduo de +10,3 p.p. Não há sinal de que o mercado tenha revisto a empresa — foi repricing de risco.",
-      "stat": "resíduo vs beta +1,0 p.p. (z = +0,5)"
+      "body": "DIRR3 caía 22,4% na foto do estudo (13h02) contra −23,8% previstos pelo beta de baixa (1,63): resíduo de +1,4 p.p. (z = +0,7), estatisticamente nulo. No modelo multifator do pregão (147 ações, R² = 0,71), a previsão era −33,2%: resíduo de +10,8 p.p. Não há sinal de que o mercado tenha revisto a empresa — foi repricing de risco.",
+      "stat": "resíduo vs beta +1,4 p.p. (z = +0,7)"
     },
     {
       "title": "Múltiplos: os z-scores mais baixos do grupo",
-      "body": "P/L de 5,44x com z = −2,25 e EV/EBITDA de 4,2x com z = −2,78 na série de 5 anos (percentil 0). O P/VP (2,0x) está abaixo da média de 5 anos (2,36x; z = −0,50). O DY trailing de 27,9% (z = +3,4) é inflado pela distribuição extraordinária de reservas em 2025.",
-      "stat": "z(P/L, 5a) = −2,25; z(EV/EBITDA, 5a) = −2,78"
+      "body": "P/L de 5,45x com z = −2,33 e EV/EBITDA de 4,2x com z = −2,84 na série de 5 anos (percentil 0). O P/VP (2,0x) está abaixo da média de 5 anos (2,34x; z = −0,45). O DY trailing de 27,8% (z = +3,6) é inflado pela distribuição extraordinária de reservas em 2025.",
+      "stat": "z(P/L, 5a) = −2,33; z(EV/EBITDA, 5a) = −2,84"
     },
     {
-      "title": "Monte Carlo equilibrado",
-      "body": "Em 5.000 simulações, o valor fica entre R$ 6,94 (p10) e R$ 11,60 (p90), mediana R$ 9,05; 57% dos cenários superam R$ 8,74. É a menor probabilidade das três do ranking — o retorno vem do fluxo, não do desconto.",
-      "stat": "P(valor > R$ 8,74) = 57%; p10–p90 R$ 6,94–11,60"
+      "title": "Monte Carlo abaixo do corte de 45%",
+      "body": "Em 5.000 simulações, o valor fica entre R$ 6,55 (p10) e R$ 10,98 (p90), mediana R$ 8,57; só 40,5% dos cenários superam R$ 8,97 — foi o que tirou DIRR3 da seleção. Eram 52% antes da revisão; os minoritários de R$ 1,2 bi levaram a 46% e a nova ponderação, com 50% no DDM (R$ 7,33), a 40,5%.",
+      "stat": "P(valor > R$ 8,97) = 40,5%; p10–p90 R$ 6,55–10,98"
     },
     {
-      "title": "DCF reverso: preço ≈ base",
-      "body": "O preço de R$ 8,74 embute crescimento de receita de 8,7% a.a. em 2026–30, pouco abaixo dos 10,2% da base (CAGR histórico 2020–25: 23,7%). Não há otimismo no preço, nem pessimismo extremo.",
-      "stat": "crescimento implícito 8,7% a.a. vs 10,2% na base"
+      "title": "DCF reverso: preço acima da base",
+      "body": "O preço de R$ 8,97 embute crescimento de receita de 11,8% a.a. em 2026–30, acima dos 10,2% da base (CAGR histórico 2020–25: 23,7%). O mercado já paga 1,6 p.p. a mais de crescimento do que o modelo projeta: ainda metade do histórico, mas sem desconto.",
+      "stat": "crescimento implícito 11,8% a.a. vs 10,2% na base"
     },
     {
       "title": "Sensibilidade e assimetria",
-      "body": "O valor vai de R$ 11,35 (Ke 20%) a R$ 7,70 (Ke 30%); com −4 p.p. de crescimento e −3 p.p. de margem, R$ 6,93. Bear (25%) R$ 6,94 (−21%), bull (20%) R$ 10,34 (+18%); ponderado R$ 8,79 (+1%) — assimetria neutra.",
-      "stat": "bear −21% / bull +18%"
+      "body": "O valor vai de R$ 10,50 (Ke 20%) a R$ 7,45 (Ke 30%); com −4 p.p. de crescimento e −3 p.p. de margem, R$ 6,58. Bear (25%) R$ 6,56 (−27%), bull (20%) R$ 9,80 (+9%); ponderado R$ 8,32 (−7%) — assimetria negativa: a perda no bear é quase o triplo do ganho no bull.",
+      "stat": "bear −27% / bull +9%"
     },
     {
       "title": "Crashes anteriores",
@@ -92,13 +92,13 @@
     },
     {
       "title": "3T26 comercial fraco",
-      "body": "Vendas líquidas de R$ 1,3 bi no 3T26, 21% abaixo da estimativa da Genial, VSO líquida de 19% e distratos de 16–21% das vendas brutas.",
+      "body": "Vendas líquidas de R$ 1,3 bi no 3T26, 21% abaixo da estimativa da Genial, VSO líquida de 19% e distratos de 16–21% das vendas brutas. Se a receita de 2027 crescer 4% em vez de 10%, a TIR de dono cai a 20,3%, no limite do piso de 20% (revisão).",
       "mitigant": "8 dos 10 lançamentos ocorreram após 15/09 — as vendas devem aparecer no 4T26; geração de caixa operacional de R$ 228 mi no trimestre."
     },
     {
       "title": "Cessões e custo financeiro em CDI",
-      "body": "Passivo de cessão de R$ 1,26 bi e dívida bruta de R$ 3,0 bi (CVM 2T26); tratadas como dívida, as cessões reduziriam o valor em ≈R$ 2,4/ação.",
-      "mitigant": "Os recebíveis cedidos permanecem no ativo (compensam o passivo); DL/PL de 18% pela companhia."
+      "body": "Passivo de cessão de R$ 1,26 bi e dívida bruta de R$ 3,0 bi (CVM 2T26); tratadas como dívida, as cessões tirariam ≈R$ 2,4/ação do valor pelo DCF (20% do valor justo). As aplicações de LP (R$ 296 mi), contadas como caixa, crescem junto com as cessões e podem ser restritas.",
+      "mitigant": "Os recebíveis cedidos permanecem no ativo (compensam o passivo), tratamento que a revisão considerou defensável; DL/PL de 18% pela companhia."
     },
     {
       "title": "Payout acima da geração de caixa",
@@ -133,6 +133,11 @@
       "next": "Resultado 3T26 — novembro/2026"
     },
     {
+      "kpi": "Proventos de 2026",
+      "threshold": "Nenhum provento declarado até dez/2026 — o modelo assume payout de 40% em 2026 (DY de 7,2%)",
+      "next": "Dezembro/2026"
+    },
+    {
       "kpi": "Orçamento FGTS 2027–29",
       "threshold": "Descontos de 2027 abaixo de R$ 12,5 bi",
       "next": "Conselho Curador — fim de outubro/2026"
@@ -152,9 +157,13 @@
       "event": "Possível declaração de dividendos (padrão de dez/2025)"
     },
     {
+      "date": "jan/2027",
+      "event": "Prévia operacional do 4T26: vendas dos lançamentos de fim de setembro"
+    },
+    {
       "date": "até fev/2028",
       "event": "Execução da recompra de até 32 mi ações"
     }
   ],
-  "bottom_line": "Para quem busca carry de dividendos com risco de balanço baixo: a ~R$ 8,7, a TIR de ~22% vem do fluxo de caixa, não de reprecificação; a tese depende de as vendas voltarem a ~R$ 1,6 bi por trimestre e de a Riva estabilizar."
+  "bottom_line": "Para quem busca dividendos com balanço leve, não desconto: a TIR de 21,4% vem do fluxo (DY de 7–14%) e fica abaixo do Ke de 25%. Voltaria à seleção abaixo de ~R$ 8,78, onde 45% dos cenários superam o preço, ou com vendas de volta a ~R$ 1,6 bi por trimestre e margem no nível do 1S26 (+1,5 p.p. sobre a base levam o valor a R$ 9,23)."
 }

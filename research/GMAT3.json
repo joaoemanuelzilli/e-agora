@@ -15,7 +15,7 @@
   "base": {
    "net_debt": 5252
   },
-  "notes": "PROBLEMA DE DADO: o pipeline CVM não capturou o passivo de arrendamento IFRS-16 do Mateus, que está em 2.01.05.02.05 'Passivos de arrendamento CP' (R$ 250,9 mi) e 2.02.02.02.03 'Passivos de arrendamento LP' (R$ 3.908,6 mi) — balance.leases = 0. net_debt sobrescrita = DL CVM R$ 1.092,8 mi (dívida 2.724,4 incl. 'financiamento por arrendamento' de R$ 593,5 mi − caixa 1.631,6) + arrendamentos R$ 4.159,4 mi = R$ 5.252 mi. Base FY2025 (R$ 38.424 mi) consolida o Novo Atacarejo (70%? participação de não controladores R$ 1.160,6 mi) só a partir do 3T25 → crescimento de 2026 inclui ~2 trimestres de efeito consolidação. 2T25 foi reapresentado (CPC 23: novo critério de custeio de estoques/CMV, divulgado no 3T25). Capex = caixa (~1,9–2,4% da RL) + adições de direito de uso (~0,9%). other_financial captura AVP/encargos não ligados à DL (~R$ 320 mi/ano)."
+  "notes": "PROBLEMA DE DADO: o pipeline CVM não capturou o passivo de arrendamento IFRS-16 do Mateus, que está em 2.01.05.02.05 'Passivos de arrendamento CP' (R$ 250,9 mi) e 2.02.02.02.03 'Passivos de arrendamento LP' (R$ 3.908,6 mi) — balance.leases = 0. net_debt sobrescrita = DL CVM R$ 1.092,8 mi (dívida 2.724,4 incl. 'financiamento por arrendamento' de R$ 593,5 mi − caixa 1.631,6) + arrendamentos R$ 4.159,4 mi = R$ 5.252 mi. Base FY2025 (R$ 38.424 mi) consolida o Novo Atacarejo (70%? participação de não controladores R$ 1.160,6 mi) só a partir do 3T25 → crescimento de 2026 inclui ~2 trimestres de efeito consolidação. 2T25 foi reapresentado (CPC 23: novo critério de custeio de estoques/CMV, divulgado no 3T25). Capex = caixa (~1,9–2,4% da RL) + adições de direito de uso (~0,9%). other_financial captura AVP/encargos não ligados à DL (~R$ 320 mi/ano). [Revisão G05 26/10/2026] (1) O Mateus contabiliza o MDR de cartões (despesa com adquirentes, operacional) no resultado financeiro: R$ 74,6 mi (1T26) + R$ 78,1 mi (2T26) = 0,79% da RL (release 2T26, tabela 'Resultado Financeiro Consolidado'). Era isso que o other_financial de −R$ 320 a −400 mi capturava, de modo que o DCF (FCFF pré-financeiro) omitia ~R$ 300–430 mi/ano de custo operacional. Agora o MDR é deduzido da margem EBITDA (−0,79 p.p.; margens pós-MDR, comparáveis às de Assaí) e other_financial = 0. O resultado financeiro ex-MDR (2T26 anualizado −R$ 677 mi; 1S26 −R$ 633 mi) é coberto pelo kd × DL (12% × 5.252 = −R$ 630 mi). (2) Adições de direito de uso medidas em 1,1% da RL (2024: ΔPassivo +216 + principal 131) e 1,7% no 1S26 (ΔPassivo +240 + principal 92; inclui reclassificação de aluguel variável) ⇒ capex +0,3 p.p. (DU ~1,2%). (3) O pipeline já captura os arrendamentos (balance.leases 4.159, DL 5.252); o override de net_debt ficou redundante, sem efeito."
  },
  "projection": {
   "years": [
@@ -33,11 +33,11 @@
    0.07
   ],
   "ebitda_margin": [
-   0.066,
-   0.069,
-   0.071,
-   0.072,
-   0.072
+   0.0581,
+   0.0611,
+   0.0631,
+   0.0641,
+   0.0641
   ],
   "da_pct_revenue": [
    0.0175,
@@ -47,11 +47,11 @@
    0.0175
   ],
   "capex_pct_revenue": [
-   0.028,
-   0.032,
-   0.033,
-   0.033,
-   0.033
+   0.031,
+   0.035,
+   0.036,
+   0.036,
+   0.036
   ],
   "nwc_pct_revenue": 0.1,
   "cost_of_net_debt": [
@@ -62,11 +62,11 @@
    0.115
   ],
   "other_financial": [
-   -320,
-   -340,
-   -360,
-   -380,
-   -400
+   0,
+   0,
+   0,
+   0,
+   0
   ],
   "tax_rate": [
    0.08,
@@ -115,9 +115,9 @@
  },
  "target_multiples": {
   "pe": 8.0,
-  "ev_ebitda": 5.0,
+  "ev_ebitda": 5.65,
   "pbv": 0.9,
-  "rationale": "8x P/L e 5,0x EV/EBITDA IFRS-16 (DL incl. arrendamentos) sobre 2027E. Pré-eleição (R$ 5,30, mkt cap ~R$ 12,2 bi) negociava ~7,5x P/L LTM (inflado por crédito fiscal de 2025) e ~6,7x EV/EBITDA IFRS-16 LTM; em 2022–24 o papel negociou a ~12–18x P/L. Desconto pela queda de SSS, governança (reapresentação de estoques) e Ke 25%."
+  "rationale": "8x P/L e 5,65x EV/EBITDA IFRS-16 pós-MDR (DL incl. arrendamentos) sobre 2027E — equivale aos 5,0x originais sobre o EBITDA reportado (pré-MDR); na revisão o MDR passou para a margem. Pré-eleição (R$ 5,30, mkt cap ~R$ 12,2 bi) negociava ~7,5x P/L LTM (inflado por crédito fiscal de 2025) e ~6,7x EV/EBITDA IFRS-16 LTM; em 2022–24 o papel negociou a ~12–18x P/L. Desconto pela queda de SSS, governança (reapresentação de estoques) e Ke 25%."
  },
  "scenarios": {
   "bear": {
@@ -172,7 +172,7 @@
  "guidance": "Sem guidance numérico encontrado. Release 2T26 (13/08/2026): 'rigor na alocação de capital diante do atual patamar das taxas de juros' (capex −36,5% no 2T26), unificação de bandeiras em PE/PB/AL (Novo Atacarejo/Novo Mercatto), início em farmácias (Mix Toureiro Farma, jun/26).",
  "dividend_policy": "Mínimo estatutário 25% (base: lucro ajustado). Historicamente reinvestiu quase tudo: dividendos pagos R$ 81 mi (2024) e R$ 146 mi (2025); JCP de R$ 285,7 mi constituído no 1S25 e R$ 338,8 mi a pagar em dez/25 (convertido em aumento de capital em 2026 — capital social +R$ 338,8 mi).",
  "election_impact": "Queda de ~33% é mais beta/fluxo (small cap, ICON −27%) do que juros: alavancagem financeira baixa (DL ex-arrendamentos 0,5x). O que muda de fato: (1) o Mateus é o nome mais exposto à renda do Norte/Nordeste — um 4º mandato tende a preservar Bolsa Família, salário mínimo com ganho real e isenção de IR até R$ 5 mil, positivo para volume; (2) inflação de alimentos/câmbio e juros altos encarecem crédito ao pequeno varejista (B2B, 48 mil clientes/mês) e pressionam inadimplência; (3) reforma tributária elimina gradualmente incentivos de ICMS (2029–32), e a tese do IR baixo depende de decisões judiciais sobre a Lei 14.789/23. O problema principal é micro e anterior à eleição: SSS −8% e margem em queda (8,8% → 6,9% a/a).",
- "summary": "Varejista multiformato dominante no Norte/Nordeste (313 unidades, RL R$ 9,9 bi no 2T26) com balanço folgado, mas em fase ruim: SSS −8%, margem EBITDA IFRS-16 6,9% (vs 8,8%) e lucro −39% a/a, além de reapresentação contábil de estoques em 2025. Barato em múltiplos (~5x EV/EBITDA IFRS-16), mas a recuperação de margem é premissa, não fato. TIR implícita ~13,5% (≈11% pré-eleição); ROE de ~9–10% não sustenta Ke 25%.",
+ "summary": "Varejista multiformato dominante no Norte/Nordeste (313 unidades, RL R$ 9,9 bi no 2T26) com balanço folgado, mas em fase ruim: SSS −8%, margem EBITDA IFRS-16 6,9% (vs 8,8%) e lucro −39% a/a, além de reapresentação contábil de estoques em 2025. Barato em múltiplos (~5x EV/EBITDA IFRS-16), mas a recuperação de margem é premissa, não fato. TIR implícita ~13% (≈11% pré-eleição); ROE de ~9–10% não sustenta Ke 25%.",
  "thesis": [
   "Balanço: DL ex-arrendamentos R$ 1,1 bi (0,5x EBITDA pré-IFRS16) — menos sensível ao CDI que Assaí.",
   "Melhora sequencial: margem EBITDA 5,8% (1T26) → 6,9% (2T26), despesas −1,3% t/t; margem bruta do Novo Atacarejo +2,3 p.p. t/t.",

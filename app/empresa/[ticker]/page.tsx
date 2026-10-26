@@ -20,9 +20,11 @@ export default async function Page({ params }: { params: Promise<{ ticker: strin
   const { ticker } = await params;
   const doc = getCompany(ticker);
   if (!doc) notFound();
-  const isOpp = getOverview().opportunities.includes(doc.row.ticker);
+  const isOpp = getOverview().opportunities.includes(doc.row.ticker) || !!doc.report;
   const notesHtml = mdToSafeHtml(doc.notes_md);
-  const { notes_md: _omit, ...slim } = doc;
+  const reviewHtml = mdToSafeHtml(doc.review_md);
+  const { notes_md: _omit, review_md: _omit2, ...slim } = doc;
   void _omit;
-  return <CompanyView doc={slim} isOpp={isOpp} notesHtml={notesHtml} />;
+  void _omit2;
+  return <CompanyView doc={slim} isOpp={isOpp} notesHtml={notesHtml} reviewHtml={reviewHtml} />;
 }

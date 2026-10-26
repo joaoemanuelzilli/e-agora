@@ -54,6 +54,16 @@ def num(x, default=0.0):
 _quote_cache = {}
 
 
+# Pesos do blend por setor onde as duas baterias de teste concordam (data/tests/robustness.md e alt_methods.md):
+# incorporadoras — FCFF oscila com terreno, recebíveis e juros capitalizados, então DCF ≤ 20% e o lado do acionista domina;
+# bancos — valor = ROE contra Ke sobre o PL, P/L sai (redundante com o DDM e distorcido por provisões/JCP).
+# Nos demais setores as baterias divergem e fica o padrão 50/25/25. Premissa com valuation_weights próprio prevalece (EZTC3).
+_HOMEBUILDERS = ("CURY3", "CYRE3", "DIRR3", "EZTC3", "JHSF3", "MDNE3", "MRVE3", "PLPL3", "TEND3")
+_BANKS = ("BBAS3", "BBDC4", "BRSR6", "BPAC11")
+SECTOR_WEIGHTS = {**{t: {"ddm": 0.5, "pe": 0.3, "dcf": 0.2} for t in _HOMEBUILDERS},
+                  **{t: {"ddm": 0.6, "pbv": 0.4} for t in _BANKS}}
+
+
 def live_quote(ticker):
     if ticker in _quote_cache:
         return _quote_cache[ticker]
@@ -235,10 +245,8 @@ def irr_bisect(fn, lo, hi, target, it=80):
     flo, fhi = fn(lo), fn(hi)
     if not (np.isfinite(flo) and np.isfinite(fhi)):
         return None
-    if flo < target:
-        return lo
-    if fhi > target:
-        return hi
+    if flo < target or fhi > target:
+        return None  # sem raiz no intervalo (ex.: lucro terminal negativo): TIR não definida
     for _ in range(it):
         mid = (lo + hi) / 2
         if fn(mid) > target:
@@ -315,7 +323,8 @@ def value_company(prem, hist, ke=KE, shifts=None, price=None, mcap=None, detail=
     vals["graham"] = math.sqrt(22.5 * eps_ltm * bv_now) if eps_ltm > 0 and bv_now > 0 else None
     vals["bazin"] = dps[1] / 0.06 if dps[1] > 0 else None
     # blend
-    weights = prem.get("valuation_weights") or ({"ddm": 0.5, "multiples": 0.5} if tpl == "financial" else {"dcf": 0.5, "ddm": 0.25, "multiples": 0.25})
+    weights = prem.get("valuation_weights") or SECTOR_WEIGHTS.get(prem.get("ticker") or hist.get("ticker")) or (
+        {"ddm": 0.5, "multiples": 0.5} if tpl == "financial" else {"dcf": 0.5, "ddm": 0.25, "multiples": 0.25})
     tot, acc = 0.0, 0.0
     for k, wgt in weights.items():
         x = vals.get(k)
@@ -328,6 +337,7 @@ def value_company(prem, hist, ke=KE, shifts=None, price=None, mcap=None, detail=
                 "values": {k: (x * unit if x is not None else None) for k, x in vals.items()}, "weights": weights,
                 "g": g, "roe_T": roe_T, "ke": ke, "proj": pr, "eps": eps, "dps": dps, "bvps": bvps, "taus": taus, "tau_T": tau_T,
                 "shares": sh, "ddm": {"equity": eq_ddm, "pv_div": pv_div, "tv": tv_eq}})
+    out["pe_target"] = tm.get("pe")
     # retornos ao preço de mercado
     if price:
         p_sh = price / unit
@@ -340,7 +350,7 @@ def value_company(prem, hist, ke=KE, shifts=None, price=None, mcap=None, detail=
             return v / n_sh
         out["irr_implied"] = irr_bisect(pv_eq, g + 0.002, 3.0, p_sh)
         pe_exit = tm.get("pe")
-        if pe_exit and eps[3] > 0:
+        if pe_exit and eps[1] > 0 and eps[3] > 0:
             t_exit = yf(VAL_DATE, date(2028, 12, 31))
             def pv3(r):
                 fl = dps[:3].copy()
@@ -362,7 +372,8 @@ def value_company(prem, hist, ke=KE, shifts=None, price=None, mcap=None, detail=
     return out
 
 
-def value_holding(prem, hist, models, price=None):
+def value_holding(prem, hist, models, price=None, ke=None):
+    ke = KE if ke is None else ke
     so = prem.get("sotp") or {}
     sh = shares_info(hist, prem)
     term = prem.get("terminal") or {}
@@ -389,7 +400,7 @@ def value_holding(prem, hist, models, price=None):
                     n = num(c["shares_mn"])
                 if n:
                     v_mkt = q["price"] * n
-            if c.get("method") == "fair" and tk in models and models[tk].get("fair_value"):
+            if c.get("method") == "fair" and tk in models and models[tk].get("fair_value") is not None:
                 m = models[tk]
                 v_fair = m["fair_value_share"] * m["shares"]["outstanding_mn"]
             else:
@@ -403,15 +414,15 @@ def value_holding(prem, hist, models, price=None):
         nav_mkt += stake * (v_mkt or 0.0)
     hnd = num(so.get("holding_net_debt_mn"))
     hcost = num(so.get("holding_cost_mn"))
-    cap_cost = hcost / (KE - g) if KE > g else 0.0
+    cap_cost = hcost / (ke - g) if ke > g else 0.0
     eq_fair = nav_fair - hnd - cap_cost
     eq_mkt = nav_mkt - hnd - cap_cost
     n_sh = sh["outstanding_mn"]
     unit = sh["per_unit"]
     out = {"template": "holding", "components": comps, "nav_fair": nav_fair, "nav_mkt": nav_mkt, "holding_net_debt": hnd,
-           "holding_cost_capitalized": cap_cost, "equity_fair": eq_fair, "equity_mkt": eq_mkt,
+           "holding_cost_capitalized": cap_cost, "holding_cost_mn": hcost, "equity_fair": eq_fair, "equity_mkt": eq_mkt,
            "fair_value_share": eq_fair / n_sh, "fair_value": eq_fair / n_sh * unit, "nav_mkt_share": eq_mkt / n_sh * unit,
-           "shares": sh, "values": {"sotp": eq_fair / n_sh * unit, "nav_market": eq_mkt / n_sh * unit}, "weights": {"sotp": 1.0}, "ke": KE, "g": g}
+           "shares": sh, "values": {"sotp": eq_fair / n_sh * unit, "nav_market": eq_mkt / n_sh * unit}, "weights": {"sotp": 1.0}, "ke": ke, "g": g}
     if price:
         out["upside"] = out["fair_value"] / price - 1
         out["discount_to_nav_mkt"] = 1 - price / out["nav_mkt_share"] if out["nav_mkt_share"] > 0 else None

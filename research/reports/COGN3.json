@@ -1,13 +1,13 @@
 {
  "ticker": "COGN3",
  "headline": "Cogna gerou R$ 504 mi de caixa livre no 1S26 (12,5% do valor de mercado) e negocia a 3,9x EV/EBITDA, o menor múltiplo da série de 5 anos.",
- "verdict": "A R$ 2,02 (preço de referência, ~12h55 de 26/10) o valor justo do modelo é R$ 1,97 (−2,4%), com TIR implícita de dono de 21,7% e 46% de probabilidade de valor acima do preço no Monte Carlo — não é desconto profundo à Ke de 25%, mas é um dos poucos nomes alavancados ao ciclo doméstico com caixa e desalavancagem visíveis. O crash apenas devolveu o rali eleitoral (preço pré-rali R$ 2,11), e a TIR de 3 anos sobe para 41% se o P/L voltar a 6,5x em 2028.",
+ "verdict": "A R$ 2,01 (preço de referência das 13h02 de 26/10), o valor justo é R$ 1,97 (−1,9%) e a TIR implícita de dono, de 21,8%, fica abaixo da Ke de 25%: a COGN3 é a 5ª e última das 5 oportunidades por cumprir a regra (TIR ≥ 20% e probabilidade de valor acima do preço de ao menos 45% no Monte Carlo; aqui, 47,1%), não por superar a Ke. A folga é estreita — a probabilidade cai para 42% sem o PNLD deslocado do 4T25 na base de 2027 e para 35% com IR de 15–20% —, mas o crash só devolveu o rali eleitoral (pré-rali R$ 2,11) e a TIR de 3 anos chega a 41,5% se o P/L voltar a 6,5x em 2028.",
  "reasons": [
   {
    "title": "Geração de caixa virou realidade",
    "body": "FCL de R$ 252 mi no 2T26 (+88%) e R$ 504 mi no 1S26 (+78%), segundo o release do 2T26 reportado pela imprensa. Na CVM, FCO − capex saiu de −R$ 324 mi (2022) para R$ 223 mi (2023), R$ 457 mi (2024) e R$ 770 mi (2025); FCO LTM de R$ 1,54 bi.",
    "metric": {
-    "label": "FCL 1S26 / valor de mercado (R$ 4,04 bi a R$ 2,02)",
+    "label": "FCL 1S26 / valor de mercado (R$ 4,02 bi a R$ 2,01)",
     "value": "12,5%"
    }
   },
@@ -21,15 +21,15 @@
   },
   {
    "title": "Múltiplos no piso histórico",
-   "body": "EV/EBITDA de 3,87x contra média de 5 anos de 7,12x (z −1,49; percentil 0 em 60 meses) e P/VP 0,29x (percentil 17%), pela série de múltiplos do estudo. P/L LTM 5,8x e P/L 2027E 5,2x no preço de referência.",
+   "body": "EV/EBITDA de 3,87x contra média de 5 anos de 7,32x (z −1,53; percentil 0 em 60 meses) e P/VP 0,29x (percentil 17%), pela série de múltiplos do estudo. P/L LTM 5,7x e P/L 2027E 5,2x no preço de referência.",
    "metric": {
     "label": "EV/EBITDA atual (z vs 5 anos)",
-    "value": "3,87x (z −1,49)"
+    "value": "3,87x (z −1,53)"
    }
   },
   {
    "title": "Lucro crescendo e menos dependente do EAD",
-   "body": "Lucro líquido de R$ 290 mi no 1S26 (+35,7%) e ROL do 2T26 de R$ 1,96 bi (+17,8%). A educação básica (Vasta + Saber) já é 1/3 da ROL (R$ 650 mi, +50,5%), com receita de assinatura +22% e ACV 2026 de R$ 1,50 bi (+11,9%) — fora do alcance do marco do EAD.",
+   "body": "Lucro líquido de R$ 290 mi no 1S26 (+35,7%) e ROL do 2T26 de R$ 1,96 bi (+17,8%); o semestre inclui ~R$ 167 mi de receita de PNLD deslocada do 4T25. A educação básica (Vasta + Saber) já é 1/3 da ROL (R$ 650 mi, +50,5%), com receita de assinatura +22% e ACV 2026 de R$ 1,50 bi (+11,9%) — fora do alcance do marco do EAD.",
    "metric": {
     "label": "ROL educação básica 2T26 a/a",
     "value": "+50,5%"
@@ -37,15 +37,15 @@
   },
   {
    "title": "Dividendos retomados, payout em alta",
-   "body": "Proventos B3: R$ 0,0661/ação (data-com 23/12/2025, pagos em 13/02/2026) e R$ 0,0143/ação (data-com 27/04/2026, pagos em 29/05/2026); há ainda R$ 0,0486/ação de 2024 com pagamento previsto para 20/12/2028 (data-com já passou). Com payout de 30% → 50% sobre o lucro projetado, o modelo dá dividend yield de 5,0% (2026E), 7,6% (2027E) e 11,9% (2028E) no preço de referência.",
+   "body": "Proventos B3: R$ 0,0661/ação (data-com 23/12/2025, pagos em 13/02/2026) e R$ 0,0143/ação (data-com 27/04/2026, pagos em 29/05/2026); há ainda R$ 0,0486/ação de 2024 com pagamento previsto para 20/12/2028 (data-com já passou). Com payout de 30% → 50% sobre o lucro projetado, o modelo dá dividend yield de 5,0% (2026E), 7,7% (2027E) e 12,0% (2028E) no preço de referência.",
    "metric": {
     "label": "Dividend yield projetado 2027E (modelo)",
-    "value": "7,6%"
+    "value": "7,7%"
    }
   },
   {
    "title": "Juros pesam pouco no lucro",
-   "body": "Com DL bancária pós-fixada de ~R$ 2,5–2,8 bi e caixa de R$ 1,47 bi, +100 bp de CDI custam ~R$ 23 mi/ano de lucro (~3% do lucro LTM de R$ 702 mi; CVM + modelo). A alíquota efetiva baixa (IR de R$ 29 mi sobre LAIR de R$ 705 mi no LTM, ProUni/prejuízos fiscais) amplia a conversão de EBITDA em caixa.",
+   "body": "Com DL bancária pós-fixada de ~R$ 2,5–2,8 bi e caixa de R$ 1,47 bi, +100 bp de CDI custam ~R$ 23 mi/ano de lucro (~3% do lucro LTM de R$ 702 mi; CVM + modelo). O IR pago em caixa é baixo (R$ 23 mi em 2025 e R$ 31 mi no 1S26, 4–9% do LAIR, por ProUni e prejuízos fiscais) e amplia a conversão de EBITDA em caixa.",
    "metric": {
     "label": "Impacto de +100 bp de CDI no lucro",
     "value": "−R$ 23 mi/ano"
@@ -55,18 +55,18 @@
  "statistics": [
   {
    "title": "A queda é explicada por fatores, não por notícia própria",
-   "body": "No corte transversal do dia (147 ações; R² 0,71; beta com t = −10,4 e alavancagem com t = −3,6), o modelo de fatores previa −39,4% para COGN3; ela caiu −34,8% no preço de referência, resíduo de +4,6 p.p. (percentil 73 dos resíduos). Contra o próprio beta de baixa (1,84 × Ibovespa −14,5% = −26,5%), o resíduo é −8,3 p.p. (z = −3,2), excesso compatível com os fatores alavancagem e consumo doméstico.",
-   "stat": "resíduo multifator +4,6 p.p.; resíduo vs beta −8,3 p.p. (z = −3,2)"
+   "body": "No corte transversal do dia (147 ações; R² 0,71; beta com t = −10,3 e alavancagem com t = −3,7), o modelo de fatores previa −39,8% para COGN3; ela caiu −35,2% no preço de referência das 13h02, resíduo de +4,7 p.p. (percentil 76 dos resíduos). Contra o próprio beta de baixa (1,84 × Ibovespa −14,6% = −26,8%), o resíduo é −8,4 p.p. (z = −3,2), excesso compatível com os fatores alavancagem e consumo doméstico.",
+   "stat": "resíduo multifator +4,7 p.p.; resíduo vs beta −8,4 p.p. (z = −3,2)"
   },
   {
    "title": "O crash só devolveu o rali eleitoral",
-   "body": "A ação subiu de R$ 2,11 (pré-rali) para R$ 3,10 no fechamento de 23/10 (+46,9%), precificando vitória da oposição, e voltou a R$ 2,02 (−4,3% vs pré-rali). O preço está no nível em que a companhia divulgou o 2T26 — o mercado retirou o prêmio eleitoral, não reprecificou um fundamento novo.",
-   "stat": "rali +46,9%; atual −4,3% vs pré-rali"
+   "body": "A ação subiu de R$ 2,11 (pré-rali) para R$ 3,10 no fechamento de 23/10 (+46,9%), precificando vitória da oposição, e voltou a R$ 2,01 (−4,7% vs pré-rali). O preço está no nível em que a companhia divulgou o 2T26 — o mercado retirou o prêmio eleitoral, não reprecificou um fundamento novo.",
+   "stat": "rali +46,9%; atual −4,7% vs pré-rali"
   },
   {
-   "title": "Múltiplos a mais de 1 desvio-padrão abaixo da média",
-   "body": "Série mensal de 60 meses: EV/EBITDA médio de 7,12x (desvio 2,18x; p10 4,76x) contra 3,87x hoje; P/VP médio 0,38x contra 0,29x; dividend yield no percentil 94. Nenhum mês dos últimos 5 anos teve EV/EBITDA tão baixo.",
-   "stat": "EV/EBITDA z = −1,49 (percentil 0); P/VP z = −0,83 (percentil 17)"
+   "title": "EV/EBITDA a mais de 1 desvio-padrão abaixo da média",
+   "body": "Série mensal de 60 meses: EV/EBITDA médio de 7,32x (desvio 2,25x; p10 4,83x) contra 3,87x hoje; P/VP médio 0,38x contra 0,29x; dividend yield no percentil 93. Nenhum mês dos últimos 5 anos teve EV/EBITDA tão baixo.",
+   "stat": "EV/EBITDA z = −1,53 (percentil 0); P/VP z = −0,82 (percentil 17)"
   },
   {
    "title": "Depois de crashes, o mercado tende a se recuperar — mas COGN3 já foi exceção",
@@ -74,9 +74,9 @@
    "stat": "Ibov pós-crash 12m: média +59%, 87% positivos (n = 62)"
   },
   {
-   "title": "Distribuição de valor centrada no preço",
-   "body": "Monte Carlo com 5.000 cenários (σ de crescimento 3,5 p.p., σ de margem 1,5 p.p., correlação 0,5): p10 R$ 1,21, p50 R$ 1,96 e p90 R$ 2,81. O DCF reverso mostra que R$ 2,02 exige crescimento médio de 7,8% a.a. contra 7,4% do caso base (+0,4 p.p.); com Ke de 22,5% o valor justo seria R$ 2,26 (+12%) e com 20%, R$ 2,64.",
-   "stat": "P(valor > R$ 2,02) = 46,2%"
+   "title": "Valor centrado no preço; P(MC) no limite do corte",
+   "body": "Monte Carlo com 5.000 cenários (σ de crescimento 3,5 p.p., σ de margem 1,5 p.p., correlação 0,5): p10 R$ 1,21, p50 R$ 1,96 e p90 R$ 2,81; 47,1% dos cenários acima do preço, ~2 p.p. sobre o corte de 45%. Nos testes da revisão, essa fatia cai para 42% (base de 2027 sem o PNLD deslocado), 44% (Kd no teto) e 35% (IR de 15–20%). O DCF reverso mostra que R$ 2,01 exige crescimento médio de 7,7% a.a. contra 7,4% do caso base; com Ke de 22,5% o valor justo seria R$ 2,27 (+13%) e com 20%, R$ 2,64.",
+   "stat": "P(valor > R$ 2,01) = 47,1%"
   },
   {
    "title": "Qualidade contábil razoável, cobertura de juros apertada",
@@ -87,8 +87,8 @@
  "risks": [
   {
    "title": "Marco regulatório do EAD (Decreto 12.456/2025)",
-   "body": "Kroton é a mais exposta: captação EAD −33,9% no 1S26, semipresencial de enfermagem interrompido em 420 polos e base de alunos −3,7%. Endurecimento adicional no 4º mandato (estender restrições ao semipresencial ou a mais cursos) atingiria ~2/3 da ROL; no cenário bear (crescimento −3 p.p. e margem −2,5 p.p.) o valor cai para R$ 1,17.",
-   "mitigant": "Mesmo com o EAD em queda, a ROL da Kroton cresceu 6,3% no 2T26 (presencial +5,9%, semipresencial +14%) com ticket +10,9%; a educação básica (1/3 da ROL) não é afetada. Alerta: ROL da Kroton negativa a/a."
+   "body": "Kroton é a mais exposta: captação EAD −33,9% no 1S26, semipresencial de enfermagem interrompido em 420 polos e base de alunos −3,7%. Endurecimento adicional no 4º mandato (estender restrições ao semipresencial ou a mais cursos) atingiria ~2/3 da ROL; no cenário bear (crescimento −3 p.p. e margem −2,5 p.p.) o valor cai para R$ 1,17 (−42%); ponderado pelos três cenários, R$ 1,84 (−8%).",
+   "mitigant": "Mesmo com a captação EAD em queda, a ROL da Kroton cresceu 6,3% no 2T26 (presencial +5,9%, semipresencial +14%, EAD −1,4%) com ticket +10,9%; a educação básica (1/3 da ROL) não é afetada."
   },
   {
    "title": "Margem da Kroton com mais presencialidade",
@@ -96,21 +96,31 @@
    "mitigant": "Ticket maior do presencial (R$ 1.107 vs R$ 219 no EAD) e ganho de margem na educação básica (+0,9 p.p.); o modelo já assume margem estável em 30–30,5%."
   },
   {
-   "title": "PNLD e orçamento federal",
-   "body": "A receita de PNLD saltou para R$ 124 mi no 2T26 (R$ 22 mi no 2T25) e é lumpy; aperto fiscal no novo mandato pode adiar compras de livros. O modelo assume 2S26 +4,5% e 5,5–6% a.a. depois.",
-   "mitigant": "O núcleo da educação básica é recorrente (assinaturas R$ 392 mi no 2T26, +22%; ACV 2026 R$ 1,50 bi); governos do PT historicamente mantiveram o PNLD."
+   "title": "PNLD: calendário e orçamento federal",
+   "body": "Cerca de R$ 167 mi de PNLD do 4T25 só foram faturados no 1S26 (calendário do FNDE): os +14% de 2026E incluem ~2,1% de ROL não recorrente. A receita é lumpy (R$ 124 mi no 2T26, contra R$ 22 mi no 2T25) e o aperto fiscal pode adiar compras de livros; se o 2S26 crescer só os +4,5% da premissa (zero subjacente), a ROL de 2027E cai ao piso da faixa da revisão (~R$ 8,26 bi): VJ R$ 1,90 e P(MC) 42%.",
+   "mitigant": "Os +4,5% do 2S26 são conservadores (sobre um 4T25 deprimido pelo mesmo valor) e compensam o deslocamento: com +4,5% subjacentes, 2027E fica em ~R$ 8,45 bi, perto dos R$ 8,44 bi do modelo. Assinaturas (R$ 392 mi no 2T26, +22%) e ACV 2026 (R$ 1,50 bi) são recorrentes; governos do PT historicamente mantiveram o PNLD."
   },
   {
    "title": "Juros altos por mais tempo e dados incompletos",
-   "body": "Com a curva DI ~15% até 2028, o resultado financeiro fica em ~R$ 750 mi/ano e a cobertura de juros em 1,4x; custo médio, prazo e covenants da dívida não foram verificados (release oficial inacessível; segmentos via imprensa).",
-   "mitigant": "Caixa de R$ 1,47 bi contra R$ 530 mi de dívida circulante (inclui R$ 220 mi de arrendamentos); +100 bp de CDI custam só ~R$ 23 mi/ano. Conferir o release do 3T26."
+   "body": "Com a curva DI ~15% até 2028, o resultado financeiro fica em ~R$ 750 mi/ano e a cobertura de juros em 1,4x (Kd no teto da revisão: VJ R$ 1,93 e P(MC) 44%); custo médio, prazo e covenants da dívida não foram verificados (release oficial inacessível; segmentos via imprensa).",
+   "mitigant": "Caixa de R$ 1,47 bi contra R$ 530 mi de dívida circulante (inclui R$ 220 mi de arrendamentos); +100 bp de CDI custam só ~R$ 23 mi/ano, e o Kd refeito pela curva DI manteve o VJ em R$ 1,97. Conferir o release do 3T26."
+  },
+  {
+   "title": "Alíquota de IR acima da premissa",
+   "body": "O modelo usa IR de 8–15%, entre a alíquota de caixa e a contábil (19% no 1S26; ~27% em 2025 sem o crédito diferido do 3T25). Com 15–20%, o VJ cai para R$ 1,79, a TIR para 20,8% e o P(MC) para 35%.",
+   "mitigant": "O IR pago em caixa segue baixo (4–9% do LAIR, por ProUni e prejuízo fiscal) e a TIR fica acima de 20% mesmo assim; o saldo de prejuízo fiscal não foi verificado."
   }
  ],
  "monitor": [
   {
    "kpi": "ROL da Kroton e captação (EAD vs presencial/semipresencial)",
-   "threshold": "ROL da Kroton negativa a/a em dois trimestres ou captação total 2027.1 caindo mais que 20%",
+   "threshold": "ROL da Kroton passando a cair a/a por dois trimestres seguidos (hoje +6,3%) ou captação total 2027.1 caindo mais que 20%",
    "next": "Resultado 3T26 (novembro/2026, data a confirmar) e 1T27 (captação 2027.1)"
+  },
+  {
+   "kpi": "ROL do 2S26 (PNLD) e alíquota efetiva de IR",
+   "threshold": "ROL do 2S26 só ~4,5% acima do 2S25 (zero subjacente, pelo PNLD deslocado) ou alíquota efetiva recorrente de 15–20% — qualquer um leva o P(MC) abaixo do corte de 45% (42% e 35%)",
+   "next": "Resultados 3T26 e 4T26 (4T26 em ~março/2027)"
   },
   {
    "kpi": "Fluxo de caixa livre",
@@ -136,7 +146,7 @@
  "catalysts": [
   {
    "date": "nov/2026 (data a confirmar)",
-   "event": "Resultado 3T26: FCL do trimestre, alavancagem e margem da Kroton"
+   "event": "Resultado 3T26: PNLD do 2S26, alíquota efetiva, resultado financeiro, FCL, alavancagem e margem da Kroton"
   },
   {
    "date": "dez/2026",
@@ -151,5 +161,5 @@
    "event": "Calendário e orçamento do PNLD 2027 (LOA) e eventuais regras novas de FIES/ProUni"
   }
  ],
- "bottom_line": "Para quem aceita TIR implícita de ~22% (abaixo da Ke de 25%) em troca de caixa e desalavancagem visíveis, com retorno extra vindo de reprecificação (TIR de 3 anos de 41% com P/L de 6,5x). A tese funciona se a Kroton mantiver ROL positiva sob o marco do EAD e o FCL anual ficar acima de ~R$ 0,8–1,0 bi; posição de tamanho moderado, dado o beta de 1,8."
+ "bottom_line": "Para quem aceita TIR implícita de ~22% (abaixo da Ke de 25%) em troca de caixa e desalavancagem visíveis, com retorno extra vindo de reprecificação (TIR de 3 anos de 41,5% com P/L de 6,5x). É a oportunidade mais marginal: a tese funciona se a Kroton mantiver ROL positiva sob o marco do EAD, o FCL anual ficar acima de ~R$ 0,8–1,0 bi e o 3T26 confirmar PNLD e alíquota; posição de tamanho moderado, dado o beta de 1,8."
 }

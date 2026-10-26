@@ -109,8 +109,8 @@
   "adjustments": {
     "other_debt_like": 16,
     "non_operating_assets": 0,
-    "minority_value": 1000,
-    "notes": "other_debt_like = dividendos propostos no balanço (R$ 16 mi). Passivo de cessão de recebíveis (R$ 1.264 mi) NÃO entra como dívida: é compensado pelos recebíveis cedidos que permanecem no ativo (ambos financeiros). nwc_pct_revenue 0,65 = ponto médio entre o CG marginal bruto (0,75–0,91, sem novas cessões) e o líquido de cessões (0,31–0,41), i.e., supõe que só parte do crescimento da carteira será cedida. Se a cessão fosse tratada como dívida, o valor cairia ≈R$ 2,4/ação. minority_value R$ 1.000 mi ≈ 21% do LL (Riza na Riva + sócios de SPEs) × equity 100%; referência: 5% da Riva vendidos à Riza por R$ 151 mi (out/25) ⇒ Riva 100% ≈ R$ 3,0 bi."
+    "minority_value": 1200,
+    "notes": "other_debt_like = dividendos propostos no balanço (R$ 16 mi). Passivo de cessão de recebíveis (R$ 1.264 mi) NÃO entra como dívida: é compensado pelos recebíveis cedidos que permanecem no ativo (ambos financeiros). nwc_pct_revenue 0,65 = ponto médio entre o CG marginal bruto (0,75–0,91, sem novas cessões) e o líquido de cessões (0,31–0,41), i.e., supõe que só parte do crescimento da carteira será cedida. Se a cessão fosse tratada como dívida, o valor cairia ≈R$ 2,4/ação. minority_value R$ 1.000 mi ≈ 21% do LL (Riza na Riva + sócios de SPEs) × equity 100%; referência: 5% da Riva vendidos à Riza por R$ 151 mi (out/25) ⇒ Riva 100% ≈ R$ 3,0 bi. [Revisão independente 26/10: minority_value 1.000→1.200 = 21% × equity 100% do próprio DCF (R$ 5.708 mi), coerente com a regra desta nota (1.000 equivalia a 17,5%).]"
   },
   "target_multiples": {
     "pe": 6.0,
@@ -171,11 +171,11 @@
   "guidance": "Sem guidance formal de resultado no material consultado.",
   "dividend_policy": "Estatuto: mínimo obrigatório de 25%. Histórico de caixa (DFC): 2023 R$ 162 mi, 2024 R$ 406 mi, 2025 R$ 1.564 mi (inclui R$ 1,55/ação, ≈R$ 806 mi, pago 23/12/2025 para antecipar-se à tributação de dividendos de 2026). Em 2026 não há dividendo declarado na B3 até 26/10; em 11/08/2026 aprovou recompra de até 32 mi ações em 18 meses (6% do capital).",
   "election_impact": "DIRR3 −25%: majoritariamente macro. A marca Direcional (MCMV F1–F3) é beneficiada pela continuidade do programa; a Riva (média renda, SBPE/F4) é a parte exposta a juros — e já vinha fraca (vendas −13% a/a no 2T26; VSO 21%). Alavancagem baixa (DL/PL 18% pela companhia), mas carrega R$ 1,26 bi de cessões e paga muito dividendo, o que a deixa mais sensível ao CDI que Cury. Setor: o MCMV é financiado majoritariamente pelo FGTS (fundo parafiscal, fora do Orçamento, juros fixados pelo Conselho Curador e não pela Selic). Orçamento FGTS 2026: R$ 160,5 bi (habitação R$ 144,5 bi; descontos/subsídios elevados a R$ 13 bi em 10/09/2026); plurianual aprovado em nov/25: habitação R$ 144,5 bi em 2027 e R$ 139,5 bi em 2028–29 (nominal estável/queda) — o Conselho revisa 2027–29 no fim de out/26. Portaria MCID 333/2026 elevou renda (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000) e tetos (F3 R$ 400 mil; F4 R$ 600 mil). Um 4º mandato Lula reduz o risco de corte do programa (era um risco no cenário Flávio) — positivo para volume. O que piora de fato: (i) custo de capital/Ke e DI longo (+300 bp) → múltiplos; (ii) dívidas e cessões indexadas ao CDI; (iii) fiscal: Faixa 1 (FAR/OGU) e Faixa 4 (Fundo Social) dependem do Tesouro; FGTS é procíclico (arrecadação 8% da folha) e sofre com saques extraordinários; (iv) câmbio +9,5% → insumos (aço, cobre, PVC) e INCC (já 6,6% em 12m, mão de obra 7,6%).",
-  "summary": "Segunda melhor plataforma MCMV (ROE ~35–40%), com braço de média renda (Riva) mais sensível a juros. A ~R$ 8,4–8,6 negocia ~5x o lucro UDM; a queda foi macro, mas o 3T26 operacional mais fraco e a Riva justificam um múltiplo-alvo abaixo do histórico.",
+  "summary": "Segunda melhor plataforma MCMV (ROE ~35–40%), com braço de média renda (Riva) mais sensível a juros. A R$ 8,97 (foto das 13h02) negocia ~5,4x o lucro UDM; a queda foi macro, mas o 3T26 operacional mais fraco e a Riva justificam um múltiplo-alvo abaixo do histórico. Após a revisão, vale R$ 8,59 (TIR de dono 21,4%, abaixo do Ke de 25%) e só 40,5% dos cenários superam o preço: saiu da seleção e fica só como caso de dividendos.",
   "thesis": [
     "ROE anualizado de 35% no 2T26 com margem bruta ajustada de 42,8% e EBITDA ajustado de R$ 348 mi (27,2%).",
     "Receita +20% a/a no 2T26; vendas brutas recorde de R$ 2,0 bi; geração de caixa operacional de R$ 228 mi no 3T26.",
-    "Recompra de até 32 mi ações (≈6% do capital) a preços deprimidos, além de payout historicamente alto.",
+    "Recompra de até 32 mi ações (≈6% do capital) a preços deprimidos e payout historicamente alto: a R$ 8,97, DY projetado de 7,2%, 11,9% e 14,0% em 2026–28 — o que sustenta o caso após a revisão.",
     "MCMV fortalecido com Lula; tetos maiores (F3 R$ 400 mil) favorecem o ticket da marca Direcional."
   ],
   "risks": [
@@ -212,9 +212,14 @@
       "context": "VSO líquida 19%; 21% abaixo da estimativa Genial"
     },
     {
-      "label": "P/L UDM ao preço de hoje",
-      "value": "≈5,1x",
-      "context": "R$ 8,38–8,64 (intradia) × 520 mi / LL UDM R$ 856 mi"
+      "label": "P/L UDM ao preço de referência",
+      "value": "≈5,4x",
+      "context": "R$ 8,97 (foto das 13h02) × 520 mi / LL UDM R$ 856 mi"
+    },
+    {
+      "label": "Valor justo vs preço (Ke 25%)",
+      "value": "R$ 8,59 vs R$ 8,97",
+      "context": "TIR de dono 21,4%; P(valor > preço) 40,5%, abaixo do corte de 45% — fora da seleção após a revisão"
     }
   ],
   "sources": [

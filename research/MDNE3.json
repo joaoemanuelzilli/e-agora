@@ -13,9 +13,9 @@
  ],
  "overrides": {
   "base": {
-   "net_debt": 56.4
+   "net_debt": 309.6
   },
-  "notes": "DL: a CVM classifica a cessão de recebíveis de fee de terreno (R$ 146,9 mi, 1ª cessão no 2T26) nas linhas de debêntures; como nos pares (DIRR3, PLPL3), não a tratamos como dívida — é autoliquidável com os recebíveis cedidos que seguem no ativo. DL = 1.087,0 − 883,7 − 146,9 = R$ 56,4 mi (release: R$ 56,3 mi). Receita/EBITDA sem ajuste de base (FY2025 ROL R$ 2.356,9 mi; EBITDA CVM R$ 462,7 mi). ebitda_margin soma ~1,7 p.p. de juros capitalizados no custo (margem bruta ajustada 40,2% vs 38,6% no 2T26), deduzidos em other_financial (lucro inalterado; evita dupla contagem no DCF). Ações: 103,7 mi (após follow-on de 19,3 mi de ações a R$ 25 em jan/2026)."
+  "notes": "[Revisão 26/10, research/review/MDNE3.md] DL-base 56,4 → 309,6: soma o desvio conhecido do 3T26. A prévia oficial (08/10/2026, p. 8) reporta consumo de caixa ex-dividendos e recompra de R$ 170 mi no 3T26 (R$ 73 mi sem os R$ 97 mi do terreno em Salvador), enquanto o motor projetava +R$ 83,2 mi no trimestre (metade dos +R$ 166,4 mi de fluxo pré-dividendos do 2S26). Diferença de R$ 253,2 mi somada à DL do 2T26; o 4T26 segue como projetado. Para reverter, use 56,4. Texto original: DL: a CVM classifica a cessão de recebíveis de fee de terreno (R$ 146,9 mi, 1ª cessão no 2T26) nas linhas de debêntures; como nos pares (DIRR3, PLPL3), não a tratamos como dívida — é autoliquidável com os recebíveis cedidos que seguem no ativo. DL = 1.087,0 − 883,7 − 146,9 = R$ 56,4 mi (release: R$ 56,3 mi). Receita/EBITDA sem ajuste de base (FY2025 ROL R$ 2.356,9 mi; EBITDA CVM R$ 462,7 mi). ebitda_margin soma ~1,7 p.p. de juros capitalizados no custo (margem bruta ajustada 40,2% vs 38,6% no 2T26), deduzidos em other_financial (lucro inalterado; evita dupla contagem no DCF). Ações: 103,7 mi (após follow-on de 19,3 mi de ações a R$ 25 em jan/2026)."
  },
  "projection": {
   "years": [
@@ -104,8 +104,9 @@
   "roe": 0.2
  },
  "wacc": {
-  "kd_pre_tax": 0.15,
-  "target_debt_weight": 0.1
+  "kd_pre_tax": 0.2273,
+  "target_debt_weight": 0.1,
+  "notes": "[Revisão 26/10] Kd real de 15% sem benefício fiscal: sob lucro presumido/RET os juros não reduzem o IR (alíquota efetiva de 12% sobre o LAIR, ~2,9% da receita). O motor aplica (1 − 34%), então informamos 0,15/0,66 = 0,2273, como em DIRR3, PLPL3 e TEND3. Original: 0,15."
  },
  "adjustments": {
   "other_debt_like": 252,
@@ -167,15 +168,15 @@
    "net_income_mn": 174.1,
    "net_debt_ebitda": 0.1
   },
-  "notes": "CAGR receita 2020–25 de 35,6% (513→2.357) parte de base deprimida pós-reestruturação; projetamos ~5% a.a. 2025–30 (2026 +12%; 2027 −5% pela queda das adesões e do fee de terreno; depois +3–8%). Margem EBITDA CVM subiu de 10,7% (2021) para 19,6% (2025) e 23,8% no 1S26 (condomínio 42% de margem bruta); projetamos 21–23,5% + 1,7 p.p. de juros capitalizados. ROE 27,5% em 2025 e 28% LTM, mas o follow-on de R$ 483 mi (jan/26) dilui: modelo dá ~22–24% em 2026–27 e ~20% à frente. Payout: 0% até 2023, ~42% (2024) e ~96% (2025, antecipação ao IR); projetamos 30–55%. DL/EBITDA ~0,1x (DL R$ 56 mi sem cessão)."
+  "notes": "CAGR receita 2020–25 de 35,6% (513→2.357) parte de base deprimida pós-reestruturação; projetamos ~5% a.a. 2025–30 (2026 +12%; 2027 −5% pela queda das adesões e do fee de terreno; depois +3–8%). Margem EBITDA CVM subiu de 10,7% (2021) para 19,6% (2025) e 23,8% no 1S26 (condomínio 42% de margem bruta); projetamos 21–23,5% + 1,7 p.p. de juros capitalizados. ROE 27,5% em 2025 e 28% LTM, mas o follow-on de R$ 483 mi (jan/26) e a DL maior da revisão diluem: modelo dá ~19,5% em 2027–28 e ~20% em 2029–30. Payout: 0% até 2023, ~42% (2024) e ~96% (2025, antecipação ao IR); projetamos 30% em 2026 e 55–65% em 2027–30. DL/EBITDA ~0,1x no 2T26 (DL R$ 56 mi sem cessão); com o consumo de caixa do 3T26, a DL-base do modelo é de R$ 310 mi (~0,5x o EBITDA LTM)."
  },
  "guidance": "Guidance formal (fato relevante 09/02/2026): lançamentos de R$ 4,5–5,5 bi de VGV (%MD) em 2026; 9M26 R$ 3,87 bi. Sem guidance de margem, vendas ou dividendos. Metas informais (4T24): ROAE ≥20%, lucro > R$ 500 mi, dividendos ≥ R$ 50 mi/semestre. CEO (07/07/2026): ~R$ 5 bi de lançamentos e ~R$ 3,8 bi de vendas em 2026.",
  "dividend_policy": "Mínimo estatutário de 25% do lucro ajustado + compromisso informal de ≥ R$ 50 mi por semestre. Ciclo de dividendos iniciado em nov/2024 (R$ 54,7 mi) e mai/2025 (R$ 50 mi); nov/2025 R$ 50,7 mi; 29/12/2025 R$ 351,7 mi (R$ 4,16/ação, data-com 30/12/2025, citando a Lei 15.270/2025) pagos em 7 parcelas até set/2027 — o comprador de hoje não recebe essas parcelas. Nenhuma declaração nova em 2026 até 26/10. Recompra: programa jun/2026–dez/2027 de até 1,36 mi de ações (2% do free float).",
- "election_impact": "Queda de −39% mistura macro (Ke/curva +300 bp, beta alto de ~1,7–2,0) com um micro que já piorava antes da eleição: no 3T26 as vendas líquidas caíram 21,5% a/a e as adesões a condomínios 43,5%, com distratos subindo para 8,3%. O lucro reconhece antecipadamente o fee de terreno na constituição de cada condomínio, então menos adesões em 2027 derrubam rápido o lucro — nosso 2027E cai ~12% vs 2026E. A favor: Nordeste é base do governo (renda, salário mínimo, isenção de IR até R$ 5 mil) e o MCMV deve se expandir (Ún1ca, Mood); condomínio repassa custo (INCC) aos condôminos; caixa R$ 884 mi e DL ~zero.",
- "summary": "Líder do Nordeste com modelo de condomínio a preço de custo (ROE de 28% LTM, capital leve), mas lucro sensível ao ritmo de adesões, que já desacelerava antes da eleição. A R$ ~19 (P/L 2026E ~3,2x, P/VP 0,87x) o motor dá valor justo de R$ 20,6 e TIR implícita de ~26%: único nome do grupo que passa (por pouco) no hurdle de 25%, desde que o ROE fique ≥20%.",
+ "election_impact": "Queda de −35% (foto das 13h02) mistura macro (Ke/curva +300 bp, beta alto de ~1,7–2,0) com um micro que já piorava antes da eleição: no 3T26 as vendas líquidas caíram 21,5% a/a e as adesões a condomínios 43,5%, com distratos subindo para 8,3% e consumo de caixa de R$ 170 mi. O lucro reconhece antecipadamente o fee de terreno na constituição de cada condomínio, então menos adesões em 2027 derrubam rápido o lucro — nosso 2027E cai ~13% vs 2026E. A favor: Nordeste é base do governo (renda, salário mínimo, isenção de IR até R$ 5 mil) e o MCMV deve se expandir (Ún1ca, Mood); condomínio repassa custo (INCC) aos condôminos; balanço ainda leve (DL-base revisada de R$ 310 mi, 13,5% do PL).",
+ "summary": "Líder do Nordeste com modelo de condomínio a preço de custo (ROE de 28% LTM, capital leve), mas lucro sensível ao ritmo de adesões, que já desacelerava antes da eleição, e caixa pressionado (consumo de R$ 170 mi no 3T26). A R$ 19,66 (13h02; P/L LTM 3,6x, P/VP 0,89x) o motor dá valor justo de R$ 20,19 (+2,7%) e TIR implícita de 24,5%, logo abaixo do Ke de 25%: única incorporadora de média/alta renda na lista de oportunidades, mas sem margem de segurança e dependente de o ROE ficar perto de 20%.",
  "thesis": [
-  "Retorno alto e balanço leve: ROE LTM 28%, DL R$ 56 mi, caixa R$ 884 mi; condomínio (67% da receita) transfere custo de obra aos condôminos.",
-  "Preço: P/L 2026E ~3,2x e P/VP 0,87x (vs 1,37x pré-eleição); lucro 2026E de R$ 619 mi e payout crescente (DY 15–18% em 2027–28) levam a TIR implícita de ~26% mesmo com ROE de longo prazo de ~20% (P/VP Gordon 0,75x).",
+  "Retorno alto e balanço ainda leve: ROE LTM 28%; DL de R$ 56 mi no 2T26, que vai a R$ 310 mi (13,5% do PL) na base revisada com o consumo de caixa do 3T26; condomínio (67% da receita) transfere custo de obra aos condôminos.",
+  "Preço: a R$ 19,66 (13h02), P/L LTM 3,6x (4,0x 2027E) e P/VP 0,89x (vs 1,37x pré-eleição); lucro 2026E de R$ 587 mi e payout crescente (DY 13,7–16,4% em 2027–28) levam a TIR implícita de 24,5%, logo abaixo do Ke de 25%, com ROE de longo prazo de ~20% (P/VP Gordon 0,75x); valor justo R$ 20,19 (+2,7%).",
   "Renda do Nordeste e MCMV (Ún1ca, R$ 750 mi de VGV baixa renda em 2026; pipeline R$ 2 bi em 2027 segundo o Itaú BBA) são hedge político parcial.",
   "REF R$ 468 mi (margem 37%) + R$ 467 mi de taxas de administração a incorrer dão visibilidade a 2027."
  ],
@@ -202,14 +203,14 @@
    "context": "ROAE UDM 28%"
   },
   {
-   "label": "DL 2T26 (sem cessão)",
-   "value": "R$ 56 mi",
-   "context": "DL/PL 2,5%; caixa R$ 884 mi"
+   "label": "DL-base do modelo (após 3T26)",
+   "value": "R$ 310 mi",
+   "context": "R$ 56 mi no 2T26 (sem cessão) + desvio de R$ 253 mi do 3T26; 13,5% do PL"
   },
   {
    "label": "Prévia 3T26",
    "value": "Vendas líq. R$ 842 mi (−21,5% a/a)",
-   "context": "adesões −43,5%; VSO UDM 44,7%"
+   "context": "adesões −43,5%; VSO UDM 44,7%; consumo de caixa R$ 170 mi"
   },
   {
    "label": "Dividendos a pagar a acionistas de 30/12/2025",
@@ -217,9 +218,9 @@
    "context": "R$ 151,7 mi ainda em 2027"
   },
   {
-   "label": "P/L 2026E hoje",
-   "value": "~3,1x",
-   "context": "P/VP 0,84x"
+   "label": "P/L LTM a R$ 19,66 (13h02)",
+   "value": "3,6x",
+   "context": "4,0x 2027E; P/VP 0,89x"
   }
  ],
  "sources": [

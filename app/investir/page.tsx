@@ -1,5 +1,7 @@
+import fs from "node:fs";
+import path from "node:path";
 import type { Metadata } from "next";
-import { InvestView, type Monitor } from "@/components/invest/InvestView";
+import { InvestView, type Monitor, type StudyPortfolio } from "@/components/invest/InvestView";
 import { getCompany, getOverview } from "@/lib/data";
 
 export const metadata: Metadata = { title: "Investir" };
@@ -27,6 +29,9 @@ export default function Page() {
       }))
       .filter((m: Monitor) => m.kpi && m.threshold);
   }
+  const pp = path.join(process.cwd(), "data", "app", "portfolio.json");
+  const port: StudyPortfolio | null = fs.existsSync(pp) ? JSON.parse(fs.readFileSync(pp, "utf8")) : null;
+  const portfolio = port && port.sleeve?.every((x) => ov.opportunities.includes(x.ticker)) ? port : null;
   return (
     <div className="space-y-6">
       <header>
@@ -35,7 +40,7 @@ export default function Page() {
           Até que preço comprar cada ação para render a meta de retorno, e quantas ações pedir com o valor que você tem. Preço-teto é o menor entre o preço que dá TIR de dono igual ao Ke e o valor justo; acima dele, não compre.
         </p>
       </header>
-      <InvestView rows={ov.companies} opps={ov.opportunities} monitors={monitors} />
+      <InvestView rows={ov.companies} opps={ov.opportunities} monitors={monitors} portfolio={portfolio} />
     </div>
   );
 }

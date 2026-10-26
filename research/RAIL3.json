@@ -54,10 +54,10 @@
   "nwc_pct_revenue": 0.03,
   "cost_of_net_debt": [
    0.12,
-   0.125,
-   0.12,
-   0.115,
-   0.11
+   0.126,
+   0.129,
+   0.129,
+   0.129
   ],
   "other_financial": [
    0,
@@ -67,10 +67,10 @@
    0
   ],
   "tax_rate": [
-   0.36,
-   0.33,
-   0.31,
-   0.3,
+   0.29,
+   0.29,
+   0.29,
+   0.29,
    0.29
   ],
   "minority_share_ni": 0.015,
@@ -165,7 +165,7 @@
    "net_income_mn": 516,
    "net_debt_ebitda": 2.1
   },
-  "notes": "CVM 2020–25: receita CAGR 14,7% a.a. (6.966→13.848); margem EBITDA AJUSTADA (ex-impairments) média 2021–25 ~52% (45,0/50,8/51,7/56,6/57,9%); ROE contábil médio ~2% (impairments da Malha Sul: −R$ 3,1 bi em 2024, −R$ 1,2 bi em 2025); payout irrisório exceto o extraordinário de R$ 1,5 bi em 2025. Projeção: receita +7%/+6%/+6% em 2026–28, −5,7% em 2029 (saída da Malha Sul, ~R$ 2,2 bi de receita e margem ~40%, assumindo prorrogação de 24 meses) e +3,4% em 2030 — CAGR 3,2% (orgânico ex-Sul ~6%); margem 56,5%→61% (mix ex-Sul + eficiência); capex de R$ 6,0 bi (2026) para ~R$ 4,6 bi (Itaú BBA projeta R$ 4,7 bi/ano em 2027–28)."
+  "notes": "CVM 2020–25: receita CAGR 14,7% a.a. (6.966→13.848); margem EBITDA AJUSTADA (ex-impairments) média 2021–25 ~52% (45,0/50,8/51,7/56,6/57,9%); ROE contábil médio ~2% (impairments da Malha Sul: −R$ 3,1 bi em 2024, −R$ 1,2 bi em 2025); payout irrisório exceto o extraordinário de R$ 1,5 bi em 2025. Projeção: receita +7%/+6%/+6% em 2026–28, −5,7% em 2029 (saída da Malha Sul, ~R$ 2,2 bi de receita e margem ~40%, assumindo prorrogação de 24 meses) e +3,4% em 2030 — CAGR 3,2% (orgânico ex-Sul ~6%); margem 56,5%→61% (mix ex-Sul + eficiência); capex de R$ 6,0 bi (2026) para ~R$ 4,6 bi (Itaú BBA projeta R$ 4,7 bi/ano em 2027–28). [Revisão G02, 26/10/2026] (1) cost_of_net_debt 12/12,5/12/11,5/11% → 12/12,6/12,9/12,9/12,9%: a dívida é ~102% do CDI e a curva DI de hoje implica CDI a termo de ~15,2% (2027), ~15,9% (2028) e ~16% (2029–30); a trajetória original embutia CDI de ~12,7% em 2030. Calibração no 1S26: resultado financeiro −1.610,6 × 2 ÷ DL média 25.491 = 12,6% com CDI ~14,5%; estrutura: (dívida 22,9 bi × 1,02 − caixa 5,5 bi) × CDI + arrendamentos/concessões 8,7 bi a ~10% − ~0,27 bi de juros capitalizados/hedge; usamos CDI 15,0% (2027) e 15,5% (2028–30), um pouco abaixo dos termos por prêmio de prazo. (2) tax_rate 36/33/31/30/29% → 29% fixo: o EBT do motor é AJUSTADO (EBITDA soma de volta o impairment da Malha Sul), e a alíquota efetiva sobre o EBT ajustado foi 21,5% (2023), 26,7% (2024: 800,5/(−148,8+3.149,2)), 24,8% (2025: 689,4/(1.554,5+1.227,9)) e 29,5% (1S26: 398,9/(1.016,4+336,5)); 36% misturava EBT ajustado com alíquota sobre lucro reportado."
  },
  "guidance": "Sem guidance formal de EBITDA/capex para 2026 (Nord Investimentos, 1T26; release 2T26 não traz faixa). Release 2T26: capex do 2S26 abaixo do 1S26 (R$ 3,37 bi), com a 1ª fase da Ferrovia do Mato Grosso entregue em jun/2026. Nova gestão (CEO Daniel Rockenbach desde 20/07/2026): preservação de caixa, capex limitado à geração própria, eficiência e reajustes de preço.",
  "dividend_policy": "Mínimo estatutário de 25%. Histórico: payout irrisório até 2024 (CVM: 5% 2021, 8% 2022, 17% 2023); dividendo extraordinário de R$ 1,5 bi (R$ 0,81/ação) em jun/2025. Referente a 2025: R$ 0,1084/ação (~R$ 201 mi; data-base 28/04/2026; pagamento 30/11/2026). Projetamos payout subindo de 25% para 60% à medida que o capex cai.",

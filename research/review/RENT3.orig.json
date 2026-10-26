@@ -1,0 +1,281 @@
+{
+ "ticker": "RENT3",
+ "name": "Localiza Rent a Car S.A. (Localiza&Co)",
+ "sector": "Mobilidade / locação de veículos (RAC, gestão de frotas, seminovos)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "RENT3",
+   "class": "ON"
+  },
+  {
+   "ticker": "RENT4",
+   "class": "PN"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 33753
+  },
+  "notes": "DL econômica 2T26 = DL CVM (R$ 34.648 mi: empréstimos/debêntures 44.636 + arrendamentos 1.296 − caixa/aplicações 11.284) − swaps líquidos ativos de R$ 895 mi (protegem os R$ 5,6 bi de empréstimos em moeda estrangeira; a própria Localiza abate os swaps na DL de R$ 32.352 mi). Receita FY2025 CVM (R$ 41.782 mi) mantida: inclui IPI verde (−R$ 929 mi no EBIT do 2S25) e a baixa de prejuízo fiscal da Locamerica (−R$ 937 mi no IR do 2T25) — não recorrentes, ambos fora do LTM relevante para 2027+. 1S26 inclui ganho de R$ 282 mi (pré-IR) com desinvestimento de subsidiárias no 1T26 (está no EBITDA 2026E)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.175,
+   0.05,
+   0.075,
+   0.07,
+   0.065
+  ],
+  "ebitda_margin": [
+   0.318,
+   0.326,
+   0.328,
+   0.33,
+   0.33
+  ],
+  "da_pct_revenue": [
+   0.119,
+   0.122,
+   0.123,
+   0.123,
+   0.124
+  ],
+  "capex_pct_revenue": [
+   0.15,
+   0.188,
+   0.197,
+   0.191,
+   0.187
+  ],
+  "nwc_pct_revenue": 0.0,
+  "cost_of_net_debt": [
+   0.138,
+   0.143,
+   0.143,
+   0.14,
+   0.137
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.2,
+   0.22,
+   0.22,
+   0.22,
+   0.22
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.55,
+   0.55,
+   0.55,
+   0.55,
+   0.55
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.14,
+  "roe": 0.16
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.4
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Swaps líquidos já abatidos via overrides.base.net_debt. Fornecedores-montadoras (R$ 10,7 bi no 2T26, R$ 8,7 bi em dez/25) tratados como capital de giro operacional, não dívida; parte do aumento de R$ 2,0 bi no 1S26 deve reverter no 2S26 (embutido no capex 2026E)."
+ },
+ "target_multiples": {
+  "pe": 10.0,
+  "ev_ebitda": 4.7,
+  "pbv": 1.4,
+  "rationale": "P/L: RENT3 negociou a ~11x o lucro ajustado 2025 em 12/08/26 (R$ 34,10), ~13x em 30/06 (R$ 41,54) e ~17x na véspera da eleição (R$ 52,42) — cálculo próprio com preços B3 (COTAHIST) e lucro CVM/release. Alvo 10x 2027E = desconto ao piso recente para refletir CDI ~14–15% por mais tempo e depreciação em alta. EV/EBITDA: hoje ~3,9x e pré-eleição ~5,3x o EBITDA 2027E; alvo 4,7x (consistente com P/L ~10x dada a DL de ~R$ 34 bi). P/VP 1,4x vs 1,24x hoje (ROE ~15%)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.01,
+   "narrative": "Guerra de preços das montadoras chinesas + seminovos em deflação elevam depreciação; CDI ~15–16% (curva de hoje) até 2028 e demanda RAC mais fraca."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Curva devolve parte do choque (CDI ~12% em 2028), repasse de tarifas mantém spread ROIC−Kd no topo da faixa e reforma tributária favorece o B2B (70% do negócio)."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 44636,
+  "pct_floating_cdi": 0.27,
+  "avg_cost": "Captações 2025–26 a CDI+1,18% a +1,85% (46ª/47ª debêntures CDI+1,25%, venc. 2033); R$ 23,5 bi da DL swapados para pré a 12,30% a.a. + spread; R$ 8,9 bi da DL expostos ao CDI",
+  "avg_maturity_years": 3.6,
+  "next_24m_maturities_mn": 9500,
+  "covenant_nd_ebitda": 4.0
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -59,
+  "notes": "Só R$ 8.870 mi da DL (27%) flutuam com o CDI no curto prazo (ITR 2T26, nota de sensibilidade): +100 bp = −R$ 89 mi/ano pré-IR ≈ −R$ 59 mi líquido (~1,4% do lucro 2026E). O resto foi travado em pré (12,30% + spread) via swaps casados com os contratos de Gestão de Frotas; à medida que vencem (2027–2031), novas travas sairão à curva de hoje (DI1F28 ~14,9%, DI1F31 ~15,7%). Curva de hoje vs pré-eleição (~+250 bp médio em 2027–30): −R$ 150 mi/ano no 1º ano subindo para até ~−R$ 550 mi/ano (~12% do lucro) se toda a DL reprecificar — repassável via tarifas com defasagem (prática da empresa em 2022–25)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.323,
+  "ebitda_margin_avg_5y": 0.345,
+  "roe_avg_5y": 0.13,
+  "payout_avg_5y": 0.632,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.245,
+   "ebitda_margin": 0.305,
+   "net_income_mn": 1003,
+   "net_debt_ebitda": 2.25
+  },
+  "notes": "CAGR 5a de 32% é inflado pela fusão com a Locamerica (jul/22); orgânico: receita de aluguel +21% (2024) e +8,4% (2025), +7,6% no 1S26. Premissa: +17,5% em 2026 (1S26 já +22,8% com seminovos +37%) e 5–7,5% a.a. em 2027–30 (aluguel ~8–9%, seminovos estabilizando). Margem EBITDA s/ receita total 31,8–33% vs média 34,5% (mix com mais seminovos, margem ~2%). ROE projetado ~15% vs 7% reportado 2023–25 (deprimido por depreciação/IPI/baixa fiscal; ajustado 2025 ≈ 13%). Payout 55% vs 63% médio (2025 JCP R$ 2,1 bi = 61% do lucro ajustado). DL/EBITDA 2T26: 2,25x (DL econômica/EBITDA LTM CVM) vs covenant <4,0x (2,14x pela métrica do covenant)."
+ },
+ "guidance": "Sem guidance numérico. 2T26 (07/08/2026): priorizar preço sobre volume p/ manter ROIC spread no topo da faixa-alvo; ajustar frota após julho; depreciação por carro continuará subindo no curto prazo (RAC R$ 8.243/ano no 2T26, +9,9% a/a); retomada de crescimento em 2027 condicionada a juros/depreciação. Resultado 3T26 em 05/11/2026 (após o fechamento).",
+ "dividend_policy": "Estatuto: mínimo 25%. Prática: JCP trimestral. 2023: R$ 1.135 mi pagos; 2024: R$ 1.294 mi; 2025: JCP aprovados R$ 2.101,7 mi (R$ 1,99/ação; 61% do lucro ajustado de R$ 3.420 mi); 2026: R$ 571,8 mi (mar) + R$ 591,1 mi (jun) = R$ 1.162,9 mi (52% do lucro 1S26). Recompras: R$ 315 mi (2023) e R$ 796 mi (2024); nenhuma em 2025–1S26. PNs transitórias (RENT4) emitidas em dez/25 como bonificação, conversíveis 1:1 em ON até 31/12/2028.",
+ "election_impact": "Canal é macro: (i) juros — curva longa +300 bp encarece a renovação dos swaps e das captações (só 27% da DL flutua hoje); (ii) prêmio de risco/múltiplo — RENT3 subiu de R$ 34,10 (12/08) para R$ 52,42 (23/10) no 'trade' Flávio e hoje devolveu tudo (R$ 30,46 vs R$ 34,10 em agosto); (iii) câmbio +9,5% encarece carros importados (BYD/GWM etc.), o que ajuda valor residual da frota; (iv) Lula 4: risco de novos programas de desconto/IPI (carro popular 2023, IPI verde jul/25 custou R$ 929 mi de EBIT) que derrubam preço de seminovos e forçam depreciação — risco micro real. Valor intrínseco muda pouco (dívida majoritariamente travada, repasse de preço comprovado), mas a Ke de 25% não é atingida ao preço de hoje.",
+ "summary": "Melhor operador do setor (ROIC 15,6% e spread de 5,6 p.p. ex-não recorrentes no 1S26, covenants folgados: 2,14x vs 4,0x), com 73% da DL travada em pré via swaps. Caiu 42% hoje, para abaixo do preço de agosto, mas ROE estrutural ~15% não remunera Ke de 25%: P/VP justo ~0,5x vs 1,24x de mercado.",
+ "thesis": [
+  "Qualidade: margem EBITDA de aluguel 67,6% (RAC) e 75,6% (Frotas) no 2T26; ROIC 1S26 15,6% vs custo da dívida pós-IR ~10% (spread 5,6 p.p.) mesmo com depreciação em alta.",
+  "Balanço resiliente a juros: R$ 23,5 bi da DL de R$ 32,4 bi swapados para pré a 12,30% + spread; +100 bp no CDI = −R$ 59 mi/ano (~1,4% do lucro).",
+  "Liquidez: caixa R$ 11,4 bi cobre dívida de curto prazo e montadoras; exchange offer de ~R$ 7 bi em jul/26 alongou o perfil.",
+  "Preço hoje R$ 30,46 = P/L 2027E ~7,8x e EV/EBITDA ~3,9x, abaixo do piso de agosto (R$ 34,10)."
+ ],
+ "risks": [
+  "Depreciação: 20 marcas disputando share (chinesas), descontos em SUVs compactos e eventual novo programa de incentivo do governo podem derrubar valor residual (depreciação RAC subindo ~10% a.a.).",
+  "Renovação dos swaps e da dívida a CDI 14–16% comprime o spread se o repasse de tarifa encontrar demanda elástica (RAC B2C ~30% do negócio).",
+  "Reforma tributária (CBS/IBS a partir de 2027): neutra a positiva no B2B, negativa no B2C, transição até 2033 — efeito incerto sobre seminovos.",
+  "Ke de 25%: com ROE ~15%, o papel só passa na meta se o múltiplo de saída subir muito."
+ ],
+ "catalysts": [
+  "Resultado 3T26 em 05/11/2026 (depreciação por carro e ritmo de seminovos)",
+  "Copom de dez/26 e trajetória da curva DI",
+  "Regulamentação da CBS/IBS para locação e venda de usados (2027)",
+  "Eventual retomada de recompras/JCP extraordinário"
+ ],
+ "key_data": [
+  {
+   "label": "Receita líquida 2T26",
+   "value": "R$ 12.327 mi (+24,5% a/a)",
+   "context": "aluguel R$ 5.150 mi (+8,8%), seminovos R$ 7.177 mi (+38,9%)"
+  },
+  {
+   "label": "EBITDA 2T26",
+   "value": "R$ 3.755 mi (+14,1%)",
+   "context": "margem RAC 67,6%, Frotas 75,6%, Seminovos 1,9%"
+  },
+  {
+   "label": "Lucro líquido 2T26",
+   "value": "R$ 1.003 mi",
+   "context": "+30,6% vs lucro ajustado 2T25"
+  },
+  {
+   "label": "DL/EBITDA (covenant) 2T26",
+   "value": "2,14x",
+   "context": "limite < 4,0x; EBITDA/desp. fin. 3,29x vs > 1,5x"
+  },
+  {
+   "label": "DL exposta ao CDI",
+   "value": "R$ 8,9 bi de R$ 32,4 bi",
+   "context": "R$ 23,5 bi swapados p/ pré a 12,30% + spread"
+  },
+  {
+   "label": "Frota final 2T26",
+   "value": "677,2 mil carros (+7% a/a)",
+   "context": "compra 120,6 mil e venda 92 mil no trimestre"
+  },
+  {
+   "label": "Depreciação anualizada/carro RAC",
+   "value": "R$ 8.243 (+9,9% a/a)",
+   "context": "empresa espera continuidade da alta"
+  },
+  {
+   "label": "Investimento líquido em frota 1S26",
+   "value": "R$ 5.248 mi",
+   "context": "fornecedores-montadoras +R$ 2.030 mi"
+  },
+  {
+   "label": "JCP 2025 / 1S26",
+   "value": "R$ 2.101,7 mi / R$ 1.162,9 mi",
+   "context": "payout ~52–61%"
+  },
+  {
+   "label": "Preço 26/10 vs 12/08 vs 23/10",
+   "value": "R$ 30,46 / 34,10 / 52,42",
+   "context": "rali eleitoral totalmente devolvido"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Localiza — Release de resultados 2T26 (07/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/08f327aa-e610-4d9d-b683-8ff0f7caae07/ffd204e4-d65f-5649-63a7-f12a8b70f4bd?origin=2"
+  },
+  {
+   "title": "Localiza — ITR 2T26 (covenants, sensibilidade a CDI, capital social)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/08f327aa-e610-4d9d-b683-8ff0f7caae07/632d087a-5031-1a1f-d0a8-9ea6eb00624a?origin=2"
+  },
+  {
+   "title": "Localiza — Transcrição do webinar 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/08f327aa-e610-4d9d-b683-8ff0f7caae07/8a3c3dc7-63eb-428e-0339-a09577235db6?origin=2"
+  },
+  {
+   "title": "Localiza RI — calendário (3T26 em 05/11/2026)",
+   "url": "https://ri.localiza.com/servicos-ri/calendario-de-eventos/"
+  },
+  {
+   "title": "BP Money — Localiza lucra R$ 1 bi no 2T26",
+   "url": "https://bpmoney.com.br/?p=415379"
+  },
+  {
+   "title": "B3 — COTAHIST diário (preços 09/03, 30/06, 12/08, 23/10/2026) e cotação ao vivo",
+   "url": "https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D23102026.ZIP"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (data/hist/RENT3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média-alta — números oficiais (release/ITR/CVM) e dívida bem documentada; incerteza principal é a trajetória de depreciação e da curva, não o balanço."
+}

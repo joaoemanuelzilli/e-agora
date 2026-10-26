@@ -106,10 +106,10 @@
   "target_debt_weight": 0.1
  },
  "adjustments": {
-  "other_debt_like": 0,
+  "other_debt_like": 420.5,
   "non_operating_assets": 0,
   "minority_value": null,
-  "notes": "Sem itens debt-like relevantes: não há empréstimos corporativos (dívida bruta CVM de R$ 757,8 mi = funding da Realize, já na DL). Participação de ~5,56% na Vestuá Limited (recebida pela venda da Repassa em 30/06/26) sem valor divulgado → 0. Obrigações com administradoras de cartões (R$ 2.424,7 mi) são operacionais (capital de giro)."
+  "notes": "[Revisão 26/10] other_debt_like = R$ 420,5 mi de JCP com data-com anterior a hoje e pago depois do balanço-base: (a) JCP do 2T26 a pagar em 30/06/26, R$ 193,0 mi (data-com 23/06, pago 14/07/26); (b) JCP do 3T26, R$ 227,5 mi (data-com 22/09, pago 14/10/26). O DCF (EV a partir de 30/06 − DL de 30/06) creditava os dois ao comprador de hoje. No EV/EBITDA o JCP do 3T26 já sai pela DL 2026E (dividendos do stub): dupla contagem de ~R$ 0,24/ação × peso 12,5% ≈ R$ 0,03 no valor justo, aceita para corrigir o DCF (peso 50%). Demais itens: não há empréstimos corporativos (dívida bruta CVM de R$ 757,8 mi = funding da Realize, já na DL). Participação de ~5,56% na Vestuá Limited (recebida pela venda da Repassa em 30/06/26) sem valor divulgado → 0. Obrigações com administradoras de cartões (R$ 2.424,7 mi) são operacionais (capital de giro)."
  },
  "target_multiples": {
   "pe": 9.0,
@@ -171,10 +171,10 @@
  "guidance": "Fato Relevante/Investor Day de 08/12/2025: receita líquida de varejo +9–13% a.a. em 2026–30 (2026 revisado para 4–8% em 06/08/2026; 2027–30 mantido); despesas de varejo ex-IFRS16/receita −2,5 a −3,5 p.p. em 2030 vs 2025 (base 41,8%); margem EBITDA de varejo pré-IFRS16 de 18–20% até 2030 (2025: 14,8%); Realize = 8–12% do EBITDA total pré-IFRS16; ROIC ~20% até 2030 (2025: 14,7%); capex 6–7,5% da receita de varejo (R$ 1.050 mi em 2026); 570–600 lojas Renner e 260–290 Youcom até 2030; distribuição de 50–80% do lucro.",
  "dividend_policy": "Política: distribuir 50–80% do lucro, prioridade JCP, complementado por dividendos e/ou recompra (release 4T25); mínimo estatutário 25% do lucro ajustado. JCP declarado: 2023 R$ 682 mi (payout 70%), 2024 R$ 634 mi (53%), 2025 R$ 834 mi (57%; 4 parcelas de R$ 0,188–0,228/ação); 2026 até set: R$ 665 mi (R$ 0,2227 abr, R$ 0,2293 jul, R$ 0,2407 com pagamento em 14/10/26; IRRF 17,5%). Recompras: R$ 943 mi em 2025 (70,5 mi ações a R$ 13,38; 53,0 mi canceladas em 08/12/25) e R$ 313 mi no 1S26 (21,7 mi ações a R$ 14,44); programa vigente de até 75 mi ações até 08/06/2027. Distribuição total 2025 ≈ 120% do lucro; 1S26 ≈ 113%.",
  "election_impact": "Queda de ~37–39% (R$ 14,58 → ~R$ 9) é essencialmente macro: compressão de múltiplo de 'duration' de consumo doméstico com DI longo +300 bp e dólar +9,5%. Canais que mudam o valor: (i) Realize — funding 100% CDI e curto contra carteira prefixada, spread comprimido e inadimplência maior em 2027; (ii) câmbio encarece importados (fatia no CPV não divulgada; o 2T26 teve 'câmbio favorável'); (iii) risco de nova restrição ao JCP (benefício de ~19% do lucro). Contrapontos: isenção de IR até R$ 5 mil (Lei 15.270, vigente desde jan/26), salário mínimo com ganho real e transferências sustentam a renda da classe C/B; caixa líquido rende mais com CDI alto; real mais fraco encarece o cross-border. Nosso lucro 2027E (R$ 1,59 bi) fica ~15–20% abaixo das estimativas pré-eleição (BTG dez/25: R$ 1,72 bi em 2026; Safra implícito ~R$ 1,9 bi em 2027) — impacto fundamental bem menor que a queda do preço.",
- "summary": "Maior varejista de moda do país (723 lojas, Realize CFI), sem dívida corporativa e com política de distribuir 50–80% do lucro. A queda de ~34–39% é quase toda prêmio de risco: o dano fundamental (Realize com funding CDI curto, câmbio, demanda) tira ~15–20% do lucro 2027E vs. estimativas pré-eleição, não um terço do valor. A Ke de 25% o valor justo (~R$ 9,1) ≈ preço e a TIR de dono sem reprecificação é ~20% — qualidade a bom preço, abaixo da meta; a TIR de 3 anos (~50%) depende de o P/L voltar a ~9x.",
+ "summary": "Maior varejista de moda do país (723 lojas, Realize CFI), sem dívida corporativa e com política de distribuir 50–80% do lucro. A queda de ~34–39% é quase toda prêmio de risco: o dano fundamental (Realize com funding CDI curto, câmbio, demanda) tira ~15–20% do lucro 2027E vs. estimativas pré-eleição, não um terço do valor. A Ke de 25% o valor justo (~R$ 8,8, já descontando os JCPs do 2T26 e 3T26 pagos a acionistas anteriores) fica ~8% abaixo do preço e a TIR de dono sem reprecificação é ~20% — qualidade a bom preço, abaixo da meta; a TIR de 3 anos (~50%) depende de o P/L voltar a ~9x.",
  "thesis": [
   "Balanço blindado: sem empréstimos corporativos desde fev/25; caixa R$ 1,92 bi vs funding da Realize R$ 0,76 bi (caixa líquido ex-arrendamentos R$ 1,16 bi); DL com arrendamentos de 0,45x o EBITDA LTM (CVM, 2T26).",
-  "Retorno ao acionista: JCP de 2026 já declarado em R$ 665 mi (3 parcelas até set) + 21,7 mi de ações recompradas no 1S26; programa vigente até 75 mi de ações (~7,8% do capital) até 08/06/2027 — a ~R$ 9, R$ 100 mi recompram ~1,2% das ações.",
+  "Retorno ao acionista: JCP de 2026 de R$ 665 mi em 3 parcelas (data-com até 22/09/26 — nenhuma vai para quem compra hoje; a próxima deve ter data-com em dez/26) + 21,7 mi de ações recompradas no 1S26; programa vigente até 75 mi de ações (~7,8% do capital) até 08/06/2027 — a ~R$ 9, R$ 100 mi recompram ~1,2% das ações.",
   "Valuation de crise: P/L 2027E ~5,8x e EV/EBITDA LTM ~5x (IFRS-16, com arrendamentos) vs. P/L LTM de 9,4x antes da eleição; P/VP ~0,9x com ROE projetado de 14–18%.",
   "Alavancas próprias: centralização do CD-SP e projeto de eficiência (meta oficial −2,5 a −3,5 p.p. de despesas/receita até 2030); o modelo captura só ~1 p.p. de margem IFRS-16 (19,2% → 20,3%)."
  ],
@@ -220,7 +220,7 @@
   {
    "label": "JCP declarado 2026 (até set)",
    "value": "R$ 665 mi",
-   "context": "~7% do valor de mercado atual, só em 3 parcelas"
+   "context": "3 parcelas com data-com até 22/09/26 (direito de quem já era acionista); ~7% do valor de mercado atual"
   },
   {
    "label": "Realize 2T26",

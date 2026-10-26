@@ -38,7 +38,7 @@ function StatCard({ s }: { s: StatItem }) {
   );
 }
 
-export function ReportView({ doc, notesHtml, rank, total, rule }: { doc: any; notesHtml?: string; rank: number; total: number; rule: string }) {
+export function ReportView({ doc, notesHtml, rank, total, rule, dropped }: { doc: any; notesHtml?: string; rank: number; total: number; rule: string; dropped?: string[] }) {
   const rp = doc.report || {};
   const row = doc.row;
   const reasons = (rp.reasons || []) as Reason[];
@@ -64,8 +64,13 @@ export function ReportView({ doc, notesHtml, rank, total, rule }: { doc: any; no
 
       <header className="space-y-4">
         <div className="text-[12.5px] text-muted">
-          Relatório de oportunidade {rank} de {total}, 26 de outubro de 2026
+          {dropped ? "Relatório de 26 de outubro de 2026, fora da seleção atual" : `Relatório de oportunidade ${rank} de ${total}, 26 de outubro de 2026`}
         </div>
+        {dropped && (
+          <div className="rounded border border-hairline bg-surface-2 px-4 py-3 text-[13.5px] text-ink-2">
+            <span className="font-semibold text-ink">Saiu da seleção na revisão independente de 26/10.</span> Motivo: {dropped.join("; ")}. O relatório segue publicado como registro da tese.
+          </div>
+        )}
         <h1
           className={`max-w-[40ch] font-semibold tracking-[-0.02em] ${(rp.headline || "").length > 140 ? "text-[24px] leading-[1.22]" : (rp.headline || "").length > 90 ? "text-[28px] leading-[1.18]" : "text-[34px] leading-[1.12]"}`}
         >
@@ -78,7 +83,7 @@ export function ReportView({ doc, notesHtml, rank, total, rule }: { doc: any; no
 
       {reasons.length > 0 && (
         <section>
-          <SectionTitle id="motivos" title="Por que está entre as melhores" />
+          <SectionTitle id="motivos" title={dropped ? "A tese, e o que ainda vale nela" : "Por que está entre as melhores"} />
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
             {reasons.map((r, i) => (
               <ReasonCard key={i} r={r} />

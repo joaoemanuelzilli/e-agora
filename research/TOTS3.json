@@ -13,9 +13,10 @@
   ],
   "overrides": {
     "base": {
-      "revenue_2025": 6900.0
+      "revenue_2025": 6900.0,
+      "shares_outstanding_mn": 573.195
     },
-    "notes": "Receita-base 2025 pró-forma com Linx (fechada em 27/02/2026; CVM FY2025 = R$ 5.772 mi já ex-Dimensa, reclassificada como descontinuada). Linx estimada em ~R$ 1.135 mi/ano a partir do crescimento pró-forma de 13,3% do 2T26 (2T25 pró-forma = 1.919,7/1,133 = 1.694 vs 1.410,6 reportado). Assim 2026E (+10,5%) ≈ R$ 7,6 bi reportado (1S26 real 3.617 + 2S26E ~4.000). Dívida líquida-base = CVM 30/06/2026 (debêntures 4.743 + arrendamentos 284 − caixa 2.020 = 3.007)."
+    "notes": "Receita-base 2025 pró-forma com Linx (fechada em 27/02/2026; CVM FY2025 = R$ 5.772 mi já ex-Dimensa, reclassificada como descontinuada). Linx estimada em ~R$ 1.135 mi/ano a partir do crescimento pró-forma de 13,3% do 2T26 (2T25 pró-forma = 1.919,7/1,133 = 1.694 vs 1.410,6 reportado). Assim 2026E (+10,5%) ≈ R$ 7,6 bi reportado (1S26 real 3.617 + 2S26E ~4.000). Dívida líquida-base = CVM 30/06/2026 (debêntures 4.743 + arrendamentos 284 − caixa 2.020 = 3.007). [Revisão G12, 26/10/2026] shares_outstanding_mn = 573,195 mi (CVM 30/06/2026: 599,40 emitidas − 26,21 em tesouraria). O pipeline aplicava a razão de tesouraria de 30/06 (4,37%) sobre o total da B3 já líquido do cancelamento de 20 mi de ações em tesouraria (04/08/2026), contando o cancelamento duas vezes (554,07 mi). O cancelamento não muda as ações em circulação; DL e PL também são de 30/06."
   },
   "projection": {
     "years": [

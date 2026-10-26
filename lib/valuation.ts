@@ -48,7 +48,7 @@ export function dcfPerShare(e: Engine, ke: number): number | null {
 /** Valor justo por unidade negociada (ação ou unit), no Ke informado. */
 export function fairValue(e: Engine | null, ke: number): number | null {
   if (!e) return null;
-  if (e.template === "holding") return fin(e.fair_value) ? e.fair_value : null;
+  if (e.template === "holding") return holdingValue(e, ke);
   const vals: Record<string, number | null> = { ...(e.values_share || {}) };
   vals.ddm = ddmPerShare(e, ke);
   if (e.template !== "financial") vals.dcf = dcfPerShare(e, ke);
@@ -65,12 +65,29 @@ export function fairValue(e: Engine | null, ke: number): number | null {
   return (acc / tot) * (e.per_unit || 1);
 }
 
+/** Soma das partes no Ke pedido: controladas do estudo pelo próprio motor, demais pelo valor de mercado/fixo. */
+function holdingValue(e: Engine, ke: number): number | null {
+  const comps = e.components;
+  if (!comps?.length || !fin(e.n_sh) || e.n_sh <= 0 || !fin(e.g)) return fin(e.fair_value) ? e.fair_value : null;
+  let nav = 0;
+  for (const c of comps) {
+    let v = fin(c.value_100) ? c.value_100 : 0;
+    if (c.method === "fair" && c.engine) {
+      const fv = fairValue(c.engine, ke);
+      if (fin(fv) && fin(c.engine.n_sh)) v = (fv / (c.engine.per_unit || 1)) * c.engine.n_sh;
+    }
+    nav += (fin(c.stake) ? c.stake : 1) * v;
+  }
+  const cap = fin(e.hcost) && ke > e.g ? e.hcost / (ke - e.g) : 0;
+  return ((nav - (e.hnd ?? 0) - cap) / e.n_sh) * (e.per_unit || 1);
+}
+
 function bisect(fn: (r: number) => number, lo: number, hi: number, target: number, it = 70): number | null {
   const flo = fn(lo);
   const fhi = fn(hi);
   if (!fin(flo) || !fin(fhi)) return null;
-  if (flo < target) return lo;
-  if (fhi > target) return hi;
+  // sem raiz no intervalo (ex.: lucro terminal negativo): TIR não definida, igual ao model.py
+  if (flo < target || fhi > target) return null;
   for (let i = 0; i < it; i++) {
     const mid = (lo + hi) / 2;
     if (fn(mid) > target) lo = mid;
@@ -90,9 +107,10 @@ export function irrImplied(e: Engine | null, price: number | null): number | nul
 /** TIR de 3 anos: dividendos 2026E(stub)–2028E e saída ao P/L alvo × LPA 2029E. */
 export function irr3y(e: Engine | null, price: number | null): number | null {
   if (!e || e.template === "holding" || !fin(price) || !e.dps || !e.eps || !e.taus || !fin(e.f26)) return null;
+  if (!fin(e.eps[1]) || e.eps[1] <= 0 || !fin(e.eps[3]) || e.eps[3] <= 0) return null;
   const peVal = e.values_share?.pe;
-  if (!fin(peVal) || !fin(e.eps[1]) || e.eps[1] <= 0 || !fin(e.eps[3]) || e.eps[3] <= 0) return null;
-  const peTarget = peVal / e.eps[1];
+  const peTarget = fin(e.pe_target) ? e.pe_target : fin(peVal) ? peVal / e.eps[1] : null;
+  if (!fin(peTarget) || peTarget <= 0) return null;
   const pSh = price / (e.per_unit || 1);
   const dps = e.dps;
   const taus = e.taus;
