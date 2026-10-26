@@ -1,0 +1,288 @@
+{
+  "ticker": "MRVE3",
+  "name": "MRV Engenharia e Participações S.A. (MRV&CO)",
+  "sector": "Construção civil / Incorporação residencial econômica (MCMV)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "MRVE3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "shares_outstanding_mn": 562.83,
+      "net_debt": 5900
+    },
+    "notes": "(1) Ações: CVM em milhares (562.835) → 562,83 mi (B3: 562.835.771). (2) DL-base = R$ 5.900 mi, a dívida líquida consolidada reportada no 2T26 (definição da companhia: dívida bruta + derivativos − caixa e títulos e valores mobiliários). A DL CVM padronizada (R$ 7.645 mi) não capta ~R$ 1,9 bi de TVM classificados em 'outros ativos circulantes'. (3) Receita/EBITDA FY2025 sem override, mas o EBITDA CVM (R$ 453 mi) inclui perda não caixa de R$ 1.046 mi com a entrada de novo acionista na Resia (2025) e o 1S26 inclui impairment de R$ 569 mi (Resia): EBITDA recorrente ≈ R$ 1.499 mi em 2025 (13,7%) e R$ 798 mi no 1S26 (13,8%). LL controlador 2025: −R$ 1.042 mi contábil; excluindo a perda não caixa de R$ 1.046 mi (DFC 6.01.01.12) ≈ +R$ 4 mi (ainda deprimido por juros, swaps e Resia); 1S26: −R$ 704 mi contábil, ≈ −R$ 135 mi ex-impairment de R$ 569 mi. Não usamos override de receita: a receita CVM confere com a imprensa (2T26 R$ 2,99 bi). As margens projetadas são recorrentes; o LL de 2026E do modelo não inclui o impairment do 1S26 (só o stub 2S26 entra no valor). EBITDA projetado está na base 'ex-juros capitalizados' (+3,2 p.p. vs EBITDA CVM), com o mesmo valor deduzido em other_financial."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.11,
+      0.06,
+      0.06,
+      0.05,
+      0.05
+    ],
+    "ebitda_margin": [
+      0.167,
+      0.172,
+      0.177,
+      0.177,
+      0.177
+    ],
+    "da_pct_revenue": [
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "capex_pct_revenue": [
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "nwc_pct_revenue": 0.65,
+    "cost_of_net_debt": [
+      0.155,
+      0.155,
+      0.145,
+      0.135,
+      0.13
+    ],
+    "other_financial": [
+      -837.4,
+      -710.6,
+      -685.3,
+      -687.0,
+      -699.9
+    ],
+    "tax_rate": [
+      0.17,
+      0.17,
+      0.17,
+      0.17,
+      0.17
+    ],
+    "minority_share_ni": 0.05,
+    "payout": [
+      0.0,
+      0.0,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.04,
+    "roic": 0.12,
+    "roe": 0.12
+  },
+  "wacc": {
+    "kd_pre_tax": 0.242,
+    "target_debt_weight": 0.45,
+    "notes": "Kd real 16% (CDI ~14,5% + 1,5–2%) sem benefício fiscal: a maior parte da receita é tributada pelo RET sobre a receita, logo juros não geram escudo; 0,16/0,66 = 0,242."
+  },
+  "adjustments": {
+    "other_debt_like": 0,
+    "non_operating_assets": 1802,
+    "minority_value": null,
+    "notes": "Resia (EUA, em liquidação até fim de 2027) tratada fora das linhas operacionais: non_operating_assets = valor contábil pós-impairment das propriedades para investimento (R$ 1.353 mi) + ativos mantidos para venda líquidos dos passivos associados (R$ 1.628 − 1.179 = R$ 449 mi); a dívida da Resia está na DL-base de R$ 5,9 bi (companhia projeta DL de R$ 4,6 bi após as vendas assinadas). Risco: novas vendas abaixo do valor contábil (PL da Resia era −US$ 113 mi no 2T26). Passivo de cessão (R$ 4.706 mi) não entra como dívida (compensado pelos recebíveis pro-soluto cedidos no ativo); nwc_pct_revenue 0,65 = meio-termo entre CG marginal bruto (~0,8) e líquido de cessões (~0,2–0,5). other_financial (−R$ 450 mi em 2026 → −R$ 220 mi em 2030) = custo líquido das cessões, swaps e juros da Resia (cai com a quitação da dívida da Resia) + excesso do IR/CS do RET (incide sobre a receita, ~2%, e não sobre o LAIR). Se a cessão fosse tratada como dívida, o equity seria negativo (valor zero)."
+  },
+  "target_multiples": {
+    "pe": 6.0,
+    "ev_ebitda": 4.1,
+    "pbv": 0.5,
+    "rationale": "Sem lucro recorrente consolidado positivo desde 2021, P/L tem pouca âncora. Pré-eleição: R$ 8,23 = 1,0x o VP; após o 2T26 a ação estava em R$ 4,58–4,80 (13/08). Bradesco BBI cortou PA para R$ 9 (de R$ 14), BTG PA R$ 12, JPMorgan rebaixou para neutro (LPA 2026 −70%). Usamos P/L 6x 2027E e EV/EBITDA 5x (histórico pré-Resia ~7–9x, com desconto por alavancagem e Ke 25%; EV/EBITDA hoje ≈4,2x 2027E). P/VP 0,5x ≈ (ROE 12% − 4%)/(25% − 4%). EV/EBITDA-alvo reescalonado de 5,0x para 4,1x por estar agora na base EBITDA ex-juros capitalizados (mesmo P/L implícito)."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.35,
+      "revenue_growth_shift": -0.04,
+      "ebitda_margin_shift": -0.02,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "CDI acima de 14% até 2028, novas baixas na Resia e queima de caixa na incorporação forçam emissão de ações ou venda de ativos."
+    },
+    "bull": {
+      "probability": 0.15,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.015,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Resia liquidada sem novas perdas, margem bruta Brasil >32% e queda de juros em 2028 levam ROE a 15%."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.04,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.003
+  },
+  "debt_profile": {
+    "gross_debt_mn": 8646,
+    "pct_floating_cdi": null,
+    "avg_cost": "não divulgado no material lido (debêntures/CRI R$ 4,6 bi majoritariamente CDI+; R$ 1,8 bi em moeda estrangeira da Resia)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -45,
+    "notes": "DL R$ 5,9 bi (parte em US$): +100 bp no CDI sobre ~R$ 4 bi pós-fixados ≈ −R$ 40–50 mi de LL, parte capitalizada no custo. Covenant (Santander, 2024): (DL + imóveis a pagar)/PL < 0,65 e recebíveis/(dívida+custos) > 1,6, excluindo Resia e SFH."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.1041,
+    "ebitda_margin_avg_5y": 0.0789,
+    "roe_avg_5y": -0.0311,
+    "payout_avg_5y": 0.3984,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.1073,
+      "ebitda_margin": -0.0402,
+      "net_income_mn": -626.6,
+      "net_debt_ebitda": 6.88
+    },
+    "notes": "Receita 2020–25 +10,4% a.a.; prejuízo contábil em 2022–25 (−R$ 177 mi, −R$ 30 mi, −R$ 503 mi, −R$ 1.042 mi) por Resia, custo de obra e juros. Projetamos +11% em 2026 (1S26 +15,7%; vendas recorde de R$ 3,0 bi no 3T26) e 5–6% a.a. depois (saída da Resia). Margem EBITDA recorrente 13,5–14,5% (2019 13,7%; 2025 recorrente 13,7%). Payout 0 até 2027 (prejuízos acumulados de R$ 1,1 bi) e 25% depois. IR/CS: RET sobre receita → 17% sobre EBIT na FCFF; ajuste do excesso em other_financial. AJUSTE JUROS CAPITALIZADOS (padronização G06/G07): +3,2 p.p. no ebitda_margin em todos os anos e −3,2% da receita (R$ 387–480 mi/ano) em other_financial, LL inalterado; fonte: release 1T26 (Anexo II): margem bruta consolidada 29,4% vs 32,5% ex-juros no 1T26 e 29,5% vs 32,9% no 4T25 = 3,1–3,4 p.p.; MRV Incorporação 31,0% vs 34,3%. Margem EBITDA na base CVM (antes do ajuste): 13,5%; 14,0%; 14,5%; 14,5%; 14,5%. WACC sem benefício fiscal da dívida quando há dívida (RET): ver wacc.notes."
+  },
+  "guidance": "Sem guidance formal de lucro no material consultado; metas públicas: liquidar a Resia até o fim de 2027 e reduzir a DL consolidada para ~R$ 4,6 bi com as vendas assinadas.",
+  "dividend_policy": "Estatuto: mínimo de 25% do LL ajustado. Sem proventos desde 2022 (B3: nenhum provento em dinheiro nos últimos 12 meses); prejuízos acumulados de R$ 1.145 mi no 2T26 precisam ser absorvidos antes.",
+  "election_impact": "MRVE3 −42%: a maior queda do grupo tem canal micro real. (i) Maior alavancagem: DL R$ 5,9 bi + R$ 4,7 bi de cessões, majoritariamente CDI — +300 bp na curva elevam o custo financeiro e o risco de refinanciamento; (ii) a ação havia subido ~75% de agosto (R$ 4,58–4,80) a 23/10 (R$ 8,23) apostando em vitória de Flávio e corte de juros — hoje devolveu tudo; (iii) dólar +9,5% piora o PL negativo da Resia em reais. O MCMV forte com Lula ajuda a MRV Incorporação (vendas recorde no 3T26), mas não compensa o custo de capital. Setor: o MCMV é financiado majoritariamente pelo FGTS (fundo parafiscal, fora do Orçamento, juros fixados pelo Conselho Curador e não pela Selic). Orçamento FGTS 2026: R$ 160,5 bi (habitação R$ 144,5 bi; descontos/subsídios elevados a R$ 13 bi em 10/09/2026); plurianual aprovado em nov/25: habitação R$ 144,5 bi em 2027 e R$ 139,5 bi em 2028–29 (nominal estável/queda) — o Conselho revisa 2027–29 no fim de out/26. Portaria MCID 333/2026 elevou renda (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000) e tetos (F3 R$ 400 mil; F4 R$ 600 mil). Um 4º mandato Lula reduz o risco de corte do programa (era um risco no cenário Flávio) — positivo para volume. O que piora de fato: (i) custo de capital/Ke e DI longo (+300 bp) → múltiplos; (ii) dívidas e cessões indexadas ao CDI; (iii) fiscal: Faixa 1 (FAR/OGU) e Faixa 4 (Fundo Social) dependem do Tesouro; FGTS é procíclico (arrecadação 8% da folha) e sofre com saques extraordinários; (iv) câmbio +9,5% → insumos (aço, cobre, PVC) e INCC (já 6,6% em 12m, mão de obra 7,6%).",
+  "summary": "Maior incorporadora MCMV, mas com ROIC abaixo do custo de capital (NWC ~1,3x a receita, margem EBITDA ~14%) e balanço pesado (DL R$ 5,9 bi + cessões R$ 4,7 bi) ainda carregando a liquidação da Resia. A Ke de 25% o valor intrínseco fica abaixo do preço; a queda foi parcialmente justificada.",
+  "thesis": [
+    "Operação Brasil em recuperação: margem bruta 31,2% no 2T26 (maior em 7 anos), LL ajustado Brasil R$ 155 mi (+28%), vendas líquidas recorde de R$ 3,04 bi no 3T26.",
+    "Saída da Resia (US$ 401 mi vendidos em 2026; DL pró-forma R$ 4,6 bi) elimina o principal ralo de caixa até 2027.",
+    "Opcionalidade: ação a ~0,6x o VP; se juros caírem em 2028 e o ROE Brasil chegar a 15%, há reprecificação — mas não com Ke de 25%."
+  ],
+  "risks": [
+    "Alavancagem CDI: DL R$ 5,9 bi + cessões R$ 4,7 bi; DI longo +300 bp encarece rolagem; covenant (DL+terrenos)/PL < 0,65.",
+    "Resia: PL −US$ 113 mi no 2T26; vendas abaixo do valor contábil já geraram US$ 110 mi de impairment no trimestre; dólar mais alto.",
+    "Equity swap sobre MRVE3 gera perda contábil com a queda da ação; geração de caixa da incorporação foi só R$ 18,9 mi ajustada no 3T26.",
+    "Execução e custo (INCC), greve da Caixa (−R$ 80 mi de caixa no 3T26) e eventual necessidade de capital."
+  ],
+  "catalysts": [
+    "Resultado 3T26 (novembro/2026)",
+    "Conclusão das vendas da Resia (Memorial, Golden Glades) até 2027",
+    "Conselho Curador do FGTS (fim de out/2026)"
+  ],
+  "key_data": [
+    {
+      "label": "DL consolidada 2T26 (companhia)",
+      "value": "R$ 5,9 bi",
+      "context": "pró-forma R$ 4,6 bi após vendas da Resia"
+    },
+    {
+      "label": "Passivo de cessão (CVM)",
+      "value": "R$ 4.706 mi",
+      "context": "não incluído na DL da companhia"
+    },
+    {
+      "label": "PL da Resia 2T26",
+      "value": "−US$ 113 mi",
+      "context": "JPMorgan via imprensa"
+    },
+    {
+      "label": "Prejuízo 2T26",
+      "value": "R$ 626 mi",
+      "context": "impairment Resia US$ 110 mi; LL ajustado Brasil R$ 155 mi"
+    },
+    {
+      "label": "P/VP ao preço de hoje",
+      "value": "≈0,59x",
+      "context": "R$ 4,80 × 562,8 mi / PL controlador R$ 4.578 mi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "InfoMoney — Conselho do FGTS aprova orçamento de R$ 160,5 bi para 2026 (habitação R$ 144,5 bi)",
+      "url": "https://www.infomoney.com.br/economia/conselho-do-fgts-aprova-orcamento-de-r-1605-bi-para-2026-alta-anual-de-54/"
+    },
+    {
+      "title": "Movimento Econômico — FGTS amplia em R$ 500 mi os descontos do MCMV 2026 (R$ 12,5 bi → R$ 13 bi), 11/09/2026",
+      "url": "https://movimentoeconomico.com.br/habitacao/2026/09/11/mcmv-governo-amplia-em-r-500-milhoes-subsidios-para-habitacao-popular/"
+    },
+    {
+      "title": "Registro de Imóveis — R$ 500 milhões reforçam MCMV; piso de R$ 12,5 bi para 2027",
+      "url": "https://www.registrodeimoveis.org.br/r-500-milhoes-reforcam-minha-casa-minha-vida"
+    },
+    {
+      "title": "Bora Investir (B3) — MCMV: novo teto de renda e de preços (Faixa 3 R$ 400 mil; Faixa 4 R$ 600 mil)",
+      "url": "https://borainvestir.b3.com.br/web-stories/minha-casa-minha-vida-veja-novo-teto-de-renda-e-de-precos-de-imoveis/"
+    },
+    {
+      "title": "Sul21/Agência Brasil — novas faixas de renda MCMV (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000)",
+      "url": "https://sul21.com.br/?p=289296"
+    },
+    {
+      "title": "FGV IBRE/Sinduscon-SP — INCC-M set/26 (12m 6,61%; mão de obra 7,63%)",
+      "url": "https://sindusconsp.com.br/wp-content/uploads/2026/09/INCC-M_FGV_press-release_Set26.pdf"
+    },
+    {
+      "title": "Mattos Filho — Mercado imobiliário e Reforma Tributária (RET até 2028)",
+      "url": "https://www.mattosfilho.com.br/unico/mercado-imobiliario-reforma-tributaria/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais, consultado em 26/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    },
+    {
+      "title": "Nord — MRV 2T26: prejuízo de R$ 627 mi; DL R$ 5,9 bi → R$ 4,6 bi",
+      "url": "https://www.nordinvestimentos.com.br/blog/mrve3-resultado-2t26/"
+    },
+    {
+      "title": "Seu Dinheiro — MRV salta após 2T26; analistas divergem (13/08/2026)",
+      "url": "https://www.seudinheiro.com/2026/economia/mrv-mrve3-acoes-saltam-10-apos-balanco-do-2t26-mas-analistas-divergem-sobre-resultado-veja-precos-alvo-e-recomendacoes-kaes/"
+    },
+    {
+      "title": "Diário do Comércio — MRV&Co prejuízo de R$ 626,6 mi no 2T26 por perdas nos EUA",
+      "url": "https://diariodocomercio.com.br/?p=618233"
+    },
+    {
+      "title": "Visno Invest — MRV gera R$ 456 mi de caixa no 3T26 (prévia 08/10/2026)",
+      "url": "https://visnoinvest.com.br/news/15634/mrv-mrve3-registra-geracao-de-caixa-de-r-456-mi-no-3t26"
+    },
+    {
+      "title": "MRV — Divulgação de resultados 1T26 (definição de DL e covenants)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/4b56353d-d5d9-435f-bf63-dcbf0a6c25d5/0a167014-2095-0880-88c6-4a91685f9828?origin=2"
+    },
+    {
+      "title": "Santander — relatório de crédito MRV (covenants, out/2024)",
+      "url": "https://cms.santander.com.br/sites/WPS/documentos/arq-investimento-relatorios-credito-privado-acordeao-risco-MRV/24-10-10_173618_20241008+-+mrv.pdf"
+    },
+    {
+      "title": "Money Times — JPMorgan rebaixa MRV (LPA 2026 −70%)",
+      "url": "https://www.moneytimes.com.br/jp-morgan-aponta-acoes-favoritas-no-setor-imobiliario-e-ve-potencial-de-alta-de-ate-62-igdl/"
+    }
+  ],
+  "confidence": "baixa: base contábil poluída por Resia (perdas não recorrentes de R$ 1,0 bi em 2025 e R$ 0,6 bi no 1S26), DL padronizada diverge da reportada e o tratamento das cessões muda o valor em ~R$ 8/ação."
+}

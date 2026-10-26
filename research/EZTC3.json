@@ -1,0 +1,264 @@
+{
+ "ticker": "EZTC3",
+ "name": "EZTEC Empreendimentos e Participações",
+ "sector": "Construção civil / incorporação média-alta renda em São Paulo (+ carteira própria de recebíveis e lajes corporativas via EZ INC)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "EZTC3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Base CVM sem ajuste (FY2025 ROL R$ 1.498,8 mi; EBITDA CVM R$ 462,8 mi; DL 2T26 −R$ 1,4 mi, i.e., caixa R$ 1.793,6 mi ≈ dívida bruta R$ 1.792,2 mi; PL controlador R$ 5.232 mi; 277,36 mi ações após bonificação de ~27% em dez/2025). Convenções do modelo: (1) ebitda_margin soma ~2,0 p.p. de juros SFH capitalizados apropriados ao custo (R$ 14,8 mi no 1S26), deduzidos de volta em other_financial — o lucro não muda, mas o DCF deixa de contar duas vezes o custo da dívida SFH que já está na DL; (2) a receita/EBITDA projetados EXCLUEM o aluguel do Esther Towers (locação integral ao Itaú, ~R$ 117 mi/ano a partir do fim de 2026), porque o ativo entra em non_operating_assets pelo valor de venda líquido; (3) a carteira própria (R$ 756 mi) entra em non_operating_assets e seus juros ficam no resultado financeiro (fora do FCFF)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.1,
+   0.12,
+   0.06,
+   0.03,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.255,
+   0.255,
+   0.26,
+   0.26,
+   0.26
+  ],
+  "da_pct_revenue": [
+   0.015,
+   0.015,
+   0.015,
+   0.015,
+   0.015
+  ],
+  "capex_pct_revenue": [
+   0.02,
+   0.015,
+   0.01,
+   0.01,
+   0.01
+  ],
+  "nwc_pct_revenue": 1.0,
+  "cost_of_net_debt": [
+   0.14,
+   0.135,
+   0.125,
+   0.12,
+   0.115
+  ],
+  "other_financial": [
+   202,
+   188,
+   171,
+   160,
+   153
+  ],
+  "tax_rate": [
+   0.09,
+   0.09,
+   0.09,
+   0.09,
+   0.09
+  ],
+  "minority_share_ni": 0.03,
+  "payout": [
+   0.3,
+   0.5,
+   0.6,
+   0.7,
+   0.7
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.11,
+  "roe": 0.11
+ },
+ "valuation_weights": {
+  "dcf": 0.7,
+  "ddm": 0.1,
+  "multiples": 0.2
+ },
+ "valuation_weights_rationale": "DDM com peso reduzido (10%): o fluxo de dividendos do motor (LL × payout) não captura a monetização dos R$ 1,48 bi de ativos não operacionais (venda do Esther Towers e carteira própria), que o DCF e o EV/EBITDA incluem; múltiplos com 20% porque refletem o Ke de mercado (~17–18%), abaixo do Ke de 25%.",
+ "wacc": {
+  "kd_pre_tax": 0.14,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 26,
+  "non_operating_assets": 1480,
+  "minority_value": null,
+  "notes": "non_operating_assets R$ 1.480 mi = (a) Esther Towers R$ 800 mi: NOI ~R$ 111 mi/ano (95% do aluguel de ~R$ 117 mi do contrato de 10 anos com o Itaú, IPCA) a cap rate de 10% pós-choque = R$ 1,11 bi, menos ~R$ 75 mi de tributos na venda e ~R$ 125 mi de custo a incorrer (premissa; não divulgado), descontado 1 ano a 15% → ~R$ 800 mi (sell-side pré-eleição: R$ 1,4–2,0 bi); a dívida de produção da EZ INC (R$ 575 mi) já está na DL; (b) carteira própria (alienação fiduciária) R$ 756 mi × 90% = R$ 680 mi (IPCA/IGP-DI + 10,4%, inadimplência >90d 2,3%). other_debt_like R$ 26 mi = dividendo do 2T26 (R$ 0,0946/ação, data-com 13/08, pago 28/08) posterior ao balanço-base. Não incluímos o Air Brooklin (R$ 135 mi, locação não confirmada) nem o excesso de banco de terrenos (R$ 9,0 bi de VGV, 9,8 anos) — upside não modelado."
+ },
+ "target_multiples": {
+  "pe": 7.0,
+  "ev_ebitda": 6.0,
+  "pbv": 0.55,
+  "rationale": "Histórico (data/market): P/L 5 anos mediana 8,3x (p25 7,2x; mín 5,5x); P/VP mediana 0,74x (p25 0,63x; mín 0,48x); EV/EBITDA mediana 9,8x — inflado porque o EV de mercado inclui caixa/carteira/Esther e o EBITDA exclui o resultado financeiro (~35% do LAIR). Como Esther e carteira entram à parte (non_operating_assets), usamos EV/EBITDA de 6,0x para o negócio de incorporação (pares CYRE3 5,6x e MDNE3 6,2x de mediana) e P/L 7,0x (~p25). P/VP alvo 0,55x: o Gordon puro a Ke 25% com ROE de 10–11% daria só 0,28–0,30x, mas o PL tem ativos de baixo retorno com valor de realização acima do custo (Esther, terrenos); 0,55x ≈ valor justo do modelo / VPA e fica entre o p25 (0,63x) e o mínimo (0,48x) históricos."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.05,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Demanda de média-alta renda em SP trava com Selic ≥14%, estoque pronto (R$ 1,09 bi) gira devagar e com desconto, INCC/câmbio comprime margem; Esther vendido com cap rate >11%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.03,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Venda do Esther a cap rate ~9% com dividendo extraordinário, curva devolve parte do choque e lançamentos 2025–26 (R$ 2,4 bi/ano) viram receita com margem bruta ~40%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.05,
+  "ebitda_margin_sd": 0.025,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.003
+ },
+ "debt_profile": {
+  "gross_debt_mn": 1792,
+  "pct_floating_cdi": 0.64,
+  "avg_cost": "SFH TR+8,4% (R$ 93 mi) e EZ INC poupança+2,3/2,8% (R$ 575 mi, vence 2027); debêntures CDI+0,85% (R$ 304 mi); CRIs 98–99,5% do CDI (R$ 838 mi)",
+  "avg_maturity_years": 2.5,
+  "next_24m_maturities_mn": 760,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 6,
+  "notes": "Caixa R$ 1,79 bi a 97–103% do CDI contra ~R$ 1,14 bi de debêntures/CRI em CDI → posição líquida comprada em CDI ~R$ 670 mi → +R$ 6–7 mi/ano antes de IR por +100 bp (sensibilidade do ITR: aplicações R$ 243,5 mi vs custo de R$ 161,1 mi em 12m a CDI 14,2%). Carteira própria em IPCA/IGP-DI+10,4% ganha com inflação. Vencimentos 24m: ~R$ 608 mi de SFH no curto prazo (sobretudo EZ INC, 2027) + 50% das debêntures em jun/27 (~R$ 152 mi). Covenant: (DL + terrenos a pagar)/PL = −0,11 vs limite 0,80."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.099,
+  "ebitda_margin_avg_5y": 0.259,
+  "roe_avg_5y": 0.085,
+  "payout_avg_5y": 0.38,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": -0.162,
+   "ebitda_margin": 0.167,
+   "net_income_mn": 110.4,
+   "net_debt_ebitda": 0.0
+  },
+  "notes": "CAGR receita 2020–25 de 9,9% (937→1.499); projetamos ~7,5% a.a. 2025–30 (sem aluguel do Esther), puxado pela conversão dos lançamentos fortes de 2025–26 (R$ 2,36 bi e R$ 2,42 bi no 9M26) e desacelerando em 2028–29. Margem EBITDA CVM média 2021–25 25,9% (1S26 21,8%); projetada 23,5–24% + 2 p.p. de juros capitalizados. ROE médio 2021–25 de apenas 8,5% (10,4% LTM) — o PL é pesado em terrenos (9,8 anos), estoque pronto e Esther; modelo gera ~10–11%. Payout médio ~38% (24% até 2023; 58–61% em 2024–25 com extraordinários). DL/EBITDA ~0 (caixa ≈ dívida; holding com caixa líquido ~R$ 400 mi, dívida nas SPEs)."
+ },
+ "guidance": "Lançamentos de R$ 2,5–3,5 bi de VGV em 2026 (reafirmado no 2T26, 06/08/2026); 9M26 já soma R$ 2,42 bi (+53%). CEO: receita tende a ~R$ 500 mi/trimestre; 'se a economia piorar, a gente vai mais devagar'. Resultado 3T26 em 05/11/2026.",
+ "dividend_policy": "Mínimo legal/estatutário (25% na prática), pago trimestralmente; extraordinários em 2024 (R$ 150 mi, R$ 0,69/ação) e nov–dez/2025 (R$ 220 mi, ~R$ 1,00/ação, antes da retenção de 10% de 2026 — inferência). Exercício 2025: R$ 308,8 mi (payout 58%). 2026: R$ 28,4 mi (1T) e R$ 26,2 mi (2T). Bonificação de ~27% (dez/2025, R$ 1,41 bi capitalizados). Recompra aprovada em 11/06/2026 de até 12,0 mi de ações (18 meses), sem execução até 30/06.",
+ "election_impact": "Queda de −40% é quase toda macro/duração: o papel tinha subido de ~R$ 13 para R$ 19,45 em outubro apostando na troca de governo (JPM elevou para Overweight em 05/10 com essa tese) e devolveu tudo. Micro: (i) demanda de média-alta renda em SP depende de crédito SBPE (11–12% a.a. e escasso, segundo a companhia) e compete com CDI de 14–15%; (ii) estoque pronto R$ 1,09 bi e terrenos de 9,8 anos são ativos de duração longa — o Ke maior derruba seu valor presente; (iii) cap rate maior reduz o valor de venda do Esther (R$ 1,46 bi a 8% → R$ 1,17 bi a 10%). A favor: caixa ≈ dívida e posição comprada em CDI, carteira própria indexada à inflação, aluguel do Esther em IPCA e exposição a MCMV (parceria Cury). O lucro de 2026–27 muda pouco; o valor muda pelo custo de capital.",
+ "summary": "Incorporadora conservadora (caixa ≈ dívida, carteira própria de R$ 756 mi, Esther Towers alugado ao Itaú), mas com ROE estruturalmente baixo (~10%) por excesso de capital em terrenos e estoque. A Ke de 25% o valor vem mais dos ativos (Esther, carteira, caixa) do que do crescimento; a R$ 11,6 (0,62x P/VP) o preço está perto do valor justo — não é uma pechincha clara.",
+ "thesis": [
+  "Ativos líquidos relevantes: Esther Towers (~R$ 0,8–1,1 bi líquidos, R$ 2,9–4,0/ação) + carteira própria R$ 756 mi (R$ 2,7/ação) frente a mcap de ~R$ 3,2 bi.",
+  "Receita deve crescer 2026–27 com a conversão dos lançamentos de 2025–26 (R$ 4,8 bi de VGV em ~21 meses); REF R$ 1,02 bi a 38,5%.",
+  "Balanço: covenant (DL+terrenos a pagar)/PL de −0,11 vs 0,80; posição comprada em CDI (+R$ 6–7 mi/100 bp).",
+  "Recompra autorizada de 12 mi de ações (4,3% do capital) e potencial dividendo extraordinário com a venda do Esther."
+ ],
+ "risks": [
+  "ROE de ~10% < Ke: crescer com esse retorno destrói valor; sem monetização de terrenos/Esther o desconto ao PL persiste.",
+  "Demanda de média-alta renda em SP e crédito SBPE mais caro; estoque pronto de R$ 1,09 bi (31% do estoque).",
+  "Refinanciamento de ~R$ 560 mi da EZ INC em 2027 e cap rates mais altos para a venda do Esther.",
+  "INCC/câmbio (aço, alumínio) sobre custos a incorrer; lançamentos do 4T26/2027 podem ser adiados."
+ ],
+ "catalysts": [
+  "Resultado 3T26 em 05/11/2026 (prévia: lançamentos R$ 726 mi, vendas R$ 523 mi, VSO 12,9%).",
+  "Entrega da 1ª torre do Esther (fim de 2026) e eventual venda a FII/institucional com dividendo extraordinário.",
+  "Execução da recompra (até 12 mi de ações)."
+ ],
+ "key_data": [
+  {
+   "label": "Receita LTM 2T26",
+   "value": "R$ 1.437,5 mi",
+   "context": "2T26 −16% a/a; 1S26 −8%"
+  },
+  {
+   "label": "Lucro líquido LTM 2T26",
+   "value": "R$ 531,1 mi",
+   "context": "ROE LTM ~10,4%; resultado financeiro = ~35% do LAIR"
+  },
+  {
+   "label": "Caixa / dívida bruta 2T26",
+   "value": "R$ 1.794 mi / R$ 1.792 mi",
+   "context": "caixa líquido R$ 1,4 mi"
+  },
+  {
+   "label": "Carteira própria",
+   "value": "R$ 756 mi",
+   "context": "IPCA/IGP-DI + 10,4% a.a.; >90d 2,3%"
+  },
+  {
+   "label": "Esther Towers",
+   "value": "~R$ 117 mi/ano de aluguel (Itaú, 10 anos)",
+   "context": "fato relevante 17/09/2026"
+  },
+  {
+   "label": "P/VP hoje",
+   "value": "0,62x",
+   "context": "VPA R$ 18,86; mín. 5 anos 0,48x"
+  }
+ ],
+ "sources": [
+  {
+   "title": "EZTEC — Release 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/653fada3-cbcd-4015-9a94-2149f610a321/d9ba377b-edc4-66e1-f2e0-486d36b481bf?origin=2"
+  },
+  {
+   "title": "EZTEC — ITR 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/653fada3-cbcd-4015-9a94-2149f610a321/dee110fd-95b4-cffe-2cf1-1012b0c96c81?origin=2"
+  },
+  {
+   "title": "EZTEC — Transcrição do call 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/653fada3-cbcd-4015-9a94-2149f610a321/152664da-21cc-6bf4-7313-c9d5f5dc4458?origin=2"
+  },
+  {
+   "title": "EZTEC — Prévia operacional 3T26 (09/10/2026)",
+   "url": "https://filemanager-cdn.mziq.com/published/653fada3-cbcd-4015-9a94-2149f610a321/8a6db535-6a8b-4d72-a400-4cbb2591da5e"
+  },
+  {
+   "title": "Money Times — Itaú aluga Esther Towers (set/2026)",
+   "url": "https://www.moneytimes.com.br/itau-itub4-passa-cheque-gordo-e-leva-aluguel-de-torre-da-eztec/"
+  },
+  {
+   "title": "Money Times — dividendo potencial com Esther (BTG/Safra)",
+   "url": "https://www.moneytimes.com.br/eztec-eztc3-dispara-na-bolsa-apos-cheque-gordo-do-itau-itub4-analistas-estimam-dividendo-de-ate-25-para-o-papel-igdl/"
+  },
+  {
+   "title": "Money Times — JPM eleva incorporadoras após 1º turno",
+   "url": "https://www.moneytimes.com.br/jp-morgan-muda-recomendacao-para-incorporadoras-apos-1-turno-das-eleicoes-cyrela-cyre3-e-eztec-eztc3-sao-compra-igdl/"
+  },
+  {
+   "title": "Demonstrações padronizadas CVM — data/hist/EZTC3.json",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média — balanço e operação bem documentados; incertezas grandes no valor de realização do Esther (cap rate, custo a incorrer não divulgado) e no ritmo de monetização do banco de terrenos, que o modelo não captura."
+}

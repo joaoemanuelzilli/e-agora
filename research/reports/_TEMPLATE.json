@@ -1,0 +1,19 @@
+{
+  "ticker": "XXXX3",
+  "headline": "Uma frase factual e forte que resume a oportunidade (sem adjetivos vazios).",
+  "verdict": "2–3 frases: por que está entre as melhores oportunidades após o choque eleitoral, com os números centrais (TIR de dono, valor justo, upside, probabilidade).",
+  "reasons": [
+    {"title": "Motivo curto (até 8 palavras)", "body": "2–3 frases com números e a fonte do número (CVM, release, B3, modelo).", "metric": {"label": "Métrica que prova o motivo", "value": "12,3%"}}
+  ],
+  "statistics": [
+    {"title": "Embasamento estatístico (ex.: a queda foi beta, não fundamento)", "body": "2–3 frases explicando o teste e o resultado.", "stat": "resíduo −4,1% (z = −1,9)"}
+  ],
+  "risks": [
+    {"title": "Risco", "body": "1–2 frases com magnitude.", "mitigant": "O que reduz o risco ou o sinal de alerta."}
+  ],
+  "monitor": [
+    {"kpi": "Indicador a acompanhar", "threshold": "Gatilho que invalida a tese", "next": "Quando sai o próximo dado"}
+  ],
+  "catalysts": [{"date": "dd/mm/aaaa ou trimestre", "event": "Evento"}],
+  "bottom_line": "1–2 frases finais: para quem e em que condição a tese funciona."
+}

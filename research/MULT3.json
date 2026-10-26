@@ -1,0 +1,261 @@
+{
+ "ticker": "MULT3",
+ "name": "Multiplan Empreendimentos Imobiliários S.A.",
+ "sector": "Imobiliário / shopping centers (alta renda) + incorporação multiuso",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "MULT3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Base CVM FY2025 mantida (receita 2.739,1; EBITDA 2.003,3 = release). O 2T26 inclui crédito retroativo de PIS/COFINS de ~R$253 mi (receita líquida e EBITDA) — NÃO recorrente; a projeção de 2026 é recorrente (cresce sobre 2025 sem o crédito), pois o caixa/crédito já está no balanço de 30/06."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.05,
+   0.075,
+   0.07,
+   0.065,
+   0.06
+  ],
+  "ebitda_margin": [
+   0.73,
+   0.735,
+   0.74,
+   0.74,
+   0.745
+  ],
+  "da_pct_revenue": [
+   0.05,
+   0.048,
+   0.047,
+   0.046,
+   0.045
+  ],
+  "capex_pct_revenue": [
+   0.17,
+   0.15,
+   0.14,
+   0.13,
+   0.12
+  ],
+  "nwc_pct_revenue": 0.05,
+  "cost_of_net_debt": [
+   0.125,
+   0.133,
+   0.133,
+   0.13,
+   0.126
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.15,
+   0.15,
+   0.15,
+   0.15,
+   0.15
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.22,
+   0.55,
+   0.6,
+   0.65,
+   0.7
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.25,
+  "roe": 0.25
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.2
+ },
+ "adjustments": {
+  "other_debt_like": 618,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = JCP a pagar no balanço de 30/06/26 (R$479 mi, data-com já passada) + JCP de R$139 mi aprovado em 25/09/26 (jan–set/26, data-com antes de hoje): caixa que vai para os acionistas antigos. Por isso o payout de 2026 (stub) é 0,22 — só o JCP de dez/26 cabe ao comprador de hoje. Créditos de PIS/COFINS ainda a compensar não foram somados (valor não divulgado; conservador)."
+ },
+ "target_multiples": {
+  "pe": 10.5,
+  "ev_ebitda": 8.5,
+  "pbv": 2.0,
+  "rationale": "Regra 'choque de juros neutro': múltiplo pré-eleição com rendimento ajustado +300 bp (DI1F31 12,6%→15,7%). Pré-eleição (R$37,53): P/L recorrente LTM ~15,5x (LPA ex-crédito ~R$2,42) → E/P 6,5%+3,0pp = 9,5% → ~10,5x; EV/EBITDA recorrente LTM 10,9x → rendimento 9,2%+3pp → ~8,2x (uso 8,5x pela qualidade do portfólio). Ao preço de hoje: P/L LTM 9,1x (10,9x recorrente), EV/EBITDA ~8,2x."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.015,
+   "terminal_g_shift": -0.005,
+   "capex_pct_shift": 0.01,
+   "narrative": "Selic/DI ~16% até 2028, consumo de alta renda desacelera, SSR real ~0, real estate (Golden Lake) atrasa vendas."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.015,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.01,
+   "narrative": "Prêmio de risco cede em 2027, IGP-DI ~5%, expansões (Barra, Park, Morumbi) maturam acima do esperado."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.01,
+  "terminal_g_sd": 0.005,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 5058.1,
+  "pct_floating_cdi": 0.958,
+  "avg_cost": "CDI+0,63% (14,68% a.a. em jun/26); 4,2% em TR+8,24%",
+  "avg_maturity_years": 4.75,
+  "next_24m_maturities_mn": 706,
+  "covenant_nd_ebitda": 4.5
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -37,
+  "notes": "Exposição líquida a CDI ≈ R$4,34 bi (dívida CDI 4.845 − caixa 507) → −R$43 mi antes de IR por +100 bp; ~−R$37 mi no lucro (≈3% do LL). Juros capitalizados em obras reduzem o efeito contábil."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.2042,
+  "ebitda_margin_avg_5y": 0.708,
+  "roe_avg_5y": 0.149,
+  "payout_avg_5y": 0.388,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.22,
+   "ebitda_margin": 0.826,
+   "net_income_mn": 427.4,
+   "net_debt_ebitda": 1.93
+  },
+  "notes": "CAGR 5a de 20,4% (CVM 2020→2025) é distorcido pela base Covid e pela receita imobiliária; 2019→2025 = 13,1% a.a. e NOI 2019→2025 = 9,6% a.a. (1.201→2.079). Premissa 2025–30 = 6,5% a.a. (IGP-DI ~4% + SSR real 2–3% + expansões), abaixo do histórico por IGP-M menor e fim do ciclo de expansões. Margem EBITDA 73–74,5% vs 73,1% em 2025 e 70,8% média 5a (inclui 2021 Covid). 2T26 inflado pelo crédito de PIS/COFINS (R$253 mi): margem recorrente ~72%. ROE LTM 21% (PL reduzido pela recompra de R$2,1 bi da OTPP em 2024)."
+ },
+ "guidance": "Sem guidance formal (empresa declara não divulgar projeções — Res. CVM 80, art. 21). Sinalizações do 2T26 (ago/26): 2 inaugurações de expansão no 2S26 (BarraShopping e ParkShopping em obras), pré-lançamento do Lake Baikal (3ª fase do Golden Lake, Porto Alegre), venda de 3 terrenos adjacentes, capex em queda (1S26 R$246 mi, −8,8% a/a).",
+ "dividend_policy": "Estatuto: mínimo de 25% do lucro ajustado. Prática: JCP trimestral (R$140 mi no 2T26; R$550 mi em 12m; R$1,12/ação 12m). Declarado: 2023 R$581 mi; 2024 R$540 mi; 2025 R$500 mi (payout ~44%); 2026: R$280 mi no 1S26 + R$139 mi (jan–set, aprovado 25/09/26). Recompras relevantes: R$2,1 bi em 2024 (participação da OTPP); R$25 mi em 2025. 22,1 mi ações em tesouraria (4,3% do capital).",
+ "election_impact": "Queda de −31% é quase toda canal macro: (i) taxa de desconto — ação de 'renda indexada' de duration longa reprecifica com DI1F31 +300 bp; (ii) custo da dívida: 95,8% em CDI, ~−R$37 mi/ano de lucro por +100 bp (~3% do LL); (iii) consumo de alta renda é o segmento menos sensível a crédito. Microeconomia intacta: ocupação 96,2% (recorde de 5 anos), inadimplência líquida −1,2%, SSR real +2,7%, aluguéis reajustados por IGP-DI (proteção nominal). Risco específico do 4º mandato: reforma tributária (IBS/CBS sobre locação a partir de 2027, com redutor de alíquota) e tributação de dividendos/JCP (IR de 10% na fonte acima de R$50 mil/mês desde 2026) reduzem retorno líquido do acionista PF, não o NOI. Valor intrínseco muda pouco no NOI; muda muito pela taxa de desconto (Ke 25%).",
+ "summary": "Melhor portfólio de shoppings do país (20 shoppings, 906 mil m² de ABL, ocupação 96,2%), aluguéis indexados ao IGP-DI e alavancagem baixa (1,93x DL/EBITDA; 13,8% do valor justo). A R$25,74 a ação embute cap rate de ~12,4% sobre o NOI (vs ~8–9,5% em transações privadas e 6,4% no laudo da própria empresa): forte desconto patrimonial, mas a Ke de 25% o DCF não fecha — o retorno 'de dono' implícito fica em ~13–15% a.a. nominal.",
+ "thesis": [
+  "Cap rate implícito de 12,4% (NOI LTM R$2.124 mi / EV R$17,2 bi) vs 9,2% na sexta e ~8–9,5% em vendas privadas recentes (Iguatemi→XPML11 ~8,0%; Allos→KAML11 ~9,5% em 23/10/26): desconto de ~35–45% ao valor de mercado privado dos ativos.",
+  "P/NAV de ~0,44: valor justo das propriedades R$33,1 bi (jun/26) − DL R$4,55 bi = R$58/ação (laudo interno a 12,9% nominal; mesmo com cap rate de 9,5% o NAV seria ~R$36/ação).",
+  "Receita protegida: aluguel mínimo reajustado por IGP-DI, SSR real +2,7% no 2T26, inadimplência negativa; lucro recorde (LL 12m R$1.386 mi; ROE 20,5%).",
+  "Alavancagem confortável (1,93x DL/EBITDA; covenant 4,5x) e prazo médio de 57 meses; amortizações 2S26+2027 de só R$379 mi."
+ ],
+ "risks": [
+  "Ke 25% é incompatível com ativos imobiliários de rendimento ~10–12%: sem reprecificação de múltiplo, o retorno esperado fica abaixo da meta.",
+  "Dívida 96% em CDI: Selic subindo para 15–16% eleva a despesa financeira (~R$37 mi de lucro por +100 bp).",
+  "Reforma tributária (IBS/CBS sobre locação a partir de 2027) e mudanças em JCP/dividendos reduzem o retorno líquido.",
+  "Receita imobiliária (Golden Lake) é volátil e depende de crédito imobiliário caro.",
+  "Desaceleração do consumo de alta renda / efeito riqueza negativo da bolsa."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (fim de out–início de nov/26): primeiro trimestre com efeito Copa ex-base e expansões novas.",
+  "Inauguração das expansões do BarraShopping e ParkShopping (2S26).",
+  "Novas transações privadas de shoppings (FIIs) que confirmem cap rates ≤ 10% após o choque.",
+  "Recompra de ações com o desconto ao NAV (programa não anunciado após a queda)."
+ ],
+ "key_data": [
+  {
+   "label": "Preço / variação hoje",
+   "value": "R$25,74 (−31,4%)",
+   "context": "sexta R$37,53; jun/26 R$29,27"
+  },
+  {
+   "label": "Cap rate implícito (NOI LTM / EV)",
+   "value": "12,4%",
+   "context": "9,2% na sexta; ~8–9,5% transações privadas; 6,4% laudo interno"
+  },
+  {
+   "label": "Valor justo das propriedades (jun/26)",
+   "value": "R$33,1 bi",
+   "context": "R$67,3/ação bruto; NAV ~R$58/ação"
+  },
+  {
+   "label": "DL/EBITDA 12m (2T26)",
+   "value": "1,93x",
+   "context": "covenant 4,5x; DL R$4,55 bi"
+  },
+  {
+   "label": "NOI 2T26 / margem",
+   "value": "R$529,9 mi / 95,9%",
+   "context": "+6,7% a/a"
+  },
+  {
+   "label": "Ocupação / inadimplência líquida",
+   "value": "96,2% / −1,2%",
+   "context": "2T26"
+  },
+  {
+   "label": "JCP 12m",
+   "value": "R$550 mi (R$1,12/ação)",
+   "context": "yield ~4,4% ao preço de hoje"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Multiplan — Relatório de resultados 2T26 (RI)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/08dd2899-a019-4531-a90c-f00c9f91b0ff/c4f3c5e6-87bf-6caf-cbab-d87472eb4631?origin=2"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizadas (data/hist, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — cotação ao vivo (API oficial)",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/"
+  },
+  {
+   "title": "Allos — Fato Relevante 23/10/2026 (venda ao Kinea ALLOS Malls FII, cap rate ~9,5%)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/ALOS3/51222/"
+  },
+  {
+   "title": "Forbes/Investidor10 — XPML11 compra fatias de 4 shoppings Iguatemi (cap rate ~8,0% s/ NOI 2025)",
+   "url": "https://forbes.com.br/forbes-money/forbes-real-estate/2026/03/xp-malls-compra-participacoes-em-cinco-shoppings-da-iguatemi-por-r-608-milhoes/"
+  },
+  {
+   "title": "Multiplan — Ata do Conselho Fiscal 25/09/2026 (JCP R$139 mi)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/MULT3/49934/"
+  },
+  {
+   "title": "Renova Invest — Multiplan 2T26 (lucro R$427,4 mi; crédito PIS/COFINS)",
+   "url": "https://renovainvest.com.br/blog/multiplan-2t26/"
+  }
+ ],
+ "confidence": "média — dados operacionais e de dívida são do release/CVM (alta qualidade); a incerteza está na taxa de desconto (Ke 25% vs natureza de renda imobiliária) e no custo de dívida futuro (curva DI pós-choque)."
+}

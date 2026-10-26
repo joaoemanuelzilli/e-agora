@@ -1,0 +1,253 @@
+{
+  "ticker": "AZZA3",
+  "name": "Azzas 2154 S.A.",
+  "sector": "Consumo discricionário / Moda e calçados de média-alta renda (Arezzo&Co + Grupo Soma)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "AZZA3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Receita 2025 = CVM (11.819,5). IMPORTANTE: a margem EBITDA projetada é 'econômica' = EBITDA CVM IFRS-16 MENOS ~3,0 p.p. de custos operacionais que a Azzas contabiliza no resultado financeiro — taxa de administração de cartão (MDR, R$ 73,2 mi no 1S26) e AVP de fornecedores (R$ 84,7 mi no 1S26), juntos ~3,0% da receita. Sem isso o FCFF (que ignora o financeiro) ficaria superestimado em ~R$ 220 mi/ano. Por consistência, other_financial NÃO inclui esses itens. Equivalência em base CVM: margem projetada 11,8% (2026), 13,5% (2027), 14,5%, 15,0% e 15,5% (2030) vs 15,5% em 2025 e 12,8% LTM. Lucro 2025 CVM (911) inclui R$ 546 mi de IR diferido ativo; o modelo trava IR ≥ 0, logo o lucro projetado é conservador frente ao 'recorrente' da companhia. D&A projetada de 5,4%→5,0% da receita: a D&A da DVA (R$ 699 mi LTM, 6,2%) inclui baixas de ativos de lojas/marcas descontinuadas; a D&A recorrente do release é ~R$ 146 mi/tri (~5,1%)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      -0.054,
+      0.04,
+      0.06,
+      0.06,
+      0.06
+    ],
+    "ebitda_margin": [
+      0.088,
+      0.105,
+      0.115,
+      0.12,
+      0.125
+    ],
+    "da_pct_revenue": [
+      0.054,
+      0.052,
+      0.051,
+      0.05,
+      0.05
+    ],
+    "capex_pct_revenue": [
+      0.046,
+      0.048,
+      0.05,
+      0.05,
+      0.05
+    ],
+    "nwc_pct_revenue": 0.25,
+    "cost_of_net_debt": [
+      0.125,
+      0.135,
+      0.135,
+      0.13,
+      0.125
+    ],
+    "other_financial": [
+      -90,
+      -90,
+      -90,
+      -90,
+      -90
+    ],
+    "tax_rate": [
+      0.0,
+      0.05,
+      0.1,
+      0.12,
+      0.15
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      0.25,
+      0.25,
+      0.35,
+      0.4,
+      0.45
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.14,
+    "roe": 0.15
+  },
+  "wacc": {
+    "kd_pre_tax": 0.15,
+    "target_debt_weight": 0.35
+  },
+  "adjustments": {
+    "other_debt_like": 112,
+    "non_operating_assets": 160,
+    "minority_value": null,
+    "notes": "DL base CVM 2T26 = empréstimos 3.267,9 + arrendamentos 705,4 − caixa/aplicações 1.140,9 = R$ 2.832,4 mi (release: DL pré-IFRS 16 R$ 2.127 mi, 1,52x EBITDA recorrente LTM). Debt-like: obrigações por aquisição de controladas R$ 89,2 mi + parcelamentos de impostos R$ 22,5 mi. Não operacional: ~50% do IR/CSLL a recuperar (R$ 323 mi) como crédito monetizável; o ativo fiscal diferido (R$ 1.847 mi) e os impostos indiretos a recuperar (R$ 1.285 mi) ficam fora — o primeiro já está refletido na alíquota baixa projetada. Capex inclui adições de direito de uso (~1,9% da receita). A cisão em Arezzo&Co + SOMA (conclusão prevista 1T27) não muda o valor consolidado para o acionista minoritário, que recebe ações das duas na mesma proporção; dis-sinergias de duas estruturas corporativas embutidas na margem."
+  },
+  "target_multiples": {
+    "pe": 10.0,
+    "ev_ebitda": 5.0,
+    "pbv": 0.6,
+    "rationale": "EV/EBITDA aplicado sobre o EBITDA 'econômico' (5,0x ≈ 4,1x o EBITDA reportado IFRS-16, entre o atual ~3,9x LTM e a média de 2025 de ~5,1x). P/L de 10x sobre um lucro 2027E deprimido (sem créditos fiscais diferidos), em linha com varejo de moda brasileiro em regime de DI ~15%. Histórico (preço médio do ano ÷ CVM): Arezzo 2022–23 P/L 20–22x e EV/EBITDA 10–12x (pré-fusão, juros menores); Azzas 2025 P/L 7,0x sobre o lucro reportado (inflado por R$ 546 mi de IR diferido) e EV/EBITDA ~5,1x reportado; hoje ~3,9x e P/VP 0,40x. BTG mantinha compra com preço-alvo de R$ 40 em 13/08/2026 (antes da cisão e do choque eleitoral)."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.03,
+      "ebitda_margin_shift": -0.02,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Cisão atrasa/judicializa, sell-in (franquias e multimarcas) segue caindo com juros altos, Hering não vira e a margem fica nos ~13% reportados do 1S26."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.02,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Separação destrava gestão focada (Arezzo&Co volta a margens ~18%), venda/entrada de investidor na FARM Rio cristaliza valor e reduz dívida."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.035,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.005
+  },
+  "debt_profile": {
+    "gross_debt_mn": 3268,
+    "pct_floating_cdi": 0.9,
+    "avg_cost": "juros sobre financiamentos de R$ 206 mi no 1S26 sobre ~R$ 3,25 bi (≈12,7% a.a.); composição por indexador não detalhada no release — premissa ~90% CDI",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": 579,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -20,
+    "notes": "DL ex-arrendamentos R$ 2.127 mi, majoritariamente pós-fixada: +100 bp de CDI ≈ −R$ 21 mi/ano antes de IR (IR efetivo ~0%). O choque de +300 bp na curva custa ~R$ 60 mi/ano — mais de 1/3 do lucro recorrente do 1S26 anualizado (R$ 170 mi no semestre). Juros altos também atingem o canal multimarcas (sell-in −12% no 2T26)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.493,
+    "ebitda_margin_avg_5y": 0.155,
+    "roe_avg_5y": 0.152,
+    "payout_avg_5y": 0.267,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": -0.082,
+      "ebitda_margin": 0.107,
+      "net_income_mn": 29.8,
+      "net_debt_ebitda": 1.94
+    },
+    "notes": "CAGR 5a (49%) é inorgânico (Reserva 2020, Soma 2024); pro forma a receita cresceu 2,2% em 2025 e caiu 8,1% no 1S26 (sell-in −12,3%). Projetamos −5,4% em 2026 e +4–6% depois (CAGR 2025–30 ≈ 3,4%). Margem: média 5a de 15,5% (CVM, reportada) vs projeção equivalente de 12,3%→15,5% — recuperação gradual até o nível de 2025, sem sinergias adicionais (a cisão as desfaz). ROE médio 15% era da Arezzo pré-fusão; o PL de R$ 8,0 bi inclui R$ 3,4 bi de intangíveis da fusão, então o ROE projetado fica em ~3–7%. Payout médio 5a de 27% (CVM caixa; 2025: R$ 500 mi de dividendos + R$ 167 mi de recompra); projetamos 25%→45%. IFRS-16: capex projetado (4,6%→5,0% da receita) = capex caixa ~2,8–3,0% + adições de direito de uso ~1,8–2,0% — a DFC mostra contraprestação de arrendamento de R$ 296,6 mi em 2025 (2,5%), da qual ~R$ 92 mi são juros; o principal (~R$ 204 mi, 1,7%) ≈ depreciação de direito de uso, e o passivo de arrendamento está encolhendo (876→705) com fechamento de lojas."
+  },
+  "guidance": "Sem guidance numérico. 2T26 (12/08/2026): prioridade é retomar crescimento e 'principalmente' recuperar rentabilidade; normalização de sell-in/sell-out esperada para o 2S26. Fato relevante de 02/09/2026: cisão parcial em duas companhias abertas (Arezzo&Co — Arezzo, Schutz, Anacapri, AB, Vans, Carol Bassi, Hering — e SOMA — Animale, NV, Maria Filó, Cris Barros, Reserva, Oficina, Foxton), com a FARM Rio numa sociedade fechada (57,4% Arezzo&Co / 42,6% SOMA) e avaliação de alternativas (investidor ou venda). Conclusão prevista para o 1T27, sujeita a AGE, Cade e listagem da SOMA no Novo Mercado; sem direito de retirada.",
+  "dividend_policy": "Mínimo estatutário de 25% do lucro ajustado. CVM (DFC): JCP + distribuição de lucros de R$ 296 mi (2023) e R$ 179 mi (2024); em 2025, R$ 500 mi de dividendos pagos no 4T25 (antecipação à tributação de dividendos de 2026) + recompra de R$ 166,8 mi (retorno total R$ 667 mi; payout de caixa 55% do lucro reportado de R$ 911 mi, inflado por IR diferido). Nenhum provento pago no 1S26. 4,31 mi ações em tesouraria. Com DL/EBITDA de 1,5x e cisão em curso, esperamos só o mínimo em 2026–27.",
+  "election_impact": "Queda de ~37% hoje é a maior do grupo: alto beta, alavancagem (DL/EBITDA 1,5x pré-IFRS 16) e exposição ao consumo doméstico discricionário. Canais reais: (i) juros — +300 bp na curva elevam a despesa financeira em ~R$ 60 mi/ano e estrangulam franqueados e multimarcas (sell-in); (ii) câmbio — misto: FARM Rio internacional (~14% da receita bruta, +10% em USD no 1S26) ganha em R$, mas parte dos insumos/produtos (calçados Vans, matérias-primas têxteis) é dolarizada; hedge operacional de câmbio reduz o efeito no curto prazo; (iii) consumo — base de clientes de média-alta renda é pouco beneficiada pela isenção do IR até R$ 5 mil e sofre com efeito riqueza; Hering (básicos) é a marca mais exposta à renda média; (iv) 'taxa das blusinhas' segue protegendo contra cross-border. O valor intrínseco piora de verdade (juros e canal multimarcas), mas o problema principal é micro: margem em queda e governança.",
+  "summary": "Maior grupo de moda da América Latina, mas a fusão Arezzo+Soma não entregou: receita −8% e margem EBITDA recorrente de 14,2% no 2T26 (−4,3 p.p.), lucro recorrente −62%, e uma briga societária que terminou na cisão anunciada em 02/09/2026. A R$ 15,9 (P/VP 0,40x, ~3,9x EV/EBITDA), parece barata, mas o lucro caixa é baixo (MDR/AVP e juros consomem o EBITDA) — nos nossos números é mais armadilha do que oportunidade, salvo recuperação forte de margem pós-cisão.",
+  "thesis": [
+    "Opcionalidade da cisão: Arezzo&Co (calçados + Hering) e SOMA (moda feminina/masculina) focadas, e possível venda/entrada de sócio na FARM Rio, que cresce no exterior (+10,4% em USD no 1S26).",
+    "Caixa melhorando: geração operacional de R$ 356,5 mi no 2T26 (3x o 2T25), ciclo financeiro −31 dias, estoques −15 dias; capex −19%.",
+    "Ativos de marca relevantes negociando a 0,40x P/VP e ~3,9x EV/EBITDA reportado LTM."
+  ],
+  "risks": [
+    "Margem estruturalmente menor: EBITDA recorrente 14,2% no 2T26 vs 18,5% no 2T25; ~3% da receita em MDR/AVP fica abaixo do EBITDA.",
+    "Alavancagem (DL R$ 2,1 bi ex-arrendamentos, 1,52x) num ciclo de juros mais altos por mais tempo.",
+    "Execução e custos da cisão (aprovações, dis-sinergias, disputa judicial/arbitral recente); risco de a SOMA nascer alavancada.",
+    "Lucro dependente de créditos fiscais diferidos (R$ 546 mi de IR diferido em 2025)."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (novembro, a confirmar) — teste da normalização do sell-in prometida para o 2S26.",
+    "AGE e aprovação do Cade para a cisão; listagem da SOMA (conclusão prevista 1T27).",
+    "Decisão sobre a FARM Rio (assessoria do Morgan Stanley, segundo a imprensa)."
+  ],
+  "key_data": [
+    {
+      "label": "Receita líquida 2T26",
+      "value": "R$ 2.664 mi (−8,2% a/a)",
+      "context": "sell-in −13,6%, sell-out −1,9%"
+    },
+    {
+      "label": "EBITDA recorrente 2T26",
+      "value": "R$ 379,6 mi (14,2%)",
+      "context": "reportado R$ 279,2 mi; pré-IFRS 16 R$ 311,1 mi (11,7%)"
+    },
+    {
+      "label": "Lucro 2T26",
+      "value": "R$ 106,5 mi recorrente / R$ 29,8 mi contábil",
+      "context": "−62,5% / −94,5% a/a"
+    },
+    {
+      "label": "DL/EBITDA 2T26",
+      "value": "1,52x (pré-IFRS 16)",
+      "context": "DL R$ 2.127 mi; com arrendamentos R$ 2.832 mi"
+    },
+    {
+      "label": "MDR + AVP fornecedores (1S26)",
+      "value": "R$ 158 mi (~3,1% da receita)",
+      "context": "registrados no resultado financeiro"
+    },
+    {
+      "label": "P/VP @R$ 15,89",
+      "value": "0,40x",
+      "context": "PL R$ 8,0 bi com R$ 3,4 bi de intangível"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Azzas 2154 — Earnings Release 2T26 (12/08/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/2edfd667-eaa1-4187-9777-1528284720de/a99b5067-d063-1676-95ec-b9609bb74531?origin=2"
+    },
+    {
+      "title": "Azzas 2154 — Earnings Release 1T26",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/2edfd667-eaa1-4187-9777-1528284720de/6f1ad4a8-af65-7404-ec92-1d18a65c336a?origin=2"
+    },
+    {
+      "title": "Mercado & Consumo — Azzas anuncia separação entre Arezzo&Co e Soma (02/09/2026)",
+      "url": "https://mercadoeconsumo.com.br/02/09/2026/mc-capital/azzas-2154-anuncia-separacao-entre-arezzoco-e-soma/"
+    },
+    {
+      "title": "Suno — Fim da fusão: Azzas divide Arezzo&Co e SOMA (03/09/2026)",
+      "url": "https://www.suno.com.br/noticias/azzas-2154-azza3-separacao-arezzo-soma-birman-jatahy-mt/amp/"
+    },
+    {
+      "title": "Mercado & Consumo — BTG mantém compra, alvo R$ 40 (13/08/2026)",
+      "url": "https://mercadoeconsumo.com.br/13/08/2026/mc-capital/azzas-2154-btg-mantem-compra-mas-aguarda-sinais-de-normalizacao-das-vendas-apos-2t-fraco/"
+    },
+    {
+      "title": "Money Times — Azzas 4T25",
+      "url": "https://www.moneytimes.com.br/azzas-azza3-tem-lucro-liquido-recorrente-de-r-168-milhoes-no-4t25-queda-de-05/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/AZZA3.json)",
+      "url": "https://dados.cvm.gov.br/"
+    }
+  ],
+  "confidence": "média-baixa — dados contábeis sólidos, mas o valor depende da margem pós-cisão (sem guidance), do tratamento de créditos fiscais e da estrutura de capital de cada nova companhia (não divulgada)."
+}

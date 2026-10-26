@@ -1,0 +1,259 @@
+{
+ "ticker": "MOTV3",
+ "name": "Motiva Infraestrutura de Mobilidade S.A. (ex-CCR)",
+ "sector": "Infraestrutura / concessões rodoviárias e mobilidade urbana",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "MOTV3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 13804.0,
+   "net_debt": 29116.0,
+   "equity_controlling": 18278.0
+  },
+  "notes": "(1) Receita-base FY2025 ex-construção e ex-aeroportos: 3.01 CVM 18.850,7 (DFP 2025 já reclassifica aeroportos como operação descontinuada) − custo de construção 4.960,1 − custo de obras 86,6 = 13.804 (construção com margem zero). Atenção: FY2025 contém ~R$ 1,4 bi de receita/EBITDA não recorrente no 3T25 (salto do trimestre na CVM; natureza não confirmada) — por isso ancoramos 2026 no run-rate do 1S26 (receita ex-construção 6.958; EBITDA IFRS recorrente 4.220 = 60,6%, após excluir a compra vantajosa da Minas_SP de R$ 750 mi e R$ 18 mi de remensuração), e não na margem de 2025. (2) DL-base ajustada por eventos pós-balanço: DL CVM 2T26 32.849 (exclui a dívida dos aeroportos, que estava em 'passivos mantidos para venda') − R$ 5.187 mi recebidos pela venda de 100% da CPC/aeroportos à ASUR em 01/09/2026 + R$ 1.454 mi de JCP bruto (R$ 0,7233/ação, data-com 04/09/2026, pago 17/09/2026, não pertence a quem compra hoje) = 29.116. Sem IR sobre ganho de capital (base fiscal não divulgada; se houver, −R$ 0,3–0,7 bi). (3) PL controlador ajustado: 17.744 + ganho estimado na venda (5.187 − 3.199 de ativos líquidos mantidos para venda) − JCP 1.454 = 18.278."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.08,
+   0.12,
+   0.1,
+   0.08,
+   0.07
+  ],
+  "ebitda_margin": [
+   0.61,
+   0.62,
+   0.63,
+   0.635,
+   0.64
+  ],
+  "da_pct_revenue": [
+   0.12,
+   0.125,
+   0.13,
+   0.13,
+   0.13
+  ],
+  "capex_pct_revenue": [
+   0.443,
+   0.419,
+   0.37,
+   0.318,
+   0.273
+  ],
+  "nwc_pct_revenue": 0.02,
+  "cost_of_net_debt": [
+   0.125,
+   0.13,
+   0.125,
+   0.12,
+   0.115
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.38,
+   0.37,
+   0.36,
+   0.35,
+   0.34
+  ],
+  "minority_share_ni": 0.02,
+  "payout": [
+   0.1,
+   0.5,
+   0.5,
+   0.6,
+   0.6
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.04,
+  "roic": 0.18,
+  "roe": 0.2
+ },
+ "wacc": {
+  "kd_pre_tax": 0.14,
+  "target_debt_weight": 0.45
+ },
+ "adjustments": {
+  "other_debt_like": 114,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = dividendos/JCP a pagar no BP 2T26 (83) + obrigações com poder concedente CP (31). Venda dos aeroportos e JCP de set/26 já estão na DL-base (overrides). Participações em controladas em conjunto (R$ 385 mi) ficam no EBIT via equivalência."
+ },
+ "target_multiples": {
+  "pe": 8.5,
+  "ev_ebitda": 7.0,
+  "pbv": 1.5,
+  "rationale": "data/market (histórico curto, 18 meses como MOTV3): P/L mediana 10,8x, p10 8,6x → 8,5x; EV/EBITDA mediana 7,8x, p10 7,0x → 7,0x (regime de juros altos = piso histórico). Referências: venda dos aeroportos a 8,8x EV/EBITDA LTM (set/26); hoje 6,3x (pré-eleição 7,8x). Múltiplo de saída implícito no DCF a WACC ~18% é ~3x."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.02,
+   "narrative": "Degraus tarifários (RioSP/Serra das Araras, Minas_SP, Paraná) atrasam, aditivos federais travam na ANTT/TCU e o CDI fica >14% até 2028: alavancagem não cai de ~3,3x e dividendos ficam no mínimo."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.02,
+   "narrative": "Degraus no prazo, eficiência (opex/receita continua caindo) e venda parcial da plataforma de mobilidade a bom múltiplo: alavancagem <3x e payout >60%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.025,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.02
+ },
+ "debt_profile": {
+  "gross_debt_mn": 43524,
+  "pct_floating_cdi": 0.54,
+  "avg_cost": "CDI − 0,53% (custo médio informado no call do 2T26); composição com hedge: 54% CDI, 34% IPCA, 12% TJLP/TLP",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -150,
+  "notes": "Exposição líquida a CDI ≈ 54% × dívida bruta (~R$ 38 bi pós-venda) − caixa (~R$ 5–10 bi) ≈ R$ 15–18 bi ⇒ +100 bp de CDI ≈ −R$ 150–180 mi/ano pré-IR (≈ −R$ 100–120 mi após IR, ~4% do lucro). Prazo médio e vencimentos de 24 meses não localizados; apresentação 2T26: 44% da dívida vence a partir de 2033 e a primeira 'torre' relevante é 2030. Covenant: não localizado."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.138,
+  "ebitda_margin_avg_5y": 0.476,
+  "roe_avg_5y": 0.194,
+  "payout_avg_5y": 0.437,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.035,
+   "ebitda_margin": 0.654,
+   "net_income_mn": 1413,
+   "net_debt_ebitda": 3.7
+  },
+  "notes": "Histórico CVM distorcido por mudanças de portfólio (saída de ViaOeste/Barcas, venda dos aeroportos, novas concessões) e pela receita de construção: CAGR 5 anos da receita total 13,8%; margem EBITDA/receita total média 47,6%; ROE médio 2021–25 19%; payout caixa médio 44% (volátil). Sobre receita ex-construção, a margem IFRS recorrente do 1S26 é 60,6% (ajustada ex-provisão de manutenção 65,8%; Safra cita 65,4% no 2T26 ex-aeroportos). Projeção: CAGR receita ex-construção 2025–30 de 9% e margem 61%→64% (maturação de Minas_SP de 45% para 75% e degraus). 2T26: EBITDA ajustado R$ 2,37 bi (+30,1%), lucro ajustado R$ 663 mi (reportado R$ 1,41 bi com compra vantajosa), DL/EBITDA 3,7x (~3,0x pró-forma pós-venda dos aeroportos)."
+ },
+ "guidance": "Guidance de capex 2026 em execução 'on track' (call 2T26; valor não localizado nesta pesquisa). Pós-venda dos aeroportos (R$ 12,2 bi de EV; R$ 5,19 bi de equity recebidos em 01/09/2026, a 8,8x EV/EBITDA LTM) a companhia indicou alavancagem de ~3,0x (de 3,7x). Minas_SP: receita ~R$ 0,5 bi (ano 1) → ~R$ 1,18 bi (ano 5) e margem 45% → 75% (base mar/23), degraus tarifários de 80% (mai/27) e 27,69% (mai/28), TIR real alavancada >20%.",
+ "dividend_policy": "Sem política formal de payout localizada. Payout caixa (CVM): 49% 2021, 19% 2022, 26% 2023, 94% 2024, 31% 2025. 2026: dividendo R$ 0,0617/ação (abr/26) e JCP de R$ 0,7233/ação bruto (~R$ 1,45 bi; conta para o mínimo de 2026; data-com 04/09/2026; pago 17/09/2026). Analistas esperam payouts maiores após a desalavancagem; usamos 50–60% a partir de 2027.",
+ "election_impact": "Majoritariamente macro: 54% da dívida em CDI (com hedge) e 34% em IPCA; +300 bp no DI longo elevam o custo financeiro e o desconto de fluxos de 20–30 anos. A ação caiu ~35% e o EV ~19% (alavancagem ~3x). Regulatório: cerca de metade do EBITDA rodoviário é federal (RioSP/Dutra, ViaSul, ViaCosteira, Pantanal, Paraná) — no 3º mandato Lula houve repactuações consensuais via TCU e novos leilões; o risco do 4º mandato é pressão política sobre reajustes/degraus e lentidão em aditivos (ex.: Morro dos Cavalos/ViaCosteira, em negociação com ANTT/Ministério). Contratos paulistas (AutoBAn, SPVias, RodoAnel, Sorocabana, ViaMobilidade, Linhas 4 e 5) dependem do governo estadual. A venda dos aeroportos (concluída antes da eleição) reduziu o risco de execução. O valor intrínseco a Ke 25% mudou menos que o preço (o DCF já era baixo antes), mas segue abaixo da cotação.",
+ "summary": "Maior plataforma de concessões de mobilidade do país (rodovias ~75% e trilhos ~25% do EBITDA), recém-desalavancada pela venda dos aeroportos (R$ 5,2 bi de equity) e com EBITDA crescendo ~30% a/a com novas concessões. A Ke 25% (WACC ~18%) o DCF não cobre a dívida e o valor justo ponderado fica ~R$ 5 vs R$ 13: P/L 2027E ~10x é barato para o histórico, mas não para um hurdle de 25%.",
+ "thesis": [
+  "EBITDA ajustado 2T26 de R$ 2,37 bi (+30,1%), com R$ 370 mi das novas concessões (Paraná, Pantanal, Sorocabana, Minas_SP); opex/receita LTM caiu 3,7 p.p. para 34,1%",
+  "Venda dos 20 aeroportos à ASUR a 8,8x EV/EBITDA (acima do múltiplo da própria Motiva) reduz a alavancagem para ~3,0x",
+  "Degraus tarifários contratados: Minas_SP +80% (mai/27) e +27,69% (mai/28); conclusão da Serra das Araras (RioSP) prevista para 1T27",
+  "Custo médio da dívida CDI −0,53% e ~metade da dívida pré/IPCA/TLP"
+ ],
+ "risks": [
+  "Capex elevado (~R$ 6–7 bi/ano) com ROIC ~10–11% até 2030: a Ke 25% o crescimento destrói valor",
+  "Regulação federal (ANTT/TCU) e estadual (SP): reajustes, degraus e aditivos sujeitos a atrasos políticos",
+  "Receita não recorrente de ~R$ 1,4 bi no 3T25 sugere que parte do lucro de 2025 não se repete",
+  "IR sobre ganho de capital na venda dos aeroportos (não modelado) e eventual desinvestimento da mobilidade urbana em momento de juros altos"
+ ],
+ "catalysts": [
+  "Resultado 3T26 (~fim de out/início de nov/2026) com a dívida pós-venda",
+  "Degraus Minas_SP (mai/27) e RioSP pós-Serra das Araras (2027)",
+  "Definição da política de dividendos pós-desalavancagem",
+  "Eventual venda parcial da plataforma de mobilidade urbana"
+ ],
+ "key_data": [
+  {
+   "label": "Dívida líquida 2T26 (release)",
+   "value": "R$ 33,1 bi · 3,7x",
+   "context": "pró-forma pós-venda dos aeroportos ~R$ 27,9 bi · ~3,0x"
+  },
+  {
+   "label": "Venda dos aeroportos",
+   "value": "R$ 12,2 bi EV · 8,8x EBITDA",
+   "context": "R$ 5,19 bi em ações + R$ 7,02 bi de dívida; fechada em 01/09/2026"
+  },
+  {
+   "label": "EBITDA ajustado 2T26",
+   "value": "R$ 2,37 bi (+30,1%)",
+   "context": "margem +4,7 p.p.; novas concessões R$ 370 mi"
+  },
+  {
+   "label": "Composição da dívida",
+   "value": "54% CDI · 34% IPCA · 12% TJLP/TLP",
+   "context": "custo médio CDI −0,53%"
+  },
+  {
+   "label": "JCP set/26",
+   "value": "R$ 0,7233/ação",
+   "context": "data-com 04/09/2026; já pago"
+  },
+  {
+   "label": "EV/EBITDA LTM (data/market)",
+   "value": "6,3x",
+   "context": "pré-eleição 7,8x; p10 5 anos 7,0x"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Motiva — Apresentação de Resultados 2T26 (30/07/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/8516d569-e11b-4864-a777-68eca8245423/a8d69a5b-3b65-aa6f-15cd-590566f14fd1?origin=2"
+  },
+  {
+   "title": "Motiva — Transcrição da teleconferência 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/8516d569-e11b-4864-a777-68eca8245423/520982a9-63b6-ae4e-659d-bda33c923773?origin=2"
+  },
+  {
+   "title": "CVM — ITR 2T26 / DFP 2023–2025 padronizados (data/hist/MOTV3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "Agência Infra — Motiva vende 20 aeroportos à ASUR por R$ 12,2 bi (01/09/2026)",
+   "url": "https://agenciainfra.com/blog/motiva-vende-seus-20-aeroportos-a-grupo-mexicano-por-r-122-bi/"
+  },
+  {
+   "title": "Poder360 — Motiva conclui venda de 20 aeroportos",
+   "url": "https://www.poder360.com.br/poder-infra/motiva-conclui-venda-de-20-aeroportos-por-r-122-bilhoes/"
+  },
+  {
+   "title": "B3 — proventos MOTV3 (JCP R$ 0,7233; data-com 04/09/2026; pg 17/09/2026)",
+   "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/?language=pt-br"
+  },
+  {
+   "title": "Money Times — Motiva lucra 67% mais no 2T26",
+   "url": "https://www.moneytimes.com.br/motiva-motv3-lucra-67-mais-no-2t26-com-novas-concessoes-vtra/"
+  }
+ ],
+ "confidence": "média — base CVM sólida, mas o release completo do 2T26 não foi lido (só apresentação e transcrição): natureza do não recorrente do 3T25, guidance de capex 2026, prazo médio e covenants não confirmados. A conclusão (valor < preço a Ke 25%) é robusta."
+}

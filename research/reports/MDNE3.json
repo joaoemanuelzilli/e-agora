@@ -1,0 +1,168 @@
+{
+ "ticker": "MDNE3",
+ "headline": "Com ROE de 28%, dívida líquida de R$ 56 mi e P/L de 3,5x, a Moura Dubeux está precificada como se a receita fosse cair 1,6% ao ano até 2030 — e mesmo assim entrega TIR de dono de 26,5% no modelo.",
+ "verdict": "Única do grupo de incorporação média/alta renda que supera o Ke de 25%: TIR implícita de 26,5% e valor justo de R$ 20,64 (+9,8% sobre o preço de referência de R$ 18,80, ~12h55 de 26/10), com 67,8% de probabilidade de o valor superar o preço em 5.000 simulações. A margem de segurança é estreita — valor esperado ponderado por cenários de R$ 19,91 (+5,9%) — e depende de o ROE se manter perto de 20% depois que as adesões a condomínios caíram 43,5% a/a no 3T26.",
+ "reasons": [
+  {
+   "title": "Retorno sobre capital no topo do setor",
+   "body": "ROAE de 28% nos 12 meses até o 2T26 (release; 29,4% na base CVM), contra média de 14,9% em 2021–25, com lucro LTM de R$ 559,9 mi. Mesmo diluído pelo follow-on de R$ 483 mi (jan/2026) e com lucro 2027E 12% menor, o modelo projeta ROE de ~20,5% em 2027–28.",
+   "metric": {
+    "label": "ROAE LTM 2T26 (release)",
+    "value": "28,0%"
+   }
+  },
+  {
+   "title": "TIR de dono acima do Ke de 25%",
+   "body": "Ao preço de R$ 18,80 (~12h55), a TIR que iguala o preço aos dividendos projetados mais a perpetuidade é de 26,5%; a TIR de 3 anos, com saída a 5x P/L sobre o LPA 2029E, é de 45,6%. Valor justo R$ 20,64 = 50% DCF (R$ 19,04) + 25% DDM (R$ 20,20) + 25% múltiplos (R$ 24,28) (modelo, data/app/companies/MDNE3.json).",
+   "metric": {
+    "label": "TIR implícita (R$ 18,80)",
+    "value": "26,5%"
+   }
+  },
+  {
+   "title": "Mercado precifica receita encolhendo",
+   "body": "O DCF reverso mostra que o preço de R$ 18,80 só se justifica com receita caindo 1,6% ao ano em 2026–30, contra +5,2% a.a. na nossa base — que já inclui −5% em 2027 pela queda das adesões. Em valor de mercado, a companhia saiu de R$ 3,14 bi na sexta para R$ 1,95 bi (B3/modelo).",
+   "metric": {
+    "label": "Crescimento implícito no preço (DCF reverso)",
+    "value": "−1,6% a.a."
+   }
+  },
+  {
+   "title": "P/L no menor nível desde o IPO",
+   "body": "A R$ 18,80 a ação negocia a 3,5x o lucro LTM e 3,6x o lucro 2027E, com EV/EBITDA LTM de 3,5x. Na série mensal desde o IPO (56 meses), o P/L médio é 6,2x (desvio 1,2x): o atual está 2,3 desvios abaixo e no percentil 0 (data/market).",
+   "metric": {
+    "label": "P/L LTM (R$ 18,80)",
+    "value": "3,5x"
+   }
+  },
+  {
+   "title": "Balanço sem risco de solvência",
+   "body": "No 2T26: caixa de R$ 884 mi, dívida bruta de R$ 940 mi e dívida líquida de R$ 56 mi sem a cessão de recebíveis (R$ 203 mi na CVM, 0,36x o EBITDA); covenant (DL + imóveis a pagar)/PL de 0,12 contra limite de 0,45 (release/ITR 1T26). Altman Z de 6,43 (zona segura) e cobertura de juros de 4,1x (quant).",
+   "metric": {
+    "label": "Altman Z",
+    "value": "6,43 (zona segura)"
+   }
+  },
+  {
+   "title": "Dividendos altos sem alavancar",
+   "body": "Com payout de 55–60% em 2027–28 — abaixo do sustentável de ~75% (1 − g/ROE) —, o DPA projetado é de R$ 2,87 e R$ 3,41, ou dividend yield de 15,3% e 18,1% sobre R$ 18,80, e a empresa ainda acumula caixa (DL/EBITDA de −0,6x e −0,8x). Já descontamos os R$ 252 mi de dividendos de dez/2025 devidos a quem era acionista em 30/12/2025 (modelo).",
+   "metric": {
+    "label": "Dividend yield 2027E (R$ 18,80)",
+    "value": "15,3%"
+   }
+  },
+  {
+   "title": "Condomínio repassa custo e tem hedge social",
+   "body": "O modelo de condomínio a preço de custo respondeu por 67,5% da receita no 2T26, com margem bruta de 42,3% (incorporação: 30,8%); o INCC é pago pelos condôminos e a taxa de administração é de 15% do custo (release 2T26). Mood (28% das vendas brutas no 3T26) e a Ún1ca/MCMV (~R$ 750 mi de VGV em 2026 segundo o CEO; pipeline de R$ 2 bi em 2027 segundo o Itaú BBA) se beneficiam da continuidade das políticas de renda no Nordeste.",
+   "metric": {
+    "label": "Margem bruta do condomínio (2T26)",
+    "value": "42,3%"
+   }
+  }
+ ],
+ "statistics": [
+  {
+   "title": "A queda é explicada por fatores, não por notícia própria",
+   "body": "No snapshot do estudo de mercado (R$ 19,33; −36,2%), o beta de queda (1,92) aplicado ao Ibovespa (−14,5%) previa −27,7%, o que deixa um resíduo de −8,4 p.p. (z = −3,5 sobre a volatilidade idiossincrática). Mas a regressão cross-section do dia (n = 147; R² = 0,71; beta t = −10,4, alavancagem t = −3,6, tamanho t = +2,7, exportadora t = +4,5) previa −39,3% para MDNE3: a ação caiu 3,1 p.p. MENOS que o previsto, no percentil 66 dos resíduos.",
+   "stat": "resíduo cross-section +3,1 p.p. (z = +0,40; 97º de 147)"
+  },
+  {
+   "title": "O mercado separou baixa renda de média/alta renda",
+   "body": "Na mesma regressão, as incorporadoras de baixa renda caíram bem menos que o previsto — TEND3 +17,9 p.p., DIRR3 +10,3 p.p., CURY3 +8,8 p.p. —, enquanto as de média/alta renda ficaram em linha ou pior: CYRE3 −5,2 p.p., LAVV3 −7,1 p.p., EZTC3 +0,3 p.p. MDNE3 (+3,1 p.p.) ficou no meio, coerente com o mix de alto padrão/Beach Class (65% das vendas no 3T26) e Mood/Ún1ca.",
+   "stat": "resíduos: baixa renda +8,8 a +17,9 p.p.; média/alta −7,1 a +0,3 p.p."
+  },
+  {
+   "title": "Múltiplo de lucro no extremo; múltiplo de PL não",
+   "body": "Contra a própria série mensal desde o IPO, o P/L (3,58x a R$ 19,33) tem z = −2,28 (percentil 0, n = 56) e o EV/EBITDA (3,86x) tem z = −0,84 (percentil 5). Já o P/VP (0,87x) tem z = +0,05 (percentil 67), porque o ROE subiu de ~8% para ~28%: a ação é barata em lucro, não em patrimônio, e a tese depende de o ROE ser sustentável.",
+   "stat": "z(P/L) = −2,28; z(P/VP) = +0,05"
+  },
+  {
+   "title": "Monte Carlo e sensibilidade: onde a tese quebra",
+   "body": "Em 5.000 simulações (desvio-padrão de 6 p.p. no crescimento, 2,5 p.p. na margem e 0,75 p.p. no g; correlação 0,5), o valor fica entre R$ 16,1 (p10) e R$ 26,2 (p90), com mediana de R$ 20,5. Na grade de sensibilidade, o valor justo iguala o preço com margem EBITDA ~1,7 p.p. abaixo da base e cai para R$ 17,4 com −3 p.p.; com Ke de 20% iria a R$ 25,3, e com 30% a R$ 17,8.",
+   "stat": "P(valor > R$ 18,80) = 67,8%; p10–p90 R$ 16,1–26,2"
+  },
+  {
+   "title": "Taxa-base após crashes: favorável no índice, ruim no próprio papel",
+   "body": "Nos 62 pregões com Ibovespa ≤ −5% desde 1998, o índice subiu em mediana 55,9% nos 12 meses seguintes (87% positivos; 3 meses: +17,6%, 77% positivos); após as eleições de Lula em 2002, 2006 e 2022, o Ibovespa rendeu +88%, +63% e +2% em 12 meses. Mas a amostra própria de MDNE3 é ruim e pequena: nos 6 dias de crash de fev–mar/2020, logo após o IPO, o retorno médio em 12 meses foi −4%, contra +44% do índice. A queda de hoje (−14,5%, z = −7,8, 3ª pior desde 1998) também é 3x maior que a pior reação eleitoral anterior (−4,5% em 1998).",
+   "stat": "Ibov 12m pós-crash: mediana +55,9% (n = 62); MDNE3 em 2020: −4% (n = 6)"
+  },
+  {
+   "title": "O prêmio eleitoral saiu inteiro — e mais",
+   "body": "A ação subiu 30,6% entre o nível pré-rali (R$ 23,19, 14/08/2026) e o fechamento de 23/10 (R$ 30,28), apostando na troca de governo. No snapshot de R$ 19,33 ela está 16,6% abaixo do nível pré-rali — embora parte disso reflita a prévia fraca do 3T26 (08/10) e a alta de ~300 bp da curva longa (DI1F31 ~15,7%).",
+   "stat": "preço −16,6% vs pré-rali; rali +30,6%"
+  }
+ ],
+ "risks": [
+  {
+   "title": "Adesões a condomínios em queda já no 3T26",
+   "body": "As adesões somaram R$ 485 mi no 3T26 (−43,5% a/a) e as vendas líquidas R$ 842 mi (−21,5%), antes do choque eleitoral. Como o fee de terreno — cerca de 44% da receita bruta no 2T26 — é reconhecido na constituição de cada condomínio, menos adesões derrubam rápido o lucro. Já projetamos lucro 2027E 12% menor (R$ 542 mi); o cenário bear (crescimento −7 p.p. e margem −3 p.p.) leva o valor a R$ 16,23.",
+   "mitigant": "REF de R$ 468 mi (margem de 37%) mais R$ 467 mi de taxas de administração a incorrer dão visibilidade a 2027. Os lançamentos do 3T26 subiram 15,5% (R$ 1,55 bi, 40% nas duas últimas semanas), e as adesões costumam vir com defasagem. Sinal de alerta: novo recuo das adesões no 4T26."
+  },
+  {
+   "title": "Demanda de investidor e de 2ª residência compete com CDI",
+   "body": "Beach Class (39%) e alto padrão (26%) foram 65% das vendas brutas no 3T26: é compra de investidor que concorre com CDI de ~13,7% e DI longo de ~15%. Distratos subiram para 8,3% das vendas brutas no 3T26, contra 6,3% no 9M26.",
+   "mitigant": "Mood (28%) e Ún1ca/MCMV, sustentados pela renda do Nordeste e pela continuidade do programa, ganham peso. Só a incorporação (26–39% das vendas) depende de repasse bancário na entrega."
+  },
+  {
+   "title": "Margem é a variável que mais destrói valor",
+   "body": "Uma queda de ~1,7 p.p. na margem EBITDA faz o valor justo igualar o preço, e −3 p.p. leva a R$ 17,4. Isso pesa mais que −4 p.p. no crescimento (R$ 19,5). O dólar +9,5% e o INCC pressionam a incorporação, cujo REF tem margem de 37%.",
+   "mitigant": "No condomínio (67,5% da receita), o custo de obra é repassado aos condôminos e a taxa de 15% sobre o custo sobe junto. A margem bruta ajustada era de 41,0% no 1S26, com folga sobre o patamar de quebra."
+  },
+  {
+   "title": "Lucro não vira caixa no curto prazo",
+   "body": "O caixa operacional dos últimos 12 meses foi de −R$ 219 mi (CVM), e o consumo foi de −R$ 170 mi no 3T26 (−R$ 73 mi sem o terreno da Pituba). O Piotroski de 5/9 falha justamente em FCO positivo e em accruals. Os recebíveis de venda de terreno a condomínios somam R$ 1,49 bi, e a 1ª cessão (R$ 153 mi) foi feita a ~CDI+2,6%.",
+   "mitigant": "Caixa de R$ 884 mi, DL de R$ 56 mi e recebíveis com alienação fiduciária. A queda de receita em 2027 libera capital de giro, e o FCFF 2027E do modelo é de R$ 572 mi."
+  },
+  {
+   "title": "Liquidez e volatilidade",
+   "body": "ADTV de 3 meses de R$ 38,7 mi, beta de queda de 1,92 (2,02 em dias de crash) e volatilidade anual de 52%. O maior drawdown em 10 anos foi de −76,7%.",
+   "mitigant": "Tamanho de posição moderado e entrada escalonada. O valor de mercado de ~R$ 1,95 bi limita a capacidade, não a tese."
+  }
+ ],
+ "monitor": [
+  {
+   "kpi": "Adesões a condomínios (R$ mi, trimestral, prévia operacional)",
+   "threshold": "Invalida se as adesões do 4T26 ficarem abaixo de R$ 485 mi (nível do 3T26) ou caírem mais de 40% a/a pelo 2º trimestre seguido: o fee de terreno de 2027 cairia além dos −5% de receita do modelo.",
+   "next": "Prévia operacional do 4T26 (estimada para jan/2027; a do 3T26 saiu em 08/10/2026)."
+  },
+  {
+   "kpi": "Margem bruta ajustada (sem juros capitalizados)",
+   "threshold": "Invalida abaixo de 37% (40,2% no 2T26; 41,0% no 1S26): equivale a cerca de 2 p.p. a menos de margem EBITDA, ponto em que o valor justo fica abaixo do preço.",
+   "next": "Resultado do 3T26 (meados de nov/2026; data a confirmar — o 3T25 saiu em 12/11/2025)."
+  },
+  {
+   "kpi": "Geração de caixa e DL/PL",
+   "threshold": "Invalida se a DL/PL passar de 25% (2,5% no 2T26) ou se o consumo de caixa superar R$ 200 mi por trimestre sem novas cessões.",
+   "next": "Resultado do 3T26 (nov/2026)."
+  },
+  {
+   "kpi": "Distratos / vendas brutas",
+   "threshold": "Invalida acima de 10% por dois trimestres (8,3% no 3T26; 6,3% no 9M26).",
+   "next": "Prévia operacional do 4T26 (jan/2027, estimada)."
+  },
+  {
+   "kpi": "Lançamentos 2026 vs guidance (R$ 4,5–5,5 bi, %MD)",
+   "threshold": "Sinal negativo se 2026 fechar abaixo de R$ 4,5 bi (9M26: R$ 3,87 bi; faltam R$ 0,63 bi no 4T26): menos lançamentos agora significa menos condomínios constituídos em 2027.",
+   "next": "Prévia operacional do 4T26 (jan/2027, estimada)."
+  }
+ ],
+ "catalysts": [
+  {
+   "date": "nov/2026 (data a confirmar)",
+   "event": "Resultado do 3T26: margem, geração de caixa e impacto da queda de adesões."
+  },
+  {
+   "date": "4T26",
+   "event": "Lançamentos do 4T26 frente ao piso do guidance (faltam R$ 0,63 bi) e eventual dividendo intercalar (compromisso de ≥ R$ 50 mi por semestre)."
+  },
+  {
+   "date": "jan/2027 (estimado)",
+   "event": "Prévia operacional do 4T26: adesões, vendas líquidas e distratos."
+  },
+  {
+   "date": "2027",
+   "event": "Ganho de escala da Ún1ca/MCMV (pipeline de R$ 2 bi segundo o Itaú BBA) e direção da curva DI longa."
+  }
+ ],
+ "bottom_line": "Para quem aceita volatilidade alta (beta de queda 1,9) e posição pequena (ADTV de R$ 39 mi), a tese funciona se as adesões se estabilizarem no 4T26/1T27 e a margem bruta ajustada ficar ≥ 37%. Se o fee de terreno continuar encolhendo, o valor vai para ~R$ 16 (cenário bear) e a TIR fica abaixo do Ke de 25%."
+}

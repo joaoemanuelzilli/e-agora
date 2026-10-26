@@ -1,0 +1,196 @@
+{
+ "ticker": "BPAC11",
+ "name": "Banco BTG Pactual S.A. (unit BPAC11)",
+ "sector": "Financeiro / Banco de investimento, wealth/asset e crédito corporativo",
+ "template": "financial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 3,
+ "listed_classes": [
+  {
+   "ticker": "BPAC11",
+   "class": "UNIT"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Unit BPAC11 = 1 ON + 2 PNA → shares_per_unit 3 (release 2T26: 11.587.655 mil ações ex-tesouraria / 3.862.552 mil units). listed_classes só com a unit: BPAC3/BPAC5 são ilíquidas e a maior parte das ON está com a partnership; market cap = preço da unit × units equivalentes. PL controlador CVM (R$ 83.133 mi em 2T26; R$ 73.353 mi em FY2025) é ~R$ 3,4–3,6 bi maior que o PL gerencial do release (R$ 79.553 mi; 1T26 R$ 74.510 vs CVM 78.102). Não fiz override: calibrei o ROE sobre o PL CVM de abertura (ROE gerencial reportado ≈ +1,2 pp). Lucro ajustado (exclui amortização de ágio ~R$ 240 mi/tri pós-IR) ≈ contábil +5%."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   0.27,
+   0.27,
+   0.28,
+   0.3,
+   0.3
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.276,
+   0.245,
+   0.24,
+   0.235,
+   0.23
+  ],
+  "ni_growth": null,
+  "payout": [
+   0.27,
+   0.27,
+   0.28,
+   0.3,
+   0.3
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roe": 0.21
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Banco: sem ponte EV→equity."
+ },
+ "target_multiples": {
+  "pe": 9.0,
+  "ev_ebitda": null,
+  "pbv": 2.0,
+  "rationale": "P/L 9x e P/VP 2,0x: abaixo do patamar de ago/26 (<11x lucro, Nord) e muito abaixo da sexta pré-eleição (unit R$ 79,82 ≈ 3,7x o PL CVM e ~15x o lucro LTM). Faixa histórica aproximada 2023–25 de ~10–11x P/L e ~2,0–2,5x P/VP (estimativa, não verificada nesta rodada). Desconto pelo regime de juros e pela exposição a mercado de capitais. Coerência: ROE ~22% com g 5% e Ke de mercado ~14% sustenta ~2x P/VP; com Ke 25% o P/VP justo é ~0,85x — a diferença é exatamente o que o usuário precisa decidir."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.04,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Mercado de capitais fechado por 12–18 meses, inadimplência no consumer (Pan/MeuTudo) e marcação negativa: ROE 19–20%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Volatilidade turbina S&T e captação (fuga para qualidade), ROE 26–27% sustentado como em 2025–26."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.025,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "n/a (banco: captação é passivo operacional; ver Basileia/LCR)",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": null,
+  "notes": "Sensibilidade de LL a 100 bp não divulgada no release. Exposições: (i) 'Interest & Others' (R$ 1,8 bi/tri) é remuneração do PL a CDI — +100 bp no CDI ≈ +R$ 0,8 bi/ano antes de IR sobre ~R$ 80 bi de PL (estimativa simples); (ii) VaR médio diário 0,22% do PL (R$ 169,8 mi) no 2T26; (iii) receitas de IB/DCM e taxas de performance caem com juros longos altos."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.2353,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.201,
+  "payout_avg_5y": 0.27,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.159,
+   "ebitda_margin": null,
+   "net_income_mn": 5142,
+   "net_debt_ebitda": null
+  },
+  "notes": "CVM: LL controlador 2020 4.375 → 2025 16.006 (CAGR 29,6%); ROE CVM 2021–25: 19,9/16,8/20,6/19,2/24,1% (média 20,1%); payout caixa 25–29%. 2026E LL ajustado ≈ R$ 20,25 bi (1S26 R$ 9,95 bi realizado + 2S26E R$ 10,3 bi) = ROE 27,6% sobre PL CVM de abertura (≈25% sobre PL médio, vs 26,6% reportado no 1S26). 2027–30: ROE de abertura 24,5→23% (≈22,5→21,3% sobre PL médio), acima da média 5a de 20% mas abaixo do run-rate atual, refletindo pior ambiente de IB/DCM; LL CAGR 2026–30 ~12,7% vs 29,6% histórico."
+ },
+ "guidance": "Sem guidance formal de lucro/ROE. Gestão (2T26): carteira de crédito crescendo ≥15–20% a.a.; ROE do Banco Pan convergindo ao do BTG até fim de 2028 (Nord). Aquisições: 100% do Banco Pan, operações do HSBC no Uruguai (concluída 10/07/2026), parceria MeuTudo. 3T26 em 10/11/2026.",
+ "dividend_policy": "Dividendos/JCP semestrais, payout baixo para financiar crescimento: CVM caixa 2023 R$ 2.845 mi (29%), 2024 R$ 2.995 mi (28%), 2025 R$ 4.020 mi (25%), LTM 2T26 R$ 4.750 mi. Recompras pequenas (LTM R$ 92 mi). Basileia 16,0%, Capital Principal 11,6% e Nível I 12,6% (2T26) — sem restrição a payout.",
+ "election_impact": "−36% (R$ 79,82→51,40; market cap ~R$ 308 bi→~R$ 199 bi) é sobretudo de-rating: na sexta a unit valia ~3,7x o PL e ~15x o lucro LTM — preço de cenário Flávio + corte de juros. Canais reais: (i) IB (R$ 421 mi no 2T26, −46% a/a, ~4% da receita) e DCM/ECM praticamente fechados por meses; (ii) WM/AM: AuM sensível a preços de ativos, mas captação líquida R$ 59 bi/tri e fundos CDI se beneficiam; (iii) S&T (R$ 1,86 bi/tri) costuma ganhar com volatilidade; (iv) Consumer (Pan, consignado privado) sofre com Selic alta; (v) remuneração do PL a CDI sobe. Impacto estimado no LL 2027E: −5% a −8% vs trajetória pré-eleição; o preço caiu 36%.",
+ "summary": "Melhor franquia de banco de investimento/wealth da América Latina (ROAE 26,7% no 2T26, LL ajustado R$ 5,1 bi recorde, Basileia 16%). Mesmo após −36% a unit está a ~2,4x o PL e ~9x o lucro 2027E: com Ke de 25% e ROE ~22–25% o P/VP justo fica perto de 1x, então não é oportunidade nesse critério — é qualidade cara para a meta do usuário.",
+ "thesis": [
+  "Rentabilidade estrutural: ROAE ajustado 26,7% no 2T26 e 26,6% no 1S26, eficiência 37,1%, VaR 0,22% do PL.",
+  "Crescimento: receita 1S26 +24% a/a, AuM/WuM R$ 2,68 tri (+25%), NNM R$ 332 bi LTM, carteira R$ 366,6 bi (+24%).",
+  "Balanço: Basileia 16,0%, CET1 11,6%, LCR 160%; S&T historicamente beneficiado por volatilidade."
+ ],
+ "risks": [
+  "Mercado de capitais fechado (IB/DCM/ECM) e queda de AuM com bolsa em baixa.",
+  "Crédito: consignado privado/consumer (Pan, MeuTudo) com Selic ~14–16% e carteira corporativa de R$ 288,5 bi (+21% a/a) num ciclo pior a partir de 2027.",
+  "Risco de chave-pessoa/governança (precedente de 2015) e tributação de investimentos/fundos num 4º mandato.",
+  "Múltiplo ainda alto: P/VP ~2,4x deixa pouca margem se o ROE cair para ~20%."
+ ],
+ "catalysts": [
+  "Resultado 3T26 em 10/11/2026 (efeito da volatilidade em S&T).",
+  "Retomada de emissões de DCM em 2027.",
+  "Fechamento/integração MeuTudo e HSBC Uruguai."
+ ],
+ "key_data": [
+  {
+   "label": "LL ajustado 2T26",
+   "value": "R$ 5.142 mi (+23% a/a)",
+   "context": "Contábil R$ 4.901 mi; consenso Bloomberg ~R$ 4,85 bi"
+  },
+  {
+   "label": "ROAE ajustado 2T26",
+   "value": "26,7%",
+   "context": "1S26 26,6%; 2T25 27,2%"
+  },
+  {
+   "label": "Receita total 2T26",
+   "value": "R$ 10.371 mi (+16% a/a)",
+   "context": "IB R$ 421 mi (−46%); Corporate Lending R$ 2.500 mi (+19%)"
+  },
+  {
+   "label": "PL gerencial / Basileia / CET1",
+   "value": "R$ 79,6 bi / 16,0% / 11,6%",
+   "context": "PL CVM controlador R$ 83,1 bi"
+  },
+  {
+   "label": "Units equivalentes",
+   "value": "3.862,6 mi",
+   "context": "11.587,7 mi ações ex-tesouraria ÷ 3"
+  },
+  {
+   "label": "Preço / P/VP (PL CVM)",
+   "value": "R$ 51,40 / ~2,4x",
+   "context": "Sexta R$ 79,82 (~3,7x)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "BTG Pactual — Divulgação de Resultados 2T26 (11/08/2026)",
+   "url": "https://static.poder360.com.br/uploads/2026/08/destaques-BTG-2trimestre-11ago2026.pdf"
+  },
+  {
+   "title": "Nord Investimentos — BTG Pactual no 2T26 (12/08/2026)",
+   "url": "https://www.nordinvestimentos.com.br/blog/btg-pactual-bpac11-resultado-2t26/"
+  },
+  {
+   "title": "Seu Dinheiro — Calendário de balanços do 3T26 (19/10/2026)",
+   "url": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação ao vivo (API oficial), 26/10/2026",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/"
+  }
+ ],
+ "confidence": "média — números do 2T26 vêm do release oficial; trajetória de ROE pós-choque e múltiplos históricos são julgamento (não verifiquei consenso pós-eleição)."
+}

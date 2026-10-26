@@ -1,0 +1,283 @@
+{
+  "ticker": "DIRR3",
+  "name": "Direcional Engenharia S.A.",
+  "sector": "Construção civil / Incorporação residencial econômica (MCMV)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "DIRR3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem ajustes na receita/EBITDA (FY2025 ROL R$ 4.343 mi; EBITDA CVM R$ 1.111 mi, inclui equivalência patrimonial de SPEs). EBITDA ajustado do release soma juros capitalizados (2T26: R$ 348 mi aj. vs R$ 318 mi CVM). Dívida líquida CVM (R$ 291 mi, inclui aplicações LP e arrendamentos já dentro de 2.01.04/2.02.01) difere da DL da companhia (R$ 492 mi). Ações: 520,0 mi ex-tesouraria (desdobramento 1:3 em 08/08/2025). EBITDA projetado está na base 'ex-juros capitalizados' (+2,8 p.p. vs EBITDA CVM), com o mesmo valor deduzido em other_financial."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.17,
+      0.1,
+      0.09,
+      0.08,
+      0.07
+    ],
+    "ebitda_margin": [
+      0.283,
+      0.278,
+      0.273,
+      0.268,
+      0.268
+    ],
+    "da_pct_revenue": [
+      0.022,
+      0.022,
+      0.022,
+      0.022,
+      0.022
+    ],
+    "capex_pct_revenue": [
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "nwc_pct_revenue": 0.65,
+    "cost_of_net_debt": [
+      0.145,
+      0.145,
+      0.135,
+      0.13,
+      0.125
+    ],
+    "other_financial": [
+      -102.3,
+      -111.5,
+      -120.6,
+      -129.2,
+      -137.1
+    ],
+    "tax_rate": [
+      0.095,
+      0.095,
+      0.095,
+      0.095,
+      0.095
+    ],
+    "minority_share_ni": 0.21,
+    "payout": [
+      0.4,
+      0.6,
+      0.65,
+      0.65,
+      0.65
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.25,
+    "roe": 0.3
+  },
+  "wacc": {
+    "kd_pre_tax": 0.227,
+    "target_debt_weight": 0.1,
+    "notes": "Kd real 15% sem benefício fiscal: sob RET/presumido os juros não reduzem o IR; o motor aplica (1−34%), então informamos 0,15/0,66 = 0,227."
+  },
+  "adjustments": {
+    "other_debt_like": 16,
+    "non_operating_assets": 0,
+    "minority_value": 1000,
+    "notes": "other_debt_like = dividendos propostos no balanço (R$ 16 mi). Passivo de cessão de recebíveis (R$ 1.264 mi) NÃO entra como dívida: é compensado pelos recebíveis cedidos que permanecem no ativo (ambos financeiros). nwc_pct_revenue 0,65 = ponto médio entre o CG marginal bruto (0,75–0,91, sem novas cessões) e o líquido de cessões (0,31–0,41), i.e., supõe que só parte do crescimento da carteira será cedida. Se a cessão fosse tratada como dívida, o valor cairia ≈R$ 2,4/ação. minority_value R$ 1.000 mi ≈ 21% do LL (Riza na Riva + sócios de SPEs) × equity 100%; referência: 5% da Riva vendidos à Riza por R$ 151 mi (out/25) ⇒ Riva 100% ≈ R$ 3,0 bi."
+  },
+  "target_multiples": {
+    "pe": 6.0,
+    "ev_ebitda": 4.5,
+    "pbv": 1.8,
+    "rationale": "Pré-eleição DIRR3 negociava a 7,0x o LL UDM (R$ 11,56; LL UDM R$ 856 mi; P/VP 2,6x); faixa de 52 semanas R$ 11,05–19,04. Itaú BBA (out/25) tinha PA R$ 19,70. Com DI ~15,7%, Riva desacelerando (vendas −13% no 2T26) e distratos altos, usamos P/L 6,0x 2027E e EV/EBITDA 5,0x (coerente com P/L + minoritários relevantes). P/VP 1,8x ≈ (ROE 30% − 5%)/(25% − 5%) × ~1,4 de prêmio de crescimento. EV/EBITDA-alvo reescalonado de 5,0x para 4,5x por estar agora na base EBITDA ex-juros capitalizados (mesmo P/L implícito)."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.05,
+      "ebitda_margin_shift": -0.025,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Riva (média renda/SBPE) sofre com juros altos, distratos seguem 16–21% e FGTS 2027–29 sem crescimento real."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.03,
+      "ebitda_margin_shift": 0.01,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Faixa 4 ampliada e queda de juros em 2028 reaceleram Riva; margem bruta ajustada se mantém ~42%."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.05,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.003
+  },
+  "debt_profile": {
+    "gross_debt_mn": 3041,
+    "pct_floating_cdi": null,
+    "avg_cost": "não divulgado no material lido (debêntures/CRI CDI+ e SFH)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -3,
+    "notes": "DL CVM R$ 291 mi: +100 bp ≈ −R$ 3 mi pré-IR. O canal relevante é a Riva (média renda) e o custo das cessões (R$ 1,26 bi), ambos sensíveis ao CDI."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.2368,
+    "ebitda_margin_avg_5y": 0.2221,
+    "roe_avg_5y": 0.2381,
+    "payout_avg_5y": 0.8312,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.201,
+      "ebitda_margin": 0.2483,
+      "net_income_mn": 201.7,
+      "net_debt_ebitda": 0.23
+    },
+    "notes": "CAGR de receita 2020–25 de 24%; projetamos ~10% a.a. 2025–30 (2026 +17%: 1S26 +25%, mas 3T26 com vendas fracas por adiamento de lançamentos). Margem EBITDA 5a média 22,2% (2024–25 ~25%); projeção 25,5% → 24%. ROE 5a 24% (2025: 40%; 2T26 anualizado 35%). Payout caixa 2025 198% (distribuição de reservas antes da tributação de dividendos) — usamos 40% em 2026 (nenhum dividendo declarado em 2026 até agora; recompra aprovada) e 60–65% depois. Imposto efetivo ~9,5% (RET). Minoritários ~21% do LL (Riva/SPEs). AJUSTE JUROS CAPITALIZADOS (padronização G06/G07): +2,8 p.p. no ebitda_margin em todos os anos e −2,8% da receita (R$ 142–197 mi/ano) em other_financial, LL inalterado; fonte: 2T26: margem bruta reportada 40,0% vs 42,8% ajustada ex-juros capitalizados (EBITDA R$ 311,5 mi vs ajustado R$ 348 mi = 2,85% da ROL). Margem EBITDA na base CVM (antes do ajuste): 25,5%; 25,0%; 24,5%; 24,0%; 24,0%. WACC sem benefício fiscal da dívida quando há dívida (RET): ver wacc.notes."
+  },
+  "guidance": "Sem guidance formal de resultado no material consultado.",
+  "dividend_policy": "Estatuto: mínimo obrigatório de 25%. Histórico de caixa (DFC): 2023 R$ 162 mi, 2024 R$ 406 mi, 2025 R$ 1.564 mi (inclui R$ 1,55/ação, ≈R$ 806 mi, pago 23/12/2025 para antecipar-se à tributação de dividendos de 2026). Em 2026 não há dividendo declarado na B3 até 26/10; em 11/08/2026 aprovou recompra de até 32 mi ações em 18 meses (6% do capital).",
+  "election_impact": "DIRR3 −25%: majoritariamente macro. A marca Direcional (MCMV F1–F3) é beneficiada pela continuidade do programa; a Riva (média renda, SBPE/F4) é a parte exposta a juros — e já vinha fraca (vendas −13% a/a no 2T26; VSO 21%). Alavancagem baixa (DL/PL 18% pela companhia), mas carrega R$ 1,26 bi de cessões e paga muito dividendo, o que a deixa mais sensível ao CDI que Cury. Setor: o MCMV é financiado majoritariamente pelo FGTS (fundo parafiscal, fora do Orçamento, juros fixados pelo Conselho Curador e não pela Selic). Orçamento FGTS 2026: R$ 160,5 bi (habitação R$ 144,5 bi; descontos/subsídios elevados a R$ 13 bi em 10/09/2026); plurianual aprovado em nov/25: habitação R$ 144,5 bi em 2027 e R$ 139,5 bi em 2028–29 (nominal estável/queda) — o Conselho revisa 2027–29 no fim de out/26. Portaria MCID 333/2026 elevou renda (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000) e tetos (F3 R$ 400 mil; F4 R$ 600 mil). Um 4º mandato Lula reduz o risco de corte do programa (era um risco no cenário Flávio) — positivo para volume. O que piora de fato: (i) custo de capital/Ke e DI longo (+300 bp) → múltiplos; (ii) dívidas e cessões indexadas ao CDI; (iii) fiscal: Faixa 1 (FAR/OGU) e Faixa 4 (Fundo Social) dependem do Tesouro; FGTS é procíclico (arrecadação 8% da folha) e sofre com saques extraordinários; (iv) câmbio +9,5% → insumos (aço, cobre, PVC) e INCC (já 6,6% em 12m, mão de obra 7,6%).",
+  "summary": "Segunda melhor plataforma MCMV (ROE ~35–40%), com braço de média renda (Riva) mais sensível a juros. A ~R$ 8,4–8,6 negocia ~5x o lucro UDM; a queda foi macro, mas o 3T26 operacional mais fraco e a Riva justificam um múltiplo-alvo abaixo do histórico.",
+  "thesis": [
+    "ROE anualizado de 35% no 2T26 com margem bruta ajustada de 42,8% e EBITDA ajustado de R$ 348 mi (27,2%).",
+    "Receita +20% a/a no 2T26; vendas brutas recorde de R$ 2,0 bi; geração de caixa operacional de R$ 228 mi no 3T26.",
+    "Recompra de até 32 mi ações (≈6% do capital) a preços deprimidos, além de payout historicamente alto.",
+    "MCMV fortalecido com Lula; tetos maiores (F3 R$ 400 mil) favorecem o ticket da marca Direcional."
+  ],
+  "risks": [
+    "Riva: média renda depende de SBPE/Faixa 4 e sofre com DI a 15–16%; vendas −13% a/a no 2T26 e distratos 16–21% (Genial/Safra).",
+    "3T26: vendas líquidas de R$ 1,3 bi, 21% abaixo do esperado (Genial), com lançamentos concentrados após 15/09 — risco para receita de 2027.",
+    "Cessões de recebíveis de R$ 1,26 bi e dívida bruta de R$ 3,0 bi (CDI) — custo financeiro sobe com o choque.",
+    "Fiscal/FGTS 2027–29 e INCC (mão de obra 7,6% em 12m)."
+  ],
+  "catalysts": [
+    "Conselho Curador do FGTS (fim de out/2026)",
+    "Resultado 3T26 (novembro/2026)",
+    "Execução da recompra (até fev/2028)",
+    "Eventual dividendo de fim de ano (dez/2026)"
+  ],
+  "key_data": [
+    {
+      "label": "ROE anualizado 2T26",
+      "value": "35%",
+      "context": "release/imprensa 11/08/2026"
+    },
+    {
+      "label": "DL/PL 2T26 (companhia)",
+      "value": "18%",
+      "context": "DL R$ 492 mi; PL R$ 2.737 mi"
+    },
+    {
+      "label": "Passivo de cessão",
+      "value": "R$ 1.264 mi",
+      "context": "CVM 2T26 — não tratado como dívida (vide adjustments)"
+    },
+    {
+      "label": "Vendas líquidas 3T26",
+      "value": "R$ 1,3 bi",
+      "context": "VSO líquida 19%; 21% abaixo da estimativa Genial"
+    },
+    {
+      "label": "P/L UDM ao preço de hoje",
+      "value": "≈5,1x",
+      "context": "R$ 8,38–8,64 (intradia) × 520 mi / LL UDM R$ 856 mi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "InfoMoney — Conselho do FGTS aprova orçamento de R$ 160,5 bi para 2026 (habitação R$ 144,5 bi)",
+      "url": "https://www.infomoney.com.br/economia/conselho-do-fgts-aprova-orcamento-de-r-1605-bi-para-2026-alta-anual-de-54/"
+    },
+    {
+      "title": "Movimento Econômico — FGTS amplia em R$ 500 mi os descontos do MCMV 2026 (R$ 12,5 bi → R$ 13 bi), 11/09/2026",
+      "url": "https://movimentoeconomico.com.br/habitacao/2026/09/11/mcmv-governo-amplia-em-r-500-milhoes-subsidios-para-habitacao-popular/"
+    },
+    {
+      "title": "Registro de Imóveis — R$ 500 milhões reforçam MCMV; piso de R$ 12,5 bi para 2027",
+      "url": "https://www.registrodeimoveis.org.br/r-500-milhoes-reforcam-minha-casa-minha-vida"
+    },
+    {
+      "title": "Bora Investir (B3) — MCMV: novo teto de renda e de preços (Faixa 3 R$ 400 mil; Faixa 4 R$ 600 mil)",
+      "url": "https://borainvestir.b3.com.br/web-stories/minha-casa-minha-vida-veja-novo-teto-de-renda-e-de-precos-de-imoveis/"
+    },
+    {
+      "title": "Sul21/Agência Brasil — novas faixas de renda MCMV (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000)",
+      "url": "https://sul21.com.br/?p=289296"
+    },
+    {
+      "title": "FGV IBRE/Sinduscon-SP — INCC-M set/26 (12m 6,61%; mão de obra 7,63%)",
+      "url": "https://sindusconsp.com.br/wp-content/uploads/2026/09/INCC-M_FGV_press-release_Set26.pdf"
+    },
+    {
+      "title": "Mattos Filho — Mercado imobiliário e Reforma Tributária (RET até 2028)",
+      "url": "https://www.mattosfilho.com.br/unico/mercado-imobiliario-reforma-tributaria/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais, consultado em 26/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    },
+    {
+      "title": "Economic News Brasil — Direcional lucra R$ 201,6 mi no 2T26; recompra de até 32 mi ações (11/08/2026)",
+      "url": "https://economicnewsbrasil.com.br/2026/08/11/direcional-lucro-2t26-receita-recompra-acoes/"
+    },
+    {
+      "title": "Empiricus — Direcional: números do 2T26",
+      "url": "https://www.empiricus.com.br/artigos/investimentos/direcional-dirr3-numeros-do-2t26-mantem-ritmo-de-crescimento-e-consistencia-operacional-da-empresa-jdnm/"
+    },
+    {
+      "title": "Direcional — Prévia operacional 2T26 (08/07/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/ada9bc2c-f7d0-4359-9eaf-851b679ab788/f52435f6-fdd3-392a-1fc4-d3f5034b2bee?origin=2"
+    },
+    {
+      "title": "Visno Invest — Direcional vendas líquidas de R$ 1,3 bi no 3T26",
+      "url": "https://visnoinvest.com.br/news/15722/direcional-dirr3-registra-vendas-liquidas-de-r-13-bi-no-3t26"
+    },
+    {
+      "title": "Genial — Direcional prévia operacional 3T26: atrasos em lançamentos",
+      "url": "https://analisa.genialinvestimentos.com.br/analises-e-resultados/Direcional-DIRR3--Previa-Operacional-Atrasos-em-Lancamentos-Estoque-Firme-2"
+    },
+    {
+      "title": "Suno — Direcional quer antecipar dividendos; BBA compra, PA R$ 19,70 (25/10/2025)",
+      "url": "https://www.suno.com.br/noticias/dirr3-bba-compra-antecipacao-dividendos-mt/amp/"
+    }
+  ],
+  "confidence": "média-alta: dados CVM sólidos; incerteza em Riva/juros, no tratamento das cessões e no ritmo de lançamentos pós-3T26."
+}

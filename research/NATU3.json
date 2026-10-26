@@ -1,0 +1,244 @@
+{
+  "ticker": "NATU3",
+  "name": "Natura Cosméticos S.A.",
+  "sector": "Consumo / Cosméticos e HPPC — venda direta (Natura, Avon) Brasil + América Hispânica",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "NATU3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "shares_outstanding_mn": 1374.235,
+      "ni_2025_continuing": 529.0
+    },
+    "notes": "Receita 2025 = CVM (21.823,5), consistente com o 1S26 CVM (9.915,5 = release). O pró-forma 2025 da companhia (holding incorporada em 2025) é ~3–4% maior no 1S25; usamos a base CVM e taxas de crescimento sobre ela (2026E −4,5% ≈ release −8,5% no 1S26 sobre o pró-forma + 2S26 −4%). Lucro 2025 CVM = −1.785,2, dos quais −2.314,2 de operações descontinuadas (Avon International); operações continuadas = +529,0 (ainda com itens não recorrentes de reestruturação/Onda 2). LTM 2T26 (−2.657) também contaminado por descontinuadas — não usar para P/L. Ações em circulação fixadas em overrides.base.shares_outstanding_mn (na 1ª versão da base CVM o bloco 'shares' vinha em milhares; corrigido na versão de 12:28 — o override é idêntico ao valor atual)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      -0.045,
+      0.06,
+      0.055,
+      0.05,
+      0.05
+    ],
+    "ebitda_margin": [
+      0.108,
+      0.12,
+      0.128,
+      0.132,
+      0.135
+    ],
+    "da_pct_revenue": [
+      0.043,
+      0.042,
+      0.041,
+      0.04,
+      0.04
+    ],
+    "capex_pct_revenue": [
+      0.025,
+      0.03,
+      0.032,
+      0.033,
+      0.033
+    ],
+    "nwc_pct_revenue": 0.15,
+    "cost_of_net_debt": [
+      0.2,
+      0.21,
+      0.2,
+      0.19,
+      0.18
+    ],
+    "other_financial": [
+      -250,
+      -250,
+      -240,
+      -230,
+      -220
+    ],
+    "tax_rate": [
+      0.34,
+      0.33,
+      0.32,
+      0.31,
+      0.3
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      0.0,
+      0.25,
+      0.3,
+      0.35,
+      0.4
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.18,
+    "roe": 0.15
+  },
+  "wacc": {
+    "kd_pre_tax": 0.165,
+    "target_debt_weight": 0.3
+  },
+  "adjustments": {
+    "other_debt_like": 1260,
+    "non_operating_assets": 0,
+    "minority_value": null,
+    "notes": "DL base CVM 2T26 = dívida bruta 6.263 + arrendamentos 495 − caixa/aplicações 2.389 = R$ 4.369,6 mi (release: DL 3.864 ex-arrendamentos, 2,06x). Debt-like extra: (i) obrigações com cotistas seniores do FIDC Natura Pay R$ 723 mi (financiamento de recebíveis de consultoras, excluído pela companhia); (ii) passivo líquido de derivativos R$ 537 mi (567 CP + 67 LP − 97 ativos) — hedges do principal dos bonds em USD cuja liquidação em caixa é esperada nos próximos 12 meses (release 2T26); os bonds estão a câmbio spot na dívida, então o hedge precisa entrar para refletir o custo em R$. Custo da dívida alto (~20% sobre a DL) porque o caixa (R$ 2,4 bi, parte em USD/América Hispânica) rende ~3,6% a.a. enquanto a dívida custa ~CDI+1,5% após swaps; other_financial = custo do FIDC, contingências, hiperinflação (Argentina) e outros."
+  },
+  "target_multiples": {
+    "pe": 11.0,
+    "ev_ebitda": 6.0,
+    "pbv": 0.7,
+    "rationale": "EV/EBITDA (CVM, reportado) ~6,4x no fim de 2025 e ~8,7x LTM na média de 2026; Natura &Co negociou 8–10x em 2021–23. Pelos níveis de alavancagem (DL ajustada ~3x EBITDA LTM) e execução, usamos 6,0x EV/EBITDA e 11x P/L sobre um lucro 2027E ainda deprimido. Consenso não localizado nesta pesquisa."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.03,
+      "ebitda_margin_shift": -0.02,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Brasil não reage (rupturas de estoque, perda de consultoras para o Boticário), juros altos encarecem a dívida e o refinanciamento do bond de US$ 450 mi (mai/2028) sai caro; margem fica perto de 10%."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.015,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Novo modelo operacional entrega eficiência, Brasil volta a crescer com isenção do IR até R$ 5 mil e a margem retorna a ~15% (nível pré-Avon), com desalavancagem para <1,5x."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.035,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.005
+  },
+  "debt_profile": {
+    "gross_debt_mn": 6263,
+    "pct_floating_cdi": 0.9,
+    "avg_cost": "Juros de R$ 127 mi no 2T26 sobre R$ 6,2 bi (2,0% no tri) + carry dos hedges (R$ 80 mi no tri); bonds US$ 450 mi (SLB, venc. 03/05/2028) e US$ 270 mi (19/04/2029) com 100% do principal protegido; debêntures 12ª emissão (R$ 221,5 mi 2027; R$ 335,8 mi 2029; R$ 275,1 mi 2030–32) e 13ª emissão R$ 1.326 mi (2029); 4131 de US$ 56,9 mi (fev/2027). Ratings: Fitch BB+/AAA(bra), Moody's Ba2, S&P BB/AAA(bra).",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": 3000,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -30,
+    "notes": "Dívida efetivamente pós-fixada após swaps: DL ex-arrendamentos R$ 3,9 bi + FIDC R$ 0,7 bi → +100 bp de CDI ≈ −R$ 45 mi antes de IR (≈ −R$ 30 mi no lucro, ~8% do LL 2027E). O choque de +300 bp custa ~R$ 90 mi/ano no lucro. Muro de vencimentos: ~R$ 3,0 bi em 24 meses (bond de US$ 450 mi em mai/2028 + 4131 + debênture 2027)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.035,
+    "ebitda_margin_avg_5y": 0.144,
+    "roe_avg_5y": 0.181,
+    "payout_avg_5y": 0.753,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": -0.077,
+      "ebitda_margin": 0.12,
+      "net_income_mn": 35.2,
+      "net_debt_ebitda": 2.33
+    },
+    "notes": "Histórico CVM não é comparável (perímetro muda: Natura Cosméticos subsidiária até 2024, incorporação da holding e da Avon Latam em 2024–25; ROE de 84% em 2023 = ganho com a venda da Aesop; 2025 com prejuízo de R$ 1,8 bi por descontinuadas). Projetamos CAGR 2025–30 de 3,2% (2026 −4,5%, depois +5–6% com conversão cambial da América Hispânica, ~40% da receita) e margem EBITDA reportada de 10,8%→13,5%, abaixo dos 14,1% recorrentes de 2025 e dos 17–19% históricos da Natura pré-Avon. Payout zero em 2026 (alavancagem acima da faixa-alvo de 1,0–1,5x). IFRS-16: capex projetado (2,5%→3,3%) = capex caixa 1,6–2,4% (2025: 1,7%; LTM 1,4%, abaixo do normal por contenção) + adições de direito de uso ~0,9% (principal de arrendamento na DFC R$ 202 mi em 2025)."
+  },
+  "guidance": "Release 2T26 (10/08/2026): ambição de 2026 revisada — em vez de expandir a margem sobre os 14,1% (recorrentes) de 2025, a companhia passou a mirar expansão da margem EBITDA REPORTADA sobre a reportada de 2025, FCFF positivo e superior ao de 2025, e alavancagem 'dentro da faixa considerada ótima' (glossário: 1,0x–1,5x DL/EBITDA); menciona 'incertezas que já se delineiam para 2027'. Fato relevante de 08/07/2026 antecipou queda de 9–10% na receita do 2T26.",
+  "dividend_policy": "Mínimo estatutário de 25% do lucro ajustado. Sem proventos pagos no 1S26; R$ 144,8 mi pagos em 2025 e R$ 1.755,7 mi em 2024 (distribuição extraordinária da Natura &Co após a venda da Aesop). Com prejuízo acumulado no ano e DL/EBITDA de 2,06x, proventos relevantes só após desalavancagem.",
+  "election_impact": "Queda de ~29% hoje: beta + alavancagem + consumo doméstico. Canais reais: (i) juros — é a mais alavancada do grupo (DL ajustada por FIDC e hedges ~R$ 5,6 bi, ~3x EBITDA LTM); +300 bp custam ~R$ 90 mi/ano de lucro e encarecem o refinanciamento de ~R$ 3 bi até 2028; (ii) câmbio — a receita hispânica (~40%) ganha em R$ e os bonds em USD estão 100% hedgeados (efeito patrimonial neutro), mas insumos importados encarecem no Brasil; efeito líquido levemente positivo na receita e neutro/negativo na margem; (iii) consumo — consultoras e clientes são de renda média/baixa, os mais beneficiados pela isenção do IR até R$ 5 mil e pelo salário mínimo, o que é o principal contraponto pró-Lula; (iv) tributário — descasamento de ICMS-ST em SP (−120 bps de margem no 2T26) e reforma tributária mudam a carga na venda direta (a companhia cita redução de carga nos formatos de venda por consultoras a partir do 3T26). O problema principal é micro (execução no Brasil: rupturas, SAP, fechamento de Interlagos, franquias), não a eleição.",
+  "summary": "Pós-saída de Avon International, Aesop e The Body Shop, a Natura é uma operação latino-americana de venda direta com marcas fortes, mas o Brasil afundou no 2T26 (receita −14,8%, margem 16,4%) por erros de execução, e a alavancagem ajustada é alta (~3x com FIDC e hedges). A R$ 5,6 negocia ~19x o lucro 2027E e ~6,5x EV/EBITDA LTM; mesmo com recuperação gradual da margem, a Ke de 25% não fecha — é a armadilha mais clara do grupo.",
+  "thesis": [
+    "Marcas e canal: 1,48 mi de consultoras no Brasil e 1,13 mi na América Hispânica; mercados hispânicos crescendo +7,2% em moeda constante com margem subindo (+220 bps no 2T26).",
+    "Alavancas de eficiência: novo modelo operacional (despesas G&A −18% a/a no 2T26; R$ 263 mi de rescisões já incorridas, ~85% do plano).",
+    "Opção de recuperação: se a margem voltar a ~15% e a DL cair para <1,5x, o lucro pode triplicar até 2029."
+  ],
+  "risks": [
+    "Execução no Brasil: rupturas de produto (SAP, planejamento integrado, fechamento da fábrica de Interlagos), queda de consultoras (−2,6% Brasil, −17,3% Hispânica) e transição das franquias.",
+    "Alavancagem e refinanciamento: DL 2,06x (companhia) / ~3x ajustada; bond de US$ 450 mi vence em mai/2028; custo da dívida sobe com o DI.",
+    "Qualidade do lucro: histórico de prejuízos (2025: −R$ 1,8 bi com descontinuadas; 1S26: −R$ 410 mi), itens extraordinários recorrentes e contingências (depósitos judiciais em alta).",
+    "Concorrência do Grupo Boticário e do varejo/marketplaces; Argentina hiperinflacionária."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (novembro, a confirmar): primeiro trimestre após a força-tarefa de supply chain.",
+    "Refinanciamento antecipado do bond 2028 e redução do custo da dívida.",
+    "Evolução da margem reportada vs. 2025 (ambição revisada para 2026)."
+  ],
+  "key_data": [
+    {
+      "label": "Receita líquida 2T26",
+      "value": "R$ 5.170 mi (−9,1% a/a; −7,1% em moeda constante)",
+      "context": "Brasil −14,8%; Hispânica +0,7% em R$ (+7,2% CC)"
+    },
+    {
+      "label": "EBITDA 2T26",
+      "value": "R$ 620 mi (12,0%)",
+      "context": "13,2% ex-descasamento de ICMS-ST; recorrente −22% a/a"
+    },
+    {
+      "label": "Lucro líquido",
+      "value": "R$ 35 mi no 2T26; −R$ 410 mi no 1S26",
+      "context": "1T26: −R$ 445 mi"
+    },
+    {
+      "label": "DL/EBITDA 2T26",
+      "value": "2,06x (companhia, c/ IFRS-16)",
+      "context": "~3,0x incluindo FIDC (R$ 723 mi) e hedges (R$ 537 mi)"
+    },
+    {
+      "label": "Caixa / dívida bruta",
+      "value": "R$ 2,4 bi / R$ 6,3 bi",
+      "context": "~R$ 3 bi vencem até out/2028"
+    },
+    {
+      "label": "P/L 2027E @R$ 5,62",
+      "value": "~19x (nosso LPA 2027E ~R$ 0,29)",
+      "context": "P/VP 0,61x; PL inclui R$ 10 bi de intangíveis"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Natura — Divulgação de Resultados 2T26 (10/08/2026)",
+      "url": "https://static.poder360.com.br/uploads/2026/08/resultado-natura-2o-tri.pdf"
+    },
+    {
+      "title": "Money Times — Natura prepara mercado para queda de até 10% na receita do 2T26 (08/07/2026)",
+      "url": "https://www.moneytimes.com.br/natura-natu3-prepara-mercado-para-queda-de-ate-10-na-receita-liquida-do-2t26-lmrs/"
+    },
+    {
+      "title": "Mercado & Consumo — Lucro da Natura no 2T26",
+      "url": "https://mercadoeconsumo.com.br/11/08/2026/mc-capital/lucro-da-natura-recua-no-2-trimestre-e-soma-r-35-milhoes/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/NATU3.json)",
+      "url": "https://dados.cvm.gov.br/"
+    }
+  ],
+  "confidence": "baixa-média — perímetro e lucros históricos pouco comparáveis, guidance revisado para baixo, e a classificação de FIFC/hedges como dívida é julgamento nosso (a companhia exclui); trajetória de margem é a principal incerteza."
+}

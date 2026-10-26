@@ -1,0 +1,249 @@
+{
+ "ticker": "RADL3",
+ "name": "RD Saúde (Raia Drogasil S.A.)",
+ "sector": "Varejo farmacêutico",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "RADL3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 41000
+  },
+  "notes": "revenue_2025 = receita líquida FY2025 ex-4Bio (vendida à Profarma; concluída em 04/05/2026), estimada em R$ 41,0 bi: FY2025 CVM R$ 44.250 mi − 4Bio ~R$ 3,25 bi (1S25 4Bio = R$ 1.535 mi pela reapresentação do ITR 2T26; 2S25 estimado). A base CVM FY2025 ainda consolida a 4Bio. Atenção: o fim do ICMS-ST em SP (2026) elevou as deduções (13,4% da receita bruta no 2T26 vs 6,8% no 2T25): receita líquida cresce menos que a bruta (+9,8% vs +18,3% no 2T26) e a margem sobre a líquida sobe mecanicamente. ebitda_margin = EBITDA IFRS-16 (EBIT 3.05 + D&A) MENOS o AVP de compras (~0,55% da RL, ~R$ 65 mi/tri), que a RD lança no resultado financeiro; o mesmo valor foi retirado do custo da dívida → lucro líquido inalterado e FCFF não superestimado (a própria RD deduz o AVP no seu fluxo de caixa). Capex = caixa (~3,1% da RL) + adições de direito de uso (~2,4% da RL)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.104,
+   0.13,
+   0.12,
+   0.11,
+   0.1
+  ],
+  "ebitda_margin": [
+   0.1115,
+   0.1135,
+   0.115,
+   0.116,
+   0.117
+  ],
+  "da_pct_revenue": [
+   0.048,
+   0.048,
+   0.048,
+   0.048,
+   0.048
+  ],
+  "capex_pct_revenue": [
+   0.055,
+   0.055,
+   0.054,
+   0.053,
+   0.052
+  ],
+  "nwc_pct_revenue": 0.13,
+  "cost_of_net_debt": [
+   0.132,
+   0.134,
+   0.13,
+   0.125,
+   0.12
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.19,
+   0.2,
+   0.21,
+   0.21,
+   0.21
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.45,
+   0.45,
+   0.5,
+   0.5,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.055,
+  "roic": 0.17,
+  "roe": 0.24
+ },
+ "wacc": {
+  "kd_pre_tax": 0.14,
+  "target_debt_weight": 0.18
+ },
+ "adjustments": {
+  "other_debt_like": 1106,
+  "non_operating_assets": 776,
+  "minority_value": null,
+  "notes": "other_debt_like = recebíveis descontados R$ 808,9 mi + opções de compra/venda de investidas R$ 16,6 mi − antecipações a fornecedores R$ 25,7 mi (mesma definição da 'dívida líquida ajustada' da RD) + JCP/dividendos declarados a pagar R$ 306,1 mi (já ex). non_operating_assets = recebível da venda da 4Bio R$ 716,4 mi (5 parcelas anuais de R$ 100 mi + CDI) + 50% do direito de DIFAL de ~R$ 127 mi (contingente) ≈ R$ 60 mi."
+ },
+ "target_multiples": {
+  "pe": 15.0,
+  "ev_ebitda": 7.0,
+  "pbv": 3.5,
+  "rationale": "RD historicamente negociou a 30–40x P/L (prêmio de qualidade/crescimento); com Ke 25% usamos 15x P/L 2027E (≈ o que o mercado paga hoje: ~15x) e 7,0x EV/EBITDA IFRS-16 ex-AVP 2027E (pré-eleição ~8,5x; hoje ~6x). Desconto grande vs histórico de propósito, para coerência com a taxa de desconto do estudo."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.006,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "GLP-1 vira commodity (preço −40% sem volume), farmácias em supermercados (Lei 15.357/2026) e marketplaces tomam share; CMED baixo e aberturas com retorno menor."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.004,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "GLP-1 genérico expande o mercado, digital/app ganha escala e a maturação das 25% de lojas imaturas leva a margem pré-IFRS16 para ~8,5% da receita bruta."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.025,
+  "ebitda_margin_sd": 0.005,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.004
+ },
+ "debt_profile": {
+  "gross_debt_mn": 3453,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "CDI+~0,8% (debêntures/CRIs: de 98,5% do CDI a CDI+1,49%; ITR 2T26 nota 16)",
+  "avg_maturity_years": 3.7,
+  "next_24m_maturities_mn": 436,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -22,
+  "notes": "Exposição líquida a CDI ≈ DL ex-arrendamentos R$ 2,8 bi + recebíveis descontados R$ 0,8 bi − recebível 4Bio (indexado ao CDI) R$ 0,7 bi ≈ R$ 2,9 bi → +100 bp ≈ −R$ 29 mi antes de IR, ≈ −R$ 22 mi no lucro (~1,5% do lucro 2027E). 100% da dívida bruta é pós-fixada em CDI. Vencimentos em 24 meses: 4ª (R$ 151 mi, jun/27), 6ª (R$ 130 mi, mar/27) e 8ª-2ª série (R$ 155 mi, set/27). Prazo médio estimado a partir do cronograma (2027–2032). Covenant não verificado (alavancagem 0,8x torna irrelevante)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.171,
+  "ebitda_margin_avg_5y": 0.11,
+  "roe_avg_5y": 0.187,
+  "payout_avg_5y": 0.4,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.098,
+   "ebitda_margin": 0.125,
+   "net_income_mn": 425,
+   "net_debt_ebitda": 1.6
+  },
+  "notes": "CAGR 2020–25 (CVM, com 4Bio) 17,1%; receita bruta ex-4Bio +17%/+18% em 2025/1S26 com GLP-1 e ~330 aberturas/ano. Projetamos 13%→10% (desaceleração do efeito GLP-1, CMED baixo — 2,8% médio em 2026 — e base maior), abaixo do histórico. Margem EBITDA IFRS-16 CVM média 2021–25 = 11,0% sobre RL (com AVP); nossa série ex-AVP (11,2%→11,7%) equivale a ~11,7%→12,3% com AVP, e parte da alta é mecânica (deduções maiores pós-ICMS-ST). ROE médio 18,7%; payout de caixa 2021–25 ~40% (35%→50%). 'revenue_yoy' do 2T26 = RL ex-4Bio vs 2T25 reapresentado (R$ 11.062 vs 10.075 mi); dado CVM bruto mostra +2,1% por comparar com 2T25 original (com 4Bio)."
+ },
+ "guidance": "Reafirmado no 2T26 (04/08/2026): 330–350 aberturas brutas em 2026 (329 nos últimos 12 meses). Sem guidance de margem/lucro. Fim do ICMS-ST em SP deve liberar caixa adicional (recuperação de ICMS-ST sobre estoques).",
+ "dividend_policy": "Distribui JCP trimestralmente + dividendos complementares; mínimo estatutário 25%. No 2T26 anunciou R$ 154,5 mi em JCP e R$ 47,6 mi em dividendos. Pagos em caixa: R$ 466 mi (2023), R$ 475 mi (2024), R$ 653 mi (2025) — 40–50% do lucro. Recompras pontuais (R$ 73 mi em 2021 e 2024).",
+ "election_impact": "Queda de ~27% com fundamentos pouco afetados: alavancagem baixa (0,8x DL ajustada/EBITDA pré-IFRS16; dívida 100% CDI de só R$ 3,5 bi) → +100 bp no CDI custa ~1,5% do lucro. O canal é de múltiplo/beta (ação de duration longa — negociava ~20x P/L 2027E pré-eleição) e de fluxo estrangeiro. Micro de um 4º mandato: Farmácia Popular ampliado (gratuidade) e renda das classes C/D (salário mínimo, isenção de IR até R$ 5 mil) sustentam volume de genéricos/crônicos; CMED segue fórmula legal (reajuste médio 2,8% em 2026) — risco de reajustes abaixo da inflação é regulatório, não eleitoral novo; câmbio mais alto pressiona custo dos laboratórios, não da RD diretamente. Risco estrutural já em curso: Lei 15.357/2026 autoriza farmácias em supermercados (Assaí abriu as primeiras em jul/26).",
+ "summary": "Líder absoluta do varejo farma (3.687 farmácias, 19,7% de share nacional, R$ 12,8 bi de receita bruta no 2T26, +18%) com balanço folgado e alta conversão de caixa. A R$ 14,85 negocia ~15x P/L 2027E — pela primeira vez em muitos anos perto de um múltiplo 'normal' —, mas com Ke 25% o crescimento de ~12% a.a. ainda não basta para fechar a conta sem expansão de múltiplo. TIR implícita ~12% hoje (≈10,7% pré-eleição): a queda foi de múltiplo, não de fundamento.",
+ "thesis": [
+  "Crescimento estrutural: MSSS de lojas maduras +10,9% no 2T26 (8,1 p.p. acima do CMED), market share +1,7 p.p. a/a, digital 31% das vendas.",
+  "Balanço: DL ajustada R$ 3,0 bi (0,8x), FCF positivo de R$ 550 mi no 2T26; queda da ação é de múltiplo, não de solvência.",
+  "Alavancas de margem: 25% das lojas ainda em maturação, diluição de despesas e fim do ICMS-ST em SP (caixa)."
+ ],
+ "risks": [
+  "Margem bruta pressionada pelo mix de GLP-1 (margem estruturalmente menor) e AVP/juros; CMED baixo reduz ganho de estoque.",
+  "Concorrência nova: farmácias em supermercados (Lei 15.357/2026), apps/marketplaces; queda de preço de semaglutida genérica.",
+  "Ke 25% vs crescimento de 10–13%: valor depende do múltiplo terminal; ação ainda cara para a meta do usuário."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (data não verificada; RD costuma divulgar no fim de out/início de nov).",
+  "Ritmo de aberturas 2027 (guidance anual) e eventual aumento de payout/recompra dado o balanço."
+ ],
+ "key_data": [
+  {
+   "label": "Receita bruta 2T26",
+   "value": "R$ 12.778 mi (+18,3%)",
+   "context": "MSSS +10,9%; CMED médio 2026 2,8%"
+  },
+  {
+   "label": "EBITDA aj. pré-IFRS16 2T26",
+   "value": "R$ 1.017 mi (8,0% da RB)",
+   "context": "IFRS-16 R$ 1.377 mi (10,8% da RB; 12,4% da RL)"
+  },
+  {
+   "label": "Lucro líquido aj. 2T26",
+   "value": "R$ 433 mi (+7,4%)",
+   "context": "ex-4Bio R$ 424 mi (+23,4%)"
+  },
+  {
+   "label": "DL ajustada / EBITDA LTM",
+   "value": "0,8x",
+   "context": "R$ 3,0 bi; arrendamentos IFRS-16 R$ 5,1 bi à parte"
+  },
+  {
+   "label": "Farmácias",
+   "value": "3.687",
+   "context": "76 aberturas no 2T26; guidance 330–350/ano"
+  },
+  {
+   "label": "Preço 26/10 11h55",
+   "value": "R$ 14,85 (−27%)",
+   "context": "pré-eleição R$ 20,28; mkt cap ~R$ 26 bi"
+  }
+ ],
+ "sources": [
+  {
+   "title": "RD Saúde — Release de Resultados 2T26 (04/08/2026)",
+   "url": "https://ri.rdsaude.com.br/Download.aspx?Arquivo=mkRRUYR4kE+VDWWbKdYBJw=="
+  },
+  {
+   "title": "RD Saúde — ITR 2T26 (nota 16 debêntures; nota 1.1 venda 4Bio)",
+   "url": "https://ri.rdsaude.com.br/Download.aspx?Arquivo=wfRMyWSZ5liKyXUKquKv6w=="
+  },
+  {
+   "title": "InfoMoney — RD sobe após 2T26 (GLP-1)",
+   "url": "https://www.infomoney.com.br/mercados/radl3-rd-saude-salta-5-apos-2t-com-boa-execucao-em-todas-as-frentes-e-destaque-para-glp-1/"
+  },
+  {
+   "title": "Money Times — venda da 4Bio por R$ 600 mi",
+   "url": "https://www.moneytimes.com.br/rd-saude-radl3-anuncia-venda-da-4bio-por-r-600-milhoes-veja-detalhes-da-operacao-igdl/"
+  },
+  {
+   "title": "Money Times — Safra vs Citi sobre RD",
+   "url": "https://www.moneytimes.com.br/raia-drogasil-radl3-por-que-o-safra-aposta-em-alta-de-39-enquanto-o-citi-ve-queda-no-horizonte-ceci/"
+  },
+  {
+   "title": "CVM — ITR/DFP padronizados (data/hist/RADL3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média-alta — dados do release/ITR 2T26 conferidos; incerteza na base FY2025 ex-4Bio (estimada) e na normalização da margem pós-ICMS-ST e pós-GLP-1."
+}

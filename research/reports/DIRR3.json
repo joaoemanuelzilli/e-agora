@@ -1,0 +1,160 @@
+{
+  "ticker": "DIRR3",
+  "headline": "A Direcional caiu 22,6% e negocia a 4,9x o lucro 2027E — com o P/L UDM 2,2 desvios-padrão abaixo da média de 5 anos —, ROE de 40% e a marca principal no centro do MCMV ampliado.",
+  "verdict": "A R$ 8,74 (preço de referência do estudo às ~12h55 de 26/10/2026), a TIR de dono é de 21,8% e o valor justo de R$ 9,08 (+4%): entra no ranking pela TIR acima de 20%, pelo balanço sólido (Altman 6,6; DL/EBITDA 0,23x) e por múltiplos em mínimas históricas, não por grande desconto ao valor justo. A probabilidade de valor acima do preço é de 57% no Monte Carlo; é um caso de carry (DY projetado de 7–14%) mais do que de reprecificação.",
+  "reasons": [
+    {
+      "title": "Marca Direcional no centro do MCMV",
+      "body": "A marca Direcional atua nas Faixas 1–3 em todo o país e se beneficia diretamente da continuidade com Lula: Portaria MCID 333/2026 (renda F1 R$ 3.200, F2 R$ 5.000, F3 R$ 9.600; teto F3 R$ 400 mil) e Conselho Curador do FGTS (descontos 2026 elevados de R$ 12,5 bi para R$ 13 bi em 10/09/2026; habitação R$ 144,5 bi). O teto da Faixa 3 subiu de R$ 350 mil para R$ 400 mil, ampliando o ticket elegível.",
+      "metric": {
+        "label": "Teto da Faixa 3",
+        "value": "R$ 400 mil (+14%)"
+      }
+    },
+    {
+      "title": "Rentabilidade de primeira linha",
+      "body": "ROE UDM de 40% (CVM) e de 35% anualizado no 2T26; margem bruta ajustada de 42,8% e receita +20,1% a/a no 2T26 (release, 11/08/2026); geração de caixa operacional de R$ 228 mi no 3T26 (prévia de 14/10).",
+      "metric": {
+        "label": "ROE UDM (CVM)",
+        "value": "40%"
+      }
+    },
+    {
+      "title": "Múltiplos nas mínimas de 5 anos",
+      "body": "P/L UDM de 5,4x contra média de 5 anos de 11,8x e EV/EBITDA de 4,2x contra 7,6x (série mensal B3/CVM), ambos no percentil 0. Ao preço de referência, P/L 2027E de 4,9x.",
+      "metric": {
+        "label": "P/L UDM vs média 5 anos",
+        "value": "5,4x vs 11,8x"
+      }
+    },
+    {
+      "title": "Retorno ao acionista elevado",
+      "body": "Pagou R$ 1,56 bi em dividendos em 2025 (DFC/CVM), incluindo R$ 1,55/ação em 23/12/2025 (B3), e aprovou em 11/08/2026 recompra de até 32 mi ações (~6% do capital). Com payout de 40% em 2026 e 60–65% depois, o DY projetado é de 7,4%, 12,2% e 14,3% em 2026–28.",
+      "metric": {
+        "label": "DY projetado 2027E (a R$ 8,74)",
+        "value": "12,2%"
+      }
+    },
+    {
+      "title": "Balanço sólido",
+      "body": "Dívida líquida CVM de R$ 291 mi (0,23x o EBITDA UDM; DL/PL de 18% pela companhia), Altman Z de 6,59 (zona segura) e cobertura de juros de 2,5x.",
+      "metric": {
+        "label": "DL/EBITDA UDM (CVM)",
+        "value": "0,23x"
+      }
+    },
+    {
+      "title": "Riva tem valor de referência transacionado",
+      "body": "A venda dos 5% remanescentes da Riva à Riza por R$ 151 mi (anunciada em out/2025, Suno) implica a Riva (100%) em ≈R$ 3,0 bi — cerca de 2/3 do valor de mercado da Direcional inteira (R$ 4,54 bi ao preço de referência), sem contar a marca Direcional.",
+      "metric": {
+        "label": "Valor implícito da Riva (100%)",
+        "value": "≈R$ 3,0 bi"
+      }
+    }
+  ],
+  "statistics": [
+    {
+      "title": "A queda foi beta, não fundamento",
+      "body": "DIRR3 caía 22,6% na foto do estudo contra −23,6% previstos pelo beta de baixa (1,63): resíduo de +1,0 p.p. (z = +0,5), estatisticamente nulo. No modelo multifator do pregão (147 ações, R² = 0,71), a previsão era −32,9%: resíduo de +10,3 p.p. Não há sinal de que o mercado tenha revisto a empresa — foi repricing de risco.",
+      "stat": "resíduo vs beta +1,0 p.p. (z = +0,5)"
+    },
+    {
+      "title": "Múltiplos: os z-scores mais baixos do grupo",
+      "body": "P/L de 5,44x com z = −2,25 e EV/EBITDA de 4,2x com z = −2,78 na série de 5 anos (percentil 0). O P/VP (2,0x) está abaixo da média de 5 anos (2,36x; z = −0,50). O DY trailing de 27,9% (z = +3,4) é inflado pela distribuição extraordinária de reservas em 2025.",
+      "stat": "z(P/L, 5a) = −2,25; z(EV/EBITDA, 5a) = −2,78"
+    },
+    {
+      "title": "Monte Carlo equilibrado",
+      "body": "Em 5.000 simulações, o valor fica entre R$ 6,94 (p10) e R$ 11,60 (p90), mediana R$ 9,05; 57% dos cenários superam R$ 8,74. É a menor probabilidade das três do ranking — o retorno vem do fluxo, não do desconto.",
+      "stat": "P(valor > R$ 8,74) = 57%; p10–p90 R$ 6,94–11,60"
+    },
+    {
+      "title": "DCF reverso: preço ≈ base",
+      "body": "O preço de R$ 8,74 embute crescimento de receita de 8,7% a.a. em 2026–30, pouco abaixo dos 10,2% da base (CAGR histórico 2020–25: 23,7%). Não há otimismo no preço, nem pessimismo extremo.",
+      "stat": "crescimento implícito 8,7% a.a. vs 10,2% na base"
+    },
+    {
+      "title": "Sensibilidade e assimetria",
+      "body": "O valor vai de R$ 11,35 (Ke 20%) a R$ 7,70 (Ke 30%); com −4 p.p. de crescimento e −3 p.p. de margem, R$ 6,93. Bear (25%) R$ 6,94 (−21%), bull (20%) R$ 10,34 (+18%); ponderado R$ 8,79 (+1%) — assimetria neutra.",
+      "stat": "bear −21% / bull +18%"
+    },
+    {
+      "title": "Crashes anteriores",
+      "body": "Nos 7 dias de crash com histórico (6 em fev–mar/2020), DIRR3 teve retorno mediano de +11,4% em 12 meses contra +34,8% do IBOV; no Joesley Day (18/05/2017) caiu 19,4% no dia e subiu 21,7% em 12 meses (IBOV +28,1%). Após as eleições de Lula de 2002 e 2006 o IBOV subiu 88% e 63% em 12m; após 2022, 1,8%.",
+      "stat": "12m após crash: mediana +11,4% (n = 7) vs IBOV +34,8%"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Riva (média renda) sensível a juros",
+      "body": "Vendas da Riva caíram 13,3% a/a no 2T26 (R$ 590 mi de R$ 1,66 bi) com VSO de 21%; com DI longo a ~15,7%, SBPE e Faixa 4 ficam mais caros.",
+      "mitigant": "A marca Direcional (MCMV F1–F3) cresceu 6,8% a/a no 2T26 e responde por ~2/3 das vendas."
+    },
+    {
+      "title": "3T26 comercial fraco",
+      "body": "Vendas líquidas de R$ 1,3 bi no 3T26, 21% abaixo da estimativa da Genial, VSO líquida de 19% e distratos de 16–21% das vendas brutas.",
+      "mitigant": "8 dos 10 lançamentos ocorreram após 15/09 — as vendas devem aparecer no 4T26; geração de caixa operacional de R$ 228 mi no trimestre."
+    },
+    {
+      "title": "Cessões e custo financeiro em CDI",
+      "body": "Passivo de cessão de R$ 1,26 bi e dívida bruta de R$ 3,0 bi (CVM 2T26); tratadas como dívida, as cessões reduziriam o valor em ≈R$ 2,4/ação.",
+      "mitigant": "Os recebíveis cedidos permanecem no ativo (compensam o passivo); DL/PL de 18% pela companhia."
+    },
+    {
+      "title": "Payout acima da geração de caixa",
+      "body": "Em 2025 distribuiu 198% do LL (R$ 1,56 bi) e captou R$ 2,57 bi de dívida nos últimos 12 meses (DFC/CVM).",
+      "mitigant": "Nenhum dividendo declarado em 2026 até 26/10 (B3); o modelo assume payout de 40% em 2026 e a recompra é discricionária."
+    },
+    {
+      "title": "FGTS 2027–29 e INCC",
+      "body": "Plurianual do FGTS com habitação nominal estável/menor (R$ 144,5 bi em 2027; R$ 139,5 bi em 2028–29) e INCC de mão de obra +7,6% em 12m.",
+      "mitigant": "Tetos e faixas de renda maiores desde abr/2026 sustentam preço; piso de descontos de R$ 12,5 bi para 2027."
+    }
+  ],
+  "monitor": [
+    {
+      "kpi": "Vendas líquidas e VSO (prévia operacional)",
+      "threshold": "Vendas líquidas abaixo de R$ 1,3 bi pelo 2º trimestre seguido ou VSO líquida abaixo de 18%",
+      "next": "Prévia 4T26 — janeiro/2027"
+    },
+    {
+      "kpi": "Margem bruta ajustada",
+      "threshold": "Abaixo de 40% (2T26: 42,8%)",
+      "next": "Resultado 3T26 — novembro/2026"
+    },
+    {
+      "kpi": "Vendas da Riva",
+      "threshold": "Queda acima de 15% a/a pelo 2º trimestre seguido",
+      "next": "Prévia 4T26 — janeiro/2027"
+    },
+    {
+      "kpi": "Alavancagem (DL + cessões)/PL",
+      "threshold": "DL/PL da companhia acima de 30% (2T26: 18%) para financiar proventos",
+      "next": "Resultado 3T26 — novembro/2026"
+    },
+    {
+      "kpi": "Orçamento FGTS 2027–29",
+      "threshold": "Descontos de 2027 abaixo de R$ 12,5 bi",
+      "next": "Conselho Curador — fim de outubro/2026"
+    }
+  ],
+  "catalysts": [
+    {
+      "date": "fim de out/2026",
+      "event": "Conselho Curador do FGTS define orçamento e descontos 2027–29"
+    },
+    {
+      "date": "nov/2026",
+      "event": "Resultado do 3T26"
+    },
+    {
+      "date": "dez/2026",
+      "event": "Possível declaração de dividendos (padrão de dez/2025)"
+    },
+    {
+      "date": "até fev/2028",
+      "event": "Execução da recompra de até 32 mi ações"
+    }
+  ],
+  "bottom_line": "Para quem busca carry de dividendos com risco de balanço baixo: a ~R$ 8,7, a TIR de ~22% vem do fluxo de caixa, não de reprecificação; a tese depende de as vendas voltarem a ~R$ 1,6 bi por trimestre e de a Riva estabilizar."
+}

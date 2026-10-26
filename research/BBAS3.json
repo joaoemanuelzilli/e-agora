@@ -1,0 +1,209 @@
+{
+ "ticker": "BBAS3",
+ "name": "Banco do Brasil S.A.",
+ "sector": "Financeiro / Banco múltiplo — estatal federal (União ~50%)",
+ "template": "financial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "BBAS3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override. Lucro CVM (contábil consolidado) é bem menor que o 'lucro ajustado' gerencial: 2T26 CVM R$ 2.398 mi vs contábil do release R$ 3.175 mi vs ajustado R$ 3.900 mi; FY2025 CVM R$ 13.698 mi vs ajustado ≈ R$ 20,6 bi (1T25 ~7,3 + 2T25 ~3,8 + 3T25 ~3,8 + 4T25 ~5,7, derivado das variações publicadas). As premissas de ROE são sobre lucro AJUSTADO e PL CVM (consistente: 2T26 ajustado anualizado / PL médio CVM = 8,3% = RSPL reportado). Payout aplicado sobre o ajustado."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   0.3,
+   0.3,
+   0.35,
+   0.4,
+   0.4
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.089,
+   0.11,
+   0.125,
+   0.135,
+   0.14
+  ],
+  "ni_growth": null,
+  "payout": [
+   0.3,
+   0.3,
+   0.35,
+   0.4,
+   0.4
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roe": 0.14
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Banco: sem ponte EV→equity."
+ },
+ "target_multiples": {
+  "pe": 5.0,
+  "ev_ebitda": null,
+  "pbv": 0.6,
+  "rationale": "P/VP 0,60x e P/L 5,0x. Referências: em mai/26 o BB negociava ~6x o lucro 2026E do guidance revisado (XP) e a Genial projetava P/VP < 1x por mais tempo com ROE ~10%; preço de R$ 24,72 na sexta = ~0,76x o PL CVM; hoje 0,52x. Com ROE normalizado de 13–14% (abaixo da média ajustada 2021–25 de ~18% por risco de intervenção e Res. 4.966) e Ke de mercado ~19–20%, 0,60x é o múltiplo de saída coerente; P/L 5x é o piso histórico típico de estatal (estimativa, não verificada)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Intervenção (spreads/crédito direcionado, renegociações sem contrapartida) + agro/PF sem normalizar: ROE 8–11% até 2030."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.025,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Renegociação MP 1.376/26 limpa o agro e PF normaliza em 2027: ROE volta a 15–16%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.025,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "n/a (banco: captação é passivo operacional; ver Basileia/LCR)",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": null,
+  "notes": "Sensibilidade oficial não localizada. Qualitativo: MFB do BB se beneficia de Selic alta (tesouraria R$ 8,9 bi no 1T26, +23% a/a; captação barata) mas o custo do crédito sobe (R$ 18,5 bi no 2T26, +16% a/a). Choque de hoje (+300 bp no DI longo) tende a gerar marcação negativa de títulos a valor justo no PL/capital (não quantificado) — risco para CET1 de 11,27% e para o payout."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.086,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.146,
+  "payout_avg_5y": 0.54,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": null,
+   "ebitda_margin": null,
+   "net_income_mn": 3900,
+   "net_debt_ebitda": null
+  },
+  "notes": "revenue_cagr_5y aqui = CAGR do PL controlador CVM 2020–25 (8,6%). ROE CVM 2021–25: 13,7/18,4/18,2/15,1/7,4% (média 14,6%); ROE ajustado médio ~18% (2022–24 ~21%). Payout CVM (caixa/contábil) 39–68%; payout declarado caiu para 30% em 2025. Projeção: 2026E LL ajustado R$ 16,8 bi (1S26 R$ 7,3 bi + 2S26E R$ 9,5 bi) — ABAIXO do guidance revisado R$ 18–22 bi; 2027 R$ 22,1 bi (ROE ~10,6% s/ PL médio), 2030 R$ 35,4 bi (13,4%). Abaixo da média histórica por intervenção, Res. 4.966 e crédito."
+ },
+ "guidance": "Guidance 2026 (fev/26): LL ajustado R$ 22–26 bi; carteira +0,5% a +4,5%; MFB +4% a +8%; custo do crédito R$ 53–58 bi. Revisado em 13/05/2026: LL ajustado R$ 18–22 bi; custo do crédito R$ 65–70 bi; MFB +7% a +11%. Mantido no 2T26 (13/08/26). 1S26 realizado: LL ajustado R$ 7,3 bi; custo do crédito R$ 37,4 bi. BTG vê nova revisão 'questão de tempo'. 3T26 em 11/11/2026.",
+ "dividend_policy": "Payout reduzido para 30% em 2025 (de ~40–45% em 2022–24) para preservar capital; JCP trimestral (1T26 ~R$ 465,7 mi aprovados; 2T26 JCP complementar R$ 584,9 mi). Payout 2026 oficial não confirmado nesta rodada — assumo 30% em 2026–27, 35% em 2028 e 40% em 2029–30 (premissa sinalizada). Restrição: CET1 11,27% (2T26) vs 12,23% em dez/25; Basileia 13,91%.",
+ "election_impact": "−31% (R$ 24,72→17,01; market cap ~R$ 141 bi→~R$ 97 bi; P/VP 0,76x→0,52x). Parte é o mesmo de-rating do setor, parte é risco estatal específico de um 4º mandato: (i) crédito direcionado/renegociações (MP 1.376/26: até R$ 100 bi do agro para 113 mil clientes, sendo R$ 36,7 bi vencidos); (ii) pressão por spreads menores — cada 2 pp de corte em 20% da carteira (R$ 1,31 tri) ≈ −R$ 5,2 bi/ano antes de IR (~−2 pp de ROE); (iii) cada +1 pp de custo de crédito no agro (R$ 418 bi) ≈ −R$ 4,2 bi/ano antes de IR (~−1,5 pp ROE); (iv) payout baixo para preservar capital. Precedente Dilma (CVM): ROE 17,0% em 2015 → 8,3% em 2016. Na margem, a queda de hoje equivale a precificar ROE de longo prazo ~3,5 pp menor (Gordon com Ke constante) — próximo do que modelo (14% terminal vs ~18% médio ajustado 2021–25).",
+ "summary": "BB está no fundo do ciclo de crédito (RSPL 8,3% no 2T26, inadimplência 5,61%, agro 6,27%, PF 8,41%) e agora soma risco de intervenção num 4º mandato. A ~0,53x PL e ~4,5x P/L 2027E parece barato, mas com Ke de 25% e ROE normalizado de ~14% o P/VP justo é ~0,45x: preço perto do justo (TIR implícita ~20–21%); TIR 3 anos ~32% só se o ROE normalizar para ~13% e o múltiplo voltar a 5x P/L — aposta binária na normalização do agro/PF e na ausência de intervenção.",
+ "thesis": [
+  "Lucro já em recuperação: LL ajustado R$ 3,9 bi no 2T26 (+13,9% t/t, acima do consenso de R$ 3,6 bi); formação de inadimplência agro caiu de R$ 7,18 bi para R$ 5,72 bi.",
+  "Renegociação com apoio do governo (MP 1.376/26, até R$ 100 bi) e 70% das novas operações do Plano Safra com alienação fiduciária.",
+  "Valuation: ~0,52–0,54x PL CVM e ~4,5x P/L 2027E (R$ 22 bi); cada 1 pp de ROE normalizado vale ~R$ 10 bi de valor a Ke 25% (0,05x PL)."
+ ],
+ "risks": [
+  "Intervenção estatal (spreads, crédito direcionado, renegociações, governança) — maior risco num 4º mandato.",
+  "Ciclo de crédito migrando para PF (inadimplência 8,41%, +159 bp t/t) e MPME (9,73%); Selic mais alta por mais tempo.",
+  "Capital: CET1 11,27% caindo (12,23% em dez/25) + marcação de títulos com a curva de hoje → payout pode ficar em 30% ou menos.",
+  "Credibilidade do guidance (revisado cinco vezes desde 1T25, segundo JPMorgan)."
+ ],
+ "catalysts": [
+  "Resultado 3T26 em 11/11/2026 (custo do crédito e guidance).",
+  "Execução da MP 1.376/26 (renegociação agro).",
+  "Sinalização de payout 2027 e de diretrizes do governo para o BB no novo mandato."
+ ],
+ "key_data": [
+  {
+   "label": "LL ajustado 2T26",
+   "value": "R$ 3,9 bi (+3,3% a/a)",
+   "context": "Contábil R$ 3,175 bi; 1S26 R$ 7,3 bi (−34% a/a)"
+  },
+  {
+   "label": "RSPL 2T26",
+   "value": "8,3%",
+   "context": "1T26 7,3%; 2T25 8,4%"
+  },
+  {
+   "label": "Inadimplência +90 2T26",
+   "value": "5,61%",
+   "context": "PF 8,41%; agro 6,27%; PJ 3,18%"
+  },
+  {
+   "label": "Custo do crédito 2T26",
+   "value": "R$ 18,5 bi",
+   "context": "Guidance 2026 R$ 65–70 bi"
+  },
+  {
+   "label": "CET1 / Basileia 2T26",
+   "value": "11,27% / 13,91%",
+   "context": "Dez/25 CET1 12,23%"
+  },
+  {
+   "label": "Guidance LL ajustado 2026",
+   "value": "R$ 18–22 bi",
+   "context": "Revisado em mai/26 (de R$ 22–26 bi); minha estimativa R$ 16,8 bi"
+  },
+  {
+   "label": "Preço / P/VP",
+   "value": "R$ 17,01 / 0,52x",
+   "context": "Sexta R$ 24,72 (0,76x)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Forbes Brasil/Reuters — Lucro do Banco do Brasil no 2º tri de 2026",
+   "url": "https://forbes.com.br/forbes-money/2026/08/lucro-banco-do-brasil-2o-trimestre-2026/"
+  },
+  {
+   "title": "Investidor10 — BBAS3 cai após balanço do 2T26 (13/08/2026)",
+   "url": "https://investidor10.com.br/noticias/banco-do-brasil-bbas3-cai-apos-balanco-do-2t26-com-piora-da-inadimplencia-122033/"
+  },
+  {
+   "title": "InfoMoney — BB: em 1º tri de decepções, pior notícia veio do guidance (14/05/2026)",
+   "url": "https://www.infomoney.com.br/mercados/banco-do-brasil-bbas3-em-novo-tri-de-decepcoes-pior-noticia-veio-do-guidance-cautela-mercado-desempenho-acoes/"
+  },
+  {
+   "title": "BP Money — BB lucra R$ 3,4 bi no 1T26 e revê guidance (13/05/2026)",
+   "url": "https://bpmoney.com.br/negocios/empresas/banco-do-brasil-bbas3-lucra-r-34-bilhoes-no-1t26-e-reve-guidance-para-2026/"
+  },
+  {
+   "title": "Seu Dinheiro — Calendário de balanços do 3T26 (19/10/2026)",
+   "url": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação ao vivo (API oficial), 26/10/2026",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/"
+  }
+ ],
+ "confidence": "baixa-média — dados de 2T26 secundários (Reuters/Forbes, InfoMoney) mas consistentes; payout 2026 e sensibilidade de capital não confirmados; o valor depende de variável política (intervenção) difícil de quantificar."
+}

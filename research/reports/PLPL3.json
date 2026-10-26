@@ -1,0 +1,155 @@
+{
+  "ticker": "PLPL3",
+  "headline": "A R$ 5,68, a Plano&Plano negocia a 1,0x o valor patrimonial e 3,7x o lucro 2027E, e o preço embute receita caindo ~7% ao ano até 2030 — num MCMV que acabou de ser ampliado e ganhou quatro anos de continuidade com Lula.",
+  "verdict": "Entra no ranking pela combinação de preço e probabilidade: TIR de dono de 25,4% (acima do Ke de 25%), valor justo de R$ 6,94 (+22% sobre R$ 5,68, preço de referência do estudo às ~12h55 de 26/10/2026) e 77% de probabilidade de o valor superar o preço em 5.000 simulações. É, porém, a tese de maior risco micro do grupo: a margem bruta já caía antes da eleição (−4,8 p.p. a/a no 2T26) e o Piotroski é 2/9 — o retorno depende de a margem convergir à do backlog (37,5%).",
+  "reasons": [
+    {
+      "title": "MCMV ampliado sustenta volume e preço",
+      "body": "A Plano&Plano é focada em habitação econômica (MCMV) na RMSP. O 4º mandato mantém o programa-símbolo do PT: Portaria MCID 333/2026 (renda F1 R$ 3.200, F2 R$ 5.000, F3 R$ 9.600; teto F3 R$ 400 mil) e Conselho Curador do FGTS (descontos 2026 elevados de R$ 12,5 bi para R$ 13 bi em 10/09/2026; habitação R$ 144,5 bi). Faixas e tetos maiores ampliam a base de compradores e permitem repassar parte do INCC (6,6% em 12m, FGV).",
+      "metric": {
+        "label": "Descontos (subsídio) FGTS ao MCMV em 2026",
+        "value": "R$ 13 bi"
+      }
+    },
+    {
+      "title": "Preço embute contração, não crescimento",
+      "body": "No DCF reverso (motor do estudo, Ke 25%), o preço de R$ 5,68 só se justifica com receita caindo 6,7% a.a. em 2026–30, contra +6,4% a.a. na nossa base — que já é ~1/5 do CAGR histórico de 29,5% (CVM, 2020–25).",
+      "metric": {
+        "label": "Crescimento de receita implícito no preço",
+        "value": "−6,7% a.a."
+      }
+    },
+    {
+      "title": "Múltiplos no piso histórico",
+      "body": "P/VP de 1,03x contra média de 5 anos de 2,85x e P/L UDM de 3,8x contra 7,3x (série mensal de múltiplos, B3/CVM). O valor de mercado (R$ 1,15 bi) é praticamente o patrimônio líquido de R$ 1,12 bi da controladora (CVM 2T26).",
+      "metric": {
+        "label": "P/VP atual vs média 5 anos",
+        "value": "1,03x vs 2,85x"
+      }
+    },
+    {
+      "title": "Backlog com margem acima da corrente",
+      "body": "A margem do resultado a apropriar (REF) é de 37,5% contra margem bruta ajustada de 29,7% no 2T26 (release/imprensa, 13/08/2026): o problema está concentrado nas safras de 2024 (Safra) e nos projetos Pode Entrar (19,9%). O modelo só assume volta parcial (margem EBITDA ex-juros de 14% em 2026 para 16,5% em 2029, abaixo da média 5a de 15,5% + 2 p.p. de juros).",
+      "metric": {
+        "label": "Margem REF vs margem bruta ajustada 2T26",
+        "value": "37,5% vs 29,7%"
+      }
+    },
+    {
+      "title": "Balanço não é o problema",
+      "body": "Dívida líquida CVM de R$ 183 mi (0,38x o EBITDA UDM; 13,4% do PL pela companhia), cobertura de juros de 3,3x e Altman Z de 8,9 (zona segura). A queima de caixa do 1S26 é de capital de giro, não de solvência.",
+      "metric": {
+        "label": "Altman Z",
+        "value": "8,9 (segura)"
+      }
+    },
+    {
+      "title": "Lucro baixo ainda paga o preço rápido",
+      "body": "Mesmo com LL 2026E de R$ 269 mi no modelo (abaixo dos R$ 305 mi UDM da CVM e dos R$ 397 mi do Santander), o P/L 2027E é 3,7x e o dividend yield projetado é de 7,0%, 9,4% e 14,5% em 2026–28 ao preço de R$ 5,68 (payout de 30% subindo a 45%).",
+      "metric": {
+        "label": "P/L 2027E",
+        "value": "3,7x"
+      }
+    }
+  ],
+  "statistics": [
+    {
+      "title": "A queda vs. beta e vs. fatores",
+      "body": "Na foto do estudo, PLPL3 caía 33,0% contra −24,9% previstos pelo beta de baixa (1,72): resíduo de −8,1 p.p., z = −3,0 — a maior parte é beta, mas houve componente idiossincrático. No modelo multifator do pregão (147 ações; beta, alavancagem, tamanho e setor; R² = 0,71), a queda prevista era −36,5%: resíduo de +3,6 p.p., i.e., o excesso é explicado por ser small cap de beta alto, não por notícia nova.",
+      "stat": "resíduo vs beta −8,1 p.p. (z = −3,0); vs multifator +3,6 p.p."
+    },
+    {
+      "title": "Múltiplos ~1,4–1,9 desvio-padrão abaixo da média",
+      "body": "Contra a série mensal de 5 anos, o P/VP de 1,03x tem z = −1,89 (percentil 2%), o EV/EBITDA de 2,95x tem z = −1,40 (percentil 3%) e o P/L de 3,77x tem z = −1,38 (percentil 5%).",
+      "stat": "z(P/VP, 5a) = −1,89; percentil 2%"
+    },
+    {
+      "title": "Monte Carlo favorável, mas com cauda",
+      "body": "Em 5.000 simulações (DP de 5 p.p. no crescimento, 2 p.p. na margem e 0,75 p.p. no g; correlação crescimento×margem 0,5), o valor fica entre R$ 4,95 (p10) e R$ 9,34 (p90), mediana R$ 6,92; 77% dos cenários superam R$ 5,68.",
+      "stat": "P(valor > R$ 5,68) = 77%; p10–p90 R$ 4,95–9,34"
+    },
+    {
+      "title": "DCF reverso: o mercado precifica encolhimento",
+      "body": "Mantidas margens e demais premissas, o preço de R$ 5,68 exige deslocamento de −13,1 p.p. no crescimento anual, ou seja, receita caindo 6,7% a.a. até 2030 — cenário pior que o de 2021–22 da própria empresa, quando a receita cresceu 17–41% a.a.",
+      "stat": "crescimento implícito −6,7% a.a. vs +6,4% na base"
+    },
+    {
+      "title": "Sensibilidade e assimetria",
+      "body": "O valor varia de R$ 8,84 (Ke 20%) a R$ 5,77 (Ke 30%); a margem pesa mais: −3 p.p. de margem levam o valor a R$ 4,92. Cenário bear (30% de probabilidade) vale R$ 4,71 (−17%), bull (20%) R$ 8,75 (+54%); valor ponderado R$ 6,63 (+17%).",
+      "stat": "bear −17% / bull +54%; ponderado +17%"
+    },
+    {
+      "title": "Histórico de crashes e eleições (Ibovespa)",
+      "body": "A PLPL3 não tem dias de crash do IBOV no seu histórico (IPO em set/2020, depois do choque da Covid). No índice, após os 62 dias com queda ≥ 5% desde 1998, o retorno nominal em 12 meses teve mediana de +55,9% e foi positivo em 87% dos casos; após as eleições de Lula em 2002 e 2006 o IBOV subiu 88% e 63% em 12 meses, mas após 2022 só 1,8%.",
+      "stat": "IBOV 12m após quedas ≥ 5%: mediana +56% (87% positivas; n = 62)"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Deterioração micro já em curso",
+      "body": "Antes da eleição a ação já caía 45% em 12 meses: margem bruta ajustada de 29,7% (−4,8 p.p. a/a), LL atribuível de R$ 53 mi no 2T26 (−37% a/a), queima de caixa de R$ 94,5 mi no trimestre (CFO UDM −R$ 88 mi, CVM) e Piotroski 2/9; o BTG alertou para cortes relevantes de estimativas 2026–27.",
+      "mitigant": "O modelo já incorpora LL 2026E 26% abaixo do de 2025 e margem abaixo da média histórica; a margem REF de 37,5% dá colchão. Sinal de alerta: margem bruta ajustada abaixo de 28% no 3T26."
+    },
+    {
+      "title": "Custo de obra e câmbio",
+      "body": "INCC-M 12m de 6,61% (mão de obra 7,63%) e dólar +9,5% no dia pressionam as obras das safras 2024 ainda em execução.",
+      "mitigant": "Tetos maiores do MCMV (F3 +14%) e o comitê de margem/redução de descontos anunciados pela empresa permitem repasse parcial."
+    },
+    {
+      "title": "Pode Entrar e concentração em São Paulo",
+      "body": "Projetos do Pode Entrar (prefeitura de SP) rodam com margem de 19,9% e a operação é concentrada na RMSP.",
+      "mitigant": "Entrada em Goiânia e landbank de R$ 34,5 bi (1T26) permitem selecionar projetos de maior margem."
+    },
+    {
+      "title": "Liquidez e volatilidade",
+      "body": "ADTV de R$ 20,7 mi, volatilidade anual de 55,7%, beta de baixa de 1,72 e drawdown máximo de −80,5% desde o IPO (set/2020).",
+      "mitigant": "Liquidez limita o tamanho da posição, não o valor; dimensionar a posição para suportar −30% adicionais."
+    },
+    {
+      "title": "FGTS 2027–29 e fiscal",
+      "body": "O plurianual do FGTS prevê habitação de R$ 144,5 bi em 2027 e R$ 139,5 bi em 2028–29 (queda nominal); o Conselho revisa no fim de out/26.",
+      "mitigant": "Piso de descontos de R$ 12,5 bi para 2027 sinalizado pelo Ministério das Cidades; o MCMV é prioridade declarada do governo reeleito."
+    }
+  ],
+  "monitor": [
+    {
+      "kpi": "Margem bruta ajustada (release)",
+      "threshold": "Abaixo de 28% no 3T26 (2T26: 29,7%) ou margem REF abaixo de 35% invalida a tese de convergência",
+      "next": "Resultado 3T26 — novembro/2026"
+    },
+    {
+      "kpi": "Geração de caixa operacional",
+      "threshold": "Queima acima de R$ 100 mi por dois trimestres seguidos ou DL/PL acima de 25% (2T26: 13,4%)",
+      "next": "3T26 (nov/2026) e 4T26 (mar/2027)"
+    },
+    {
+      "kpi": "Vendas líquidas e distratos (prévia operacional)",
+      "threshold": "Vendas líquidas trimestrais abaixo de R$ 800 mi (1T26: R$ 842 mi) ou distratos acima de 20% das vendas brutas",
+      "next": "Prévia 4T26 — janeiro/2027"
+    },
+    {
+      "kpi": "Orçamento FGTS 2027–29",
+      "threshold": "Descontos de 2027 abaixo de R$ 12,5 bi ou habitação abaixo de R$ 139,5 bi",
+      "next": "Conselho Curador — fim de outubro/2026"
+    }
+  ],
+  "catalysts": [
+    {
+      "date": "fim de out/2026",
+      "event": "Conselho Curador do FGTS define orçamento e descontos 2027–29"
+    },
+    {
+      "date": "nov/2026",
+      "event": "Resultado do 3T26 (teste da margem e do caixa)"
+    },
+    {
+      "date": "dez/2026",
+      "event": "Proventos referentes a 2026 (em 2025 aprovados em 22/12)"
+    },
+    {
+      "date": "jan/2027",
+      "event": "Prévia operacional do 4T26"
+    }
+  ],
+  "bottom_line": "Para investidor tolerante a risco, com horizonte de 2–3 anos e posição pequena: a tese funciona se a margem bruta parar de cair no 3T26 e o caixa voltar a ser gerado em 2027; se a margem seguir abaixo de 28%, o desconto vira armadilha de valor."
+}

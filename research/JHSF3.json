@@ -1,0 +1,263 @@
+{
+ "ticker": "JHSF3",
+ "name": "JHSF Participações",
+ "sector": "Real estate ultra-alta renda: incorporação (Fazenda/Boa Vista Village) + renda recorrente (shoppings, Fasano, aeroporto Catarina, Residences, JHSF Capital)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "JHSF3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 1980
+  },
+  "notes": "Template industrial com SOTP implícito, porque a base CVM tem dois itens não recorrentes grandes. (1) Valor justo de propriedades para investimento (IAS 40) dentro do EBIT 3.05: R$ 754,8 mi em 2025 e R$ 553,7 mi LTM — EBITDA CVM LTM R$ 2.633 mi vs EBITDA ajustado R$ 2.153 mi. Projetamos EBITDA AJUSTADO (sem valor justo, não caixa) e lucro sem valor justo. (2) Venda de estoques de R$ 5.235 mi ao FII JCDI11 (dez/2025): R$ 3.491 mi recebidos em 15/12/2025 (já no caixa do 2T26), R$ 1.744 mi a receber em dez/2026, com receita sendo apropriada por POC (~R$ 1,5 bi no 4T25 e ~R$ 0,4 bi no 2T26; adiantamentos de clientes R$ 1.245 mi no 2T26). Para não contar caixa já recebido como lucro futuro, a receita-base 2025 é normalizada SEM o JCDI11: R$ 3.479 − ~1.500 = R$ 1.980 mi (estimativa própria; a companhia não abre o número), e o acordo entra no balanço via adjustments (tranche 2 a receber, custo a incorrer, cotas subordinadas). Consequência: as receitas CVM de 2S26–2028 virão acima do modelo (apropriação do JCDI11) sem que isso seja geração de caixa nova. D&A, capex e capital de giro são do negócio normalizado."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.2,
+   0.1,
+   0.1,
+   0.09,
+   0.08
+  ],
+  "ebitda_margin": [
+   0.465,
+   0.47,
+   0.48,
+   0.485,
+   0.49
+  ],
+  "da_pct_revenue": [
+   0.03,
+   0.032,
+   0.034,
+   0.035,
+   0.035
+  ],
+  "capex_pct_revenue": [
+   0.26,
+   0.23,
+   0.2,
+   0.17,
+   0.15
+  ],
+  "nwc_pct_revenue": 0.4,
+  "cost_of_net_debt": [
+   0.15,
+   0.145,
+   0.135,
+   0.125,
+   0.12
+  ],
+  "other_financial": [
+   -30,
+   130,
+   60,
+   30,
+   30
+  ],
+  "tax_rate": [
+   0.15,
+   0.15,
+   0.15,
+   0.15,
+   0.15
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.45,
+   0.45,
+   0.5,
+   0.5,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.12,
+  "roe": 0.13
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.2
+ },
+ "adjustments": {
+  "other_debt_like": 1375,
+  "non_operating_assets": 2090,
+  "minority_value": null,
+  "notes": "non_operating_assets R$ 2.090 mi = (a) tranche 2 do JCDI11 a receber em dez/2026: R$ 1.744 mi − 4% de RET = R$ 1.674 mi, a valor presente (~0,18 ano a ~14%) ≈ R$ 1.635 mi; (b) cotas subordinadas do JCDI11 (R$ 907 mi no ITR, primeiras perdas) com haircut de 50% = R$ 454 mi. other_debt_like R$ 1.375 mi = (a) custo a incorrer nas obras vendidas ao JCDI11 ~R$ 1,2 bi (estimativa do Bradesco BBI; não divulgado pela companhia), a valor presente ≈ R$ 1.100 mi; (b) dividendos do exercício 2025 ainda a pagar a quem era acionista em dez/2025: R$ 274,9 mi no balanço-base (6 parcelas mensais de R$ 45,8 mi, jul–dez/2026). Ajuste líquido +R$ 715 mi → DL econômica ~R$ 1,17 bi (a companhia reporta 'caixa líquido' de R$ 1.186 mi somando todos os recebíveis). Fora: cotas de JCCJ11/outros fundos da JHSF Capital (valor não encontrado; conservador) e 'débitos diversos' (+R$ 537 mi no 1S26, natureza não identificada). Minoritários pelo contábil (R$ 392 mi)."
+ },
+ "target_multiples": {
+  "pe": 7.0,
+  "ev_ebitda": 6.5,
+  "pbv": 0.55,
+  "rationale": "Os múltiplos históricos da JHSF (data/market: P/L 5 anos mediana 4,4x, EV/EBITDA 4,9x, P/VP 0,74x) usam lucro/EBITDA CVM COM ganho de valor justo, logo subestimam o múltiplo sobre o lucro ajustado. Sobre bases ajustadas usamos P/L 7,0x e EV/EBITDA 6,5x — desconto relevante vs shoppings listados (ALOS3/MULT3/IGTI11 ~8–10x EV/EBITDA pré-choque) pelo mix com incorporação e capex alto. P/VP alvo 0,55x: o PL (R$ 7,5 bi) carrega R$ 4,5 bi de mais-valia de valor justo (cap rates de 7,5–10,4% reais); a Ke de 25% o Gordon com ROE ajustado de ~13% daria 0,40x; 0,55x ≈ valor justo do modelo / VPA, próximo do p25 histórico (0,60x)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.05,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.02,
+   "narrative": "Ultra-alta renda adia compras (efeito riqueza, tributação de dividendos/ITCMD), JCDI11 vende devagar e as cotas subordinadas absorvem perdas; capex internacional (Fasano) estoura com o câmbio."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.03,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.03,
+   "narrative": "Reciclagem de capital via FIIs da JHSF Capital (venda de participações a cap rate ~9%) financia o capex, recorrente cresce para ~R$ 1,3 bi de EBITDA até 2030 e dólar forte ajuda receitas no exterior."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.05,
+  "ebitda_margin_sd": 0.03,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.02
+ },
+ "debt_profile": {
+  "gross_debt_mn": 6272,
+  "pct_floating_cdi": 0.64,
+  "avg_cost": "CDI+0,90% médio; 64% CDI, 28% IPCA, 9% outros (inclui Citibank US$ ~67 mi, R$ 347 mi, vence 31/12/2026); 95% mercado de capitais (CRI/debêntures); duration 5,3 anos",
+  "avg_maturity_years": 5.3,
+  "next_24m_maturities_mn": 2090,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -30,
+  "notes": "Passivo em CDI R$ 4,86 bi vs aplicações/cotas em CDI R$ 2,03 bi → exposição líquida ~R$ 2,8–3,7 bi → −R$ 28–37 mi/ano antes de IR por +100 bp (resultado financeiro LTM −R$ 352 mi). Mais R$ 1,53 bi em IPCA. No valor justo das propriedades (R$ 7,3 bi), ±0,5 p.p. na taxa de desconto = ∓R$ 221 mi (não caixa). Câmbio: ativos em US$ ~R$ 1,05 bi vs dívida US$ R$ 347 mi → posição comprada (+R$ ~65 mi com +9,5% do dólar). Covenants DL/PL ≤ 0,6 (atual 0,17–0,24). Vencimentos: ~R$ 1,10 bi no 2S26 e ~R$ 0,99 bi em 2027 (inclui pontes de R$ 555 mi, a serem trocadas por CRI de R$ 800 mi aprovado em jul/26 — liquidação não verificada)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.243,
+  "ebitda_margin_avg_5y": 0.502,
+  "roe_avg_5y": 0.191,
+  "payout_avg_5y": 0.35,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.885,
+   "ebitda_margin": 0.537,
+   "net_income_mn": 452.1,
+   "net_debt_ebitda": 0.87
+  },
+  "notes": "CAGR 2020–25 de 24,3% distorcido pelo JCDI11 (2025: R$ 3.479 mi; normalizado ~R$ 1.980 mi → CAGR ~11%). Margem EBITDA ajustada (sem valor justo) média 2021–25 de 50,2% (42–60%); projetamos 46,5–49%. ROE CVM médio 19,1% inclui valor justo — sem ele foi 2,6% (2023), 4,9% (2024) e ~17% (2025, com o JCDI11); modelo dá ~11–13%. Payout ~35% do lucro reportado (dividendos de 2023–24 superaram o lucro ex-valor justo). DL/EBITDA 2T26: 0,87x (DL CVM R$ 1.880 mi / EBITDA ajustado LTM R$ 2.153 mi). Capex 2025 R$ 896 mi; 1S26 ~R$ 0,74 bi (inclui Embassair, R$ 280 mi)."
+ },
+ "guidance": "Sem guidance anual. Aspiração de médio/longo prazo (call 2T26): levar o EBITDA recorrente de ~R$ 730 mi para ~R$ 2 bi 'fully funded'. Capex deve cair no 2S26 e em 2027 (Bradesco BBI estima R$ 500–600 mi/ano). Pipeline: CJ Shops Faria Lima (2027), expansões Cidade Jardim/Catarina, ABL própria de 70,4 para 97,8 mil m²; Fasano Miami (2027), Londres, Sardenha, Cascais, Milão etc.; 4 novos hangares no Catarina. Resultado 3T26 em 12/11/2026.",
+ "dividend_policy": "Mínimo de 25% do lucro ajustado (política formal além disso não encontrada). Exercício 2024: R$ 250 mi em 12 parcelas em 2025. Exercício 2025: R$ 550 mi aprovados em dez/2025 (mínimo R$ 451 mi + intermediários), pagos em 12 parcelas de ~R$ 0,069/ação em 2026 — isentos da nova retenção (Lei 15.270/2025), mas devidos a quem era acionista na declaração (R$ 274,9 mi ainda a pagar no 2T26). Dividendos de 2027 em diante sofrem IRRF de 10% acima de R$ 50 mil/mês por beneficiário. Recompra: programa de até 28,6 mi de ações venceu em 07/08/2026 sem uso no 1S26; insiders compraram 4,5 mi de ações em mai–jun/26.",
+ "election_impact": "Caiu menos (−25%) porque metade do valor é renda recorrente e o balanço tem posição comprada em dólar. Mas o 4º mandato pesa no micro: (i) tributação da alta renda (dividendos, IRPF mínimo, possível ITCMD progressivo e tributação de FII/CRI) atinge o cliente ultra-alta renda e o modelo de reciclar ativos via FIIs da JHSF Capital (AUM R$ 12,1 bi); (ii) taxas de desconto/cap rates maiores reduzem o valor justo (−R$ 221 mi por +0,5 p.p.) e o preço de saída para FIIs; (iii) cotas subordinadas do JCDI11 (R$ 907 mi) absorvem a 1ª perda se o alto padrão desacelerar. Demanda pouco dependente de crédito e receitas em US$ (Fasano NY, Embassair, BYS) atenuam. Para Ke 25% o problema é anterior à eleição: capex de ~R$ 600 mi/ano com ROIC ~12% fica muito abaixo do custo de capital.",
+ "summary": "Plataforma única de ultra-alta renda (shoppings, Fasano, aeroporto, Boa Vista) com EBITDA recorrente de ~R$ 0,73 bi e grande banco de terrenos, mas que reinveste pesado a retornos de ~12%. A Ke de 25% o valor justo fica bem abaixo do preço; só faz sentido para quem aceita retorno de ativo real (~cap rate + inflação) ou aposta em reciclagem de capital via FIIs.",
+ "thesis": [
+  "Renda recorrente diversificada e premium: EBITDA ajustado LTM R$ 733 mi (shoppings 243, Residences 205, aeroporto 174, Fasano 97) com ABL própria +39% até 2027.",
+  "Balanço confortável: DL/PL 0,17–0,24 vs covenant 0,6; posição comprada em US$; tranche 2 do JCDI11 (R$ 1,74 bi) entra em dez/2026.",
+  "Desconto a NAV: Bradesco BBI estimava NAV ~R$ 19,6/ação (jun/26, cap rates de mercado), hoje ~46% abaixo do preço."
+ ],
+ "risks": [
+  "Capex alto (R$ 0,9 bi em 2025; ~R$ 0,74 bi no 1S26) com retorno ~12% < Ke 25%: crescimento destrói valor para quem exige 25%.",
+  "Cotas subordinadas do JCDI11 (R$ 907 mi) e execução da tranche 2 num mercado de alto padrão estressado.",
+  "Lucro contábil inflado por valor justo e pela apropriação do JCDI11 — ROE ex-valor justo foi 3–5% em 2023–24.",
+  "Governança: transações com partes relacionadas (Enjoy Punta del Este via empresa do controlador); tributação da alta renda e de FIIs."
+ ],
+ "catalysts": [
+  "Resultado 3T26 em 12/11/2026 e recebimento da tranche 2 do JCDI11 (dez/2026).",
+  "Novas vendas de participações para fundos da JHSF Capital (reciclagem de capital) e liquidação do CRI de R$ 800 mi.",
+  "Inaugurações: CJ Shops Faria Lima e Fasano Miami (2027)."
+ ],
+ "key_data": [
+  {
+   "label": "Receita LTM 2T26 (CVM)",
+   "value": "R$ 4.053 mi",
+   "context": "inclui apropriação do JCDI11; normalizado 2025 ~R$ 1.980 mi"
+  },
+  {
+   "label": "EBITDA ajustado LTM",
+   "value": "R$ 2.153 mi",
+   "context": "recorrente R$ 733 mi; CVM R$ 2.633 mi com valor justo"
+  },
+  {
+   "label": "Valor justo no lucro LTM",
+   "value": "R$ 554 mi",
+   "context": "LL LTM R$ 2.099 mi; ex-valor justo ~R$ 1.545 mi"
+  },
+  {
+   "label": "Dívida líquida CVM 2T26",
+   "value": "R$ 1.880 mi",
+   "context": "bruta R$ 6.272 mi; 'caixa líquido' da empresa R$ 1.186 mi com recebíveis"
+  },
+  {
+   "label": "Propriedades para investimento",
+   "value": "R$ 7.316 mi",
+   "context": "custo R$ 2.799 mi + mais-valia R$ 4.517 mi"
+  },
+  {
+   "label": "Capex 2025 / 1S26",
+   "value": "R$ 896 mi / ~R$ 742 mi",
+   "context": "BBI: R$ 500–600 mi/ano à frente"
+  }
+ ],
+ "sources": [
+  {
+   "title": "JHSF — Release 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/1389c06d-4b85-4082-ae2b-3cc3b67db647/eb507b65-aef9-704c-e6c9-cb0feae7c20e?origin=2"
+  },
+  {
+   "title": "JHSF — ITR 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/1389c06d-4b85-4082-ae2b-3cc3b67db647/54b849a0-d05d-a247-be87-b1f5d73c5907?origin=2"
+  },
+  {
+   "title": "JHSF — Planilha de Fundamentos 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/1389c06d-4b85-4082-ae2b-3cc3b67db647/c7ce5ab8-c722-9eda-3d2e-38b03e0aa434?origin=2"
+  },
+  {
+   "title": "JHSF — Release 4T25",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/1389c06d-4b85-4082-ae2b-3cc3b67db647/6c8a27be-9e72-4472-f357-fe70856b19d5?origin=2"
+  },
+  {
+   "title": "JHSF — Transcrição do call 2T26",
+   "url": "https://filemanager-cdn.mziq.com/published/1389c06d-4b85-4082-ae2b-3cc3b67db647/7a1ffa2e-f957-4a48-b265-52cbe900eb50"
+  },
+  {
+   "title": "Bradesco BBI — Compra, alvo R$ 15 (Forbes, jun/2026)",
+   "url": "https://forbes.com.br/forbes-money/forbes-real-estate/2026/06/bradesco-bbi-compra-jhsf3/"
+  },
+  {
+   "title": "XP — JHSF lucra R$ 386 mi no 2T26",
+   "url": "https://euqueroinvestir.com/acoes/jhsf-lucra-r-386-milhoes-no-2t26-50-acima-do-previsto-pela-xp"
+  },
+  {
+   "title": "Lei 15.270/2025 (tributação de dividendos e alta renda)",
+   "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15270.htm"
+  },
+  {
+   "title": "Demonstrações padronizadas CVM — data/hist/JHSF3.json",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "baixa-média — a normalização da receita sem o JCDI11 e o custo a incorrer (~R$ 1,2 bi, estimativa do BBI) não são divulgados pela companhia; o template de um único negócio aproxima mal um SOTP de shoppings, hotéis, aeroporto e incorporação."
+}

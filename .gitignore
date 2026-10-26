@@ -1,0 +1,16 @@
+# deps / build
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+# python
+.venv/
+__pycache__/
+*.pyc
+# env / local
+.env*
+!.env.example
+.vercel
+.DS_Store
+npm-debug.log*

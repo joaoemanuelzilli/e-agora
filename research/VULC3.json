@@ -1,0 +1,253 @@
+{
+  "ticker": "VULC3",
+  "name": "Vulcabras S.A.",
+  "sector": "Consumo discricionário / Calçados esportivos (Olympikus, Mizuno, Under Armour)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "VULC3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "shares_outstanding_mn": 314.113,
+      "ni_2025_recurring": 572.9
+    },
+    "notes": "Receita 2025 = CVM (3.560,3). Lucro 2025 CVM (1.165,3) inclui R$ 592,4 mi não recorrentes (créditos de PIS/COFINS R$ 258 mi + IR/CS diferido sobre prejuízos fiscais R$ 366,1 mi, 3T25); recorrente = R$ 572,9 mi (release 4T25). Ações em circulação fixadas em overrides.base.shares_outstanding_mn (na 1ª versão da base CVM o bloco 'shares' vinha em milhares; corrigido na versão de 12:28 — o override é idêntico ao valor atual)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.1,
+      0.09,
+      0.08,
+      0.07,
+      0.065
+    ],
+    "ebitda_margin": [
+      0.208,
+      0.21,
+      0.215,
+      0.215,
+      0.215
+    ],
+    "da_pct_revenue": [
+      0.037,
+      0.037,
+      0.037,
+      0.037,
+      0.037
+    ],
+    "capex_pct_revenue": [
+      0.048,
+      0.049,
+      0.048,
+      0.047,
+      0.047
+    ],
+    "nwc_pct_revenue": 0.45,
+    "cost_of_net_debt": [
+      0.155,
+      0.155,
+      0.145,
+      0.135,
+      0.13
+    ],
+    "other_financial": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tax_rate": [
+      0.08,
+      0.1,
+      0.12,
+      0.13,
+      0.14
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      0.25,
+      0.6,
+      0.75,
+      0.8,
+      0.8
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.22,
+    "roe": 0.22
+  },
+  "wacc": {
+    "kd_pre_tax": 0.15,
+    "target_debt_weight": 0.08
+  },
+  "adjustments": {
+    "other_debt_like": 0,
+    "non_operating_assets": 70,
+    "minority_value": null,
+    "notes": "DL base (CVM 2T26) = dívida bruta 935,3 + arrendamentos 34,4 − caixa 358,7 = R$ 611,1 mi. Não operacional: investimento em coligada (equivalência, R$ 70,1 mi, valor contábil). Sem aquisições a pagar ou parcelamentos relevantes."
+  },
+  "target_multiples": {
+    "pe": 8.0,
+    "ev_ebitda": 6.0,
+    "pbv": 1.8,
+    "rationale": "P/L médio 2021–2025 (preço médio do ano ÷ lucro CVM): 7,0x / 6,0x / 8,2x / 8,0x / ~10x (2025 recorrente); EV/EBITDA 6,3x / 6,3x / 7,8x / 6,2x / 9,3x (2025 recorrente). Usamos 8x P/L e 6x EV/EBITDA (mediana histórica, sem prêmio, num regime de DI ~15%). Consenso Bloomberg de preço-alvo era R$ 22,60 em mai/26 (Monte Bravo, 06/05/2026)."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.035,
+      "ebitda_margin_shift": -0.025,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Consumo trava em 2027 (juros altos por mais tempo), insumos petroquímicos sobem com o dólar sem repasse e fim/atenuação de incentivos SUDENE ou do antidumping sobre calçados chineses."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.01,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Dólar mais caro encarece importados (Nike/Adidas/Asics) e a Olympikus ganha share em corrida; isenção do IR até R$ 5 mil sustenta volume nas classes C/D."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.03,
+    "ebitda_margin_sd": 0.015,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.005
+  },
+  "debt_profile": {
+    "gross_debt_mn": 935,
+    "pct_floating_cdi": 0.9,
+    "avg_cost": "CDI + spread (debêntures de R$ 500 mi emitidas em jul/2025; custo médio não localizado nas fontes lidas — premissa CDI+~1%)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": 416,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -5,
+    "notes": "DL ex-arrendamentos R$ 577 mi (2T26), ~90% pós-fixada (premissa): +100 bp de CDI ≈ −R$ 5,8 mi antes de IR (≈ −R$ 5 mi no lucro, <1%). A gestão prioriza zerar a dívida até ~meados de 2027."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.247,
+    "ebitda_margin_avg_5y": 0.224,
+    "roe_avg_5y": 0.324,
+    "payout_avg_5y": 0.629,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.112,
+      "ebitda_margin": 0.21,
+      "net_income_mn": 143.7,
+      "net_debt_ebitda": 0.76
+    },
+    "notes": "CAGR 5a (24,7%) parte da base deprimida de 2020; CAGR 3a = 12%. Projetamos 7,9% a.a. 2025–30 (10% em 2026, em linha com o 1S26 de +11%, desacelerando). Margem EBITDA média 5a = 22,4% (inclui não recorrentes de 2025; recorrente ~21,5%): projetamos 20,8%→21,5%, sem expansão além da média. ROE médio 32% está inflado por créditos fiscais e pela devolução de capital de 2025; projetamos ROE ~22–25%. Payout 2026 baixo (25%) porque a gestão suspendeu proventos até zerar a dívida; volta a 75–80% a partir de 2028 (histórico 2023–25 de 46%–137%). Capex projetado (4,8%→4,7%) = capex caixa ~4,3% (2025: 6,8% com expansão de capacidade; 1S26: 4,6%) + arrendamentos ~0,5% (principal na DFC R$ 16 mi em 2025) — arrendamentos são pouco relevantes (passivo de R$ 34 mi)."
+  },
+  "guidance": "Sem guidance numérico. 4T25 (03/03/2026): 'perspectiva otimista' para as carteiras do 1S26 e produção estável. 2T26 (04/08/2026): reajustes de preço a partir do fim do 2T para repassar alta de insumos ligada ao conflito no Oriente Médio; prioridade é reduzir a dívida — caixa líquido esperado em ~1 ano; retomada de distribuições 'mais ativa' quando a dívida zerar.",
+  "dividend_policy": "Estatuto: mínimo obrigatório de 25%. Histórico: 2023 payout 46%; 2024 R$ 783 mi pagos (137% do lucro, incluía reservas); 2025 R$ 1.541,9 mi pagos (dos quais R$ 563,3 mi retornaram via subscrição privada em dez/25), antecipando a tributação de dividendos que vigora desde jan/2026. 1S26: nenhum provento (desalavancagem). Recompra: programa de até 10 mi ações vigente até set/2026; 3,87 mi ações em tesouraria.",
+  "election_impact": "Queda de ~24% hoje é essencialmente beta/small cap (SMLL −27%) e prêmio de risco Brasil. Canais reais: (i) juros — dívida líquida baixa (0,7x EBITDA), impacto de +300 bp no lucro ~3%; (ii) câmbio — dólar +9,5% AJUDA na competição contra importados (Nike/Adidas/Asics e cross-border), com custo de insumos petroquímicos parcialmente dolarizado (efeito líquido neutro a levemente positivo); exportação é só ~3% da receita; (iii) consumo — um 4º mandato tende a manter isenção de IR até R$ 5 mil, salário mínimo com ganho real e política industrial protecionista (antidumping, 'taxa das blusinhas'), favoráveis a um fabricante nacional de massa; o risco é desaceleração de 2027 com juros altos. Valor intrínseco muda pouco — o que mudou foi a taxa de desconto.",
+  "summary": "Líder nacional em calçados esportivos de massa (Olympikus) e licenciada de Mizuno/Under Armour, verticalizada no Nordeste, com 24 trimestres seguidos de crescimento de receita (até o 2T26) e ROE recorrente ~22–25%. A R$ 12,2, negocia ~6,7x o lucro recorrente LTM (R$ ~570 mi) e ~5,5x EV/EBITDA, no piso histórico; a queda de hoje é beta, não fundamento — o dólar alto até melhora a posição competitiva.",
+  "thesis": [
+    "Crescimento consistente: receita +16,8% em 2025 e +11% no 1S26 (R$ 1.771 mi), 24º trimestre consecutivo de alta no 2T26; corrida/performance eleva preço médio.",
+    "Rentabilidade e caixa: EBITDA recorrente 21,4% (2025), ROIC ajustado da companhia 28–44%; alavancagem só 0,7x e caixa líquido esperado em ~12 meses, liberando payout de 75–80%.",
+    "Preço: ~6,7x P/L recorrente LTM e ~5,5x EV/EBITDA (vs. 7–8x P/L médio 2021–25 e consenso Bloomberg de R$ 22,60 em mai/26).",
+    "Dólar +9,5% encarece concorrentes importados; incentivos regionais (SUDENE) mantêm alíquota efetiva baixa (~7–12%)."
+  ],
+  "risks": [
+    "Alta de insumos petroquímicos (EVA, borracha, sintéticos) com dólar e petróleo — repasse incompleto já pressionou a margem bruta no 1S26.",
+    "Desaceleração do consumo em 2027 com juros altos por mais tempo; varejo multimarcas (cliente atacadista) mais frágil e alongamento de prazos.",
+    "Renovação/vigência do antidumping sobre calçados chineses e dos incentivos SUDENE/ICMS (status 2026 não verificado nesta pesquisa); dependência de licenças (Mizuno, Under Armour).",
+    "Governança concentrada (Pedro Grendene Bartelle) e free float de ~45%; liquidez menor (ADTV ~R$ 30 mi)."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (historicamente divulgado no fim de outubro — o 3T25 saiu em 30/10/2025).",
+    "Virada para caixa líquido (esperada para ~meados de 2027) e retomada de dividendos/JCP.",
+    "Repasse de preços das coleções de verão/2027 recompondo margem bruta."
+  ],
+  "key_data": [
+    {
+      "label": "Receita líquida 2T26",
+      "value": "R$ 994,8 mi (+11,2% a/a)",
+      "context": "1S26: R$ 1.771 mi (+11%)"
+    },
+    {
+      "label": "EBITDA recorrente 2T26",
+      "value": "R$ 208,6 mi (21,0%)",
+      "context": "−0,3 p.p. a/a; 2025: R$ 763,1 mi (21,4%)"
+    },
+    {
+      "label": "Lucro recorrente 2T26",
+      "value": "R$ 143,7 mi",
+      "context": "LTM recorrente ~R$ 570 mi; 2025 recorrente R$ 572,9 mi"
+    },
+    {
+      "label": "Dívida líquida/EBITDA 2T26",
+      "value": "0,76x (com arrendamentos)",
+      "context": "DL R$ 611 mi; era 0,9x no 4T25 após R$ 1,54 bi de dividendos"
+    },
+    {
+      "label": "P/L recorrente LTM @R$ 12,17",
+      "value": "~6,7x",
+      "context": "média 2021–25 ~7–8x"
+    },
+    {
+      "label": "Ações em circulação",
+      "value": "314,1 mi",
+      "context": "após subscrição privada de dez/25"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Vulcabras — Apresentação de Resultados 4T25 (03/03/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/2a4ff98c-d670-4434-962c-10e11bafd659/145fba29-3887-3247-2b69-df3063333fb1?origin=2"
+    },
+    {
+      "title": "Vulcabras — Apresentação de Resultados 1T26",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/2a4ff98c-d670-4434-962c-10e11bafd659/82afdb8a-8842-a3b5-8b79-a5f165f755d9?origin=2"
+    },
+    {
+      "title": "Vulcabras — Apresentação de Resultados 3T25 (30/10/2025)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/2a4ff98c-d670-4434-962c-10e11bafd659/67df6fb7-9345-8639-8ea4-96ed9d2f5ca3?origin=2"
+    },
+    {
+      "title": "InfoMoney — Vulcabras 2T26 (04/08/2026)",
+      "url": "https://www.infomoney.com.br/?p=3437951"
+    },
+    {
+      "title": "Monte Bravo — Análise Vulcabras 1T26 (06/05/2026; consenso Bloomberg R$ 22,60)",
+      "url": "https://www.montebravo.com.br/wp-content/uploads/2026/05/Monte-Bravo-Analisa-Resultado-Vulcabras-1T26.pdf"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/VULC3.json)",
+      "url": "https://dados.cvm.gov.br/"
+    }
+  ],
+  "confidence": "média-alta — números oficiais (CVM/releases) e modelo simples; incertezas em repasse de insumos, incentivos fiscais/antidumping (não verificados para 2026) e no 3T26 que sai nos próximos dias."
+}

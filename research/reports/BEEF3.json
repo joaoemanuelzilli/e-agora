@@ -1,0 +1,168 @@
+{
+  "ticker": "BEEF3",
+  "headline": "A Minerva caiu 21% no dia em que o dólar subiu 9,5%, embora 57% da receita bruta seja exportação e a dívida em US$ seja hedgeada. A R$ 3,34 (~12h55 de 26/10) o mercado paga 3,9x EV/EBITDA e a TIR de dono é de 26,5%.",
+  "verdict": "É o 1º do ranking porque é o único nome do G12 em que a TIR de dono (26,5% ao preço de R$ 3,34, ~12h55) supera a Ke de 25%. O valor justo do motor é R$ 5,57 (+67%), e o Monte Carlo dá 75% de probabilidade de o valor superar o preço. A queda foi além do que beta e fatores explicam (resíduo de −7,2 p.p. no cross-section), e o principal choque do dia, o câmbio, ajuda o EBITDA em vez de prejudicá-lo. O preço do risco é a alavancagem: no cenário bear o valor é R$ 2,12 (−37%).",
+  "reasons": [
+    {
+      "title": "Câmbio a favor, não contra",
+      "body": "No 2T26, 56,6% da receita bruta foi exportação, e Argentina, Paraguai, Colômbia, Uruguai, Chile e Austrália somaram ~43% da receita bruta (release 2T26). Os R$ 20,4 bi de dívida em moeda estrangeira (70% da bruta, linhas 2.01.04.01.02 e 2.02.01.01.02 da CVM) têm ≥50% da exposição de longo prazo protegida. No 1T26, a variação cambial (+R$ 251 mi) foi praticamente anulada pelo hedge (−R$ 243 mi). Ou seja: o dólar sobe o EBITDA em R$ sem inflar a dívida líquida na mesma proporção.",
+      "metric": {
+        "label": "Exportação / receita bruta 2T26",
+        "value": "56,6%"
+      }
+    },
+    {
+      "title": "TIR de dono acima da Ke",
+      "body": "Ao preço de referência de R$ 3,34 (~12h55), a TIR implícita nos dividendos e na perpetuidade é de 26,5% contra Ke de 25%. O valor justo é R$ 5,57 (DCF R$ 6,37; DDM R$ 3,66; múltiplos R$ 5,89), já com diluição dos bônus (1.178,1 mi de ações). Comprando hoje e vendendo no fim de 2028 a 6x o LPA de 2029E (R$ 8,21), a TIR de 3 anos é de 58,9% (modelo).",
+      "metric": {
+        "label": "TIR implícita a R$ 3,34",
+        "value": "26,5%"
+      }
+    },
+    {
+      "title": "Múltiplo de crise com balanço que gera caixa",
+      "body": "O EV de R$ 18,99 bi equivale a 3,87x o EBITDA LTM (R$ 4,91 bi, CVM) e a 3,83x o EBITDA de 2026E. O P/L de 2027E é 5,4x a R$ 3,34 (modelo). No LTM, o fluxo operacional foi de R$ 3,96 bi (CVM) e o fluxo de caixa livre ao acionista, de +R$ 636 mi (release). A companhia soma R$ 7,5 bi de FCF acumulados desde 2020 (release 2T26).",
+      "metric": {
+        "label": "EV/EBITDA LTM a R$ 3,34",
+        "value": "3,87x"
+      }
+    },
+    {
+      "title": "Margem estável em ciclos diferentes",
+      "body": "A margem EBITDA ficou entre 8,8% e 9,5% de 2021 a 2025, com média de 9,1% (CVM), porque a empresa arbitra volumes entre 7 países de origem. A premissa do modelo já é mais dura que a história: 8,5% em 2026, 8,2% em 2027 (ciclo do gado) e 8,8% em 2029–30.",
+      "metric": {
+        "label": "Margem EBITDA média 2021–25",
+        "value": "9,1%"
+      }
+    },
+    {
+      "title": "Desalavancagem com liquidez para até 2029",
+      "body": "O caixa de R$ 14,9 bi cobre o cronograma de amortização até 2029. Prazo médio de 4,3 anos. Desde 2025 foram recomprados US$ 618 mi em bonds, e as Notas 2036 (US$ 600 mi) saíram a 7,5% (release 2T26). No modelo, a DL/EBITDA cai de 2,9x para 2,4x em 2028, o que dispara o payout de 50% da política de dividendos. O dividend yield projetado é de 4,2% / 4,6% / 10,6% em 2026–28 a R$ 3,34.",
+      "metric": {
+        "label": "DL/EBITDA 2T26 → 2028E",
+        "value": "2,9x → 2,4x"
+      }
+    },
+    {
+      "title": "A queda só devolveu o rali eleitoral",
+      "body": "A ação saiu de R$ 3,20 antes do rali eleitoral para R$ 4,27 na sexta (+33,4%) e estava a R$ 3,37 no snapshot de ~12h55, só 5,3% acima do pré-rali (estudo de mercado, B3). Antes do choque já acumulava −39,7% em 12 meses e −54,7% desde a máxima de 52 semanas (R$ 7,44). Pouco otimismo restava no preço.",
+      "metric": {
+        "label": "Preço vs. pré-rali (12h55)",
+        "value": "+5,3%"
+      }
+    },
+    {
+      "title": "Qualidade contábil aceitável",
+      "body": "O Piotroski é 6 de 9: ROA positivo e crescente, fluxo operacional maior que o lucro, alavancagem de longo prazo caindo e giro do ativo subindo (quant/CVM). Falham liquidez corrente, emissão de ações (aumento de capital de 2025) e margem bruta. O Altman Z é 5,17, na zona cinzenta, fora da zona de risco.",
+      "metric": {
+        "label": "Piotroski F-score",
+        "value": "6/9"
+      }
+    }
+  ],
+  "statistics": [
+    {
+      "title": "A queda foi além do beta",
+      "body": "Com beta de 1,10 (beta de baixa 3 anos) e Ibovespa a −14,5% no snapshot, a queda esperada era de −15,9%. A realizada foi de −21,1% (R$ 3,37 contra R$ 4,27). O resíduo idiossincrático de −5,1 p.p. equivale a −1,8 desvio-padrão da vol idiossincrática diária (45% ao ano).",
+      "stat": "resíduo −5,1 p.p. (z = −1,8)"
+    },
+    {
+      "title": "Cross-section: sobre-reação de −7,2 p.p.",
+      "body": "A regressão das quedas do dia em 147 ações (R² 0,71) usa beta, alavancagem, tamanho, exportadora (+10,0 p.p.; t = 4,5) e setor. Ela previa −13,9% para BEEF3; a realizada foi −21,1%. O resíduo de −7,2 p.p. é o 25º mais negativo de 147 (desvio-padrão dos resíduos de 7,8 p.p.). A par MBRF3 também ficou abaixo do previsto (−10,3 p.p.).",
+      "stat": "resíduo −7,2 p.p. (≈ −0,9 dp; 25º de 147)"
+    },
+    {
+      "title": "Múltiplo no piso da própria história",
+      "body": "O EV/EBITDA atual de 3,75x (série mensal do estudo) se compara a 5,04x de média em 5 anos (percentil 8%) e 7,06x desde 2016 (percentil 4%). O P/L de 7,3x está no percentil 15% de 5 anos (mediana 11,4x). O P/VP de 2,1x é o mínimo da série, mas é pouco informativo com o PL controlador de R$ 1,6 bi.",
+      "stat": "EV/EBITDA z = −1,64 (pctl 8% em 5 anos)"
+    },
+    {
+      "title": "Monte Carlo: 75% de chance de valor acima do preço",
+      "body": "Em 5.000 simulações (crescimento dp 4 p.p., margem dp 0,8 p.p. com correlação de 0,5, g dp 0,75 p.p., capex dp 0,3 p.p.), o valor ficou em: p10 R$ 1,87, mediana R$ 5,52, p90 R$ 10,01. Em 75,2% dos casos supera o preço de R$ 3,34. Ponderando bear (30%) R$ 2,12, base (50%) R$ 5,57 e bull (20%) R$ 8,54, o valor esperado é R$ 5,13.",
+      "stat": "P(valor > preço) = 75,2%"
+    },
+    {
+      "title": "DCF reverso e sensibilidade",
+      "body": "A Ke de 25%, o preço de R$ 3,34 embute receita encolhendo 0,9% ao ano em 2026–30, contra +4,6% na base. Mesmo com Ke de 30% o valor justo é R$ 3,98 (com Ke de 20%, R$ 8,05). O ponto fraco é a margem: −1,5 p.p. na margem EBITDA derruba o valor para R$ 2,44.",
+      "stat": "crescimento implícito −0,9% a.a.; Ke 30% → R$ 3,98"
+    },
+    {
+      "title": "Histórico pós-crash e pós-eleição",
+      "body": "Depois de 62 dias de queda do Ibovespa ≥5% desde 1998, o índice subiu em média 19,6% em 3 meses (77% positivos) e 59,5% em 12 meses (87% positivos). A BEEF3 subiu nos 3 meses seguintes nos 7 crashes desde 2017 (mediana +53%) e em 5 de 7 em 12 meses (mediana +12%), mas 6 dos 7 são do cluster de mar/2020. Após a reeleição de Lula em 2006, o Ibovespa subiu 63% em 12 meses.",
+      "stat": "7/7 positivos em 3 meses (amostra pequena e concentrada em 2020)"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Alavancagem e cobertura de juros",
+      "body": "A dívida líquida é de R$ 14,4 bi contra equity de mercado de ~R$ 3,3 bi. O resultado financeiro LTM (−R$ 3,57 bi) consome 73% do EBITDA (60% no conceito caixa) e a cobertura EBIT/despesa financeira é 0,89x. O equity é ~20% do EV, o que amplifica qualquer erro: o bear vale R$ 2,12 (−37%).",
+      "mitigant": "Caixa de R$ 14,9 bi cobre vencimentos até 2029, prazo médio de 4,3 anos e recompras de bonds a desconto. Dimensionar a posição pelo bear. Sinal de alerta: DL/EBITDA acima de 3,3x."
+    },
+    {
+      "title": "Virada do ciclo do gado no Brasil",
+      "body": "A retenção de fêmeas após três anos de abate alto tende a subir a arroba e comprimir o spread em 2026–27. Pela sensibilidade do modelo, −1,5 p.p. de margem EBITDA leva o valor a R$ 2,44.",
+      "mitigant": "~43% da receita bruta vem de fora do Brasil, a margem ficou em 8,8–9,5% por 5 anos e a premissa já usa 8,2% em 2027. O ciclo americano (rebanho mínimo) sustenta a demanda por importação."
+    },
+    {
+      "title": "Barreiras comerciais (China e EUA)",
+      "body": "A salvaguarda chinesa de 2026–28 dá ao Brasil cota de 1,106 Mt em 2026 (exportou 1,65 Mt em 2025), com tarifa de 55% acima da cota. China e EUA são 18% e 12% da exportação, e o risco político de um 4º mandato está na relação Lula–Trump.",
+      "mitigant": "Plantas na Argentina, Uruguai, Paraguai, Colômbia e Austrália permitem arbitrar origens fora da cota brasileira. A cota americana de 300 mil t para 'outros países' vale desde set/26."
+    },
+    {
+      "title": "Capital de giro e FCF voláteis",
+      "body": "O capital de giro consumiu R$ 2,0 bi no 1S26 (recebíveis da Ásia com prazo maior), e o FCF ao acionista do 2T26 foi −R$ 611 mi.",
+      "mitigant": "O FCF LTM é de +R$ 636 mi e o 2S costuma liberar capital de giro (3T25: +R$ 2,5 bi). Acompanhar o 3T26."
+    },
+    {
+      "title": "Diluição pelos bônus de subscrição",
+      "body": "São 187 mi de bônus a ~R$ 4,97 até o 1S28, o equivalente a +19% de ações se a ação subir acima do strike.",
+      "mitigant": "Já embutido no valor justo (1.178,1 mi de ações diluídas e entrada de R$ 930 mi no modelo). O exercício reduz a dívida líquida."
+    }
+  ],
+  "monitor": [
+    {
+      "kpi": "Margem EBITDA trimestral (release)",
+      "threshold": "Abaixo de 7,5% por dois trimestres seguidos (premissa de 8,2–8,5%; −1,5 p.p. leva o valor a R$ 2,44)",
+      "next": "3T26, início de nov/2026 (3T25 saiu em 05/11/2025)"
+    },
+    {
+      "kpi": "DL/EBITDA LTM (release)",
+      "threshold": "Acima de 3,3x no 4T26, sem caminho para ≤2,5x em 2028",
+      "next": "3T26 (nov/2026) e 4T26 (fev–mar/2027)"
+    },
+    {
+      "kpi": "Resultado financeiro no conceito caixa, LTM",
+      "threshold": "Pior que −R$ 3,2 bi (era −R$ 2,96 bi no 2T26): o carrego do hedge ou a dívida em R$ estariam consumindo a tese de desalavancagem",
+      "next": "Release trimestral"
+    },
+    {
+      "kpi": "Câmbio USD/BRL (PTAX)",
+      "threshold": "Abaixo de R$ 5,00 por mais de um trimestre (dólar médio do 2T26 foi R$ 5,05), o que anula o vento cambial",
+      "next": "Diário"
+    },
+    {
+      "kpi": "Exportação de carne bovina para a China vs. cota",
+      "threshold": "Cota brasileira de 2027 (1,128 Mt) esgotada no 1S27 ou nova barreira comercial dos EUA",
+      "next": "Dados mensais de exportação (Secex/MAPA)"
+    }
+  ],
+  "catalysts": [
+    {
+      "date": "início de nov/2026",
+      "event": "Resultado do 3T26, com o primeiro efeito do dólar mais alto"
+    },
+    {
+      "date": "set–nov/2026",
+      "event": "Cota americana de 300 mil t sem tarifa de 25% para 'outros países' (inclui o Brasil), em parcelas mensais desde 01/09"
+    },
+    {
+      "date": "4T26–2028",
+      "event": "Desalavancagem para ≤2,5x DL/EBITDA, que eleva o payout mínimo para 50%"
+    },
+    {
+      "date": "1S28",
+      "event": "Prazo final dos bônus de subscrição (~R$ 930 mi de caixa)"
+    }
+  ],
+  "bottom_line": "Para quem aceita vol alta (46% ao ano; drawdown máximo de −81% em 10 anos) e dimensiona a posição pelo bear de R$ 2,12, é uma opção alavancada e barata num negócio que o câmbio favorece. A tese funciona enquanto a margem EBITDA ficar em ~8% ou mais e a DL/EBITDA seguir rumo a 2,5x até 2028."
+}

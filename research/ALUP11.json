@@ -1,0 +1,242 @@
+{
+ "ticker": "ALUP11",
+ "name": "Alupar Investimento S.A.",
+ "sector": "Utilities / transmissão de energia (Brasil, Colômbia, Peru, Chile) + geração hídrica/eólica/solar",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 3,
+ "listed_classes": [
+  {
+   "ticker": "ALUP11",
+   "class": "UNIT"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 3545.5
+  },
+  "notes": "Base REGULATÓRIA (BRGAAP), não IFRS: na transmissão, o IFRS (ICPC 01/CPC 47) registra receita de infraestrutura (capex) com margem e remuneração do ativo de contrato, distorcendo receita, EBITDA e lucro (IFRS 2025: receita R$ 4.398 mi, EBITDA R$ 3.302 mi, LL Alupar R$ 1.216 mi). A visão regulatória, baseada na RAP efetivamente faturada, é a que se aproxima do caixa: receita líquida regulatória FY2025 R$ 3.545,5 mi, EBITDA R$ 2.819,0 mi (79,5%), LL Alupar R$ 737,6 mi (R$ 2,24/unit) — release 4T25. D&A regulatória ~15% da receita. Unit = 1 ON + 2 PN; 988,9 mi ações = 329,6 mi units."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.09,
+   0.08,
+   0.09,
+   0.14,
+   0.06
+  ],
+  "ebitda_margin": [
+   0.785,
+   0.79,
+   0.79,
+   0.8,
+   0.8
+  ],
+  "da_pct_revenue": [
+   0.15,
+   0.15,
+   0.15,
+   0.15,
+   0.15
+  ],
+  "capex_pct_revenue": [
+   0.6,
+   0.65,
+   0.5,
+   0.28,
+   0.15
+  ],
+  "nwc_pct_revenue": 0.02,
+  "cost_of_net_debt": [
+   0.108,
+   0.108,
+   0.105,
+   0.103,
+   0.103
+  ],
+  "other_financial": [
+   90,
+   95,
+   100,
+   105,
+   110
+  ],
+  "tax_rate": [
+   0.12,
+   0.12,
+   0.13,
+   0.13,
+   0.14
+  ],
+  "minority_share_ni": 0.42,
+  "payout": [
+   0.45,
+   0.45,
+   0.45,
+   0.5,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.035,
+  "roic": 0.12,
+  "roe": 0.14
+ },
+ "wacc": {
+  "kd_pre_tax": 0.115,
+  "target_debt_weight": 0.45
+ },
+ "adjustments": {
+  "other_debt_like": 186,
+  "non_operating_assets": 0,
+  "minority_value": 4200,
+  "notes": "other_debt_like = dividendos/JCP a pagar R$ 142 mi (CVM 2T26) + derivativos R$ 44 mi. Dividendo do 2T26 (R$ 69,2 mi, aprovado 06/08) não incluído (imaterial). minority_value R$ 4,2 bi > contábil (R$ 3,74 bi) porque os minoritários levam ~42% do lucro regulatório consolidado (541/1.279 em 2025) e estão nas transmissoras maduras de maior retorno."
+ },
+ "target_multiples": {
+  "pe": 11.0,
+  "ev_ebitda": 7.0,
+  "pbv": 1.0,
+  "rationale": "Sobre números regulatórios. Aproximação (memória de mercado, não verificada nesta sessão): transmissoras (Taesa, ISA Energia, Alupar) negociaram ~7–9x EV/EBITDA regulatório e ~10–14x P/L regulatório em 2021–2025; uso 7,0x / 11x pelo juro real mais alto (NTN-B longa subiu com o choque)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.01,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.05,
+   "narrative": "Atrasos/estouro de capex em TPC/TCN e LatAm, IPCA mais alto encarecendo a dívida antes da RAP e vencimento sem renovação das concessões antigas (2030–2035)."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.005,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.05,
+   "narrative": "Capex abaixo do Aneel (−20% a −30%), entradas antecipadas e queda do juro real reprecificam a RAP indexada."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.01,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.05
+ },
+ "debt_profile": {
+  "gross_debt_mn": 14871,
+  "pct_floating_cdi": 0.205,
+  "avg_cost": "63,8% IPCA (≈IPCA+6%), 20,5% CDI, 13,7% moeda estrangeira (COP/PEN/USD), 2,0% TJLP",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 2100,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 5,
+  "notes": "Exposição líquida a CDI é ~nula/positiva: dívida em CDI ~R$ 3,0 bi (+ R$ 0,9 bi da holding swapada para 96,35% CDI) contra caixa de R$ 5,4 bi rendendo CDI. +100 bp no CDI ≈ +R$ 5 mi no lucro (praticamente neutro). O risco de juros está na parcela IPCA (63,8%): a inflação mais alta pós-câmbio aumenta a correção da dívida, mas a RAP (majoritariamente IPCA) é reajustada todo julho — hedge natural. O choque afeta Alupar sobretudo pela taxa de desconto (juro real), não pelo resultado financeiro. Custo da DL calibrado no resultado financeiro regulatório do 6M26 (−R$ 540 mi ≈ 11,5% a.a.), caindo com o IPCA projetado (5,8% anualizado no 2T26 → 4,6% em 2027 → 3,75%)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": -0.065,
+  "ebitda_margin_avg_5y": 0.763,
+  "roe_avg_5y": 0.139,
+  "payout_avg_5y": 0.88,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.103,
+   "ebitda_margin": 0.766,
+   "net_income_mn": 159,
+   "net_debt_ebitda": 3.2
+  },
+  "notes": "Na CVM (IFRS) o CAGR de receita 2020–25 é −6,5% porque 2020 tinha muita receita de construção — irrelevante. Regulatório: receita 2024→2025 +8,2%, 6M26 +13,3%; EBITDA 2025 +7,4%. Premissas de receita 6–14% a.a. seguem o cronograma de entrada de RAP: TAP (R$ 83 mi, 2028), TPC (R$ 277 mi) e TCN (R$ 177 mi) em 2029, LatAm (~US$ 105 mi de RAP) 2026–2029. Médias CVM (IFRS) 2021–25: margem EBITDA 76%, ROE 13,9%, payout em caixa 88% (inclui dividendos pagos a minoritários das SPEs). ROE regulatório ~8% (LL Alupar R$ 738 mi / PL R$ 9,2 bi). Payout ~40–45% do lucro regulatório (R$ 0,21/unit por trimestre)."
+ },
+ "guidance": "Sem guidance de resultado. Carteira em implantação (release 2T26): TAP — RAP R$ 83,2 mi, capex R$ 499 mi (2028); TPC — RAP R$ 276,8 mi, capex R$ 2.597 mi (2029); TCN — RAP R$ 176,5 mi, capex R$ 1.391 mi (2029); LatAm (TES, TEL, SED, TSA, TER, TEP) — RAP ~US$ 105 mi, capex ~US$ 732 mi (2026–2029); Lote 07 do Leilão Aneel 01/2026 — RAP R$ 96,7 mi, capex Aneel R$ 1.089 mi (expectativa −30%), energização 2031. Companhia estima capex 5–25% abaixo do regulador.",
+ "dividend_policy": "Dividendos intercalares trimestrais: R$ 0,21/unit (R$ 69,2 mi) referentes ao 1T26 (pagos 06/07/2026) e ao 2T26 (aprovados 06/08/2026). Mínimo estatutário de 25% (não verificado o percentual-alvo atual). Premissa: 45–50% do lucro regulatório.",
+ "election_impact": "Caiu ~20% (R$ 38,68 → R$ 30,75). É quase todo canal de taxa de desconto: receita (RAP) indexada a IPCA/IGP-M, dívida 64% IPCA e exposição líquida a CDI nula — os +300 bp praticamente não mexem no lucro, mas sobem o juro real que o mercado exige (NTN-B). Risco político baixo (receita contratada por leilão, sem risco de demanda); o ponto de atenção é o fim das concessões antigas (2030–2035), cuja regra de renovação/relicitação depende do governo federal. O valor intrínseco mudou pouco; o preço caiu por reprecificação de juro real.",
+ "summary": "A mais protegida do choque: RAP indexada, dívida casada em IPCA, sem exposição líquida a CDI e carteira de projetos que adiciona ~R$ 1,1 bi de RAP até 2031. O problema é o Ke: transmissão rende ~IPCA+8–10% no equity, longe de 25% nominal; ao preço atual, P/L regulatório ~14x. Melhor relativa do grupo, ainda abaixo da meta.",
+ "thesis": [
+  "Hedge natural: 63,8% da dívida em IPCA contra RAP reajustada por IPCA/IGP-M (ciclo 2025/26: +5,32% IPCA, +7,02% IGP-M); CDI líquido ~nulo.",
+  "Crescimento contratado: projetos TAP, TPC, TCN, LatAm e Lote 07 somam ~R$ 1,1 bi de RAP (≈30% da receita regulatória de 2025) com RAP/capex ~11–12%.",
+  "Disponibilidade ~100% e parcela variável baixa (0,24% no 2T26)."
+ ],
+ "risks": [
+  "Execução e capex de ~R$ 8 bi até 2031 (TPC/TCN/LatAm) com dívida-ponte de R$ 400 mi no curto prazo.",
+  "Fim das concessões de transmissão mais antigas (contratos de 30 anos assinados 2000–2005 → vencimentos 2030–2035; datas por ativo não verificadas nesta pesquisa) sem regra clara de renovação.",
+  "Minoritários com ~42% do lucro consolidado; geração exposta a curtailment/GSF; risco cambial/político em Peru/Colômbia/Chile."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (≈ início de nov/2026)",
+  "Energização de projetos LatAm (2026–2027)",
+  "Reajuste de RAP do ciclo 2027/28 (jul/2027)",
+  "Leilões de transmissão 2027"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA regulatório 2T26",
+   "value": "R$ 724,7 mi (+6,5% a/a)",
+   "context": "margem 76,6%"
+  },
+  {
+   "label": "LL Alupar regulatório 2T26",
+   "value": "R$ 159,0 mi (−14,6%)",
+   "context": "IFRS: R$ 416,6 mi"
+  },
+  {
+   "label": "DL jun/26",
+   "value": "R$ 9.499,5 mi",
+   "context": "3,2x EBITDA regulatório (2,6x IFRS)"
+  },
+  {
+   "label": "Dívida por indexador",
+   "value": "IPCA 63,8% / CDI 20,5% / ME 13,7%",
+   "context": "ratings AAA (nacional), BB+ (global)"
+  },
+  {
+   "label": "Units",
+   "value": "329,6 mi (1 ON + 2 PN)",
+   "context": "ALUP3 R$ 10,50 e ALUP4 R$ 10,08 hoje"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Alupar — Release 2T26 (06/08/2026), kit de resultados",
+   "url": "https://cdn-sites-assets.mziq.com/wp-content/uploads/sites/4/2026/08/2T26-1.zip"
+  },
+  {
+   "title": "Alupar — Release 4T25 e DFP 2025, kit de resultados",
+   "url": "https://cdn-sites-assets.mziq.com/wp-content/uploads/sites/4/2026/05/4T25_SITE.zip"
+  },
+  {
+   "title": "Alupar — Central de resultados (RI)",
+   "url": "https://ri.alupar.com.br/info-financeira/central-de-resultados"
+  },
+  {
+   "title": "BCB/Contexto do estudo (Selic, Focus 23/10/2026, curva DI 26/10/2026)",
+   "url": "research/_context.md"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/"
+  }
+ ],
+ "confidence": "média-alta para o curto prazo (receita contratada, dívida casada); média para a perpetuidade (vencimento das concessões antigas e regra de renovação não verificados)."
+}

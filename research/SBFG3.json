@@ -1,0 +1,288 @@
+{
+ "ticker": "SBFG3",
+ "name": "Grupo SBF S.A. (Centauro + Fisia/Nike Brasil)",
+ "sector": "Varejo / artigos esportivos (varejo multimarca + distribuição exclusiva Nike)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "SBFG3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 2457.3
+  },
+  "notes": "(1) Classificação CVM: o Grupo SBF lança o passivo de arrendamento (R$ 1.586,7 mi em jun/26) dentro das contas de empréstimos/financiamentos (2.01.04/2.02.01) → no data/hist 'leases' = 0 e gross_debt = R$ 3.200,7 mi (dívida financeira R$ 1.613,9 + arrendamentos). A DL CVM de R$ 2.771,3 mi já inclui arrendamentos e bate com o release (DL + arrendamentos = R$ 2.771,3 mi). (2) Override de DL-base para R$ 2.457,3 mi: normalização de ~R$ 314 mi de recebíveis extraordinários da Copa do Mundo (prazo ~60 dias), que a companhia diz pesar ~0,4x na alavancagem (0,4 × EBITDA ajustado ex-IFRS LTM ≈ R$ 785 mi = R$ 1.184,6 mi / 1,51x) e que convertem em caixa no 3T26; sem a normalização o DCF cairia ~R$ 1,4/ação. Ações: 230,66 mi (tesouraria zerada após cancelamento de 13,9 mi em 08/05/26)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.12,
+   0.04,
+   0.07,
+   0.075,
+   0.07
+  ],
+  "ebitda_margin": [
+   0.14,
+   0.133,
+   0.137,
+   0.14,
+   0.14
+  ],
+  "da_pct_revenue": [
+   0.058,
+   0.058,
+   0.058,
+   0.058,
+   0.058
+  ],
+  "capex_pct_revenue": [
+   0.072,
+   0.071,
+   0.071,
+   0.071,
+   0.071
+  ],
+  "nwc_pct_revenue": 0.18,
+  "cost_of_net_debt": [
+   0.125,
+   0.13,
+   0.13,
+   0.125,
+   0.12
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.0,
+   0.1,
+   0.15,
+   0.18,
+   0.2
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.3,
+   0.3,
+   0.35,
+   0.4,
+   0.4
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.11,
+  "roe": 0.13
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.4
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Derivativos passivos de R$ 140,3 mi (jun/26, hedge cambial de importações, segundo o release) não somados à dívida — são parte do custo de produto. Risco sacado não divulgado no material consultado. Sem participações relevantes não consolidadas."
+ },
+ "target_multiples": {
+  "pe": 6.0,
+  "ev_ebitda": 4.5,
+  "pbv": 0.9,
+  "rationale": "P/L 6x LPA 2027E: abaixo do P/L LTM pré-eleição (R$ 2,62 bi / R$ 419 mi = 6,3x) e próximo do Safra (5,7x 2026E, mar/26); EV/EBITDA IFRS-16 de 4,5x ≈ pré-eleição (R$ 2,62 bi + DL c/ arrendamentos R$ 2,77 bi = R$ 5,39 bi / EBITDA LTM R$ 1,14 bi = 4,7x). Alvos pré-eleição: Safra R$ 15,50 (mar/26), BBI R$ 17 (out/25), BTG R$ 16 (jul/25), XP R$ 16. P/VP 0,9x é referência."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.04,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Real acima de R$ 6 sem repasse na Fisia, ressaca pós-Copa e consumo fraco: receita 2027 estagna/cai, margem −2 p.p., covenant de 2,5x pressionado."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Repasse de preço da Nike, Centauro reformada sustenta SSS de dois dígitos e desalavancagem rápida com a conversão dos recebíveis."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.035,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.005
+ },
+ "debt_profile": {
+  "gross_debt_mn": 1613.9,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "CDI+1,0% (5ª emissão, SBFC15, abr/26–abr/28) a CDI+2,1% (3ª emissão, SBFC13, vence abr/27)",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 1039,
+  "covenant_nd_ebitda": 2.5,
+  "notes": "Dívida bruta ex-arrendamentos R$ 1.613,9 mi (debêntures R$ 1.465,5 + empréstimos R$ 148,5), 27% no curto prazo (R$ 440,6 mi). 100% CDI é premissa (todas as emissões identificadas são DI+). Vencimentos 24 meses ≥ R$ 1.039 mi = curto prazo R$ 440,6 + SBFC15 ~R$ 598 mi em 24/04/2028 (cálculo próprio). Prazo médio não divulgado. 6ª emissão aprovada em 15/10/2026 (termos não obtidos). Covenants (S&P, fev/25): DL/EBITDA < 2,5x e EBITDA/resultado financeiro > 3,5x, medição anual em dezembro, sem vencimento antecipado automático. Rating brAA- (S&P)."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -9,
+  "notes": "DL ex-arrendamentos de R$ 1.185 mi (jun/26), 100% CDI → +1 p.p. ≈ −R$ 12 mi antes de IR (~−R$ 9 mi após IR com alíquota efetiva baixa) — cálculo próprio; com a normalização dos recebíveis da Copa, ~−R$ 9 mi antes de IR. O canal maior é o câmbio (custo de produto Nike importado), sem sensibilidade divulgada."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.265,
+  "ebitda_margin_avg_5y": 0.1346,
+  "roe_avg_5y": 0.1393,
+  "payout_avg_5y": 0.22,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.221,
+   "ebitda_margin": 0.154,
+   "net_income_mn": 130.5,
+   "net_debt_ebitda": 2.43
+  },
+  "notes": "CAGR 2020–25 de 26,5% está inflado pela consolidação da Fisia (dez/2020); 2021–25 = 10,9% a.a.; 3 anos = 7,3% a.a. Projetamos +12% em 2026 (1S26 +18,8% com a Copa; 2S26 ~+7%), +4% em 2027 (base difícil pós-Copa e câmbio) e 7–7,5% em 2028–30 — média 7,5%, próxima do histórico de 3 anos. Margem EBITDA IFRS-16 (CVM) média 2021–25 de 13,5% (12,3%–14,5%); LTM 13,65%; 1S26 15,0%. Projetamos 14,0% (2026), 13,3% (2027, câmbio/base) → 14,0% (2029–30): sem ganho estrutural além do histórico. ROE médio 2021–25 de 13,9% (ROE de 2021 inflado por crédito fiscal); projetado 9–13%. Payout médio ~22% do lucro do ano anterior (dividendos de 2022–2026; R$ 125 mi em 2026 ≈ 38% do lucro de 2025), além de recompras de R$ 126 mi (2025) e R$ 353 mi (1S26). Regra IFRS-16: capex = capex caixa (média 2023–1S26 ~4,2% da receita; 5,4% em 2025) + adições de direito de uso ≈ amortização do direito de uso (R$ 226,7 mi em 2025 = 2,9% da receita) → 7,1–7,2%. DL/EBITDA do 2T26 = DL CVM c/ arrendamentos R$ 2.771 mi / EBITDA IFRS-16 LTM R$ 1.142 mi (2,15x normalizando a Copa); a companhia reporta 1,51x no conceito ex-IFRS. Alíquota efetiva histórica ~0% (incentivo de ICMS da Fisia: IR/CS positivo em 2021, 2025 e LTM); projetamos 0% → 20% por cautela."
+ },
+ "guidance": "Sem guidance numérico oficial. Qualitativo (release 2T26): conversão dos recebíveis da Copa em caixa no 3T26 deve reduzir a alavancagem; foco em reformas da Centauro (31 de 101 lojas tradicionais reformadas, vendendo +10,8 p.p. acima das comparáveis), CDs secundários, novas Nike Direct Inline, corrida e futebol, incentivo de ICMS. Contrato com a Nike (aditamento de 28/08/2026) estendido até 31/05/2034, com reuniões anuais para prorrogações de 1 ano não automáticas. Referência externa (S&P, fev/25): capex de R$ 300–350 mi/ano em 2025–27 e dividendos de 25% do lucro do ano anterior.",
+ "dividend_policy": "Dividendo mínimo de 25% do lucro (S&P assume 25% do lucro do ano anterior); sem JCP identificado. Pagos: R$ 0,1178/ação (2022), R$ 0,1358 (2023), R$ 0,1735 (2024; ~R$ 42 mi), R$ 0,5484 (2025; R$ 127 mi) e R$ 0,5429 (2026; ~R$ 125 mi, pago em 05/08/26). Recompras: R$ 27 mi (2024), R$ 126 mi (2025), R$ 353 mi (1S26); 13.891.336 ações canceladas em 08/05/26; novo programa (31/08/26) de até 12.885.563 ações (10% do free float) até 29/02/2028. Modelo: payout 30% → 40%, sem recompra (o motor não credita recompra como provento).",
+ "election_impact": "Queda de ~48–51% (R$ 11,36 → ~R$ 5,7–6,0) é a maior do grupo depois de MGLU3 — e parte é fundamental: (i) dívida 100% CDI (bruta R$ 1,61 bi, DL ex-arrendamentos R$ 1,18 bi) → +1 p.p. ≈ −R$ 9–12 mi/ano; (ii) câmbio: real 10% mais fraco encarece o produto Nike importado da Fisia (~55% da receita), com repasse defasado; (iii) consumo discricionário de classe B/C e base difícil pós-Copa em 2027. Contrapontos: isenção de IR e salário mínimo apoiam a renda; real mais fraco encarece também o cross-border; o contrato Nike até 2034 removeu o maior risco micro em ago/26. Nosso lucro 2026E (R$ 403 mi) fica ~17% abaixo do BBI pré-eleição (R$ 486 mi, out/25) e o 2027E (R$ 320 mi) cai mais ~20% com câmbio e base pós-Copa — dano maior que o de LREN3/CEAB3, mas o preço caiu quase metade.",
+ "summary": "Centauro + Fisia (distribuição exclusiva da Nike no Brasil até 2034), com 2T26 forte (receita +22% com a Copa). É o nome mais alavancado e exposto a câmbio do grupo de moda (DL c/ arrendamentos 2,4x o EBITDA, 2,15x normalizado; dívida 100% CDI). A ~R$ 6 o P/L LTM é ~3,4x e a TIR de dono ~20%, mas o valor justo (~R$ 4,6) fica abaixo do preço porque o FCF é baixo (capital de giro pesado) e o ROIC (~10–11%) está bem abaixo do WACC de 19%: a queda é parte macro, parte fundamental.",
+ "thesis": [
+  "Risco Nike reduzido: aditamento de 28/08/2026 estende a distribuição exclusiva até 31/05/2034 (~7 anos de previsibilidade, vs ~5 antes).",
+  "Momento operacional forte: 2T26 com receita +22,1%, Centauro SSS +23,6%, Fisia +27,5%, EBITDA ajustado ex-IFRS +48,7% (margem 11,2%) e lucro de R$ 130,5 mi (+181%).",
+  "Valuation de crise: P/L LTM ~3,3–3,4x e P/VP ~0,44x; 13,9 mi de ações canceladas em mai/26 e novo programa de até 12,9 mi ações (5,6% do capital) até fev/28.",
+  "Desalavancagem visível: recebíveis extraordinários da Copa (~0,4x EBITDA, ~R$ 314 mi) viram caixa no 3T26."
+ ],
+ "risks": [
+  "Câmbio: a Fisia importa produto Nike e o release do 2T26 já cita pressão cambial na margem; real 10% mais fraco em 2027 sem repasse total.",
+  "Alavancagem/refinanciamento: dívida 100% CDI (CDI+1,0% a +2,1%), 27% no curto prazo, SBFC15 (~R$ 600 mi) vence em abr/28; covenant DL/EBITDA < 2,5x (medição anual).",
+  "Base de comparação pós-Copa em 2027 (1S26 cresceu 18,8%) e consumo discricionário sensível a crédito.",
+  "Dependência da Nike (~60% da receita do grupo); renovação da exclusividade das lojas físicas Nike ainda em negociação (Brazil Journal, ago/26).",
+  "Alíquota efetiva ~0% (incentivo de ICMS) pode subir com mudança tributária; não divulga % de compras em dólar nem política de hedge."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 em 09/11/2026, após o fechamento (call 10/11): conversão dos recebíveis da Copa em caixa.",
+  "6ª emissão de debêntures (aprovada em 15/10/2026) para alongar o perfil.",
+  "Recompra (programa até 29/02/2028).",
+  "Eventual renovação de 10 anos das lojas físicas Nike."
+ ],
+ "key_data": [
+  {
+   "label": "Preço 26/10 ~12h (B3)",
+   "value": "R$ ~5,7–6,1",
+   "context": "−46% a −51% no dia; R$ 11,36 em 23/10"
+  },
+  {
+   "label": "Receita 2T26 / Centauro SSS",
+   "value": "R$ 2.219 mi (+22,1%) / +23,6%",
+   "context": "Copa do Mundo"
+  },
+  {
+   "label": "EBITDA IFRS-16 LTM (CVM)",
+   "value": "R$ 1.142 mi (13,65%)",
+   "context": "ajustado ex-IFRS 2T26: 11,2%"
+  },
+  {
+   "label": "DL c/ arrendamentos / EBITDA LTM",
+   "value": "2,43x (2,15x normalizado)",
+   "context": "empresa: 1,51x ex-IFRS; covenant 2,5x"
+  },
+  {
+   "label": "Lucro LTM 2T26 (CVM)",
+   "value": "R$ 419 mi",
+   "context": "P/L ~3,3x"
+  },
+  {
+   "label": "Contrato Nike",
+   "value": "até 31/05/2034",
+   "context": "aditamento 28/08/2026"
+  },
+  {
+   "label": "Ações",
+   "value": "230,66 mi",
+   "context": "controladores 43,3%; free float 55,9%"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Release 2T26 (via Investidor10, link oficial de comunicado)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/SBFG3/47303/"
+  },
+  {
+   "title": "RI Grupo SBF (calendário: 3T26 em 09/11/2026)",
+   "url": "https://ri.gruposbf.com.br/"
+  },
+  {
+   "title": "Brazil Journal — extensão do contrato Nike (28/08/2026)",
+   "url": "https://braziljournal.com/grupo-sbf-estende-contrato-com-a-nike-reduzindo-seu-maior-risco/"
+  },
+  {
+   "title": "S&P — relatório de rating (10/02/2025)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/40f00e34-890c-4820-9efb-2adf7401bba7/fb8cd6dd-55de-a4c5-ad2e-2497bf0971bc?origin=1"
+  },
+  {
+   "title": "Debênture SBFC13",
+   "url": "https://maisretorno.com/debentures/sbfc13"
+  },
+  {
+   "title": "Debênture SBFC15",
+   "url": "https://maisretorno.com/debentures/sbfc15"
+  },
+  {
+   "title": "CVM — 6ª emissão (15/10/2026)",
+   "url": "https://www.rad.cvm.gov.br/ENET/frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1577605"
+  },
+  {
+   "title": "Renovainvest — programa de recompra (31/08/2026)",
+   "url": "https://renovainvest.com.br/?p=105400"
+  },
+  {
+   "title": "Money Times — Safra (mar/2026)",
+   "url": "https://www.moneytimes.com.br/grupo-sbf-sbfg3-safra-ve-relacao-risco-retorno-cada-vez-mais-favoravel-veja-o-que-fazer-com-a-acao-lmrs/"
+  },
+  {
+   "title": "Dados de Mercado — dividendos SBFG3",
+   "url": "https://www.dadosdemercado.com.br/acoes/sbfg3/dividendos"
+  },
+  {
+   "title": "InfoMoney — pregão ao vivo 26/10/2026",
+   "url": "https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-26102026/"
+  },
+  {
+   "title": "Estrutura societária (RI)",
+   "url": "https://ri.gruposbf.com.br/governanca-corporativa/estrutura-societaria/"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (data/hist/SBFG3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média — dados oficiais consistentes (DL conferida com o release), mas classificação de arrendamentos atípica na CVM, alíquota efetiva atípica, sensibilidade cambial não divulgada e release do 4T25 não lido diretamente."
+}

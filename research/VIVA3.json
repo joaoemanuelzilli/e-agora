@@ -1,0 +1,242 @@
+{
+  "ticker": "VIVA3",
+  "name": "Vivara Participações S.A.",
+  "sector": "Consumo discricionário / Joalheria (Vivara, Life)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "VIVA3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Base CVM sem ajustes (receita 2025 = 3.026,6; lucro 2025 = 619,5). O release apresenta números pré-IFRS 16; nosso modelo usa o conceito CVM IFRS-16 (EBITDA 2T26 = R$ 239,3 mi, margem 28,7%; dívida líquida inclui R$ 707 mi de arrendamentos). Lucro reportado tem alíquota efetiva ~0% porque a empresa reconhece IR diferido sobre o lucro intercompany fábrica→varejo (ativo fiscal diferido subiu de 568,6 para 625,9 no 1S26); o IR corrente é ~18–20% do LAIR. Projetamos alíquota de 14%→18% (meio-termo conservador)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.1,
+      0.09,
+      0.09,
+      0.08,
+      0.07
+    ],
+    "ebitda_margin": [
+      0.278,
+      0.275,
+      0.28,
+      0.28,
+      0.28
+    ],
+    "da_pct_revenue": [
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05
+    ],
+    "capex_pct_revenue": [
+      0.062,
+      0.062,
+      0.06,
+      0.058,
+      0.058
+    ],
+    "nwc_pct_revenue": 0.55,
+    "cost_of_net_debt": [
+      0.17,
+      0.165,
+      0.155,
+      0.145,
+      0.14
+    ],
+    "other_financial": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tax_rate": [
+      0.14,
+      0.15,
+      0.16,
+      0.17,
+      0.18
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      0.35,
+      0.45,
+      0.5,
+      0.55,
+      0.55
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.17,
+    "roe": 0.2
+  },
+  "wacc": {
+    "kd_pre_tax": 0.155,
+    "target_debt_weight": 0.12
+  },
+  "adjustments": {
+    "other_debt_like": 39,
+    "non_operating_assets": 0,
+    "minority_value": null,
+    "notes": "DL base CVM 2T26 = empréstimos 518,3 + arrendamentos 707,4 − caixa 416,7 = R$ 809,1 mi. Debt-like extra: swap do empréstimo 4131 (passivo de derivativo R$ 36,6 mi, que o release soma à dívida bruta) + fornecedor convênio/risco sacado R$ 2,6 mi. Capex inclui adições de direito de uso (~3% da receita; passivo de arrendamento subiu R$ 122 mi em 2025 com 50+ lojas novas por ano) para manter consistência com EBITDA IFRS-16 e DL com arrendamentos."
+  },
+  "target_multiples": {
+    "pe": 9.5,
+    "ev_ebitda": 6.5,
+    "pbv": 1.8,
+    "rationale": "Múltiplos históricos (preço médio do ano ÷ CVM): P/L 2021 22x, 2022 16x, 2023 16,5x, 2024 9,4x, 2025 9,6x; EV/EBITDA (IFRS-16, fim de ano) 16,5x/11,5x/14,6x/6,2x/9,8x. O regime de juros altos (2024–25) re-precificou a ação para ~9,5x P/L; com DI longo em ~15,7% usamos 9,5x P/L e 6,5x EV/EBITDA (abaixo da média de 2024–25 de ~8x). Antes da eleição negociava ~10,8x P/L LTM e ~8x EV/EBITDA."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.035,
+      "ebitda_margin_shift": -0.025,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Ouro/prata em R$ seguem subindo com o dólar e a Vivara não consegue repassar (compressão de margem bruta), enquanto shoppings perdem fluxo com juros altos e o plano de redução de estoque perde tração."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.015,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Life mantém 45+ aberturas/ano com maturação rápida, digital (+21%) dilui despesas e a otimização de estoque (582→~500 dias) libera caixa para dividendos maiores."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.03,
+    "ebitda_margin_sd": 0.015,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.005
+  },
+  "debt_profile": {
+    "gross_debt_mn": 557,
+    "pct_floating_cdi": 0.9,
+    "avg_cost": "CDI + spread (inclui empréstimo 4131 em moeda estrangeira com swap para CDI); custo médio não divulgado nas fontes lidas",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": 256,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -2,
+    "notes": "Dívida líquida ex-arrendamentos de apenas R$ 141 mi (0,18x EBITDA pré-IFRS 16): +100 bp de CDI ≈ −R$ 1–2 mi no lucro. O custo de antecipação de recebíveis de cartão (usada em dez/25 e jun/25) também sobe com o CDI."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.236,
+    "ebitda_margin_avg_5y": 0.28,
+    "roe_avg_5y": 0.239,
+    "payout_avg_5y": 0.306,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.095,
+      "ebitda_margin": 0.287,
+      "net_income_mn": 151.7,
+      "net_debt_ebitda": 0.91
+    },
+    "notes": "CAGR 5a de 23,6% parte da base pandêmica de 2020; CAGR 3a = 18%; o 1S26 já desacelerou para +10%. Projetamos 8,6% a.a. 2025–30 (10%→7%), abaixo do histórico por maturidade e pelo choque macro. Margem EBITDA IFRS-16 média 5a = 28,0%: projetamos 27,5–28% (2027 com pressão de metais via câmbio). ROE médio 24% vem de lucros com alíquota efetiva ~0%; com alíquota 14–18% o ROE projetado cai para ~17–19%. Payout médio 31% (2025 = 83% antecipando a tributação de dividendos); projetamos 35%→55%. IFRS-16: capex projetado (6,2%→5,8%) = capex caixa ~3,0–3,2% (2025: 2,7%; 1S26: 3,0%) + adições de direito de uso ~3,0% (amortização de principal de arrendamento na DFC: R$ 101 mi em 2025 = 3,3% da receita; passivo de arrendamento +R$ 122 mi em 2025 com a expansão)."
+  },
+  "guidance": "Sem guidance numérico de receita/margem. Release 2T26 (05/08/2026): continuidade da expansão (51 lojas abertas em 12 meses; 520 pontos de venda), estratégia multi-metal para sustentar margem bruta (~71%), redução de estoques (582 dias, −88 dias a/a) e redução expressiva das transferências entre lojas a partir do 3T26.",
+  "dividend_policy": "Mínimo estatutário de 25% do lucro ajustado. Pagou R$ 87,7 mi (2024) e R$ 513,6 mi em 2025 (dividendos R$ 319,2 mi + JCP R$ 194,4 mi; payout 83%, antecipação à tributação de dividendos de 2026). Nenhum provento pago no 1S26. Ações em tesouraria: 1,06 mi.",
+  "election_impact": "Queda de ~30% hoje: beta de consumo discricionário/shopping e prêmio de risco. O que muda de fato: (i) câmbio — ouro e prata são cotados em dólar, então o real −9,5% eleva o custo de reposição; a Vivara tem ~582 dias de estoque e reaproveita metal, o que dá hedge natural por 12–18 meses e valoriza o estoque, mas exigirá repasse de preço em 2027; (ii) juros — dívida líquida ex-arrendamentos quase zero, impacto direto pequeno, mas o crédito ao consumidor (parcelamento sem juros) encarece a antecipação de recebíveis; (iii) consumo — público de média-alta renda é menos beneficiado pela isenção do IR até R$ 5 mil, mas a Life atinge renda média; (iv) ZFM — benefícios de Manaus foram preservados na reforma tributária. Valor intrínseco cai pouco (margem 2027 −0,5 p.p.); a maior parte da queda é taxa de desconto.",
+  "summary": "Maior joalheria do Brasil (25,4% de market share), verticalizada (fábrica em Manaus) e com crescimento de dois dígitos via Life e digital; balanço quase sem dívida financeira. A R$ 18,8 negocia ~7,6x P/L LTM e ~5,9x EV/EBITDA (IFRS-16), mas com alíquota efetiva artificialmente baixa e capital de giro pesado; com Ke de 25% o valor intrínseco fica abaixo do preço — é uma oportunidade de qualidade se os múltiplos voltarem à média de 2024–25.",
+  "thesis": [
+    "Crescimento resiliente: receita líquida +10,1% no 1S26 (R$ 1.428,6 mi), SSS total 8,0% no 2T26, digital +21,2%; 51 lojas novas em 12 meses (520 pontos).",
+    "Margens altas e estáveis: margem bruta 71,7% no 2T26 mesmo com ouro/prata em alta; EBITDA IFRS-16 28,7%.",
+    "Balanço: dívida líquida ex-arrendamentos de R$ 141 mi (0,18x), conversão de EBITDA em caixa de 71,7% no 2T26 e estoque caindo de 670 para 582 dias.",
+    "Preço: ~7,6x P/L LTM vs. 9,5x médio de 2024–25 e 16–22x em 2021–23."
+  ],
+  "risks": [
+    "Metais preciosos: ouro/prata em R$ recordes com o dólar; repasse limitado pode comprimir a margem bruta em 2027.",
+    "Capital de giro pesado (estoque ~R$ 1,5 bi + recebíveis R$ 1,0 bi ≈ 80% da receita) consome caixa e derruba o ROIC (~16%).",
+    "Qualidade do lucro: alíquota efetiva ~0% depende de IR diferido sobre operações intercompany e de incentivos de Manaus (SUDAM/ICMS); mudança regulatória ou redução de produção eleva a alíquota.",
+    "Fluxo em shoppings e consumo de média-alta renda com juros altos; execução da expansão Life (diluição de produtividade de lojas novas)."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (início de novembro, a confirmar).",
+    "Retomada de JCP/dividendos no 2S26 (nada foi pago no 1S26).",
+    "Continuidade da redução de estoques (meta implícita de dias < 580) liberando caixa."
+  ],
+  "key_data": [
+    {
+      "label": "Receita líquida 2T26",
+      "value": "R$ 833,1 mi (+9,5% a/a)",
+      "context": "efeito calendário/Copa −2 p.p."
+    },
+    {
+      "label": "EBITDA IFRS-16 2T26",
+      "value": "R$ 239,3 mi (28,7%)",
+      "context": "pré-IFRS 16: R$ 205,4 mi (24,7%)"
+    },
+    {
+      "label": "Lucro líquido 2T26",
+      "value": "R$ 151,7 mi (IFRS-16)",
+      "context": "LTM CVM R$ 585,8 mi"
+    },
+    {
+      "label": "DL/EBITDA 2T26",
+      "value": "0,91x com arrendamentos",
+      "context": "0,18x pré-IFRS 16 (DL R$ 140,9 mi)"
+    },
+    {
+      "label": "Dias de estoque",
+      "value": "582",
+      "context": "−88 dias a/a"
+    },
+    {
+      "label": "P/L LTM @R$ 18,84",
+      "value": "~7,6x",
+      "context": "P/VP 1,39x; ROE LTM ~19%"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Vivara — Release de Resultados 2T26 (05/08/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/61a4df2d-a461-44d6-9128-da74058019db/cda0f39f-8ec4-4b0d-0db3-6f9a0395f592?origin=2"
+    },
+    {
+      "title": "Mercado & Consumo — Vivara reduz dívida líquida em 57% (06/08/2026)",
+      "url": "https://mercadoeconsumo.com.br/06/08/2026/mc-capital/vivara-reduz-divida-liquida-em-57-amplia-participacao-de-mercado-e-acelera-expansao-da-life/"
+    },
+    {
+      "title": "DGABC/Estadão Conteúdo — Vivara lucro 2T26",
+      "url": "https://www.dgabc.com.br/Noticia/4339591/vivara-tem-lucro-liquido-de-r-156-7-milhoes-no-2-trimestre-alta-de-0-9-na-comparacao-anual"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/VIVA3.json)",
+      "url": "https://dados.cvm.gov.br/"
+    }
+  ],
+  "confidence": "média — dados operacionais e contábeis oficiais e sólidos; incerteza relevante em alíquota normalizada (0% reportado vs ~19% corrente), repasse de metais e na necessidade de capital de giro. Consenso de mercado não localizado nesta pesquisa."
+}

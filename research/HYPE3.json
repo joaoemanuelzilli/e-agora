@@ -1,0 +1,245 @@
+{
+ "ticker": "HYPE3",
+ "name": "Hypera S.A. (Hypera Pharma)",
+ "sector": "Farmacêutica (OTC/Consumer Health, prescrição, similares/genéricos)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "HYPE3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Base CVM mantida (RL FY2025 R$ 7.699 mi, deprimida pelo programa de redução de estoques no canal — 1T25 teve RL de só R$ 1.081 mi; DL 2T26 R$ 5.903,5 mi, igual ao release). Crescimento de 2026 (+18,6%) é majoritariamente efeito base (1S26 R$ 4.354 mi vs 1S25 R$ 3.235 mi). Sem arrendamentos relevantes. Ações: 704,0 mi após aumento de capital privado de R$ 1,5 bi homologado no fim do 1T26 (~70,5 mi novas ações, ≈ R$ 21,3/ação implícito)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.186,
+   0.09,
+   0.08,
+   0.07,
+   0.065
+  ],
+  "ebitda_margin": [
+   0.314,
+   0.3,
+   0.305,
+   0.31,
+   0.31
+  ],
+  "da_pct_revenue": [
+   0.038,
+   0.038,
+   0.038,
+   0.038,
+   0.038
+  ],
+  "capex_pct_revenue": [
+   0.055,
+   0.055,
+   0.055,
+   0.05,
+   0.05
+  ],
+  "nwc_pct_revenue": 0.25,
+  "cost_of_net_debt": [
+   0.135,
+   0.14,
+   0.135,
+   0.13,
+   0.125
+  ],
+  "other_financial": [
+   -60,
+   -65,
+   -70,
+   -75,
+   -80
+  ],
+  "tax_rate": [
+   0.0,
+   0.03,
+   0.07,
+   0.12,
+   0.18
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.45,
+   0.5,
+   0.55,
+   0.6,
+   0.6
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.13,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.28
+ },
+ "adjustments": {
+  "other_debt_like": 1441,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = JCP/dividendos declarados e não pagos R$ 983,9 mi (passivo com acionistas já ex-direito em 30/06/2026) + cessão de créditos por fornecedores (risco sacado) R$ 457,3 mi. Não somamos como ativo os créditos fiscais (prejuízos fiscais com efeito-caixa de R$ 5.666,9 mi; ágio fiscal R$ 156,8 mi → R$ 53,3 mi de IR) porque já estão refletidos na alíquota efetiva baixa até 2030 — são upside além de 2030."
+ },
+ "target_multiples": {
+  "pe": 9.0,
+  "ev_ebitda": 6.5,
+  "pbv": 1.0,
+  "rationale": "9x P/L e 6,5x EV/EBITDA 2027E. Pré-eleição (R$ 27,25; mkt cap ~R$ 19,2 bi) negociava ~11x P/L LTM (R$ 1.746 mi) e ~8,8x EV/EBITDA LTM; em 2021–23 o papel negociou ~12–16x P/L e ~10x EV/EBITDA. Desconto por câmbio (IFA), CMED baixo e Ke 25%."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Dólar ~R$ 5,8 sustentado comprime margem bruta em 2–3 p.p. sem repasse (CMED 2027 baixo), Semavy decepciona e alíquota de IR sobe com fim de subvenções."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Sell-out +9–10% com lançamentos (Semavy/GLP-1, fezolinetanto em 2027), câmbio volta a R$ 5,0–5,2 e capital de giro cai para ~22% da RL."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.025,
+  "ebitda_margin_sd": 0.012,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.004
+ },
+ "debt_profile": {
+  "gross_debt_mn": 7482,
+  "pct_floating_cdi": 0.82,
+  "avg_cost": "Debêntures CDI (~R$ 6,1 bi, CDI+~0,7–2,9% — valor justo descontado a CDI+0,66% a CDI+2,95%), debêntures IPCA (IPCA+6,28%), financiamentos TR/TJLP/TLP/FCO subsidiados (~R$ 0,8 bi). Dívida em EUR (R$ 364 mi) liquidada no 1S26.",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 280,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -45,
+  "notes": "Pela análise de sensibilidade do ITR 2T26 (cenário CDI +25%: debêntures CDI +R$ 211 mi; aplicações −R$ 55 mi), exposição líquida ~R$ 4,5 bi → +100 bp ≈ −R$ 45 mi antes de IR; com alíquota efetiva ~0% ≈ −R$ 45 mi no lucro (~2,5% do lucro 2027E). Covenants de DL/EBITDA e cobertura de juros existem (nota de empréstimos) mas os limites não foram verificados. 'next_24m' = dívida circulante (12 meses) R$ 280 mi."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.135,
+  "ebitda_margin_avg_5y": 0.321,
+  "roe_avg_5y": 0.133,
+  "payout_avg_5y": 0.52,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.085,
+   "ebitda_margin": 0.323,
+   "net_income_mn": 490,
+   "net_debt_ebitda": 2.07
+  },
+  "notes": "CAGR 2020–25 de 13,5% inclui a aquisição do portfólio Takeda (2021); 3 anos ~0,7% pela redução de estoques no canal (2024–25). Sell-out cresce ~8–9% (2T26 +7,6%, 1S26 +8,8%) → projetamos 9%→6,5% após o rebote de 2026. Margem EBITDA CVM: 35,4% (21), 35,1% (22), 34,8% (23), 28,2% (24), 27,0% (25) — os anos altos tinham sell-in acima do sell-out; usamos 30–31% (2T26 32,3%) já descontando câmbio do IFA. ROE médio 13,3%; payout de caixa ~52%. IR efetivo historicamente negativo (subvenções de ICMS de GO, JCP, ágio) — 1S26: benefício de R$ 67 mi; projetamos 0%→18%."
+ },
+ "guidance": "Sem guidance numérico de receita/EBITDA encontrado. Metas qualitativas no 2T26 (06/08/2026): seguir reduzindo estoques de insumos/produtos acabados (capital de giro 28% da RL anualizada vs 32% no 2T25; estoques R$ 1.927 mi) e desalavancar (2,1x). Lançamentos: Semavy (semaglutida, aprovada pela ANVISA no início do 3T26) e fezolinetanto (parceria Astellas, lançamento previsto no 1S27).",
+ "dividend_policy": "JCP trimestral: R$ 185,0 mi (1T26) e R$ 185,2 mi (2T26), R$ 0,26/ação cada (~45% do lucro). Pagos em caixa: R$ 760 mi (2023), R$ 787 mi (2024), R$ 628 mi (2025) — payout médio ~52%. R$ 983,9 mi de JCP/dividendos declarados a pagar em 30/06/2026.",
+ "election_impact": "Queda de ~27% combina câmbio e juros: (1) IFA/insumos majoritariamente importados e precificados em dólar — +9,5% no dólar, se persistir, pressiona a margem bruta a partir de 2027 (estoques de ~194 dias defasam o efeito) e o reajuste CMED não repassa câmbio diretamente; (2) DL de R$ 5,9 bi (2,1x) majoritariamente em CDI (+100 bp ≈ −2,5% do lucro). Micro de um 4º mandato: CMED segue fórmula legal (reajuste médio 2026 ~2,7–2,8%, abaixo do IPCA) — risco de reajustes apertados continua; política industrial (complexo da saúde, PDPs, BNDES/Finep a TJLP/TR) e preferência a produção nacional são positivas; Farmácia Popular amplia volume de genéricos/similares. Valor operacional caiu menos que o preço: fluxo de caixa operacional ~R$ 2,9 bi LTM (≈100% do EBITDA) e P/L 2027E ~8x.",
+ "summary": "Maior farmacêutica nacional de marcas OTC/prescrição (margem EBITDA ~32%, sell-out +7,6% no 2T26) saindo de dois anos de ajuste de estoques no canal, com capital reforçado (R$ 1,5 bi em 2026) e alavancagem caindo (2,1x). A R$ 19,8 negocia ~8x P/L 2027E e FCFE yield >10%; o principal risco real é câmbio sobre o IFA. TIR implícita ~14% (≈11,5% pré-eleição); ROE ~12% limita o valor a Ke 25%.",
+ "thesis": [
+  "Conversão de caixa: FCO de R$ 819 mi no 2T26 (108,5% do EBITDA) e FCL de R$ 1.006 mi no 1S26; capital de giro caiu para 28% da RL.",
+  "Desalavancagem: DL de R$ 7,7 bi (4T25) para R$ 5,9 bi (2T26), 2,1x EBITDA; aumento de capital reduz risco de refinanciamento em ano eleitoral.",
+  "Pipeline e escudo fiscal: Semavy (GLP-1, mercado de R$ 13,1 bi LTM), fezolinetanto (2027); prejuízos fiscais com efeito-caixa de R$ 5,7 bi mantêm IR caixa baixo por anos."
+ ],
+ "risks": [
+  "Câmbio: IFA em dólar; a cada 10% de alta do dólar, estimamos −1,5 a −2 p.p. de margem bruta se não houver repasse (estimativa, sem dado oficial de % do CPV em USD).",
+  "CMED abaixo da inflação (2,7–2,8% em 2026) e despesas de marketing/visitação crescendo acima das vendas (17,6% da RL no 2T26).",
+  "Qualidade do lucro: IR efetivo ~0% depende de subvenções de ICMS (reforma tributária as extingue até 2033) e JCP.",
+  "Histórico de sell-in acima do sell-out (2021–23) e governança (controlador; proposta de fusão da EMS em out/24 — desdobramentos 2025–26 não verificados)."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (data não verificada; em 2025 saiu no fim de outubro).",
+  "Lançamento comercial do Semavy e reajuste CMED de abr/2027.",
+  "Retomada de recompra/aumento de payout com alavancagem <2x."
+ ],
+ "key_data": [
+  {
+   "label": "Receita líquida 2T26",
+   "value": "R$ 2.336,7 mi (+8,5%)",
+   "context": "sell-out +7,6% (IQVIA), 1,4 p.p. acima do mercado"
+  },
+  {
+   "label": "EBITDA 2T26",
+   "value": "R$ 754,9 mi (32,3%)",
+   "context": "margem bruta 61,8% (+1,7 p.p.)"
+  },
+  {
+   "label": "Lucro líquido 2T26",
+   "value": "R$ 490,2 mi (+15,2%)",
+   "context": "1S26 R$ 837 mi; IR com benefício"
+  },
+  {
+   "label": "DL / EBITDA LTM",
+   "value": "2,1x",
+   "context": "R$ 5.903,5 mi; 4T25 R$ 7.665 mi"
+  },
+  {
+   "label": "Capital de giro / RL anualizada",
+   "value": "28%",
+   "context": "32% no 2T25; estoques 194 dias"
+  },
+  {
+   "label": "Preço 26/10 11h55",
+   "value": "R$ 19,83 (−27%)",
+   "context": "pré-eleição R$ 27,25; aumento de capital a ~R$ 21,3/ação (1T26)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Hypera — Press Release 2T26 (06/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/4be66703-ecd7-4134-a39e-224ce462b371/b8f9a239-11f6-b191-2764-efc15686ed97?origin=2"
+  },
+  {
+   "title": "Hypera — ITR 2T26 (sensibilidade de juros, tributos diferidos, empréstimos)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/4be66703-ecd7-4134-a39e-224ce462b371/cfc1a13c-348e-f1b6-67b5-edacf431a3dd?origin=2"
+  },
+  {
+   "title": "Hypera — Press Release 1T26 (aumento de capital de R$ 1,5 bi)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/4be66703-ecd7-4134-a39e-224ce462b371/81a9b9ad-2ead-08c6-d32c-2fffc26a90a9?origin=2"
+  },
+  {
+   "title": "Hypera — Apresentação 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/4be66703-ecd7-4134-a39e-224ce462b371/0fe5a843-9504-1c3d-ef42-6640e411238a?origin=2"
+  },
+  {
+   "title": "CVM — ITR/DFP padronizados (data/hist/HYPE3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média — dados do 2T26 conferidos (release/ITR/CVM); não verificados: % do CPV em dólar, reajuste CMED máximo de 2026, situação da EMS, consenso. Margem e alíquota de IR são as premissas mais incertas."
+}

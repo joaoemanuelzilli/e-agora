@@ -1,0 +1,254 @@
+{
+ "ticker": "CVCB3",
+ "name": "CVC Brasil Operadora e Agência de Viagens S.A.",
+ "sector": "Turismo / operadora e agência de viagens (B2C, B2B, Argentina)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "CVCB3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Base CVM FY2025 (receita 1.488,5). EBITDA CVM (2025 R$505 mi; margem 33,9%) inclui efeitos cambiais operacionais que a empresa reclassifica para o financeiro; uso margem no conceito ajustado da companhia (EBITDA aj. LTM R$440,2 mi ≈ 30% da receita)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   -0.03,
+   0.02,
+   0.04,
+   0.05,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.29,
+   0.3,
+   0.31,
+   0.31,
+   0.31
+  ],
+  "da_pct_revenue": [
+   0.155,
+   0.155,
+   0.155,
+   0.155,
+   0.155
+  ],
+  "capex_pct_revenue": [
+   0.09,
+   0.09,
+   0.09,
+   0.09,
+   0.09
+  ],
+  "nwc_pct_revenue": 0.0,
+  "cost_of_net_debt": [
+   0.17,
+   0.18,
+   0.18,
+   0.175,
+   0.17
+  ],
+  "other_financial": [
+   -260,
+   -270,
+   -275,
+   -280,
+   -285
+  ],
+  "tax_rate": [
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.045,
+  "roic": 0.2,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.18,
+  "target_debt_weight": 0.3
+ },
+ "adjustments": {
+  "other_debt_like": 1358.2,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = recebíveis de cartão antecipados (R$1.358,2 mi em 30/06/26, +R$307 mi a/a): financiamento do parcelamento ao cliente com custo de ~R$50 mi/tri (R$49,7 mi no 2T26). A própria empresa reporta 'DL + recebíveis antecipados' de R$1.573 mi (3,6x EBITDA aj.) vs DL de R$215 mi. Coerente com isso, o custo da antecipação entra em other_financial (−R$260 a −285 mi/ano, inclui variação cambial/outros) e não no EBITDA. IR diferido ativo de R$520 mi e depósitos judiciais (R$162 mi) não somados: monetização depende de lucro tributável que não aparece no horizonte."
+ },
+ "target_multiples": {
+  "pe": 8.0,
+  "ev_ebitda": 4.5,
+  "pbv": 1.0,
+  "rationale": "EV econômico inclui recebíveis antecipados. Pré-eleição (R$1,57): EV ≈ mcap R$818 mi + DL R$350 mi + antecipação R$1.358 mi ≈ R$2,5 bi / EBITDA aj. R$440 mi ≈ 5,7x → rendimento 17,4%+3pp ≈ 4,9x; uso 4,5x pelo prejuízo recorrente e covenant. Hoje ≈ 5,0x. P/L 8x só se aplicaria com lucro positivo (não projetado)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.35,
+   "revenue_growth_shift": -0.05,
+   "ebitda_margin_shift": -0.04,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Dólar alto derruba pacotes internacionais, CDI ~16% encarece antecipação, Argentina piora; nova diluição/reestruturação."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.04,
+   "ebitda_margin_shift": 0.03,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Turismo doméstico substitui internacional (CVC forte em nacional), economia de R$80 mi/ano capturada, take rate volta a ~9%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.05,
+  "ebitda_margin_sd": 0.03,
+  "terminal_g_sd": 0.01,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 400.5,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "7ª emissão CDI+3,90% (troca de set/26 de 86% das 4ª/5ª emissões a CDI+4,50%); antecipação de recebíveis ~CDI+spread",
+  "avg_maturity_years": 2.5,
+  "next_24m_maturities_mn": 230,
+  "covenant_nd_ebitda": 2.5
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -16,
+  "notes": "Dívida (R$400 mi) + antecipação (R$1.358 mi) ≈ R$1,76 bi atrelados ao CDI, menos caixa R$186 mi → ~R$1,57 bi → −R$16 mi/ano por +100 bp (sem benefício fiscal: empresa tem prejuízo) ≈ +12% do prejuízo ajustado LTM. Covenant DL/EBITDA ≤ 2,5x a partir do 3T26 (dívida exclui antecipação sem regresso e aluguéis), medido hoje em ~0,5x."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.1896,
+  "ebitda_margin_avg_5y": 0.094,
+  "roe_avg_5y": -0.95,
+  "payout_avg_5y": 0.0,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": -0.045,
+   "ebitda_margin": 0.201,
+   "net_income_mn": -72.5,
+   "net_debt_ebitda": 0.74
+  },
+  "notes": "CAGR 5a (19%) parte da base Covid (2020); 2019→2025 = −2,3% a.a. e 2023→2025 ~+2% a.a.: negócio sem crescimento real há 6 anos. Premissa 2025–30 ~2,6% a.a. Margem média 5a (9%) inclui prejuízos operacionais 2021–23; margem aj. atual ~30%. Prejuízo em todos os anos desde 2019 (LL 2025 −R$41 mi; LTM −R$132 mi); PL de R$323 mi com prejuízos acumulados de R$2,5 bi. Sem dividendos desde 2020."
+ },
+ "guidance": "Sem guidance numérico. Plano de eficiência (2T26): economia estimada >R$80 mi já em 2026 (antes de rescisões), extinção de 3 vice-presidências em mai/26. Reorganização da dívida: exchange offer da 7ª emissão (R$370 mi, CDI+3,90%, 1ª amortização set/27, vencimento set/29) + amortização extraordinária de R$77 mi em 09/10/26.",
+ "dividend_policy": "Sem distribuição desde 2020 (prejuízos acumulados ~R$2,5 bi; dividendo obrigatório só com lucro após absorção). Não há perspectiva de proventos no horizonte.",
+ "election_impact": "Queda de −32% é parte macro, parte micro: (i) dólar +9,5% encarece pacotes internacionais (perda de demanda e de take rate), (ii) CDI mais alto eleva direto o custo da antecipação de recebíveis (~R$16 mi/ano por +100 bp, sem escudo fiscal), (iii) consumo discricionário de classe média com crédito caro. Aqui o choque afeta o fluxo de caixa, não só a taxa de desconto: a empresa já dava prejuízo com Selic 13,75–15%. Ponto a favor: turismo doméstico e B2B (Rextur Advance) podem absorver parte da demanda; Copa e Black Friday no 4T.",
+ "summary": "Maior operadora de turismo do país, com EBITDA ajustado de ~R$440 mi, mas lucro negativo há 6 anos porque o parcelamento sem juros ao cliente é financiado com antecipação de recebíveis (R$1,36 bi, ~R$200 mi/ano de custo). DL reportada de R$215 mi esconde dívida econômica de ~R$1,6 bi (3,6x EBITDA). Com CDI e dólar mais altos, o FCFE fica negativo: armadilha de valor a Ke 25%.",
+ "thesis": [
+  "Múltiplo aparente baixo (EV/EBITDA ~2x com DL contábil) é ilusório: com recebíveis antecipados o EV/EBITDA é ~5x e o lucro é negativo.",
+  "Opcionalidade: corte de custos de >R$80 mi/ano e liderança em B2B (Rextur Advance) podem levar ao breakeven se o CDI cair para ~11%.",
+  "Dívida financeira reperfilada (7ª emissão CDI+3,90%, vencimento 2029) e covenant folgado (~0,5x vs 2,5x)."
+ ],
+ "risks": [
+  "Custo da antecipação de recebíveis cresce com o CDI e com o volume (+R$307 mi a/a): prejuízo estrutural.",
+  "Dólar alto e preço de passagens (+52% a/a no IPCA de jun/26) reduzem demanda e take rate (8,2%, −0,8 pp).",
+  "Argentina (EBITDA −83% a/a no 2T26) e risco de nova diluição/reestruturação (PL R$323 mi caindo ~R$150 mi/semestre).",
+  "Capital de giro negativo (adiantamentos de clientes R$1,82 bi): queda de vendas consome caixa rapidamente."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (~meados de nov/26): primeira medição do covenant de 2,5x da 7ª emissão.",
+  "Captura das economias de custos (>R$80 mi) no 2S26.",
+  "Eventual venda de ativos (Argentina) ou capitalização — pode ser negativo (diluição)."
+ ],
+ "key_data": [
+  {
+   "label": "Preço / variação hoje",
+   "value": "R$1,07 (−31,8%)",
+   "context": "sexta R$1,57; 520,8 mi ações; mcap ~R$557 mi"
+  },
+  {
+   "label": "Reservas confirmadas 2T26",
+   "value": "R$4,09 bi",
+   "context": "+0,2% a/a (+4,1% comparável)"
+  },
+  {
+   "label": "EBITDA ajustado LTM",
+   "value": "R$440,2 mi",
+   "context": "margem 2T26 26,6%"
+  },
+  {
+   "label": "DL reportada / DL + antecipação",
+   "value": "R$215 mi / R$1.573 mi",
+   "context": "0,5x / 3,6x EBITDA aj."
+  },
+  {
+   "label": "Prejuízo ajustado 1S26",
+   "value": "−R$114,4 mi",
+   "context": "contábil 2T26 −R$72,5 mi"
+  },
+  {
+   "label": "Juros de antecipação 2T26",
+   "value": "R$49,7 mi",
+   "context": "+30,8% a/a"
+  },
+  {
+   "label": "PL (30/06/26)",
+   "value": "R$323 mi",
+   "context": "R$479 mi em dez/25"
+  }
+ ],
+ "sources": [
+  {
+   "title": "CVC — Earnings Release 2Q26 (RI)",
+   "url": "https://www.cvccorp.com.br/wp-content/uploads/2026/08/Earnings-Release-2Q26-EN-1.pdf"
+  },
+  {
+   "title": "CVC — Comunicado: conclusão do exchange offer 7ª emissão (30/09/26)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/CVCB3/50154/"
+  },
+  {
+   "title": "CVC — Aviso de amortização extraordinária (05/10/26)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/CVCB3/50443/"
+  },
+  {
+   "title": "CVC — Aditamento à escritura da 7ª emissão (covenant 2,5x)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/CVCB3/50497/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizadas (data/hist, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — cotação ao vivo (API oficial)",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/"
+  }
+ ],
+ "confidence": "média — dados do release e escrituras; o veredito (armadilha) é robusto ao tratamento da antecipação: mesmo tratando o custo como despesa operacional em vez de dívida, o valor a Ke 25% fica abaixo do preço."
+}

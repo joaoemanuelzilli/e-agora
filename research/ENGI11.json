@@ -1,0 +1,257 @@
+{
+ "ticker": "ENGI11",
+ "name": "Energisa S.A.",
+ "sector": "Utilities / distribuição de energia (9 distribuidoras) + gás, transmissão, (re)energisa",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 5,
+ "listed_classes": [
+  {
+   "ticker": "ENGI11",
+   "class": "UNIT"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 29384.6,
+   "net_debt": 30779.0
+  },
+  "notes": "Receita-base = 'receita líquida ajustada' FY2025 do release 4T25 (R$ 29.384,6 mi): exclui receita de construção (ICPC 01, margem ~zero; DVA 7.01.03 = R$ 5.694 mi), VNR (ativo financeiro indenizável, não caixa, R$ 630 mi) e a receita societária da transmissão (substituída pela regulatória). CVM FY2025 = R$ 35.441 mi. EBITDA-base coerente = EBITDA ajustado recorrente FY2025 R$ 8.198 mi (27,9%). Dívida líquida-base = DL CVM 2T26 (R$ 32.879 mi, inclui arrendamentos) menos ~R$ 2,1 bi pró-forma da venda (reciclagem) de parte da transmissão por R$ 2,3 bi (ativos já classificados como mantidos para venda no 2T26; release diz redução de 0,2x DL/EBITDA). Unit = 1 ON + 4 PN (confirmado: R$ 0,10/ação = R$ 0,50/unit); 2.515,3 mi ações = 503,1 mi units equivalentes."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.065,
+   0.07,
+   0.07,
+   0.07,
+   0.065
+  ],
+  "ebitda_margin": [
+   0.27,
+   0.28,
+   0.285,
+   0.29,
+   0.29
+  ],
+  "da_pct_revenue": [
+   0.074,
+   0.076,
+   0.078,
+   0.08,
+   0.08
+  ],
+  "capex_pct_revenue": [
+   0.22,
+   0.21,
+   0.2,
+   0.19,
+   0.18
+  ],
+  "nwc_pct_revenue": 0.05,
+  "cost_of_net_debt": [
+   0.151,
+   0.157,
+   0.152,
+   0.147,
+   0.142
+  ],
+  "other_financial": [
+   250,
+   260,
+   270,
+   280,
+   290
+  ],
+  "tax_rate": [
+   0.22,
+   0.23,
+   0.24,
+   0.25,
+   0.25
+  ],
+  "minority_share_ni": 0.22,
+  "payout": [
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.13,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.45
+ },
+ "adjustments": {
+  "other_debt_like": 420,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = dividendos intercalares declarados após o balanço (R$ 251,5 mi, pagos 24/08/2026) + benefício pós-emprego (R$ 169 mi). Derivativos passivos (~R$ 2,8 bi, swaps USD/IPCA→CDI) e créditos setoriais CDE/CCC/CVA (R$ 2,86 bi) praticamente se anulam (DL da companhia ex-créditos = R$ 32.530 mi vs CVM R$ 32.879 mi), por isso não entram. Minoritários a valor contábil (R$ 3.485 mi, inclui ~10% da Denerge integralizados pelo Itaú por R$ 1,4 bi)."
+ },
+ "target_multiples": {
+  "pe": 11.0,
+  "ev_ebitda": 6.5,
+  "pbv": 1.0,
+  "rationale": "Aproximação (memória de mercado, não verificada nesta sessão): ENGI11 negociou ~10–14x P/L e ~6,5–7,5x EV/EBITDA em 2021–2025. Uso ~11x / 6,5x (meio-baixo da faixa) porque o custo da dívida pós-choque (CDI ~15%) comprime o lucro por anos; em 31/12/2025 a companhia reportou EV R$ 59,0 bi e P/VP 1,23x."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.015,
+   "ebitda_margin_shift": -0.01,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.01,
+   "narrative": "CDI acima de 15% até 2029, pressão política sobre tarifas/CDE no 4º mandato e GD erodindo mercado faturado; alavancagem força emissão de ações."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.01,
+   "narrative": "Curva devolve o choque (CDI ~12% em 2028), RTPs reconhecem a BRR e as renovações até 2061 destravam reprecificação."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.012,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 45346,
+  "pct_floating_cdi": 0.98,
+  "avg_cost": "99,77% do CDI (14,26% a.a.) em jun/26",
+  "avg_maturity_years": 6.7,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": 4.25
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -260,
+  "notes": "Pós-swaps a dívida é praticamente toda CDI (R$ 14 bi CDI + R$ 5 bi USD/EUR swapados + R$ 15 bi IPCA swapados para CDI). Exposição líquida ~R$ 35 bi (dívida bruta R$ 45 bi − caixa R$ 10 bi que rende CDI): +100 bp = −R$ 350 mi/ano antes de IR, ≈ −R$ 260 mi depois de IR (consolidado). Os +300 bp da curva longa, se materializados no CDI, custariam ~R$ 0,8 bi/ano de lucro — ~40% do lucro recorrente de 2025 (R$ 2.065 mi). Premissa de custo da DL calibrada no resultado financeiro recorrente do 2T26 (−R$ 1.242 mi/tri ≈ CDI + 1,2 p.p. sobre a DL, já líquido de acréscimos moratórios) e numa trajetória central de CDI 13,9% (2S26) → 14,5% (2027) → 14,0% → 13,5% → 13,0% (2030): metade do choque persiste. A curva de hoje implica CDI ~15–16% em 2027–30 (cenário bear); a pré-eleição, ~12,5–13%."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.119,
+  "ebitda_margin_avg_5y": 0.248,
+  "roe_avg_5y": 0.225,
+  "payout_avg_5y": 0.68,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.04,
+   "ebitda_margin": 0.27,
+   "net_income_mn": -130,
+   "net_debt_ebitda": 3.1
+  },
+  "notes": "CAGR CVM 2020–25 de 11,9% inclui aquisições (ES Gás, Norgás, Rede) e receita de construção; a receita ajustada cresceu 7,4% em 2025 e 6% no 1S26 — premissa 6–6,5% a.a. EBITDA ajustado recorrente cresceu 9,5% em 2025 e só 4% no 1S26; margem premissa 27–28% (2025: 27,9%). ROE CVM 2020–24 ~18–24% (com VNR/créditos fiscais), 2025 12%, LTM 7,8%: o resultado financeiro (−R$ 4,6 bi LTM) é o vilão. Payout em caixa 2025 >100% (R$ 3,60/unit pagos) não é sustentável com DL/EBITDA real ~3,9x; uso 50%."
+ },
+ "guidance": "Sem guidance numérico de lucro/EBITDA. Renovação por 30 anos (até 2061) das concessões de EMT, EMS, EPB e ESE concluída no 2T26 (64% do EBITDA do grupo) abre 'novo ciclo de investimentos' em modernização/resiliência; capex 2025 R$ 6,6 bi e 6M26 R$ 3,3 bi (+11%). Covenant 4,25x DL/EBITDA. Plano de R$ 930 mi até 2030 na ES Gás.",
+ "dividend_policy": "Estatuto: mínimo 25% do lucro ajustado; prática de dividendos intercalares trimestrais/semestrais. 2025: R$ 3,60/unit pagos (UDM), bonificação de 10% em units. 2026: R$ 0,50/unit (R$ 251,5 mi) aprovados em 06/08/2026. Com DL real ~3,9x EBITDA recorrente e custo CDI, premissa de payout 50%.",
+ "election_impact": "Caiu ~35% (R$ 66,47 → R$ 43,40). Canal macro dominante e real: dívida ~100% CDI pós-swap — cada +100 bp tira ~R$ 260 mi/ano do lucro; a curva +300 bp elevou o custo implícito e comprimiu o múltiplo. Canal micro/político: 4º mandato aumenta risco de modicidade tarifária (CDE, tarifa social, bandeiras), mas as 4 maiores concessões já foram renovadas até 2061 sob o Decreto 12.068/2024 — o maior risco de renovação foi removido antes da eleição. O valor intrínseco caiu de fato: com CDI ~15% o ROE projetado fica em ~4–6% e a alavancagem sobe; não é só prêmio de risco.",
+ "summary": "Distribuidora de qualidade operacional (9 concessões, 4 renovadas até 2061), mas a estrutura de capital é o problema: DL R$ 32,5 bi praticamente toda em CDI, lucro recorrente de apenas R$ 88 mi no 2T26 e alavancagem real ~3,9x EBITDA recorrente. Com Ke de 25% e CDI ~15%, o equity vale bem menos que o preço mesmo após a queda; é armadilha de juros, não oportunidade.",
+ "thesis": [
+  "Renovação por 30 anos (até 2061) de EMT, EMS, EPB e ESE (64% do EBITDA) elimina o risco de vencimento de concessão no 4º mandato.",
+  "EBITDA ajustado recorrente R$ 8,2 bi em 2025 (+9,5%) e tarifas 2026 com reajustes de +6,9% a +15,7% indexadas a IGP-M/IPCA protegem a receita real.",
+  "Opcionalidade: se a curva devolver o choque (CDI −300 bp), o lucro ganha ~R$ 0,8 bi/ano — sensibilidade mais alta do grupo."
+ ],
+ "risks": [
+  "Dívida ~100% CDI pós-swaps (custo 99,77% do CDI): resultado financeiro recorrente −R$ 1.242 mi no 2T26 (+46% a/a); DL/EBITDA real sobe acima de 4x nas premissas, perto do covenant de 4,25x (base covenant hoje 3,1x).",
+  "Necessidade de capital: capex ~R$ 7 bi/ano + juros ~R$ 5 bi > EBITDA ~R$ 8,5 bi → venda de ativos ou emissão de ações (diluição) prováveis.",
+  "Geração distribuída: energia compensada GD +66% a/a no 2T26; mercado faturado líquido de GD −0,2%.",
+  "Risco regulatório/político: CDE, tarifa social e pressão por modicidade num 4º mandato; minoritários relevantes (EPNE, Denerge/Itaú)."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (≈ meados de nov/2026)",
+  "Conclusão da venda de parte da transmissão (R$ 2,3 bi) no 2S26",
+  "Reunião do Copom de dez/2026 e trajetória da curva DI",
+  "RTPs de EMT/EMS (abr/2028) e EPB (ago/2030)"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA ajustado recorrente 2T26",
+   "value": "R$ 1.954 mi (+1% a/a)",
+   "context": "6M26 R$ 3.935 mi (+4%)"
+  },
+  {
+   "label": "Lucro consolidado ajustado recorrente 2T26",
+   "value": "R$ 88 mi (−80% a/a)",
+   "context": "controlador reportado −R$ 130 mi"
+  },
+  {
+   "label": "DL ex-créditos setoriais jun/26",
+   "value": "R$ 32.530 mi",
+   "context": "covenant 3,1x vs limite 4,25x; DL/EBITDA recorrente LTM ~3,9x"
+  },
+  {
+   "label": "Custo médio da dívida",
+   "value": "99,77% do CDI (14,26%)",
+   "context": "prazo médio 6,7 anos"
+  },
+  {
+   "label": "Renovação de concessões",
+   "value": "EMT, EMS, EPB, ESE até 2061",
+   "context": "64% do EBITDA do grupo"
+  },
+  {
+   "label": "Units equivalentes",
+   "value": "503,1 mi (1 ON + 4 PN)",
+   "context": "ENGI3 R$ 9,18 e ENGI4 R$ 10,70 hoje (ENGI4 ilíquida)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Energisa — Release 2T26 Consolidado (06/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/60f49a2d-bd8c-4fd9-95ab-bdf833097a83/c4a851a2-10c3-3c55-3d68-fcf7f6306b96?origin=2"
+  },
+  {
+   "title": "Energisa — Apresentação 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/60f49a2d-bd8c-4fd9-95ab-bdf833097a83/65b19216-76ea-bc34-ddc5-4e8349dce453?origin=2"
+  },
+  {
+   "title": "Energisa — Press Release 4T25",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/60f49a2d-bd8c-4fd9-95ab-bdf833097a83/b2044e32-beaa-ffca-9987-935b449ce336?origin=2"
+  },
+  {
+   "title": "Central de resultados Energisa (RI)",
+   "url": "https://ri.energisa.com.br/informacoes-financeiras/central-de-resultados/"
+  },
+  {
+   "title": "Cenário Energia — prejuízo contábil no 2T26 com venda de ativos de transmissão (07/08/2026)",
+   "url": "https://cenarioenergia.com.br/2026/08/07/energisa-resultado-2t26-prejuizo-contabil-venda-transmissao-taesa/"
+  },
+  {
+   "title": "BCB/Contexto do estudo (Selic, Focus 23/10/2026, curva DI 26/10/2026)",
+   "url": "research/_context.md"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/"
+  }
+ ],
+ "confidence": "média — números operacionais e de dívida são oficiais (release 2T26/4T25); incertezas: trajetória do CDI, necessidade de capital/diluição e participação real dos minoritários (Denerge/Itaú, EPNE) no lucro."
+}

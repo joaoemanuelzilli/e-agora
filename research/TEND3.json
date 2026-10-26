@@ -1,0 +1,281 @@
+{
+  "ticker": "TEND3",
+  "name": "Construtora Tenda S.A.",
+  "sector": "Construção civil / Incorporação residencial econômica (MCMV)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "TEND3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "shares_outstanding_mn": 122.51
+    },
+    "notes": "Ações: o arquivo CVM traz total em milhares (122.578) e tesouraria em unidades (65.148), resultando em 57 mil 'ações em circulação' — erro de unidade. Usamos 122,51 mi (B3: 122.578.152 ações − ~65 mil em tesouraria; consistente com o dividendo de R$ 78 mi ÷ R$ 0,6363/ação). Receita/EBITDA sem ajuste (EBITDA CVM exclui juros capitalizados; o EBITDA ajustado do release, R$ 275 mi no 2T26, os inclui). Atenção: o LL contábil inclui ganhos de equity swap (TRS sobre TEND3): 2T26 R$ 179,1 mi reportado vs R$ 161,3 mi ex-swap. EBITDA projetado está na base 'ex-juros capitalizados' (+1,6 p.p. vs EBITDA CVM), com o mesmo valor deduzido em other_financial."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.22,
+      0.1,
+      0.08,
+      0.07,
+      0.06
+    ],
+    "ebitda_margin": [
+      0.201,
+      0.201,
+      0.201,
+      0.196,
+      0.191
+    ],
+    "da_pct_revenue": [
+      0.016,
+      0.016,
+      0.016,
+      0.016,
+      0.016
+    ],
+    "capex_pct_revenue": [
+      0.012,
+      0.012,
+      0.012,
+      0.012,
+      0.012
+    ],
+    "nwc_pct_revenue": 0.35,
+    "cost_of_net_debt": [
+      0.15,
+      0.15,
+      0.14,
+      0.135,
+      0.13
+    ],
+    "other_financial": [
+      -211.5,
+      -224.6,
+      -226.8,
+      -228.6,
+      -229.8
+    ],
+    "tax_rate": [
+      0.09,
+      0.095,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      0.3,
+      0.4,
+      0.5,
+      0.55,
+      0.6
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.045,
+    "roic": 0.2,
+    "roe": 0.25
+  },
+  "wacc": {
+    "kd_pre_tax": 0.235,
+    "target_debt_weight": 0.15,
+    "notes": "Kd real 15,5% sem benefício fiscal (RET): 0,155/0,66 = 0,235."
+  },
+  "adjustments": {
+    "other_debt_like": 78,
+    "non_operating_assets": 0,
+    "minority_value": 0,
+    "notes": "other_debt_like = dividendo intercalar do 1S26 (R$ 78 mi; ex 13/08/26, pago 30/12/26), posterior ao balanço-base. Cessões de crédito pro-soluto (R$ 515 mi) não entram como dívida (compensadas pelos recebíveis cedidos no ativo); custo recorrente de cessões/correção de terrenos está em other_financial (−R$ 130 mi/ano, calibrado no 2T26 ex-swap). Minoritários ≈ 0 (Alea)."
+  },
+  "target_multiples": {
+    "pe": 5.5,
+    "ev_ebitda": 3.7,
+    "pbv": 1.5,
+    "rationale": "Pré-eleição TEND3 a 6,0x o LL UDM (R$ 28,36; LL UDM R$ 579 mi, inflado por swap; P/VP 2,3x). Itaú BBA via a ação a 5,5x o LL 2026E como oportunidade (2026). Usamos P/L 5,5x 2027E (desconto a Cury/Direcional por histórico de execução 2021–23, Alea e foco em Faixa 1–2) e EV/EBITDA 4,0x (coerente com P/L 5,5x, pois o custo das cessões fica abaixo do EBITDA). P/VP 1,5x ≈ (ROE 25% − 4,5%)/(25% − 4,5%) com prêmio de crescimento. EV/EBITDA-alvo reescalonado de 4,0x para 3,7x por estar agora na base EBITDA ex-juros capitalizados (mesmo P/L implícito)."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.05,
+      "ebitda_margin_shift": -0.03,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Subsídio/FAR contidos por crise fiscal, distratos (já +55% t/t no 3T26) e INCC voltam a corroer margem, como em 2021–22."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.03,
+      "ebitda_margin_shift": 0.015,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Guidance 2026 batido no topo, Alea deixa de queimar caixa e reajuste de tetos F1–F2 sustenta margem bruta >37%."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.05,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.003
+  },
+  "debt_profile": {
+    "gross_debt_mn": 1169,
+    "pct_floating_cdi": null,
+    "avg_cost": "não divulgado no material lido (debêntures CDI+ R$ 895 mi; SFH)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -5,
+    "notes": "DL CVM R$ 339 mi (inclui arrendamentos) + custo das cessões (R$ 515 mi): +100 bp ≈ −R$ 5–8 mi pré-IR. Além disso, o equity swap sobre TEND3 gera perda contábil quando a ação cai (não quantificado: notional não localizado)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.1283,
+    "ebitda_margin_avg_5y": 0.0343,
+    "roe_avg_5y": -0.049,
+    "payout_avg_5y": 0.0701,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.3011,
+      "ebitda_margin": 0.186,
+      "net_income_mn": 179.1,
+      "net_debt_ebitda": 0.43
+    },
+    "notes": "Histórico distorcido pela crise de 2021–23 (prejuízos de R$ 191 mi, R$ 547 mi e R$ 96 mi). Receita 2020–25 +12,8% a.a. (3a +20%); projetamos 2026 +22% (1S26 +33%; guidance de vendas Tenda R$ 5,5–6,0 bi) e ~8% a.a. depois. Margem EBITDA CVM 2025 14,1%, 1S26 18,5% (turnaround: margem bruta ajustada 37,3% no 2T26); projetamos 18,5% até 2028 e 17,5% no terminal (prudência dado o histórico de quebra de margem). Payout 2025 14% → 30–50% (política e desalavancagem). LL 2026E do modelo ≈ guidance R$ 600–660 mi + swap do 1S26. AJUSTE JUROS CAPITALIZADOS (padronização G06/G07): +1,6 p.p. no ebitda_margin em todos os anos e −1,6% da receita (R$ 81–110 mi/ano) em other_financial, LL inalterado; fonte: 2T26: margem bruta CVM 35,7% vs ajustada 37,3% (ajuste por juros capitalizados) = 1,6 p.p.. Margem EBITDA na base CVM (antes do ajuste): 18,5%; 18,5%; 18,5%; 18,0%; 17,5%. WACC sem benefício fiscal da dívida quando há dívida (RET): ver wacc.notes."
+  },
+  "guidance": "Guidance 2026 (revisado em 04/08/2026): EBITDA ajustado do segmento Tenda R$ 1,1–1,2 bi (antes R$ 0,95–1,05 bi); vendas líquidas do segmento R$ 5,5–6,0 bi (antes R$ 5,0–5,5 bi); LL consolidado R$ 600–660 mi (antes R$ 520–600 mi). Alea: teto de gastos de R$ 80 mi em 2026.",
+  "dividend_policy": "Estatuto: mínimo de 25%. Retomada de proventos após o turnaround: R$ 100 mi (R$ 0,8252/ação, ref. 3T25, pago 07/01/2026) e R$ 78 mi (R$ 0,6363/ação, ref. 1S26, ex 13/08/2026, pagamento 30/12/2026). Recompra de até 5 mi ações (até 30/09/2026). Payout caixa 2025: 14%.",
+  "election_impact": "TEND3 −21%: canal macro (Ke) + algum micro. A Tenda é a mais exposta à Faixa 1–2 (subsídio FGTS e, em parte, FAR/OGU), o que é positivo com Lula (programa-símbolo) mas negativo se o fiscal apertar. Tem DL baixa (R$ 339 mi), porém R$ 515 mi de cessões, custo financeiro CDI e um equity swap sobre a própria ação que gera perda com a queda de hoje. 3T26 mostrou distratos +55% t/t (greve da Caixa e crédito mais rígido). Setor: o MCMV é financiado majoritariamente pelo FGTS (fundo parafiscal, fora do Orçamento, juros fixados pelo Conselho Curador e não pela Selic). Orçamento FGTS 2026: R$ 160,5 bi (habitação R$ 144,5 bi; descontos/subsídios elevados a R$ 13 bi em 10/09/2026); plurianual aprovado em nov/25: habitação R$ 144,5 bi em 2027 e R$ 139,5 bi em 2028–29 (nominal estável/queda) — o Conselho revisa 2027–29 no fim de out/26. Portaria MCID 333/2026 elevou renda (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000) e tetos (F3 R$ 400 mil; F4 R$ 600 mil). Um 4º mandato Lula reduz o risco de corte do programa (era um risco no cenário Flávio) — positivo para volume. O que piora de fato: (i) custo de capital/Ke e DI longo (+300 bp) → múltiplos; (ii) dívidas e cessões indexadas ao CDI; (iii) fiscal: Faixa 1 (FAR/OGU) e Faixa 4 (Fundo Social) dependem do Tesouro; FGTS é procíclico (arrecadação 8% da folha) e sofre com saques extraordinários; (iv) câmbio +9,5% → insumos (aço, cobre, PVC) e INCC (já 6,6% em 12m, mão de obra 7,6%).",
+  "summary": "Turnaround entregue (margem bruta ajustada 37%, guidance de LL elevado para R$ 600–660 mi) e maior beneficiária do foco do governo na Faixa 1–2. A R$ 22,50–24,00 (intradia) negocia ~4,5x o LL 2026E; o risco é execução (Alea, distratos) e o fiscal, não a demanda.",
+  "thesis": [
+    "Guidance 2026 elevado: LL consolidado R$ 600–660 mi e EBITDA ajustado Tenda R$ 1,1–1,2 bi (04/08/2026).",
+    "Margem bruta ajustada 37,3% no 2T26 (Tenda ex-Pode Entrar 40,4%), +3,9 p.p. a/a — preços reajustados e tetos maiores do MCMV.",
+    "Valuation: ~4,5x LL 2026E e ~1,8–1,9x P/VP ao preço de hoje, com retomada de dividendos (R$ 178 mi declarados em 8 meses).",
+    "Faixas 1–2 (renda até R$ 5.000) são o núcleo político do MCMV no 4º mandato; subsídio FGTS 2026 elevado a R$ 13 bi."
+  ],
+  "risks": [
+    "Execução: crise de 2021–22 (margem bruta 11% em 2022) mostra sensibilidade a INCC; mão de obra +7,6% em 12m e câmbio +9,5%.",
+    "Distratos R$ 292,8 mi no 3T26 (+55% t/t) por greve da Caixa e regras de comprometimento de renda; crédito mais rígido.",
+    "Alea (wood frame) ainda com margem ~zero e teto de R$ 80 mi/ano; equity swap sobre TEND3 gera perdas com a queda da ação.",
+    "Fiscal: subsídios e FAR dependem do Tesouro/FGTS; cessões (R$ 515 mi) e debêntures CDI+."
+  ],
+  "catalysts": [
+    "Conselho Curador do FGTS (fim de out/2026)",
+    "Resultado 3T26 (novembro/2026)",
+    "Guidance 2027 (início de 2027)",
+    "Pagamento de dividendo de R$ 78 mi (30/12/2026)"
+  ],
+  "key_data": [
+    {
+      "label": "Guidance LL 2026",
+      "value": "R$ 600–660 mi",
+      "context": "revisado para cima em 04/08/2026"
+    },
+    {
+      "label": "Margem bruta ajustada 2T26",
+      "value": "37,3%",
+      "context": "+3,9 p.p. a/a"
+    },
+    {
+      "label": "DL/EBITDA UDM (CVM)",
+      "value": "0,43x",
+      "context": "DL R$ 339 mi; cessões R$ 515 mi à parte"
+    },
+    {
+      "label": "Distratos 3T26",
+      "value": "R$ 292,8 mi",
+      "context": "+55% t/t (greve Caixa, crédito)"
+    },
+    {
+      "label": "P/L 2026E ao preço de hoje",
+      "value": "≈4,2–4,9x",
+      "context": "R$ 22,50–24,00 × 122,5 mi / LL guidance R$ 600–660 mi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "InfoMoney — Conselho do FGTS aprova orçamento de R$ 160,5 bi para 2026 (habitação R$ 144,5 bi)",
+      "url": "https://www.infomoney.com.br/economia/conselho-do-fgts-aprova-orcamento-de-r-1605-bi-para-2026-alta-anual-de-54/"
+    },
+    {
+      "title": "Movimento Econômico — FGTS amplia em R$ 500 mi os descontos do MCMV 2026 (R$ 12,5 bi → R$ 13 bi), 11/09/2026",
+      "url": "https://movimentoeconomico.com.br/habitacao/2026/09/11/mcmv-governo-amplia-em-r-500-milhoes-subsidios-para-habitacao-popular/"
+    },
+    {
+      "title": "Registro de Imóveis — R$ 500 milhões reforçam MCMV; piso de R$ 12,5 bi para 2027",
+      "url": "https://www.registrodeimoveis.org.br/r-500-milhoes-reforcam-minha-casa-minha-vida"
+    },
+    {
+      "title": "Bora Investir (B3) — MCMV: novo teto de renda e de preços (Faixa 3 R$ 400 mil; Faixa 4 R$ 600 mil)",
+      "url": "https://borainvestir.b3.com.br/web-stories/minha-casa-minha-vida-veja-novo-teto-de-renda-e-de-precos-de-imoveis/"
+    },
+    {
+      "title": "Sul21/Agência Brasil — novas faixas de renda MCMV (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000)",
+      "url": "https://sul21.com.br/?p=289296"
+    },
+    {
+      "title": "FGV IBRE/Sinduscon-SP — INCC-M set/26 (12m 6,61%; mão de obra 7,63%)",
+      "url": "https://sindusconsp.com.br/wp-content/uploads/2026/09/INCC-M_FGV_press-release_Set26.pdf"
+    },
+    {
+      "title": "Mattos Filho — Mercado imobiliário e Reforma Tributária (RET até 2028)",
+      "url": "https://www.mattosfilho.com.br/unico/mercado-imobiliario-reforma-tributaria/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais, consultado em 26/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    },
+    {
+      "title": "Investidor10 — Tenda lucra R$ 179 mi no 2T26 e revisa guidance (04/08/2026)",
+      "url": "https://investidor10.com.br/noticias/tenda-tend3-lucra-r-179-mi-no-2t26-e-revisa-ebitda-para-ate-r-1-2-bi-no-ano-121855/"
+    },
+    {
+      "title": "Visno Invest — Tenda: VGV de lançamentos de R$ 1,52 bi no 3T26 (prévia 08/10/2026)",
+      "url": "https://visnoinvest.com.br/news/15638/tenda-tend3-registra-vgv-de-lancamentos-de-r-152-bi-no-3t26"
+    },
+    {
+      "title": "Investidor10 — comunicado prévia 3T26 Tenda",
+      "url": "https://investidor10.com.br/acoes/link_comunicado/TEND3/50677/"
+    },
+    {
+      "title": "Acionista — Tenda: teto de gastos da Alea",
+      "url": "https://acionista.com.br/tenda-tend3-o-que-explica-o-recente-movimento/"
+    },
+    {
+      "title": "Money Times — BTG: construtoras que podem se beneficiar da expansão do MCMV (mar/2026)",
+      "url": "https://www.moneytimes.com.br/as-construtoras-que-podem-se-beneficiar-da-expansao-do-minha-casa-minha-vida-segundo-btg-igdl/"
+    }
+  ],
+  "confidence": "média: turnaround visível nos números CVM e no guidance, mas histórico recente de quebra de margem, Alea e equity swap aumentam a dispersão."
+}

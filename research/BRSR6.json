@@ -1,0 +1,197 @@
+{
+ "ticker": "BRSR6",
+ "name": "Banco do Estado do Rio Grande do Sul S.A. (Banrisul)",
+ "sector": "Financeiro / Banco múltiplo regional — controle do Estado do RS",
+ "template": "financial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "BRSR3",
+   "class": "ON"
+  },
+  {
+   "ticker": "BRSR6",
+   "class": "PNB"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override. Ações: 408,97 mi (205,06 mi ON BRSR3 + 203,91 mi PN, quase todas PNB/BRSR6; PNA/BRSR5 residual). O market cap do motor usa o preço da ON (ilíquida, controle estadual) nas ON — economicamente o minoritário compra a PNB; ao preço da PNB para todas as classes o market cap seria ~R$ 5,8 bi (vs ~R$ 6,7 bi). LL CVM 1S26 R$ 558 mi vs release R$ 547 mi (2T26 release R$ 325,4 mi, ROAE 11,4%)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   0.4,
+   0.4,
+   0.4,
+   0.4,
+   0.4
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.101,
+   0.105,
+   0.11,
+   0.115,
+   0.12
+  ],
+  "ni_growth": null,
+  "payout": [
+   0.4,
+   0.4,
+   0.4,
+   0.4,
+   0.4
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roe": 0.115
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Banco: sem ponte EV→equity."
+ },
+ "target_multiples": {
+  "pe": 4.5,
+  "ev_ebitda": null,
+  "pbv": 0.45,
+  "rationale": "P/VP 0,45x e P/L 4,5x: estatal regional com ROE ~10–12% e Ke de mercado ~20% → (ROE−g)/(Ke−g) ≈ 0,4–0,5x. Na sexta (PNB R$ 18,16; ON ~R$ 21,8) o banco valia ~0,69x o PL, provavelmente embutindo opcionalidade de privatização; hoje ~0,56x. Faixa histórica aproximada 0,4–0,6x P/VP e 4–6x P/L (estimativa, não verificada nesta rodada)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Margem segue caindo com Selic alta e carteira parada; uso político do banco pelo Estado: ROE 7–9%."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.025,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Eficiência e crédito consignado recuperam ROE para 14–15% (2025 CVM 15,7%) ou abre-se agenda de privatização."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.025,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "n/a (banco: captação é passivo operacional; ver Basileia/LCR)",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": null,
+  "notes": "Sensibilidade oficial não localizada. Evidência do 2T26 (Genial): margem financeira caiu mesmo com Selic alta e o banco cortou o guidance de margem de +8–13% para +5–10% — sugere passivo sensível a juros (captação a CDI) e carteira de consignado prefixada; juros mais altos por mais tempo são negativos."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.068,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.11,
+  "payout_avg_5y": 0.43,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": null,
+   "ebitda_margin": null,
+   "net_income_mn": 325,
+   "net_debt_ebitda": null
+  },
+  "notes": "revenue_cagr_5y aqui = CAGR do PL controlador CVM 2020–25 (6,8%). ROE CVM 2021–25: 12,5/9,0/10,4/7,2 (enchentes 2024)/15,7% (média 11,0%); 2025 inflado por 4T25 forte (R$ 718 mi, natureza não verificada). Payout CVM caixa 37–56% (média 43%). Projeção: 2026E R$ 1,16 bi (1S26 R$ 558 mi CVM + 2S26E ~R$ 600 mi) = ROE ~10%; 2030 12% ≈ média histórica."
+ },
+ "guidance": "Guidance 2026 revisado no 2T26: carteira de crédito +2% a +7% (antes +3% a +8%); margem financeira +5% a +10% (antes +8% a +13%); custo do crédito elevado para 1,5%–2,5% (Genial). 3T26 previsto para 12/11/2026.",
+ "dividend_policy": "JCP trimestrais; payout histórico ~40% (CVM caixa 2021–25: 41/43/37/56/38%). Política estatutária exata não verificada nesta rodada — premissa 40% sinalizada. O Estado do RS (controlador, ~98% das ON) depende dos dividendos, o que favorece payout, mas o RS está em Regime de Recuperação Fiscal.",
+ "election_impact": "−21% (PNB R$ 18,16→14,29). Canal macro: Selic alta por mais tempo pressiona margem (já em queda no 2T26) e inadimplência; canal político: o banco é controlado pelo Estado do RS, e um governo federal sem agenda de privatização reduz a opcionalidade que ajudava a explicar o P/VP de ~0,69x na sexta. Resultado da eleição para governador do RS (25/10) NÃO verificado nesta rodada — relevante para a tese de privatização.",
+ "summary": "Banco regional estatal com ROE ~10–11% (ROAE 11,4% no 2T26, 9,6% no 1S26) e guidance de margem e carteira revisado para baixo. A ~0,5x PL não é barato para Ke de 25% (P/VP justo ~0,33x com ROE 11,5%); é armadilha de valor sem catalisador de controle (TIR implícita ~18%).",
+ "thesis": [
+  "Lucro 2T26 R$ 325,4 mi (+46,9% t/t; 11,3% acima do consenso de R$ 292 mi), ROAE 11,4%.",
+  "Franquia de consignado público e depósitos no RS; PL R$ 11,8 bi para market cap ~R$ 6–6,7 bi.",
+  "Opcionalidade de privatização/venda de controle (depende da política estadual; não precificada no meu caso-base)."
+ ],
+ "risks": [
+  "Margem financeira em queda e carteira estagnada (guidance cortado no 2T26); qualidade do lucro do 2T26 ajudada por reversão de provisões (R$ 101,5 mi).",
+  "Interferência do controlador (Estado do RS em Regime de Recuperação Fiscal) e baixa liquidez (ADTV ~R$ 31 mi).",
+  "Riscos climáticos/crédito no RS (precedente das enchentes de 2024: ROE CVM 7,2%)."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (12/11/2026).",
+  "Agenda do novo governo estadual (2027) para o banco."
+ ],
+ "key_data": [
+  {
+   "label": "LL 2T26 (release)",
+   "value": "R$ 325,4 mi (−13,9% a/a)",
+   "context": "1S26 R$ 547 mi; CVM 1S26 R$ 558 mi"
+  },
+  {
+   "label": "ROAE 2T26 / 1S26",
+   "value": "11,4% / 9,6%",
+   "context": "2T25 14,3%"
+  },
+  {
+   "label": "PL controlador (CVM 2T26)",
+   "value": "R$ 11.844 mi",
+   "context": "FY2025 R$ 11.462 mi"
+  },
+  {
+   "label": "Guidance 2026 revisado",
+   "value": "Carteira +2–7%; MF +5–10%",
+   "context": "Custo do crédito 1,5–2,5%"
+  },
+  {
+   "label": "Preço PNB / P/VP",
+   "value": "R$ 14,29 / ~0,49–0,56x",
+   "context": "Sexta R$ 18,16 (~0,69x)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Genial Analisa — Banrisul 2T26: lucro reage, mas revisão do guidance expõe desafios",
+   "url": "https://analisa.genialinvestimentos.com.br/acoes/BRSR6/banrisul-brsr6-resultado-2t26-lucro-reage-mas-revisao-do-guidance-expoe-desafios-operacionais/"
+  },
+  {
+   "title": "Visno Invest — Banrisul registra lucro de R$ 325,4 mi no 2T26",
+   "url": "https://visnoinvest.com.br/news/14780/banrisul-brsr3-registra-lucro-de-r-3254-mi-no-2t26"
+  },
+  {
+   "title": "O Povo/Estadão — Lucro do Banrisul cai 8,2% e atinge R$ 221,6 mi no 1T26 (14/05/2026)",
+   "url": "https://www.opovo.com.br/noticias/economia/2026/05/14/lucro-do-banrisul-cai-82-e-atinge-rs-2216-milhoes-no-1-trimestre.html"
+  },
+  {
+   "title": "Seu Dinheiro — Calendário de balanços do 3T26 (19/10/2026)",
+   "url": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação ao vivo (API oficial), 26/10/2026",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/"
+  }
+ ],
+ "confidence": "baixa-média — números via CVM e análises secundárias (release oficial não lido; Genial e Visno sem acesso completo); política de dividendos e eleição estadual não verificadas."
+}

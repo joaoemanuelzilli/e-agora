@@ -1,0 +1,274 @@
+{
+ "ticker": "CYRE3",
+ "name": "Cyrela Brazil Realty",
+ "sector": "Construção civil / incorporação média-alta renda (+ MCMV via Vivaz e coligadas Cury, Plano&Plano, Lavvi)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "CYRE3",
+   "class": "ON"
+  },
+  {
+   "ticker": "CYRE4",
+   "class": "PN"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 2048.0,
+   "equity_controlling": 10290.0,
+   "equity_controlling_2025": 9523.0
+  },
+  "notes": "Receita/EBITDA sem ajuste (FY2025 ROL R$ 9.423,5 mi; EBITDA CVM R$ 2.457,9 mi = EBIT 3.05 + D&A; inclui equivalência de R$ 548 mi e ganhos líquidos em investimentos de ~R$ 279 mi — venda de ações da Cury/JVs —, que NÃO projetamos). Dívida líquida: a CVM soma ao caixa (R$ 7.712 mi) a carteira de home equity da CashMe registrada a valor justo em ORA (aplicações VJORA R$ 4.896 mi), com marcação a mercado (AVJORA) de R$ 887 mi. Seguimos a própria Cyrela (DL ajustada R$ 1.909 mi, apresentação 2T26) e excluímos o AVJORA: DL = 1.161 (CVM) + 887 = R$ 2.048 mi; PL controlador sem AVJORA = 11.168 − 878 = R$ 10.290 mi (FY2025: 10.227 − 704 = 9.523). A carteira CashMe (~R$ 4,0 bi a custo) e seu funding (R$ 2.813 mi, já na dívida bruta) ficam dentro da DL; o spread da CashMe entra em other_financial. Ações: 435,76 mi ex-tesouraria = 366,3 mi ON + 69,4 mi PN (CYRE4 nasceu de bonificação de 18,96% em PN, ex-30/12/2025, após capitalização de ~R$ 2,5 bi de reservas em 2025); PN negocia ~par com ON."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.06,
+   0.05,
+   0.02,
+   0.06,
+   0.07
+  ],
+  "ebitda_margin": [
+   0.25,
+   0.245,
+   0.24,
+   0.245,
+   0.245
+  ],
+  "da_pct_revenue": [
+   0.02,
+   0.02,
+   0.02,
+   0.02,
+   0.02
+  ],
+  "capex_pct_revenue": [
+   0.022,
+   0.022,
+   0.022,
+   0.022,
+   0.022
+  ],
+  "nwc_pct_revenue": 0.95,
+  "cost_of_net_debt": [
+   0.135,
+   0.135,
+   0.125,
+   0.115,
+   0.11
+  ],
+  "other_financial": [
+   240,
+   238,
+   233,
+   217,
+   197
+  ],
+  "tax_rate": [
+   0.08,
+   0.08,
+   0.08,
+   0.08,
+   0.08
+  ],
+  "minority_share_ni": 0.15,
+  "payout": [
+   0.4,
+   0.6,
+   0.65,
+   0.7,
+   0.7
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.16,
+  "roe": 0.175
+ },
+ "wacc": {
+  "kd_pre_tax": 0.145,
+  "target_debt_weight": 0.15
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 450,
+  "minority_value": null,
+  "notes": "Participações em Cury (~15%), Plano&Plano (~33%) e Lavvi (~25%, inferido da equivalência) NÃO são consolidadas, mas a equivalência delas (~R$ 395 mi em 2025; ~R$ 356 mi LTM) está dentro do EBIT 3.05/EBITDA do motor — somá-las em non_operating_assets seria dupla contagem. Checagem SOTP: a valor de mercado de hoje (CURY3 R$ 7,9 bi; PLPL3 R$ 1,08 bi; LAVV3 R$ 1,95 bi) as participações valem ~R$ 2,0 bi (R$ 4,7/ação), vs ~R$ 1,5 bi implícitos no modelo (lucro capitalizado a Ke 25%) — diferença de ~R$ 1,1/ação a favor do SOTP, não incorporada (conservador). Minoritários (sócios em SPEs, ~15% do LL) pelo valor contábil R$ 1.283 mi (~15% × valor do equity). Sem dividendos declarados pendentes no balanço-base."
+ },
+ "target_multiples": {
+  "pe": 5.3,
+  "ev_ebitda": 4.6,
+  "pbv": 0.65,
+  "rationale": "Histórico próprio (data/market, mensal): P/L 5 anos mediana 6,1x (p25 5,3x; mín 3,0x), P/VP mediana 0,98x (p25 0,89x; mín 0,69x), EV/EBITDA mediana 5,6x (p25 5,1x). Usamos ~p25 (regime de juros mais alto pós-eleição): P/L 5,3x e EV/EBITDA 4,6x (o EBITDA do modelo soma ~2,5 p.p. de juros capitalizados; na base CVM equivale a ~5,1x). P/VP alvo 0,65x = Gordon a Ke 25%: (ROE sustentável 17,5% − g 5%)/(25% − 5%) = 0,625x, arredondado para cima pelo valor das participações listadas, sobre PL sem AVJORA CashMe; é coerente com o mínimo histórico (0,69x). Pré-eleição negociava 1,3x P/VP e 6,4x P/L (Ke implícito ~17%)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.05,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Selic ≥14% até 2027, SBPE/poupança travados, descontos no estoque de média-alta renda (R$ 12,8 bi a mercado) e INCC/câmbio comprimindo margem; CashMe com inadimplência."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.025,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Curva devolve parte do choque em 2027, MCMV/Vivaz e alto padrão resilientes, venda de participações vira dividendo extraordinário."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.04,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.003
+ },
+ "debt_profile": {
+  "gross_debt_mn": 8735,
+  "pct_floating_cdi": 0.59,
+  "avg_cost": "SFH (41%): 61% poupança+2,65% e 39% TR+9,01%; corporativa ex-CashMe: 68% a 97,9% do CDI e 32% a CDI+0,26%; CashMe/CyCapital R$ 2.813 mi",
+  "avg_maturity_years": 3.1,
+  "next_24m_maturities_mn": 1616,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -20,
+  "notes": "Estimativa própria: caixa de tesouraria ~R$ 2,8 bi (CDI) vs dívida corporativa CDI ~R$ 2,4 bi + funding CashMe R$ 2,8 bi → posição líquida vendida em CDI ~R$ 2,4 bi → −R$ 20–25 mi/ano de LL por +100 bp (~1% do LL). SFH em TR/poupança e juros capitalizados no custo (pouco elástico). O canal relevante é demanda/crédito (SBPE) e o custo de capital, não o resultado financeiro. next_24m_maturities_mn = dívida de curto prazo (12m) R$ 1.616 mi; vencimentos 24m não divulgados."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.198,
+  "ebitda_margin_avg_5y": 0.228,
+  "roe_avg_5y": 0.163,
+  "payout_avg_5y": 0.37,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.177,
+   "ebitda_margin": 0.226,
+   "net_income_mn": 451.6,
+   "net_debt_ebitda": 0.81
+  },
+  "notes": "CAGR receita 2020–25 de 19,8% (3,8→9,4 bi) foi ciclo excepcional (MCMV, alta renda, preços); projetamos CAGR 2025–30 de ~5,4% (nominal), com 2027–28 fracos (vendas 9M26 estáveis, lançamentos −13%, VSO 12m 40,3% vs 48,9%). Margem EBITDA CVM média 2021–25 22,8% (2024–25: 26%, inflada por ganhos de investimento); recorrente LTM ~23% e 1S26 ~22%; projetamos 21–22,5%. ROE médio 2021–25 16,3% (2024–25 ~20–21%); modelo gera ~17–19%. Payout médio ~37% (volátil: 13% a 69%); projetamos 40→60% porque o crescimento menor libera caixa. DL/EBITDA 2T26: 0,81x (DL ajustada R$ 2.048 mi) ou 0,46x na DL CVM."
+ },
+ "guidance": "Sem guidance formal (call 4T25, 20/03/2026). CFO indicou receita de evolução de obra de R$ 5,5–6,0 bi em 2026 (vs ~R$ 5 bi em 2025) e entregas 2026 ~15% maiores com 85% vendido e 49% recebido; entregas 2027 em volume similar (86% vendido). CEO disse em mar/26 que não reduziria lançamentos, mas 9M26 caiu 13% (R$ 8,45 bi %CBR).",
+ "dividend_policy": "Mínimo obrigatório de 25% do lucro ajustado (estatuto não reverificado — site de RI fora do ar). Proventos por data-com: R$ 0,51 + 0,33/ação (2023), R$ 0,60 (2024), R$ 1,07 (abr/25) e R$ 2,73 (09/12/2025, pago 17/12) → ~R$ 1,4 bi pagos em 2025 (~70% do LL 2025); o de dez/25 antecipou a retenção de 10% da Lei 15.270/2025 (inferência; a companhia não citou). Bonificação de 18,96% em PN (CYRE4) ex-30/12/2025. Nenhum provento declarado em 2026 até 26/10. Tesouraria ~3,9% do capital; recompras pequenas (R$ 152 mi em 2024).",
+ "election_impact": "Queda de −44% é sobretudo macro: o mercado precificava troca de governo (JPM/BTG viam média-alta renda como maior beneficiária) e a curva longa subiu ~300 bp (DI1F31 15,7%). Canais reais: (i) custo de capital — duração longa do REF (R$ 11,2 bi a 36% de margem), banco de terrenos de R$ 19,8 bi; (ii) demanda de média-alta renda (61% das vendas 9M26) depende de SBPE e compete com CDI de 14–15%; poupança sob pressão encarece o crédito; (iii) INCC/câmbio sobre custos a incorrer. Mitigantes: balanço (DL ajustada/PL 16,5%, rating brAAA), resultado financeiro pouco sensível (−R$ 20 mi/100 bp), Vivaz/MCMV (~35% dos lançamentos) e coligadas MCMV se beneficiam da continuidade do programa (hedge parcial). No nosso modelo o lucro 2027E fica ~8% abaixo de 2025 — o choque é real no lucro, mas pequeno frente à queda de 44% do preço.",
+ "summary": "Maior e mais diversificada incorporadora de média-alta renda, com ROE de ~20% em 2025, balanço sólido e coligadas MCMV. A R$ ~20,8 (P/L LTM 4,5x; 0,88x o PL sem AVJORA) o preço exige ROE perpétuo de ~22% para render 25% a.a. (Gordon); no nosso cenário (ROE ~17,5%, sem ganhos com venda de participações) a TIR implícita é ~20% e o valor justo R$ 17,4 — perto, mas abaixo do hurdle.",
+ "thesis": [
+  "Preço caiu 44% vs lucro 2027E nosso ~8% menor que 2025: P/L 2027E ~4,9x e EV/EBITDA LTM ~4,8x a preço de hoje (mediana 5 anos 5,6x).",
+  "Visibilidade: REF de R$ 11,2 bi (margem 36%) e entregas 2026–27 85–86% vendidas sustentam receita de ~R$ 10 bi/ano.",
+  "Balanço: DL ajustada/PL 16,5%, caixa R$ 6,8 bi, dívida SFH barata (poupança+2,65%) e rating brAAA — sem risco de solvência.",
+  "Opcionalidade: participações listadas valem ~R$ 2,0 bi (R$ 4,7/ação) a preços de hoje; JPM estimou até R$ 1,9 bi de dividendos com a venda."
+ ],
+ "risks": [
+  "Ciclo de média-alta renda: VSO 12m já em 40,3% (de 48,9%) e estoque de R$ 12,8 bi a mercado; descontos e distratos reduziriam margem.",
+  "Funding imobiliário: saída de poupança com Selic alta encarece/raciona SBPE; repasses mais lentos aumentam necessidade de capital de giro.",
+  "CashMe (carteira ~R$ 4 bi, funding CDI) — risco de crédito e marcação a mercado (AVJORA R$ 887 mi) com juros altos.",
+  "Agenda tributária (IVA no imobiliário a partir de 2027/29, tributação de dividendos) e INCC/câmbio sobre custos a incorrer."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (novembro/2026; prévia já mostrou vendas −14% a/a).",
+  "Proposta de dividendos sobre o lucro 2026 (AGO abr/2027) e eventual venda de participações (Cury/Lavvi/PLPL).",
+  "Copom e direção da curva DI longa; regras do novo modelo de funding da poupança/SBPE."
+ ],
+ "key_data": [
+  {
+   "label": "Receita líquida LTM 2T26",
+   "value": "R$ 9.869 mi",
+   "context": "+18% em 2025; 1S26 +11% a/a"
+  },
+  {
+   "label": "Lucro líquido LTM 2T26",
+   "value": "R$ 2.040 mi",
+   "context": "ROE LTM 20,9% (critério da companhia)"
+  },
+  {
+   "label": "DL ajustada / PL 2T26",
+   "value": "16,5%",
+   "context": "DL R$ 1.909 mi (empresa); R$ 2.048 mi no modelo"
+  },
+  {
+   "label": "REF (receita a apropriar) 4T25",
+   "value": "R$ 11,2 bi",
+   "context": "margem REF 36%"
+  },
+  {
+   "label": "Prévia 3T26",
+   "value": "Lanç. R$ 2,86 bi (−16%); vendas R$ 2,12 bi (−14%)",
+   "context": "VSO 12m 40,3%"
+  },
+  {
+   "label": "Preço 26/10 ~12h",
+   "value": "R$ 19,2–19,9 (ON) / R$ 20,0 (PN)",
+   "context": "−44% no dia; mcap ~R$ 8,6 bi"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Cyrela — Apresentação de resultados 2T26 (14/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/d7617e78-1c42-4341-83ae-a1faa8569ca8/9a024818-a2fd-8bbf-4e44-4cb32a5daa06?origin=2"
+  },
+  {
+   "title": "Cyrela — Transcrição do call 4T25 (20/03/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/d7617e78-1c42-4341-83ae-a1faa8569ca8/d17a37ee-f6e6-e64c-6b80-38b2ee3c12d8?origin=2"
+  },
+  {
+   "title": "Cyrela — Apresentação institucional 4T25",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/d7617e78-1c42-4341-83ae-a1faa8569ca8/b6cf3cc4-98a7-beea-6034-e2b24d62ac60?origin=2"
+  },
+  {
+   "title": "Cyrela — Prévia operacional 3T26 (13/10/2026)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/CYRE3/50768/"
+  },
+  {
+   "title": "BTG — Radar de Resultados 2T26 Cyrela",
+   "url": "https://content.btgpactual.com/research/home/relatorio/6a830d6ff6f0d43a40a07cf7/Cyrela-Radar-de-Resultados-2T26"
+  },
+  {
+   "title": "JPMorgan: venda de participações pode liberar R$ 1,9 bi (Investidor10)",
+   "url": "https://investidor10.com.br/noticias/cyrela-pode-liberar-r-1-9-bi-em-dividendos-com-venda-de-participacoes-diz-banco-119554/"
+  },
+  {
+   "title": "Plano&Plano: novo acordo de acionistas com Cyrela (Forbes, ago/2026)",
+   "url": "https://forbes.com.br/forbes-money/forbes-real-estate/2026/08/planoplano-plpl3-acordo-acionistas-cyrela/"
+  },
+  {
+   "title": "Money Times — prévia 2T26 e preços-alvo BTG/Safra",
+   "url": "https://www.moneytimes.com.br/cyrela-cyre3-ganha-forca-na-b3-apos-previa-do-2t26-veja-o-que-chamou-a-atencao-dos-analistas-igdl/"
+  },
+  {
+   "title": "Money Times — ações que caem >40% em 26/10/2026",
+   "url": "https://www.moneytimes.com.br/8-acoes-caem-mais-de-40-no-ibovespa-em-dia-sangrento-apos-vitoria-de-lula-bdap/"
+  },
+  {
+   "title": "Demonstrações padronizadas CVM (ITR 2T26/DFP 2025) — data/hist/CYRE3.json",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média — dados CVM e release consistentes; incertezas: ciclo de demanda de média-alta renda pós-choque, ganhos não recorrentes recorrentes (venda de participações), tratamento da CashMe e ausência do REF/landbank do 2T26 (usamos 4T25)."
+}

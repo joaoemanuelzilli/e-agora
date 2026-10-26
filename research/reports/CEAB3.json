@@ -1,0 +1,163 @@
+{
+ "ticker": "CEAB3",
+ "headline": "A C&A caiu 46% por fator de mercado, não por fundamento: o lucro 2027E cede só 10–20%, a dívida líquida ex-arrendamentos é de R$ 170 mi e a ação negocia a 4,3x o lucro de 2027E, no menor EV/EBITDA em 5 anos.",
+ "verdict": "A R$ 7,36 (preço de referência do estudo, ~12h55 de 26/10), a C&A entrega TIR de dono de 21,1% no cenário-base sem nenhuma reprecificação; o valor justo a Ke 25% é R$ 7,20 (−2%) e há 47% de probabilidade de o valor superar o preço no Monte Carlo. Se o P/L voltar a 7x (abaixo do pré-eleição), a TIR de 3 anos chega a ~53%. É das poucas varejistas em que o choque quase não toca o balanço (+1 p.p. de CDI custa ~R$ 7 mi de lucro), e seu público C/D é o maior beneficiário da isenção de IR e das transferências do 4º mandato.",
+ "reasons": [
+  {
+   "title": "Público C/D no centro da política de renda",
+   "body": "A Lei 15.270/2025 zerou o IR de quem ganha até R$ 5 mil/mês (redução parcial até R$ 7.350) desde 01/01/2026, e o Morgan Stanley estima +R$ 22,7 bi para o Bolsa Família em 2027 (via Exame, 26/10). É renda disponível exatamente da classe C/D, núcleo da C&A: o cartão próprio responde por 28,2% das vendas e a expansão mira cidades de até 500 mil habitantes. O sinal já aparece no crédito: o NPL90 do C&A Pay caiu de 17,1% (2T25) para 13,4% (2T26), e o SSS de vestuário seguiu positivo (+4,1%) com Selic na casa de 14% (release 2T26).",
+   "metric": {
+    "label": "NPL90 C&A Pay 2T26 (a/a)",
+    "value": "13,4% (−3,7 p.p.)"
+   }
+  },
+  {
+   "title": "Câmbio pesa menos do que parece",
+   "body": "Cerca de 70% da produção é comprada no Brasil (release 2T26). A parte importada (~30%) encarece com o dólar +9,5%, mas o mesmo câmbio encarece em reais o cross-border cotado em dólar: a Shein é ~44% mais barata (BTG, set/26) e perdeu o imposto federal de importação até US$ 50 em mai/26. A empresa também planeja triplicar compras no Peru e no Paraguai (Investor Day, 26/08/26).",
+   "metric": {
+    "label": "Produção comprada no Brasil",
+    "value": "~70%"
+   }
+  },
+  {
+   "title": "Virada operacional com qualidade contábil",
+   "body": "A margem bruta consolidada foi de 52,4% (2023) para 55,5% (2025) e 58,1% no 2T26, com 20 trimestres seguidos de expansão no vestuário. O EBITDA ajustado IFRS-16 passou de R$ 1.090 mi para R$ 1.576 mi, e o lucro ajustado bateu recorde de R$ 471 mi em 2025 (planilha dinâmica/release). O escore de Piotroski, calculado com dados da CVM, é 9/9: ROA e margem bruta subindo, FCO acima do lucro, alavancagem caindo e sem emissão de ações.",
+   "metric": {
+    "label": "Piotroski (CVM)",
+    "value": "9/9"
+   }
+  },
+  {
+   "title": "Balanço quase imune ao choque de juros",
+   "body": "Dívida bruta de R$ 952 mi contra caixa de R$ 782 mi: a dívida líquida ex-arrendamentos é de R$ 170 mi, 0,2x o EBITDA pré-IFRS16 (release 2T26). +1 p.p. de CDI custa ~R$ 7 mi de lucro (1,4% do lucro 2027E do modelo), e o Altman Z de 6,83 está na zona segura. A 5ª emissão (até R$ 500 mi, AA(bra) pela Fitch em 14/10/26) alonga o vencimento de R$ 510 mi de 2027.",
+   "metric": {
+    "label": "Lucro por +1 p.p. de CDI (modelo)",
+    "value": "−R$ 7 mi (−1,4%)"
+   }
+  },
+  {
+   "title": "Dano fundamental muito menor que a queda",
+   "body": "O lucro 2027E do modelo (R$ 512 mi, já com câmbio e crédito piores) fica 10–20% abaixo das estimativas pré-eleição: UBS R$ 566 mi e BBI ~R$ 640 mi, implícito em 4,5x P/L a R$ 9,72. Já o valor de mercado caiu 47%, de R$ 4,15 bi para R$ 2,21 bi (B3/modelo). O DCF reverso mostra que, a Ke 25%, o preço embute só 7,0% a.a. de crescimento, praticamente o cenário-base (6,5%).",
+   "metric": {
+    "label": "Valor de mercado 23/10 → 26/10",
+    "value": "−47% (R$ 4,15 bi → R$ 2,21 bi)"
+   }
+  },
+  {
+   "title": "TIR de dono de 21% sem reprecificação",
+   "body": "No preço de referência, o modelo projeta lucro de R$ 482 mi (2026E) a R$ 753 mi (2030E), P/L 2027E de 4,3x e dividend yield de 6,5% (2026E), 8,1% (2027E) e 10,8% (2028E), com payout de 30–40%. A TIR implícita é de 21,1%, contra CDI de ~13,7%. O JCP de 2025 (R$ 0,5216/ação, pago em 31/08/26, B3) já equivale a 7,1% do preço.",
+   "metric": {
+    "label": "TIR de dono (modelo, Ke 25%)",
+    "value": "21,1%"
+   }
+  }
+ ],
+ "statistics": [
+  {
+   "title": "A queda foi fator de mercado, não notícia da empresa",
+   "body": "Uma regressão transversal dos retornos do dia em 147 ações (beta, alavancagem, tamanho e dummies setoriais; R² = 0,71; coeficiente do beta com t = −10,4) previa −38,7% para a CEAB3; o observado foi −46,2%. O resíduo de −7,5 p.p. equivale a ~−1,0 desvio-padrão dos resíduos (7,8 p.p.), e 15% das ações tiveram resíduo pior. Cerca de 84% da queda é explicada pelos fatores: beta ~2, small cap e consumo doméstico.",
+   "stat": "previsto −38,7% × observado −46,2%; resíduo −7,5 p.p. (z ≈ −1,0)"
+  },
+  {
+   "title": "Sobrerreação ao próprio beta, compartilhada pelo grupo",
+   "body": "Com beta de baixa de 1,82 (3 anos) e Ibovespa −14,5% (3º pior dia desde 1998, z = −7,8), a queda esperada pelo beta era −26,3%. O excesso de −19,9 p.p. é de z = −7,0 frente à volatilidade específica de 45% a.a. Como o modelo de fatores explica quase todo esse excesso (consumo −3,6 p.p.; tamanho +1,4 p.p. por log do valor de mercado), o mercado vendeu o pacote 'consumo doméstico/small cap', não a C&A em particular.",
+   "stat": "esperado pelo beta −26,3%; excesso −19,9 p.p. (z = −7,0)"
+  },
+  {
+   "title": "Múltiplos no piso da própria história",
+   "body": "Na série mensal desde out/2019 (CVM + B3), o EV/EBITDA atual de 3,1x é o menor dos últimos 5 anos (percentil 0; média 4,9x; z = −1,26). O P/VP de 0,59x está no percentil 32 (mediana de 5 anos: 0,84x), e o P/L LTM de 4,0x no percentil 27 (mediana: 7,2x). A base de EBITDA da série é a da CVM; corrigindo o D&A de direito de uso de 2023–26, o EV/EBITDA atual cai a ~2,4x.",
+   "stat": "EV/EBITDA 3,1x: percentil 0 em 5 anos (z = −1,26)"
+  },
+  {
+   "title": "Após crashes, o mercado recupera — com dispersão",
+   "body": "Nos 62 pregões com Ibovespa ≤ −5% desde 1998, o índice subiu em média 19,6% em 3 meses (77% positivos) e 59,5% em 12 meses (mediana 55,9%; 87% positivos; p10 −5,7%). Os eventos se concentram em poucos episódios (1998, 2008, 2020), então a amostra efetiva é pequena. Na única experiência da CEAB3 (6 dias de crash em 2020), o retorno em 12 meses foi de +17,9% em média (mediana −0,6%), contra +43,9% do Ibovespa, porque a operação piorou em 2021–23: a recuperação do papel depende do resultado.",
+   "stat": "Ibovespa +59,5% em 12 meses após quedas ≤ −5% (n = 62; 87% positivos)"
+  },
+  {
+   "title": "Valor centrado no preço; a assimetria vem da taxa de desconto",
+   "body": "Em 5.000 simulações (crescimento, margem, g e capex), o valor tem p10 de R$ 3,43, mediana de R$ 7,18 e p90 de R$ 11,36, com 47,4% de chance de superar R$ 7,36. O valor esperado dos cenários (bear 30%, base 50%, bull 20%) é de R$ 6,61. A taxa de desconto é o que gera a assimetria: com Ke de 20%, o valor sobe a R$ 9,34 (+27%); a 30%, cai a R$ 5,88 (−20%).",
+   "stat": "P(valor > preço) = 47,4%; p10–p90 de R$ 3,43 a R$ 11,36"
+  }
+ ],
+ "risks": [
+  {
+   "title": "Câmbio na margem bruta de 2027",
+   "body": "Com ~30% de importados e dólar +9,5%, o custo extra pode chegar a ~R$ 100 mi/ano (≈1,3 p.p. de margem bruta, cálculo sobre o CPV LTM de R$ 3,5 bi) se nada for repassado; o 2T26 ainda se beneficiou de real forte.",
+   "mitigant": "70% de compras locais, precificação dinâmica (motor dos 20 trimestres de alta de margem) e cross-border também mais caro em reais. Alerta: margem bruta consolidada do 3T26 abaixo de 53,6% (−1 p.p. vs 54,6% no 3T25, CVM)."
+  },
+  {
+   "title": "Inadimplência do C&A Pay com Selic alta por mais tempo",
+   "body": "As perdas de crédito somaram R$ 134 mi em 2025 (12,9% da carteira média), contra R$ 224 mi em 2023. Voltar ao nível de 2023 custaria ~R$ 90 mi de EBITDA, ~5% do EBITDA 2027E.",
+   "mitigant": "Carteira pequena (R$ 979 mi em 360 dias), cobertura de 113,8% dos atrasos de 90–360 dias e NPL90 em queda (13,4% no 2T26)."
+  },
+  {
+   "title": "Concorrência cross-border sem imposto federal",
+   "body": "Desde mai/26, compras de até US$ 50 estão isentas de imposto de importação, e a Shein está ~44% mais barata que a média de C&A, Renner e Riachuelo (BTG, set/26).",
+   "mitigant": "O ICMS de até 20% segue valendo, o dólar mais alto encarece o importado direto e o SSS de vestuário seguiu positivo (+4,1%) no 2T26, trimestre já parcialmente sem o imposto."
+  },
+  {
+   "title": "Expansão que consome caixa a Ke 25%",
+   "body": "Capex de R$ 680 mi em 2026 (8,3% da receita) e ciclo de caixa 19 dias maior no 2T26 (FCF ajustado −65,6% a/a). Com o ROIC do modelo (~13%, incluindo arrendamentos) abaixo do WACC de 20,4%, crescer não cria valor à taxa do estudo.",
+   "mitigant": "Meta oficial de ROIC > 18% por projeto e de DL/EBITDA ≤ 0,5x em 2030; o capex é discricionário e pode ser reduzido se o SSS parar."
+  },
+  {
+   "title": "Overhang da controladora",
+   "body": "A Cofra (família Brenninkmeyer) reduziu sua fatia de 52,4% (nov/24) para ~31% e pode vender mais; vendas em bloco pressionam o preço.",
+   "mitigant": "A recompra do 4º programa (até 10 mi de ações, ~85% executado no 2T26) e a liquidez de R$ 104 mi/dia (ADTV 3 meses) absorvem parte da oferta."
+  }
+ ],
+ "monitor": [
+  {
+   "kpi": "Margem bruta consolidada (CVM/release)",
+   "threshold": "< 53,6% no 3T26 (−1 p.p. vs 54,6% no 3T25) ou < 55,1% no 4T26 (−1 p.p. vs 56,1% no 4T25): câmbio passando para a margem",
+   "next": "Release do 3T26 (nov/2026, data a confirmar no RI); 4T26 em fev–mar/2027"
+  },
+  {
+   "kpi": "SSS de vestuário",
+   "threshold": "Negativo por dois trimestres seguidos (2T26: +4,1%; base do 3T25: +8,1%): a renda extra da isenção de IR não chegou ao varejo",
+   "next": "Release do 3T26 (nov/2026)"
+  },
+  {
+   "kpi": "NPL90 e perdas do C&A Pay",
+   "threshold": "NPL90 > 16% (2T25: 17,1%; 2T26: 13,4%) ou perdas > 14% da carteira média",
+   "next": "Release do 3T26 (nov/2026)"
+  },
+  {
+   "kpi": "Dívida líquida ex-arrendamentos / EBITDA pré-IFRS16 e refinanciamento",
+   "threshold": "> 1,0x (2T26: 0,2x) ou 5ª emissão não liquidada antes do vencimento de R$ 510 mi em 2027",
+   "next": "Comunicado da 5ª emissão (out–nov/2026) e release do 3T26"
+  },
+  {
+   "kpi": "Lucro líquido ajustado de 12 meses vs. modelo",
+   "threshold": "< R$ 420 mi no 4T26 (modelo 2026E: R$ 482 mi): dano fundamental maior que o estimado",
+   "next": "Release do 4T26 (fev–mar/2027)"
+  }
+ ],
+ "catalysts": [
+  {
+   "date": "04/11/2026",
+   "event": "Copom: primeira decisão de juros após a eleição"
+  },
+  {
+   "date": "nov/2026 (data a confirmar)",
+   "event": "Resultado do 3T26"
+  },
+  {
+   "date": "out–nov/2026",
+   "event": "Liquidação da 5ª emissão (até R$ 500 mi, vencimento em 2029) e pré-pagamento da 3ª"
+  },
+  {
+   "date": "27/11/2026",
+   "event": "Black Friday, seguida do Natal, com a isenção de IR em vigor"
+  },
+  {
+   "date": "dez/2026",
+   "event": "Declaração do JCP de 2026 (o de 2025 foi aprovado em 18/12/2025)"
+  },
+  {
+   "date": "jan/2027",
+   "event": "Novo salário mínimo e reforço do Bolsa Família (MS: +R$ 22,7 bi em 2027)"
+  }
+ ],
+ "bottom_line": "Funciona para quem aceita ~21% a.a. de TIR de dono no cenário-base (acima do CDI de ~13,7%, abaixo da meta de 25%) e quer a opção de reprecificação: o retorno de 3 anos passa de 25% se o P/L voltar a ~7x. A tese depende de a margem bruta absorver o câmbio (≥ ~55%) e de o C&A Pay manter o NPL90 abaixo de ~16%; se um dos dois falhar, o cenário bear (R$ 3,59) vira o central."
+}

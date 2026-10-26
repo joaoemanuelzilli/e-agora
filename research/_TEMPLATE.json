@@ -1,0 +1,78 @@
+{
+  "ticker": "XXXX3",
+  "name": "Nome da Companhia",
+  "sector": "Setor / subsetor",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [{"ticker": "XXXX3", "class": "ON"}],
+
+  "overrides": {
+    "base": {},
+    "notes": "Só preencha se precisar corrigir a base CVM (ex.: excluir receita de construção, não recorrentes). Explique."
+  },
+
+  "projection": {
+    "years": [2026, 2027, 2028, 2029, 2030],
+    "revenue_growth": [0.10, 0.09, 0.08, 0.07, 0.06],
+    "ebitda_margin": [0.20, 0.205, 0.21, 0.21, 0.21],
+    "da_pct_revenue": [0.05, 0.05, 0.05, 0.05, 0.05],
+    "capex_pct_revenue": [0.06, 0.06, 0.055, 0.055, 0.05],
+    "nwc_pct_revenue": 0.10,
+    "cost_of_net_debt": [0.155, 0.15, 0.14, 0.13, 0.125],
+    "other_financial": [0, 0, 0, 0, 0],
+    "tax_rate": [0.28, 0.29, 0.30, 0.30, 0.30],
+    "minority_share_ni": 0.0,
+    "payout": [0.35, 0.40, 0.45, 0.50, 0.50],
+    "buyback_mn": [0, 0, 0, 0, 0],
+    "equity_issuance_mn": [0, 0, 0, 0, 0]
+  },
+
+  "financial_projection": {
+    "_comment": "Só para template=financial (bancos). Remova caso contrário.",
+    "roe": [0.20, 0.20, 0.205, 0.21, 0.21],
+    "ni_growth": null,
+    "payout": [0.40, 0.40, 0.45, 0.50, 0.50]
+  },
+
+  "sotp": {
+    "_comment": "Só para template=holding. Remova caso contrário.",
+    "components": [{"name": "Subsidiária A", "ticker": "AAAA3", "stake": 0.60, "method": "fair", "value_mn": null}],
+    "holding_net_debt_mn": 0,
+    "holding_cost_mn": 0
+  },
+
+  "terminal": {"g": 0.05, "roic": 0.18, "roe": 0.20},
+  "wacc": {"kd_pre_tax": 0.155, "target_debt_weight": 0.30},
+  "adjustments": {"other_debt_like": 0, "non_operating_assets": 0, "minority_value": null, "notes": ""},
+
+  "target_multiples": {
+    "pe": 12.0, "ev_ebitda": 7.0, "pbv": 2.0,
+    "rationale": "Ex.: média de 5 anos da própria empresa e mediana de pares (cite números e fontes)."
+  },
+
+  "scenarios": {
+    "bear": {"probability": 0.25, "revenue_growth_shift": -0.03, "ebitda_margin_shift": -0.02, "terminal_g_shift": -0.01, "capex_pct_shift": 0.0, "narrative": "1 linha"},
+    "bull": {"probability": 0.20, "revenue_growth_shift": 0.02, "ebitda_margin_shift": 0.015, "terminal_g_shift": 0.005, "capex_pct_shift": 0.0, "narrative": "1 linha"}
+  },
+  "uncertainty": {"revenue_growth_sd": 0.03, "ebitda_margin_sd": 0.015, "terminal_g_sd": 0.0075, "capex_pct_sd": 0.005},
+
+  "debt_profile": {"gross_debt_mn": 0, "pct_floating_cdi": 0.0, "avg_cost": "CDI+1,2%", "avg_maturity_years": 0, "next_24m_maturities_mn": 0, "covenant_nd_ebitda": null},
+  "rate_sensitivity": {"ni_impact_per_100bp_cdi_mn": 0, "notes": ""},
+
+  "history_check": {
+    "revenue_cagr_5y": 0.0, "ebitda_margin_avg_5y": 0.0, "roe_avg_5y": 0.0, "payout_avg_5y": 0.0,
+    "last_quarter": {"period": "2T26", "revenue_yoy": 0.0, "ebitda_margin": 0.0, "net_income_mn": 0, "net_debt_ebitda": 0.0},
+    "notes": "Como as premissas se comparam ao histórico."
+  },
+  "guidance": "Guidance/metas oficiais da companhia (com data) ou 'sem guidance'.",
+  "dividend_policy": "Política (estatuto/mínimo, JCP, histórico de payout, recompras).",
+  "election_impact": "Por que caiu hoje: canal macro (juros/câmbio/fiscal/crédito/intervenção) vs. micro. O que de fato muda no valor.",
+  "summary": "2-3 frases objetivas.",
+  "thesis": ["Motivo 1 com número", "Motivo 2 com número"],
+  "risks": ["Risco 1", "Risco 2"],
+  "catalysts": ["Catalisador 1 (data se houver)"],
+  "key_data": [{"label": "Dívida líquida/EBITDA 2T26", "value": "2,1x", "context": "vs covenant 3,5x"}],
+  "sources": [{"title": "Release 2T26", "url": "https://..."}],
+  "confidence": "alta|média|baixa — e por quê"
+}

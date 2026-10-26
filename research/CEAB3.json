@@ -1,0 +1,287 @@
+{
+ "ticker": "CEAB3",
+ "name": "C&A Modas S.A.",
+ "sector": "Varejo / moda de massa (vestuário, beleza/eletrônicos) + C&A Pay",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "CEAB3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "PROBLEMA DE DADOS CVM: em 2023–2025 a C&A registra a depreciação do direito de uso na DVA em 7.04.02 ('Outras': R$ 381,0 / 358,7 / 375,7 mi), fora de 7.04.01 → o EBITDA padronizado do pipeline (EBIT + 7.04.01) fica subestimado nesses anos e no LTM (o trimestral 4T fica com D&A negativo). EBITDA IFRS-16 correto (EBIT 3.05 + 7.04.01 + 7.04.02): 2023 R$ 1.147,6 mi; 2024 R$ 1.516,8 mi; 2025 R$ 1.765,3 mi (22,1%, inclui não recorrentes como o ganho de R$ 154,3 mi na venda da carteira Bradescard); LTM 2T26 ≈ R$ 1.705 mi (EBIT 964,4 + D&A total ~740,8). Em 2026 (ITR 2T26) a companhia passou a somar tudo em 7.04.01 (R$ 375,9 mi no semestre). O EV/EBITDA LTM do pipeline usa o EBITDA LTM de R$ 1.330 mi (sem a depreciação de direito de uso): a R$ 7,36 dá 3,1x; com o EBITDA corrigido (~R$ 1.705 mi) o correto é ~2,4x. (O resumo impresso pelo motor mostra 4,6x porque usa o valor de mercado pré-eleição no EV.) Nenhum override necessário na base usada pelo motor (receita 2025, DL e PL de jun/26 estão corretos); margens projetadas já estão no conceito IFRS-16 correto e recorrente."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.026,
+   0.065,
+   0.08,
+   0.08,
+   0.075
+  ],
+  "ebitda_margin": [
+   0.195,
+   0.195,
+   0.2,
+   0.203,
+   0.205
+  ],
+  "da_pct_revenue": [
+   0.09,
+   0.089,
+   0.088,
+   0.088,
+   0.088
+  ],
+  "capex_pct_revenue": [
+   0.128,
+   0.12,
+   0.12,
+   0.115,
+   0.115
+  ],
+  "nwc_pct_revenue": 0.15,
+  "cost_of_net_debt": [
+   0.12,
+   0.125,
+   0.125,
+   0.12,
+   0.115
+  ],
+  "other_financial": [
+   -60,
+   -65,
+   -65,
+   -60,
+   -60
+  ],
+  "tax_rate": [
+   0.15,
+   0.17,
+   0.2,
+   0.22,
+   0.24
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.3,
+   0.35,
+   0.4,
+   0.4,
+   0.45
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.13,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.145,
+  "target_debt_weight": 0.3
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Risco sacado de R$ 281,7 mi (jun/26; R$ 421,2 mi no 4T25) tratado como capital de giro (custo em AVP de fornecedores no resultado financeiro, refletido em other_financial). Sem antecipação de recebíveis desde 2023 (Fitch: ~R$ 700 mi de recebíveis de cartões de terceiros livres). JCP de 2025 a pagar (R$ 139,8 mi em 30/06/26) já é passivo e está no caixa da DL-base — saída futura não ajustada (efeito ~R$ 0,47/ação)."
+ },
+ "target_multiples": {
+  "pe": 7.0,
+  "ev_ebitda": 3.8,
+  "pbv": 1.0,
+  "rationale": "P/L 7x LPA 2027E: abaixo do P/L LTM pré-eleição (8,6x o lucro ajustado a R$ 13,84) e dentro da faixa de 2025 (~6,5–10x); EV/EBITDA IFRS-16 de 3,8x ≈ nível pré-eleição (valor de mercado R$ 4,15 bi + DL c/ arrendamentos R$ 1,94 bi = R$ 6,1 bi / EBITDA ajustado IFRS-16 LTM R$ 1,57 bi = 3,9x). Referências pré-eleição: Bradesco BBI P/L 2027E de 4,5x a R$ 9,72 (ago/26); alvos Safra R$ 15,50, BBI R$ 16, XP R$ 17 (reiterado 19/10/26), Citi R$ 18, BTG R$ 19, UBS R$ 20 (jan/26). P/VP 1,0x é referência."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Câmbio + perdas do C&A Pay + cross-border: margem bruta devolve ~2 p.p., SSS ~0 em 2027 e expansão de lojas adiada."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Renda disponível da classe C/D (IR, Bolsa Família, salário mínimo) acelera SSS para 6–8%, real volta a ~R$ 5,0 e margem EBITDA ajustada vai a ~21–22%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.006
+ },
+ "debt_profile": {
+  "gross_debt_mn": 952.2,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "CDI+1,57% (média 2025); 4ª emissão (out/25, R$ 300 mi) a CDI+0,80%/1,00%; 3ª emissão a CDI+1,80%/2,00%",
+  "avg_maturity_years": 1.4,
+  "next_24m_maturities_mn": 604,
+  "covenant_nd_ebitda": null,
+  "notes": "Cronograma (release 2T26): 2026 R$ 94 mi; 2027 R$ 510 mi; 2028 R$ 247 mi; 2029 R$ 33 mi; 2030 R$ 33 mi. Prazo médio ~1,4 ano e vencimentos de 24 meses ≥ R$ 604 mi (2026+2027) são cálculos próprios. 5ª emissão proposta (até R$ 500 mi, out/2029, rating AA(bra) Fitch em 14/10/2026) para pré-pagar a 3ª emissão — alongaria o principal vencimento de 2027. Covenants não encontrados; gatilhos de rebaixamento da Fitch: alavancagem líquida ajustada > 3,0x ou EBITDAR/(juros+aluguéis) < 2,0x."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -7,
+  "notes": "Dívida bruta R$ 952 mi vs caixa R$ 782 mi: +1 p.p. de CDI ≈ −R$ 1,7 mi/ano líquido (cálculo próprio). Somando AVP de fornecedores (R$ 120,6 mi em 2025, sobe com o CDI) e o custo de captação do C&A Pay, estimamos ~−R$ 10 mi antes de IR (~−R$ 7 mi no lucro). O canal maior é indireto: inadimplência do C&A Pay (NPL90 13,4% no 2T26; perdas de 12,9% da carteira média em 2025). Juros de arrendamento (~R$ 185 mi/ano) são contratuais."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.1434,
+  "ebitda_margin_avg_5y": 0.175,
+  "roe_avg_5y": 0.085,
+  "payout_avg_5y": 0.1,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.012,
+   "ebitda_margin": 0.241,
+   "net_income_mn": 177.9,
+   "net_debt_ebitda": 1.14
+  },
+  "notes": "CAGR 2020–25 de 14,3% parte da base da pandemia; 2019–25 = 7,1% a.a.; 3 anos = 8,9% a.a. Projetamos 2,6% em 2026 (1S26 +0,9%: vestuário +5,6% no 2T26, mas eletrônicos/beleza −37% com o fim da telefonia; 2S26 ~+4%) e 6,5–8% em 2027–30 com 15–20 lojas/ano (área +4–6% a.a.), média 6,7%. Margem EBITDA IFRS-16 média 2021–25 de 17,5% (CVM corrigida pela depreciação de direito de uso; inclui não recorrentes); a margem ajustada pós-IFRS16 foi 8,7% (2021) → 12,4% → 16,2% → 19,0% → 19,7% (2025); LTM ajustada 19,6%. Projetamos 19,5% (2026–27, câmbio e crédito compensando renda) → 20,5% (2030), sem extrapolar a sequência de 20 trimestres de expansão da margem bruta. Margem do 2T26 na tabela é a reportada (24,1%; ajustada 20,9% sem reversão de PIS/COFINS de ~R$ 81 mi); DL/EBITDA = DL c/ arrendamentos R$ 1.944 mi / EBITDA IFRS-16 LTM corrigido ~R$ 1.705 mi. ROE CVM médio 2021–25 de 8,5% (16,7% em 2025; ajustado 13,4%); projetado 12–14%. Payout médio baixo (sem proventos 2021–23; JCP de 23% do lucro de 2024 e 27% do de 2025). Regra IFRS-16: capex = capex caixa (guidance R$ 680 mi em 2026 = 8,3% da receita; 7–8% em 2027–30) + adições de direito de uso ≈ principal de arrendamento (pagamento DFC R$ 545,5 mi em 2025 − juros ~R$ 185 mi ≈ R$ 360 mi ≈ 4,5% da receita). Alíquota efetiva 15–24% (2025: 19% contábil e ~12,5% no ajustado, com JCP)."
+ },
+ "guidance": "Investor Day de 26/08/2026 (ciclo 'Full Power' 2027–30): 15–20 aberturas/ano (60–80 lojas de 1.500–1.600 m², ~80% em shoppings de cidades até 500 mil hab. no S/SE/CO) e 100–120 reformas; capex de R$ 680 mi em 2026 e 7–8% da receita em 2027–30 (inclui R$ 200–300 mi em logística); ROIC mínimo >18% nos novos projetos; conversão de caixa 20% melhor em 2030 vs 2026; DL/EBITDA até 0,5x em 2030; digital 15% das vendas; C&A Pay com 19 mi de clientes ativos. Sem guidance de receita, margem ou lucro.",
+ "dividend_policy": "Estatuto: dividendo mínimo obrigatório (percentual não verificado; a Fitch assume payout de 25% a partir de 2026). Sem proventos de 2021 a 2023. JCP do exercício 2024: R$ 105,0 mi (R$ 0,3447/ação; caixa R$ 101,9 mi pago no 4T25). JCP do exercício 2025: R$ 158 mi brutos (R$ 0,5216/ação; data-base 23/12/2025; R$ 139,8 mi ainda a pagar em 30/06/26, data a confirmar). Recompras: R$ 32,4 mi (2024), R$ 36,0 mi (2025), R$ 70,4 mi (1S26); 4º programa (05/05/2026) de até 10 mi ações (4,9% do free float) até 08/11/2027, ~85% executado no 2T26. Modelo: payout 30% → 45%, crescente à medida que o capex de expansão perde peso.",
+ "election_impact": "Queda de ~44–47% (R$ 13,84 → ~R$ 7,3–7,8) reflete beta de consumo doméstico/small cap e reversão do rali pré-eleição. Canais que mudam o valor: (i) câmbio — ~30% da produção é importada (cálculo a partir de ~70% de compras locais) e encarece em 2027; (ii) juros — efeito direto pequeno (DL ex-arrendamentos R$ 170 mi), maior via inadimplência do C&A Pay; (iii) a Cofra (controladora, ~31%) já vendeu ações e pode vender mais. Contrapontos pró-consumo: isenção de IR até R$ 5 mil (desde jan/26), salário mínimo e reforço do Bolsa Família (+R$ 22,7 bi em 2027 segundo o Morgan Stanley) atingem exatamente a classe C/D, núcleo do público; real mais fraco encarece o cross-border. Nosso lucro 2027E (R$ 512 mi) fica ~10–20% abaixo das estimativas pré-eleição (UBS R$ 566 mi; BBI ~R$ 640 mi implícito) — dano fundamental muito menor que a queda.",
+ "summary": "Varejo de moda de massa (341 lojas, C&A Pay) que virou a chave em 2024–25 (margem bruta em alta por 20 trimestres; lucro ajustado recorde de R$ 471 mi em 2025), com DL ex-arrendamentos de só R$ 170 mi. A queda de ~44–47% excede o dano fundamental (câmbio sobre ~30% de importados e crédito do C&A Pay), e o público C/D é o mais beneficiado por isenção de IR e transferências. Valor justo ~R$ 7,2 ≈ preço; TIR de dono ~21% (a maior do grupo) com P/L 2027E ~4,3x; em 3 anos ~54% se o P/L voltar a 7x.",
+ "thesis": [
+  "Virada operacional comprovada: margem bruta consolidada 52,4% (2023) → 55,5% (2025) → 58,1% (2T26); EBITDA ajustado IFRS-16 de R$ 1.090 mi (2023) para R$ 1.576 mi (2025); lucro ajustado R$ 471 mi em 2025 (+57,5%).",
+  "Balanço leve: dívida bruta R$ 952 mi vs caixa R$ 782 mi (DL ex-arrendamentos R$ 170 mi, 0,2x EBITDA pré-IFRS16); 5ª emissão de até R$ 500 mi (AA(bra), Fitch) para alongar o vencimento de 2027.",
+  "Valuation de crise: P/L 2027E ~4,3x e P/VP ~0,58x; JCP de 2025 equivale a ~7% do preço; recompra em curso (até 10 mi ações).",
+  "Plano 2027–30 (Investor Day 26/08/26): 60–80 lojas novas, digital a 15% das vendas e C&A Pay com 19 mi de clientes, com ROIC mínimo >18% nos novos projetos."
+ ],
+ "risks": [
+  "Câmbio: ~30% da produção é importada; real 10% mais fraco pressiona a margem bruta em 2027 (o 2T26 se beneficiou de real forte).",
+  "C&A Pay: NPL90 de 13,4% (2T26) e perdas de 12,9% da carteira média (2025); juros altos e endividamento das famílias podem reverter a melhora.",
+  "Cross-border: fim do imposto federal de importação para compras até US$ 50 (mai/26) e Shein ~44% mais barata (BTG, set/26).",
+  "Execução da expansão: capex de 7–8% da receita e consumo de capital de giro (ciclo de caixa +19 dias no 2T26; FCF ajustado −65,6% a/a).",
+  "Overhang da controladora: a Cofra (família Brenninkmeyer) foi de 52,4% (nov/24) para ~31%; novas vendas pressionam o papel."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (data a confirmar; início de nov/2026).",
+  "Liquidação da 5ª emissão e pré-pagamento da 3ª (alonga 2027).",
+  "Verão/Black Friday/Natal com renda disponível maior (isenção de IR).",
+  "Pagamento do JCP de 2025 e declaração do JCP de 2026 (dez/26); recompra."
+ ],
+ "key_data": [
+  {
+   "label": "Preço 26/10 ~12h (B3)",
+   "value": "R$ ~7,3–7,8",
+   "context": "−44% a −47% no dia; R$ 13,84 em 23/10"
+  },
+  {
+   "label": "Lucro ajustado 2025 / contábil 2025",
+   "value": "R$ 470,7 mi / R$ 587,1 mi",
+   "context": "recorde de lucro ajustado (+57,5%)"
+  },
+  {
+   "label": "EBITDA ajustado IFRS-16 LTM 2T26",
+   "value": "R$ 1.574 mi (19,6%)",
+   "context": "pré-IFRS16 R$ 1.063 mi"
+  },
+  {
+   "label": "DL ex-arrendamentos / c/ arrendamentos",
+   "value": "R$ 170 mi / R$ 1.944 mi",
+   "context": "0,2x EBITDA pré-IFRS16; 1,1x EBITDA IFRS-16"
+  },
+  {
+   "label": "ROIC LTM (empresa)",
+   "value": "19,9% (2T26)",
+   "context": "5,2% no 4T23"
+  },
+  {
+   "label": "C&A Pay 2T26",
+   "value": "carteira 360d R$ 979 mi; NPL90 13,4%",
+   "context": "28,2% das vendas"
+  },
+  {
+   "label": "P/L 2027E / P/VP (a ~R$ 7,3)",
+   "value": "~4,3x / ~0,58x",
+   "context": "modelo"
+  },
+  {
+   "label": "Capex guidance",
+   "value": "R$ 680 mi (2026); 7–8% da receita (2027–30)",
+   "context": "Investor Day 26/08/2026"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Release 2T26 (RI C&A, 04/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/402adf94-e9a7-4c66-9bd9-3d0ec018abd5/122c2320-51b6-704d-45e0-8cdbf3ae176c?origin=2"
+  },
+  {
+   "title": "Planilha dinâmica (1T19–2T26)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/402adf94-e9a7-4c66-9bd9-3d0ec018abd5/82444211-1f47-9860-8fdc-09251bfe0a91?origin=2"
+  },
+  {
+   "title": "Fitch — rating da 5ª emissão (14/10/2026)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/CEAB3/50903/"
+  },
+  {
+   "title": "Ágora/Bradesco BBI — Investor Day (27/08/2026)",
+   "url": "https://acionista.com.br/wp-content/uploads/2026/08/20260827-cfn-ceab3-3e31ec96-462f-447c-a662-5067cae02831.pdf"
+  },
+  {
+   "title": "Composição acionária (RI C&A)",
+   "url": "https://ri.cea.com.br/a-companhia/composicao-acionaria/"
+  },
+  {
+   "title": "Investidor10 — resultado 2025 (24/02/2026)",
+   "url": "https://investidor10.com.br/noticias/c-a-modas-ceab3-bate-recorde-e-lucra-r-470-7-milhoes-em-2025-118806/"
+  },
+  {
+   "title": "Money Times — preços-alvo pós-2T26 (05/08/2026)",
+   "url": "https://www.moneytimes.com.br/ca-ceab3-cai-mais-de-7-com-falta-de-consenso-entre-analistas-sobre-o-balanco-o-que-fazer-com-as-acoes-agora-lils/"
+  },
+  {
+   "title": "Money Times — 1T26 e 4º programa de recompra",
+   "url": "https://www.moneytimes.com.br/ca-ceab3-triplica-lucro-no-1t26-e-anuncia-recompra-de-acoes/"
+  },
+  {
+   "title": "Investidor10 — fim da 'taxa das blusinhas' (13/05/2026)",
+   "url": "https://investidor10.com.br/noticias/varejistas-caem-em-bloco-na-b3-com-fim-da-taxa-das-blusinhas-veja-desempenho-120361/"
+  },
+  {
+   "title": "Money Times — pregão de 26/10/2026",
+   "url": "https://www.moneytimes.com.br/8-acoes-caem-mais-de-40-no-ibovespa-em-dia-sangrento-apos-vitoria-de-lula-bdap/"
+  },
+  {
+   "title": "Lei 15.270/2025",
+   "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15270.htm"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (data/hist/CEAB3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média — virada operacional bem documentada e balanço leve, mas o dado CVM de D&A exigiu correção manual, o ciclo de crédito (C&A Pay) e o câmbio pesam em 2027 e não há guidance de margem."
+}

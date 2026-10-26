@@ -1,0 +1,250 @@
+{
+ "ticker": "CPLE3",
+ "name": "Copel — Companhia Paranaense de Energia",
+ "sector": "Utilities / integrada: geração hídrica+eólica, transmissão, distribuição (Copel DIS), comercialização",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "CPLE3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 22486.0
+  },
+  "notes": "Receita-base FY2025 = ROL CVM R$ 26.117 mi − receita de construção da Copel DIS (DVA 7.01.03: R$ 3.470 mi; margem ~zero) − VNR (R$ 161 mi, não caixa) = R$ 22.486 mi. EBITDA recorrente FY2025 R$ 5.533,8 mi = 24,6% da base. Desde 22/12/2025 a Copel tem só ações ON (CPLE3) após migração ao Novo Mercado; 2.970,1 mi ações em circulação."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.12,
+   0.06,
+   0.05,
+   0.05,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.265,
+   0.27,
+   0.27,
+   0.27,
+   0.27
+  ],
+  "da_pct_revenue": [
+   0.066,
+   0.068,
+   0.069,
+   0.07,
+   0.071
+  ],
+  "capex_pct_revenue": [
+   0.17,
+   0.155,
+   0.145,
+   0.135,
+   0.13
+  ],
+  "nwc_pct_revenue": 0.05,
+  "cost_of_net_debt": [
+   0.12,
+   0.124,
+   0.12,
+   0.116,
+   0.112
+  ],
+  "other_financial": [
+   220,
+   230,
+   240,
+   250,
+   260
+  ],
+  "tax_rate": [
+   0.2,
+   0.21,
+   0.22,
+   0.22,
+   0.22
+  ],
+  "minority_share_ni": 0.01,
+  "payout": [
+   0.75,
+   0.75,
+   0.75,
+   0.75,
+   0.75
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.045,
+  "roic": 0.13,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.14,
+  "target_debt_weight": 0.3
+ },
+ "adjustments": {
+  "other_debt_like": 2700,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like (CVM 2T26) = benefícios pós-emprego R$ 1.491 mi + UBP a pagar R$ 382 mi + dividendos/JCP a pagar R$ 632 mi (JCP de R$ 706 mi declarado em abr/26, pago 30/09/26, referente ao 1S26) + derivativos R$ 195 mi. Venda de 23,03% da Dona Francisca por R$ 150 mi (assinada jun/26) não incluída (imaterial)."
+ },
+ "target_multiples": {
+  "pe": 10.0,
+  "ev_ebitda": 6.5,
+  "pbv": 1.3,
+  "rationale": "Aproximação (memória de mercado, não verificada nesta sessão): Copel negociou ~8–12x P/L e ~6–8x EV/EBITDA em 2021–2025; pós-privatização (corporation, payout ≥75%) merece o meio da faixa — 10x / 6,5x."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.015,
+   "ebitda_margin_shift": -0.015,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Preço de energia no ACL cai com sobreoferta/curtailment, GSF baixo e juros altos; payout limitado pela banda de alavancagem."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.005,
+   "narrative": "RTP 2026 (OPEX +52,9%) e LRCAP ampliam EBITDA; curva cai e payout ≥75% vira dividend yield de dois dígitos."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.012,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.008
+ },
+ "debt_profile": {
+  "gross_debt_mn": 23484,
+  "pct_floating_cdi": 0.6,
+  "avg_cost": "12,92% a.a. nominal (91,33% do CDI) em jun/26",
+  "avg_maturity_years": 5.2,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -80,
+  "notes": "Estimativa: assumo ~60% da dívida bruta (R$ 23,5 bi) em CDI e caixa de R$ 3,8 bi → exposição líquida ~R$ 10 bi: +100 bp ≈ −R$ 100 mi antes de IR, ≈ −R$ 80 mi após IR (JCP reduz alíquota). +300 bp ≈ −R$ 0,24 bi/ano, ~11% do lucro recorrente de 2025 (R$ 2,1 bi) — a menor sensibilidade relativa entre as distribuidoras do grupo. Custo da DL calibrado no resultado financeiro recorrente do 1S26 (−R$ 1.143 mi ≈ 12,4% a.a. sobre a DL) e movido pela trajetória central de CDI/IPCA."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.07,
+  "ebitda_margin_avg_5y": 0.241,
+  "roe_avg_5y": 0.123,
+  "payout_avg_5y": 0.53,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.104,
+   "ebitda_margin": 0.271,
+   "net_income_mn": 1047,
+   "net_debt_ebitda": 2.9
+  },
+  "notes": "CAGR CVM 5 anos 7,0%; receita recorrente cresceu 10,4% a/a no 2T26 e 1S26 EBITDA recorrente +18,6% (sinergias, RTP, transmissão MSG). Premissa 2026 +12% (RTP vigente desde 24/06/26) e 5–6% depois. Margem recorrente 2025 24,6%; 1S26 ~26,5%; premissa 26,5–27%. ROE CVM 2020–25 entre 5% (2022) e 23% (2021); recorrente ~9–11%. Payout 2025 de 144% incluiu prêmio de migração ao Novo Mercado (R$ 1,3 bi); nova política: mínimo 75%."
+ },
+ "guidance": "Estrutura ótima de capital (Fato Relevante 15/07/2026): DL/EBITDA alvo 2,9x (banda 2,6–3,2x, convergência em até 48 meses). Plano de investimentos de R$ 18 bi em 5 anos (DIS R$ 13,5 bi; geração R$ 1,9 bi; transmissão R$ 1,8 bi) — apresentação 4T25 — mais ampliação de Foz do Areia e Segredo (LRCAP de 18/03/2026; R$ 318 mi já no 2T26).",
+ "dividend_policy": "Política (FR 15/07/2026): mínimo de 75% do lucro líquido, ao menos 2 pagamentos/ano, condicionado à banda de alavancagem. 2025: dividendos R$ 1,35 bi + JCP R$ 1,1 bi + prêmio de migração R$ 1,3 bi (payout 144%, DY 13,9%). 2026: JCP de R$ 706 mi (R$ 0,2377/ação) a pagar em 30/09/2026. Programa de recompra de até 10% das ações em circulação (renovado em 21/05/2026).",
+ "election_impact": "Caiu entre 14% e 23% no dia (R$ 17,34 → R$ 13,4–14,9), a menor queda do grupo. Macro: alavancagem moderada (2,9x) e dívida a 91% do CDI — +300 bp custam ~R$ 0,24 bi/ano (~11% do lucro). Político: corporation desde 2023 (limite de voto de 10%), sem golden share relevante; reversão é improvável e o poder concedente das concessões é federal (Aneel/MME) — risco de modicidade tarifária existe como para qualquer distribuidora, mas a RTP de jun/2026 já foi homologada (BRR R$ 19,9 bi, OPEX +52,9%). A queda é quase toda prêmio de risco/juros.",
+ "summary": "A mais defensiva do grupo: integrada, alavancagem 2,9x, payout mínimo de 75% e RTP favorável recém-homologada. Mesmo assim, a P/L ~13–15x 2027E e ROE ~11–12%, o retorno implícito fica bem abaixo de 25%; é qualidade cara para o Ke do usuário, não oportunidade.",
+ "thesis": [
+  "RTP 2026 da Copel DIS: BRR líquida R$ 19,9 bi, custos operacionais regulatórios +52,9%, Fator X 0,95% — sustenta EBITDA DIS em 2026–2030.",
+  "EBITDA recorrente 1S26 R$ 3.367 mi (+18,6%) e LL recorrente R$ 1.284 mi (+24,7%); payout ≥75% → DY ~6–7% ao preço atual.",
+  "Baixa exposição relativa a juros (dívida 91% do CDI, DL/EBITDA 2,9x) e governança de corporation (Novo Mercado desde dez/2025)."
+ ],
+ "risks": [
+  "Preço de energia e curtailment na GeT (corte eólico 23,7% no 2T26; −R$ 34,8 mi) e risco hidrológico (GSF).",
+  "Capex crescente (LRCAP, DIS R$ 13,5 bi em 5 anos) pode limitar payout dentro da banda de 2,6–3,2x.",
+  "Reformas do setor elétrico e CDE num 4º mandato; aquisições fora do core (dispersão de capital)."
+ ],
+ "catalysts": [
+  "Pagamento do JCP de R$ 706 mi (30/09/2026, já ocorrido)",
+  "Resultado 3T26 (≈ início de nov/2026)",
+  "Dividendos de fim de ano sob a política de 75%",
+  "Copom dez/2026"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA recorrente 2T26",
+   "value": "R$ 1.612,6 mi (+20,8%)",
+   "context": "margem recorrente 27,1%"
+  },
+  {
+   "label": "Lucro recorrente 2T26",
+   "value": "R$ 645,1 mi (+42,6%)",
+   "context": "reportado R$ 1.047,5 mi (UBP Elejor +R$ 284 mi)"
+  },
+  {
+   "label": "DL/EBITDA jun/26",
+   "value": "2,9x (DL R$ 19.651 mi)",
+   "context": "alvo 2,9x, banda 2,6–3,2x"
+  },
+  {
+   "label": "Custo médio da dívida",
+   "value": "12,92% (91,33% do CDI)",
+   "context": "prazo médio 5,2 anos"
+  },
+  {
+   "label": "RTP Copel DIS jun/26",
+   "value": "BRR R$ 19,9 bi",
+   "context": "concessão até 07/07/2045"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Copel — Press Release 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/16a31b1b-5ecd-4214-a2e0-308a2393e330/8a327785-31db-2172-47a1-4ad21f404eba?origin=2"
+  },
+  {
+   "title": "Copel — Apresentação 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/16a31b1b-5ecd-4214-a2e0-308a2393e330/809f7b86-c466-4a0a-3dd3-afbbcc614642?origin=2"
+  },
+  {
+   "title": "Copel — Press Release 4T25",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/16a31b1b-5ecd-4214-a2e0-308a2393e330/dbf7992a-3df1-720c-4fc1-b66a2994a28d?origin=2"
+  },
+  {
+   "title": "Copel — Apresentação 4T25 (plano de R$ 18 bi em 5 anos)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/16a31b1b-5ecd-4214-a2e0-308a2393e330/13c6f3eb-f801-d7c8-3023-2b436c4eacec?origin=2"
+  },
+  {
+   "title": "Central de resultados Copel (RI)",
+   "url": "https://ri.copel.com/informacoes-financeiras/central-de-resultados/"
+  },
+  {
+   "title": "BCB/Contexto do estudo (Selic, Focus 23/10/2026, curva DI 26/10/2026)",
+   "url": "research/_context.md"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/"
+  }
+ ],
+ "confidence": "média-alta — números oficiais recentes e política de dividendos explícita; incerteza principal em preço de energia/curtailment e no % da dívida em CDI (estimado)."
+}

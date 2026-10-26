@@ -1,0 +1,155 @@
+{
+  "ticker": "TEND3",
+  "headline": "A Tenda, a incorporadora mais exposta ao núcleo do MCMV (Faixas 1–2), negocia a 3,9x o lucro 2027E e 2,7x o EV/EBITDA, depois de elevar o guidance de 2026 em agosto — e o preço embute crescimento zero até 2030.",
+  "verdict": "A R$ 22,38 (preço de referência do estudo às ~12h55 de 26/10/2026), a TIR de dono é de 24,4% (no limite do Ke de 25%), o valor justo é de R$ 29,65 (+32%) e 86% das 5.000 simulações superam o preço. O turnaround está nos números da CVM (margem EBITDA de 11,1% em 2024 para 18,5% no 1S26; Piotroski 7/9) e o 4º mandato reduz o principal risco do modelo de negócio — corte do programa.",
+  "reasons": [
+    {
+      "title": "Faixas 1–2: o núcleo político do MCMV",
+      "body": "A Tenda vende para famílias com renda até R$ 5.000, exatamente as faixas priorizadas pelo governo reeleito: Portaria MCID 333/2026 (renda F1 R$ 3.200, F2 R$ 5.000, F3 R$ 9.600; teto F3 R$ 400 mil) e Conselho Curador do FGTS (descontos 2026 elevados de R$ 12,5 bi para R$ 13 bi em 10/09/2026; habitação R$ 144,5 bi). No cenário Flávio, revisão do programa era risco; com Lula esse risco cai — e o mercado já reconheceu parte disso, com queda menor que a prevista pelo beta.",
+      "metric": {
+        "label": "Renda máxima Faixa 2 (Portaria 333/2026)",
+        "value": "R$ 5.000"
+      }
+    },
+    {
+      "title": "Guidance de 2026 revisado para cima",
+      "body": "Em 04/08/2026 a companhia elevou o LL consolidado de 2026 para R$ 600–660 mi (de R$ 520–600 mi), o EBITDA ajustado do segmento Tenda para R$ 1,1–1,2 bi e as vendas líquidas para R$ 5,5–6,0 bi (release 2T26). O modelo projeta LL 2026E de R$ 618 mi, dentro da faixa.",
+      "metric": {
+        "label": "Guidance LL 2026",
+        "value": "R$ 600–660 mi"
+      }
+    },
+    {
+      "title": "Turnaround visível nos números oficiais",
+      "body": "Margem bruta CVM saiu de 11,4% (2022, ano do prejuízo de R$ 547 mi) para 35,7% no 2T26; margem EBITDA CVM de 11,1% (2024) para 18,5% no 1S26; ROE UDM de 42%. Piotroski de 7/9 (FCO positivo, margem e giro subindo, sem emissão).",
+      "metric": {
+        "label": "Margem bruta ajustada 2T26",
+        "value": "37,3% (+3,9 p.p. a/a)"
+      }
+    },
+    {
+      "title": "Múltiplos nas mínimas de 5 anos",
+      "body": "P/L UDM de 4,7x contra média de 5 anos de 11,8x e EV/EBITDA de 3,9x contra 8,2x (série mensal B3/CVM) — ambos no percentil 0. Ao preço de referência, P/L 2027E de 3,9x.",
+      "metric": {
+        "label": "P/L UDM vs média 5 anos",
+        "value": "4,7x vs 11,8x"
+      }
+    },
+    {
+      "title": "Dividendos de volta e desalavancagem",
+      "body": "Proventos de R$ 100 mi (pagos em 07/01/2026) e R$ 78 mi (ex 13/08, pagamento em 30/12/2026) na B3. Com payout de 30% subindo a 60%, o DY projetado é de 6,8%, 10,2% e 14,6% em 2026–28, e a DL/EBITDA (0,43x hoje, CVM) vira caixa líquido em 2028 (modelo).",
+      "metric": {
+        "label": "DY projetado 2027E (a R$ 22,38)",
+        "value": "10,2%"
+      }
+    },
+    {
+      "title": "Balanço sem risco de solvência",
+      "body": "Altman Z de 6,29 (zona segura), DL CVM de R$ 339 mi (0,43x o EBITDA UDM) e cobertura de juros de 2,5x.",
+      "metric": {
+        "label": "DL/EBITDA UDM (CVM)",
+        "value": "0,43x"
+      }
+    }
+  ],
+  "statistics": [
+    {
+      "title": "A queda foi menor que o beta previa",
+      "body": "TEND3 caía 21,05% na foto do estudo contra −27,5% previstos pelo beta de baixa (1,90): resíduo de +6,5 p.p. (z = +2,4). No modelo multifator do pregão (147 ações, R² = 0,71) a previsão era −39,0%: resíduo de +17,9 p.p. O mercado já discrimina a Tenda como beneficiária do MCMV — a oportunidade está no valuation, não em sobrerreação.",
+      "stat": "resíduo vs beta +6,5 p.p. (z = +2,4); vs multifator +17,9 p.p."
+    },
+    {
+      "title": "Múltiplos: z-scores contra 5 anos",
+      "body": "P/L de 4,74x com z = −1,41 e EV/EBITDA de 3,92x com z = −1,73, ambos no percentil 0 da série de 5 anos. O P/VP (1,78x) está na média (z = +0,07) porque o ROE atual (42%) é muito superior ao histórico.",
+      "stat": "z(EV/EBITDA, 5a) = −1,73; percentil 0"
+    },
+    {
+      "title": "Monte Carlo: o p10 já é o preço",
+      "body": "Em 5.000 simulações, o valor fica entre R$ 21,32 (p10) e R$ 39,51 (p90), com mediana de R$ 29,51; 86% dos cenários superam R$ 22,38.",
+      "stat": "P(valor > R$ 22,38) = 86%; p10 R$ 21,32"
+    },
+    {
+      "title": "DCF reverso: crescimento zero precificado",
+      "body": "O preço de R$ 22,38 exige deslocamento de −10,4 p.p. no crescimento anual: receita crescendo só 0,2% a.a. em 2026–30, contra 10,6% na base e +33% a/a já entregue no 1S26 (CVM).",
+      "stat": "crescimento implícito +0,2% a.a. vs +10,6% na base"
+    },
+    {
+      "title": "Sensibilidade e assimetria",
+      "body": "O valor justo fica acima do preço em toda a grade de Ke de 20% a 30% (R$ 36,09 a R$ 25,64). Só a combinação de −4 p.p. de crescimento e −3 p.p. de margem (R$ 21,10) cai abaixo do preço. Bear (30%) R$ 20,54 (−8%), bull (20%) R$ 35,54 (+59%); ponderado R$ 28,09 (+26%).",
+      "stat": "bear −8% / bull +59%; valor > preço para Ke 20–30%"
+    },
+    {
+      "title": "Crashes anteriores: choque político foi o melhor caso",
+      "body": "Nos 7 dias de crash com histórico (6 deles em fev–mar/2020), TEND3 teve retorno mediano de +3,8% em 12 meses contra +34,8% do IBOV — a Tenda entrou depois na crise de custos de 2021–22. No único choque político, o Joesley Day (18/05/2017), subiu 98,5% em 12 meses (IBOV +28,1%).",
+      "stat": "Joesley Day: +98,5% em 12m; mediana em crashes +3,8% (n = 7)"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Execução de margem (precedente 2021–22)",
+      "body": "Em 2022 a margem bruta caiu a 11,4% e o prejuízo foi de R$ 547 mi; hoje INCC de mão de obra sobe 7,6% em 12m e o dólar subiu 9,5% no dia.",
+      "mitigant": "O modelo usa margem EBITDA (ex-juros) caindo de 20,1% para 19,1% no terminal; tetos F1–F2 maiores permitem reajuste. Alerta: margem bruta ajustada abaixo de 35%."
+    },
+    {
+      "title": "Distratos e crédito do cliente",
+      "body": "Distratos de R$ 292,8 mi no 3T26 (+55% t/t), atribuídos à greve da Caixa, ao limite de comprometimento de renda e a crédito mais rígido.",
+      "mitigant": "Mesmo assim, as vendas líquidas do segmento Tenda cresceram 10,5% a/a no 3T26 (prévia de 08/10); greve é evento pontual."
+    },
+    {
+      "title": "Alea e equity swap sobre a própria ação",
+      "body": "A Alea ainda opera com margem próxima de zero; o equity swap sobre TEND3 (ganho de R$ 17,8 mi no 2T26) gera perda contábil com a queda de hoje — notional não divulgado no material lido.",
+      "mitigant": "Gasto da Alea limitado a R$ 80 mi em 2026; o efeito do swap é contábil até a liquidação e o modelo usa resultado financeiro recorrente ex-swap."
+    },
+    {
+      "title": "Já vinha caindo antes da eleição",
+      "body": "TEND3 recuou 15,8% entre 14/08 e 23/10, enquanto o IBOV subia 22,9% — sinal de preocupação micro (distratos, Alea) anterior ao choque.",
+      "mitigant": "O teste é o resultado do 3T26; o guidance de LL (R$ 600–660 mi) segue como referência objetiva."
+    },
+    {
+      "title": "Fiscal e FGTS",
+      "body": "Faixas 1–2 dependem do desconto do FGTS e, em parte, do FAR/OGU; o plurianual prevê habitação de R$ 139,5 bi em 2028–29 (queda nominal).",
+      "mitigant": "Piso de R$ 12,5 bi de descontos para 2027 sinalizado pelo Ministério das Cidades; o programa é prioridade política do 4º mandato."
+    }
+  ],
+  "monitor": [
+    {
+      "kpi": "Margem bruta ajustada consolidada",
+      "threshold": "Abaixo de 35% (2T26: 37,3%) invalida o turnaround",
+      "next": "Resultado 3T26 — novembro/2026"
+    },
+    {
+      "kpi": "Distratos",
+      "threshold": "Acima de R$ 300 mi por trimestre por dois trimestres seguidos (3T26: R$ 292,8 mi)",
+      "next": "Prévia 4T26 — janeiro/2027"
+    },
+    {
+      "kpi": "LL 2026 vs guidance",
+      "threshold": "LL 2026 abaixo de R$ 600 mi (piso do guidance) ou guidance 2027 com LL menor que 2026",
+      "next": "Resultado 4T26 e guidance 2027 — fev–mar/2027"
+    },
+    {
+      "kpi": "Orçamento FGTS 2027–29",
+      "threshold": "Descontos de 2027 abaixo de R$ 12,5 bi ou corte das Faixas 1–2",
+      "next": "Conselho Curador — fim de outubro/2026"
+    }
+  ],
+  "catalysts": [
+    {
+      "date": "fim de out/2026",
+      "event": "Conselho Curador do FGTS define orçamento e descontos 2027–29"
+    },
+    {
+      "date": "nov/2026",
+      "event": "Resultado do 3T26"
+    },
+    {
+      "date": "30/12/2026",
+      "event": "Pagamento do dividendo de R$ 78 mi (R$ 0,6363/ação)"
+    },
+    {
+      "date": "1T27",
+      "event": "Guidance 2027"
+    }
+  ],
+  "bottom_line": "Para quem aceita volatilidade alta (51,5% a.a.; drawdown máximo de −90% em 10 anos) em troca de TIR de ~24% com o vento a favor do MCMV: a tese funciona enquanto a margem bruta ajustada ficar acima de ~35% e os distratos normalizarem depois da greve da Caixa."
+}
