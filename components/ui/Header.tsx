@@ -6,6 +6,7 @@ import { useKe, useMarket } from "@/lib/live";
 
 const NAV = [
   { href: "/", label: "Painel" },
+  { href: "/investir", label: "Investir" },
   { href: "/dividendos", label: "Dividendos" },
   { href: "/mercado", label: "Mercado" },
   { href: "/metodologia", label: "Metodologia" },
@@ -132,11 +133,11 @@ export function Header({ fallback }: { fallback: MacroFallback }) {
             <span className="text-[17px] font-semibold tracking-[-0.01em]">E agora?</span>
             <span className="hidden text-[12px] text-muted lg:inline">Valuation pós-eleição, 26 de outubro de 2026</span>
           </Link>
-          <nav className="order-3 flex w-full items-center gap-1 sm:order-none sm:w-auto">
+          <nav className="order-3 flex w-full items-center gap-0.5 overflow-x-auto sm:order-none sm:w-auto sm:gap-1">
             {NAV.map((n) => {
               const active = n.href === "/" ? path === "/" : path.startsWith(n.href);
               return (
-                <Link key={n.href} href={n.href} className={`rounded px-2.5 py-1 text-[13px] ${active ? "bg-surface-2 font-medium text-ink" : "text-ink-2 hover:text-ink"}`}>
+                <Link key={n.href} href={n.href} className={`shrink-0 whitespace-nowrap rounded px-1.5 py-1 text-[12.5px] sm:px-2.5 sm:text-[13px] ${active ? "bg-surface-2 font-medium text-ink" : "text-ink-2 hover:text-ink"}`}>
                   {n.label}
                 </Link>
               );
