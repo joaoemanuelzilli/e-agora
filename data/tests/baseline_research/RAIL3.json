@@ -1,0 +1,255 @@
+{
+ "ticker": "RAIL3",
+ "name": "Rumo S.A.",
+ "sector": "Infraestrutura / logística ferroviária",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "RAIL3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override de receita (Rumo não tem receita de construção relevante). Atenção ao EBITDA CVM: o impairment da Malha Sul entra no EBIT (FY2025: −1.227,9; 1S26: −336,5) e, em 2024, também distorceu a linha de D&A da DVA; por isso projetamos margem sobre o EBITDA AJUSTADO (FY2025 = EBIT 4.579,7 + D&A 2.213,3 + impairment 1.227,9 = 8.021 = 57,9% da receita) e o capex inclui o investimento recorrente da Malha Sul (que é baixado a impairment trimestralmente). DL-base do motor (CVM) = 26.191 = dívida 22.910 + arrendamentos IFRS-16 4.469 + 'arrendamentos e concessões em litígio e parcelados' 4.268 (Malha Oeste em disputa 2.976; Malha Paulista parcelada 867; concessões 425) − caixa 5.456. A DL 'ampla' do release (17.303) exclui IFRS-16 e concessões."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.07,
+   0.06,
+   0.06,
+   -0.057,
+   0.034
+  ],
+  "ebitda_margin": [
+   0.565,
+   0.575,
+   0.585,
+   0.605,
+   0.61
+  ],
+  "da_pct_revenue": [
+   0.145,
+   0.15,
+   0.155,
+   0.165,
+   0.165
+  ],
+  "capex_pct_revenue": [
+   0.405,
+   0.318,
+   0.294,
+   0.287,
+   0.283
+  ],
+  "nwc_pct_revenue": 0.03,
+  "cost_of_net_debt": [
+   0.12,
+   0.125,
+   0.12,
+   0.115,
+   0.11
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.36,
+   0.33,
+   0.31,
+   0.3,
+   0.29
+  ],
+  "minority_share_ni": 0.015,
+  "payout": [
+   0.25,
+   0.35,
+   0.45,
+   0.5,
+   0.6
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.045,
+  "roic": 0.14,
+  "roe": 0.18
+ },
+ "wacc": {
+  "kd_pre_tax": 0.145,
+  "target_debt_weight": 0.43
+ },
+ "adjustments": {
+  "other_debt_like": 481,
+  "non_operating_assets": 1916,
+  "minority_value": null,
+  "notes": "other_debt_like = derivativos líquidos (release, 271) + dividendos a pagar a acionistas de 2025 (209,7; pagamento 30/11/2026, data-base 28/04/2026). non_operating_assets = títulos e valores mobiliários (289) e caixa restrito vinculado a dívidas (139), que a padronização CVM não capturou em cash_total, + 50% do passivo da Malha Oeste em litígio (1.488 de 2.976): o release diz que não há expectativa de desembolso e que o 5º aditivo prevê apuração de créditos e débitos recíprocos (pleitos de reequilíbrio e investimentos não amortizados) — compensação parcial provável; mantemos metade como dívida por prudência."
+ },
+ "target_multiples": {
+  "pe": 12.0,
+  "ev_ebitda": 6.5,
+  "pbv": 1.8,
+  "rationale": "O histórico do data/market é inflado por lucros e EBITDA CVM deprimidos por impairments (P/L mediana 5 anos 45,8x; EV/EBITDA mediana 11,0x, p10 7,8x sobre EBITDA CVM). Sobre EBITDA AJUSTADO, o EV/EBITDA LTM hoje é ~6,6x (pré-eleição ~7,5x) na definição do motor (DL incl. arrendamentos e concessões). Alvo 6,5x = piso de regime de juros altos; P/L 12x ≈ pares de concessão (MOTV3 p10 8,6x; ECOR3 mediana 8,7x) com prêmio por concessões longas (Malha Norte até 2079, Paulista 2058)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.02,
+   "narrative": "Safra 26/27 fraca (El Niño forte), pressão de preço no corredor norte (caminhão/Arco Norte) e custos fixos que não cedem: EBITDA estagnado ~R$ 8,5 bi e alavancagem >3,5x (covenant)."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.02,
+   "narrative": "Ferrovia do Mato Grosso ganha share, reajustes de tarifa e corte de opex da nova gestão: margem >60% já em 2028 e FCFE positivo permitindo payout >50%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.02
+ },
+ "debt_profile": {
+  "gross_debt_mn": 22910,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "102% do CDI (contratual ou via swap), duração média 5 anos; senior notes 2028/2032 (R$ 4,78 bi) com hedge; última captação BNDES IPCA+8,42% (15 anos)",
+  "avg_maturity_years": 5.0,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": 3.5
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -115,
+  "notes": "Dívida bruta ampla ~R$ 23,2 bi ~100% CDI − caixa ~R$ 5,9 bi (rende CDI) = exposição líquida ~R$ 17,3 bi ⇒ +100 bp de CDI ≈ −R$ 173 mi/ano pré-IR (≈ −R$ 115 mi após IR; ~6% do lucro ajustado). Covenants: DL ampla/EBITDA LTM ≤ 3,5x (2,1x no 2T26) e EBITDA/resultado financeiro ≥ 2,0x, apurados anualmente. Linhas comprometidas não sacadas: R$ 2,4 bi."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.147,
+  "ebitda_margin_avg_5y": 0.524,
+  "roe_avg_5y": 0.017,
+  "payout_avg_5y": 0.1,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.062,
+   "ebitda_margin": 0.575,
+   "net_income_mn": 516,
+   "net_debt_ebitda": 2.1
+  },
+  "notes": "CVM 2020–25: receita CAGR 14,7% a.a. (6.966→13.848); margem EBITDA AJUSTADA (ex-impairments) média 2021–25 ~52% (45,0/50,8/51,7/56,6/57,9%); ROE contábil médio ~2% (impairments da Malha Sul: −R$ 3,1 bi em 2024, −R$ 1,2 bi em 2025); payout irrisório exceto o extraordinário de R$ 1,5 bi em 2025. Projeção: receita +7%/+6%/+6% em 2026–28, −5,7% em 2029 (saída da Malha Sul, ~R$ 2,2 bi de receita e margem ~40%, assumindo prorrogação de 24 meses) e +3,4% em 2030 — CAGR 3,2% (orgânico ex-Sul ~6%); margem 56,5%→61% (mix ex-Sul + eficiência); capex de R$ 6,0 bi (2026) para ~R$ 4,6 bi (Itaú BBA projeta R$ 4,7 bi/ano em 2027–28)."
+ },
+ "guidance": "Sem guidance formal de EBITDA/capex para 2026 (Nord Investimentos, 1T26; release 2T26 não traz faixa). Release 2T26: capex do 2S26 abaixo do 1S26 (R$ 3,37 bi), com a 1ª fase da Ferrovia do Mato Grosso entregue em jun/2026. Nova gestão (CEO Daniel Rockenbach desde 20/07/2026): preservação de caixa, capex limitado à geração própria, eficiência e reajustes de preço.",
+ "dividend_policy": "Mínimo estatutário de 25%. Histórico: payout irrisório até 2024 (CVM: 5% 2021, 8% 2022, 17% 2023); dividendo extraordinário de R$ 1,5 bi (R$ 0,81/ação) em jun/2025. Referente a 2025: R$ 0,1084/ação (~R$ 201 mi; data-base 28/04/2026; pagamento 30/11/2026). Projetamos payout subindo de 25% para 60% à medida que o capex cai.",
+ "election_impact": "Mais macro do que micro, e a queda (−20%) foi próxima do beta (resíduo idiossincrático −5%, data/market): dívida ~102% do CDI, DL ampla R$ 17,3 bi (2,1x) + R$ 8,7 bi de arrendamentos/concessões; o choque de juros encarece a dívida e o desconto de um ativo de vida longa. Regulatório no 4º mandato: Malha Sul vence em fev–mar/2027 (leilão previsto para mar/2027; Rumo deve operar por mais 24 meses), Malha Oeste em relicitação, Ferrogrão (concorrente no MT) e investimentos cruzados exigidos em renovações. O agro exportador ganha com o câmbio (+9,5%), mas as tarifas são em reais. Valor intrínseco mudou pouco; o preço segue acima do valor a Ke 25%.",
+ "summary": "Maior ferrovia de carga do país (corredor MT–Santos), com 41% de share de origem em MT/GO, EBITDA ajustado ~R$ 8,1 bi LTM e alavancagem confortável (2,1x; covenant 3,5x). O ciclo de capex acabou e a nova gestão prioriza caixa, mas o ROIC segue ~10%: a Ke 25% (WACC ~19%) o DCF não cobre a dívida e o valor justo ponderado fica ~R$ 5 vs R$ 15. A ação é cara para esse hurdle, mesmo após −20%.",
+ "thesis": [
+  "Volume +9% no 2T26 (23,8 bi TKU), share de 41% na origem MT+GO (+2 p.p.) e 50% do grão em Santos",
+  "Fim do ciclo de capex: 1ª fase da Ferrovia do Mato Grosso entregue (jun/26); capex deve cair de ~R$ 6 bi para ~R$ 4,7 bi/ano",
+  "Alavancagem 2,1x vs covenant 3,5x; nova gestão focada em corte de opex/capex e reajustes",
+  "Saída da Malha Sul (margem ~40%, capex de manutenção ~R$ 0,7 bi/ano) melhora margem e retorno"
+ ],
+ "risks": [
+  "Preços em queda (yield −2,5% a/a no 2T26) e custos fixos +9%: margem ajustada caiu de 61,4% para 57,5%",
+  "Safra 26/27 com El Niño forte; concorrência de caminhão, hidrovias do Arco Norte e, no longo prazo, Ferrogrão",
+  "Desfecho de Malha Sul (leilão mar/2027) e Malha Oeste (créditos/débitos recíprocos ~R$ 3 bi)",
+  "Ke 25%: ROIC ~10% < WACC ~19% — crescimento destrói valor para esse hurdle"
+ ],
+ "catalysts": [
+  "Resultado 3T26 (meados de nov/2026): primeiras medidas de eficiência da nova gestão",
+  "Leilão/prorrogação da Malha Sul (previsto para mar/2027)",
+  "Safra 2026/27 (plantio de soja out–dez/2026)",
+  "Eventual nova política de dividendos com a queda do capex"
+ ],
+ "key_data": [
+  {
+   "label": "DL ampla/EBITDA ajustado 2T26",
+   "value": "2,1x",
+   "context": "covenant 3,5x (apuração anual) e cobertura ≥2,0x"
+  },
+  {
+   "label": "EBITDA ajustado LTM",
+   "value": "R$ 8.118 mi",
+   "context": "2T26 R$ 2.267 mi (−0,5% a/a; +4% ex-efeitos de 2T25)"
+  },
+  {
+   "label": "Dívida",
+   "value": "R$ 22,9 bi bruta · 102% CDI",
+   "context": "duração média 5 anos; linhas não sacadas R$ 2,4 bi"
+  },
+  {
+   "label": "Passivos de concessão",
+   "value": "R$ 8,7 bi",
+   "context": "IFRS-16 4,5 bi + concessões/litígio 4,3 bi (Malha Oeste 3,0 bi sem desembolso esperado)"
+  },
+  {
+   "label": "Capex 1S26",
+   "value": "R$ 3.371 mi",
+   "context": "2S26 deve ser menor (Ferrovia do MT concluída na 1ª fase)"
+  },
+  {
+   "label": "EV/EBITDA ajustado LTM",
+   "value": "~6,6x",
+   "context": "pré-eleição ~7,5x (definição do motor)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Rumo — 2Q26 Earnings Release (12/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/003f6029-d45a-44ac-9c9e-869fe5df83fc/f950d2c0-182f-bcc4-5aa4-208e7565fb0c?origin=2"
+  },
+  {
+   "title": "CVM — ITR 2T26 / DFP 2023–2025 padronizados (data/hist/RAIL3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "Agência Infra — Rumo focará em geração de caixa e corte de capex e opex, diz CEO (13/08/2026)",
+   "url": "https://agenciainfra.com/blog/rumo-focara-em-geracao-de-caixa-e-corte-de-capex-e-opex-diz-ceo/"
+  },
+  {
+   "title": "Monitor do Mercado — Rumo trocará de CEO em julho (Daniel Rockenbach)",
+   "url": "https://monitordomercado.com.br/noticias/399831-rumo-rail3-trocara-de-ceo-em-julho-btg-segue-recomendando-compra/"
+  },
+  {
+   "title": "Jornal do Comércio — leilão da Malha Sul passa para março; Rumo deve estender gestão por 2 anos (jul/2026)",
+   "url": "https://www.jornaldocomercio.com/economia/2026/07/1258021-previsao-de-leilao-da-malha-sul-ferroviaria-passa-para-marco-e-rumo-deve-estender-gestao-por-mais-dois-anos.html"
+  },
+  {
+   "title": "B3 — proventos RAIL3 (R$ 0,1084/ação, pagamento 30/11/2026)",
+   "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/?language=pt-br"
+  },
+  {
+   "title": "Nord Investimentos — Rumo 1T26 (sem guidance 2026; consenso)",
+   "url": "https://www.nordinvestimentos.com.br/blog/rumo-rail3-resultados-1t26/"
+  }
+ ],
+ "confidence": "média-alta — release 2T26 completo lido e conferido com a CVM; incertezas: data de saída da Malha Sul, compensação da Malha Oeste e trajetória de preço/custo sob a nova gestão."
+}

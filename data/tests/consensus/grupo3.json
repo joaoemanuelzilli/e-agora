@@ -1,0 +1,325 @@
+{
+ "grupo": 3,
+ "nota": "Alvos publicados em 2026, em geral antes do choque eleitoral e com Ke de mercado (~14–17%), horizonte fim de 2026/2027. O estudo usa Ke de 25%.",
+ "empresas": [
+  {
+   "ticker": "BEEF3",
+   "preco_ref": 3.38,
+   "valor_justo_estudo": 5.5734,
+   "consenso_mediano": 7.1,
+   "faixa": [
+    5.3,
+    8.0
+   ],
+   "alvos": {
+    "Investing (média)": 6.68,
+    "BTG": 7.0,
+    "Itaú BBA": 5.5,
+    "Citi": 5.3,
+    "XP": 7.2,
+    "BB-BI": 8.0,
+    "JPMorgan": 8.0,
+    "UBS": 8.0
+   },
+   "recomendacao": "maioria neutra",
+   "estudo_vs_consenso": -0.21501408450704218,
+   "classificacao": "abaixo",
+   "upside_consenso": 1.1005917159763312,
+   "fontes": [
+    "https://br.investing.com/news/stock-market-news/beef3-minerva-sobe-3-com-avaliacao-de-fechar-capital-apos-queda-de-28-em-2026-1955478",
+    "https://www.moneytimes.com.br/minerva-beef3-citi-corta-preco-alvo-com-maior-complexidade-para-tese-entenda-pads/",
+    "https://content.btgpactual.com/research/ativo/BEEF3",
+    "https://investalk.bb.com.br/noticias/mercado/minerva-bb-revisao-preco-marco-26"
+   ]
+  },
+  {
+   "ticker": "COGN3",
+   "preco_ref": 2.01,
+   "valor_justo_estudo": 1.9723,
+   "consenso_mediano": 3.5,
+   "faixa": [
+    3.1,
+    4.0
+   ],
+   "alvos": {
+    "Acionista (média)": 3.42,
+    "BTG": 4.0,
+    "Itaú BBA": 4.0,
+    "XP": 3.5,
+    "Bradesco BBI": 3.1
+   },
+   "recomendacao": "maioria compra",
+   "estudo_vs_consenso": -0.43648571428571425,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.7412935323383087,
+   "fontes": [
+    "https://content.btgpactual.com/research/ativo/COGN3",
+    "https://acionista.com.br/cogn3-o-preco-alvo-revela-uma-leitura-diferente/",
+    "https://www.seudinheiro.com/2026/economia/cogna-cogn3-rebaixada-bradesco-bbi-yduqs-afya-fusao-isca/",
+    "https://conteudos.xpi.com.br/acoes/cogn3/"
+   ]
+  },
+  {
+   "ticker": "BBAS3",
+   "preco_ref": 17.57,
+   "valor_justo_estudo": 16.6916,
+   "consenso_mediano": 22.5,
+   "faixa": [
+    21.0,
+    23.0
+   ],
+   "alvos": {
+    "Goldman Sachs": 21.0,
+    "Itaú BBA": 23.0,
+    "Monte Bravo": 22.5
+   },
+   "recomendacao": "neutra a venda (Goldman venda, BofA underperform)",
+   "estudo_vs_consenso": -0.2581511111111111,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.28059191804211725,
+   "fontes": [
+    "https://acionista.com.br/banco-do-brasil-bbas3-tem-preco-alvo-reduzido-para-r-21/",
+    "https://www.suno.com.br/noticias/?p=623062",
+    "https://www.moneytimes.com.br/banco-do-brasil-bbas3-nao-agradou-analistas-cortam-preco-alvo-apos-dia-do-investidor-veja-potencial/"
+   ]
+  },
+  {
+   "ticker": "BBDC4",
+   "preco_ref": 15.47,
+   "valor_justo_estudo": 13.3147,
+   "consenso_mediano": 23.0,
+   "faixa": [
+    21.85,
+    25.0
+   ],
+   "alvos": {
+    "Média 13 casas": 21.85,
+    "Santander": 25.0,
+    "Itaú BBA": 22.0,
+    "XP": 24.0,
+    "Terra": 23.0
+   },
+   "recomendacao": "compra/neutra",
+   "estudo_vs_consenso": -0.42110000000000003,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.48674854557207503,
+   "fontes": [
+    "https://cms.santander.com.br/sites/WPS/documentos/arq-CarteiraValor/26-07-08_165938_carteiravalorjulho2026.pdf",
+    "https://acionista.com.br/bradesco-bbdc4-se-destaca-em-trimestre-fraco-para-os-bancos-e-itau-bba-reforca-compra/",
+    "https://www.moneytimes.com.br/por-que-o-bradesco-bbdc4-nao-empolga-a-xp/"
+   ]
+  },
+  {
+   "ticker": "B3SA3",
+   "preco_ref": 15.1,
+   "valor_justo_estudo": 7.6471,
+   "consenso_mediano": 23.0,
+   "faixa": [
+    19.0,
+    26.5
+   ],
+   "alvos": {
+    "UBS BB": 26.5,
+    "Citi": 23.0,
+    "JPMorgan": 19.0
+   },
+   "recomendacao": "compra (UBS, Citi) e neutra (JPM)",
+   "estudo_vs_consenso": -0.6675173913043478,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.5231788079470199,
+   "fontes": [
+    "https://bpmoney.com.br/mercado/acoes/ubs-bb-eleva-preco-alvo-b3-26-50-recomendacao-compra/",
+    "https://www.moneytimes.com.br/citi-muda-recomendacao-e-preco-alvo-para-b3-b3sa3-veja-como-fica-apsa/",
+    "https://www.infomoney.com.br/?p=3345539"
+   ]
+  },
+  {
+   "ticker": "BPAC11",
+   "preco_ref": 55.32,
+   "valor_justo_estudo": 33.4353,
+   "consenso_mediano": 63.0,
+   "faixa": [
+    60.0,
+    66.0
+   ],
+   "alvos": {
+    "JPMorgan (fim 2027)": 66.0,
+    "Itaú BBA": 63.0,
+    "XP": 63.0,
+    "Ativa": 60.0
+   },
+   "recomendacao": "compra",
+   "estudo_vs_consenso": -0.46928095238095247,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.1388286334056399,
+   "fontes": [
+    "https://www.moneytimes.com.br/btg-pactual-bpac11-jp-morgan-eleva-recomendacao-para-compra-e-ve-banco-como-vencedor-em-participacao-de-mercado-lmrs/",
+    "https://www.suno.com.br/noticias/?p=647275"
+   ]
+  },
+  {
+   "ticker": "SBSP3",
+   "preco_ref": 25.8,
+   "valor_justo_estudo": 5.3599,
+   "consenso_mediano": 36.5,
+   "faixa": [
+    34.0,
+    38.3
+   ],
+   "alvos": {
+    "UBS BB": 38.0,
+    "Itaú BBA": 34.0,
+    "JPMorgan": 35.0,
+    "Rico (consenso)": 38.3
+   },
+   "recomendacao": "compra",
+   "estudo_vs_consenso": -0.8531534246575343,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.4147286821705427,
+   "fontes": [
+    "https://www.moneytimes.com.br/sabesp-sbsp3-ubs-bb-ve-janela-de-oportunidade-e-eleva-acao-para-compra-ruidos-pre-eleitorais-nao-preocupam-lmrs/",
+    "https://riconnect.rico.com.vc/acoes/sbsp3/"
+   ]
+  },
+  {
+   "ticker": "RDOR3",
+   "preco_ref": 34.96,
+   "valor_justo_estudo": 13.658,
+   "consenso_mediano": 51.0,
+   "faixa": [
+    42.0,
+    58.0
+   ],
+   "alvos": {
+    "BTG": 58.0,
+    "Itaú BBA": 56.0,
+    "Santander": 51.0,
+    "Citi": 48.0,
+    "Bradesco BBI": 42.0
+   },
+   "recomendacao": "compra",
+   "estudo_vs_consenso": -0.7321960784313726,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.4588100686498855,
+   "fontes": [
+    "https://www.suno.com.br/noticias/?p=661801",
+    "https://acionista.com.br/rede-dor-rdor3-tem-preco-alvo-cortado-para-r-42-queda-de-8/",
+    "https://www.moneytimes.com.br/rede-dor-rdor3-apesar-de-visao-otimista-citi-corta-preco-alvo-da-acao-por-um-fator-apsa/"
+   ]
+  },
+  {
+   "ticker": "EQTL3",
+   "preco_ref": 35.89,
+   "valor_justo_estudo": 5.6162,
+   "consenso_mediano": 52.265,
+   "faixa": [
+    50.0,
+    57.0
+   ],
+   "alvos": {
+    "Investing (média, 14 compras)": 51.23,
+    "Itaú BBA": 53.3,
+    "Bradesco BBI": 57.0,
+    "JPMorgan": 50.0
+   },
+   "recomendacao": "compra",
+   "estudo_vs_consenso": -0.8925437673395198,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.4562552242964615,
+   "fontes": [
+    "https://br.investing.com/equities/equatorial-on-nm",
+    "https://acionista.com.br/equatorial-eqtl3-recebe-novo-preco-alvo-e-potencial-de-40/"
+   ]
+  },
+  {
+   "ticker": "CPLE3",
+   "preco_ref": 15.18,
+   "valor_justo_estudo": 2.7932,
+   "consenso_mediano": 18.0,
+   "faixa": [
+    18.0,
+    18.0
+   ],
+   "alvos": {
+    "BTG": 18.0
+   },
+   "recomendacao": "compra (só BTG encontrado)",
+   "estudo_vs_consenso": -0.8448222222222223,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.18577075098814233,
+   "fontes": [
+    "https://acionista.com.br/copel-cple3-revisao-de-preco-alvo-muda-o-ranking-do-consenso/"
+   ]
+  },
+  {
+   "ticker": "TOTS3",
+   "preco_ref": 37.25,
+   "valor_justo_estudo": 17.118,
+   "consenso_mediano": 52.75,
+   "faixa": [
+    40.0,
+    61.0
+   ],
+   "alvos": {
+    "Rico (consenso)": 50.5,
+    "Santander": 61.0,
+    "BTG": 55.0,
+    "JPMorgan": 59.0,
+    "Itaú BBA": 46.0,
+    "Citi": 40.0
+   },
+   "recomendacao": "compra",
+   "estudo_vs_consenso": -0.6754881516587679,
+   "classificacao": "abaixo",
+   "upside_consenso": 0.41610738255033564,
+   "fontes": [
+    "https://www.moneytimes.com.br/totvs-tots3-santander-eleva-preco-alvo-das-acoes-para-r-61-apsa/",
+    "https://bpmoney.com.br/mercado/acoes/totvs-tots3-itau-bba-corta-preco-alvo-mantem-recomendacao-compra/",
+    "https://riconnect.rico.com.vc/?p=682463"
+   ]
+  },
+  {
+   "ticker": "HAPV3",
+   "preco_ref": 5,
+   "valor_justo_estudo": 4.8197,
+   "consenso_mediano": 14.0,
+   "faixa": [
+    13.0,
+    25.0
+   ],
+   "alvos": {
+    "Bradesco BBI": 14.0,
+    "relatório pós-2T26": 13.0,
+    "Morgan Stanley": 25.0
+   },
+   "recomendacao": "neutra a compra",
+   "estudo_vs_consenso": -0.6557357142857143,
+   "classificacao": "abaixo",
+   "upside_consenso": 1.7999999999999998,
+   "fontes": [
+    "https://www.moneytimes.com.br/hapvida-hapv3-bradesco-bbi-rebaixa-recomendacao-e-corta-preco-alvo-lils/",
+    "https://acionista.com.br/wp-content/uploads/2026/08/HAPV3-Atualizacao-pos-2T26.pdf"
+   ]
+  },
+  {
+   "ticker": "YDUQ3",
+   "preco_ref": 8.48,
+   "valor_justo_estudo": 7.0973,
+   "consenso_mediano": 17.0,
+   "faixa": [
+    17.0,
+    17.0
+   ],
+   "alvos": {
+    "Bradesco BBI": 17.0
+   },
+   "recomendacao": "compra (faixa de alvos R$ 16–23 após o 1T26)",
+   "estudo_vs_consenso": -0.5825117647058824,
+   "classificacao": "abaixo",
+   "upside_consenso": 1.0047169811320753,
+   "fontes": [
+    "https://acionista.com.br/yduqs-yduq3-cresce-699-apos-resultados-mistos-do-1t26/"
+   ]
+  }
+ ]
+}

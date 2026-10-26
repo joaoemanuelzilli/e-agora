@@ -1,0 +1,291 @@
+{
+ "ticker": "LREN3",
+ "name": "Lojas Renner S.A.",
+ "sector": "Varejo / moda (vestuário, casa) + serviços financeiros (Realize CFI)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "LREN3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override da base CVM (receita 3.01 de R$ 15.829,5 mi em 2025 inclui receita de serviços financeiros da Realize; receita líquida de varejo = R$ 13.838,2 mi). Margens do modelo são sobre a receita CVM total, conceito IFRS-16 (EBIT 3.05 + D&A DVA). A margem que a companhia divulga (EBITDA total ajustado IFRS-16 de 23,0% em 2025) é sobre a receita de varejo — não comparar diretamente. Ações: 961,3 mi (B3 × tesouraria de 30/06/26); em set/26 a base do JCP indica ~945 mi em circulação (recompras pós-balanço; caixa gasto ainda está no balanço de jun/26, então mantivemos a base CVM)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.035,
+   0.07,
+   0.08,
+   0.08,
+   0.075
+  ],
+  "ebitda_margin": [
+   0.192,
+   0.195,
+   0.198,
+   0.201,
+   0.203
+  ],
+  "da_pct_revenue": [
+   0.081,
+   0.08,
+   0.079,
+   0.078,
+   0.077
+  ],
+  "capex_pct_revenue": [
+   0.097,
+   0.093,
+   0.092,
+   0.091,
+   0.09
+  ],
+  "nwc_pct_revenue": 0.2,
+  "cost_of_net_debt": [
+   0.07,
+   0.07,
+   0.07,
+   0.07,
+   0.07
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.15,
+   0.17,
+   0.19,
+   0.2,
+   0.2
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.8,
+   0.75,
+   0.75,
+   0.75,
+   0.75
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.16,
+  "roe": 0.17
+ },
+ "wacc": {
+  "kd_pre_tax": 0.14,
+  "target_debt_weight": 0.1
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Sem itens debt-like relevantes: não há empréstimos corporativos (dívida bruta CVM de R$ 757,8 mi = funding da Realize, já na DL). Participação de ~5,56% na Vestuá Limited (recebida pela venda da Repassa em 30/06/26) sem valor divulgado → 0. Obrigações com administradoras de cartões (R$ 2.424,7 mi) são operacionais (capital de giro)."
+ },
+ "target_multiples": {
+  "pe": 9.0,
+  "ev_ebitda": 5.0,
+  "pbv": 1.4,
+  "rationale": "P/L 9x LPA 2027E ≈ múltiplo LTM pré-eleição (R$ 14,58 / LPA LTM R$ 1,55 = 9,4x) e abaixo do que o mercado pagou em 2025 com Selic de 15% (~10x); EV/EBITDA IFRS-16 de 5,0x (com arrendamentos) = nível pré-eleição (valor de mercado R$ 14,0 bi + DL R$ 1,37 bi / EBITDA LTM R$ 3,08 bi). Referências: Safra (31/08/26) alvo R$ 15 a 7,6x P/L 2027E; XP (19/10/26) Compra, alvo R$ 18; JPMorgan (dez/25) 9x P/L 2026. P/VP 1,4x ≈ (ROE 17% − g 5%)/(Ke de mercado ~13,5% − g) — referência."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Selic ≥15% até 2028 e desemprego em alta: Realize com perdas >5% da carteira, SSS ~0 e cross-border (Shein/Temu) tomando share; margem −2 p.p."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Curva DI cede, renda disponível (IR até R$ 5 mil, salário mínimo) sustenta SSS de 6–8% e a eficiência entrega metade do gap até a meta de 18–20% de margem varejo pré-IFRS16."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.005
+ },
+ "debt_profile": {
+  "gross_debt_mn": 757.8,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "103,8%–107% do CDI (funding da Realize: CDI interbancário Itaú/Bradesco R$ 676 mi + CDBs R$ 81 mi)",
+  "avg_maturity_years": 0.8,
+  "next_24m_maturities_mn": 757.8,
+  "covenant_nd_ebitda": null,
+  "notes": "Sem empréstimos corporativos desde a amortização de fev/25 (ITR 2T26, NE 5.2: 'não possui dívidas decorrentes de empréstimos') → sem covenants. 94% do funding (R$ 709,4 mi) vence em 12 meses. Prazo médio < 1 ano (cálculo próprio). Passivo de arrendamento R$ 2.530,2 mi (na DL do modelo)."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 8,
+  "notes": "Efeito contábil direto pequeno e POSITIVO: caixa R$ 1.917 mi (CDB/compromissadas/LFT a 98–102% do CDI) > funding da Realize R$ 758 mi (≈ +R$ 11,6 mi antes de IR por +1 p.p.; ~+R$ 8–9 mi após IR, cálculo próprio). O efeito relevante é indireto e negativo: a carteira da Realize (R$ 6,65 bi) é prefixada e o funding é curto (reprecifica rápido; a controladora também tem R$ 644 mi em CDB da Realize a 107% do CDI, eliminado na consolidação) e a inadimplência sobe com juros/endividamento das famílias — não quantificado pela empresa (que classifica o risco de juros como 'relativamente baixo', ITR 2T26)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.16,
+  "ebitda_margin_avg_5y": 0.1725,
+  "roe_avg_5y": 0.1124,
+  "payout_avg_5y": 0.58,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.008,
+   "ebitda_margin": 0.204,
+   "net_income_mn": 404.6,
+   "net_debt_ebitda": 0.45
+  },
+  "notes": "CAGR 2020–25 de 16% parte da base deprimida da pandemia; 2019–25 = 8,7% a.a. e 3 anos = 6,1% a.a. Projetamos 3,5% (2026: 1S26 +1,9% a/a; guidance de varejo cortado para 4–8%) e 7–8% em 2027–30 (abaixo do guidance de 9–13%), média 6,8%. Margem EBITDA IFRS-16 (CVM) média 2021–25 de 17,3% (14,6% em 2023 → 19,5% em 2025; LTM 19,3%); projetamos 19,2% → 20,3% em 2030, ~1 p.p. de ganho de eficiência vs. meta oficial que implicaria +3–5 p.p. ROE médio 2021–25 de 11,2% (13,7% em 2025); projetado 14–18%. Payout = JCP declarado/lucro 2021–25 (61%, 50%, 70%, 53%, 57%); com recompras, 2025 distribuiu ~120% do lucro — no modelo payout 80%/75% equivale a JCP + recompra (buyback_mn = 0 porque o motor não credita recompra como provento). Regra IFRS-16: capex inclui adições de direito de uso ≈ principal de arrendamento da DFC (contraprestação R$ 795 mi em 2025 − juros ~R$ 264 mi ≈ R$ 530 mi ≈ 3,3% da receita) + capex caixa (guidance R$ 1.050 mi em 2026 = 6,4% da receita CVM; 6–7,5% da receita de varejo em 2027–30 ≈ 5,7–6,0% da receita CVM). Alíquota efetiva 15–20% (2025: 15%, LTM 12,6%, benefício do JCP de R$ 284 mi) com margem para risco de restrição do JCP."
+ },
+ "guidance": "Fato Relevante/Investor Day de 08/12/2025: receita líquida de varejo +9–13% a.a. em 2026–30 (2026 revisado para 4–8% em 06/08/2026; 2027–30 mantido); despesas de varejo ex-IFRS16/receita −2,5 a −3,5 p.p. em 2030 vs 2025 (base 41,8%); margem EBITDA de varejo pré-IFRS16 de 18–20% até 2030 (2025: 14,8%); Realize = 8–12% do EBITDA total pré-IFRS16; ROIC ~20% até 2030 (2025: 14,7%); capex 6–7,5% da receita de varejo (R$ 1.050 mi em 2026); 570–600 lojas Renner e 260–290 Youcom até 2030; distribuição de 50–80% do lucro.",
+ "dividend_policy": "Política: distribuir 50–80% do lucro, prioridade JCP, complementado por dividendos e/ou recompra (release 4T25); mínimo estatutário 25% do lucro ajustado. JCP declarado: 2023 R$ 682 mi (payout 70%), 2024 R$ 634 mi (53%), 2025 R$ 834 mi (57%; 4 parcelas de R$ 0,188–0,228/ação); 2026 até set: R$ 665 mi (R$ 0,2227 abr, R$ 0,2293 jul, R$ 0,2407 com pagamento em 14/10/26; IRRF 17,5%). Recompras: R$ 943 mi em 2025 (70,5 mi ações a R$ 13,38; 53,0 mi canceladas em 08/12/25) e R$ 313 mi no 1S26 (21,7 mi ações a R$ 14,44); programa vigente de até 75 mi ações até 08/06/2027. Distribuição total 2025 ≈ 120% do lucro; 1S26 ≈ 113%.",
+ "election_impact": "Queda de ~37–39% (R$ 14,58 → ~R$ 9) é essencialmente macro: compressão de múltiplo de 'duration' de consumo doméstico com DI longo +300 bp e dólar +9,5%. Canais que mudam o valor: (i) Realize — funding 100% CDI e curto contra carteira prefixada, spread comprimido e inadimplência maior em 2027; (ii) câmbio encarece importados (fatia no CPV não divulgada; o 2T26 teve 'câmbio favorável'); (iii) risco de nova restrição ao JCP (benefício de ~19% do lucro). Contrapontos: isenção de IR até R$ 5 mil (Lei 15.270, vigente desde jan/26), salário mínimo com ganho real e transferências sustentam a renda da classe C/B; caixa líquido rende mais com CDI alto; real mais fraco encarece o cross-border. Nosso lucro 2027E (R$ 1,59 bi) fica ~15–20% abaixo das estimativas pré-eleição (BTG dez/25: R$ 1,72 bi em 2026; Safra implícito ~R$ 1,9 bi em 2027) — impacto fundamental bem menor que a queda do preço.",
+ "summary": "Maior varejista de moda do país (723 lojas, Realize CFI), sem dívida corporativa e com política de distribuir 50–80% do lucro. A queda de ~34–39% é quase toda prêmio de risco: o dano fundamental (Realize com funding CDI curto, câmbio, demanda) tira ~15–20% do lucro 2027E vs. estimativas pré-eleição, não um terço do valor. A Ke de 25% o valor justo (~R$ 9,1) ≈ preço e a TIR de dono sem reprecificação é ~20% — qualidade a bom preço, abaixo da meta; a TIR de 3 anos (~50%) depende de o P/L voltar a ~9x.",
+ "thesis": [
+  "Balanço blindado: sem empréstimos corporativos desde fev/25; caixa R$ 1,92 bi vs funding da Realize R$ 0,76 bi (caixa líquido ex-arrendamentos R$ 1,16 bi); DL com arrendamentos de 0,45x o EBITDA LTM (CVM, 2T26).",
+  "Retorno ao acionista: JCP de 2026 já declarado em R$ 665 mi (3 parcelas até set) + 21,7 mi de ações recompradas no 1S26; programa vigente até 75 mi de ações (~7,8% do capital) até 08/06/2027 — a ~R$ 9, R$ 100 mi recompram ~1,2% das ações.",
+  "Valuation de crise: P/L 2027E ~5,8x e EV/EBITDA LTM ~5x (IFRS-16, com arrendamentos) vs. P/L LTM de 9,4x antes da eleição; P/VP ~0,9x com ROE projetado de 14–18%.",
+  "Alavancas próprias: centralização do CD-SP e projeto de eficiência (meta oficial −2,5 a −3,5 p.p. de despesas/receita até 2030); o modelo captura só ~1 p.p. de margem IFRS-16 (19,2% → 20,3%)."
+ ],
+ "risks": [
+  "Realize: funding 100% CDI (94% vence em 12 meses) contra carteira prefixada; estágio 3 em 26,5% (24,1% comparável) e perdas de 4,5% da carteira média no 2T26 — Selic alta por mais tempo comprime spread e eleva perdas.",
+  "Cross-border: isenção federal de imposto de importação para compras até US$ 50 desde mai/26; Shein ~44% mais barata que a média Renner/C&A/Riachuelo (BTG, set/26).",
+  "Tributário: o JCP gerou benefício fiscal de R$ 284 mi em 2025 (~19% do lucro); restrição adicional ou fim do JCP elevaria a alíquota efetiva de ~15% para ~30%.",
+  "Câmbio: real ~10% mais fraco encarece importados em 2027; a margem bruta de 57,5% do 2T26 contou com câmbio favorável.",
+  "Crescimento: guidance de 2026 já cortado para 4–8% (06/08/26); SSS de varejo de 0,5% no 2T26."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 em 05/11/2026, após o fechamento (teleconferência 06/11).",
+  "Execução da recompra a preços deprimidos (programa até 08/06/2027).",
+  "Black Friday/Natal 2026 e efeito pleno da isenção de IR e do salário mínimo de 2027 na renda da classe C/B.",
+  "Descompressão da curva DI / sinalização fiscal do novo mandato."
+ ],
+ "key_data": [
+  {
+   "label": "Preço 26/10 ~12h (B3)",
+   "value": "R$ ~9,1–9,6",
+   "context": "−34% a −38% no dia; R$ 14,58 em 23/10"
+  },
+  {
+   "label": "Caixa líquido ex-arrendamentos 2T26",
+   "value": "R$ 1.159 mi",
+   "context": "caixa R$ 1.917 mi − funding Realize R$ 758 mi"
+  },
+  {
+   "label": "DL c/ arrendamentos / EBITDA LTM",
+   "value": "0,45x",
+   "context": "DL R$ 1.371 mi (arrendamentos R$ 2.530 mi); EBITDA IFRS-16 LTM R$ 3.079 mi (CVM)"
+  },
+  {
+   "label": "Lucro líquido LTM 2T26 (CVM)",
+   "value": "R$ 1.494 mi",
+   "context": "P/L ~6x no preço de hoje"
+  },
+  {
+   "label": "ROE 2025 / ROIC 2025 (empresa)",
+   "value": "13,7% / 14,7%",
+   "context": "meta ROIC ~20% até 2030"
+  },
+  {
+   "label": "JCP declarado 2026 (até set)",
+   "value": "R$ 665 mi",
+   "context": "~7% do valor de mercado atual, só em 3 parcelas"
+  },
+  {
+   "label": "Realize 2T26",
+   "value": "carteira R$ 6,65 bi; estágio 3 26,5%",
+   "context": "perdas 4,5% da carteira média (+0,4 p.p.)"
+  },
+  {
+   "label": "Guidance receita de varejo",
+   "value": "2026: 4–8%; 2027–30: 9–13% a.a.",
+   "context": "revisado em 06/08/2026"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Release 2T26 (RI Lojas Renner, 06/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/13154776-9416-4fce-8c46-3e54d45b03a3/e54e5774-e327-da78-654c-df04ac3d6cdb?origin=2"
+  },
+  {
+   "title": "ITR 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/13154776-9416-4fce-8c46-3e54d45b03a3/a57e8c82-5758-3c68-1e8d-231b06f46348?origin=2"
+  },
+  {
+   "title": "Release 4T25 (espelho Poder360)",
+   "url": "https://static.poder360.com.br/2026/03/renner-4T25.pdf"
+  },
+  {
+   "title": "Fato Relevante — Investor Day 08/12/2025 (guidance 2026–30)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/13154776-9416-4fce-8c46-3e54d45b03a3/34670810-09a8-371f-fe1f-4d80843a3b54?origin=1"
+  },
+  {
+   "title": "Demonstrações financeiras Realize CFI 1S26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/13154776-9416-4fce-8c46-3e54d45b03a3/985a740d-846c-6cb7-f771-801e82bdc078?origin=2"
+  },
+  {
+   "title": "Calendário de RI (3T26 em 05/11/2026)",
+   "url": "https://ri.lojasrenner.com.br/"
+  },
+  {
+   "title": "Money Times — JCP de R$ 227,5 mi (set/26)",
+   "url": "https://www.moneytimes.com.br/lojas-renner-lren3-aprova-r-2275-milhoes-em-jcp-veja-quem-recebe-pads/"
+  },
+  {
+   "title": "Money Times — novo programa de recompra (dez/25)",
+   "url": "https://www.moneytimes.com.br/renner-lren3-anuncia-r-2237-milhoes-em-jcp-e-lanca-novo-programa-de-recompra-de-acoes-igdl/"
+  },
+  {
+   "title": "Money Times — XP sobre varejo de moda (19/10/2026)",
+   "url": "https://www.moneytimes.com.br/acoes-do-varejo-de-moda-estao-baratas-xp-ve-gatilho-para-renner-lren3-ca-ceab3-e-riachuelo-riaa3-lmrs/"
+  },
+  {
+   "title": "Money Times — Safra ajusta preço-alvo (31/08/2026)",
+   "url": "https://www.moneytimes.com.br/smart-fit-lojas-renner-vivara-natura-safra-ajusta-preco-alvo-e-recomenda-compra-para-duas-varejistas-mlem/"
+  },
+  {
+   "title": "Money Times — Shein 44% mais barata (BTG)",
+   "url": "https://www.moneytimes.com.br/shein-pressiona-riachuelo-lojas-renner-e-ca-com-precos-44-menores-lmrs/"
+  },
+  {
+   "title": "Lei 15.270/2025 (isenção de IR até R$ 5 mil; retenção sobre dividendos)",
+   "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15270.htm"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (data/hist/LREN3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média-alta — base contábil limpa (CVM e release batem), sem dívida corporativa e política de proventos clara; incertezas: Realize (crédito/funding), cross-border e regime do JCP."
+}

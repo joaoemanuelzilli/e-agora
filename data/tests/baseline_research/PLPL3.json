@@ -1,0 +1,268 @@
+{
+  "ticker": "PLPL3",
+  "name": "Plano & Plano Desenvolvimento Imobiliário S.A.",
+  "sector": "Construção civil / Incorporação residencial econômica (MCMV)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "PLPL3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem ajuste na base. A CVM classifica R$ 750 mi de CRI na linha 'Financiamento por Arrendamento' (2.01.04.03/2.02.01.03): já está na dívida bruta (R$ 1.047 mi); arrendamentos reais são R$ 19,6 mi. Ações: 202,95 mi ex-tesouraria. EBITDA projetado está na base 'ex-juros capitalizados' (+2,0 p.p. vs EBITDA CVM), com o mesmo valor deduzido em other_financial."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.1,
+      0.05,
+      0.06,
+      0.06,
+      0.05
+    ],
+    "ebitda_margin": [
+      0.14,
+      0.15,
+      0.16,
+      0.165,
+      0.165
+    ],
+    "da_pct_revenue": [
+      0.007,
+      0.007,
+      0.007,
+      0.007,
+      0.007
+    ],
+    "capex_pct_revenue": [
+      0.006,
+      0.006,
+      0.006,
+      0.006,
+      0.006
+    ],
+    "nwc_pct_revenue": 0.6,
+    "cost_of_net_debt": [
+      0.145,
+      0.145,
+      0.135,
+      0.13,
+      0.125
+    ],
+    "other_financial": [
+      -72.2,
+      -75.8,
+      -80.4,
+      -85.2,
+      -89.4
+    ],
+    "tax_rate": [
+      0.19,
+      0.19,
+      0.19,
+      0.19,
+      0.19
+    ],
+    "minority_share_ni": 0.13,
+    "payout": [
+      0.3,
+      0.35,
+      0.45,
+      0.5,
+      0.5
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.045,
+    "roic": 0.18,
+    "roe": 0.22
+  },
+  "wacc": {
+    "kd_pre_tax": 0.235,
+    "target_debt_weight": 0.15,
+    "notes": "Kd real 15,5% sem benefício fiscal (RET): 0,155/0,66 = 0,235."
+  },
+  "adjustments": {
+    "other_debt_like": 100,
+    "non_operating_assets": 0,
+    "minority_value": 200,
+    "notes": "other_debt_like = dividendo de R$ 100 mi (R$ 0,4928/ação, anual 2025) pago em 01/07/2026, após o balanço-base. Cessões de recebíveis (R$ 304 mi) não entram como dívida (compensadas pelos recebíveis cedidos). minority_value R$ 200 mi ≈ 13% do LL × equity 100%."
+  },
+  "target_multiples": {
+    "pe": 4.5,
+    "ev_ebitda": 3.0,
+    "pbv": 1.0,
+    "rationale": "Pré-eleição PLPL3 a 5,6x o LL UDM (R$ 8,46; LL UDM R$ 305 mi; P/VP 1,5x) e já −53% no ano até ago/26 (BTG) após quebra de margem. Small cap de baixa liquidez (ADTV R$ 21 mi) e com cortes de estimativa em curso (Santander: LL 2026 R$ 397 mi, −24%) → P/L 4,5x 2027E e EV/EBITDA 3,5x. P/VP 1,0x ≈ (ROE 22% − 4,5%)/(25% − 4,5%). EV/EBITDA-alvo reescalonado de 3,5x para 3,0x por estar agora na base EBITDA ex-juros capitalizados (mesmo P/L implícito)."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.05,
+      "ebitda_margin_shift": -0.03,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Estouro de custos das safras 2024 se estende a 2027, Pode Entrar (margem 19,9%) pesa e o caixa segue queimando."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.03,
+      "ebitda_margin_shift": 0.02,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Margem converge à margem REF (37,5%) em 2027 e a companhia volta a gerar caixa e a pagar ~50% do lucro."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.05,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.003
+  },
+  "debt_profile": {
+    "gross_debt_mn": 1047,
+    "pct_floating_cdi": null,
+    "avg_cost": "não divulgado no material lido (CRI R$ 750 mi + SFH/financiamentos R$ 298 mi)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -2,
+    "notes": "DL CVM R$ 183 mi: +100 bp ≈ −R$ 2 mi pré-IR; CRI de R$ 750 mi (indexador não confirmado) e cessões de R$ 304 mi elevam a sensibilidade se pós-fixados."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.295,
+    "ebitda_margin_avg_5y": 0.1551,
+    "roe_avg_5y": 0.4481,
+    "payout_avg_5y": 0.3103,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.1671,
+      "ebitda_margin": 0.1198,
+      "net_income_mn": 53.0,
+      "net_debt_ebitda": 0.38
+    },
+    "notes": "CAGR de receita 2020–25 de 29,5%; projetamos ~6,4% a.a. 2025–30 (lançamentos 2026 cortados; Santander −11%). Margem EBITDA 5a média 15,5%, mas 1S26 caiu a 11,2% (margem bruta ajustada 29,7% no 2T26, −4,8 p.p. a/a, por custos das safras 2024 e Pode Entrar); projetamos 12% em 2026 e retorno gradual a 14,5% em 2029–30, abaixo da média 5a (margem REF 37,5%). ROE 5a 45% → UDM 28%. Payout 5a médio 31%; usamos 30% (2026, ainda queimando caixa) subindo a 50%. Imposto efetivo 17–22%. AJUSTE JUROS CAPITALIZADOS (padronização G06/G07): +2,0 p.p. no ebitda_margin em todos os anos e −2,0% da receita (R$ 72–89 mi/ano) em other_financial, LL inalterado; fonte: 2T26: margem bruta CVM 27,7% vs ajustada 29,7% (ex-encargos financeiros apropriados ao custo) = 2,0 p.p.. Margem EBITDA na base CVM (antes do ajuste): 12,0%; 13,0%; 14,0%; 14,5%; 14,5%. WACC sem benefício fiscal da dívida quando há dívida (RET): ver wacc.notes."
+  },
+  "guidance": "Sem guidance formal no material consultado. Medidas anunciadas: comitê de margem, redução de descontos e revisão de projetos menos rentáveis (via bpmoney/Santander).",
+  "dividend_policy": "Estatuto: mínimo de 25%. Proventos: R$ 200 mi pagos no 1T25 (ref. 2024; ≈58% do LL 2024) e R$ 100 mi (R$ 0,4928/ação, ref. 2025, aprovado 22/12/2025, pago 01/07/2026; ≈28% do LL 2025). Payout caixa: 2023 12%, 2024 34%, 2025 55%.",
+  "election_impact": "PLPL3 −39%: mistura de macro (Ke, beta de small cap, liquidez de R$ 21 mi/dia) com problema micro preexistente — margem bruta em queda, LL do 2T26 −37% a/a e queima de caixa de R$ 94,5 mi no trimestre. Concentrada na RMSP e com projetos do Pode Entrar (prefeitura de SP) de margem baixa; o MCMV forte com Lula ajuda volume, mas não resolve custo. Setor: o MCMV é financiado majoritariamente pelo FGTS (fundo parafiscal, fora do Orçamento, juros fixados pelo Conselho Curador e não pela Selic). Orçamento FGTS 2026: R$ 160,5 bi (habitação R$ 144,5 bi; descontos/subsídios elevados a R$ 13 bi em 10/09/2026); plurianual aprovado em nov/25: habitação R$ 144,5 bi em 2027 e R$ 139,5 bi em 2028–29 (nominal estável/queda) — o Conselho revisa 2027–29 no fim de out/26. Portaria MCID 333/2026 elevou renda (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000) e tetos (F3 R$ 400 mil; F4 R$ 600 mil). Um 4º mandato Lula reduz o risco de corte do programa (era um risco no cenário Flávio) — positivo para volume. O que piora de fato: (i) custo de capital/Ke e DI longo (+300 bp) → múltiplos; (ii) dívidas e cessões indexadas ao CDI; (iii) fiscal: Faixa 1 (FAR/OGU) e Faixa 4 (Fundo Social) dependem do Tesouro; FGTS é procíclico (arrecadação 8% da folha) e sofre com saques extraordinários; (iv) câmbio +9,5% → insumos (aço, cobre, PVC) e INCC (já 6,6% em 12m, mão de obra 7,6%).",
+  "summary": "Caso de deterioração micro anterior à eleição (margem bruta −4,8 p.p., LL −37%, queima de caixa) amplificada pela liquidez. A R$ 5,23–5,55 (intradia) negocia ~1x o VP e ~4x um LL normalizado; só é oportunidade se a margem convergir à do backlog (37,5%).",
+  "thesis": [
+    "Preço de R$ 5,23–5,43 ≈ 1,0x o VP (R$ 1.118 mi) e ~3,5x o LL UDM de R$ 305 mi.",
+    "Margem REF de 37,5% vs margem bruta ajustada corrente de 29,7%: se as safras novas entrarem, há espaço para recuperar 3–5 p.p.",
+    "Landbank de R$ 34,5 bi (1T26) e entrada em Goiânia diversificam a dependência de SP; MCMV fortalecido com Lula."
+  ],
+  "risks": [
+    "Custos das safras 2024 (Safra) e conflito no Oriente Médio (BTG) — BTG alertou para cortes relevantes de estimativas 2026–27.",
+    "Queima de caixa (R$ 94,5 mi no 2T26; CFO UDM −R$ 88 mi) e DL subindo (R$ 69 mi → R$ 163 mi pela companhia).",
+    "Pode Entrar/contratos públicos com margem 19,9%; concentração em SP.",
+    "Liquidez baixa (ADTV 3m R$ 20,6 mi) amplia quedas em choques; prévia 3T26 não localizada (busca esgotada)."
+  ],
+  "catalysts": [
+    "Resultado 3T26 (novembro/2026) — teste da margem",
+    "Conselho Curador do FGTS (fim de out/2026)",
+    "Política de dividendos 2026 (dez/2026)"
+  ],
+  "key_data": [
+    {
+      "label": "Margem bruta ajustada 2T26",
+      "value": "29,7%",
+      "context": "−4,8 p.p. a/a; margem REF 37,5%"
+    },
+    {
+      "label": "LL atribuível 2T26",
+      "value": "R$ 53 mi",
+      "context": "−37% a/a; ROE 19%"
+    },
+    {
+      "label": "Queima de caixa 2T26",
+      "value": "R$ 94,5 mi",
+      "context": "R$ 110,5 mi ex-cessões"
+    },
+    {
+      "label": "P/VP ao preço de hoje",
+      "value": "≈0,95–0,99x",
+      "context": "R$ 5,23–5,43 (intradia) × 202,95 mi / PL controlador R$ 1.118 mi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "InfoMoney — Conselho do FGTS aprova orçamento de R$ 160,5 bi para 2026 (habitação R$ 144,5 bi)",
+      "url": "https://www.infomoney.com.br/economia/conselho-do-fgts-aprova-orcamento-de-r-1605-bi-para-2026-alta-anual-de-54/"
+    },
+    {
+      "title": "Movimento Econômico — FGTS amplia em R$ 500 mi os descontos do MCMV 2026 (R$ 12,5 bi → R$ 13 bi), 11/09/2026",
+      "url": "https://movimentoeconomico.com.br/habitacao/2026/09/11/mcmv-governo-amplia-em-r-500-milhoes-subsidios-para-habitacao-popular/"
+    },
+    {
+      "title": "Registro de Imóveis — R$ 500 milhões reforçam MCMV; piso de R$ 12,5 bi para 2027",
+      "url": "https://www.registrodeimoveis.org.br/r-500-milhoes-reforcam-minha-casa-minha-vida"
+    },
+    {
+      "title": "Bora Investir (B3) — MCMV: novo teto de renda e de preços (Faixa 3 R$ 400 mil; Faixa 4 R$ 600 mil)",
+      "url": "https://borainvestir.b3.com.br/web-stories/minha-casa-minha-vida-veja-novo-teto-de-renda-e-de-precos-de-imoveis/"
+    },
+    {
+      "title": "Sul21/Agência Brasil — novas faixas de renda MCMV (F1 R$ 3.200; F2 R$ 5.000; F3 R$ 9.600; F4 R$ 13.000)",
+      "url": "https://sul21.com.br/?p=289296"
+    },
+    {
+      "title": "FGV IBRE/Sinduscon-SP — INCC-M set/26 (12m 6,61%; mão de obra 7,63%)",
+      "url": "https://sindusconsp.com.br/wp-content/uploads/2026/09/INCC-M_FGV_press-release_Set26.pdf"
+    },
+    {
+      "title": "Mattos Filho — Mercado imobiliário e Reforma Tributária (RET até 2028)",
+      "url": "https://www.mattosfilho.com.br/unico/mercado-imobiliario-reforma-tributaria/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais, consultado em 26/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    },
+    {
+      "title": "Eu Quero Investir — Plano&Plano sobe 6% mesmo com lucro 37% menor no 2T26 (13/08/2026)",
+      "url": "https://euqueroinvestir.com/acoes/acoes-da-plano-plano-sobem-6-mesmo-com-lucro-37-menor-no-2o-tri"
+    },
+    {
+      "title": "Visno Invest — Plano&Plano registra lucro de R$ 67,3 mi no 2T26",
+      "url": "https://visnoinvest.com.br/news/14770/plano-plano-plpl3-registra-lucro-de-r-673-mi-no-2t26"
+    },
+    {
+      "title": "bpmoney — Santander corta projeções de Plano&Plano",
+      "url": "https://bpmoney.com.br/?p=409197"
+    },
+    {
+      "title": "Visno Invest — Plano&Plano prévia 1T26 (landbank R$ 34,5 bi)",
+      "url": "https://visnoinvest.com.br/news/12578/plano-plano-plpl3-registra-vgv-de-lancamentos-de-r-989-mi-no-1t26"
+    }
+  ],
+  "confidence": "baixa-média: margem em revisão, prévia do 3T26 não localizada e baixa liquidez; números CVM confiáveis."
+}

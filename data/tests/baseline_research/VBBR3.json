@@ -1,0 +1,250 @@
+{
+ "ticker": "VBBR3",
+ "name": "Vibra Energia S.A.",
+ "sector": "Energia / distribuição de combustíveis e renováveis (Comerc)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "VBBR3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override: receita CVM = receita líquida de distribuição (sem construção). Arrendamentos financeiros (R$ 959 mi) já estão dentro de 'empréstimos e financiamentos' (2.01.04.03/2.02.01.03), logo na DL CVM (16.142; release 16.062). Margem 2026 é extraordinária: o conflito no Oriente Médio/estreito de Hormuz elevou preços e escassez de produto — EBITDA ajustado 1S26 R$ 7,70 bi (release) e margem recorrente de R$ ~436–476/m³ no 2T26 vs. ~R$ 150/m³ normal; normalizamos a partir de 2027. Derivativos passivos de R$ 5,5 bi (2T26) NÃO entram na DL: surgiram com a consolidação da Comerc (contratos de energia a valor justo, com ativos correspondentes em 'outros ativos') — natureza não confirmada no release."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.08,
+   -0.04,
+   0.045,
+   0.045,
+   0.045
+  ],
+  "ebitda_margin": [
+   0.052,
+   0.034,
+   0.034,
+   0.034,
+   0.034
+  ],
+  "da_pct_revenue": [
+   0.0064,
+   0.0068,
+   0.0067,
+   0.0066,
+   0.0065
+  ],
+  "capex_pct_revenue": [
+   0.0065,
+   0.0075,
+   0.0075,
+   0.0075,
+   0.0075
+  ],
+  "nwc_pct_revenue": 0.04,
+  "cost_of_net_debt": [
+   0.145,
+   0.145,
+   0.135,
+   0.125,
+   0.12
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.26,
+   0.26,
+   0.26,
+   0.26,
+   0.26
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.35,
+   0.55,
+   0.55,
+   0.55,
+   0.55
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.045,
+  "roic": 0.18,
+  "roe": 0.2
+ },
+ "wacc": {
+  "kd_pre_tax": 0.145,
+  "target_debt_weight": 0.27
+ },
+ "adjustments": {
+  "other_debt_like": 2365,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = JCP já declarados com data-com anterior a hoje e ainda não pagos (pertencem a quem tinha a ação), valores brutos B3 × 1.196,2 mi ações: R$ 0,7634 (nov/25, pg 16/12/2026) 913 + R$ 0,3300 (mar/26, pg 15/09/2027) 395 + R$ 0,4666 (jun/26, pg 15/10/2027) 558 + R$ 0,4174 (ago/26, data-com 21/09/2026, pg 16/11/2027) 499 = 2.365. Por isso o payout de 2026 é só 35% (resta o que ainda será declarado no 4T26). Créditos tributários (tributos a recuperar R$ 2,7 bi CP) tratados como capital de giro."
+ },
+ "target_multiples": {
+  "pe": 7.5,
+  "ev_ebitda": 6.0,
+  "pbv": 1.5,
+  "rationale": "data/market 5 anos: P/L mediana 7,6x (p10 3,6x, distorcido por créditos tributários em 2023–24); EV/EBITDA mediana 7,6x sobre EBITDA CVM (que incluiu créditos fiscais) — sobre EBITDA recorrente o histórico pré-crise era ~5,5–6,5x. Alvo 6,0x sobre EBITDA 2027E normalizado e P/L 7,5x. Hoje: EV/EBITDA LTM 5,4x (inflado pelo EBITDA de crise) e ~8x sobre EBITDA normalizado."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.005,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Normalização rápida do petróleo + Petrobras segurando preços abaixo da paridade (via política) e retomada da informalidade: margem volta a ~R$ 130/m³ e Comerc segue com curtailment alto."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.006,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Tensão no Oriente Médio persiste em 2027, formalização do setor (devedor contumaz/Carbono Oculto) sustenta margem ~R$ 180/m³ e Comerc cresce; payout >60%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.05,
+  "ebitda_margin_sd": 0.004,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.001
+ },
+ "debt_profile": {
+  "gross_debt_mn": 21926,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "CDI + 0,22% a.a. no 2T26 (de CDI + 0,66% no 1T26); dívidas em moeda estrangeira com swap para CDI",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 1251,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -120,
+  "notes": "DL ~R$ 16,1 bi ~100% CDI ⇒ +100 bp ≈ −R$ 160 mi pré-IR (≈ −R$ 120 mi após IR, ~4% do lucro normalizado). Dívida de curto prazo R$ 1,25 bi; prazo médio e covenants não localizados. Câmbio: preços de combustível acompanham paridade; hedge de estoques e swaps reduzem impacto direto do dólar."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.183,
+  "ebitda_margin_avg_5y": 0.037,
+  "roe_avg_5y": 0.223,
+  "payout_avg_5y": 0.36,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.258,
+   "ebitda_margin": 0.074,
+   "net_income_mn": 2351,
+   "net_debt_ebitda": 1.3
+  },
+  "notes": "CVM 2020–25: receita CAGR 18,3% (efeito preço do petróleo; 3 anos só 1,4%); margem EBITDA média 2021–25 3,7% (inclui créditos tributários de PIS/COFINS em 2023–24; recorrente ~3,0–3,2%); ROE médio 22%; payout caixa médio 36% (volátil). 2026 é atípico: EBITDA CVM 1S26 R$ 7,14 bi (6,8% da receita). Projeção: 2026 margem 5,2% (2S26 ~3,5%), 2027–30 3,4% (≈ R$ 150–160/m³ em ~37 mi m³ + Comerc ~R$ 0,8–0,9 bi); receita −4% em 2027 (normalização de preços) e +4,5% a.a. depois. 2T26: volume 9.053 mil m³ (+3,8%), EBITDA ajustado R$ 4,50 bi (recorrente R$ 4,12 bi), lucro R$ 2,35 bi, DL/EBITDA 1,3x."
+ },
+ "guidance": "Sem guidance numérico localizado nesta pesquisa. 2T26: alavancagem 1,3x (de 2,0x no 1T26), custo médio CDI + 0,22%, ROIC da distribuição 27,1% LTM (NOPAT LTM R$ 6,7 bi, inflado pela crise).",
+ "dividend_policy": "Mínimo estatutário de 25%; remuneração via JCP trimestral com pagamento diferido (~12–15 meses). Declarações recentes (B3): R$ 0,7634 (nov/25; pg 16/12/2026), R$ 0,3300 (mar/26; pg 15/09/2027), R$ 0,4666 (jun/26; pg 15/10/2027), R$ 0,4174 (ago/26; pg 16/11/2027). Payout caixa (CVM): 32% 2021, 8% 2022, 24% 2023, 77% 2025; recompras pequenas (R$ 29 mi 2024, R$ 47 mi 2025).",
+ "election_impact": "Menor queda do grupo (−13% a −22% no dia; resíduo idiossincrático +5% vs. beta no data/market): receita dolarizada (paridade de importação), alavancagem baixa (1,3x) e caixa forte. Canal macro: dívida 100% CDI encarece (~−4% do lucro por +100 bp). Canal político (4º mandato Lula): (i) Petrobras com preço abaixo da paridade em choques — em 2026 isso, somado à escassez, ampliou margens de quem tem acesso a produto Petrobras, mas a normalização reverte a janela; (ii) tributação (ICMS monofásico, PIS/COFINS) e mandatos de biocombustíveis; (iii) risco de cauda de a Petrobras voltar à distribuição (ventilado em 2024–25). Positivo: combate a sonegação/devedor contumaz e Operação Carbono Oculto (ago/2025) favorecem as formais. Valor intrínseco mudou pouco; o preço embute a persistência da margem de crise.",
+ "summary": "Maior distribuidora de combustíveis do país (~37 mi m³/ano; rede Petrobras/BR) e dona de 100% da Comerc (renováveis/trading). 2026 traz lucro recorde pela crise do petróleo (EBITDA ajustado 1S26 R$ 7,7 bi; DL/EBITDA 1,3x), mas a margem deve normalizar (~R$ 150/m³). A Ke 25% (WACC ~21%) o valor justo ponderado fica ~R$ 8–9 vs R$ 31: queda pequena porque o mercado precifica margens elevadas por mais tempo — não há oportunidade para esse hurdle.",
+ "thesis": [
+  "Geração de caixa forte em 2026: FCO 2T26 R$ 3,8 bi e DL caiu 13,7% no trimestre para R$ 16,1 bi (1,3x)",
+  "Volume na rede de postos +6,1% a/a no 2T26; custo da dívida caiu para CDI + 0,22%",
+  "Formalização do setor (Carbono Oculto, devedor contumaz) é vento a favor estrutural para share e margem",
+  "Comerc adiciona crescimento em renováveis (EBITDA R$ 188 mi no 2T26, apesar de curtailment de 27,9%)"
+ ],
+ "risks": [
+  "Normalização das margens de crise (R$ 436–476/m³ no 2T26 vs ~R$ 150/m³ histórico) — é o principal fator do valor",
+  "Política de preços da Petrobras e eventual intervenção/retorno da estatal à distribuição sob o 4º mandato",
+  "Comerc: curtailment elevado e risco de trading de energia (derivativos passivos de R$ 5,5 bi a entender)",
+  "Ke 25%: mesmo com ROIC ~15–18% normalizado, WACC ~21% e crescimento real baixo limitam o múltiplo"
+ ],
+ "catalysts": [
+  "Resultado 3T26 (meados de nov/2026): velocidade da normalização da margem",
+  "Preço do petróleo/Brent e defasagem Petrobras vs. paridade (Abicom)",
+  "Declarações de JCP do 4T26 e eventual dividendo extraordinário com a desalavancagem"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA ajustado 2T26",
+   "value": "R$ 4,50 bi",
+   "context": "recorrente R$ 4,12 bi; 1S26 R$ 7,70 bi (crise do petróleo)"
+  },
+  {
+   "label": "DL/EBITDA 2T26",
+   "value": "1,3x",
+   "context": "DL R$ 16,1 bi (−13,7% t/t)"
+  },
+  {
+   "label": "Volume 2T26",
+   "value": "9.053 mil m³",
+   "context": "+3,8% a/a; rede 5.800 (+6,1%), B2B 3.253 (−0,2%)"
+  },
+  {
+   "label": "Custo da dívida",
+   "value": "CDI + 0,22%",
+   "context": "de CDI + 0,66% no 1T26"
+  },
+  {
+   "label": "JCP declarados não pagos",
+   "value": "~R$ 2,4 bi",
+   "context": "pertencem a acionistas anteriores; tratados como dívida"
+  },
+  {
+   "label": "EV/EBITDA",
+   "value": "5,4x LTM · ~8x normalizado",
+   "context": "mediana 5 anos 7,6x (EBITDA CVM com créditos)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "CVM — ITR 2T26 / DFP 2023–2025 padronizados (data/hist/VBBR3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "Economic News Brasil — Vibra reduz dívida e lucro dispara no 2T26 (15/08/2026)",
+   "url": "https://economicnewsbrasil.com.br/2026/08/15/vibra-energia-reduz-divida-lucro-2t26/"
+  },
+  {
+   "title": "Visno Invest — Vibra registra lucro de R$ 2,3 bi e EBITDA de R$ 4,5 bi no 2T26",
+   "url": "https://visnoinvest.com.br/news/14840/vibra-vbbr3-registra-lucro-de-r-23-bi-e-ebitda-de-r-45-bi-no-2t26"
+  },
+  {
+   "title": "Eu Quero Investir — Vibra 2T26 supera projeções",
+   "url": "https://euqueroinvestir.com/acoes/vibra-tem-ebitda-de-r-43-bi-no-2o-tri-e-supera-as-projecoes"
+  },
+  {
+   "title": "B3 — proventos VBBR3 (JCP trimestrais com pagamento diferido)",
+   "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/?language=pt-br"
+  },
+  {
+   "title": "Cosan — Release 2T26 (cita crise de suprimentos pela guerra e fechamento do estreito de Hormuz)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/CSAN3/47986/"
+  }
+ ],
+ "confidence": "média — o release oficial do 2T26 não foi lido (dados via CVM e imprensa; divergências nas margens R$/m³ entre fontes); a normalização da margem é a premissa crítica e altamente incerta (depende do petróleo e da Petrobras)."
+}

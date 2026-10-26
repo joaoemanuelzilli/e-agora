@@ -1,0 +1,245 @@
+{
+ "ticker": "HAPV3",
+ "name": "Hapvida Participações e Investimentos S.A.",
+ "sector": "Saúde / operadora de planos verticalizada (Hapvida + NotreDame Intermédica)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "HAPV3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 30882,
+   "net_debt": 9386
+  },
+  "notes": "FORMATO CVM ATÍPICO: o ITR 2026 passou ao padrão IFRS 17 (3.01 do 6M26 = R$ 2.611 mi, com 'receita de seguros' negativa) e não é comparável ao DFP 2025 (3.01 = R$ 31.577 mi); o LTM CVM de receita/custos/EBITDA está distorcido e o lucro CVM 6M26 (−R$ 176 mi) difere do gerencial (−R$ 371 mi). Base adotada = visão gerencial do release (IFRS 4/ANS): receita 2025 = R$ 30.882 mi (= linha 3.01.02 'receita de seguros' do DFP 2025, que bate com a soma trimestral do release: 1S25 R$ 15.174 mi + 3T25 ~R$ 7,8 bi + 4T25 ~R$ 7,9 bi); 'EBITDA' projetado = EBITDA ajustado da companhia (exclui ILP/SOP e ReSUS não recorrente; inclui D&A total, inclusive amortização de intangíveis da fusão). D&A projetado = só D&A operacional (~3% da ROL; exclui ~R$ 0,9 bi/ano de amortização de carteiras/marcas da fusão com a NDI, não caixa) ⇒ lucro projetado ≈ lucro ajustado da cia., base usual do mercado para P/L; o benefício fiscal da amortização de ágio entra via alíquota efetiva baixa. DL base = DL contratual (covenant) R$ 5.401 mi (dívida R$ 12.912 + empresas adquiridas a pagar R$ 224 + derivativos R$ 313 − caixa e aplicações R$ 8.048 mi) + arrendamentos IFRS-16 R$ 2.628 mi + 50% do ativo garantidor (R$ 2.714 mi): o garantidor é caixa restrito que lastreia provisões técnicas exigidas pela ANS (R$ 2.863 mi); a própria cia. reporta 'caixa livre' de R$ 5.334 mi. Contamos metade porque seu valor econômico é o rendimento (CDI) descontado a Ke 25%. Total R$ 9.386 mi. Capex = capex (~2,4% da ROL) + adições de direito de uso (~1%) + ~0,5% de proxy para o crescimento líquido de depósitos judiciais cíveis (consumo de caixa de R$ 255 mi no 1S26 não captado no EBITDA)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.04,
+   0.035,
+   0.055,
+   0.06,
+   0.06
+  ],
+  "ebitda_margin": [
+   0.08,
+   0.088,
+   0.097,
+   0.104,
+   0.11
+  ],
+  "da_pct_revenue": [
+   0.03,
+   0.03,
+   0.03,
+   0.03,
+   0.03
+  ],
+  "capex_pct_revenue": [
+   0.04,
+   0.04,
+   0.039,
+   0.038,
+   0.037
+  ],
+  "nwc_pct_revenue": 0.0,
+  "cost_of_net_debt": [
+   0.144,
+   0.15,
+   0.15,
+   0.145,
+   0.14
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.15,
+   0.15,
+   0.18,
+   0.22,
+   0.22
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.0,
+   0.0,
+   0.25,
+   0.3,
+   0.35
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.15,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.35
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Itens debt-like (empresas adquiridas a pagar, derivativos, arrendamentos, 50% do ativo garantidor) já na DL base. Contingências: provisões R$ 1.942 mi vs depósitos judiciais R$ 2.109 mi — líquido ~zero, não ajustado. Upside não modelado: uso futuro de ágio fiscal/prejuízos após incorporação das entidades da NDI (ativo fiscal diferido de R$ 4,3 bi no balanço)."
+ },
+ "target_multiples": {
+  "pe": 7.0,
+  "ev_ebitda": 5.0,
+  "pbv": 0.1,
+  "rationale": "EV/EBITDA ajustado 5,0x e P/L ajustado 7x: muito abaixo do histórico da HAPV3 pós-fusão (aprox. 8–12x EV/EBITDA aj. e 15–25x P/L aj. em 2022–24, quando o mercado precificava recuperação), refletindo sinistralidade de 75% e reestruturação em curso; coerente com Ke 25%. Na cotação de 26/10 a ação negocia ~4x EV/EBITDA 2027E (EV ~R$ 12 bi). P/VP sem significado (PL de R$ 48 bi é quase todo ágio)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.35,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Sinistralidade não cede (judicialização e rede credenciada), cancelamento dos ~947 mil vidas em revisão sem repasse de preço e ANS mais intervencionista nos coletivos; margem fica em 6–8%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.015,
+   "ebitda_margin_shift": 0.025,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Reestruturação entrega: sinistralidade caixa volta a ~71–72% (nível de 2024/1S25), despesas caem e margem EBITDA aj. retorna a 12–13% em 2028; emprego formal sustenta vidas."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.025,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.004
+ },
+ "debt_profile": {
+  "gross_debt_mn": 12912,
+  "pct_floating_cdi": 0.95,
+  "avg_cost": "CDI+1,09% (2T26)",
+  "avg_maturity_years": 3.7,
+  "next_24m_maturities_mn": 3900,
+  "covenant_nd_ebitda": null,
+  "notes": "Debêntures/empréstimos R$ 12.912 mi; duration 3,7 anos; cronograma (release 2T26): ~R$ 1,9–2,0 bi por ano em 2026–28 (leitura do gráfico). Caixa e aplicações R$ 8.048 mi, dos quais R$ 2.714 mi são ativo garantidor (restrito). DL contratual/EBITDA UDM 1,61x (0,95x no 2T25); visão gerencial incl. aluguéis 2,49x. Limite numérico do covenant não informado no release (não verificado)."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -40,
+  "notes": "Dívida bruta 100% CDI+ (R$ 12,9 bi) menos caixa aplicado (R$ 8,0 bi) ⇒ exposição líquida ~R$ 4,9 bi × 1 p.p. ≈ R$ 49 mi antes de IR ≈ −R$ 40 mi/ano após IR — material frente ao lucro ajustado de R$ 256 mi no 1S26."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.298,
+  "ebitda_margin_avg_5y": 0.058,
+  "roe_avg_5y": -0.007,
+  "payout_avg_5y": 0.11,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.039,
+   "ebitda_margin": 0.063,
+   "net_income_mn": -217.1,
+   "net_debt_ebitda": 1.61
+  },
+  "notes": "CAGR 5 anos de 30% é a fusão com a NDI (2022); 3 anos 9,9%. Margens CVM (EBIT 3.05 + D&A DVA) 2021–25 médias de 5,8% subestimam o EBITDA porque a D&A da DVA (R$ 870 mi em 2025) não inclui toda a amortização (~R$ 2,1 bi em 2025 pelo release). EBITDA ajustado da cia.: 2025 ~R$ 3,37 bi (~10,9% da ROL), LTM 2T26 ~R$ 2,77 bi (8,8%), 2T26 R$ 504 mi (6,3%), sinistralidade caixa 75,2%. Premissas: margem 8,0% (2026) → 11,0% (2030), ainda abaixo de 2024/1S25 (12,6%); receita +3,5–6% (ticket +5,7%, vidas de saúde caindo: 8,67 mi, −2,1% a/a, com 947 mil vidas em revisão contratual). IFRS-16: capex 4% inclui ~1% de adições de direito de uso ≈ principal de arrendamento (aluguéis pagos R$ 299 mi no 1S26 − juros de direito de uso R$ 171 mi ⇒ principal ~R$ 128 mi/semestre ≈ 0,8% da ROL) e ~0,5% de proxy de depósitos judiciais."
+ },
+ "guidance": "Sem guidance numérico. Companhia em 'reestruturação operacional anunciada no começo do ano' (2026): revisão comercial com foco em rentabilidade (947 mil vidas — 11% da carteira, ticket ~metade da média — em contratos sob revisão de equilíbrio econômico/inadimplência), iniciativas de sinistro na rede própria e credenciada com efeito esperado 'ao longo do próximo ano'; prioridades declaradas: margem, geração de caixa e desalavancagem (release 2T26, 13/08/2026). Data do 3T26 não verificada.",
+ "dividend_policy": "Mínimo estatutário de 25% do lucro ajustado; não paga dividendos desde 2022 (R$ 1.017 mi em 2022) por prejuízo contábil (amortização de intangíveis da fusão). Recompras: R$ 221 mi (2024) e R$ 386 mi (2025); grupamento de ações 15:1 em 2025 (7,42 bi → 495 mi ações). Projeção: zero em 2026–27; 25–35% do lucro (≈ajustado) a partir de 2028.",
+ "election_impact": "Queda de −38% (após −17% no dia do 2T26, em 13/08) reflete juros e risco de execução, mais do que a eleição em si: a dívida é 100% CDI (+100 bp ≈ −R$ 40 mi/ano de lucro) e a tese depende de repasse de preço e corte de custos. 4º mandato Lula: ANS e Ministério da Saúde tendem a ser mais duros com reajustes de coletivos/PME e com negativas (judicialização já elevou contingências cíveis para R$ 324 mi no 2T26), mas política de emprego formal e salário mínimo sustenta a base de beneficiários; reforma tributária reduz alíquota da saúde (60%). O valor intrínseco foi afetado mais pela piora operacional de 2025–26 do que pela eleição.",
+ "summary": "Maior operadora verticalizada do país (8,67 mi vidas de saúde + 7,29 mi odonto) em reestruturação: sinistralidade caixa 75,2% e EBITDA aj. de 6,3% no 2T26. A ~R$ 5,0–5,4 (valor de mercado ~R$ 2,4–2,6 bi) o equity é uma opção sobre a volta da margem a ~11%; EV ~R$ 12 bi ≈ 4x EBITDA 2027E.",
+ "thesis": [
+  "Assimetria: cada 1 p.p. de margem EBITDA sobre ~R$ 33 bi de receita vale ~R$ 330 mi/ano de EBITDA — mais de 10% do valor de mercado.",
+  "Repricing em curso: ticket de saúde +5,7% a/a (R$ 305,9/mês) e revisão de 947 mil vidas deficitárias (ticket ~metade da média) — renegociação ou saída melhoram margem e caixa em qualquer cenário.",
+  "Ativos reais e verticalização: rede própria (imobilizado R$ 6,5 bi), IGR abaixo do setor; amortização da fusão em queda (R$ 218 mi no 2T26 vs R$ 342 mi no 2T25) aproxima o lucro contábil do ajustado."
+ ],
+ "risks": [
+  "Sinistralidade estrutural mais alta (rede credenciada, judicialização: sinistro judicial R$ 135 mi no 2T26) e despesas caixa em 16,9% da ROL.",
+  "Perda de vidas (saúde −188 mil em 12 meses) e regulação de reajustes coletivos/PME mais rígida no 4º mandato.",
+  "Alavancagem crescente com EBITDA em queda: DL/EBITDA contratual 1,61x (0,95x um ano antes); ~R$ 1,9–2,0 bi de amortizações por ano até 2028.",
+  "Dados CVM 2026 em IFRS 17 não comparáveis — premissas ancoradas no gerencial."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (novembro/2026; data a confirmar)",
+  "Ciclo de reajustes/renovações de contratos coletivos 2027 e reajuste ANS individual (mai–jul/2027)",
+  "Incorporação de entidades da NDI (uso de ágio fiscal)"
+ ],
+ "key_data": [
+  {
+   "label": "ROL 2T26",
+   "value": "R$ 7.974 mi (+3,9%)",
+   "context": "1S26 R$ 15.866 mi (+4,6%)"
+  },
+  {
+   "label": "Sinistralidade caixa 2T26",
+   "value": "75,2%",
+   "context": "72,2% 1T26; 73,9% 2T25"
+  },
+  {
+   "label": "EBITDA ajustado 2T26",
+   "value": "R$ 504 mi (6,3%)",
+   "context": "1S26 R$ 1.308 mi (8,2%) vs R$ 1.909 mi"
+  },
+  {
+   "label": "DL contratual / EBITDA UDM",
+   "value": "1,61x (R$ 5.401 mi)",
+   "context": "+ arrendamentos R$ 2.628 mi; garantidor R$ 2.714 mi no caixa"
+  },
+  {
+   "label": "Lucro ajustado 1S26",
+   "value": "R$ 256,5 mi",
+   "context": "contábil −R$ 371 mi (amortização da fusão)"
+  },
+  {
+   "label": "Ações em circulação",
+   "value": "475,1 mi",
+   "context": "pós-grupamento 15:1 (2025)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Hapvida – Relatório de Resultados 2T26 (12/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/6bbd1770-f9f4-44e8-a1b1-d26b7585eec1/2da3a782-e91a-675b-c1ad-9b08af4c71b0?origin=2"
+  },
+  {
+   "title": "Times Brasil/CNBC – Hapvida despenca após 2T26",
+   "url": "https://timesbrasil.com.br/brasil/hapvida-despenca-17-no-ibovespa-apos-lucro-cair-958-no-2t26/"
+  },
+  {
+   "title": "CVM – DFP/ITR padronizados (data/hist/HAPV3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 – cotação ao vivo",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/HAPV3"
+  }
+ ],
+ "confidence": "baixa — release oficial lido, mas a recuperação de margem é o único driver relevante e o histórico recente é de piora; base CVM 2026 em IFRS 17 exigiu override gerencial."
+}

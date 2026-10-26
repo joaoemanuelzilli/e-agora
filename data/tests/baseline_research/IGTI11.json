@@ -1,0 +1,260 @@
+{
+ "ticker": "IGTI11",
+ "name": "Iguatemi S.A.",
+ "sector": "Imobiliário / shopping centers (alta renda, SP) + outlets + varejo próprio",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 4.0638,
+ "listed_classes": [
+  {
+   "ticker": "IGTI11",
+   "class": "UNIT"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "UNIT = 1 ON + 2 PN, mas cada PN tem direito econômico de 3 ON (dividendo por PN = 3× ON: aviso de 20/10/26 R$0,02413 ON × R$0,07238 PN; conversão 3 ON:1 PN). Logo 1 unit = 7 ON-equivalentes e o nº econômico é 296,41 mi de units-equivalentes ex-tesouraria (release 2T26: 296.728.385 − 313.683). shares_per_unit = ações CVM em circulação / units-eq = 1.204.567.623 / 296.414.703 = 4,0638 (NÃO 3 — com 3 o valor por unit sairia 26% baixo). Conferência: IGTI3 R$3,29 × 7 ≈ IGTI11 R$22,80. listed_classes só com a unit para o market cap não misturar a ON ilíquida. Base CVM 2025 (receita 1.486,8) mantida; EBITDA 2025 CVM (1.250) inclui ganho de capital de R$139 mi (venda Market Place/Galleria) e o LTM inclui ganho do 1T26 (~R$141 mi, venda ao XPML11): margens projetadas são recorrentes (~74,5%)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.045,
+   0.07,
+   0.07,
+   0.065,
+   0.06
+  ],
+  "ebitda_margin": [
+   0.745,
+   0.75,
+   0.755,
+   0.76,
+   0.76
+  ],
+  "da_pct_revenue": [
+   0.09,
+   0.09,
+   0.09,
+   0.09,
+   0.09
+  ],
+  "capex_pct_revenue": [
+   0.22,
+   0.19,
+   0.17,
+   0.15,
+   0.14
+  ],
+  "nwc_pct_revenue": 0.05,
+  "cost_of_net_debt": [
+   0.165,
+   0.17,
+   0.17,
+   0.165,
+   0.16
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.15,
+   0.15,
+   0.15,
+   0.15,
+   0.15
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.0,
+   0.45,
+   0.55,
+   0.6,
+   0.65
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.0475,
+  "roic": 0.25,
+  "roe": 0.25
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.18
+ },
+ "adjustments": {
+  "other_debt_like": 100,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = 2 parcelas de dividendos de 2026 (R$50 mi cada; data-ex 16/07 e 16/10/26) já fora do alcance do comprador de hoje e não refletidas na DL de 30/06; payout de 2026 (stub) = 0 porque os dividendos de 2027 serão declarados ~dez/26. Custo da dívida líquida calibrado no resultado financeiro do 1S26 (~17% a.a. sobre DL): dívida bruta de R$4,4 bi a ~101% do CDI contra caixa de R$2,3 bi rendendo abaixo do CDI. Cotas de XPML11 recebidas (R$191,7 mi) e parcelas a receber da venda (24 meses) não somadas como ativo extra (incluídas no caixa ou sem valor divulgado)."
+ },
+ "target_multiples": {
+  "pe": 12.0,
+  "ev_ebitda": 8.0,
+  "pbv": 1.5,
+  "rationale": "Regra 'choque de juros neutro' (+300 bp no rendimento do múltiplo pré-eleição). Pré-eleição (R$32,20/unit): P/L recorrente LTM ~18x (LL recorrente ~R$525 mi = R$1,77/unit) → 5,5%+3pp → ~12x; EV/EBITDA recorrente LTM (EBITDA ~R$1.181 mi) ~9,9x → 10,1%+3pp → ~7,6x (uso 8,0x pelo prêmio de qualidade JK/Iguatemi SP). Hoje: ~12,9x P/L recorrente e ~7,5x EV/EBITDA."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.015,
+   "terminal_g_shift": -0.005,
+   "capex_pct_shift": 0.01,
+   "narrative": "Consumo de alta renda em SP desacelera, SSS ~0 real, CDI ~16%, novas vendas de participação a cap rates piores."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.015,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.01,
+   "narrative": "Reciclagem de portfólio a cap rates ~8% com recompra das units abaixo de 0,5x NAV; SSR real 3%+."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.01,
+  "terminal_g_sd": 0.005,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 4436.3,
+  "pct_floating_cdi": 0.941,
+  "avg_cost": "101,9% do CDI (deve cair p/ ~100,5–101% após pré-pagamento de debênture CDI+1,63% em 01/07/26); 5,9% em TR",
+  "avg_maturity_years": 4.7,
+  "next_24m_maturities_mn": 435,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -16,
+  "notes": "Exposição líquida ~R$1,9 bi (dívida CDI 4.175 − caixa 2.298) → −R$19 mi antes de IR por +100 bp; ~−R$16 mi no lucro (~3% do LL recorrente). Caixa elevado (R$2,3 bi) amortece o choque."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.1705,
+  "ebitda_margin_avg_5y": 0.698,
+  "roe_avg_5y": 0.079,
+  "payout_avg_5y": 0.397,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": -0.012,
+   "ebitda_margin": 0.736,
+   "net_income_mn": 135.1,
+   "net_debt_ebitda": 1.68
+  },
+  "notes": "CAGR 5a de 17,1% (2020 Covid→2025) superestima; 2019→2025 = 12,0% a.a. e inclui aquisições (Pátio Higienópolis/Paulista em 2025) e IGP-M alto. Premissa 2025–30 ~6,2% a.a. (portfólio menor após vendas ao XPML11 e Market Place/Galleria, IGP-M ~4%, SSR real ~2–3%). Margem recorrente 2025 = 74,7% (ex-ganho de R$139 mi); premissa 74,5→76%. ROE médio 7,9% (2021–25) reflete PL inflado pela reestruturação Jereissati (2021); ROE 2025 13%. Receita 2T26 −1,2% a/a reportado, +11,6% pró-forma (mesmas participações)."
+ },
+ "guidance": "Sem guidance numérico. Sinalizações (release 2T26, 05/08/26): custo da dívida para ~100,5–101% do CDI e prazo médio 4,9 anos após liability management (CRI R$535 mi a 97% do CDI, 8 anos); reciclagem de portfólio (venda de fatias minoritárias ao XPML11 em mar/26; compra de +3% do Pátio Paulista por R$75,6 mi); recompra de até R$60 mi (~2,5 mi units) até dez/27; nova 5ª emissão de debêntures/CRI aprovada em 19/10/26.",
+ "dividend_policy": "Dividendos fixos anunciados antecipadamente: R$200 mi para 2026 (4 parcelas de R$50 mi: mar, abr, jul, out; R$0,1689/unit cada). Pagos: 2024 R$199,7 mi; 2025 R$199,7 mi (payout ~34% do LL contábil). Recompras: R$60 mi (2024), R$15 mi (2025), R$35 mi no 1S26; programa novo de R$60,3 mi (jun/26–dez/27). Retorno ao acionista R$0,67/unit em 12m.",
+ "election_impact": "Queda de −29% (hoje R$22,80 vs R$32,20) é canal macro: taxa de desconto e custo de capital. Exposição direta a juros é baixa (DL/EBITDA 1,62x; caixa R$2,3 bi). O público de alta renda de SP é o menos dependente de crédito e programas sociais. O que muda de fato: (i) cap rates de transações privadas devem subir ~100 bp com NTN-B mais alta, reduzindo o valor de reciclagem; (ii) reforma tributária sobre locação a partir de 2027; (iii) tributação de dividendos para PF. Nada disso justifica −29% no NOI; justifica parte pela taxa de desconto.",
+ "summary": "Portfólio premium concentrado em São Paulo (Iguatemi SP, JK, Pátio Higienópolis/Paulista), ocupação 96,9%, margem NOI recorde de 94,6% e alavancagem baixa (1,62x). A R$22,80 a unit negocia a ~0,40x o NAV declarado (R$56,49/unit) e cap rate implícito ~13% — o maior desconto patrimonial do setor —, mas a Ke de 25% o valor intrínseco por DCF fica abaixo do preço; é oportunidade relativa/patrimonial, não de TIR 25%.",
+ "thesis": [
+  "Cap rate implícito ~13,4% (NOI 2T26 anualizado ~R$1.194 mi / EV ~R$8,9 bi) vs ~10,2% na sexta e ~8,0% na venda ao XPML11 (dez/25–mar/26).",
+  "NAV declarado R$16,8 bi (participação Iguatemi, taxa real 9,2%) = R$56,49/unit vs R$22,80: P/NAV 0,40.",
+  "Qualidade: vendas/m² +13,3% e aluguel/m² +11,8% (visão proporcional) no 2T26; inadimplência baixa; JK e Iguatemi SP entre os ativos mais produtivos do país.",
+  "Balanço: caixa R$2,3 bi, DL R$2,14 bi, rating AAA(bra) Fitch; custo ~101% do CDI."
+ ],
+ "risks": [
+  "Ke 25% vs rendimento de ~10–13% dos ativos: sem reprecificação, retorno abaixo da meta.",
+  "Resultado financeiro pesa mais que o tamanho da DL sugere (dívida bruta R$4,4 bi a ~101% do CDI vs caixa rendendo menos).",
+  "SSS fraco no 2T26 (+1,7%) e dependência de São Paulo / alta renda.",
+  "Governança: controle Jereissati com ON; units com estrutura ON/PN complexa e free float vendedor (Radar, Fourth Sail reduziram posição em out/26).",
+  "Reforma tributária (IBS/CBS) sobre locação e tributação de dividendos."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (início de nov/26).",
+  "Execução da recompra (R$60 mi) com units a 0,4x NAV; anúncio de dividendos 2027 (~dez/26).",
+  "Novas vendas de participação minoritária a FIIs a cap rate ≤ 9%."
+ ],
+ "key_data": [
+  {
+   "label": "Preço / variação hoje",
+   "value": "R$22,80 (−29,2%)",
+   "context": "sexta R$32,20; units-eq 296,4 mi"
+  },
+  {
+   "label": "Market cap / EV",
+   "value": "R$6,76 bi / R$8,9 bi",
+   "context": "DL 2T26 R$2,14 bi"
+  },
+  {
+   "label": "NAV por unit (6M26)",
+   "value": "R$56,49",
+   "context": "P/NAV 0,40"
+  },
+  {
+   "label": "DL/EBITDA ajustado",
+   "value": "1,62x",
+   "context": "1,81x sem ganho de capital"
+  },
+  {
+   "label": "NOI 2T26 / margem",
+   "value": "R$298,5 mi / 94,6%",
+   "context": "+4,0% pró-forma"
+  },
+  {
+   "label": "Ocupação",
+   "value": "96,9%",
+   "context": "2T26"
+  },
+  {
+   "label": "Composição da unit",
+   "value": "1 ON + 2 PN = 7 ON-eq",
+   "context": "shares_per_unit econômico 4,0638"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Iguatemi — Release 2T26 (via Investidor10/CVM)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/IGTI4/46858/"
+  },
+  {
+   "title": "Iguatemi — Aviso aos acionistas 20/10/26 (dividendos por ON/PN/unit)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/IGTI3/51091/"
+  },
+  {
+   "title": "BTG Pactual — IGTI11 Resultado 2T26 (05/08/26)",
+   "url": "https://content.btgpactual.com/research/files/file/pt-BR/2026-08-05T131604.772_IGTI11___Resultado_2T26.pdf"
+  },
+  {
+   "title": "Forbes/Investidor10 — XPML11 compra fatias de 4 shoppings Iguatemi (cap rate ~8,0% s/ NOI 2025)",
+   "url": "https://forbes.com.br/forbes-money/forbes-real-estate/2026/03/xp-malls-compra-participacoes-em-cinco-shoppings-da-iguatemi-por-r-608-milhoes/"
+  },
+  {
+   "title": "Allos — Fato Relevante 23/10/2026 (venda ao Kinea ALLOS Malls FII, cap rate ~9,5%)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/ALOS3/51222/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizadas (data/hist, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — cotação ao vivo (API oficial)",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/"
+  }
+ ],
+ "confidence": "média — números do release; incerteza na composição econômica da unit (verificada por dividendos e preços), no NOI LTM exato (usei 2T26 anualizado) e na taxa de desconto."
+}

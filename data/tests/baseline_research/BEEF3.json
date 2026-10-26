@@ -1,0 +1,262 @@
+{
+  "ticker": "BEEF3",
+  "name": "Minerva S.A. (Minerva Foods)",
+  "sector": "Alimentos / proteína animal – frigorífico exportador de carne bovina e ovina (América do Sul e Austrália)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "BEEF3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "shares_outstanding_mn": 1178.1
+    },
+    "notes": "Base CVM sem ajustes: receita FY2025 R$ 54.830 mi (ano cheio dos ativos comprados da Marfrig); dívida líquida 30/06/2026 R$ 14.450 mi (bruta 29.297 − caixa/aplicações 14.935 + arrendamentos 87), batendo com o release (R$ 14.363 mi ex-arrendamentos). PL controlador de apenas R$ 1.579 mi (prejuízo de 2024) distorce ROE e P/VP. Ações: 991,1 mi em circulação + 187,0 mi de bônus de subscrição (R$ 930,3 mi → ~R$ 4,97/ação, exercíveis até o fim do 1S28) = 1.178,1 mi diluídas; entrada de R$ 930 mi em 2027 (equity_issuance_mn). Os bônus estão fora do dinheiro a R$ 3,2, mas o valor justo do motor fica acima de R$ 4,97 — por coerência, considero a diluição."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.05,
+      0.05,
+      0.04,
+      0.045,
+      0.045
+    ],
+    "ebitda_margin": [
+      0.085,
+      0.082,
+      0.085,
+      0.088,
+      0.088
+    ],
+    "da_pct_revenue": [
+      0.018,
+      0.018,
+      0.018,
+      0.018,
+      0.018
+    ],
+    "capex_pct_revenue": [
+      0.02,
+      0.02,
+      0.021,
+      0.021,
+      0.021
+    ],
+    "nwc_pct_revenue": 0.1,
+    "cost_of_net_debt": [
+      0.21,
+      0.205,
+      0.2,
+      0.19,
+      0.18
+    ],
+    "other_financial": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tax_rate": [
+      0.15,
+      0.17,
+      0.19,
+      0.21,
+      0.22
+    ],
+    "minority_share_ni": 0.05,
+    "payout": [
+      0.25,
+      0.25,
+      0.35,
+      0.5,
+      0.5
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      930,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.15,
+    "roe": 0.2
+  },
+  "wacc": {
+    "kd_pre_tax": 0.13,
+    "target_debt_weight": 0.5
+  },
+  "adjustments": {
+    "other_debt_like": 0.0,
+    "non_operating_assets": 720.0,
+    "minority_value": null,
+    "notes": "non_operating_assets = valor presente (a 25%, ~1,2 ano) dos R$ 930 mi do exercício dos bônus — o DCF e o EV/EBITDA usam a dívida pré-emissão, e as ações já estão diluídas (1.178,1 mi). Minoritários a valor contábil (R$ 603 mi). Custo da dívida líquida de 18–21% porque a dívida bruta (R$ 29,3 bi, ~70% em US$) é o dobro da líquida: juros de bonds/debêntures (~10,7% sobre a bruta) contra caixa (~US$, ~4%), mais custo de hedge cambial e de commodities e taxas (R$ 514 mi LTM). Resultado financeiro LTM ex-variação cambial = −R$ 3,7 bi (25,6% da DL); 'conceito caixa' −R$ 2,96 bi (20,5%)."
+  },
+  "target_multiples": {
+    "pe": 6.0,
+    "ev_ebitda": 4.8,
+    "pbv": 2.0,
+    "rationale": "Minerva negociou ~5–6x EV/EBITDA em 2021–23 e ~3,8–4,2x em 2024–26 (alavancagem pós-Marfrig); pares JBS ~5–6x e MBRF ~5x. Preços-alvo publicados em 2026 (JPMorgan e Itaú BBA R$ 5,50) implicam ~4,2x. Uso 4,8x EV/EBITDA e 6x P/L."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.03,
+      "ebitda_margin_shift": -0.01,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Virada do ciclo do gado no Brasil (arroba sobe com retenção de fêmeas), cota chinesa esgotada cedo e real se reapreciando."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.008,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Dólar alto sustentado, ciclo americano (rebanho mínimo) mantém EUA comprador e desalavancagem para 2,5x libera dividendos de 50%."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.04,
+    "ebitda_margin_sd": 0.008,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.003
+  },
+  "debt_profile": {
+    "gross_debt_mn": 29298,
+    "pct_floating_cdi": 0.25,
+    "avg_cost": "Bonds em US$ (ex.: Notas 2036 de US$ 600 mi a 7,50%) + debêntures/CRAs em R$; prazo médio 4,3 anos",
+    "avg_maturity_years": 4.3,
+    "next_24m_maturities_mn": 6309,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -55,
+    "notes": "Dívida em R$ de R$ 8,9 bi (debêntures/CRAs, majoritariamente pós-fixadas — % CDI não divulgado) contra caixa em R$ parcial: +100 bp ≈ −R$ 60 a −90 mi pré-IR; com IR baixo, ≈ −R$ 55 mi no lucro (~10% do lucro LTM). Hedge cambial (compra de US$) também encarece com CDI alto (custo de carrego)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.231,
+    "ebitda_margin_avg_5y": 0.091,
+    "roe_avg_5y": null,
+    "payout_avg_5y": 0.6,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.013,
+      "ebitda_margin": 0.087,
+      "net_income_mn": 189.6,
+      "net_debt_ebitda": 2.9
+    },
+    "notes": "CAGR 5a de 23% inclui a compra dos ativos da Marfrig (fim de 2024). Projeto 4–5% a.a. (câmbio + inflação + volume marginal). Margem EBITDA notavelmente estável: 8,8–9,5% em 2021–25 (média 9,1%); projeto 8,2–8,8% (abaixo da média) pela virada do ciclo do gado e pela salvaguarda chinesa 2026–28. ROE histórico não significativo (PL ~zero/negativo em 2024). Lucro 2T26 controladores R$ 189,6 mi (consolidado R$ 196,9 mi); LTM R$ 489 mi. Payout médio 2021–25 de ~60% do lucro, mas sobre lucros pequenos; dividendos de R$ 162 mi em dez/25."
+  },
+  "guidance": "Sem guidance numérico de resultado. Política financeira: proteger ≥50% da exposição cambial de longo prazo; caixa de R$ 14,9 bi cobre amortizações até 2029; recompra de bonds (US$ 618 mi desde 2025) e alongamento (Notas 2036, US$ 600 mi a 7,5%).",
+  "dividend_policy": "Estatuto: 25% do lucro líquido ajustado; política de jan/2025 prevê 50% se a alavancagem fechar o ano ≤2,5x DL/EBITDA. CFO afirmou manter o mínimo mesmo com alavancagem menor. Dividendos intercalares de R$ 162,1 mi em dez/2025; nada relevante em 2024 (prejuízo). Projeto 25% (2026–27), 35% (2028) e 50% a partir de 2029, quando a DL/EBITDA projetada cai abaixo de 2,5x.",
+  "election_impact": "Paradoxo aparente: exportadora que caiu −24% com o dólar +9,5%. Os números dizem que o câmbio é positivo para o valor: ~57% da receita bruta é exportação e ~43% da receita vem de operações fora do Brasil (Argentina, Paraguai, Uruguai, Colômbia, Chile, Austrália) — o EBITDA é majoritariamente dolarizado. A dívida é ~70% em US$ (R$ 20,4 bi), mas a empresa protege ≥50% da exposição de longo prazo e o resultado de hedge compensa a variação cambial (1T26: +R$ 251 mi de variação vs −R$ 243 mi de hedge). Logo, o choque cambial aumenta pouco a dívida líquida em R$ e eleva o EBITDA em R$ com defasagem. A queda é beta/alavancagem: o equity é só ~20% do EV (EV ~R$ 18 bi, mercado ~R$ 3,2 bi) — uma alta de 1–2 p.p. no custo de capital derruba o equity em 20%+. Canais reais negativos: (i) dívida em R$ (R$ 8,9 bi) e carrego do hedge ficam mais caros com CDI alto; (ii) relação Lula–Trump (tarifas dos EUA, 12% da exportação) e China (salvaguarda com cota de 1,106 Mt para o Brasil em 2026 e tarifa de 55% acima da cota). Fluxo estrangeiro vendendo Brasil amplifica. Fundamental intacto ou melhor; risco é de balanço, não de operação.",
+  "summary": "Maior exportadora de carne bovina da América do Sul (receita LTM R$ 57,2 bi; EBITDA R$ 4,9 bi; 2,9x DL/EBITDA). A R$ 3,2 o mercado paga ~3,6x EV/EBITDA e ~4x P/L 2027E; o dólar alto ajuda o EBITDA e a dívida em US$ é hedgeada. É a única do grupo cuja TIR implícita se aproxima de 25%, mas é alavancada e cíclica — opção, não posição de convicção.",
+  "thesis": [
+    "Câmbio a favor: ~57% da receita bruta é exportação e operações fora do Brasil são ~43% — dólar +9,5% eleva EBITDA em R$; dívida em US$ hedgeada (≥50%).",
+    "Valuation extremo: EV/EBITDA LTM ~3,6x e P/L 2027E ~4x vs. média histórica de 5–6x EV/EBITDA.",
+    "Margem EBITDA muito estável (8,8–9,5% por 5 anos) graças à arbitragem entre 7 países de origem.",
+    "Gestão de passivos: US$ 618 mi de bonds recomprados desde 2025, Notas 2036 a 7,5%, caixa R$ 14,9 bi cobre vencimentos até 2029."
+  ],
+  "risks": [
+    "Alavancagem: DL R$ 14,4 bi vs. equity de mercado ~R$ 3,2 bi; resultado financeiro consome ~60% do EBITDA.",
+    "Ciclo do gado no Brasil virando para retenção (arroba em alta, margem comprimida em 2027).",
+    "Salvaguarda chinesa 2026–28 (cota do Brasil 1,106 Mt; 55% de tarifa acima) e tarifas dos EUA (relação Lula–Trump).",
+    "Capital de giro volátil (−R$ 2,0 bi no 1S26) e FCF negativo no 1S26.",
+    "Diluição potencial dos bônus de subscrição (187 mi a ~R$ 4,97) se a ação subir."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (início de nov/2026; 3T25 saiu em 05/11) — primeiro com dólar mais alto no 4T",
+    "Desalavancagem para ≤2,5x (dispara payout de 50%)",
+    "Revisão/negociação de cotas chinesas e da cota dos EUA para 'outros países' (300 mil t a partir de set/26)"
+  ],
+  "key_data": [
+    {
+      "label": "Receita líquida 2T26",
+      "value": "R$ 14.102 mi",
+      "context": "+1,3% a/a; LTM R$ 57,2 bi"
+    },
+    {
+      "label": "EBITDA 2T26",
+      "value": "R$ 1.230,6 mi (8,7%)",
+      "context": "LTM R$ 4,9 bi (+22%)"
+    },
+    {
+      "label": "Lucro 2T26",
+      "value": "R$ 196,9 mi",
+      "context": "controladores R$ 189,6 mi; LTM R$ 489 mi"
+    },
+    {
+      "label": "Dívida líquida 2T26",
+      "value": "R$ 14.363 mi",
+      "context": "2,9x EBITDA LTM; bruta R$ 29,3 bi (70% em US$)"
+    },
+    {
+      "label": "Exportação / receita bruta",
+      "value": "56,6%",
+      "context": "China 18% e EUA 12% da exportação no 2T26"
+    },
+    {
+      "label": "Ações",
+      "value": "991,1 mi em circulação",
+      "context": "+187 mi bônus a ~R$ 4,97 até 1S28 (modelo usa 1.178,1 mi diluídas)"
+    },
+    {
+      "label": "Preço 26/10 ~12h",
+      "value": "R$ 3,23",
+      "context": "−24,4% no dia; sexta R$ 4,27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Release de Resultados 2T26 Minerva Foods (RI)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/7f2b381f-831b-4aed-b111-417a5585b53b/189fd4d3-3b2c-6755-c132-0bf3b7f65872?origin=2"
+    },
+    {
+      "title": "Investidor10 – Minerva lucra R$ 196,9 mi no 2T26",
+      "url": "https://investidor10.com.br/noticias/minerva-beef3-tem-lucro-de-r-196-9-milhoes-no-2t26-queda-de-57-122030/"
+    },
+    {
+      "title": "Scot Consultoria – China impõe salvaguarda à carne bovina (tarifa extra de 55%)",
+      "url": "https://www.noticiasagricolas.com.br/analises/boi-scot/413296-scot-consultoria-china-impoe-salvaguarda-a-carne-bovina-e-tarifa-extra-de-55-0.html"
+    },
+    {
+      "title": "Safra – isenção tarifária EUA para carne (cota 300 mil t)",
+      "url": "https://oespecialista.safra.com.br/isencao-tarifaria-eua-carne-bovina-brasil-minerva/"
+    },
+    {
+      "title": "BP Money – JPMorgan eleva Minerva para compra (PT R$ 5,50)",
+      "url": "https://bpmoney.com.br/noticias/minerva-salta-na-bolsa-apos-jpmorgan-ver-exagero-na-queda-e-recomendar-compra/"
+    },
+    {
+      "title": "Money Times – aumento de capital de R$ 2 bi com bônus (2025)",
+      "url": "https://www.moneytimes.com.br/minerva-propoe-aumento-de-capital-de-ate-r2-bi-com-bonus-de-subscricao-kda/"
+    },
+    {
+      "title": "Dados CVM padronizados (data/hist/BEEF3.json)",
+      "url": "https://dados.cvm.gov.br/"
+    }
+  ],
+  "confidence": "média — release 2T26 lido na fonte e dívida conferida nas linhas brutas da CVM; incertezas grandes no custo financeiro efetivo (hedges/taxas), no ciclo do gado 2027 e na composição cambial do caixa (não divulgada)."
+}

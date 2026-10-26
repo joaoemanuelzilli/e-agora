@@ -1,0 +1,234 @@
+{
+ "ticker": "CSAN3",
+ "name": "Cosan S.A.",
+ "sector": "Holding / logística ferroviária, gás, lubrificantes e terras agrícolas",
+ "template": "holding",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "CSAN3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Ações: 3.966,6 mi emitidas (B3/CVM; eram 1.866,6 mi antes do aumento de capital de dez/2025 — 2.100 mi de ações novas a R$ 5,00 ≈ R$ 10,5 bi, âncoras Aguassanta/Queluz (Ometto), BTG e Perfin); 3.944,4 mi em circulação. NÃO usamos a DL consolidada da CVM (inclui Rumo, Compass, Moove) nem o lucro consolidado FY2025 (−9.722, dominado pela baixa da Raízen); usamos a dívida líquida do segmento Cosan Corporativo do release."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "_note": "Template holding: valor = SOTP (sotp abaixo). Projeções operacionais das investidas: RAIL3 em research/RAIL3.json (método 'fair'); Compass a mercado; Moove, Radar, TUP e Raízen a valor fixo justificado."
+ },
+ "sotp": {
+  "components": [
+   {
+    "name": "Rumo (RAIL3) — 30% econômico (inclui ações sob TRS)",
+    "ticker": "RAIL3",
+    "stake": 0.3,
+    "method": "fair",
+    "value_mn": null
+   },
+   {
+    "name": "Compass (PASS3) — 76,18%",
+    "ticker": "PASS3",
+    "stake": 0.7618,
+    "method": "market",
+    "value_mn": null,
+    "shares_mn": 714.190095
+   },
+   {
+    "name": "Moove — 70% (não listada)",
+    "ticker": null,
+    "stake": 0.7,
+    "method": "fixed",
+    "value_mn": 4000
+   },
+   {
+    "name": "Radar/Tellus/Janus (terras) — parcela Cosan",
+    "ticker": null,
+    "stake": 1.0,
+    "method": "fixed",
+    "value_mn": 4480
+   },
+   {
+    "name": "TUP Porto São Luís (proposta vinculante)",
+    "ticker": null,
+    "stake": 1.0,
+    "method": "fixed",
+    "value_mn": 300
+   },
+   {
+    "name": "Raízen (via Cosan Nove; subordinada às prefs Itaú)",
+    "ticker": null,
+    "stake": 1.0,
+    "method": "fixed",
+    "value_mn": 0
+   }
+  ],
+  "holding_net_debt_mn": 12231,
+  "holding_cost_mn": 180,
+  "notes": "Participações: Rumo 30,0% (equivalência 2T26 156/lucro 520); Compass 76,18% pós-IPO de mai/2026 (release); Moove 70% (equivalência 138/lucro 197); Radar 50%/Tellus 20%/Janus 20%. DL da holding = dívida líquida expandida 9.217 (debêntures/NC 9.919 + bônus perpétuos 2.621 + prefs Cosan Dez 3.871 + MTM 74 − caixa 7.268) + TRS de ações da Rumo 3.014 = 12.231 (30/06/2026). Moove 100% = R$ 4,0 bi (estimativa: ~6x lucro LTM ~R$ 0,6–0,7 bi e ~4–5x EBITDA LTM ~R$ 1,4 bi menos DL ~R$ 2,0 bi pela alavancagem de 1,4x; LTM estimado a partir de 6M26/6M25 — não há múltiplo de transação recente). Radar = R$ 5,6 bi (parcela Cosan do laudo de R$ 18,1 bi, 2T26) × 0,8 (desconto de 20% por iliquidez/laudo; inclui os R$ 586 mi da venda de 12% do portfólio com fechamento previsto até 30/10/2026). TUP São Luís = proposta vinculante de R$ 300 mi (+ earn-out não considerado). Raízen = 0: investimento zerado em 31/12/2025, recuperação extrajudicial homologada (jul/2026) e a participação está na Cosan Nove, onde as prefs do Itaú têm valor de resgate de R$ 2.660 mi; a 44% de um valor de mercado de ~R$ 3,6 bi (RAIZ4 R$ 0,35 × 10.352,5 mi ações), o valor residual para a Cosan é ~zero. Custo de holding: G&A R$ 42 mi no 2T26 (anualizado ~R$ 170 mi) → R$ 180 mi/ano, capitalizado a (Ke − g)."
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": null,
+  "roe": null
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": null
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Itens debt-like já na DL da holding (prefs Cosan Dez, perpétuos, TRS Rumo). Prefs da Cosan Nove (R$ 2.660 mi) ficam contra a Raízen (valor zero), não contra a holding."
+ },
+ "target_multiples": {
+  "pe": null,
+  "ev_ebitda": null,
+  "pbv": null,
+  "rationale": "Holding avaliada por SOTP; desconto histórico sobre NAV não é usado no valor justo (o motor mostra o desconto vs. NAV a mercado)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": 0.0,
+   "ebitda_margin_shift": 0.0,
+   "terminal_g_shift": 0.0,
+   "capex_pct_shift": 0.0,
+   "narrative": "Rumo e Compass caem mais 20% (juros/regulação de gás), Moove a 3x EBITDA e laudo da Radar com desconto de 35%: NAV − DL ≈ R$ 1,5–2,0/ação."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.0,
+   "ebitda_margin_shift": 0.0,
+   "terminal_g_shift": 0.0,
+   "capex_pct_shift": 0.0,
+   "narrative": "Desconto sobre NAV fecha com novas vendas (Moove/Radar/TUP), ICSD ≥1x e Rumo/Compass revertem metade da queda do dia: NAV − DL ≈ R$ 4,5/ação."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.0,
+  "ebitda_margin_sd": 0.0,
+  "terminal_g_sd": 0.0,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 16485,
+  "pct_floating_cdi": 0.6,
+  "avg_cost": "CDI + 1,15% a.a. (holding, inclui custo implícito da Cosan Dez); perpétuos em USD com swap",
+  "avg_maturity_years": 6.2,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -60,
+  "notes": "Holding: dívida bruta expandida R$ 16,5 bi (majoritariamente CDI + prefs a CDI+spread) − caixa R$ 7,3 bi (rende ~100% CDI) + TRS Rumo R$ 3,0 bi (custo CDI) ⇒ exposição líquida ~R$ 9–12 bi ⇒ +100 bp ≈ −R$ 90–120 mi/ano pré-IR (holding sem lucro tributável relevante; ~−R$ 60–100 mi líquidos). ICSD LTM 0,2x (guidance 0,8–1,2x em dez/2026). Vencimentos de 2028 caíram para R$ 474 mi após liability management."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.245,
+  "ebitda_margin_avg_5y": 0.285,
+  "roe_avg_5y": -0.24,
+  "payout_avg_5y": null,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.03,
+   "ebitda_margin": 0.327,
+   "net_income_mn": -320,
+   "net_debt_ebitda": null
+  },
+  "notes": "Indicadores consolidados CVM (Rumo, Compass, Moove, Radar consolidadas) pouco informativos para a holding: lucro controlador −9.424 (2024) e −9.722 (2025) pelas perdas/baixa da Raízen. Holding: prejuízo de R$ 1,9 bi no 6M26 (recorrente −R$ 631 mi), dividendos recebidos LTM R$ 961 mi vs. juros líquidos pagos LTM R$ 2,19 bi. DL expandida caiu 47% a/a (R$ 17,5 bi → R$ 9,2 bi) com capitalização (dez/2025), venda da Vale e IPO secundário da Compass (R$ 2,3 bi líquidos)."
+ },
+ "guidance": "Guidance de ICSD (cobertura do serviço da dívida da holding): 0,8x–1,2x em dez/2026 (vs 0,2x no 2T26), com dividendos recebidos de R$ 1,3–1,8 bi em 2026 (inclui até R$ 586 mi da venda de terras da Radar), caixa rendendo ~100% CDI e custo médio CDI + 1,15% (release 2T26, 14/08/2026).",
+ "dividend_policy": "Mínimo estatutário de 25%, mas sem dividendos relevantes aos acionistas da Cosan S.A. no LTM do 2T26 (R$ 0); os pagamentos foram aos preferencialistas da Cosan Dez (R$ 919 mi LTM). Prioridade declarada: desalavancagem da holding e simplificação (delisting das ADS na NYSE em curso).",
+ "election_impact": "Holding alavancada amplifica o choque: DL holding + TRS R$ 12,2 bi vs NAV a mercado ~R$ 27 bi (LTV ~45%). Hoje Rumo caiu ~20% e Compass ~23% ⇒ NAV a mercado ~−24%, o que justificaria ~−40% no equity; a ação caiu ~47% e o desconto sobre o NAV a mercado foi de ~0% para ~25% — aqui há sinal de sobrerreação relativa. Canais do 4º mandato: Compass (regulação estadual do gás canalizado, preço do gás da Petrobras, Nova Lei do Gás), Rumo (Malha Sul, renovações), Raízen (etanol/RenovaBio — já sem valor para a Cosan). Mas a Ke 25% a Rumo vale bem menos que a cotação (research/RAIL3.json), e o SOTP com Rumo 'fair' fica abaixo do preço.",
+ "summary": "Holding de Rumo (30%), Compass (76%), Moove (70%) e terras (Radar), recapitalizada em 2025 (R$ 10,5 bi a R$ 5,00) e com DL de holding de R$ 12,2 bi (incl. prefs e TRS). A R$ ~2,8, negocia com ~25% de desconto sobre o NAV a mercado (era ~0% antes da eleição), mas com a Rumo ao valor justo de Ke 25% o SOTP dá ~R$ 2,2/ação: a alavancagem da holding sobre ativos de longa duração não fecha a 25%.",
+ "thesis": [
+  "Desconto sobre NAV a mercado saltou de ~0% para ~25% em um dia (ação −47% vs NAV ~−24%)",
+  "Holding desalavancando: DL expandida −47% a/a (R$ 9,2 bi), pré-pagamentos de R$ 8,8 bi no 1S26 e vencimentos de 2028 reduzidos a R$ 474 mi",
+  "Monetizações em curso: venda de 12% das terras da Radar (R$ 586 mi para a Cosan, fechamento até 30/10/2026) e TUP São Luís (R$ 300 mi)",
+  "Compass (gás, regulada) e Moove (lubrificantes) seguem gerando caixa: EBITDA 2T26 R$ 1,28 bi e R$ 475 mi"
+ ],
+ "risks": [
+  "ICSD de 0,2x: dividendos recebidos (R$ 961 mi LTM) não cobrem juros (R$ 2,19 bi LTM); dependência de vendas de ativos",
+  "Rumo a valor justo (Ke 25%) vale ~1/3 da cotação — é ~35% do NAV a mercado",
+  "Regulação do gás (Compass) e preço de gás da Petrobras sob o 4º mandato; Moove sem preço de mercado",
+  "TRS de ações da Rumo (R$ 3,0 bi) e prefs da Cosan Dez (put) são dívida efetiva; Raízen ainda pode demandar atenção/contingências"
+ ],
+ "catalysts": [
+  "Fechamento da venda de terras da Radar (até 30/10/2026) e do TUP São Luís",
+  "Resultado 3T26 (meados de nov/2026) e evolução do ICSD vs guidance 0,8–1,2x",
+  "Novas vendas de ativos (Moove, Radar) a valores próximos do NAV",
+  "Implementação do plano de recuperação extrajudicial da Raízen"
+ ],
+ "key_data": [
+  {
+   "label": "DL expandida da holding 2T26",
+   "value": "R$ 9.217 mi",
+   "context": "+ TRS Rumo R$ 3.014 mi = R$ 12.231 mi; custo CDI + 1,15%; prazo 6,2 anos"
+  },
+  {
+   "label": "Dividendos recebidos LTM",
+   "value": "R$ 961 mi",
+   "context": "juros líquidos pagos LTM R$ 2.186 mi; ICSD 0,2x"
+  },
+  {
+   "label": "Participações",
+   "value": "Rumo 30% · Compass 76,18% · Moove 70%",
+   "context": "Radar 50% / Tellus 20% / Janus 20%"
+  },
+  {
+   "label": "Terras (Radar) — parcela Cosan",
+   "value": "R$ 5,6 bi",
+   "context": "laudo 2T26 de R$ 18,1 bi (100%)"
+  },
+  {
+   "label": "Ações",
+   "value": "3.966,6 mi",
+   "context": "2.100 mi novas a R$ 5,00 em dez/2025"
+  },
+  {
+   "label": "Desconto vs NAV a mercado",
+   "value": "~25%",
+   "context": "pré-eleição ~0%"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Cosan — Release de Resultados 2T26 (14/08/2026)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/CSAN3/47986/"
+  },
+  {
+   "title": "CVM — ITR 2T26 / DFP padronizados (data/hist/CSAN3.json; ações 3.966,6 mi)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — dados de emissores (PASS3 714,19 mi ações; RAIZ 10.352,5 mi ações)",
+   "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/?language=pt-br"
+  },
+  {
+   "title": "Money Times — Cosan confirma acordo com BTG e Perfin para oferta de R$ 10 bi (out/2025)",
+   "url": "https://www.moneytimes.com.br/cosan-csan3-confirma-acordo-com-btg-e-perfin-para-viabilizar-oferta-de-r-10-bilhoes-jals/"
+  },
+  {
+   "title": "Investidor10 — Cosan reduz prejuízo para R$ 320 mi no 2T26",
+   "url": "https://investidor10.com.br/noticias/cosan-csan3-ve-prejuizo-diminuir-66-e-chegar-a-r-320-mi-no-2t26-122081/"
+  },
+  {
+   "title": "Economic News Brasil — Cosan corta dívida quase pela metade (15/08/2026)",
+   "url": "https://economicnewsbrasil.com.br/2026/08/15/divida-da-cosan-cai-47-prejuizo-320-milhoes/"
+  },
+  {
+   "title": "research/RAIL3.json (valor justo da Rumo usado no SOTP)",
+   "url": "research/RAIL3.json"
+  }
+ ],
+ "confidence": "média — dívida e participações da holding vêm do release 2T26 (conferidas); valores de Moove e Radar são estimativas (sem preço de mercado) e o resultado é dominado pelo valor justo da Rumo a Ke 25%."
+}

@@ -1,0 +1,251 @@
+{
+ "ticker": "SBSP3",
+ "name": "Sabesp — Companhia de Saneamento Básico do Estado de São Paulo",
+ "sector": "Utilities / saneamento (água e esgoto, 371 municípios URAE-1; EMAE consolidada)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "SBSP3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 22134.0
+  },
+  "notes": "Receita-base FY2025 = receita líquida de serviços de saneamento R$ 23.655 mi (release 4T25) − ativo financeiro/indenização (bifurcação, não caixa, R$ 1.676 mi) + PIS/COFINS associado (~R$ 155 mi) ≈ R$ 22.134 mi. Exclui receita de construção (ICPC 01, R$ 14.437 mi em 2025; a Sabesp não registra margem de construção). ROL CVM FY2025 = R$ 38.092 mi. EBITDA ajustado FY2025 R$ 13,2 bi = 59,6% da base. Desdobramento 1:5 aprovado na AGE de 28/04/2026: 3.506,8 mi ações em circulação. EMAE consolidada a partir de 2026 (receita de energia ~R$ 174 mi/tri) entra no crescimento."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.09,
+   0.12,
+   0.13,
+   0.11,
+   0.1
+  ],
+  "ebitda_margin": [
+   0.58,
+   0.59,
+   0.6,
+   0.6,
+   0.6
+  ],
+  "da_pct_revenue": [
+   0.12,
+   0.13,
+   0.14,
+   0.15,
+   0.155
+  ],
+  "capex_pct_revenue": [
+   0.83,
+   0.74,
+   0.62,
+   0.5,
+   0.32
+  ],
+  "nwc_pct_revenue": 0.03,
+  "cost_of_net_debt": [
+   0.131,
+   0.137,
+   0.132,
+   0.127,
+   0.122
+  ],
+  "other_financial": [
+   50,
+   50,
+   50,
+   50,
+   50
+  ],
+  "tax_rate": [
+   0.29,
+   0.29,
+   0.29,
+   0.29,
+   0.29
+  ],
+  "minority_share_ni": 0.01,
+  "payout": [
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.4
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.125,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.145,
+  "target_debt_weight": 0.35
+ },
+ "adjustments": {
+  "other_debt_like": 8459,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like (CVM 2T26) = PPPs (São Lourenço etc.) R$ 3.322 mi + obrigações previdenciárias R$ 2.402 mi + derivativos passivos R$ 2.294 mi (swaps de bonds/dívida em moeda estrangeira; a dívida bruta de R$ 51,7 bi é pré-hedge) + dividendos/JCP a pagar R$ 441 mi. Provisões (R$ 2,1 bi) não incluídas."
+ },
+ "target_multiples": {
+  "pe": 12.0,
+  "ev_ebitda": 7.5,
+  "pbv": 1.6,
+  "rationale": "Aproximação (memória de mercado, não verificada nesta sessão): Sabesp negociou ~10–15x P/L e ~6–9x EV/EBITDA em 2020–2025 (re-rating após privatização). Uso 12x / 7,5x: ativo de maior qualidade regulatória do grupo, mas lucro pressionado por juros e D&A até 2029."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.025,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.05,
+   "narrative": "Ciclo tarifário de 2028 não reconhece o capex de R$ 103 bi (2024–29) a tempo, mix de tarifa social piora e CDI >15%: alavancagem passa de 4,5x."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.05,
+   "narrative": "Arsesp reconhece capex e mix em 2028, eficiência de opex continua e curva devolve o choque."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.025,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.04
+ },
+ "debt_profile": {
+  "gross_debt_mn": 51700,
+  "pct_floating_cdi": 0.895,
+  "avg_cost": "CDI+0,05% (pós-swap, 89,5% da dívida em CDI)",
+  "avg_maturity_years": 6.1,
+  "next_24m_maturities_mn": 9900,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -205,
+  "notes": "Pós-swap 89,5% da dívida bruta (R$ 51,7 bi) está em CDI; com caixa de R$ 17,4 bi rendendo CDI, a exposição líquida é ~R$ 29 bi: +100 bp ≈ −R$ 290 mi antes de IR, ≈ −R$ 205 mi após IR (parte dos juros é capitalizada nas obras, o que suaviza o efeito contábil mas não o caixa). Com a dívida líquida subindo para ~R$ 60–90 bi até 2029 (capex ~R$ 20 bi/ano), a sensibilidade dobra: +300 bp na curva ≈ −R$ 0,6 bi/ano hoje e ~−R$ 1,5 bi/ano em 2029. Custo da DL ≈ CDI −0,8 p.p. (entre o custo-caixa CDI+0,05% e o contábil ~13%, que é menor por juros capitalizados), na trajetória central de CDI 13,9%→13,0%."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.164,
+  "ebitda_margin_avg_5y": 0.394,
+  "roe_avg_5y": 0.144,
+  "payout_avg_5y": 0.18,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.067,
+   "ebitda_margin": 0.583,
+   "net_income_mn": 1464,
+   "net_debt_ebitda": 2.5
+  },
+  "notes": "CAGR CVM 2020–25 (16,4%) inclui construção e o efeito contábil da privatização em 2024 (ativo financeiro de R$ 9,2 bi); FY2022 está zerado na base CVM (falha de dado). Receita ajustada +6,7% a/a no 2T26 (tarifa +9,9%, mix −3,1%). Premissa 9–13% a.a. supõe que o ciclo tarifário de 2028 reconheça o capex (base de ativos foi de R$ 55 bi para R$ 70 bi em 12 meses). Margem ajustada 2025 59,6%, 2T26 58,3%. ROE CVM 2021–25 médio 14,4% (2024 inflado pelo ativo financeiro da privatização; 2022 sem dado); ROE ajustado UDM ~14% (deck 2T26). Margem EBITDA CVM média (39%) é deprimida pela receita de construção; ajustada ~55–60%. Payout em caixa médio ~18%; 25% (mínimo) em 2025."
+ },
+ "guidance": "Não é guidance formal: capex esperado de ~R$ 20 bi em 2026 (CEO, release 2T26); capex 2024–29 atualizado de R$ 70 bi para ~R$ 103 bi (inflação, antecipação do 2º ciclo e novos requisitos legais — em discussão com a Arsesp); backlog contratado de R$ 40 bi até 2029; meta de universalização 99% água / 90% esgoto até 2029; CFO espera autofinanciamento a partir de 2028.",
+ "dividend_policy": "Mínimo estatutário de 25% do lucro; em 2025 distribuiu 25% (~R$ 1,3 bi, incluindo os 18% do Estado de SP) e reinvestiu 75% (R$ 8,5 bi de lucro). Com capex de ~R$ 20 bi/ano até 2029, premissa de payout 25% até 2029 e 40% em 2030.",
+ "election_impact": "Caiu ~18–20% (R$ 31,98 → R$ 25,5–26,3). Macro: dívida pós-swap 89,5% CDI e capex de ~R$ 20 bi/ano financiado com dívida — os +300 bp reduzem o lucro e elevam o custo de financiar a universalização. Político: o poder concedente é estadual (URAE-1/Arsesp; contrato até 2060) e a privatização (2024) foi feita pelo governo de SP; risco federal direto é baixo (Marco do Saneamento é lei; decretos de 2023 foram parcialmente derrubados pelo Congresso). Não verifiquei o resultado da eleição para governador de SP de 2026 nesta pesquisa — é o principal fator político a checar. A queda é majoritariamente juros/prêmio de risco; o negócio não mudou.",
+ "summary": "Melhor ativo regulatório do grupo (concessão até 2060, tarifa indexada, eficiência pós-privatização), mas é uma máquina de capex: ~R$ 20 bi/ano até 2029 a retorno regulatório real de ~8–9%, financiado em CDI. Para um Ke de 25%, crescer destrói valor e o retorno implícito ao preço atual fica perto de 13–15% — qualidade, não oportunidade.",
+ "thesis": [
+  "Contrato com a URAE-1 até 2060 com reajuste anual e reconhecimento de investimentos; base de ativos cresceu de R$ 55 bi para R$ 70 bi em 12 meses.",
+  "Eficiência: EBITDA ajustado 2025 de R$ 13,2 bi (+17%), headcount −3% a/a, arrecadação ~100%.",
+  "Liquidez robusta: caixa de R$ 17,4 bi cobre >4 anos de amortizações; 64% da dívida vence a partir de 2031."
+ ],
+ "risks": [
+  "Capex 2024–29 revisado para ~R$ 103 bi ainda depende de reconhecimento da Arsesp (ciclo 2028); risco de descasamento tarifa × investimento.",
+  "Juros: lucro ajustado −41% a/a no 2T26 com DL de R$ 34 bi (vs R$ 23 bi); DL deve mais que dobrar até 2029.",
+  "Mix de tarifas sociais (−R$ 130 mi no 2T26) e liminares; acidente de Jaguaré (R$ 68 mi não recorrente) e risco operacional/reputacional.",
+  "Risco político estadual (governo de SP pós-2026) e hídrico."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (≈ início/meados de nov/2026)",
+  "Censo de cobertura e metas do Fator-U 2026 (fim de 2026)",
+  "Reajuste tarifário de jan/2027",
+  "Ciclo tarifário de 2028 (reconhecimento do capex/mix)"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA ajustado 2T26",
+   "value": "R$ 3.503 mi (−3,2% a/a)",
+   "context": "margem 58,3%"
+  },
+  {
+   "label": "Lucro líquido ajustado 2T26",
+   "value": "R$ 1.150 mi (−41,2% a/a)",
+   "context": "LPA ajustado R$ 0,33 (pós-split)"
+  },
+  {
+   "label": "DL / DL/EBITDA jun/26",
+   "value": "R$ 34,2 bi / 2,5x",
+   "context": "dívida bruta R$ 51,7 bi, caixa R$ 17,4 bi"
+  },
+  {
+   "label": "Capex 1S26",
+   "value": "R$ 7,46 bi (+15,6%)",
+   "context": "2026e ~R$ 20 bi"
+  },
+  {
+   "label": "Capex 2024–29",
+   "value": "R$ 70 bi → ~R$ 103 bi",
+   "context": "em discussão com o regulador"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Sabesp — Release de Resultados 2T26 (12/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/9e47ee51-f833-4a23-af98-2bac9e54e0b3/de280a94-7fcb-2184-1e27-26e46650843f?origin=2"
+  },
+  {
+   "title": "Sabesp — Apresentação 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/9e47ee51-f833-4a23-af98-2bac9e54e0b3/edff443e-8f93-651c-2db5-e287540d1dc0?origin=2"
+  },
+  {
+   "title": "Sabesp — Transcrição 2T26 (13/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/9e47ee51-f833-4a23-af98-2bac9e54e0b3/a16215ac-5f2f-48f5-5a65-b2d5d9c7a26c?origin=2"
+  },
+  {
+   "title": "Sabesp — Release 4T25 e 2025",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/9e47ee51-f833-4a23-af98-2bac9e54e0b3/f10b33b7-a9e3-758f-3695-e764c45d9eb2?origin=2"
+  },
+  {
+   "title": "Sabesp — Apresentação 4T25 (capex 2024–29)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/9e47ee51-f833-4a23-af98-2bac9e54e0b3/90e7e4ee-2771-747e-b1cd-aff004ca89ba?origin=2"
+  },
+  {
+   "title": "BCB/Contexto do estudo (Selic, Focus 23/10/2026, curva DI 26/10/2026)",
+   "url": "research/_context.md"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/"
+  }
+ ],
+ "confidence": "média — dados oficiais e robustos; grande incerteza no reconhecimento tarifário do capex (premissa de receita +9–13% a.a. é o driver crítico) e no cenário político estadual (não verificado)."
+}

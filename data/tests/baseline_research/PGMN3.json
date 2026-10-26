@@ -1,0 +1,245 @@
+{
+ "ticker": "PGMN3",
+ "name": "Empreendimentos Pague Menos S.A.",
+ "sector": "Varejo farmacêutico (Nordeste)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "PGMN3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Base CVM mantida (RL FY2025 R$ 14.906 mi; DL 2T26 R$ 3.374 mi = dívida 1.581 + arrendamentos 1.906 − caixa 113), conferida com o release 2T26. ebitda_margin = EBITDA IFRS-16 CVM MENOS o AVP de compras (~1,0% da RL; R$ 153 mi LTM, que a companhia deduz no seu fluxo de caixa gerencial e lança no resultado financeiro); o mesmo valor foi retirado do custo da dívida (lucro inalterado, FCFF não superestimado). Capex = caixa (~2,3–2,6% da RL) + adições de direito de uso (~1,3%)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.091,
+   0.085,
+   0.085,
+   0.08,
+   0.075
+  ],
+  "ebitda_margin": [
+   0.087,
+   0.09,
+   0.092,
+   0.093,
+   0.094
+  ],
+  "da_pct_revenue": [
+   0.035,
+   0.035,
+   0.035,
+   0.035,
+   0.035
+  ],
+  "capex_pct_revenue": [
+   0.036,
+   0.039,
+   0.039,
+   0.039,
+   0.038
+  ],
+  "nwc_pct_revenue": 0.15,
+  "cost_of_net_debt": [
+   0.15,
+   0.15,
+   0.14,
+   0.135,
+   0.13
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.08,
+   0.12,
+   0.15,
+   0.18,
+   0.2
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.3,
+   0.3,
+   0.35,
+   0.4,
+   0.4
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.13,
+  "roe": 0.16
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.45
+ },
+ "adjustments": {
+  "other_debt_like": 335,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = recebíveis antecipados R$ 315,7 mi (a companhia soma à DL para medir alavancagem) + derivativos passivos (swap) R$ 19,5 mi. Créditos fiscais a monetizar (ICMS/PIS-COFINS) não somados por falta de cronograma confiável."
+ },
+ "target_multiples": {
+  "pe": 8.0,
+  "ev_ebitda": 4.5,
+  "pbv": 0.8,
+  "rationale": "Small cap alavancada e ilíquida (ADTV ~R$ 32 mi): 8x P/L e 4,5x EV/EBITDA IFRS-16 ex-AVP sobre 2027E. Pré-eleição (R$ 5,43) negociava ~12x P/L LTM (R$ 328 mi) e ~4,9x EV/EBITDA LTM IFRS-16; RD negocia ~15x P/L. Usamos desconto relevante pela alavancagem (1,8x pré-IFRS16) e pela Ke de 25%."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.008,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "SSS converge para o CMED (~3%) com fim do efeito GLP-1, margem volta a ~8% e CDI de 15–16% consome o lucro; nova diluição."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.006,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Farmácia Popular/gratuidade e renda no Nordeste sustentam SSS ~8%, conversões Extrafarma elevam a margem pré-IFRS16 a ~7% e Selic cai a 11% em 2028."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.006,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.004
+ },
+ "debt_profile": {
+  "gross_debt_mn": 1581,
+  "pct_floating_cdi": null,
+  "avg_cost": "não verificado (debêntures; estimado ~CDI+1,2–1,5%)",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 49,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -16,
+  "notes": "Exposição a CDI ≈ DL ex-arrendamentos R$ 1,49 bi + recebíveis antecipados R$ 0,32 bi = R$ 1,8 bi → +100 bp ≈ −R$ 18 mi antes de IR, ≈ −R$ 16 mi no lucro (alíquota baixa) ≈ −5% do lucro 2027E. Indexador e cronograma da dívida não verificados (assumido pós-fixado). Dívida de curto prazo só R$ 49 mi (97% longo prazo no 2T26)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.168,
+  "ebitda_margin_avg_5y": 0.092,
+  "roe_avg_5y": 0.066,
+  "payout_avg_5y": 0.35,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.08,
+   "ebitda_margin": 0.102,
+   "net_income_mn": 71,
+   "net_debt_ebitda": 2.25
+  },
+  "notes": "CAGR 2020–25 de 16,8% inclui a aquisição da Extrafarma (2022); orgânico recente ~+12% (SSS 18% em 2025 com GLP-1, 8% no 2T26). Projetamos 9%→7,5% (abaixo do histórico; aberturas só aceleram em 2027). Margem EBITDA IFRS-16 CVM média 2021–25 = 9,2% (com AVP); nossa série ex-AVP 8,7%→9,4% ≈ 9,7%→10,4% com AVP — melhora apoiada no recorde de 6,5% pré-IFRS16 do 2T26 e na diluição de despesas (21,3% da RB). ROE médio 6,6% (2023 ~0% na integração da Extrafarma). DL/EBITDA 2T26 CVM incl. arrendamentos 2,25x; conceito da companhia (pré-IFRS16 + recebíveis) 1,8x."
+ },
+ "guidance": "Sem guidance numérico. Release 2T26 (03/08/2026): desalavancagem é prioridade de curto prazo; 'gradual aceleração no ritmo de aberturas' ao longo de 2026 e ritmo maior a partir de 2027 (novo CD na PB). Programa de recompra de até 7 mi de ações (16/06–16/12/2026).",
+ "dividend_policy": "Mínimo estatutário 25%. Pagos em caixa (DFC): R$ 82 mi (2023), R$ 43 mi (2024), R$ 176 mi (2025); R$ 103 mi nos 12m até o 2T26 (~31% do lucro). Capital reforçado em 2026: aumento privado de R$ 144,5 mi a R$ 5,51/ação (homologado 24/02/2026) + oferta pública precificada em 10/03/2026 (ações: 660 mi → 720 mi); integralizações de R$ 488,5 mi nos 12m até o 2T26.",
+ "election_impact": "Queda de ~45% mistura beta de small cap e juros: DL+recebíveis de R$ 1,8 bi (1,8x) e arrendamentos de R$ 1,9 bi; despesa financeira (ex-AVP) ~R$ 0,5 bi/ano contra EBITDA pré-IFRS16 ~R$ 1 bi — o lucro é muito sensível ao CDI. Micro de um 4º mandato é neutro/positivo: base no Nordeste (62% das lojas), clientes C/D e de cuidado contínuo se beneficiam de Farmácia Popular (4,2% das vendas, +1 p.p. a/a), salário mínimo e isenção de IR; CMED segue fórmula (2,7% no 2T26). Valor operacional mudou pouco; o equity (a R$ 2,99, mkt cap ~R$ 2,2 bi) precifica estresse de crédito que o balanço (12 trimestres de desalavancagem, capital recém-reforçado) não mostra.",
+ "summary": "3ª maior rede de farmácias (1.695 lojas, 6,7% de share, 20,8% no Nordeste) com margem recorde (6,5% pré-IFRS16 no 2T26) e 12 trimestres de desalavancagem. A R$ 2,99 negocia ~6x P/L LTM e ~4x EV/EBITDA IFRS-16; é o nome do grupo onde o preço caiu muito mais que o valor — mas o lucro ainda é fino e sensível a juros. TIR implícita ~20% hoje (≈14% pré-eleição) — a mais próxima da meta de 25% no grupo.",
+ "thesis": [
+  "Alavancagem operacional comprovada: despesas com vendas caíram para 21,3% da RB (−0,4 p.p.) e EBITDA aj. +15,4% com receita +9,3% no 2T26.",
+  "Desalavancagem: DL+recebíveis/EBITDA de 5,6x (pico 1T23) para 1,8x; aumento de capital de 2026 reduz risco de refinanciamento (97% da dívida no longo prazo).",
+  "Valuation de estresse: mkt cap ~R$ 2,2 bi vs EBITDA pré-IFRS16 LTM ~R$ 1,0 bi e lucro aj. LTM R$ 341 mi."
+ ],
+ "risks": [
+  "Desaceleração de SSS (18% → 8% em 2 trimestres) com base forte de GLP-1 e queda de ~40% no preço da semaglutida.",
+  "Juros: cada +100 bp ≈ −5% do lucro; AVP e antecipação de recebíveis encarecem com CDI alto.",
+  "Concorrência (RD avançando no Nordeste, farmácias em supermercados — Lei 15.357/2026, Mateus abriu Mix Toureiro Farma) e execução da conversão das 136 lojas Extrafarma restantes.",
+  "Governança/diluição: dois aumentos de capital em 2026; liquidez baixa."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (data não verificada; tipicamente início de nov).",
+  "Conclusão das conversões Extrafarma e aceleração de aberturas em 2027.",
+  "Curva DI: qualquer alívio pós-choque tem efeito desproporcional no lucro."
+ ],
+ "key_data": [
+  {
+   "label": "Receita bruta 2T26",
+   "value": "R$ 4.343 mi (+9,3%)",
+   "context": "SSS +8,0%; lojas maduras +7,8%"
+  },
+  {
+   "label": "EBITDA aj. pré-IFRS16 2T26",
+   "value": "R$ 281,7 mi (6,5% da RB)",
+   "context": "IFRS-16 R$ 409 mi (9,4% da RB; 10,3% da RL)"
+  },
+  {
+   "label": "Lucro líquido aj. 2T26",
+   "value": "R$ 73,6 mi (+22,2%)",
+   "context": "LTM R$ 340,8 mi"
+  },
+  {
+   "label": "(DL + recebíveis)/EBITDA aj.",
+   "value": "1,8x",
+   "context": "−0,8x a/a; 12º trimestre de queda"
+  },
+  {
+   "label": "Lojas",
+   "value": "1.695",
+   "context": "210 de 346 Extrafarma já convertidas"
+  },
+  {
+   "label": "Preço 26/10 11h55",
+   "value": "R$ 2,99 (−45%)",
+   "context": "pré-eleição R$ 5,43; aumento de capital a R$ 5,51 em fev/26"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Pague Menos — Release 2T26 (03/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/2cf06553-5bc1-44cd-b75f-6f3cd49d155d/07b599d9-f09f-55c3-f459-f4b25268b0c5?origin=2"
+  },
+  {
+   "title": "Pague Menos — Fato Relevante homologação do aumento de capital (24/02/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/2cf06553-5bc1-44cd-b75f-6f3cd49d155d/9274ab76-246d-a85c-1ee9-758b1a482d09?origin=2"
+  },
+  {
+   "title": "Pague Menos — Fato Relevante programa de recompra (16/06/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/2cf06553-5bc1-44cd-b75f-6f3cd49d155d/951c97e0-ed2e-7379-74a4-b640d77dbce1?origin=2"
+  },
+  {
+   "title": "Pague Menos — Fato Relevante oferta pública (precificação, 10/03/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/2cf06553-5bc1-44cd-b75f-6f3cd49d155d/c8ff6bae-ac24-50f1-1d9d-6b5040b251e3?origin=2"
+  },
+  {
+   "title": "CVM — ITR/DFP padronizados (data/hist/PGMN3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média — operacionais e balanço do release 2T26/CVM; não verifiquei perfil da dívida (indexador/custo/vencimentos) nem o preço da oferta de mar/26 (PDF em imagem); lucro fino torna o valor sensível a margem e CDI."
+}

@@ -1,0 +1,605 @@
+{
+ "tirado_em": "2026-10-26T15:48",
+ "nota": "Linha de base antes da revisão independente (red team) e dos novos testes",
+ "opportunities": [
+  "BEEF3",
+  "PLPL3",
+  "TEND3",
+  "MDNE3",
+  "CEAB3",
+  "DIRR3",
+  "COGN3"
+ ],
+ "empresas": {
+  "RENT3": {
+   "fair_value": 17.503,
+   "upside": -0.4484,
+   "irr_implied": 0.1469,
+   "irr_3y": 0.3223,
+   "prob_mc": 0.0194,
+   "score": -0.041,
+   "rank": 27,
+   "price_ref": 31.73
+  },
+  "MOVI3": {
+   "fair_value": 4.1945,
+   "upside": -0.5162,
+   "irr_implied": 0.1963,
+   "irr_3y": 0.3958,
+   "prob_mc": 0.2496,
+   "score": 0.257,
+   "rank": 17,
+   "price_ref": 8.67
+  },
+  "VAMO3": {
+   "fair_value": 0.955,
+   "upside": -0.6707,
+   "irr_implied": 0.1527,
+   "irr_3y": 0.2059,
+   "prob_mc": 0.046,
+   "score": -0.06,
+   "rank": 29,
+   "price_ref": 2.9
+  },
+  "SIMH3": {
+   "fair_value": 4.349,
+   "upside": -0.367,
+   "irr_implied": null,
+   "irr_3y": null,
+   "prob_mc": null,
+   "score": 0.15,
+   "rank": 22,
+   "price_ref": 6.87
+  },
+  "ECOR3": {
+   "fair_value": 2.1462,
+   "upside": -0.6062,
+   "irr_implied": 0.1723,
+   "irr_3y": 0.1319,
+   "prob_mc": 0.0002,
+   "score": -0.078,
+   "rank": 30,
+   "price_ref": 5.45
+  },
+  "MOTV3": {
+   "fair_value": 5.3432,
+   "upside": -0.6142,
+   "irr_implied": 0.1314,
+   "irr_3y": 0.088,
+   "prob_mc": 0.0,
+   "score": -0.276,
+   "rank": 40,
+   "price_ref": 13.85
+  },
+  "RAIL3": {
+   "fair_value": 4.8882,
+   "upside": -0.6799,
+   "irr_implied": 0.1032,
+   "irr_3y": 0.0458,
+   "prob_mc": 0.0,
+   "score": -0.775,
+   "rank": 52,
+   "price_ref": 15.27
+  },
+  "CSAN3": {
+   "fair_value": 2.1572,
+   "upside": -0.2737,
+   "irr_implied": null,
+   "irr_3y": null,
+   "prob_mc": null,
+   "score": -1.235,
+   "rank": 58,
+   "price_ref": 2.97
+  },
+  "VBBR3": {
+   "fair_value": 8.4723,
+   "upside": -0.7377,
+   "irr_implied": 0.1028,
+   "irr_3y": -0.1554,
+   "prob_mc": 0.0,
+   "score": -0.586,
+   "rank": 48,
+   "price_ref": 32.3
+  },
+  "MGLU3": {
+   "fair_value": 1.3077,
+   "upside": -0.7765,
+   "irr_implied": 0.0636,
+   "irr_3y": -0.8511,
+   "prob_mc": 0.005,
+   "score": -0.753,
+   "rank": 50,
+   "price_ref": 5.85
+  },
+  "SBFG3": {
+   "fair_value": 4.5893,
+   "upside": -0.2195,
+   "irr_implied": 0.2098,
+   "irr_3y": 0.4785,
+   "prob_mc": 0.346,
+   "score": 0.566,
+   "rank": 10,
+   "price_ref": 5.88
+  },
+  "CEAB3": {
+   "fair_value": 7.1964,
+   "upside": -0.0209,
+   "irr_implied": 0.2109,
+   "irr_3y": 0.5284,
+   "prob_mc": 0.4762,
+   "score": 0.947,
+   "rank": 6,
+   "price_ref": 7.35
+  },
+  "LREN3": {
+   "fair_value": 9.0618,
+   "upside": -0.0471,
+   "irr_implied": 0.2012,
+   "irr_3y": 0.5161,
+   "prob_mc": 0.395,
+   "score": 0.78,
+   "rank": 7,
+   "price_ref": 9.51
+  },
+  "AZZA3": {
+   "fair_value": 6.8991,
+   "upside": -0.5819,
+   "irr_implied": 0.1268,
+   "irr_3y": 0.132,
+   "prob_mc": 0.095,
+   "score": -0.139,
+   "rank": 33,
+   "price_ref": 16.5
+  },
+  "VIVA3": {
+   "fair_value": 13.3123,
+   "upside": -0.3163,
+   "irr_implied": 0.1537,
+   "irr_3y": 0.3012,
+   "prob_mc": 0.0016,
+   "score": 0.161,
+   "rank": 21,
+   "price_ref": 19.47
+  },
+  "VULC3": {
+   "fair_value": 9.7049,
+   "upside": -0.223,
+   "irr_implied": 0.1743,
+   "irr_3y": 0.2882,
+   "prob_mc": 0.0422,
+   "score": 0.21,
+   "rank": 18,
+   "price_ref": 12.49
+  },
+  "ALPA4": {
+   "fair_value": 6.5267,
+   "upside": -0.4976,
+   "irr_implied": 0.1128,
+   "irr_3y": 0.0749,
+   "prob_mc": 0.0,
+   "score": -0.255,
+   "rank": 39,
+   "price_ref": 12.99
+  },
+  "NATU3": {
+   "fair_value": 2.8059,
+   "upside": -0.5043,
+   "irr_implied": 0.1264,
+   "irr_3y": 0.1836,
+   "prob_mc": 0.0646,
+   "score": -0.427,
+   "rank": 47,
+   "price_ref": 5.66
+  },
+  "ASAI3": {
+   "fair_value": 2.4825,
+   "upside": -0.7123,
+   "irr_implied": 0.1423,
+   "irr_3y": 0.1395,
+   "prob_mc": 0.0,
+   "score": -0.246,
+   "rank": 38,
+   "price_ref": 8.63
+  },
+  "GMAT3": {
+   "fair_value": 1.5232,
+   "upside": -0.5938,
+   "irr_implied": 0.1332,
+   "irr_3y": 0.1769,
+   "prob_mc": 0.0006,
+   "score": -0.091,
+   "rank": 31,
+   "price_ref": 3.75
+  },
+  "PGMN3": {
+   "fair_value": 2.3198,
+   "upside": -0.211,
+   "irr_implied": 0.2038,
+   "irr_3y": 0.5509,
+   "prob_mc": 0.2686,
+   "score": 0.485,
+   "rank": 14,
+   "price_ref": 2.94
+  },
+  "RADL3": {
+   "fair_value": 6.8404,
+   "upside": -0.5464,
+   "irr_implied": 0.1233,
+   "irr_3y": 0.2392,
+   "prob_mc": 0.0,
+   "score": -0.222,
+   "rank": 37,
+   "price_ref": 15.08
+  },
+  "HYPE3": {
+   "fair_value": 10.6338,
+   "upside": -0.4738,
+   "irr_implied": 0.1373,
+   "irr_3y": 0.2273,
+   "prob_mc": 0.0,
+   "score": -0.058,
+   "rank": 28,
+   "price_ref": 20.21
+  },
+  "CYRE3": {
+   "fair_value": 17.4087,
+   "upside": -0.1352,
+   "irr_implied": 0.2068,
+   "irr_3y": 0.2664,
+   "prob_mc": 0.178,
+   "score": 0.562,
+   "rank": 11,
+   "price_ref": 20.13
+  },
+  "EZTC3": {
+   "fair_value": 10.6928,
+   "upside": -0.1178,
+   "irr_implied": 0.1462,
+   "irr_3y": 0.2226,
+   "prob_mc": 0.067,
+   "score": 0.165,
+   "rank": 20,
+   "price_ref": 12.12
+  },
+  "MDNE3": {
+   "fair_value": 20.6388,
+   "upside": 0.0498,
+   "irr_implied": 0.2555,
+   "irr_3y": 0.4217,
+   "prob_mc": 0.5932,
+   "score": 1.027,
+   "rank": 4,
+   "price_ref": 19.66
+  },
+  "JHSF3": {
+   "fair_value": 4.8268,
+   "upside": -0.5706,
+   "irr_implied": 0.1235,
+   "irr_3y": 0.0208,
+   "prob_mc": 0.0002,
+   "score": -0.189,
+   "rank": 35,
+   "price_ref": 11.24
+  },
+  "MRVE3": {
+   "fair_value": 4.0638,
+   "upside": -0.184,
+   "irr_implied": 0.1375,
+   "irr_3y": 0.0578,
+   "prob_mc": 0.3392,
+   "score": -0.424,
+   "rank": 46,
+   "price_ref": 4.98
+  },
+  "PLPL3": {
+   "fair_value": 6.942,
+   "upside": 0.2179,
+   "irr_implied": 0.2536,
+   "irr_3y": 0.383,
+   "prob_mc": 0.7694,
+   "score": 1.227,
+   "rank": 2,
+   "price_ref": 5.7
+  },
+  "DIRR3": {
+   "fair_value": 9.076,
+   "upside": 0.0118,
+   "irr_implied": 0.2141,
+   "irr_3y": 0.3026,
+   "prob_mc": 0.5154,
+   "score": 0.649,
+   "rank": 9,
+   "price_ref": 8.97
+  },
+  "CURY3": {
+   "fair_value": 22.7424,
+   "upside": -0.1558,
+   "irr_implied": 0.1952,
+   "irr_3y": 0.2592,
+   "prob_mc": 0.1964,
+   "score": 0.553,
+   "rank": 13,
+   "price_ref": 26.94
+  },
+  "TEND3": {
+   "fair_value": 29.6473,
+   "upside": 0.3247,
+   "irr_implied": 0.2445,
+   "irr_3y": 0.4288,
+   "prob_mc": 0.8622,
+   "score": 1.033,
+   "rank": 3,
+   "price_ref": 22.38
+  },
+  "MULT3": {
+   "fair_value": 14.8356,
+   "upside": -0.4694,
+   "irr_implied": 0.136,
+   "irr_3y": 0.1773,
+   "prob_mc": 0.0,
+   "score": -0.196,
+   "rank": 36,
+   "price_ref": 27.96
+  },
+  "IGTI11": {
+   "fair_value": 13.6038,
+   "upside": -0.4655,
+   "irr_implied": 0.1274,
+   "irr_3y": 0.1944,
+   "prob_mc": 0.0,
+   "score": -0.351,
+   "rank": 44,
+   "price_ref": 25.45
+  },
+  "ALOS3": {
+   "fair_value": 14.8982,
+   "upside": -0.4455,
+   "irr_implied": 0.1343,
+   "irr_3y": 0.1228,
+   "prob_mc": 0.0,
+   "score": -0.104,
+   "rank": 32,
+   "price_ref": 26.87
+  },
+  "SMFT3": {
+   "fair_value": 6.6493,
+   "upside": -0.5955,
+   "irr_implied": 0.1358,
+   "irr_3y": 0.241,
+   "prob_mc": 0.0042,
+   "score": -0.29,
+   "rank": 42,
+   "price_ref": 16.44
+  },
+  "CVCB3": {
+   "fair_value": 0.127,
+   "upside": -0.8813,
+   "irr_implied": 0.047,
+   "irr_3y": null,
+   "prob_mc": 0.0186,
+   "score": -1.444,
+   "rank": 59,
+   "price_ref": 1.07
+  },
+  "YDUQ3": {
+   "fair_value": 7.0973,
+   "upside": -0.1631,
+   "irr_implied": 0.2002,
+   "irr_3y": 0.2777,
+   "prob_mc": 0.3394,
+   "score": 0.404,
+   "rank": 16,
+   "price_ref": 8.48
+  },
+  "COGN3": {
+   "fair_value": 1.9723,
+   "upside": -0.0188,
+   "irr_implied": 0.2176,
+   "irr_3y": 0.4154,
+   "prob_mc": 0.4708,
+   "score": 0.554,
+   "rank": 12,
+   "price_ref": 2.01
+  },
+  "ANIM3": {
+   "fair_value": 2.5352,
+   "upside": -0.0748,
+   "irr_implied": 0.2138,
+   "irr_3y": 0.3269,
+   "prob_mc": 0.453,
+   "score": 0.484,
+   "rank": 15,
+   "price_ref": 2.74
+  },
+  "HAPV3": {
+   "fair_value": 4.8197,
+   "upside": -0.0361,
+   "irr_implied": 0.2658,
+   "irr_3y": 0.7543,
+   "prob_mc": 0.487,
+   "score": 1.009,
+   "rank": 5,
+   "price_ref": 5
+  },
+  "RDOR3": {
+   "fair_value": 13.658,
+   "upside": -0.6093,
+   "irr_implied": 0.1202,
+   "irr_3y": 0.0324,
+   "prob_mc": 0.0,
+   "score": -0.188,
+   "rank": 34,
+   "price_ref": 34.96
+  },
+  "B3SA3": {
+   "fair_value": 7.6471,
+   "upside": -0.4936,
+   "irr_implied": 0.1142,
+   "irr_3y": 0.0774,
+   "prob_mc": 0.0,
+   "score": -0.006,
+   "rank": 26,
+   "price_ref": 15.1
+  },
+  "BPAC11": {
+   "fair_value": 33.4353,
+   "upside": -0.3956,
+   "irr_implied": 0.1327,
+   "irr_3y": 0.1238,
+   "prob_mc": 0.0,
+   "score": -0.286,
+   "rank": 41,
+   "price_ref": 55.32
+  },
+  "BBAS3": {
+   "fair_value": 16.6916,
+   "upside": -0.05,
+   "irr_implied": 0.2058,
+   "irr_3y": 0.3195,
+   "prob_mc": 0.385,
+   "score": 0.693,
+   "rank": 8,
+   "price_ref": 17.57
+  },
+  "BBDC4": {
+   "fair_value": 13.3147,
+   "upside": -0.1393,
+   "irr_implied": 0.1786,
+   "irr_3y": 0.2624,
+   "prob_mc": 0.066,
+   "score": 0.141,
+   "rank": 23,
+   "price_ref": 15.47
+  },
+  "BRSR6": {
+   "fair_value": 11.4871,
+   "upside": -0.217,
+   "irr_implied": 0.179,
+   "irr_3y": 0.1891,
+   "prob_mc": 0.0762,
+   "score": 0.001,
+   "rank": 25,
+   "price_ref": 14.67
+  },
+  "AURE3": {
+   "fair_value": 1.5556,
+   "upside": -0.8488,
+   "irr_implied": 0.0686,
+   "irr_3y": null,
+   "prob_mc": 0.0,
+   "score": -1.063,
+   "rank": 57,
+   "price_ref": 10.29
+  },
+  "ENGI11": {
+   "fair_value": 11.2362,
+   "upside": -0.7616,
+   "irr_implied": 0.0862,
+   "irr_3y": -0.1487,
+   "prob_mc": 0.0,
+   "score": -0.694,
+   "rank": 49,
+   "price_ref": 47.14
+  },
+  "EQTL3": {
+   "fair_value": 5.6162,
+   "upside": -0.8435,
+   "irr_implied": 0.0779,
+   "irr_3y": -0.2686,
+   "prob_mc": 0.0,
+   "score": -0.823,
+   "rank": 54,
+   "price_ref": 35.89
+  },
+  "CPLE3": {
+   "fair_value": 2.7932,
+   "upside": -0.816,
+   "irr_implied": 0.0831,
+   "irr_3y": -0.1782,
+   "prob_mc": 0.0,
+   "score": -0.775,
+   "rank": 53,
+   "price_ref": 15.18
+  },
+  "ALUP11": {
+   "fair_value": 9.2403,
+   "upside": -0.7049,
+   "irr_implied": 0.1077,
+   "irr_3y": 0.1329,
+   "prob_mc": 0.0,
+   "score": -0.386,
+   "rank": 45,
+   "price_ref": 31.31
+  },
+  "SBSP3": {
+   "fair_value": 5.3599,
+   "upside": -0.7923,
+   "irr_implied": 0.082,
+   "irr_3y": -0.1613,
+   "prob_mc": 0.0,
+   "score": -0.767,
+   "rank": 51,
+   "price_ref": 25.8
+  },
+  "TOTS3": {
+   "fair_value": 17.118,
+   "upside": -0.5405,
+   "irr_implied": 0.1132,
+   "irr_3y": 0.1739,
+   "prob_mc": 0.0,
+   "score": -0.317,
+   "rank": 43,
+   "price_ref": 37.25
+  },
+  "INTB3": {
+   "fair_value": 8.2325,
+   "upside": -0.4373,
+   "irr_implied": 0.1285,
+   "irr_3y": 0.1971,
+   "prob_mc": 0.0,
+   "score": 0.173,
+   "rank": 19,
+   "price_ref": 14.63
+  },
+  "GGPS3": {
+   "fair_value": 7.4669,
+   "upside": -0.3793,
+   "irr_implied": 0.1454,
+   "irr_3y": 0.3044,
+   "prob_mc": 0.0032,
+   "score": 0.026,
+   "rank": 24,
+   "price_ref": 12.03
+  },
+  "ORVR3": {
+   "fair_value": 5.4675,
+   "upside": -0.6491,
+   "irr_implied": 0.0958,
+   "irr_3y": 0.1389,
+   "prob_mc": 0.0,
+   "score": -0.829,
+   "rank": 55,
+   "price_ref": 15.58
+  },
+  "BEEF3": {
+   "fair_value": 5.5734,
+   "upside": 0.6489,
+   "irr_implied": 0.2632,
+   "irr_3y": 0.5793,
+   "prob_mc": 0.7494,
+   "score": 1.924,
+   "rank": 1,
+   "price_ref": 3.38
+  },
+  "TTEN3": {
+   "fair_value": 3.4608,
+   "upside": -0.6962,
+   "irr_implied": 0.1217,
+   "irr_3y": 0.0592,
+   "prob_mc": 0.0042,
+   "score": -0.961,
+   "rank": 56,
+   "price_ref": 11.39
+  }
+ }
+}

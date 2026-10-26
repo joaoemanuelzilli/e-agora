@@ -1,0 +1,247 @@
+{
+ "ticker": "EQTL3",
+ "name": "Equatorial S.A.",
+ "sector": "Utilities / holding multi-utilities: 7 distribuidoras, renováveis (Echoenergia), saneamento (CSA; 15% Sabesp; 30% Copasa)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "EQTL3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 40679.0
+  },
+  "notes": "Receita-base FY2025 = ROL CVM R$ 52.074 mi − receita de construção (DVA 7.01.02.01: R$ 10.706 mi; margem ~zero) − VNR/atualização do ativo financeiro (R$ 689 mi, não caixa) = R$ 40.679 mi. O segmento de transmissão foi vendido em 2025 (operação descontinuada), já fora da base. Margem EBITDA projetada exclui a equivalência patrimonial de Sabesp/Copasa (que entra só pelos dividendos em other_financial) — EBITDA ajustado FY2025 de R$ 12.190 mi incluía R$ 1.235 mi de equivalência da Sabesp; ex-Sabesp ≈ R$ 10,95 bi (26,9% da base)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.07,
+   0.07,
+   0.07,
+   0.065,
+   0.06
+  ],
+  "ebitda_margin": [
+   0.265,
+   0.272,
+   0.278,
+   0.282,
+   0.285
+  ],
+  "da_pct_revenue": [
+   0.088,
+   0.09,
+   0.092,
+   0.093,
+   0.094
+  ],
+  "capex_pct_revenue": [
+   0.2,
+   0.195,
+   0.19,
+   0.18,
+   0.17
+  ],
+  "nwc_pct_revenue": 0.05,
+  "cost_of_net_debt": [
+   0.13,
+   0.134,
+   0.129,
+   0.125,
+   0.122
+  ],
+  "other_financial": [
+   800,
+   850,
+   900,
+   950,
+   1000
+  ],
+  "tax_rate": [
+   0.2,
+   0.21,
+   0.22,
+   0.23,
+   0.24
+  ],
+  "minority_share_ni": 0.15,
+  "payout": [
+   0.3,
+   0.35,
+   0.4,
+   0.45,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.13,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.45
+ },
+ "adjustments": {
+  "other_debt_like": 3128,
+  "non_operating_assets": 12600,
+  "minority_value": 4000,
+  "notes": "other_debt_like (CVM 2T26) = derivativos passivos R$ 1.672 mi (swaps de dívida em moeda estrangeira) + benefício pós-emprego R$ 1.217 mi + dividendos/JCP a pagar R$ 239 mi. non_operating_assets = 15% da Sabesp (528,7 mi de ações × R$ 26,25 = R$ 13,9 bi) com desconto de 30% (lock-up, iliquidez e coerência com Ke 25%) ≈ R$ 9,7 bi + 30% da Copasa (custo R$ 5,6 bi no 2T26, marcado −25% pela queda do setor e −30% de desconto) ≈ R$ 2,9 bi. Como os ativos entram aqui, o lucro projetado (other_financial) capta os dividendos dessas participações (~R$ 0,4 bi/ano) + metade da equivalência retida (~R$ 0,35 bi/ano), e não a equivalência contábil inteira (~R$ 1,1–1,3 bi/ano), para não tratar lucro não distribuído como caixa na dívida líquida. Custo da DL calibrado no resultado financeiro ajustado do 2T26 (−R$ 1.749 mi/tri, já com acréscimos moratórios) sobre a DL média (~13,9% a CDI 14,6%/IPCA 5,8% anualizado), movido pela trajetória central de CDI (13,9%→13,0%) e IPCA (4,6%→3,75%). minority_value R$ 4,0 bi (> contábil R$ 2,6 bi): minoritários concentrados em Equatorial Maranhão e PNs da Equatorial Distribuição corrigidas por CDI."
+ },
+ "target_multiples": {
+  "pe": 11.0,
+  "ev_ebitda": 6.5,
+  "pbv": 1.2,
+  "rationale": "Aproximação (memória de mercado, não verificada nesta sessão): EQTL3 negociou ~12–16x P/L e ~7–8x EV/EBITDA em 2021–2025. Uso 11x / 6,5x pelo juro real mais alto e porque meu LPA exclui a equivalência não distribuída de Sabesp/Copasa."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.015,
+   "ebitda_margin_shift": -0.01,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "CDI >15% até 2029, renovação de Pará (2028) e Maranhão (2030) com condicionantes onerosas e Copasa/Sabesp diluindo retorno; ROE <5%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.01,
+   "narrative": "Curva devolve o choque, turnaround de CEEE-D/CEA/Goiás amplia margem e saneamento (Sabesp/Copasa) é reprecificado."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.012,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 63700,
+  "pct_floating_cdi": 0.55,
+  "avg_cost": "CDI+0,57% (15,44% a.a. LTM) na parcela CDI; IPCA+5,41% (10,39%) na parcela IPCA",
+  "avg_maturity_years": 5.6,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -200,
+  "notes": "Estimativa: a companhia não abre o % exato em CDI no release; assumo ~55% da dívida bruta de R$ 63,7 bi em CDI (≈ R$ 35 bi) menos caixa de R$ 10 bi → exposição líquida ~R$ 25 bi: +100 bp ≈ −R$ 250 mi antes de IR, ≈ −R$ 200 mi depois de IR. Os +300 bp custariam ~R$ 0,6 bi/ano, contra lucro ajustado de R$ 110 mi no 2T26 (e R$ 2,6 bi em 2025, com transmissão e Sabesp). A parcela IPCA (+5,41% real) sobe com a inflação pós-câmbio, compensada parcialmente pelos reajustes tarifários."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.238,
+  "ebitda_margin_avg_5y": 0.237,
+  "roe_avg_5y": 0.141,
+  "payout_avg_5y": 0.5,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.102,
+   "ebitda_margin": 0.213,
+   "net_income_mn": 485,
+   "net_debt_ebitda": 3.1
+  },
+  "notes": "CAGR CVM de 23,8% (2020–25) é quase todo M&A (CEEE-D, CEA, Echoenergia, Equatorial Goiás) e receita de construção; orgânico ~7–9%. Premissa 6–7% a.a. com margem subindo de 26,5% para 28,5% (turnaround de perdas). ROE CVM caiu de ~29% (2021) para 6,5% (2025) e 3,7% LTM com o peso dos juros; projeção ~3–6% sem a equivalência não distribuída. Payout 2025 foi 185% do lucro distribuível (JCP de R$ 1,99 bi financiado pela venda da transmissão) — não recorrente; premissa 30%→50%."
+ },
+ "guidance": "Sem guidance numérico. Investimentos de R$ 11,0 bi em 2025 e R$ 2,6 bi no 2T26; captações de R$ 19,5 bi em 2025 e R$ 7,6 bi no 2T26 (R$ 5,1 bi para a compra de 30% da Copasa por R$ 5,6 bi). Benefício SUDAM do Pará aprovado até 2034.",
+ "dividend_policy": "Mínimo estatutário de 25% do lucro ajustado, majoritariamente via JCP. 2025: JCP de R$ 1,987 bi (R$ 1,58/ação), payout de 185% do lucro distribuível, financiado pela venda da Equatorial Transmissão (R$ 6,4 bi de equity + redução de capital). Com DL de R$ 51,8 bi e Copasa recém-comprada com dívida, premissa de payout 30% em 2026 subindo a 50% em 2030.",
+ "election_impact": "Caiu ~30% (R$ 48,88 → ~R$ 34). Macro: dívida bruta de R$ 63,7 bi, parte relevante em CDI+0,57% — o resultado financeiro ajustado já subiu 31% a/a no 2T26 e levou o lucro ajustado a R$ 110 mi; +300 bp custam ~R$ 0,6 bi/ano. Político/micro: holding mais exposta a governo — concessões do Pará (vence 2028) e Maranhão (2030) dependem de renovação pelo MME/Aneel sob o Decreto 12.068/2024 (status não verificado nesta pesquisa), e 45% do valor de mercado pré-eleição estava em saneamento (Sabesp/Copasa), onde o risco é estadual. Parte da queda é justificada: o lucro já estava em colapso antes do choque.",
+ "summary": "Melhor operadora de turnaround do setor, mas virou uma holding alavancada (DL covenant R$ 51,8 bi, 3,6x ex-ganho de transmissão) que comprou Copasa com dívida a CDI. Lucro ajustado de R$ 110 mi no 2T26 mostra o efeito juros; a 25% de Ke, o equity não remunera — armadilha de juros, com opção em renovação e saneamento.",
+ "thesis": [
+  "Execução comprovada em perdas: perdas totais 17,9% vs 18,9% regulatório no 2T26; mercado fio-B +4,2%.",
+  "Ativos de saneamento (15% Sabesp ≈ R$ 13,9 bi a mercado; 30% Copasa por R$ 5,6 bi) dão opcionalidade de longo prazo.",
+  "Benefício SUDAM/SUDENE mantém alíquota efetiva baixa (Pará até 2034)."
+ ],
+ "risks": [
+  "Juros: resultado financeiro ajustado −R$ 1.749 mi no 2T26 (+31,4%), dívida bruta +26% a/a; lucro ajustado −83,5%.",
+  "Renovação das concessões do Pará (2028) e Maranhão (2030) num 4º mandato — condicionantes de investimento/qualidade e modicidade tarifária.",
+  "Alocação de capital: Copasa comprada a R$ 5,6 bi com dívida CDI rende menos que o custo da dívida no curto prazo; impairment de R$ 3,5 bi na Echoenergia em 2025.",
+  "Curtailment e preços baixos em renováveis (Echoenergia com margem bruta −R$ 69 mi a/a no 2T26)."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (≈ início/meados de nov/2026)",
+  "Decisão do MME/Aneel sobre renovação da concessão do Pará (vencimento 2028)",
+  "Copom dez/2026",
+  "Revisões tarifárias 2027–2028"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA ajustado 2T26",
+   "value": "R$ 2.925 mi (+0,8% a/a)",
+   "context": "inclui equivalência Sabesp R$ 230 mi"
+  },
+  {
+   "label": "Lucro líquido ajustado 2T26",
+   "value": "R$ 110 mi (−83,5% a/a)",
+   "context": "reportado R$ 653 mi (ganho Acordo Gaúcho R$ 355 mi)"
+  },
+  {
+   "label": "DL covenant jun/26",
+   "value": "R$ 51,8 bi; 3,1x (3,6x ex-ganho transmissão)",
+   "context": "dívida bruta R$ 63,7 bi"
+  },
+  {
+   "label": "Custo da dívida LTM",
+   "value": "CDI+0,57% / IPCA+5,41%",
+   "context": "prazo médio 5,6 anos"
+  },
+  {
+   "label": "Participações",
+   "value": "15% Sabesp + 30% Copasa",
+   "context": "Copasa comprada por R$ 5,6 bi no 2T26"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Equatorial — Release 2T26 (12/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/62b21cba-838c-49a4-aaef-e0fb2350c169/b1f651f0-9cd8-d2e0-87f0-498cd4b24f8b?origin=2"
+  },
+  {
+   "title": "Equatorial — Earnings Release 4T25 (25/03/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/62b21cba-838c-49a4-aaef-e0fb2350c169/7b6da62b-ee20-01c8-82c6-f0d67e1783b0?origin=2"
+  },
+  {
+   "title": "Central de resultados Equatorial (RI)",
+   "url": "https://ri.equatorialenergia.com.br/informacoes-financeiras/central-de-resultados/"
+  },
+  {
+   "title": "Cenário Energia — lucro ajustado −83,5% no 2T26 (13/08/2026)",
+   "url": "https://cenarioenergia.com.br/2026/08/13/equatorial-tem-queda-de-835-no-lucro-ajustado-no-2o-trimestre-para-r-110-milhoes/"
+  },
+  {
+   "title": "BCB/Contexto do estudo (Selic, Focus 23/10/2026, curva DI 26/10/2026)",
+   "url": "research/_context.md"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/"
+  }
+ ],
+ "confidence": "média-baixa — dados do 2T26 oficiais, mas: % da dívida em CDI estimado; status da renovação Pará/Maranhão não verificado; valor das participações em Sabesp/Copasa depende de premissa de desconto."
+}

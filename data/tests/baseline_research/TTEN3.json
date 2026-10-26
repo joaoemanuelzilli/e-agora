@@ -1,0 +1,250 @@
+{
+  "ticker": "TTEN3",
+  "name": "Três Tentos Agroindustrial S.A. (3tentos)",
+  "sector": "Agronegócio – varejo de insumos, originação de grãos e indústria (esmagamento de soja, biodiesel, etanol de milho)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "TTEN3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "net_debt": 2700.0
+    },
+    "notes": "(1) Dívida líquida normalizada em R$ 2.700 mi (vs. R$ 3.749 mi CVM em 30/06/2026, pico sazonal: estoques de soja +R$ 1.348 mi no 1S26 para as indústrias; dez/25 era R$ 1.951 mi CVM). Média dos 4 últimos trimestres = R$ 2.463 mi; uso R$ 2.700 mi incorporando o capex do ciclo (etanol POAN/MT). O motor não captura a desmobilização sazonal do capital de giro no 2S. (2) Margem EBITDA projetada no conceito 'EBITDA ajustado c/ hedge' da companhia (exclui AVJ de estoques/contratos e inclui derivativos liquidados, que na CVM caem no resultado financeiro): 2025 = 6,2% vs. 4,0% no EBIT+D&A da CVM. Por consistência, o resultado financeiro projetado exclui hedge e inclui só juros (+ AVP líquido em other_financial)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.18,
+      0.12,
+      0.08,
+      0.07,
+      0.065
+    ],
+    "ebitda_margin": [
+      0.056,
+      0.065,
+      0.066,
+      0.067,
+      0.067
+    ],
+    "da_pct_revenue": [
+      0.01,
+      0.012,
+      0.012,
+      0.012,
+      0.012
+    ],
+    "capex_pct_revenue": [
+      0.052,
+      0.045,
+      0.035,
+      0.025,
+      0.022
+    ],
+    "nwc_pct_revenue": 0.15,
+    "cost_of_net_debt": [
+      0.14,
+      0.145,
+      0.14,
+      0.13,
+      0.125
+    ],
+    "other_financial": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "tax_rate": [
+      0.18,
+      0.19,
+      0.2,
+      0.21,
+      0.22
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.13,
+    "roe": 0.15
+  },
+  "wacc": {
+    "kd_pre_tax": 0.145,
+    "target_debt_weight": 0.3
+  },
+  "adjustments": {
+    "other_debt_like": 0.0,
+    "non_operating_assets": 0.0,
+    "minority_value": null,
+    "notes": "Derivativos (ativo líquido R$ 123 mi) não contados — protegem estoques/compromissos. TentosCap (carteira de crédito R$ 424,5 mi) permanece dentro da dívida líquida consolidada (financiada por dívida); covenant de alavancagem com waiver prévio para 2T26–4T26."
+  },
+  "target_multiples": {
+    "pe": 8.0,
+    "ev_ebitda": 6.0,
+    "pbv": 1.0,
+    "rationale": "3tentos negociou ~9–12x P/L e ~8–10x EV/EBITDA ajustado em 2022–26 (prêmio de crescimento); pares de agronegócio listados (SLC, Vittia, Boa Safra) 5–8x EV/EBITDA. Uso 8x P/L e 6x EV/EBITDA pelo ciclo de margem de esmagamento pressionado e juros altos."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.04,
+      "ebitda_margin_shift": -0.012,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Quebra de safra no RS, margem de esmagamento/biodiesel deprimida e inadimplência de produtores (crise de crédito agro)."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.008,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Etanol de milho com margem >25%, mistura de biodiesel avançando (B16→B20) e grãos em R$ altos pelo câmbio."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.05,
+    "ebitda_margin_sd": 0.01,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.006
+  },
+  "debt_profile": {
+    "gross_debt_mn": 5121,
+    "pct_floating_cdi": 0.7,
+    "avg_cost": "Crédito rural/capital de giro, CRA e linhas bancárias — custo médio não divulgado no release (estimado ~CDI)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": 2163,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -24,
+    "notes": "Dívida líquida média ~R$ 2,5–3,5 bi majoritariamente pós-fixada (estimativa ~70%): +100 bp ≈ −R$ 25–35 mi pré-IR (−R$ 20–28 mi no lucro). Juros altos também encarecem o crédito ao produtor (Plano Safra/equalização) e elevam o risco de inadimplência no varejo de insumos."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.395,
+    "ebitda_margin_avg_5y": 0.071,
+    "roe_avg_5y": 0.219,
+    "payout_avg_5y": 0.07,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.319,
+      "ebitda_margin": 0.017,
+      "net_income_mn": 207.4,
+      "net_debt_ebitda": 3.05
+    },
+    "notes": "CAGR 5a de 39,5% reflete expansão para MT (desde 2021) e novas indústrias; projeto desaceleração 18%→6,5%. Margem EBITDA CVM média 5a 7,1% (volátil por AVJ/hedge); ajustada c/ hedge 7,8% (2024), 6,2% (2025), 5,3% (6M26), LTM 5,85% (R$ 1.069 mi). Projeto 5,6%→6,7% com a planta de etanol (capacidade nominal de 2.800 t/dia de milho desde ago/26). 2T26: EBITDA aj. c/ hedge só R$ 78,7 mi (1,7%) — compressão na indústria (biodiesel B16, farelo −12%, custos da guerra). ND/EBITDA aj. 3,05x (ex-TentosCap) com waiver de covenant. ROE 5a médio 22% (2025 18,7%). Payout historicamente 6–12% (reserva de incentivos fiscais)."
+  },
+  "guidance": "Sem guidance numérico. Plano de expansão (3tentos Day, dez/2025): 2ª indústria de etanol em Redenção (PA), lojas em PA, TO, GO e MG (81 lojas no 2T26, 8 abertas em 2026). Capex 2025 recorde de R$ 1,7 bi.",
+  "dividend_policy": "Mínimo estatutário de 25% do lucro ajustado após reservas (reserva de incentivos fiscais de ICMS reduz a base). Histórico: R$ 58 mi (2024), R$ 95 mi (2025), R$ 91 mi pagos no 1S26 — payout de caixa 6–12% do lucro. Projeto 15%→35%.",
+  "election_impact": "Queda de −20% é a menor do grupo e majoritariamente beta/juros. Câmbio: dólar alto eleva preços de soja/milho em R$ (receita de grãos e renda do produtor no RS/MT) e o custo de fertilizantes importados — líquido levemente positivo para o varejo de insumos via poder de compra do produtor, e positivo para farelo/óleo exportável. Juros: negativo — dívida majoritariamente pós-fixada, capital de giro intensivo e crédito ao produtor mais caro; com CDI alto a equalização do Plano Safra fica mais cara para o Tesouro (risco de menos crédito subsidiado). Política: 4º mandato tende a manter a trajetória de mistura de biodiesel (Lei do Combustível do Futuro: B15→B20) e apoio ao etanol de milho — positivo para a indústria; risco de intervenção em preço de combustíveis (PIS/COFINS suspensos na 'guerra' afetaram a margem no 2T26) e de tributação de LCA/agro. Fundamental muda pouco; o risco real é margem industrial e crédito rural.",
+  "summary": "Ecossistema agro integrado (81 lojas RS/MT/GO/PA/TO/MG, originação de grãos, esmagamento, biodiesel e agora etanol de milho), com 30 trimestres seguidos de crescimento de receita. Margem industrial está no fundo do ciclo e a alavancagem subiu (3,05x com waiver), mas a planta de etanol pode adicionar ~R$ 300 mi de EBITDA/ano. A R$ 11 (~9x P/L 2027E) não há margem de segurança para Ke de 25%.",
+  "thesis": [
+    "Crescimento consistente: receita 2025 de R$ 16,4 bi (+28%) e 1S26 +26% com ganho de share das lojas novas e safra recorde.",
+    "Etanol de milho (POAN/MT) já na capacidade nominal de 2.800 t/dia — margem estruturalmente superior ao esmagamento.",
+    "Diversificação geográfica (MT 43% dos insumos e 52% da indústria) reduz o risco climático do RS.",
+    "Mandatos de biodiesel/etanol (Combustível do Futuro) sustentam a demanda industrial no longo prazo."
+  ],
+  "risks": [
+    "Margem de esmagamento/biodiesel comprimida (2T26: margem bruta ajustada da indústria 12,2% vs 21,7%).",
+    "Alavancagem 3,05x ND/EBITDA ajustado com waiver de covenant até o 4T26; capital de giro sazonal pesado.",
+    "Crise de crédito no agro (RJs de produtores e revendas) e Selic alta: inadimplência no varejo de insumos.",
+    "Clima no RS (quebras em 2022, 2023, 2024 e 2025) e preços de commodities.",
+    "Free float baixo (22,6%) e liquidez menor."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (meados de nov/2026; 3T25 saiu em 13/11) — primeiro trimestre cheio do etanol",
+    "Decisões do CNPE sobre mistura de biodiesel (B16→B17+) e etanol",
+    "Safra 26/27 (plantio de soja out–dez) e preços de grãos em R$"
+  ],
+  "key_data": [
+    {
+      "label": "Receita líquida 2T26",
+      "value": "R$ 4.700,4 mi",
+      "context": "+31,9% a/a (30º trimestre de crescimento)"
+    },
+    {
+      "label": "EBITDA aj. c/ hedge 2T26",
+      "value": "R$ 78,7 mi (1,7%)",
+      "context": "6M26 R$ 472,9 mi (5,3%); LTM R$ 1.069 mi"
+    },
+    {
+      "label": "Lucro líquido 2T26",
+      "value": "R$ 205,9 mi",
+      "context": "ajustado (ex-AVJ) R$ 14,4 mi"
+    },
+    {
+      "label": "Dívida líquida 2T26",
+      "value": "R$ 3.576 mi",
+      "context": "3,05x EBITDA aj. ex-TentosCap; waiver de covenant 2T26–4T26"
+    },
+    {
+      "label": "Etanol de milho (POAN/MT)",
+      "value": "2.800 t/dia",
+      "context": "capacidade nominal atingida em ago/26"
+    },
+    {
+      "label": "Ações",
+      "value": "500,4 mi",
+      "context": "free float 22,6%"
+    },
+    {
+      "label": "Preço 26/10 ~12h",
+      "value": "R$ 11,32",
+      "context": "−19,9% no dia; sexta R$ 14,14"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Release de Resultados 2T26 3tentos (RI)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/050fef26-7d75-4607-8a2b-bd8cd509d0c7/d4b27ac0-b355-9310-603c-1efb1a0c3307?origin=2"
+    },
+    {
+      "title": "Release de Resultados 4T25 3tentos (RI)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/050fef26-7d75-4607-8a2b-bd8cd509d0c7/4ee6b235-6f1c-f92f-0cc3-66ef9a599b2e?origin=2"
+    },
+    {
+      "title": "Central de Resultados 3tentos",
+      "url": "https://ri.3tentos.com.br/informacoes-finaceiras/central-de-resultados/"
+    },
+    {
+      "title": "Dados CVM padronizados (data/hist/TTEN3.json)",
+      "url": "https://dados.cvm.gov.br/"
+    }
+  ],
+  "confidence": "média-baixa — release oficial lido, mas a margem econômica depende de reclassificações (AVJ/hedge/AVP) e a dívida líquida foi normalizada por julgamento; custo e perfil da dívida não detalhados no release; consenso não consultado (busca web esgotada)."
+}

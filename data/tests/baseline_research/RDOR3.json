@@ -1,0 +1,240 @@
+{
+ "ticker": "RDOR3",
+ "name": "Rede D'Or São Luiz S.A.",
+ "sector": "Saúde / hospitais + seguros (SulAmérica)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "RDOR3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 29960
+  },
+  "notes": "DRE CVM em IFRS 17 desde 2023 (receita consolidada inclui receita de seguros da SulAmérica; resultado financeiro inclui receitas/despesas financeiras de seguros) — formato consistente 2023–2026, então receita base = CVM FY2025 (R$ 55.726 mi) e margens no conceito CVM (EBIT 3.05 + D&A DVA: 21,0% em 2025, 22,3% LTM, 22,6% no 6M26), que fica próximo do EBITDA gerencial ajustado da cia. (que soma o resultado financeiro dos ativos vinculados da seguradora; LTM ~R$ 13,3 bi vs CVM R$ 12,9 bi). DL: a DL CVM do pipeline (R$ 7.020 mi incl. arrendamentos) desconta todo o caixa de R$ 47,9 bi, mas ~R$ 19,7 bi são lastro de provisões técnicas (seguros R$ 9,5 bi; previdência R$ 10,2 bi). Base adotada = DL da companhia líquida de provisões técnicas R$ 22.797 mi + arrendamentos R$ 3.946 mi + contas a pagar por aquisições R$ 720 mi + dividendos/JCP declarados a pagar R$ 2.497 mi (passivo com acionistas de registro; não acompanha a ação comprada hoje) = R$ 29.960 mi. Capex inclui ~0,7% da ROL de adições de direito de uso."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.075,
+   0.08,
+   0.08,
+   0.075,
+   0.07
+  ],
+  "ebitda_margin": [
+   0.224,
+   0.227,
+   0.23,
+   0.232,
+   0.233
+  ],
+  "da_pct_revenue": [
+   0.033,
+   0.034,
+   0.035,
+   0.035,
+   0.035
+  ],
+  "capex_pct_revenue": [
+   0.066,
+   0.066,
+   0.064,
+   0.06,
+   0.057
+  ],
+  "nwc_pct_revenue": 0.12,
+  "cost_of_net_debt": [
+   0.16,
+   0.165,
+   0.165,
+   0.16,
+   0.155
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.23,
+   0.23,
+   0.23,
+   0.23,
+   0.23
+  ],
+  "minority_share_ni": 0.05,
+  "payout": [
+   0.6,
+   0.5,
+   0.5,
+   0.5,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.055,
+  "roic": 0.18,
+  "roe": 0.22
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.25
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Itens debt-like já na DL base. Minoritários a valor contábil (R$ 2.205 mi; 4–5% do lucro). Investimentos por equivalência (R$ 2.464 mi) não somados: o resultado de equivalência já está no EBIT."
+ },
+ "target_multiples": {
+  "pe": 10.0,
+  "ev_ebitda": 6.5,
+  "pbv": 2.0,
+  "rationale": "P/L 10x e EV/EBITDA 6,5x: forte desconto ao histórico da RDOR3 desde o IPO (aprox. 12–16x EV/EBITDA e 20–30x P/L em 2021–25; pré-eleição ~10x EV/EBITDA LTM e ~20x P/L LTM pelos nossos números) por coerência com Ke 25% (P/L de Gordon com ROE 22% e g 5,5% ≈ 4x); prêmio vs pares pela qualidade (ROIC 32% contábil/20% ajustado, líder em hospitais e oncologia)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.025,
+   "ebitda_margin_shift": -0.015,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Sinistralidade da SulAmérica volta a ~81–82%, operadoras apertam glosas/prazos (PMR já 110 dias) e leitos novos maturam devagar com CDI de 15%+ até 2028."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.015,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "2.690 leitos novos (2026–28) maturam no prazo, oncologia segue +20% e o SUS ('Agora Tem Especialistas') compra capacidade privada; margem consolidada passa de 24%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.01,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.004
+ },
+ "debt_profile": {
+  "gross_debt_mn": 50987,
+  "pct_floating_cdi": 0.949,
+  "avg_cost": "CDI+1,1% (curva futura até o vencimento)",
+  "avg_maturity_years": 6.0,
+  "next_24m_maturities_mn": 3640,
+  "covenant_nd_ebitda": null,
+  "notes": "Dívida bruta R$ 50.987 mi (+37% a/a), 77,3% em R$ e o restante em moeda estrangeira com hedge integral; 94,9% da DL pós-fixada. Amortizações: 2026 R$ 127 mi, 2027 R$ 3.513 mi, 2028 R$ 5.179 mi, 2029 R$ 4.187 mi, 2030 R$ 6.843 mi. Caixa R$ 47,9 bi (R$ 28,2 bi líquido de provisões técnicas). DL/EBITDA 1,71x (cia.). Sem covenants financeiros (release 2T26)."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -175,
+  "notes": "DL líquida de provisões (R$ 22,8 bi) × 94,9% pós-fixada × 1 p.p. ≈ R$ 216 mi antes de IR ≈ −R$ 170–180 mi/ano após IR (~3,5% do lucro LTM de R$ 4,8 bi)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.318,
+  "ebitda_margin_avg_5y": 0.203,
+  "roe_avg_5y": 0.13,
+  "payout_avg_5y": 0.94,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.05,
+   "ebitda_margin": 0.223,
+   "net_income_mn": 1208.9,
+   "net_debt_ebitda": 1.71
+  },
+  "notes": "CAGR 5 anos de 32% inclui a consolidação da SulAmérica (DRE a partir de 2023); orgânico CVM: +8,7% (2024) e +10,2% (2025); 6M26 +7,7%. Margem CVM 2023–25: 17,9% → 21,0%, 22,6% no 6M26 (hospitais 26,2%; SulAmérica com sinistralidade 78,1%, −3,2 p.p.). Premissas: receita +7–8% (2.690 leitos a entregar em 2026–28, oncologia +22%), margem 22,4% → 23,3%. ROE 2025 21% (LTM 24% sobre PL reduzido por dividendos extraordinários); payout de caixa médio 94% (2021 e 2025 com extraordinários). IFRS-16: capex inclui ~0,7% da ROL de adições de direito de uso ≈ principal de arrendamento (aluguel caixa R$ 393 mi no 6M26 − juros de arrendamento R$ 244 mi ⇒ principal ~R$ 150 mi/semestre ≈ 0,5% da ROL; arredondado para cima pela expansão de leitos)."
+ },
+ "guidance": "Sem guidance de resultado. Expansão: 2.690 leitos totais com entrega prevista entre 2026 e 2028 (715 greenfield + 1.975 brownfield), conforme Formulário de Referência de maio/2026; capex ex-M&A de R$ 1.626 mi no 6M26 (+28%). Sem covenants financeiros. Data do 3T26 não verificada.",
+ "dividend_policy": "Mínimo estatutário 25%; prática de JCP trimestral (R$ 400 mi no 2T26; R$ 750 mi no 6M26) + extraordinários e recompras: dividendos pagos (DFC) R$ 1.381 mi (2024), R$ 6.562 mi (2025), R$ 1.245 mi no 6M26; recompras R$ 927 mi (2024), R$ 390 mi (2025), R$ 907 mi (6M26). Há R$ 2.497 mi de dividendos/JCP declarados a pagar no balanço de 30/06/2026 (tratados como dívida). Projeção: payout 50–60%.",
+ "election_impact": "Queda de −23% (mínima do dia −30%) é a menos 'merecida' do grupo: o canal é desconto (DI +300 bp) e fluxo estrangeiro/IBOV; +100 bp de CDI custam ~R$ 175 mi/ano (3,5% do lucro). Dívida em moeda forte tem hedge integral; dólar mais caro pressiona materiais/medicamentos importados (repasse parcial). 4º mandato Lula: neutro a positivo para hospitais (programa 'Agora Tem Especialistas' compra capacidade privada; demanda envelhecendo), ligeiramente negativo para a SulAmérica se a ANS apertar reajustes coletivos. Valor intrínseco muda pouco — mas a Ke de 25% já tornava a ação cara antes da eleição.",
+ "summary": "Líder absoluta em hospitais privados (76 hospitais, 13.617 leitos, 10.596 operacionais) com SulAmérica integrada (6,1 mi de vidas saúde/odonto), ROIC elevado e sem covenants. A R$ 33,57 negocia a ~8x EV/EBITDA 2026E e ~13–14x P/L 2027E — barata para o histórico, mas a Ke de 25% exige preço bem menor.",
+ "thesis": [
+  "Qualidade e crescimento: EBITDA consolidado +18,2% no 2T26 (R$ 2,9 bi; 3,4 bi com resultado financeiro dos ativos vinculados), hospitais 26,2% de margem e oncologia +22%.",
+  "Pipeline visível: 2.690 leitos para 2026–28 (+20% sobre a base total) e ticket médio +9,1% a/a; SulAmérica com sinistralidade 78,1% (−3,2 p.p.).",
+  "Balanço confortável e sem covenants: DL/EBITDA 1,71x (1,15x incluindo só provisões de seguros), prazo médio 6 anos, hedge cambial integral."
+ ],
+ "risks": [
+  "Valuation: mesmo após −23%, a TIR implícita fica abaixo da Ke de 25% — ação de qualidade não é 'barata' por esse critério.",
+  "Ciclo de sinistralidade da SulAmérica e pressão das operadoras sobre preços/glosas (PMR hospitalar de 110 dias).",
+  "Alavancagem bruta alta (R$ 51 bi de dívida) e distribuição agressiva financiada por dívida; juros a 15% por mais tempo.",
+  "Regulação de planos (ANS) e reajustes coletivos no novo mandato."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (novembro/2026; data a confirmar)",
+  "Inauguração de leitos (Tatuapé, Glória D'Or, Oeste D'Or, Ribeirão Preto) no 2S26–2027",
+  "Dividendos extraordinários/recompras"
+ ],
+ "key_data": [
+  {
+   "label": "Receita líquida 6M26 (IFRS 17)",
+   "value": "R$ 29.000 mi (+7,7%)",
+   "context": "2T26 R$ 14.658 mi"
+  },
+  {
+   "label": "EBITDA 2T26 (gerencial)",
+   "value": "R$ 2.904 mi (19,5%)",
+   "context": "R$ 3,4 bi com result. fin. dos ativos vinculados; hospitais R$ 2.292 mi (26,2%)"
+  },
+  {
+   "label": "Lucro líquido 2T26 (IFRS 17)",
+   "value": "R$ 1.290 mi",
+   "context": "controlador R$ 1.209 mi; 6M26 R$ 2.176 mi"
+  },
+  {
+   "label": "DL / EBITDA (cia.)",
+   "value": "1,71x (R$ 22,8 bi)",
+   "context": "+ arrendamentos R$ 3,9 bi + aquisições R$ 0,7 bi + dividendos a pagar R$ 2,5 bi = R$ 30,0 bi"
+  },
+  {
+   "label": "Leitos",
+   "value": "13.617 totais / 10.596 operacionais",
+   "context": "+2.690 previstos 2026–28"
+  },
+  {
+   "label": "Ações em circulação",
+   "value": "2.180,2 mi",
+   "context": "Família Moll 50,2%"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Rede D'Or – Relatório de Resultados 2T26 (12/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/5ecded6f-d02b-4439-bd60-b78400f01f1e/b0571f84-bf03-c349-a6a1-e722c724bac1?origin=2"
+  },
+  {
+   "title": "CVM – DFP/ITR padronizados (data/hist/RDOR3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 – cotação ao vivo",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/RDOR3"
+  }
+ ],
+ "confidence": "média-alta nos dados (release + CVM consistentes) e no negócio; média no valuation porque a estrutura de seguros (provisões técnicas, IFRS 17) exige ajustes de DL e o resultado é sensível à Ke."
+}

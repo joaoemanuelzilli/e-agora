@@ -1,0 +1,248 @@
+{
+ "ticker": "YDUQ3",
+ "name": "YDUQS Participações S.A.",
+ "sector": "Educação / ensino superior (medicina premium + massa)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "YDUQ3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 4501.6
+  },
+  "notes": "Receita/EBITDA base = CVM FY2025 (R$ 5.522 mi; EBITDA CVM 1.703 mi, IFRS-16). DL base = DL CVM 2T26 (R$ 4.320 mi, já inclui arrendamentos de R$ 1.578 mi dentro de 2.01.04.03/2.02.01.03) + preço de aquisição a pagar R$ 166,9 mi + parcelamentos tributários R$ 6,7 mi + passivo de opções R$ 7,9 mi = R$ 4.501,6 mi (bate com a DL incl. IFRS-16 da companhia, R$ 4.485,7 mi). Itens debt-like colocados na DL base para também gerarem juros; other_debt_like = 0 para não contar em dobro. Capex = capex de imobilizado/intangível (7–8% da ROL, guidance) + adições de direito de uso (renovações/novos aluguéis: ~3,3% da ROL em 2026 subindo a ~4,2% em 2030 ≈ principal de arrendamento pago em 2025, rumo à depreciação de direito de uso de ~4,7%). NWC 0: queda do DIS e do PMR libera recebíveis no curto prazo (renovação/novos aluguéis): com EBITDA IFRS-16 e arrendamentos na DL, omitir as renovações superestimaria o FCFF (o aluguel futuro de contratos ainda não assinados não está na dívida)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.02,
+   0.04,
+   0.045,
+   0.05,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.298,
+   0.303,
+   0.308,
+   0.312,
+   0.315
+  ],
+  "da_pct_revenue": [
+   0.143,
+   0.138,
+   0.133,
+   0.129,
+   0.125
+  ],
+  "capex_pct_revenue": [
+   0.108,
+   0.111,
+   0.113,
+   0.115,
+   0.117
+  ],
+  "nwc_pct_revenue": 0.0,
+  "cost_of_net_debt": [
+   0.163,
+   0.17,
+   0.17,
+   0.165,
+   0.16
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.1,
+   0.12,
+   0.13,
+   0.14,
+   0.15
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.8,
+   0.7,
+   0.7,
+   0.7,
+   0.7
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.2,
+  "roe": 0.2
+ },
+ "wacc": {
+  "kd_pre_tax": 0.16,
+  "target_debt_weight": 0.35
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Itens debt-like (M&A a pagar, parcelamentos, opções) já somados à DL base via overrides.base.net_debt. Minoritários a valor contábil (R$ 22,9 mi, irrelevante)."
+ },
+ "target_multiples": {
+  "pe": 7.0,
+  "ev_ebitda": 4.5,
+  "pbv": 0.8,
+  "rationale": "P/L 7x e EV/EBITDA (IFRS-16) 4,5x: abaixo do histórico de 5 anos da própria YDUQ3 (aprox. 8–12x P/L ajustado e 5–6x EV/EBITDA IFRS-16 em 2021–2025, faixa observada mesmo com Selic de 13–15%) e próximos de COGN3 hoje; desconto coerente com Ke de 25% (P/L de Gordon com ROE 20% e g 5% ≈ 4x; o prêmio reflete crescimento de medicina e geração de caixa). Na cotação de 26/10 (R$ 8,40) a ação negocia a ~4x EV/EBITDA 2026E e ~11x P/L contábil 2027E (lucro contábil deprimido por amortizações/D&A acima do capex)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "MEC aperta mais o EAD/semipresencial, captação de massa cai com crédito caro e renda pressionada; nova onda de vagas de medicina derruba ticket do Idomed."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "FIES ampliado no 4º mandato (como em 2010–14) reacelera o presencial; medicina matura (15,2 mil alunos potenciais vs 11,8 mil) e Selic volta a cair a partir de 2027."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.005
+ },
+ "debt_profile": {
+  "gross_debt_mn": 3463,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "CDI+0,98%",
+  "avg_maturity_years": 2.9,
+  "next_24m_maturities_mn": 1500,
+  "covenant_nd_ebitda": null,
+  "notes": "Dívida bancária/debêntures R$ 3.463 mi (2T26), 100% CDI+ (debêntures VII–XII, CDI+0,70% a +1,25%). Sem amortizações no 2S26; ~R$ 988 mi em 2027 e ~R$ 1,1 bi em 2028 (leitura do gráfico do release). Caixa R$ 722 mi. Arrendamentos IFRS-16 R$ 1.578 mi à parte. Limite de covenant não verificado (não encontrado no release); alavancagem no critério da cia. 1,55x."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -25,
+  "notes": "Dívida líquida bancária pós-fixada ~R$ 2,74 bi × 1 p.p. = ~R$ 27 mi antes de IR (alíquota efetiva baixa por ProUni) ≈ −R$ 25 mi/ano no lucro (~15–20% do lucro contábil LTM de R$ 114 mi). Canal indireto maior: crédito/renda do aluno de massa e PDD."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.075,
+  "ebitda_margin_avg_5y": 0.302,
+  "roe_avg_5y": 0.05,
+  "payout_avg_5y": 0.62,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.01,
+   "ebitda_margin": 0.287,
+   "net_income_mn": -1.5,
+   "net_debt_ebitda": 1.55
+  },
+  "notes": "CVM: receita 2020–25 CAGR 7,5% (inclui M&A; 3 anos 6,5%); margem EBITDA CVM (IFRS-16) média 30,2% (2021–25), 30,8% em 2025 e 29,6% LTM. Premissas: CAGR 2025–30 de 4,1% (abaixo do histórico pelo novo marco do EAD, que derrubou o Digital −15% a/a, e queda do DIS), margem 29,8%→31,5% só por mix (premium = 48% do EBITDA, margem 49% Idomed / 39% Ibmec vs 24% Estácio&Wyden). ROE histórico baixo (5%) por ágio e D&A > capex; projeção ~8–13%. 2T26: ROL +1,0%, EBITDA aj. R$ 400 mi (28,7%), lucro aj. R$ 14 mi, DL ex-IFRS16/EBITDA 1,55x (critério cia.; 2,00x ex-IFRS16 puro). IFRS-16: capex inclui adições de direito de uso. Proxy do coordenador (principal de arrendamento): DFC 2025 'amortização de arrendamento' R$ 407 mi é o pagamento total; juros de arrendamento R$ 175 mi ⇒ principal ≈ R$ 232 mi (4,2% da ROL); roll-forward do passivo (R$ 1.655 → 1.581 mi) dá adições de ~R$ 158 mi (2,9%) porque a cia. está devolvendo imóveis. Premissa: 3,3% (2026) → 4,2% (2030) somados ao capex de 7,5–7,8% ⇒ capex total 10,8% → 11,7%."
+ },
+ "guidance": "Release 2T26 (13/08/2026) reafirma o guidance divulgado em maio/2026 (detalhes numéricos não obtidos — busca indisponível; confirmar no RI) e a meta de 1,0x DL/EBITDA em 2027. Capex mantido entre 7% e 8% da ROL. Videoconferência do 3T26: 13/11/2026 (divulgação 12/11 após o fechamento).",
+ "dividend_policy": "Mínimo estatutário 25%; prática recente de 'dividendos recorrentes e recompras oportunísticas': R$ 780 mi devolvidos desde 2024 (release 2T26): 2024 R$ 80 mi de dividendos + R$ 146 mi de recompras; 2025 R$ 150 mi + R$ 154 mi; 1S26 R$ 150 mi + R$ 100 mi (bate com a DFC CVM). Ações em circulação caíram de 292 mi (jun/24) para 254 mi (jun/26). Payout de caixa sobre lucro contábil de 83% em 2025. Projeção: 70–80% do lucro (equivalente a dividendos + recompras), compatível com a meta de 1,0x.",
+ "election_impact": "Queda de −40% é sobretudo macro: (i) DI longo +300 bp eleva o custo de capital de um negócio com DL total de R$ 4,5 bi (2,7x EBITDA IFRS-16) e (ii) temor de renda/emprego e crédito para o aluno de massa (PDD). Canal direto de juros é pequeno: +100 bp de CDI ≈ −R$ 25 mi/ano de lucro. Micro: um 4º mandato Lula tende a manter o aperto regulatório do EAD (Decreto 12.456/2025 já veta EAD em saúde, engenharia e licenciaturas — Digital caiu 15% a/a) e a seguir abrindo vagas de medicina via Mais Médicos (risco ao ticket do Idomed), mas historicamente amplia FIES/ProUni (base FIES da YDUQ3 +13% a/a; FIES Social) e mantém a isenção de IR do ProUni. Valor intrínseco muda pouco; o preço caiu ~40%.",
+ "summary": "Maior exposição a medicina entre as listadas (Idomed: 2.120 vagas autorizadas, 11,8 mil alunos, margem EBITDA ~49%), com Estácio de massa estável e balanço em desalavancagem (meta 1,0x em 2027). A R$ 8,40 negocia a ~4x EV/EBITDA IFRS-16 2026E; a tese depende de medicina e de não haver nova piora regulatória no EAD.",
+ "thesis": [
+  "Premium (Idomed + Ibmec) já é ~32% da receita e 48% do EBITDA, crescendo ~10% a/a (ROL Idomed +8,6% e Ibmec +17,7% no 1S26) com margens de 49% e 39%; maturação até 15,2 mil alunos de medicina (vs 11,8 mil) sustenta mix e margem.",
+  "Geração de caixa robusta: FCL de R$ 537 mi no 1S26 (FCO/EBITDA ex-IFRS16 de 111%), R$ 780 mi devolvidos desde 2024 (~37% do valor de mercado de julho).",
+  "Valuation deprimido pela eleição: EV/EBITDA IFRS-16 2026E ~4x e sensibilidade direta a juros baixa (+100 bp CDI ≈ −R$ 25 mi de lucro)."
+ ],
+ "risks": [
+  "Regulação do EAD/semipresencial mais dura no 4º mandato (Digital já −15% a/a; captação EAD em queda).",
+  "Concorrência em medicina (novos editais Mais Médicos) comprimindo ticket e ocupação.",
+  "Lucro contábil fraco (R$ 114 mi LTM; ROE ~4%) por D&A acima do capex, amortização de mais-valia, contingências trabalhistas e despesas financeiras do DIS.",
+  "Juros altos por mais tempo: refinanciamento de R$ 988 mi em 2027 a CDI+ e consumidor endividado (PDD)."
+ ],
+ "catalysts": [
+  "Resultado 3T26 em 12/11/2026 (efeito calendário positivo de juros da 12ª emissão)",
+  "Captação 2027.1 de medicina (jan–mar/2027)",
+  "Regras de FIES/ProUni e eventuais portarias do MEC sobre EAD no início do novo mandato (2027)"
+ ],
+ "key_data": [
+  {
+   "label": "ROL 1S26",
+   "value": "R$ 2.901 mi (+1,2% a/a)",
+   "context": "ex-DIS +4%"
+  },
+  {
+   "label": "EBITDA ajustado 1S26",
+   "value": "R$ 904 mi (31,2%)",
+   "context": "LTM R$ 1.871 mi (IFRS-16)"
+  },
+  {
+   "label": "DL ex-IFRS16 / EBITDA aj. 2T26",
+   "value": "1,55x",
+   "context": "meta 1,0x em 2027; 2,00x ex-IFRS16 puro"
+  },
+  {
+   "label": "DL total incl. arrendamentos e M&A a pagar",
+   "value": "R$ 4,50 bi",
+   "context": "2,7x EBITDA CVM LTM"
+  },
+  {
+   "label": "Medicina",
+   "value": "2.120 vagas; 11,8 mil alunos",
+   "context": "potencial 15,2 mil alunos; ticket veterano R$ 13.037/mês"
+  },
+  {
+   "label": "Ações em circulação",
+   "value": "254,4 mi",
+   "context": "recompras reduziram de 292 mi (2024)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "YDUQS – Release de Resultados 2T26 (13/08/2026)",
+   "url": "https://www.yduqs.com.br/Download.aspx?Arquivo=ihsLPBFtvHMEhB1dhqMvPQ=="
+  },
+  {
+   "title": "YDUQS – Central de Resultados (agenda 3T26)",
+   "url": "https://www.yduqs.com.br/listresultados.aspx?idCanal=QueRek9lx6lY8glbPTs6XA=="
+  },
+  {
+   "title": "CVM – DFP/ITR padronizados (data/hist/YDUQ3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "DGABC/Estadão Conteúdo – Yduqs lucro ajustado 2T26",
+   "url": "https://www.dgabc.com.br/Noticia/4341063/yduqs-registra-lucro-liquido-ajustado-de-r-14-mi-no-2tri26-queda-anual-de-54-2"
+  },
+  {
+   "title": "B3 – cotação ao vivo",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/YDUQ3"
+  }
+ ],
+ "confidence": "média — dados financeiros oficiais (release + CVM) sólidos; incerteza alta na regulação do EAD sob o novo mandato e no detalhe do guidance de maio/2026 (não obtido)."
+}

@@ -1,0 +1,260 @@
+{
+ "ticker": "ALOS3",
+ "name": "Allos S.A.",
+ "sector": "Imobiliário / shopping centers (classe média, nacional) + mídia/serviços",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "ALOS3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Base CVM FY2025 mantida (receita 2.859,1; EBITDA 2.174,2). A D&A contábil (~22% da receita) inclui a amortização da mais-valia/ágio da fusão brMalls (2023), não caixa e sem relação com reposição; na projeção uso D&A econômica de 8% da receita (≈ capex de manutenção/revitalização) para que o NOPAT da perpetuidade e o 'lucro' do motor reflitam a geração recorrente (≈ FFO). Consequência: o LL projetado (~R$1,25 bi em 2026) é próximo do FFO (2T26 R$340,8 mi; R$0,68/ação), não do LL contábil (~R$0,9 bi). IR efetivo 10% (SPEs no lucro presumido)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.035,
+   0.03,
+   0.055,
+   0.055,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.735,
+   0.74,
+   0.745,
+   0.75,
+   0.75
+  ],
+  "da_pct_revenue": [
+   0.08,
+   0.08,
+   0.08,
+   0.08,
+   0.08
+  ],
+  "capex_pct_revenue": [
+   0.15,
+   0.14,
+   0.13,
+   0.12,
+   0.12
+  ],
+  "nwc_pct_revenue": 0.03,
+  "cost_of_net_debt": [
+   0.158,
+   0.165,
+   0.165,
+   0.16,
+   0.155
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.1,
+   0.1,
+   0.1,
+   0.1,
+   0.1
+  ],
+  "minority_share_ni": 0.02,
+  "payout": [
+   0.43,
+   0.95,
+   0.95,
+   0.95,
+   0.95
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.045,
+  "roic": 0.25,
+  "roe": 0.25
+ },
+ "wacc": {
+  "kd_pre_tax": 0.152,
+  "target_debt_weight": 0.17
+ },
+ "adjustments": {
+  "other_debt_like": 584,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = 4 parcelas mensais de proventos (~R$146 mi cada; data-ex jul, ago, 23/09 e 23/10/26) que saem do caixa após 30/06 para acionistas antigos. Payout 2026 (stub) 0,43 ≈ parcelas que cabem ao comprador (23/11 e dez). Venda de fatias ao Kinea ALLOS Malls FII (R$0,6–1,0 bi a cap rate ~9,5%, assinada 23/10/26) NÃO incluída no caso-base: depende de captação mínima de R$600 mi pelo FII após o choque (upside: a Ke 25% vender NOI a ~10,5x é muito acretivo). Derivativos (R$180 mi, nota do líder) e obrigações por aquisição remanescentes não somados (saldo não confirmado)."
+ },
+ "target_multiples": {
+  "pe": 9.5,
+  "ev_ebitda": 7.5,
+  "pbv": 1.0,
+  "rationale": "P/L aplicado ao 'lucro' do motor ≈ FFO (D&A econômica). Pré-eleição: P/FFO LTM ~12,8x (R$35,14 / FFO ~R$2,75) → 7,8%+3pp = 10,8% → ~9,3x; EV/EBITDA LTM 9,9x (EV R$21,3 bi / EBITDA CVM R$2.141 mi) → 10,1%+3pp → ~7,6x. Hoje: P/FFO ~9,5x; EV/EBITDA ~7,8x. Safra (ago/26): alvo R$36, outperform."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.015,
+   "terminal_g_shift": -0.005,
+   "capex_pct_shift": 0.01,
+   "narrative": "Classe média sob crédito caro (Selic ~16%), SSS/SSR ~0 real, venda ao KAML11 cancelada e proventos cortados para conter alavancagem."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.015,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.01,
+   "narrative": "Venda ao KAML11 concluída (R$1 bi a 9,5%) + nova vertical de gestão de FIIs; proventos mantidos sem alta de alavancagem."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.01,
+  "terminal_g_sd": 0.005,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 6871.2,
+  "pct_floating_cdi": 0.95,
+  "avg_cost": "CDI+0,57% (2T26; era CDI+0,75% um ano antes)",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -31,
+  "notes": "Exposição líquida ~R$3,5 bi (dívida 6.871 − caixa 3.399) → −R$35 mi antes de IR por +100 bp; ~−R$31 mi no lucro (~3% do FFO). % CDI estimado em ~95% (debêntures/CRI em CDI; release não obtido — busca web esgotada). Cronograma e covenants não verificados."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.2909,
+  "ebitda_margin_avg_5y": 0.758,
+  "roe_avg_5y": 0.057,
+  "payout_avg_5y": 0.434,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.034,
+   "ebitda_margin": 0.686,
+   "net_income_mn": 308.1,
+   "net_debt_ebitda": 1.72
+  },
+  "notes": "CAGR 5a (29%) e margem média 5a (102%) são distorcidos pela fusão Aliansce Sonae+brMalls (2023, ganho de R$4,5 bi no EBITDA do 1T23); uso margem média 2024–25 (75,8%) e ROE médio 2024–25 (5,7%, PL inflado pela mais-valia). Pós-fusão a receita cresce ~2,7% a.a. (2023→2025) por causa das vendas de ativos; premissa 2025–30 ~4,4% a.a. (SSR ~IGP-M+2pp, mídia +, vendas de ativos). EBITDA 2026E ≈ R$2,18 bi, dentro do guidance R$2,17–2,24 bi. Payout de caixa 2021–25 = 43% do LL contábil, mas 2026 distribui ~R$1,7 bi (≈130% do FFO), financiado por reciclagem."
+ },
+ "guidance": "Guidance 2026 (reiterado no 2T26, 06/08/26): EBITDA ajustado R$2,17–2,24 bi; capex R$350–450 mi; proventos (dividendos+JCP) de R$0,27–0,29 por ação ao mês. Fato Relevante 23/10/26: compromissos de venda de fatias de 7 shoppings (Metrô Santa Cruz, Caxias, Bangu, Parangaba, Plaza Sul, Villa Lobos, Tamboré) ao Kinea ALLOS Malls FII a cap rate médio ~9,5% (NOI 2025), R$0,6–1,0 bi conforme captação; 80% à vista; Allos pode deter até 24% do FII e será cogestora.",
+ "dividend_policy": "Política agressiva de retorno: proventos mensais de R$0,27–0,29/ação em 2026 (~R$1,65–1,75 bi/ano; yield ~13% ao preço de hoje); R$1,2 bi pagos até ago/26; dividendos intermediários de R$438 mi da reserva de investimentos (3 parcelas de R$0,2919/ação: out, nov, dez/26). Histórico de caixa: dividendos 2024 R$915 mi + recompra R$1.007 mi; 2025 R$824 mi + recompra R$160 mi. Financiado por FFO (~R$1,4 bi) + venda de ativos (R$1,34 bi em 2024).",
+ "election_impact": "Queda de −26% mistura macro e um micro relevante: (i) macro — taxa de desconto e custo da dívida (CDI+0,57%, ~3% do FFO por +100 bp); (ii) micro — o público de classe média é mais sensível a crédito/juros que o de Multiplan/Iguatemi; (iii) a reciclagem que financia os proventos depende de FIIs captando — a oferta do KAML11 (iniciada 22/10, mínimo R$600 mi) acontece agora, no pior momento, e o próprio FR admite condições alteradas 'em função das condições atuais de mercado'. Se a venda falhar, a política de R$0,29/mês tende a ser revista em 2027 (o caso-base já assume payout de ~95% do FFO a partir de 2027).",
+ "summary": "Maior plataforma de shoppings do Brasil (pós-fusão com brMalls), margem NOI ~92–93%, alavancagem 1,7x e política de proventos de ~13% a.a. de yield. A R$26 a ação negocia a ~9,5x FFO e cap rate implícito ~14% — enquanto a própria empresa acabou de assinar venda de ativos a ~9,5% de cap rate. É a mais 'barata' das três em fluxo, mas a sustentação do yield depende da reciclagem de portfólio em um mercado de FIIs que acabou de travar.",
+ "thesis": [
+  "Venda privada a cap rate ~9,5% (FR 23/10/26) vs cap rate implícito na bolsa ~14% (NOI 2T26 anualizado ~R$2,4 bi / EV ~R$16,7 bi): vender ativos e recomprar ações/pagar proventos cria valor.",
+  "FFO 2T26 R$340,8 mi (+12% a/a; R$0,68/ação) → P/FFO ~9,5x; proventos 2026 ~R$3,4/ação (yield ~13%).",
+  "Dívida barata para o setor (CDI+0,57%) e DL/EBITDA 1,7x; EBITDA 2026 guiado R$2,17–2,24 bi.",
+  "Mídia e serviços crescendo (receita de mídia R$83,4 mi, +84,5% a/a) e nova vertical de gestão de FIIs com a Kinea."
+ ],
+ "risks": [
+  "Sustentabilidade dos proventos: distribuição 2026 ≈ 130% do FFO; sem vendas de ativos, payout precisa cair (~95% do FFO no caso-base).",
+  "Oferta do KAML11 pode não atingir o mínimo de R$600 mi pós-eleição → venda cancelada.",
+  "Exposição a classe média (crédito caro, renda) e a mercados regionais; incidente no Shopping Tijuca pesou nas despesas.",
+  "Dados de dívida (cronograma/covenants) não verificados no release; derivativos de R$180 mi fora da DL.",
+  "Ke 25% vs rendimento dos ativos."
+ ],
+ "catalysts": [
+  "Resultado da oferta do Kinea ALLOS Malls FII (nov/26) e fechamento da venda.",
+  "Resultado 3T26 (~início/meados de nov/26) e confirmação dos proventos de 2027.",
+  "Recompras com o desconto (BlackRock passou de 5% em out/26)."
+ ],
+ "key_data": [
+  {
+   "label": "Preço / variação hoje",
+   "value": "R$26,00 (−26,0%)",
+   "context": "sexta R$35,14; 500,1 mi ações"
+  },
+  {
+   "label": "Cap rate implícito (NOI anualizado / EV)",
+   "value": "~14,4%",
+   "context": "venda ao KAML11 a ~9,5% (23/10/26)"
+  },
+  {
+   "label": "FFO 2T26 / por ação",
+   "value": "R$340,8 mi / R$0,68",
+   "context": "+12% a/a; P/FFO ~9,5x"
+  },
+  {
+   "label": "Proventos 2026",
+   "value": "R$0,27–0,29/ação/mês",
+   "context": "yield ~13% ao preço de hoje"
+  },
+  {
+   "label": "DL/EBITDA",
+   "value": "1,7x",
+   "context": "DL CVM R$3,68 bi (com arrendamentos)"
+  },
+  {
+   "label": "NOI 2T26 / margem",
+   "value": "R$601,3 mi / 91,8%",
+   "context": "+3,7% a/a; 93% ex-Tijuca"
+  },
+  {
+   "label": "Ocupação / inadimplência",
+   "value": "96,2% / 1,4%",
+   "context": "2T26"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Allos — Fato Relevante 23/10/2026 (venda ao Kinea ALLOS Malls FII, cap rate ~9,5%)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/ALOS3/51222/"
+  },
+  {
+   "title": "Allos — Aviso aos acionistas 15/09/2026 (dividendos intermediários R$438 mi)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/ALOS3/49420/"
+  },
+  {
+   "title": "EuQueroInvestir — Allos 2T26 (NOI, FFO, SSS/SSR, Safra alvo R$36)",
+   "url": "https://euqueroinvestir.com/acoes/allos-alos3-resultados-2t26"
+  },
+  {
+   "title": "Genial — Allos 2T26 'consolidando o que importa' (ajustes não recorrentes)",
+   "url": "https://analisa.genialinvestimentos.com.br/acoes/aliansce-sonae/allos-alos3-resultado-2t26-consolidando-o-que-importa"
+  },
+  {
+   "title": "BlackRock — participação relevante em ALOS3 (08/10/26)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/ALOS3/50615/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizadas (data/hist, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — cotação ao vivo (API oficial)",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/"
+  }
+ ],
+ "confidence": "média-baixa — release 2T26 completo não obtido (busca web esgotada); números operacionais de imprensa especializada + CVM + fatos relevantes; perfil de dívida incompleto."
+}

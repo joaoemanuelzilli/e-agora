@@ -1,0 +1,327 @@
+{
+ "ticker": "SIMH3",
+ "name": "SIMPAR S.A.",
+ "sector": "Holding de logística, mobilidade e infraestrutura (JSL, Movida, Vamos, Automob, CS Infra, CS Brasil, BBC)",
+ "template": "holding",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "SIMH3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override: 583,76 mi ações (CVM e B3, após grupamento 2:1 em fev/26 e emissão de 156,96 mi ações a R$ 11,24 em mai/26). Consolidado CVM não é usado (template holding)."
+ },
+ "projection": {
+  "_comment": "Não usado pelo template holding; drivers aproximados do consolidado 2T26 UDM apenas como referência (receita líquida R$ 44,4 bi, EBITDA ajustado R$ 12,7 bi, prejuízo atribuível aos controladores).",
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.04,
+   0.06,
+   0.06,
+   0.055,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.29,
+   0.29,
+   0.29,
+   0.29,
+   0.29
+  ],
+  "da_pct_revenue": [
+   0.11,
+   0.11,
+   0.11,
+   0.11,
+   0.11
+  ],
+  "capex_pct_revenue": [
+   0.17,
+   0.17,
+   0.17,
+   0.17,
+   0.17
+  ],
+  "nwc_pct_revenue": 0.0,
+  "cost_of_net_debt": [
+   0.19,
+   0.19,
+   0.185,
+   0.18,
+   0.175
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25
+  ],
+  "minority_share_ni": 0.5,
+  "payout": [
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "sotp": {
+  "components": [
+   {
+    "name": "Movida (MOVI3)",
+    "ticker": "MOVI3",
+    "stake": 0.6107,
+    "method": "fair",
+    "value_mn": null
+   },
+   {
+    "name": "Vamos (VAMO3)",
+    "ticker": "VAMO3",
+    "stake": 0.559,
+    "method": "fair",
+    "value_mn": null
+   },
+   {
+    "name": "JSL (JSLG3)",
+    "ticker": "JSLG3",
+    "stake": 0.672,
+    "method": "market",
+    "value_mn": null
+   },
+   {
+    "name": "Automob (AMOB3)",
+    "ticker": "AMOB3",
+    "stake": 0.7175,
+    "method": "market",
+    "value_mn": null,
+    "shares_mn": 37.886
+   },
+   {
+    "name": "CS Infra ex-Porto Aratu (rodovias, mobilidade, ambiental)",
+    "ticker": null,
+    "stake": 0.6327,
+    "method": "fixed",
+    "value_mn": 750
+   },
+   {
+    "name": "CS Porto Aratu (venda acordada, equity ex-earn-out)",
+    "ticker": null,
+    "stake": 0.6327,
+    "method": "fixed",
+    "value_mn": 650
+   },
+   {
+    "name": "CS Brasil (frotas p/ setor público)",
+    "ticker": null,
+    "stake": 1.0,
+    "method": "fixed",
+    "value_mn": 95
+   },
+   {
+    "name": "BBC Digital (banco)",
+    "ticker": null,
+    "stake": 1.0,
+    "method": "fixed",
+    "value_mn": 195
+   },
+   {
+    "name": "Outros (Original Locadora, Madre, BSIM/ASIM, Welfare)",
+    "ticker": null,
+    "stake": 1.0,
+    "method": "fixed",
+    "value_mn": 67
+   }
+  ],
+  "holding_net_debt_mn": 1689,
+  "holding_cost_mn": 40
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.12,
+  "roe": 0.12
+ },
+ "wacc": {
+  "kd_pre_tax": 0.19,
+  "target_debt_weight": 0.6
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "DL da holding = R$ 1.389 mi no 2T26 (dívida bruta R$ 6.038 mi incl. derivativos de hedge na curva R$ 1.216 mi; caixa R$ 4.649 mi) + R$ 300 mi estimados para o TRS (total return swap, nocional R$ 526 mi, custo CDI+3,63%, venc. set/27, referenciado em SIMH3/MOVI3/VAMO3/JSLG3/AMOB3; MTM −R$ 232 mi em 30/06, excluído pela empresa da DL). Estimativa do MTM de hoje: cesta ~10–15% abaixo de 30/06 + carrego → −R$ 280 a −330 mi (margem depositada R$ 183 mi em CDB em 30/06). Custo de holding R$ 40 mi/ano (despesas administrativas da controladora R$ 25,7 mi no 1S26, líquidas de outras receitas recorrentes) capitalizado a 1/(25%−5%) = 5x. Carrego negativo da holding (dívida a 18,8% a.a. vs caixa a ~CDI) não foi capitalizado à parte: a dívida líquida é subtraída ao valor de face, e a 25% de Ke uma dívida a 18,8% vale abaixo da face — os dois efeitos se compensam aproximadamente."
+ },
+ "target_multiples": {
+  "pe": null,
+  "ev_ebitda": null,
+  "pbv": 0.6,
+  "rationale": "Holding avaliada por SOTP. Desconto de holding histórico não verificado em fonte publicada; a R$ 6,00–6,93 (intradiário de 26/10) a ação negocia ~15–30% abaixo do NAV a mercado calculado aqui (componentes listados a preço de tela + não listados a valores conservadores). P/VP de referência 0,6x (PL controladores R$ 5.888 mi; ROE consolidado negativo)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.35,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Curva de hoje persiste: Movida/Vamos sem lucro relevante, TRS exige mais margem, venda da CS Porto Aratu atrasa (CADE/poder concedente) e o desconto de holding se amplia."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Juros devolvem o choque: controladas reprecificam em alta com alavancagem operacional e financeira dupla; novas monetizações (CS Infra) reduzem a DL da holding a ~zero."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 6038,
+  "pct_floating_cdi": 0.9,
+  "avg_cost": "Holding: custo médio da dívida bruta 18,8% a.a. no 2T26 (bonds em USD swapados para CDI + debêntures); consolidado: 16,4% a.a., prazo 3,3 anos, DL ex-BBC R$ 38,9 bi; captações 2T26 a CDI+2,5% (6,3 anos) e jul–ago/26 a CDI+2,2% (4,7 anos)",
+  "avg_maturity_years": 4.0,
+  "next_24m_maturities_mn": 1300,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -135,
+  "notes": "Look-through (participação × impacto líquido de IR por +100 bp): Movida −R$ 92 mi × 61% = −56; Vamos −57 × 56% = −32; JSL (DL R$ 5,4 bi) ≈ −36 × 67% = −24; Automob (DL R$ 2,0 bi) ≈ −13 × 72% = −10; holding (exposição líquida ~R$ 1,4 bi) ≈ −9; CS Infra/CS Brasil ≈ −5. Total ≈ −R$ 135 mi/ano atribuível ao acionista da Simpar, contra lucro controlador LTM de −R$ 182 mi (ajustado −R$ 566 mi). Curva de hoje vs pré-eleição (~+250 bp): ≈ −R$ 340 mi/ano. TRS: cada −10% na cesta de ações ≈ −R$ 25–30 mi de MTM."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.347,
+  "ebitda_margin_avg_5y": 0.278,
+  "roe_avg_5y": 0.048,
+  "payout_avg_5y": null,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.088,
+   "ebitda_margin": 0.3,
+   "net_income_mn": -189,
+   "net_debt_ebitda": 2.8
+  },
+  "notes": "Consolidado: receita +35% a.a. em 5 anos (aquisições + crescimento das controladas), margem EBITDA média 27,8%, ROE controlador médio 4,8% com prejuízos em 2023–24 e LTM 2T26 (−R$ 182 mi; 2T26 −R$ 189,5 mi incl. MTM do TRS de −R$ 153 mi pós-IR). Payout médio não significativo (dividendos pagos com lucro ~zero). DL/EBITDA consolidado 2,8x (critério de covenant dos bonds) — menor desde o IPO de 2010."
+ },
+ "guidance": "Sem guidance consolidado. Metas declaradas: recomprar R$ 1,0 bi de dívida da holding (35% executado até jul/26); caixa da holding (R$ 4,6 bi) cobre amortizações até meados de 2031; seguir monetizando ativos não listados (Ciclus Rio, Ciclus Amazônia e CS Porto Aratu somaram EV de R$ 3,9 bi, TIR 36% a.a.). Vamos: EBITDA 2026 R$ 3,75–4,0 bi; Movida: lucro 3T26 R$ 130–150 mi; JSL: receita bruta 2030 de R$ 21,4 bi.",
+ "dividend_policy": "Mínimo estatutário de 25%. Dividendos de R$ 100 mi (R$ 0,17/ação) aprovados em 30/04/2026 e pagos em 15/06/2026 (R$ 9,4 mi obrigatórios + R$ 90,6 mi adicionais). Pagos (DFC CVM consolidado, inclui minoritários de controladas): R$ 482 mi (2023), R$ 157 mi (2024), R$ 229 mi (2025). Aumento de capital de R$ 1,76 bi em mai/26 (BNDESPar/JSP, R$ 11,24/ação).",
+ "election_impact": "Queda de 62% hoje = alavancagem financeira em dois níveis (holding + controladas com ~R$ 39 bi de DL consolidada quase toda em CDI) sobre um choque de +300 bp na curva, mais o TRS sobre as próprias ações (−R$ 300 mi estimados). Antes do choque a ação tinha subido 168% desde 12/08 (R$ 6,21 → R$ 16,65) no trade eleitoral; hoje voltou ao nível de agosto. Não há risco de liquidez na holding (caixa cobre amortizações até 2031; DL R$ 1,4 bi), mas o valor do equity depende de MOVI3/VAMO3, cujos valores justos a Ke 25% ficam abaixo da tela. Lula 4: BNDESPar já é sócio (1 assento no conselho de Simpar/Movida/Vamos/JSL) — reduz risco de crédito, mas aumenta influência estatal; CS Infra depende de concessões (poder concedente).",
+ "summary": "Holding com DL própria pequena (R$ 1,4 bi + TRS) e caixa até 2031, mas cujo valor está concentrado em controladas alavancadas em CDI. SOTP a valor justo (Ke 25%) fica abaixo do preço; a mercado, desconto de ~15–30% ao NAV (conforme o intradiário) — opção alavancada em corte de juros, não oportunidade pela meta de 25%.",
+ "thesis": [
+  "Holding desalavancada: DL de R$ 1,39 bi no 2T26 (−53% a/a), R$ 978 mi pró-forma com a venda da CS Porto Aratu (EV R$ 1,8 bi, MOIC 5,8x).",
+  "R$ 6,9 bi de reforço de capital do grupo em 12 meses (R$ 3,9 bi de monetizações + R$ 3,0 bi de aumentos de capital com BNDESPar).",
+  "Desconto ao NAV a mercado de ~15–25% e convexidade a juros: cada −100 bp ≈ +R$ 135 mi/ano de lucro atribuível."
+ ],
+ "risks": [
+  "Juros: lucro consolidado já negativo; curva de hoje mantém Movida/Vamos com ROE abaixo de 15%.",
+  "TRS (nocional R$ 526 mi, venc. set/27): perda estimada ~R$ 300 mi hoje, com chamadas de margem se as ações caírem mais.",
+  "Fechamento da venda da CS Porto Aratu depende de CADE e poder concedente; earn-out não considerado.",
+  "Governança/estrutura: participações indiretas e subholdings (HSIM/CSIM 63%) dificultam o look-through; custo da dívida da holding 18,8% a.a."
+ ],
+ "catalysts": [
+  "Resultados 3T26 do grupo (Movida em 27/10/2026)",
+  "Fechamento da venda da CS Porto Aratu",
+  "Execução da recompra de R$ 1 bi em dívidas",
+  "Copom dez/26"
+ ],
+ "key_data": [
+  {
+   "label": "DL holding 2T26",
+   "value": "R$ 1.389 mi",
+   "context": "bruta R$ 6.038 mi; caixa R$ 4.649 mi; pró-forma R$ 978 mi c/ Aratu"
+  },
+  {
+   "label": "TRS sobre ações do grupo",
+   "value": "nocional R$ 526 mi",
+   "context": "MTM −R$ 232 mi em 30/06; estimado ~−R$ 300 mi hoje"
+  },
+  {
+   "label": "Participações (30/06/26)",
+   "value": "Movida 61,07% · Vamos 55,90% · JSL 67,20% · Automob 71,75%",
+   "context": "CS Infra 63,27%; CS Brasil e BBC 100%"
+  },
+  {
+   "label": "DL consolidada ex-BBC",
+   "value": "R$ 38,9 bi",
+   "context": "DL/EBITDA 2,8x (menor desde 2010)"
+  },
+  {
+   "label": "EBITDA ajustado 2T26",
+   "value": "R$ 3.361 mi (+15,7%)",
+   "context": "UDM R$ 12,7 bi"
+  },
+  {
+   "label": "Lucro controladores 2T26",
+   "value": "−R$ 189,5 mi",
+   "context": "−R$ 36,5 mi ex-MTM do TRS"
+  },
+  {
+   "label": "Custo médio da dívida da holding",
+   "value": "18,8% a.a.",
+   "context": "prazo médio 4,0 anos"
+  },
+  {
+   "label": "Preço 26/10 vs 12/08 vs 23/10",
+   "value": "R$ 6,27–6,76 / 6,21 / 16,65",
+   "context": "rali eleitoral de +168% devolvido"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Simpar — Release de resultados 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/0f7b667d-72c4-4013-ad2f-58abeff9b857/dd3d121e-b6b5-c4dc-f942-96b08fd01ae7?origin=2"
+  },
+  {
+   "title": "Simpar — DF 2T26 (participações, TRS, aumentos de capital, investimentos)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/0f7b667d-72c4-4013-ad2f-58abeff9b857/6a661257-c122-a73a-778f-0c7430bac13e?origin=2"
+  },
+  {
+   "title": "JSL — Release 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/5cb9c9f1-1ef6-4d5f-a2fd-fcdddc308a56/73f49850-5cff-1efc-a29d-c3cd755d3291?origin=2"
+  },
+  {
+   "title": "B3 — GetListedSupplementCompany (ações AMOB3/JSLG3/SIMH3) e COTAHIST",
+   "url": "https://sistemaswebb3-listados.b3.com.br/"
+  },
+  {
+   "title": "Visno Invest — Simpar 2T26 (lucro ajustado R$ 52 mi)",
+   "url": "https://visnoinvest.com.br/news/14772/simpar-simh3-registra-lucro-ajustado-de-r-52-mi-no-2t26"
+  }
+ ],
+ "confidence": "média-baixa — participações e DL da holding são oficiais, mas o valor depende de MOVI3/VAMO3 (alta sensibilidade a juros), o TRS é estimativa e os não listados (CS Infra, BBC) usam valores conservadores sem transação de referência."
+}

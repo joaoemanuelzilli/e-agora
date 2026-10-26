@@ -1,0 +1,267 @@
+{
+ "ticker": "ECOR3",
+ "name": "EcoRodovias Infraestrutura e Logística S.A.",
+ "sector": "Infraestrutura / concessões rodoviárias",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "ECOR3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 7406.3
+  },
+  "notes": "Receita-base FY2025 EXCLUI receita de construção (ICPC 01): conta 3.01 CVM 11.521,1 − DVA 7.01.03 'Receitas refs. à construção de ativos próprios' 4.114,8 = 7.406,3 (= receita líquida ajustada do release). Construção tem margem zero (receita = custo), então o EBITDA (EBIT 3.05 + D&A DVA) não muda; a margem sobre a receita total (~49%) é que distorce. Margens projetadas são sobre receita ex-construção, base IFRS (inclui provisão de manutenção como custo; ~1 p.p. abaixo do 'EBITDA ajustado' do release). Capex = adições ao intangível de concessão (DFC 6.02.01+6.02.02) EXCLUINDO outorgas fixas (Raposo Castello R$ 2.268 mi no 1T25; Gerais R$ 84 mi no 2T26) e juros capitalizados; por isso cost_of_net_debt é 'bruto' (inclui ~R$ 0,4–0,6 bi/ano de juros capitalizados que o DRE não mostra). FY2025 EBITDA CVM 5.640 inclui reversão de impairment da Ecovias Capixaba (+202,7 no 3T25); recorrente ≈ 5.437 (73,4% da receita ex-construção)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.03,
+   0.16,
+   0.13,
+   0.11,
+   0.1
+  ],
+  "ebitda_margin": [
+   0.73,
+   0.725,
+   0.74,
+   0.75,
+   0.76
+  ],
+  "da_pct_revenue": [
+   0.19,
+   0.2,
+   0.21,
+   0.215,
+   0.22
+  ],
+  "capex_pct_revenue": [
+   0.695,
+   0.712,
+   0.65,
+   0.568,
+   0.475
+  ],
+  "nwc_pct_revenue": 0.02,
+  "cost_of_net_debt": [
+   0.15,
+   0.15,
+   0.145,
+   0.14,
+   0.135
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.42,
+   0.4,
+   0.38,
+   0.36,
+   0.35
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.25,
+   0.25,
+   0.25,
+   0.3,
+   0.35
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.035,
+  "roic": 0.16,
+  "roe": 0.18
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.6
+ },
+ "adjustments": {
+  "other_debt_like": 3486,
+  "non_operating_assets": 352,
+  "minority_value": null,
+  "notes": "other_debt_like = Obrigações com Poder Concedente (outorgas a pagar, corrigidas por IPCA) CP 156,1 + LP 3.186,1 + Acordo do Paraná 47,1 + Acordo de não persecução cível (ANPC) 96,6 = 3.486 (BP 30/06/2026). non_operating_assets = 'Ativo sujeito à indenização' (Ecoporto, a receber do poder concedente) 352. NÃO incluímos a 'Conta reserva – poder concedente' (R$ 1.981 mi, vinculada ao contrato). DL-base do motor (CVM) = 28.851,5 dívida bruta + 363,9 arrendamentos − 5.371,4 caixa/aplicações (inclui contas-reserva de aplicações) = 23.844 (release: 23.480 ex-arrendamentos)."
+ },
+ "target_multiples": {
+  "pe": 6.0,
+  "ev_ebitda": 5.3,
+  "pbv": 1.2,
+  "rationale": "Regime de juros altos: usamos o piso histórico, não a mediana. data/market (5 anos): P/L mediana 8,7x, p10 5,7x → 6,0x; EV/EBITDA mediana 5,3x, p10 4,7x na definição do líder (EV sem as obrigações com poder concedente, ~0,6x EBITDA) → 5,3x equivalente com essas obrigações (que o motor desconta via other_debt_like). Hoje: 4,8x (pré-eleição 5,8x). Múltiplos implícitos em Ke 25%/WACC ~16% seriam bem menores (~3x EBITDA, saída do DCF)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.03,
+   "narrative": "Tráfego fraco com PIB 2027 ~1%, atraso em degraus/reequilíbrios e capex acima do orçado: DL/EBITDA passa de 4,75x (covenant) e a companhia precisa de waiver ou aumento de capital diluidor."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.03,
+   "narrative": "Juros reais recuam em 2027–28, degraus tarifários entram no prazo e free flow reduz custos: alavancagem cai abaixo de 4x em 2028 e o mercado volta a pagar ~6x EBITDA."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.025,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.03
+ },
+ "debt_profile": {
+  "gross_debt_mn": 28851.5,
+  "pct_floating_cdi": 0.2,
+  "avg_cost": "não divulgado no release; 77% IPCA/TLP (R$ 22.253 mi), 20% CDI/pré (R$ 5.650 mi), 3% TJLP (R$ 948 mi); emissões recentes de infraestrutura ~IPCA+7–8,5%; custo financeiro bruto (incl. juros capitalizados) ~15% a.a. sobre a DL no 1S26",
+  "avg_maturity_years": 7.6,
+  "next_24m_maturities_mn": 2456,
+  "covenant_nd_ebitda": 4.75
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -2,
+  "notes": "CDI quase neutro: dívida CDI/pré R$ 5,65 bi ≈ caixa R$ 5,37 bi (aplicado a CDI) ⇒ +100 bp de CDI ≈ −R$ 3 mi pré-IR. A sensibilidade relevante é ao IPCA e ao juro real: +100 bp de IPCA ⇒ ~−R$ 223 mi/ano de correção monetária da dívida (pré-IR), compensado com defasagem por reajuste tarifário (~+R$ 76 mi de receita por 100 bp). Refinanciamento: novas debêntures a NTN-B + spread — +200 bp de juro real em ~R$ 18 bi de dívida a captar/rolar até 2030 = ~R$ 0,36 bi/ano a mais."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.172,
+  "ebitda_margin_avg_5y": 0.711,
+  "roe_avg_5y": 0.241,
+  "payout_avg_5y": 0.103,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.01,
+   "ebitda_margin": 0.734,
+   "net_income_mn": 21.0,
+   "net_debt_ebitda": 4.1
+  },
+  "notes": "CAGR e margem sobre receita EX-construção só disponíveis 2023–25 (DVA 7.01.03 nos 3 últimos FYs): receita 5.395→6.440→7.406 (CAGR 17,2% a.a., impulsionado por novas concessões); margem EBITDA recorrente 69,4% / 70,6% / 73,4% (média 71,1%). CAGR 5 anos da receita TOTAL CVM (com construção) = 23,6%. ROE médio 2021–25 = 24% (PL pequeno, volátil); payout caixa médio 10%. Projeção: CAGR receita 2025–30 de 10,5% (abaixo do histórico; saída da Ecovias Sul em mar/26 e entrada da Gerais em 2027) e margem 73%→76% (maturação + free flow). 2T26: receita líquida ajustada +1,0% a/a (+9,8% comparável ex-Ecovias Sul), margem EBITDA ajustada 73,4%, lucro controlador R$ 21,0 mi (recorrente R$ 52,9 mi)."
+ },
+ "guidance": "Sem guidance numérico de receita/EBITDA/capex anual. Release 2T26 (30/07/2026): capex contratual a realizar R$ 50,9 bi (base jun/26; exclui Ecovias das Gerais, juros capitalizados e investimentos não contratuais); financiamentos de longo prazo contratados R$ 18,4 bi (R$ 10,6 bi a desembolsar) cobrindo integralmente Norte Minas, Minas Goiás, Rio Minas, Araguaia e Noroeste Paulista; Ecovias das Gerais (BR-251/BR-116 MG, 30 anos, assumida em jul/26) com pedágio previsto até jan/27, que segundo a companhia 'compensará integralmente' a saída da Ecovias Sul (contrato encerrado em 04/03/2026).",
+ "dividend_policy": "Mínimo estatutário de 25% do lucro ajustado; sem JCP relevante nem recompras. Histórico baixo (CVM, caixa): 0% 2021, 2% 2022, 10% 2023, 15% 2024, 24% 2025. Último: R$ 0,3024/ação (R$ 210,4 mi; data-com 12/05/2026; pago 12/06/2026) referente a 2025. Com lucro recorrente de R$ 43 mi no 1S26, dividendos 2026–27 devem ficar no mínimo.",
+ "election_impact": "Quase tudo macro/financeiro, amplificado por alavancagem: (i) 77% da dívida bruta é IPCA/TLP e 20% CDI/pré — juro real e CDI mais altos por mais tempo encarecem a dívida (resultado financeiro já subiu 31% a/a no 2T26) e o desconto dos fluxos; (ii) o equity é ~11% do EV: o EV (incl. obrigações com poder concedente) caiu ~16% (R$ 36 bi→R$ 31 bi) e a ação −62%; (iii) duração longa (contratos de 30 anos, vários até os anos 2050); (iv) risco de covenant (4,75x vs 4,1x; projetamos ~4,6x em 2026–27) e de emissão de ações a preço deprimido. Micro/regulatório: contratos federais (ANTT) e estaduais (SP); o 3º governo Lula manteve leilões e repactuações consensuais (TCU), então o risco de congelamento tarifário é moderado, mas reequilíbrios de investimentos não contratuais podem atrasar. data/market: resíduo idiossincrático de −26% vs. beta e −12% vs. a predição cross-section — há algum excesso, mas a Ke 25% o valor intrínseco segue abaixo do preço. Conclusão: repricing majoritariamente racional, não sobrerreação.",
+ "summary": "Holding de 11 concessões rodoviárias (SP, ES, MG, GO, TO) no pico de um ciclo de capex de R$ 50,9 bi financiado com dívida: DL R$ 23,5 bi (4,1x EBITDA ajustado; covenant 4,75x), lucro recorrente quase zero. A Ke 25% (WACC ~16%) o DCF dá equity negativo e o valor justo ponderado fica ~R$ 2,5 vs R$ 5,1: a queda de 62% é sobretudo repricing de um equity muito alavancado e longo, uma opção sobre queda de juros — não uma oportunidade de valor.",
+ "thesis": [
+  "EBITDA ajustado comparável +9% no 2T26 e +12,9% no 1S26 (tarifas IPCA + tráfego +3,2% + degraus); margem ajustada 73–75%",
+  "Financiamento do capex de 5 concessões 100% contratado (R$ 18,4 bi; R$ 10,6 bi a desembolsar); caixa de R$ 5,4 bi = 6x a dívida de curto prazo e 1,8x os vencimentos 2S26–2028",
+  "Alta opcionalidade a juros: −100 bp no custo médio da dívida bruta (~R$ 28,9 bi) ≈ +R$ 290 mi/ano de lucro antes de IR, vs. lucro recorrente de R$ 43 mi no 1S26",
+  "Ecovias das Gerais (pedágio até jan/27) repõe o EBITDA da Ecovias Sul (~R$ 0,48 bi/ano em 2025)"
+ ],
+ "risks": [
+  "Covenant DL/EBITDA 4,75x (relatórios de crédito Santander; escritura não verificada): base projeta ~4,6x em 2026–27; capex acima/tráfego abaixo → waiver ou aumento de capital diluidor (controlador ASTM)",
+  "77% da dívida indexada a IPCA/TLP: inflação mais alta pós-desvalorização eleva a correção monetária antes do repasse tarifário (defasagem de até 12 meses)",
+  "Execução simultânea de obras (Rio Minas, Araguaia, Noroeste Paulista, Raposo Castello, Capixaba, Gerais) e reequilíbrios pendentes (ex.: free flow Imigrantes, R$ 264,7 mi)",
+  "Ecoporto Santos em contrato de transição; passivos de leniência/ANPC e Acordo do Paraná (~R$ 0,14 bi)",
+  "Ke 25%: com WACC ~16% e ROIC ~9–10% até 2030, cada real investido destrói valor para esse hurdle"
+ ],
+ "catalysts": [
+  "Resultado 3T26 (início de nov/2026): alavancagem vs. covenant e capex do 2S26",
+  "Início de cobrança na Ecovias das Gerais (até jan/2027)",
+  "Degraus tarifários pós-obras nas concessões federais (2027–2028)",
+  "Queda de juros reais (NTN-B) — principal gatilho de reprecificação"
+ ],
+ "key_data": [
+  {
+   "label": "Dívida líquida/EBITDA ajustado 2T26",
+   "value": "4,1x",
+   "context": "covenant 4,75x (Santander Research); subholding ECS 3,9x"
+  },
+  {
+   "label": "Dívida líquida 2T26",
+   "value": "R$ 23.480 mi",
+   "context": "+ R$ 3.342 mi de obrigações com poder concedente e R$ 364 mi de arrendamentos"
+  },
+  {
+   "label": "Dívida por indexador",
+   "value": "77% IPCA/TLP · 20% CDI/pré · 3% TJLP",
+   "context": "prazo médio 7,6 anos; 90% dos vencimentos após 2029"
+  },
+  {
+   "label": "Capex contratual a realizar",
+   "value": "R$ 50,9 bi",
+   "context": "base jun/26, ex-Gerais; capex 1S26 R$ 2,52 bi"
+  },
+  {
+   "label": "Lucro recorrente 1S26",
+   "value": "R$ 43,1 mi",
+   "context": "−88% a/a; resultado financeiro R$ −1,57 bi no semestre"
+  },
+  {
+   "label": "EV/EBITDA LTM (data/market)",
+   "value": "4,8x",
+   "context": "pré-eleição 5,8x; mediana 5 anos 5,3x"
+  },
+  {
+   "label": "Valor justo (motor, Ke 25%)",
+   "value": "~R$ 2,5/ação",
+   "context": "DCF negativo; DDM ~R$ 3; múltiplos ~R$ 5,6"
+  }
+ ],
+ "sources": [
+  {
+   "title": "EcoRodovias — Release de Resultados 2T26 (30/07/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/7c109ecb-88c9-441f-91cb-66a8db417120/9d83ccee-0591-e096-4129-d1bd16ce5c22?origin=2"
+  },
+  {
+   "title": "EcoRodovias — Apresentação de Resultados 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/7c109ecb-88c9-441f-91cb-66a8db417120/17cd19b4-5ec6-20e3-e341-8a24036adb24?origin=2"
+  },
+  {
+   "title": "CVM — ITR 2T26 / DFP 2023–2025 padronizados (data/hist/ECOR3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — proventos ECOR3 (dividendo R$ 0,3024, data-com 12/05/2026)",
+   "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/?language=pt-br"
+  },
+  {
+   "title": "Santander Research (crédito) — EcoRodovias, covenant 4,75x (ago/2024 e ago/2025)",
+   "url": "https://cms.santander.com.br/sites/WPS/documentos/arq-AcordeaoDownloadItem-transporte-EcoRodovias/25-08-07_171643_20250806-ecorodovias.pdf"
+  },
+  {
+   "title": "ASTM — vitória no leilão Rota das Gerais (01/04/2026)",
+   "url": "https://www.astm.it/wp-content/uploads/2026/04/2026.04.01_ASTM_RotadasGerais_ENG.pdf"
+  },
+  {
+   "title": "Money Times — lucro 2T26",
+   "url": "https://www.moneytimes.com.br/ecorodovias-ecor3-tem-queda-de-95-no-lucro-no-2t26-para-r-99-milhoes-vtra/"
+  },
+  {
+   "title": "Suno — Itaú BBA preço-alvo R$ 11 (data não confirmada)",
+   "url": "https://www.suno.com.br/noticias/ecorodovias-ecor3-pode-disparar-mais-48-itau-bba-go/amp/"
+  }
+ ],
+ "confidence": "média — números do 2T26 conferidos release × CVM; incertezas relevantes: capex anual 2027–30 (estimado a partir do capex contratual a realizar, sem guidance), degraus tarifários (não modelados contrato a contrato) e covenant (4,75x de relatório de crédito, não da escritura). A conclusão (valor < preço a Ke 25%) é robusta a essas incertezas."
+}

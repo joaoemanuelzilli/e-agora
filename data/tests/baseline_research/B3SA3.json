@@ -1,0 +1,251 @@
+{
+ "ticker": "B3SA3",
+ "name": "B3 S.A. – Brasil, Bolsa, Balcão",
+ "sector": "Financeiro / Infraestrutura de mercado (bolsa, clearing, depositária, balcão, dados)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "B3SA3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override de base. Atenção: na CVM a conta 3.01 da B3 é a RECEITA BRUTA/total (FY2025 R$ 11.121,5 mi; deduções PIS/Cofins/ISS em 3.02). Por isso margens EBITDA aqui são sobre receita bruta (~63%), não sobre a líquida (~70%, conceito do release). EBITDA CVM do 2T26 inclui ganho não recorrente de R$ 123,9 mi (venda da Dimensa). Lucro recorrente LTM ≈ R$ 5,5 bi vs contábil CVM LTM R$ 5.330 mi (ajustes do release: amortização de intangível, JCP extraordinário, Dimensa, rescisões da diretoria)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.12,
+   0.0,
+   0.04,
+   0.06,
+   0.06
+  ],
+  "ebitda_margin": [
+   0.63,
+   0.61,
+   0.615,
+   0.62,
+   0.625
+  ],
+  "da_pct_revenue": [
+   0.031,
+   0.032,
+   0.032,
+   0.032,
+   0.032
+  ],
+  "capex_pct_revenue": [
+   0.027,
+   0.03,
+   0.03,
+   0.03,
+   0.03
+  ],
+  "nwc_pct_revenue": 0.0,
+  "cost_of_net_debt": [
+   0.09,
+   0.09,
+   0.085,
+   0.08,
+   0.075
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.25,
+   0.3,
+   0.3,
+   0.3,
+   0.3
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.9,
+   0.95,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.3,
+  "roe": 0.3
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.1
+ },
+ "adjustments": {
+  "other_debt_like": 3761,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "R$ 3.761 mi = garantias recebidas em dinheiro de participantes (R$ 2.654,7 mi, passivo circulante; o caixa correspondente está nas aplicações) + JCP deliberado em 18/06/2026 (R$ 1.106,0 mi, inclui R$ 750 mi extraordinários), que sai do caixa após a data-base. Caixa líquido CVM (−R$ 4.407 mi) vira ~R$ 0,6 bi efetivo. Não deduzi recursos próprios alocados às câmaras (não quantificados no release). O kd 9% sobre o caixa líquido CVM reproduz o resultado financeiro LTM (+R$ 408 mi): o caixa rende ~100% CDI e a dívida custa CDI+spread."
+ },
+ "target_multiples": {
+  "pe": 12.5,
+  "ev_ebitda": 8.5,
+  "pbv": null,
+  "rationale": "P/L-alvo 12,5x: em 11/08/2026 a B3 negociava a ~13x o lucro recorrente LTM (R$ 14,29; market cap R$ 71,3 bi; fonte Renova Invest) e, na sexta pré-eleição (R$ 23,65), a ~21x — patamar de euforia. Faixa histórica aproximada 2021–2025 de 11–17x (estimativa, não verificada nesta rodada). Uso 12,5x, abaixo da média, porque o regime de juros (DI longo 15,7%) e a ressaca do mercado de capitais pesam no múltiplo de saída. EV/EBITDA 8,5x consistente com P/L 12,5x, caixa líquido ~0 e IR ~30%."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Ressaca longa: ADTV de ações −25% (R$ 31 bi→~23 bi), ofertas zeradas, saída de estrangeiros e pressão tarifária/concorrencial."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Volatilidade sustenta recordes em DI/câmbio, Tesouro Direto e renda fixa seguem +15–20% a.a.; ADTV volta a ~R$ 30 bi em 2028."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.005
+ },
+ "debt_profile": {
+  "gross_debt_mn": 14933,
+  "pct_floating_cdi": null,
+  "avg_cost": "CDI + spread (debêntures) e bond USD 2031 com hedge accounting das receitas em USD; % pós-fixado não verificado",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 2623,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 28,
+  "notes": "Efeito financeiro direto pequeno: caixa e aplicações R$ 19,3 bi vs dívida bruta R$ 14,9 bi, ambos majoritariamente CDI → +100 bp ≈ +R$ 44 mi antes de IR (~+R$ 28 mi líquido, estimativa). O efeito relevante é operacional e misto: juros altos derrubam ADTV de ações/IPOs (Renda Variável = 22,5% da receita do 2T26) mas elevam DI/câmbio (Derivativos 28,6%) e Tesouro Direto/renda fixa (12,5%, estoque TD +43,7% a/a)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.0358,
+  "ebitda_margin_avg_5y": 0.654,
+  "roe_avg_5y": 0.219,
+  "payout_avg_5y": 1.09,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.122,
+   "ebitda_margin": 0.629,
+   "net_income_mn": 1377,
+   "net_debt_ebitda": -0.58
+  },
+  "notes": "Receita bruta CVM: 2020 9.327 → 2025 11.122 (CAGR 3,6%); 2022–23 caíram ~2% a.a. com Selic 13,75% (precedente de pós-choque). 1S26 +16% a/a (ADTV R$ 31–35 bi e DI recorde em mar/26). Projeção: 2026 +12% (1S realizado), 2027 0% (repete 2022–23), 2028–30 +4–6% → CAGR 2027–30 de 4,0%, próximo do histórico. Margem EBITDA sobre receita bruta: média 5a 65,4% (2021 71,7% → 2025 63,2%); 2T26 recorrente 62,9% (70,2% s/ líquida) já com PIS/Cofins maior (+69% a/a). Assumo 61–62,5% até 2030 (despesas ajustadas crescem ~IPCA+1,5%, receita fraca em 2027). Distribuição (proventos+recompras)/lucro: 2023 100%, 2024 128%, 2025 97% (DFC CVM); 1S26 66%. Payout 0,9–1,0 inclui recompras porque o DDM do motor não conta recompras."
+ },
+ "guidance": "Guidance 2026 detalhado (despesas, capex, alavancagem, payout) NÃO localizado nesta rodada (orçamento de buscas esgotado). Do release 2T26: despesas ajustadas crescendo ~IPCA+1,5% (+6,2% a/a no 2T26); capex R$ 112 mi no 1S26 (desembolsos totais em tecnologia, capex+opex, R$ 451 mi no 1S26); dívida bruta R$ 14,9 bi = 2,0x EBITDA recorrente LTM. Novo CEO (Christian Egan) anunciado em jun/26. 3T26 será divulgado em 12/11/2026.",
+ "dividend_policy": "Distribui ~100% do lucro societário via JCP (trimestral), dividendos e recompras; ~19% do capital recomprado desde 2021 (Renova). 2T26: JCP R$ 1.106 mi (R$ 356 mi ordinário + R$ 750 mi extraordinário de saldos de anos anteriores) + recompra R$ 196,9 mi = R$ 1,30 bi; 1S26 JCP R$ 1.479 mi. 4.998,3 mi ações em circulação; 48,2 mi em tesouraria (30/06/2026).",
+ "election_impact": "Queda de −45% (R$ 23,65→12,93) é canal macro/beta, não lucro: a ação havia subido ~65% desde ago/26 (R$ 14,29) na aposta de vitória de Flávio, e hoje devolveu tudo e mais (abaixo do nível de agosto). Lucro: Renda Variável (22,5% da receita) cai com bolsa em baixa e IPOs fechados, mas Derivativos (28,6%) — sobretudo DI e câmbio — e Renda Fixa/Tesouro (12,5%) ganham com volatilidade e Selic alta; ~40% da receita é recorrente (dados, tecnologia, Trillia, depositária). Quantificação: −20% de ADTV ≈ −4,5% da receita total; +10% de ADV de derivativos ≈ +2,9%. Em 2022–23 (Selic 13,75%, eleição) a receita caiu ~2% a.a. — premissa 2027 = 0%. LPA 2027E ~R$ 1,07 (≈ −10% vs. uma trajetória pré-eleição de receita +6–8% e margem ~63,5%), enquanto o preço caiu 37–45%. Valor intrínseco muda pouco; o que muda é o múltiplo (P/L 2027E de ~22x na sexta para ~13x).",
+ "summary": "Monopólio de infraestrutura de mercado com margem EBITDA ~70% (s/ receita líquida), caixa líquido ~0 e distribuição ~100% do lucro. A queda de 45% apaga o rali eleitoral e leva a ação a ~12x P/L 2027E, mas a Ke de 25% exige ~5–6x para um negócio que cresce ~5% nominal: não é oportunidade nesse critério, apesar de o lucro ser bem menos afetado que o preço.",
+ "thesis": [
+  "Lucro resiliente: 2T26 lucro recorrente R$ 1.377 mi (+8% a/a), EBITDA recorrente R$ 1.939 mi (margem 70,2% s/ líquida); 2022–23 mostraram receita só −2% a.a. em ambiente de Selic alta.",
+  "Hedge natural: Derivativos (R$ 881,5 mi/tri) e Renda Fixa (R$ 385,5 mi, +17% a/a; estoque Tesouro Direto +43,7%) ganham com volatilidade e juros altos, compensando ações.",
+  "Retorno de caixa ~100% do lucro (dividend yield ~8% a R$ 12,93) e caixa líquido ~R$ 0,6 bi após ajustes.",
+  "Valuation a ~12x P/L 2027E (vs ~21x na sexta) — barato vs. a própria história, mas não vs. Ke de 25%."
+ ],
+ "risks": [
+  "Volumes de ações: ADTV de R$ 31,3 bi (2T26) pode cair 20–30% numa bolsa em baixa com CDI ~15%.",
+  "Tributação: CSLL subiu (alíquota combinada 34%→37% a partir do 2T26, LC 224/2025) e PIS/Cofins +69% a/a no 2T26; risco de novas mudanças tributárias sobre investimentos num 4º mandato.",
+  "Concorrência de nova bolsa/clearing e pressão de tarifas (status regulatório não verificado nesta rodada).",
+  "Execução sob novo CEO (jun/26) e despesas extraordinárias de transição (R$ 40,5 mi no 2T26)."
+ ],
+ "catalysts": [
+  "Resultado 3T26 em 12/11/2026 (trimestre pré-eleição com volumes fortes).",
+  "Boletins mensais de operações de out–nov/2026 (volumes de DI e câmbio no choque).",
+  "Novo plano/guidance 2027 do novo CEO (dez/26–fev/27)."
+ ],
+ "key_data": [
+  {
+   "label": "Receita total 2T26",
+   "value": "R$ 3.081,4 mi (+12,2% a/a)",
+   "context": "Líquida R$ 2.765,7 mi (+8,8%)"
+  },
+  {
+   "label": "EBITDA recorrente 2T26",
+   "value": "R$ 1.938,6 mi",
+   "context": "Margem 70,2% s/ líquida; 62,9% s/ bruta"
+  },
+  {
+   "label": "Lucro recorrente 2T26",
+   "value": "R$ 1.376,6 mi (+8,0% a/a)",
+   "context": "Contábil R$ 1.698,8 mi (Dimensa + JCP extra)"
+  },
+  {
+   "label": "ADTV ações 2T26",
+   "value": "R$ 31,3 bi (+20,1%)",
+   "context": "1T26 R$ 34,8 bi"
+  },
+  {
+   "label": "ADV derivativos 2T26",
+   "value": "11,1 mi contratos (−8,3%)",
+   "context": "Juros R$ +6,7%; DI recorde em mar/26"
+  },
+  {
+   "label": "Dívida bruta / EBITDA rec. LTM",
+   "value": "R$ 14,9 bi / 2,0x",
+   "context": "Caixa+aplicações R$ 19,3 bi; caixa líquido CVM R$ 4,4 bi"
+  },
+  {
+   "label": "Preço / market cap",
+   "value": "R$ 12,93 / ~R$ 64,6 bi",
+   "context": "Sexta R$ 23,65 (~R$ 118 bi)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "B3 — Release de Resultados 2T26 (11/08/2026)",
+   "url": "https://static.poder360.com.br/uploads/2026/08/Release-de-Resultados-2T26.pdf"
+  },
+  {
+   "title": "Renova Invest — B3 lucra R$ 1,4 bi no 2T26 (11/08/2026)",
+   "url": "https://renovainvest.com.br/blog/b3-resultado-2t26/"
+  },
+  {
+   "title": "Seu Dinheiro — Calendário de balanços do 3T26 (19/10/2026)",
+   "url": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação ao vivo (API oficial), 26/10/2026",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/"
+  }
+ ],
+ "confidence": "média — dados do 2T26 e CVM sólidos; guidance 2026 formal e múltiplos históricos não verificados (orçamento de buscas esgotado); volumes pós-choque são o principal incerto."
+}

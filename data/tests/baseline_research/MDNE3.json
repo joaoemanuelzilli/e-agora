@@ -1,0 +1,264 @@
+{
+ "ticker": "MDNE3",
+ "name": "Moura Dubeux Engenharia",
+ "sector": "Construção civil / incorporação média-alta renda e 2ª residência no Nordeste (incorporação + condomínio a preço de custo; Mood, Beach Class, Ún1ca-MCMV com Direcional)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "MDNE3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 56.4
+  },
+  "notes": "DL: a CVM classifica a cessão de recebíveis de fee de terreno (R$ 146,9 mi, 1ª cessão no 2T26) nas linhas de debêntures; como nos pares (DIRR3, PLPL3), não a tratamos como dívida — é autoliquidável com os recebíveis cedidos que seguem no ativo. DL = 1.087,0 − 883,7 − 146,9 = R$ 56,4 mi (release: R$ 56,3 mi). Receita/EBITDA sem ajuste de base (FY2025 ROL R$ 2.356,9 mi; EBITDA CVM R$ 462,7 mi). ebitda_margin soma ~1,7 p.p. de juros capitalizados no custo (margem bruta ajustada 40,2% vs 38,6% no 2T26), deduzidos em other_financial (lucro inalterado; evita dupla contagem no DCF). Ações: 103,7 mi (após follow-on de 19,3 mi de ações a R$ 25 em jan/2026)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.12,
+   -0.05,
+   0.03,
+   0.08,
+   0.08
+  ],
+  "ebitda_margin": [
+   0.252,
+   0.227,
+   0.227,
+   0.232,
+   0.232
+  ],
+  "da_pct_revenue": [
+   0.007,
+   0.007,
+   0.007,
+   0.007,
+   0.007
+  ],
+  "capex_pct_revenue": [
+   0.02,
+   0.02,
+   0.02,
+   0.02,
+   0.02
+  ],
+  "nwc_pct_revenue": 0.9,
+  "cost_of_net_debt": [
+   0.145,
+   0.14,
+   0.13,
+   0.125,
+   0.12
+  ],
+  "other_financial": [
+   65,
+   62,
+   56,
+   53,
+   49
+  ],
+  "tax_rate": [
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.3,
+   0.55,
+   0.6,
+   0.65,
+   0.65
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.18,
+  "roe": 0.2
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.1
+ },
+ "adjustments": {
+  "other_debt_like": 252,
+  "non_operating_assets": 0,
+  "minority_value": 0,
+  "notes": "other_debt_like R$ 252 mi = saldo de dividendos declarados em 29/12/2025 (data-com 30/12/2025; R$ 351,7 mi) ainda a pagar no balanço-base: R$ 200,0 mi no circulante + R$ 51,7 mi no não circulante (a CVM rotula a linha como 'contas a pagar por aquisição de imóveis — permutas'; o valor bate com o cronograma de parcelas). Desses, R$ 100 mi foram pagos em 14/07/2026 e R$ 151,7 mi serão pagos em mar/jun/set-2027 — tudo para quem era acionista em 30/12/2025, não para o comprador de hoje. Minoritários desprezíveis (PL de minoritários negativo, −R$ 4,3 mi). Recebíveis de venda de terreno a condomínios (R$ 1,49 bi, com alienação fiduciária) ficam no capital de giro."
+ },
+ "target_multiples": {
+  "pe": 5.0,
+  "ev_ebitda": 4.5,
+  "pbv": 0.75,
+  "rationale": "Histórico desde o IPO (data/market): P/L mediana 6,2x (p25 5,5x; mín 3,4x = hoje); EV/EBITDA mediana 6,2x (p25 5,5x); P/VP mediana 0,75x (p25 0,52x; máx ~1,4x pré-eleição). Usamos P/L 5,0x e EV/EBITDA 4,5x (abaixo do p25: lucro de 2025–26 está no pico do ciclo e é sensível ao ritmo de novos condomínios). P/VP alvo 0,75x = Gordon a Ke 25%: (ROE sustentável 20% − 5%)/(25% − 5%); coincide com a mediana histórica. Sell-side pré-choque (BTG/Itaú BBA R$ 44, BBI R$ 47, XP R$ 38) usava Ke ~17%."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.07,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Adesões a condomínios seguem caindo (−43,5% a/a no 3T26), fee de terreno reconhecido antecipadamente some em 2027, Beach Class/2ª residência trava com CDI de 14–15% e inadimplência nos R$ 1,49 bi de recebíveis de terreno."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.04,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Guidance de R$ 4,5–5,5 bi de lançamentos cumprido, Mood/Ún1ca (renda do Nordeste e MCMV favorecidos pelo governo) compensam o alto padrão, curva devolve parte do choque."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.06,
+  "ebitda_margin_sd": 0.025,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.003
+ },
+ "debt_profile": {
+  "gross_debt_mn": 940,
+  "pct_floating_cdi": 0.65,
+  "avg_cost": "CRI/debêntures: Vert 103,75% CDI (R$ 279 mi), True CDI+1,6% (R$ 102 mi), CRI-SFH CDI+4,0% (R$ 58 mi), IPCA+8,1–8,4% (R$ 172 mi); SFH/SFI TR+~10,8% (R$ 158 mi) — custo médio oficial não divulgado",
+  "avg_maturity_years": 3.0,
+  "next_24m_maturities_mn": 349,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 2,
+  "notes": "Caixa R$ 884 mi > dívida em CDI (~R$ 610 mi) → exposição líquida levemente comprada (+R$ 2–3 mi/ano por +100 bp). Resultado financeiro líquido positivo (+R$ 34,7 mi no 2T26). O canal relevante é a demanda: 2ª residência/investidor (Beach Class 39% das vendas no 3T26) compete com CDI alto, e a incorporação (26–39% das vendas) depende de repasse bancário na entrega. Covenant (DL + imóveis a pagar)/PL 0,12 vs limite 0,45 (mar/26). Dívida bruta da empresa R$ 940 mi; CVM R$ 1.087 mi com a cessão."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.356,
+  "ebitda_margin_avg_5y": 0.148,
+  "roe_avg_5y": 0.15,
+  "payout_avg_5y": 0.28,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.1,
+   "ebitda_margin": 0.228,
+   "net_income_mn": 174.1,
+   "net_debt_ebitda": 0.1
+  },
+  "notes": "CAGR receita 2020–25 de 35,6% (513→2.357) parte de base deprimida pós-reestruturação; projetamos ~5% a.a. 2025–30 (2026 +12%; 2027 −5% pela queda das adesões e do fee de terreno; depois +3–8%). Margem EBITDA CVM subiu de 10,7% (2021) para 19,6% (2025) e 23,8% no 1S26 (condomínio 42% de margem bruta); projetamos 21–23,5% + 1,7 p.p. de juros capitalizados. ROE 27,5% em 2025 e 28% LTM, mas o follow-on de R$ 483 mi (jan/26) dilui: modelo dá ~22–24% em 2026–27 e ~20% à frente. Payout: 0% até 2023, ~42% (2024) e ~96% (2025, antecipação ao IR); projetamos 30–55%. DL/EBITDA ~0,1x (DL R$ 56 mi sem cessão)."
+ },
+ "guidance": "Guidance formal (fato relevante 09/02/2026): lançamentos de R$ 4,5–5,5 bi de VGV (%MD) em 2026; 9M26 R$ 3,87 bi. Sem guidance de margem, vendas ou dividendos. Metas informais (4T24): ROAE ≥20%, lucro > R$ 500 mi, dividendos ≥ R$ 50 mi/semestre. CEO (07/07/2026): ~R$ 5 bi de lançamentos e ~R$ 3,8 bi de vendas em 2026.",
+ "dividend_policy": "Mínimo estatutário de 25% do lucro ajustado + compromisso informal de ≥ R$ 50 mi por semestre. Ciclo de dividendos iniciado em nov/2024 (R$ 54,7 mi) e mai/2025 (R$ 50 mi); nov/2025 R$ 50,7 mi; 29/12/2025 R$ 351,7 mi (R$ 4,16/ação, data-com 30/12/2025, citando a Lei 15.270/2025) pagos em 7 parcelas até set/2027 — o comprador de hoje não recebe essas parcelas. Nenhuma declaração nova em 2026 até 26/10. Recompra: programa jun/2026–dez/2027 de até 1,36 mi de ações (2% do free float).",
+ "election_impact": "Queda de −39% mistura macro (Ke/curva +300 bp, beta alto de ~1,7–2,0) com um micro que já piorava antes da eleição: no 3T26 as vendas líquidas caíram 21,5% a/a e as adesões a condomínios 43,5%, com distratos subindo para 8,3%. O lucro reconhece antecipadamente o fee de terreno na constituição de cada condomínio, então menos adesões em 2027 derrubam rápido o lucro — nosso 2027E cai ~12% vs 2026E. A favor: Nordeste é base do governo (renda, salário mínimo, isenção de IR até R$ 5 mil) e o MCMV deve se expandir (Ún1ca, Mood); condomínio repassa custo (INCC) aos condôminos; caixa R$ 884 mi e DL ~zero.",
+ "summary": "Líder do Nordeste com modelo de condomínio a preço de custo (ROE de 28% LTM, capital leve), mas lucro sensível ao ritmo de adesões, que já desacelerava antes da eleição. A R$ ~19 (P/L 2026E ~3,2x, P/VP 0,87x) o motor dá valor justo de R$ 20,6 e TIR implícita de ~26%: único nome do grupo que passa (por pouco) no hurdle de 25%, desde que o ROE fique ≥20%.",
+ "thesis": [
+  "Retorno alto e balanço leve: ROE LTM 28%, DL R$ 56 mi, caixa R$ 884 mi; condomínio (67% da receita) transfere custo de obra aos condôminos.",
+  "Preço: P/L 2026E ~3,2x e P/VP 0,87x (vs 1,37x pré-eleição); lucro 2026E de R$ 619 mi e payout crescente (DY 15–18% em 2027–28) levam a TIR implícita de ~26% mesmo com ROE de longo prazo de ~20% (P/VP Gordon 0,75x).",
+  "Renda do Nordeste e MCMV (Ún1ca, R$ 750 mi de VGV baixa renda em 2026; pipeline R$ 2 bi em 2027 segundo o Itaú BBA) são hedge político parcial.",
+  "REF R$ 468 mi (margem 37%) + R$ 467 mi de taxas de administração a incorrer dão visibilidade a 2027."
+ ],
+ "risks": [
+  "Concentração de lucro no fee de terreno (≈44% da receita bruta no 2T26), reconhecido na constituição dos condomínios — adesões −43,5% no 3T26.",
+  "Alto padrão/2ª residência (65% das vendas no 3T26) é demanda de investidor que compete com CDI de 14–15%.",
+  "Consumo de caixa (−R$ 170 mi no 3T26) e recebíveis de terreno de R$ 1,49 bi: risco de inadimplência dos condôminos.",
+  "Liquidez menor (ADTV ~R$ 39 mi) e beta alto em quedas (~1,9–2,0)."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (meados de nov/2026).",
+  "Lançamentos do 4T26 vs guidance (faltam R$ 0,6–1,6 bi) e dividendos intercalares de fim de ano.",
+  "Novas regras do MCMV e evolução da Ún1ca."
+ ],
+ "key_data": [
+  {
+   "label": "Receita LTM 2T26",
+   "value": "R$ 2.612 mi",
+   "context": "2025 +50%; 2T26 +10% a/a"
+  },
+  {
+   "label": "Lucro líquido LTM 2T26",
+   "value": "R$ 559,9 mi",
+   "context": "ROAE UDM 28%"
+  },
+  {
+   "label": "DL 2T26 (sem cessão)",
+   "value": "R$ 56 mi",
+   "context": "DL/PL 2,5%; caixa R$ 884 mi"
+  },
+  {
+   "label": "Prévia 3T26",
+   "value": "Vendas líq. R$ 842 mi (−21,5% a/a)",
+   "context": "adesões −43,5%; VSO UDM 44,7%"
+  },
+  {
+   "label": "Dividendos a pagar a acionistas de 30/12/2025",
+   "value": "R$ 252 mi no balanço-base",
+   "context": "R$ 151,7 mi ainda em 2027"
+  },
+  {
+   "label": "P/L 2026E hoje",
+   "value": "~3,1x",
+   "context": "P/VP 0,84x"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Moura Dubeux — Release 2T26 (12/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/0b55ea34-4419-4e98-859b-742720701ad7/46901920-45d1-517f-af04-bf4fd4ad79e4?origin=2"
+  },
+  {
+   "title": "Moura Dubeux — Prévia operacional 3T26 (08/10/2026)",
+   "url": "https://filemanager-cdn.mziq.com/published/0b55ea34-4419-4e98-859b-742720701ad7/a265ee18-d454-4492-89d4-358fadc6ca35"
+  },
+  {
+   "title": "Moura Dubeux — Fato relevante guidance 2026 (09/02/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/0b55ea34-4419-4e98-859b-742720701ad7/7b1b4882-4167-1d63-5bf9-0bcf6dd6daba?origin=2"
+  },
+  {
+   "title": "Moura Dubeux — Fato relevante dividendos 29/12/2025",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/0b55ea34-4419-4e98-859b-742720701ad7/345cd175-6ee3-f4db-7b79-10ca7525e371?origin=2"
+  },
+  {
+   "title": "Moura Dubeux — RI, dividendos",
+   "url": "https://ri.mouradubeux.com.br/servicos-a-investidores/dividendos-2/"
+  },
+  {
+   "title": "Itaú BBA sobre MDNE3 (Forbes, 20/07/2026)",
+   "url": "https://forbes.com.br/forbes-money/forbes-real-estate/2026/07/moura-dubeux-mdne3-preco-alvo-itau-bba/"
+  },
+  {
+   "title": "BTG Research — MDNE3",
+   "url": "https://content.btgpactual.com/research/ativo/MDNE3"
+  },
+  {
+   "title": "Money Times — CEO: guidance 2026",
+   "url": "https://www.moneytimes.com.br/ceo-da-moura-dubeux-mdne3-queda-nos-lancamentos-foi-estrategica-e-empresa-deve-superar-guidance-em-2026-igdl/"
+  },
+  {
+   "title": "Demonstrações padronizadas CVM — data/hist/MDNE3.json",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média — números de 2T26/3T26 sólidos (release, prévia, CVM); incerteza alta na receita de 2027, que depende de novos condomínios (fee de terreno), e na leitura de que a linha CVM de R$ 51,7 mi é dividendo a pagar (inferência pelo cronograma)."
+}

@@ -1,0 +1,244 @@
+{
+ "ticker": "COGN3",
+ "name": "Cogna Educação S.A.",
+ "sector": "Educação / ensino superior (Kroton) + educação básica (Vasta/Somos/Saber)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "COGN3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 5536.6
+  },
+  "notes": "Receita base = CVM FY2025 (R$ 7.017 mi). DL base = DL CVM 2T26 (R$ 5.214 mi; já inclui arrendamentos de R$ 2.760 mi em 2.01.04.03/2.02.01.03) + R$ 321 mi de itens que a companhia soma à sua dívida líquida (contas a pagar por aquisições R$ 150 mi, derivativos R$ 124 mi e outros) para reconciliar com a DL reportada ex-arrendamentos de R$ 2.775,4 mi + dividendos a pagar R$ 1,2 mi = R$ 5.536,6 mi. Capex = capex CVM (~7% da ROL, inclui produção de conteúdo da Vasta) + ~3,0% de adições de direito de uso (≈ principal de arrendamento pago em 2025) (renovação de aluguéis), para coerência com EBITDA IFRS-16 e arrendamentos na DL. Lucro ex-2024: o 4T24 teve ganho não recorrente relevante (lucro de R$ 926 mi no trimestre); não usado como base."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.14,
+   0.055,
+   0.06,
+   0.06,
+   0.055
+  ],
+  "ebitda_margin": [
+   0.3,
+   0.3,
+   0.305,
+   0.305,
+   0.305
+  ],
+  "da_pct_revenue": [
+   0.115,
+   0.11,
+   0.106,
+   0.103,
+   0.1
+  ],
+  "capex_pct_revenue": [
+   0.1,
+   0.1,
+   0.1,
+   0.1,
+   0.1
+  ],
+  "nwc_pct_revenue": 0.2,
+  "cost_of_net_debt": [
+   0.135,
+   0.14,
+   0.14,
+   0.135,
+   0.13
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.08,
+   0.1,
+   0.12,
+   0.15,
+   0.15
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.3,
+   0.4,
+   0.5,
+   0.5,
+   0.6
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.18,
+  "roe": 0.18
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.35
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Itens debt-like já na DL base (overrides.base.net_debt). Minoritários contábeis R$ 11 mi (Vasta foi 100% incorporada em 2025; Educbank 90%)."
+ },
+ "target_multiples": {
+  "pe": 6.5,
+  "ev_ebitda": 4.5,
+  "pbv": 0.4,
+  "rationale": "P/L 6,5x e EV/EBITDA IFRS-16 4,5x: abaixo da média de 5 anos da COGN3 (que oscilou de prejuízo a ~10–15x P/L e ~5–7x EV/EBITDA IFRS-16 em 2021–25, aprox.) e em linha com YDUQ3; coerente com Ke 25% (P/L de Gordon ~4–5x) mais um prêmio pela geração de caixa (FCL 1S26 R$ 504 mi). P/VP irrelevante (PL de R$ 13,7 bi é majoritariamente ágio)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Novo marco do EAD aprofunda a queda de captação (EAD −34% no 1S26) e o PNLD volta a níveis baixos; presencial não compensa e margem da Kroton cai abaixo de 37%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "4º mandato amplia FIES/PNLD e o semipresencial se consolida com ticket maior; Cogna vira caixa líquido em 2028 e eleva payout/recompras."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.035,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.005
+ },
+ "debt_profile": {
+  "gross_debt_mn": 3927,
+  "pct_floating_cdi": 0.95,
+  "avg_cost": "não informado no material obtido (debêntures CDI+; estimativa CDI+1,0–1,5%)",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 530,
+  "covenant_nd_ebitda": null,
+  "notes": "CVM 2T26: debêntures R$ 3.226 mi + empréstimos R$ 701 mi (ex-arrendamentos de R$ 2.760 mi); caixa e aplicações R$ 1.473 mi. Circulante (12m) R$ 530 mi incluindo arrendamentos de R$ 220 mi. DL reportada R$ 2.775 mi; DL/EBITDA aj. 1,10x (1,02x ex-compra de 47% da Educbank, +R$ 198 mi). Custo, prazo e covenants não verificados (release 2T26 não acessível: RI bloqueia acesso automatizado)."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -23,
+  "notes": "DL bancária pós-fixada ~R$ 2,45–2,78 bi × 1 p.p. ≈ R$ 25–28 mi antes de IR; com alíquota efetiva baixa (ProUni/prejuízos fiscais) ≈ −R$ 23 mi no lucro (~3% do lucro LTM de R$ 702 mi)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.059,
+  "ebitda_margin_avg_5y": 0.292,
+  "roe_avg_5y": 0.0,
+  "payout_avg_5y": 0.1,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.178,
+   "ebitda_margin": 0.301,
+   "net_income_mn": 148.9,
+   "net_debt_ebitda": 1.1
+  },
+  "notes": "CVM: receita 2020–25 CAGR 5,9% (base 2020 pós-venda de escolas; 3 anos 11,9%); margem EBITDA CVM média 29,2% (2021–25), 31,7% em 2025 e 30,5% LTM. 2026 parte de 1S26 forte (ROL +24,7%, PNLD R$ 124 mi no 2T26 vs R$ 22 mi) e assume 2S26 +4,5%; depois 5,5–6% a/a (ticket Kroton +10,9%, ACV Vasta 2026 +11,9%, EAD em queda). Margem estável ~30%: Kroton perde margem com mais presencialidade (39,3%, −1,8 p.p.) e educação básica ganha. ROE contábil baixo (PL de R$ 13,7 bi majoritariamente ágio) — projeção 5%→8%. Payout médio 5 anos ~10% (só 2025 com dividendos). IFRS-16: capex inclui adições de direito de uso ≈ principal de arrendamento pago na DFC (R$ 210 mi em 2025 = 3,0% da ROL; juros de arrendamento de R$ 279 mi estão no FCO e entram via Kd). Roll-forward do passivo (R$ 2.874 → 2.779 mi) indica adições de ~R$ 115 mi (1,6%); usamos 3,0% (proxy conservador) + capex de 7% ⇒ 10,0%."
+ },
+ "guidance": "Sem guidance numérico formal obtido (release 2T26 não acessível; imprensa não cita). Direcional da gestão: geração de caixa, desalavancagem (1,10x DL/EBITDA aj. no 2T26) e retorno ao acionista. Data do 3T26 não verificada.",
+ "dividend_policy": "Mínimo estatutário de 25%. Retomou proventos: R$ 120 mi pagos em 2025 e dividendos mínimos obrigatórios pagos em 29/05/2026 (R$ 149 mi provisionados no 4T25; DFC LTM R$ 147 mi). Recompras de ações (DFC): R$ 55 mi (2023), R$ 54 mi (2024), R$ 60 mi (2025), zero no 1S26. Atenção: o campo 'buybacks' do pipeline em 2023 (R$ 1.062 mi) soma a recompra de debêntures de R$ 1.006 mi. Em 2025 a Cogna pagou R$ 422 mi por participação de não controladores (Vasta) e emitiu ~181 mi de ações na incorporação. Projeção de payout 30%→60% conforme a alavancagem cai abaixo de 1x.",
+ "election_impact": "Queda de −38% é macro (prêmio de risco/juros e small caps −27%) somada ao risco regulatório percebido. Canal direto de juros é pequeno: +100 bp de CDI ≈ −R$ 23 mi de lucro (3%). Micro: 4º mandato Lula mantém o aperto ao EAD (Kroton é a mais exposta: captação EAD −34% no 1S26, polos de enfermagem semipresencial interrompidos), mas é historicamente positivo para PNLD (compras de livros — Saber/Somos tiveram PNLD de R$ 124 mi no 2T26) e para FIES/ProUni. Valor intrínseco muda pouco; o preço já embute cenário punitivo.",
+ "summary": "Cogna virou geradora de caixa (FCL R$ 504 mi no 1S26, +78%) com DL ex-arrendamentos de R$ 2,8 bi (1,1x) e 100% da Vasta. A R$ 1,91 negocia a ~4x EV/EBITDA IFRS-16 2026E e ~5x P/L 2027E, com FCL/valor de mercado de dois dígitos; o risco é regulatório (EAD).",
+ "thesis": [
+  "Geração de caixa: FCL de R$ 252 mi no 2T26 (+88%) e R$ 504 mi no 1S26, ~13% do valor de mercado de hoje (R$ 3,8 bi) em um semestre.",
+  "Diversificação: educação básica (Vasta+Saber) já é 1/3 da ROL do 2T26 (R$ 650 mi, +50,5%), com receita de assinatura +22% e ACV 2026 +11,9%, menos exposta ao marco do EAD.",
+  "Desalavancagem: 1,10x DL/EBITDA aj. (1,22x um ano antes); com payout crescente, retorno de caixa ao acionista sobe sem pressionar o balanço."
+ ],
+ "risks": [
+  "Novo marco do EAD (Decreto 12.456/2025) e eventual endurecimento no novo mandato: captação EAD −34% no 1S26 e base total −3,7%.",
+  "Compressão de margem da Kroton com maior presencialidade (39,3% no 2T26, −1,8 p.p.).",
+  "Dependência de compras governamentais (PNLD) — receita lumpy e sujeita a orçamento federal em ambiente fiscal apertado.",
+  "Qualidade dos dados: release 2T26 não pôde ser lido direto (RI bloqueado); números de segmento vêm de imprensa (Estadão/InvestNews/Investimentos.com)."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (data a confirmar, tipicamente início/meados de novembro)",
+  "Ciclo de captação 2027.1",
+  "Calendário PNLD 2027 e orçamento do MEC"
+ ],
+ "key_data": [
+  {
+   "label": "ROL 2T26",
+   "value": "R$ 1,96 bi (+17,8%)",
+   "context": "Kroton R$ 1,31 bi (+6,3%); Ed. Básica R$ 650 mi (+50,5%)"
+  },
+  {
+   "label": "EBITDA recorrente 2T26",
+   "value": "R$ 589 mi (30,1%)",
+   "context": "−3,0 p.p. a/a (mix)"
+  },
+  {
+   "label": "FCL 1S26",
+   "value": "R$ 504 mi (+77,7%)",
+   "context": "2T26 R$ 252 mi"
+  },
+  {
+   "label": "DL / EBITDA aj. 2T26",
+   "value": "1,10x (R$ 2,78 bi)",
+   "context": "ex-arrendamentos; 2,2x incluindo arrendamentos de R$ 2,76 bi"
+  },
+  {
+   "label": "Lucro líquido 1S26",
+   "value": "R$ 290 mi (+35,7%)",
+   "context": "ajustado 2T26 R$ 210 mi"
+  },
+  {
+   "label": "Ações em circulação",
+   "value": "2.001 mi",
+   "context": "aumento em 2025 pela incorporação da Vasta"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Investimentos.com.br – Análise dos resultados 2T26 da Cogna",
+   "url": "https://investimentos.com.br/artigos/analise-dos-resultados-do-2t26-de-cogna-cogn3/"
+  },
+  {
+   "title": "DGABC/Estadão Conteúdo – Cogna lucro 2T26",
+   "url": "https://www.dgabc.com.br/Noticia/4340863/cogna-lucro-liquido-soma-r-148-9-milhoes-no-2tri26-alta-de-25-3-ante-2tri25"
+  },
+  {
+   "title": "CVM – DFP/ITR padronizados (data/hist/COGN3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 – cotação ao vivo",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/COGN3"
+  }
+ ],
+ "confidence": "média-baixa — demonstrações CVM sólidas, mas release oficial 2T26 não acessível (custo/prazo da dívida, guidance e quebra Vasta/Saber não verificados) e risco regulatório do EAD difícil de calibrar."
+}

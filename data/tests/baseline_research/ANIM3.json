@@ -1,0 +1,252 @@
+{
+ "ticker": "ANIM3",
+ "name": "Ânima Holding S.A.",
+ "sector": "Educação / ensino superior presencial + medicina (Inspirali)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "ANIM3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 4927.1
+  },
+  "notes": "Receita base = CVM FY2025 (R$ 4.024 mi). DL base = DL CVM 2T26 (R$ 4.167,8 mi, já com arrendamentos de R$ 1.344,6 mi) + aquisições a pagar R$ 98,3 mi + parcelamentos de impostos R$ 55,1 mi + derivativos R$ 45,9 mi (= R$ 4.367,1 mi, igual à 'DL ajustada incl. IFRS-16' da companhia) + R$ 560 mi da compra da FMU (EV anunciado em 14/07/2026; R$ 240 mi à vista no fechamento + parcela a prazo mínima de R$ 170 mi corrigida por CDI; fechamento depende do CADE, previsto p/ fim de 2026). Como a FMU entra na DL, sua receita entra em 2027 (+~7 p.p. de crescimento; ~51 mil alunos; receita estimada ~R$ 280 mi — estimativa própria, não divulgada) com margem diluidora. Capex = capex (~5% da ROL) + ~3% de adições de direito de uso (renovações de aluguel: passivo de arrendamento subiu de R$ 1.176 mi para R$ 1.345 mi no 1S26). Kd 2026 calibrado em 16,8% (juros sobre a DL sem FMU até o fechamento) para reproduzir o resultado financeiro anualizado do 1S26 (−R$ 784 mi)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.045,
+   0.115,
+   0.05,
+   0.05,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.355,
+   0.345,
+   0.35,
+   0.355,
+   0.355
+  ],
+  "da_pct_revenue": [
+   0.097,
+   0.095,
+   0.093,
+   0.091,
+   0.09
+  ],
+  "capex_pct_revenue": [
+   0.085,
+   0.085,
+   0.085,
+   0.085,
+   0.085
+  ],
+  "nwc_pct_revenue": 0.2,
+  "cost_of_net_debt": [
+   0.168,
+   0.183,
+   0.183,
+   0.178,
+   0.173
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.05,
+   0.06,
+   0.08,
+   0.1,
+   0.1
+  ],
+  "minority_share_ni": 0.38,
+  "payout": [
+   0.0,
+   0.0,
+   0.25,
+   0.25,
+   0.3
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.16,
+  "roe": 0.18
+ },
+ "wacc": {
+  "kd_pre_tax": 0.165,
+  "target_debt_weight": 0.4
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": 1000,
+  "notes": "Minoritários = ~26% da Inspirali (Ânima detém 73,99%). Valor contábil R$ 562 mi subestima: lucro dos minoritários foi R$ 131 mi LTM (46% do lucro consolidado). Usamos R$ 1,0 bi ≈ 7x o lucro minoritário 2027E (~R$ 145 mi) e ≈ o aporte de R$ 1 bi da DNA Capital por 25% em 2022. minority_share_ni 38% = média projetada (cai de ~45% para ~33% conforme o lucro do Core/Digital melhora com desalavancagem)."
+ },
+ "target_multiples": {
+  "pe": 5.5,
+  "ev_ebitda": 4.5,
+  "pbv": 0.5,
+  "rationale": "P/L 5,5x e EV/EBITDA IFRS-16 4,5x: Ânima historicamente negocia com desconto aos pares pela alavancagem (aprox. 4,5–6x EV/EBITDA IFRS-16 em 2023–25); usamos o piso da faixa. Pelo Ke de 25%, o P/L justo de Gordon (ROE 18%, g 5%) seria ~4x; prêmio pequeno pela Inspirali (medicina, margem operacional 54%)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.35,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "CDI fica em 15%+ até 2028, a FMU decepciona (integração de IES em RJ) e a evasão do Core volta; alavancagem passa de 3x e força venda de ativos ou aumento de capital."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "FIES ampliado e Selic caindo a partir de 2027; sinergias da FMU (6 campi em SP) e Inspirali seguindo +8–10% a/a levam a alavancagem abaixo de 2x em 2028."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.005
+ },
+ "debt_profile": {
+  "gross_debt_mn": 4672,
+  "pct_floating_cdi": 0.97,
+  "avg_cost": "CDI+1,6% (spread médio do 2T26)",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 1019,
+  "covenant_nd_ebitda": null,
+  "notes": "Empréstimos+derivativos R$ 4.672 mi (circulante R$ 1.019 mi — subiu de R$ 495 mi no 1T26); caixa R$ 1.803 mi cobre o curto prazo. Gestão de passivos 12m: 8ª debênture R$ 300 mi (CDI+1,5%, 4 anos), 4ª NC R$ 250 mi (CDI+1,40%, 5 anos), bilateral R$ 250 mi (CDI+0,98%), pré-pagamento de R$ 215 mi da 6ª debênture (CDI+1,92%). Métrica da cia.: DL ajustada/EBITDA aj. ex-IFRS16 LTM 2,41x (2,73x pró-forma FMU, estimativa da própria Ânima); Fitch projeta ~3,0x em 2026 e 2,7x em 2027. Limite contratual de covenant NÃO verificado (não consta do release; checar escrituras) — o histórico de 2,4–2,8x sem waiver sugere folga, mas é o ponto crítico."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -27,
+  "notes": "DL bancária pós-fixada ~R$ 2,9 bi (+ parcela a prazo da FMU corrigida por CDI) × 1 p.p. ≈ R$ 29–31 mi antes de IR; IR efetivo ~5% ⇒ ≈ −R$ 27 mi/ano, mas ~60% disso recai sobre o controlador (Inspirali, onde estão os minoritários, é pouco alavancada) ⇒ ~−15% do lucro do controlador LTM (R$ 154 mi)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.231,
+  "ebitda_margin_avg_5y": 0.303,
+  "roe_avg_5y": -0.023,
+  "payout_avg_5y": 0.0,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.044,
+   "ebitda_margin": 0.366,
+   "net_income_mn": 29.1,
+   "net_debt_ebitda": 2.41
+  },
+  "notes": "CAGR 5 anos de 23% é inorgânico (Laureate em 2021); 3 anos 4,1%. Margem EBITDA CVM (IFRS-16) subiu de 26,6% (2021) para 35,5% (2025) com integração e maturação da Inspirali — premissa mantém 34,5–35,5%. ROE do controlador negativo até 2023 e ~5% em 2024–25 (juros + minoritários). Projeção: orgânico 4,5–5% (Core ticket +7,4%, Digital em queda pelo marco do EAD, Inspirali +8%) + FMU em 2027. IFRS-16: capex 8,5% = capex de imobilizado/intangível (~5%, R$ 217 mi em 2025) + principal de arrendamento pago na DFC (R$ 142,5 mi em 2025 = 3,5% da ROL; aluguel total ~R$ 287 mi/ano). No 1S26 o passivo de arrendamento subiu R$ 169 mi por renovações de longo prazo, reforçando a necessidade da inclusão."
+ },
+ "guidance": "Sem guidance numérico. Direcionais: desalavancagem via crescimento de EBITDA, gestão de passivos e foco em qualidade; estimativa da própria companhia de alavancagem ~2,73x pró-forma com a FMU (fato relevante de 14/07/2026). 3T26 em 05/11/2026 (após o fechamento), webinar 06/11.",
+ "dividend_policy": "Não distribui dividendos ao acionista da holding desde a compra dos ativos da Laureate (2021); dividendos pagos no consolidado (R$ 54 mi no 1S26) referem-se a minoritários da Inspirali. A DFC registra 'aquisição de ações em tesouraria' de R$ 147 mi (2023), R$ 247 mi (2024) e R$ 71 mi (2025), mas as ações em circulação ficaram estáveis (~377,4–377,9 mi) — natureza a verificar (possível compra de participações minoritárias em controladas, citada no release 2T26). Projeção: zero até 2027, 25–30% a partir de 2028 se a alavancagem cair abaixo de ~2x.",
+ "election_impact": "Queda de −47% combina macro e estrutura de capital: equity de R$ 1,0 bi sobre EV de ~R$ 6,9 bi (DL incl. arrendamentos e FMU R$ 4,9 bi + minoritários ~R$ 1,0 bi) — cada 10% de variação no EV move o equity ~70%. +300 bp na curva elevam o custo de refinanciamento (CDI+1,4–1,6%) e o desconto. Canal direto de juros: +100 bp ≈ −R$ 27 mi de lucro/ano (~15% do lucro do controlador). Parte da queda é repricing racional (alavancagem 2,7x pró-forma FMU com CDI ~15%); outra parte é sobrerreação se o EBITDA ex-IFRS16 de ~R$ 1,26 bi se mantiver. 4º mandato: mesmo aperto do EAD (Digital −10% no 1S26) e possível FIES maior (positivo para Core e Inspirali).",
+ "summary": "Ânima é uma opção alavancada: Inspirali (medicina, margem operacional 54%) carrega o grupo, mas 26% dela pertence a minoritários e a holding tem DL de R$ 4,9 bi incl. arrendamentos e FMU (~3,3x EBITDA IFRS-16). A R$ 2,68 o equity vale ~R$ 1,0 bi; retorno elevado se juros e FMU cooperarem, perda grande se não.",
+ "thesis": [
+  "Inspirali: 12,6 mil alunos de medicina em 15 campi, ticket R$ 10,3 mil/mês (+6,5%), receita +8% e margem operacional 54,1% no 1S26 — ativo de alto ROIC.",
+  "EBITDA ex-IFRS16 crescendo (+11,9% no 2T26, margem 30,0%) e alavancagem caindo de 2,66x para 2,41x em 12 meses antes da FMU.",
+  "Equity muito descontado: ~4x EV/EBITDA IFRS-16 2027E; qualquer queda de juros ou venda parcial de ativos tem efeito alavancado no preço."
+ ],
+ "risks": [
+  "Alavancagem: DL ajustada 2,41x (2,73x pró-forma FMU) com CDI ~15% e R$ 1,0 bi vencendo em 12 meses; limite de covenant não verificado.",
+  "FMU: IES em recuperação judicial, EV de R$ 560 mi (~10x o EBITDA implícito de ~R$ 55 mi), integração e passivos; BTG, Itaú BBA e Goldman rebaixaram após o anúncio.",
+  "Minoritários capturam 34–46% do lucro consolidado; valor econômico deles (~R$ 1 bi) já equivale ao valor de mercado.",
+  "Marco do EAD (atração Digital −47% no 1S26) e evasão no Core."
+ ],
+ "catalysts": [
+  "Resultado 3T26 em 05/11/2026",
+  "Aprovação do CADE para a FMU (prevista para o fim de 2026)",
+  "Captação de medicina 2027.1 e eventual monetização de participação na Inspirali"
+ ],
+ "key_data": [
+  {
+   "label": "ROL 1S26",
+   "value": "R$ 2.170,5 mi (+6,1%)",
+   "context": "2T26 R$ 1.050 mi (+4,4%)"
+  },
+  {
+   "label": "EBITDA aj. ex-IFRS16 1S26",
+   "value": "R$ 690,9 mi (31,8%)",
+   "context": "LTM R$ 1.255,8 mi; IFRS-16 1S26 R$ 834,5 mi (38,4%)"
+  },
+  {
+   "label": "DL ajustada / EBITDA aj. ex-IFRS16",
+   "value": "2,41x (R$ 3.022 mi)",
+   "context": "2,73x pró-forma FMU; incl. arrendamentos R$ 4.367 mi"
+  },
+  {
+   "label": "Lucro do controlador 1S26",
+   "value": "R$ 135,3 mi (+28,6%)",
+   "context": "minoritários R$ 70 mi no 1S26"
+  },
+  {
+   "label": "FMU",
+   "value": "R$ 410 mi equity / R$ 560 mi EV",
+   "context": "51 mil alunos; depende do CADE"
+  },
+  {
+   "label": "Ações em circulação",
+   "value": "377,9 mi",
+   "context": "valor de mercado ~R$ 1,0 bi a R$ 2,68"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Ânima – Release de Resultados 2T26 (14/08/2026)",
+   "url": "https://ri.animaeducacao.com.br/Download.aspx?Arquivo=Hg3EIPptu0/h0UU+wtaXBA=="
+  },
+  {
+   "title": "Ânima – Central de Resultados (agenda 3T26)",
+   "url": "https://ri.animaeducacao.com.br/listresultados.aspx?idCanal=PpIsKQGpxHMOqAu5XCUCKQ=="
+  },
+  {
+   "title": "InfoMoney – Ânima desaba após compra da FMU",
+   "url": "https://www.infomoney.com.br/mercados/anima-anim3-desaba-30-apos-compra-da-fmu-por-que-negocio-desagradou-tanto/"
+  },
+  {
+   "title": "Money Times – Ânima compra FMU por R$ 410 milhões",
+   "url": "https://www.moneytimes.com.br/anima-anim3-compra-fmu-por-r-410-milhoes-e-amplia-presenca-no-ensino-superior-vtra/"
+  },
+  {
+   "title": "CVM – DFP/ITR padronizados (data/hist/ANIM3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 – cotação ao vivo",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/ANIM3"
+  }
+ ],
+ "confidence": "baixa — números oficiais bons (release + CVM), mas o valor do equity é muito sensível a juros, à FMU (receita/EBITDA estimados) e ao valor dos minoritários; limite de covenant não verificado."
+}
