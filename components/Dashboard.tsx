@@ -94,7 +94,7 @@ export function Screener({ rows, ke, opps }: { rows: LiveRow[]; ke: number; opps
   const th = (k: SortKey, label: string, title?: string) => (
     <th
       onClick={() => setSort((s) => ({ k, dir: s.k === k ? (s.dir === 1 ? -1 : 1) : k === "ticker" || k === "pe" || k === "vsrally" ? 1 : -1 }))}
-      className="cursor-pointer select-none hover:text-ink"
+      className={`cursor-pointer select-none hover:text-ink ${k === "ticker" ? "freeze-col" : ""}`}
       title={title}
       aria-sort={sort.k === k ? (sort.dir === 1 ? "ascending" : "descending") : "none"}
     >
@@ -103,7 +103,7 @@ export function Screener({ rows, ke, opps }: { rows: LiveRow[]; ke: number; opps
     </th>
   );
   return (
-    <section className="panel">
+    <section className="panel sticky-host">
       <div className="flex flex-wrap items-center gap-3 border-b border-hairline px-4 py-3">
         <h2 className="h2 mr-2">Todas as empresas</h2>
         <input
@@ -124,8 +124,8 @@ export function Screener({ rows, ke, opps }: { rows: LiveRow[]; ke: number; opps
         </label>
         <span className="ml-auto text-[12px] text-muted">{list.length} empresas</span>
       </div>
-      <div className="overflow-x-auto">
-        <table className="data min-w-[1180px] text-[13px]">
+      <div className="freeze-wrap">
+        <table className="data freeze min-w-[1180px] text-[13px]">
           <thead>
             <tr>
               {th("ticker", "Empresa")}
@@ -150,7 +150,7 @@ export function Screener({ rows, ke, opps }: { rows: LiveRow[]; ke: number; opps
               const isOpp = opps.includes(r.ticker);
               return (
                 <tr key={r.ticker}>
-                  <td>
+                  <td className="freeze-col">
                     <Link href={`/empresa/${r.ticker}`} className="group flex items-baseline gap-2">
                       <span className="font-semibold group-hover:text-accent">{r.ticker}</span>
                       <span className="max-w-[150px] truncate text-[12px] text-muted">{r.name}</span>

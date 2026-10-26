@@ -1,11 +1,12 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useKe, useMarket } from "@/lib/live";
 
 const NAV = [
   { href: "/", label: "Painel" },
+  { href: "/dividendos", label: "Dividendos" },
   { href: "/mercado", label: "Mercado" },
   { href: "/metodologia", label: "Metodologia" },
 ];
@@ -112,8 +113,19 @@ function MarketStrip({ fb }: { fb: MacroFallback }) {
 
 export function Header({ fallback }: { fallback: MacroFallback }) {
   const path = usePathname();
+  const ref = useRef<HTMLElement>(null);
+  useEffect(() => {
+    // altura real do cabeçalho fixo -> --header-h (cabeçalhos de tabela congelados ficam logo abaixo)
+    const el = ref.current;
+    if (!el) return;
+    const set = () => document.documentElement.style.setProperty("--header-h", `${Math.round(el.getBoundingClientRect().height)}px`);
+    set();
+    const ro = new ResizeObserver(set);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
   return (
-    <header className="no-print sticky top-0 z-40">
+    <header ref={ref} className="no-print sticky top-0 z-40">
       <div className="border-b border-hairline bg-surface">
         <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3 sm:px-6">
           <Link href="/" className="flex items-baseline gap-2 whitespace-nowrap">

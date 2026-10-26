@@ -23,3 +23,9 @@ export function getCompany(ticker: string): Company | null {
 export function tickers(): string[] {
   return getOverview().companies.map((c) => c.ticker);
 }
+
+let _div: unknown = null;
+export function getDividends<T>(): T {
+  if (!_div) _div = JSON.parse(fs.readFileSync(path.join(APP, "dividends.json"), "utf8"));
+  return _div as T;
+}

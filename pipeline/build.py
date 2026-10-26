@@ -179,6 +179,8 @@ def main():
     cov = load(ROOT / "research" / "_coverage.json")["coverage"]
     mk = load(ROOT / "data" / "market" / "_market.json")
     quotes = load(ROOT / "data" / "market" / "quotes.json") or {}
+    divs = load(ROOT / "data" / "market" / "dividends.json") or {"empresas": []}
+    div_by = {e["ticker"]: e for e in divs.get("empresas", [])}
     rows = []
     docs = []
     for c in cov:
@@ -247,7 +249,8 @@ def main():
                                                   "multiples_history", "dps_history", "dividends_b3", "sector")},
                "quant": {"piotroski": pz, "altman": az, "interest_cov": r(cov_int, 2)},
                "research": rs, "notes_md": note.read_text() if note.exists() else None,
-               "report": load(ROOT / "research" / "reports" / f"{tk}.json")}
+               "report": load(ROOT / "research" / "reports" / f"{tk}.json"),
+               "dividendos": div_by.get(tk)}
         docs.append(doc)
     # escores quant (z-scores dentro da cobertura)
     z_val = zscore([x["irr_implied"] for x in rows])
@@ -296,6 +299,10 @@ def main():
                 "xsec": mk["xsec"], "sectors": mk["sectors"], "sector_stats": sector_stats, "macro": macro,
                 "coverage_rule": load(ROOT / "research" / "_coverage.json")["rule"]}
     json.dump(overview, open(APP / "overview.json", "w"), ensure_ascii=False, separators=(",", ":"))
+    # mapa de dividendos: eventos desde 2016 (o histórico completo fica em data/market/dividends.json)
+    if divs.get("empresas"):
+        slim = {**divs, "empresas": [{**e, "eventos": e["eventos"][-60:]} for e in divs["empresas"]]}
+        json.dump(slim, open(APP / "dividends.json", "w"), ensure_ascii=False, separators=(",", ":"))
     print("empresas:", len(rows), "| com modelo:", sum(1 for x in rows if x["has_model"]), "| oportunidades:", overview["opportunities"])
 
 

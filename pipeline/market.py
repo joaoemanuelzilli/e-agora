@@ -333,7 +333,7 @@ def main(cot_path, raw_b3, quotes_json):
         hh = json.load(open(h_path)) if h_path.exists() else None
         d3 = a[a.index > LAST_CLOSE - pd.Timedelta(days=3 * 365)]
         w10 = a.resample("W-FRI").last().dropna()
-        doc = {"ticker": tk, "sector": sect.get(tk), "stats": stats[tk],
+        doc = {"ticker": tk, "isin": p["isin"], "sector": sect.get(tk), "stats": stats[tk],
                "daily_3y": [[d.strftime("%Y-%m-%d"), round(float(v), 4)] for d, v in d3.items()],
                "weekly_10y": [[d.strftime("%Y-%m-%d"), round(float(v), 4)] for d, v in w10.items()],
                "ibov_daily_3y": [[d.strftime("%Y-%m-%d"), round(float(v), 2)] for d, v in ibov[ibov.index > LAST_CLOSE - pd.Timedelta(days=3 * 365)].items()]}

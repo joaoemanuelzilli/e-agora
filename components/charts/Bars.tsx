@@ -327,3 +327,111 @@ export function Waterfall({ steps, title, subtitle, fmt: fmtIn, height = 240, ta
     </Frame>
   );
 }
+
+export type StackCol = { label: string; a: number; b: number; projected?: number | null };
+
+/** Colunas empilhadas (A embaixo, B em cima, 2px de respiro entre segmentos) + colunas de projeção. */
+export function StackedColumns({
+  data,
+  title,
+  subtitle,
+  labels,
+  height = 230,
+  fmt: fmtIn,
+  table,
+}: {
+  data: StackCol[];
+  title?: string;
+  subtitle?: string;
+  labels: [string, string, string];
+  height?: number;
+  fmt?: Fmt;
+  table?: TableSpec;
+}) {
+  const fmt = toFn(fmtIn);
+  const [ref, w] = useWidth<HTMLDivElement>();
+  const [hover, setHover] = useState<{ i: number; px: number; py: number } | null>(null);
+  const m = { t: 18, r: 12, b: 24, l: 48 };
+  const iw = Math.max(40, w - m.l - m.r);
+  const ih = height - m.t - m.b;
+  const tot = data.map((d) => (d.projected ?? 0) || d.a + d.b);
+  const y = scaleLinear().domain([0, Math.max(0.0001, ...tot)]).range([ih, 0]).nice();
+  const x = scaleBand<string>().domain(data.map((d) => d.label)).range([0, iw]).paddingInner(0.28).paddingOuter(0.1);
+  const bw = Math.min(24, x.bandwidth());
+  const off = (x.bandwidth() - bw) / 2;
+  const firstProj = data.findIndex((d) => d.projected !== undefined && d.projected !== null);
+  const legend: LegendItem[] = [
+    { label: labels[0], color: C.s1, kind: "rect" },
+    { label: labels[1], color: C.s2, kind: "rect" },
+    ...(firstProj >= 0 ? [{ label: labels[2], color: C.proj, kind: "rect" as const }] : []),
+  ];
+  return (
+    <Frame title={title} subtitle={subtitle} legend={legend} table={table}>
+      <div ref={ref} className="relative w-full">
+        <svg className="chart block" width={w} height={height} role="img" aria-label={title || "colunas empilhadas"}>
+          <g transform={`translate(${m.l},${m.t})`}>
+            <YGrid ticks={y.ticks(4)} y={y} x0={0} x1={iw} fmt={fmt} />
+            {firstProj > 0 && (
+              <line
+                x1={(x(data[firstProj].label) ?? 0) - (x.step() * x.paddingInner()) / 2}
+                x2={(x(data[firstProj].label) ?? 0) - (x.step() * x.paddingInner()) / 2}
+                y1={-12}
+                y2={ih}
+                stroke="var(--axis)"
+              />
+            )}
+            {data.map((d, i) => {
+              const bx = (x(d.label) ?? 0) + off;
+              if (d.projected !== undefined && d.projected !== null) {
+                return <path key={d.label} d={barPath(bx, y(0), y(d.projected), bw)} fill={C.proj} />;
+              }
+              const ya = y(d.a);
+              const yb = y(d.a + d.b);
+              const gap = d.a > 0 && d.b > 0 ? 2 : 0;
+              return (
+                <g key={d.label} opacity={hover && hover.i !== i ? 0.75 : 1}>
+                  {d.a > 0 && (d.b > 0 ? <rect x={bx} y={ya} width={bw} height={Math.max(0, y(0) - ya)} fill={C.s1} /> : <path d={barPath(bx, y(0), ya, bw)} fill={C.s1} />)}
+                  {d.b > 0 && <path d={barPath(bx, ya - gap, yb, bw)} fill={C.s2} />}
+                </g>
+              );
+            })}
+            <line x1={0} x2={iw} y1={y(0)} y2={y(0)} stroke="var(--axis)" />
+            {data.map((d, i) => (
+              <text key={d.label} x={(x(d.label) ?? 0) + x.bandwidth() / 2} y={ih + 16} textAnchor="middle" fontSize={11} fill="var(--muted)">
+                {data.length > 14 && i % 2 === 1 ? "" : d.label}
+              </text>
+            ))}
+            {data.map((d, i) => (
+              <rect
+                key={d.label}
+                x={x(d.label) ?? 0}
+                width={x.bandwidth()}
+                y={0}
+                height={ih}
+                fill="transparent"
+                onPointerMove={(e) => {
+                  const r = (e.currentTarget.ownerSVGElement as SVGSVGElement).getBoundingClientRect();
+                  setHover({ i, px: e.clientX - r.left, py: e.clientY - r.top });
+                }}
+                onPointerLeave={() => setHover(null)}
+              />
+            ))}
+          </g>
+        </svg>
+        {hover && data[hover.i] && (
+          <Tip x={hover.px} y={hover.py} w={w}>
+            <div className="mb-1 text-[11px] text-muted">{data[hover.i].label}</div>
+            {data[hover.i].projected !== undefined && data[hover.i].projected !== null ? (
+              <TipRow label={labels[2]} value={fmt(data[hover.i].projected as number)} />
+            ) : (
+              <>
+                <TipRow color={C.s1} label={labels[0]} value={fmt(data[hover.i].a)} />
+                <TipRow color={C.s2} label={labels[1]} value={fmt(data[hover.i].b)} />
+              </>
+            )}
+          </Tip>
+        )}
+      </div>
+    </Frame>
+  );
+}
