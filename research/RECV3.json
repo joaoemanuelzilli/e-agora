@@ -1,0 +1,267 @@
+{
+ "ticker": "RECV3",
+ "name": "PetroReconcavo S.A.",
+ "sector": "Petróleo e gás / E&P independente onshore (campos maduros na Bahia e no Rio Grande do Norte; óleo e gás)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "RECV3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override. 293.482.126 ações (aviso de aumento de capital de 02/06/2026 por exercício de opções; B3 = CVM; tesouraria ~0). DL CVM R$ 1.576 mi = debêntures R$ 3,16 bi + arrendamentos R$ 39 mi − caixa e aplicações R$ 1,63 bi. COLUNA 2026 = 2S26 anualizado. Receita trimestral calibrada no 1T26 (R$ 684 mi) e 2T26 (R$ 808 mi) com o Brent em R$ defasado em um mês (preço do óleo e do gás fixado pela média do mês anterior: ~R$ 371/bbl e ~R$ 520/bbl): R$ 350 mi pouco sensíveis ao Brent (gás com contratos de longo prazo, componentes de refino no preço do óleo Potiguar; +4% a.a.) + 0,9 × Brent em R$/bbl. A calibração reproduz 2025 (R$ 3,16 bi com Brent de R$ 386/bbl e produção ~5% maior) melhor que uma regressão sem defasagem. 3T26 ≈ R$ 765 mi e 4T26 ≈ R$ 878 mi; 2027E R$ 3,32 bi; 2030E R$ 2,98 bi. Produção: 23,5–24,1 kboe/d em jul–set/26 (óleo 14,1–14,3 kbpd; gás 9,4–9,7 kboe/d, em declínio); projetamos volume estável até 2028 e −2% a.a. em 2029–30 (reservas 2P de 182 MMboe = ~21 anos de produção; capex de desenvolvimento 2P de US$ 1,0 bi em 2026–36). Óleo vendido no mercado interno (Brava/Clara Camarão no Potiguar, refinaria de Mataripe na Bahia): o imposto de exportação de 12% praticamente não incide."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.0405,
+   0.0103,
+   -0.0563,
+   -0.03,
+   -0.0184
+  ],
+  "ebitda_margin": [
+   0.5,
+   0.49,
+   0.47,
+   0.46,
+   0.45
+  ],
+  "da_pct_revenue": [
+   0.22,
+   0.22,
+   0.23,
+   0.23,
+   0.24
+  ],
+  "capex_pct_revenue": [
+   0.274,
+   0.21,
+   0.23,
+   0.243,
+   0.255
+  ],
+  "nwc_pct_revenue": 0.05,
+  "cost_of_net_debt": [
+   0.05,
+   0.05,
+   0.06,
+   0.07,
+   0.07
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.17,
+   0.17,
+   0.17,
+   0.18,
+   0.18
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.55,
+   0.6,
+   0.6,
+   0.6,
+   0.6
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.04,
+  "roic": 0.1,
+  "roe": 0.13
+ },
+ "wacc": {
+  "kd_pre_tax": 0.09,
+  "target_debt_weight": 0.25,
+  "notes": "Debêntures da 4ª emissão convertidas para US$ via swap a custo médio de 4,91% a.a. (duration 7,25 anos; comunicado de 12/01/2026): em R$ ≈ 4,9% + depreciação do deck (~1,8%) ≈ 6,7%. O caixa (R$ 1,63 bi) rende ~CDI (13,6%), por isso o custo LÍQUIDO sobre a DL é baixo (resultado financeiro de −R$ 1 mi no 1T26 e +R$ 11 mi no 2T26): usamos 5% subindo a 7% conforme o caixa é consumido — abaixo do DI por ser dívida dolarizada, não por otimismo. Kd marginal 9% (nova dívida em R$ a CDI+ com swap). wd = DL/(DL + valor de mercado pré-eleição R$ 3,76 bi) ≈ 30%, arredondado a 25%."
+ },
+ "adjustments": {
+  "other_debt_like": 857,
+  "non_operating_assets": 0,
+  "minority_value": 0,
+  "notes": "Balanço 30/06/2026 (CVM): dividendos de 2025 a pagar R$ 300 mi (R$ 0,3413/ação em cada uma das datas 31/12/2026, 31/12/2027 e 31/12/2028; data-com 08/01/2026 — quem compra hoje não recebe) + JCP do 2T26 de R$ 100 mi (R$ 0,3407/ação; aprovado em 06/08, data-com 17/08, pago em 27/08 — posterior ao balanço) + derivativos passivos R$ 289 mi (swaps das debêntures para US$ e hedge) + valores a pagar por aquisições R$ 18 mi + provisões fiscais/trabalhistas/regulatórias R$ 50 mi + abandono (R$ 5 mi CP × 0,66 + R$ 148 mi LP × 0,66 × 50% = R$ 52 mi; regra comum às E&Ps do estudo) + fornecedores de LP R$ 130 mi não incluídos (operacionais). Total R$ 857 mi (inclui arredondamento)."
+ },
+ "target_multiples": {
+  "pe": 5.5,
+  "ev_ebitda": 3.2,
+  "pbv": 0.8,
+  "rationale": "P/L 5,5x e EV/EBITDA 3,2x sobre 2027E. Histórico próprio desde 2023: P/L LTM 5,2–11x (mediana de 5 anos 7,4x), EV/EBITDA LTM 2,9–5,7x (mediana 4,1x; 3,4–3,6x em 2026). O papel perdeu prêmio desde 2024 (queda de produção de gás, fim de contratos favoráveis com a Petrobras, ROIC ~8%); prêmio leve sobre Brava (2,8x) por alavancagem baixa, ausência de imposto de exportação e reservas longas (2P/produção ~21 anos), desconto a PRIO no P/L por ROIC menor. Ao preço de 26/10 o mercado paga ~3,0x o EBITDA 2027E do modelo."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.05,
+   "ebitda_margin_shift": -0.05,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.03,
+   "narrative": "Brent volta a US$ 65–70 já em 2027, declínio do gás (Bahia) acelera com falhas de poços/compressores e o custo de workover sobe; preço de gás doméstico pressionado pelo governo."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.03,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Brent acima de US$ 85 até 2028, Tiê e novos poços estabilizam a produção em ~25 kboe/d e contrato de 5 anos com a Brava melhora o preço realizado do óleo Potiguar."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.06,
+  "ebitda_margin_sd": 0.03,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.02
+ },
+ "debt_profile": {
+  "gross_debt_mn": 3162,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "4ª emissão de debêntures dolarizada via swap: 4,91% a.a. em US$ (duration 7,25 anos)",
+  "avg_maturity_years": 7.25,
+  "next_24m_maturities_mn": 64,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 11,
+  "notes": "Dívida dolarizada (swap) e caixa de R$ 1,63 bi em CDI: +100 bp de CDI ≈ +R$ 16 mi de receita financeira pré-IR (~+R$ 11 mi no lucro). Risco relevante é câmbio na dívida (R$ 0,10 no dólar ≈ −R$ 60 mi de MTM) e Brent no preço do óleo (US$ 1/bbl ≈ R$ 28 mi de receita/ano)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.32,
+  "ebitda_margin_avg_5y": 0.494,
+  "roe_avg_5y": 0.19,
+  "payout_avg_5y": 0.545,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.0025,
+   "ebitda_margin": 0.49,
+   "net_income_mn": 203,
+   "net_debt_ebitda": 1.17
+  },
+  "notes": "Receita 2020–25 +32% a.a. (aquisições Remanso e Potiguar e Brent alto em 2022), mas estagnada desde 2022 (R$ 2,8–3,3 bi): produção caiu de ~27 para ~24 kboe/d e o gás perdeu preço. Margem EBITDA 54% (2022), 45% (2023), 50% (2024), 46% (2025), 45% no 1T26 e 49% no 2T26 — a margem responde pouco ao Brent porque royalties, preço do gás e custos de workover sobem junto. Projetamos 50% no 2S26 caindo a 45% em 2030 (Brent US$ 71). Capex 2025 de R$ 1,64 bi (52% da receita, UPGN e poços) caiu para R$ 389 mi no 1S26; com a suspensão da UPGN Miranga (−US$ 60 mi) usamos R$ 900 mi anualizados no 2S26 e R$ 700–760 mi/ano depois (21–26% da receita; capex 2P certificado de ~US$ 90 mi/ano + workovers). Histórico de FCO − capex: R$ 26 mi (2023), R$ 1,03 bi (2024), −R$ 135 mi (2025) — o fluxo projetado (~R$ 0,6–0,7 bi/ano) já é melhor que a média. Payout de 55–60% coerente com JCP trimestral de R$ 100 mi."
+ },
+ "guidance": "Sem guidance numérico público localizado. Fatos de 2026: reservas certificadas (NSAI, 31/12/2025) de 143,3 MMboe 1P e 182,2 MMboe 2P, com capex de desenvolvimento de US$ 1,0 bi (2P) em 2026–36; suspensão da FID da UPGN Miranga (US$ 60 mi) após contrato de longo prazo com a Petrobras para processar gás na UTG Catu com capacidade garantida em 2028–37 (19/08/2026); contrato de 5 anos (out/26–dez/30) de venda de ≥ 50% do óleo Potiguar à Brava (06/08/2026); venda da SPE Tiêta (casca societária) à KEO Capital por R$ 2,6 mi após transferir Tiê/Tartaruga para NewCo (20/10/2026); produção de 23,5 kboe/d em set/26 (falhas de poços e compressores na Bahia). Resultado do 3T26 em 05/11/2026.",
+ "dividend_policy": "JCP trimestral de R$ 100 mi (R$ 0,34/ação; 1T26 pago em 28/05 e 2T26 em 27/08/2026) imputado ao mínimo obrigatório; dividendos de 2025 de R$ 300 mi pagos em três parcelas anuais (dez/26, dez/27, dez/28; data-com 08/01/2026). 4º programa de recompra de até 1,5 mi ações (0,51%) até 28/10/2027, voltado a planos de incentivo. Payout caixa 2025: 37%; 2024: 177% (extraordinário).",
+ "election_impact": "RECV3 caiu 13,7% em 26/10 (de R$ 12,80 para R$ 11,05), mais que PRIO e Brava, por ser small cap (SMLL −27%) com liquidez baixa (ADTV R$ 23 mi). O negócio quase não muda com a eleição: o óleo é vendido no mercado interno (fora do imposto de exportação), a dívida é dolarizada a 4,9% e o caixa rende CDI (juros altos ajudam marginalmente). Os canais reais são indiretos: o Brent em backwardation (mais que o câmbio) e o risco de intervenção em preço de gás/diesel doméstico, que afeta o preço realizado nas refinarias compradoras. O real mais fraco ajuda (R$ 0,10 no dólar ≈ +1,8% de receita).",
+ "summary": "PetroReconcavo é uma operadora onshore madura com alavancagem baixa (DL/EBITDA 1,2x), dívida dolarizada barata e reservas longas (2P de 182 MMboe), mas com produção estagnada em ~24 kboe/d e gás em declínio. A queda da eleição foi de liquidez e de small cap, não de fundamento: o óleo vendido no Brasil escapa do imposto de exportação. O valor depende do Brent da curva, de estabilizar a produção e de manter o JCP trimestral de R$ 100 mi.",
+ "thesis": [
+  "Produção de 23,5–24,1 kboe/d em jul–set/26 (óleo estável em ~14,1 kbpd); reservas 2P de 182 MMboe = ~21 anos de produção.",
+  "Lucro de R$ 203 mi e margem EBITDA de 49% no 2T26; DL de R$ 1,58 bi (1,2x EBITDA) com dívida dolarizada a 4,91% a.a. e duration de 7,25 anos.",
+  "Proventos: JCP de R$ 100 mi por trimestre + R$ 300 mi de dividendos de 2025 a pagar até 2028 (~12% do valor de mercado ao ano no ritmo atual).",
+  "Contratos de longo prazo assinados em ago/26 (óleo Potiguar com a Brava até 2030; processamento de gás na UTG Catu 2028–37) reduzem risco comercial e capex (UPGN Miranga suspensa)."
+ ],
+ "risks": [
+  "Declínio de produção (gás de 10,9 para 9,4 kboe/d entre abr e set/26; falhas de poços e compressores).",
+  "Brent em backwardation (Dez/27 US$ 87; Dez/30 US$ 69) e dependência de poucos compradores (Brava, Acelen, Petrobras).",
+  "Small cap com liquidez baixa: maior desconto em choques de risco; ROIC histórico ~8% abaixo do custo de capital.",
+  "Câmbio: dívida dolarizada via swap (derivativos passivos de R$ 289 mi em 30/06)."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (05/11/2026) e JCP do 3T26",
+  "Dados operacionais mensais (out/26 no início de dez)",
+  "Reorganização societária de Tiê/Tartaruga (AGE e ANP)"
+ ],
+ "key_data": [
+  {
+   "label": "Produção set/26",
+   "value": "23,5 kboe/d",
+   "context": "óleo 14,1 kbpd; gás 9,4 kboe/d; 1S26 24,2 kboe/d"
+  },
+  {
+   "label": "Reservas 2P (NSAI, 31/12/25)",
+   "value": "182,2 MMboe",
+   "context": "1P 143,3 MMboe; capex 2P US$ 1,0 bi em 2026–36"
+  },
+  {
+   "label": "Custo da dívida",
+   "value": "4,91% a.a. em US$",
+   "context": "debêntures com swap; duration 7,25 anos"
+  },
+  {
+   "label": "DL/EBITDA UDM (CVM)",
+   "value": "1,17x",
+   "context": "DL R$ 1,58 bi; EBITDA UDM R$ 1,35 bi"
+  },
+  {
+   "label": "Deck Brent (US$/bbl)",
+   "value": "2S26 103 · 27 95 · 28 81 · 29 75 · 30 71",
+   "context": "curva ICE/NYMEX de 15–28/10/2026"
+  },
+  {
+   "label": "Deck câmbio (R$/US$)",
+   "value": "2S26 5,22 · 27 5,45 · 28 5,55 · 29 5,65 · 30 5,75",
+   "context": "dólar futuro 5,38 + ~1,8% a.a."
+  }
+ ],
+ "sources": [
+  {
+   "title": "PetroReconcavo — Dados Operacionais setembro/2026 (07/10/2026)",
+   "url": "https://ri.petroreconcavo.com.br/Download.aspx?Arquivo=NMuKkJ2SA9QmqxSRkfBI9w=="
+  },
+  {
+   "title": "PetroReconcavo — Fatos relevantes e comunicados 2026 (JCP, reservas, UTG Catu, contrato Brava, Tiêta, recompra)",
+   "url": "https://ri.petroreconcavo.com.br/fatos-relevantes-comunicados-e-avisos"
+  },
+  {
+   "title": "PetroReconcavo — Certificação de reservas NSAI (18/03/2026)",
+   "url": "https://ri.petroreconcavo.com.br/Download.aspx?Arquivo=LHqYL4fJko54n4OoIj1p7Q=="
+  },
+  {
+   "title": "PetroReconcavo — Swaps da 2ª série da 4ª emissão de debêntures (12/01/2026)",
+   "url": "https://ri.petroreconcavo.com.br/Download.aspx?Arquivo=asYvcV8SNmUnxWbeHrYo0Q=="
+  },
+  {
+   "title": "PetroReconcavo — JCP de R$ 100 mi (06/08/2026)",
+   "url": "https://ri.petroreconcavo.com.br/Download.aspx?Arquivo=WreKKYArpPM8zQu1BGWUFw=="
+  },
+  {
+   "title": "PetroReconcavo — UTG Catu e suspensão da UPGN Miranga (19/08/2026)",
+   "url": "https://ri.petroreconcavo.com.br/Download.aspx?Arquivo=a4WPrqPkkrLTgvYJh9XnHw=="
+  },
+  {
+   "title": "EIA — STEO outubro/2026",
+   "url": "https://www.eia.gov/outlooks/steo/archives/oct26.pdf"
+  },
+  {
+   "title": "Baratelli Institute — curva futura Brent (CME, 15/10/2026)",
+   "url": "https://baratelliinstitute.com/oil-futures-curve"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/RECV3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — proventos oficiais RECV3",
+   "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+  }
+ ],
+ "confidence": "média — produção mensal, reservas, dívida e proventos verificados nos comunicados da empresa; release do 2T26 (lifting cost, preço do gás, hedge) não lido e o valor depende de um único driver (Brent) com produção em leve declínio."
+}

@@ -1,0 +1,278 @@
+"use client";
+import { scaleLinear } from "d3-scale";
+import Link from "next/link";
+import { useState } from "react";
+import type { LiveRow } from "@/components/Dashboard";
+import { OppMap } from "@/components/charts/OppMap";
+import { IrrMeter, Sparkline } from "@/components/charts/Points";
+import { Tip, TipRow, useWidth } from "@/components/charts/core";
+import { brl, num, pct, signClass } from "@/lib/format";
+import { ceilingPrice } from "@/lib/valuation";
+
+export type ExtRow = {
+  ticker: string;
+  sinal: string;
+  criterios?: string | null;
+  etapa?: number;
+  preco_2610?: number;
+  valor_justo?: number;
+  potencial?: number;
+  tir_3a?: number;
+  alerta?: string | null;
+  decisao: "Comprar" | "Acompanhar" | "Evitar" | string;
+  motivo_decisao?: string;
+};
+export type External = { titulo: string; autor: string; data: string; precos: string; aviso?: string; regra_combinada?: string; empresas: ExtRow[]; observacoes?: string[] };
+
+const fin = (x: unknown): x is number => typeof x === "number" && Number.isFinite(x);
+const r2 = (v: number) => Math.round(v * 100) / 100;
+
+type Zone = { label: string; tone: "strong" | "in" | "out" | "none"; gap: number | null };
+function zoneOf(price: number | null, ceiling: number | null, strong: number | null): Zone {
+  if (!fin(price) || !fin(ceiling)) return { label: "Sem preço-teto", tone: "none", gap: null };
+  if (fin(strong) && price <= strong) return { label: "Compra forte", tone: "strong", gap: ceiling / price - 1 };
+  if (price <= ceiling) return { label: "Na faixa de compra", tone: "in", gap: ceiling / price - 1 };
+  return { label: `Acima do teto: falta cair ${pct(1 - ceiling / price, 1)}`, tone: "out", gap: ceiling / price - 1 };
+}
+
+/** Régua de preço: faixa de compra (compra forte → teto), preço de agora, valor justo e preço pré-eleição. */
+function PriceRail({ price, strong, ceiling, fair, pre }: { price: number; strong: number | null; ceiling: number | null; fair: number | null; pre: number | null }) {
+  const [ref, w] = useWidth<HTMLDivElement>(320);
+  const [hover, setHover] = useState<{ px: number; py: number } | null>(null);
+  const vals = [price, strong, ceiling, fair, pre].filter(fin);
+  const lo = Math.min(...vals);
+  const hi = Math.max(...vals);
+  const pad = (hi - lo) * 0.06 || hi * 0.05;
+  const h = 44;
+  const x = scaleLinear().domain([lo - pad, hi + pad]).range([6, Math.max(60, w - 6)]);
+  const cy = 26;
+  const inZone = fin(ceiling) && price <= ceiling;
+  return (
+    <div ref={ref} className="relative w-full" onPointerMove={(e) => {
+      const b = e.currentTarget.getBoundingClientRect();
+      setHover({ px: e.clientX - b.left, py: e.clientY - b.top });
+    }} onPointerLeave={() => setHover(null)}>
+      <svg width={w} height={h} role="img" aria-label="régua de preço" className="block">
+        <line x1={6} x2={w - 6} y1={cy} y2={cy} stroke="var(--grid)" strokeWidth={2} />
+        {fin(ceiling) && (
+          <rect x={r2(x(fin(strong) ? Math.min(strong, ceiling) : lo - pad))} y={cy - 7} width={Math.max(3, r2(x(ceiling) - x(fin(strong) ? Math.min(strong, ceiling) : lo - pad)))} height={14} rx={4} fill="var(--accent-soft)" />
+        )}
+        {fin(ceiling) && <line x1={r2(x(ceiling))} x2={r2(x(ceiling))} y1={cy - 9} y2={cy + 9} stroke="var(--series-1)" strokeWidth={2} />}
+        {fin(fair) && <line x1={r2(x(fair))} x2={r2(x(fair))} y1={cy - 9} y2={cy + 9} stroke="var(--ink)" strokeWidth={2} />}
+        {fin(pre) && <circle cx={r2(x(pre))} cy={cy} r={4} fill="var(--surface)" stroke="var(--ink-2)" strokeWidth={1.5} />}
+        <circle cx={r2(x(price))} cy={cy} r={6.5} fill={inZone ? "var(--pos)" : "var(--ink-2)"} stroke="var(--surface)" strokeWidth={2} />
+        <text x={r2(x(price))} y={10} textAnchor={x(price) < 40 ? "start" : x(price) > w - 40 ? "end" : "middle"} fontSize={11} fontWeight={600} fill="var(--ink)">
+          {num(price)}
+        </text>
+      </svg>
+      {hover && (
+        <Tip x={hover.px} y={hover.py} w={w}>
+          <TipRow label="Preço agora" value={brl(price)} />
+          {fin(strong) && <TipRow label="Compra forte (Ke +5 p.p.)" value={brl(strong)} />}
+          {fin(ceiling) && <TipRow color="var(--series-1)" label="Preço-teto" value={brl(ceiling)} />}
+          {fin(fair) && <TipRow color="var(--ink)" label="Valor justo" value={brl(fair)} />}
+          {fin(pre) && <TipRow label="Pré-eleição (23/10)" value={brl(pre)} />}
+        </Tip>
+      )}
+    </div>
+  );
+}
+
+const DEC_TONE: Record<string, string> = { Comprar: "text-[var(--pos)]", Acompanhar: "text-ink", Evitar: "text-[var(--neg)]" };
+
+function OppCard({ r, rank, ke, ext, headline, hasReport }: { r: LiveRow; rank: number; ke: number; ext?: ExtRow; headline?: string | null; hasReport: boolean }) {
+  const href = hasReport ? `/relatorio/${r.ticker}` : `/empresa/${r.ticker}`;
+  const price = r.L.price;
+  const ceiling = ceilingPrice(r.engine, ke);
+  const strong = ceilingPrice(r.engine, ke + 0.05);
+  const z = zoneOf(price, ceiling, strong);
+  const spark = (r.spark || []).filter(fin);
+  return (
+    <article className="panel flex flex-col p-5">
+      <header className="flex items-start gap-3">
+        <div className="font-serif text-[40px] font-medium leading-none text-[var(--series-1)]" aria-label={`${rank}º`}>
+          {rank}
+        </div>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-baseline justify-between gap-2">
+            <Link href={href} className="text-[20px] font-semibold tracking-[-0.01em] hover:text-accent">
+              {r.ticker}
+            </Link>
+            <span className={`num text-[12.5px] ${signClass(r.chgLive)}`}>{pct(r.chgLive, 1, true)} hoje</span>
+          </div>
+          <div className="truncate text-[12.5px] text-muted">
+            {r.name}
+            {r.sector?.subsetor ? `, ${r.sector.subsetor.toLowerCase()}` : ""}
+          </div>
+        </div>
+      </header>
+
+      {headline && <p className="mt-3 line-clamp-3 text-[13.5px] leading-snug text-ink">{headline}</p>}
+
+      <div className="mt-4">
+        <div className="flex items-baseline justify-between gap-2">
+          <span className={`text-[12.5px] font-semibold ${z.tone === "out" ? "text-ink-2" : z.tone === "none" ? "text-muted" : "text-[var(--pos)]"}`}>{z.label}</span>
+          {fin(ceiling) && <span className="num text-[12px] text-muted">teto {num(ceiling)}</span>}
+        </div>
+        {fin(price) && <PriceRail price={price} strong={strong} ceiling={ceiling} fair={r.L.fair} pre={r.prev_close} />}
+        <div className="flex justify-between text-[11px] text-muted">
+          <span>faixa de compra em azul</span>
+          <span>traço preto: valor justo {num(r.L.fair)}</span>
+        </div>
+      </div>
+
+      <div className="mt-4 grid grid-cols-3 gap-3 border-t border-hairline pt-3">
+        <div>
+          <div className="label">TIR de dono</div>
+          <div className="num text-[20px] font-semibold">{pct(r.L.irr, 1)}</div>
+          <IrrMeter irr={r.L.irr} ke={ke} w={92} />
+        </div>
+        <div>
+          <div className="label">Upside</div>
+          <div className={`num text-[20px] font-semibold ${signClass(r.L.upside)}`}>{pct(r.L.upside, 0, true)}</div>
+          <div className="text-[11px] text-muted">até o valor justo</div>
+        </div>
+        <div>
+          <div className="label">Chance de valer mais</div>
+          <div className="num text-[20px] font-semibold">{pct(r.L.prob, 0)}</div>
+          <div className="mt-1 h-1.5 w-full rounded bg-[var(--grid)]">
+            <div className="h-1.5 rounded bg-[var(--series-1)]" style={{ width: `${Math.round(Math.max(0, Math.min(1, r.L.prob ?? 0)) * 100)}%` }} />
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-4 flex items-end justify-between gap-3">
+        <div>
+          <div className="label">12 meses até a eleição</div>
+          {spark.length > 2 ? <Sparkline data={spark} w={120} h={28} down={spark[spark.length - 1] < spark[0]} /> : <span className="text-[12px] text-muted">—</span>}
+        </div>
+        <div className="text-right">
+          <div className="label">Segunda análise</div>
+          {ext ? (
+            <div className="text-[12.5px]">
+              <span className={`font-semibold ${DEC_TONE[ext.decisao] ?? ""}`}>{ext.decisao}</span>
+              <span className="text-muted">
+                {" "}
+                {ext.sinal.toLowerCase()}
+                {ext.criterios ? ` ${ext.criterios}` : ""}
+              </span>
+            </div>
+          ) : (
+            <div className="text-[12px] text-muted">não analisada</div>
+          )}
+        </div>
+      </div>
+
+      <div className="mt-auto flex gap-2 pt-4">
+        <Link href={href} className="flex-1 rounded border border-hairline px-3 py-1.5 text-center text-[13px] font-medium text-ink hover:border-accent hover:text-accent">
+          {hasReport ? "Relatório" : "Análise completa"}
+        </Link>
+        <Link href="/investir" className="flex-1 rounded bg-accent px-3 py-1.5 text-center text-[13px] font-medium text-white hover:opacity-90">
+          Investir
+        </Link>
+      </div>
+    </article>
+  );
+}
+
+function TwoOpinions({ ext, rows, opps }: { ext: External; rows: LiveRow[]; opps: string[] }) {
+  const byT = Object.fromEntries(rows.map((r) => [r.ticker, r]));
+  const groups: { key: string; title: string; note: string }[] = [
+    { key: "Comprar", title: "Comprar", note: "atrativa nas duas análises" },
+    { key: "Acompanhar", title: "Acompanhar", note: "uma das duas não confirma" },
+    { key: "Evitar", title: "Evitar", note: "nenhuma das duas vê margem" },
+  ];
+  return (
+    <section className="panel p-5">
+      <div className="flex flex-wrap items-baseline justify-between gap-3">
+        <h3 className="h3">Duas análises independentes</h3>
+        <span className="text-[12px] text-muted">
+          {ext.autor}, {ext.data.split("-").reverse().join("/")}; preços de {ext.precos.split(" (")[0].toLowerCase()}
+        </span>
+      </div>
+      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
+        {groups.map((g) => {
+          const items = ext.empresas.filter((e) => e.decisao === g.key);
+          return (
+            <div key={g.key}>
+              <div className={`text-[13px] font-semibold ${DEC_TONE[g.key]}`}>{g.title}</div>
+              <div className="text-[11.5px] text-muted">{g.note}</div>
+              <ul className="mt-2 space-y-2">
+                {items.map((e) => {
+                  const r = byT[e.ticker];
+                  const inList = opps.includes(e.ticker);
+                  return (
+                    <li key={e.ticker} className="rounded border border-hairline px-3 py-2">
+                      <div className="flex items-baseline justify-between gap-2">
+                        <Link href={r ? `/empresa/${e.ticker}` : "#"} className="font-semibold hover:text-accent">
+                          {e.ticker}
+                        </Link>
+                        <span className="text-[11.5px] text-muted">{inList ? "na seleção do estudo" : "fora da seleção do estudo"}</span>
+                      </div>
+                      <div className="mt-1 grid grid-cols-2 gap-2 text-[12px]">
+                        <div>
+                          <div className="text-muted">Análise externa</div>
+                          <div className="num">
+                            VJ {num(e.valor_justo)} <span className={signClass(e.potencial)}>({pct(e.potencial, 0, true)})</span>
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-muted">Este estudo, agora</div>
+                          <div className="num">
+                            {r ? (
+                              <>
+                                VJ {num(r.L.fair)} <span className={signClass(r.L.upside)}>({pct(r.L.upside, 0, true)})</span>
+                              </>
+                            ) : (
+                              "fora da cobertura"
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                      {(e.motivo_decisao || e.alerta) && <div className="mt-1 text-[11.5px] text-ink-2">{e.motivo_decisao ?? e.alerta}</div>}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+      {ext.regra_combinada && <p className="mt-4 text-[12px] text-muted">{ext.regra_combinada} {ext.aviso}</p>}
+    </section>
+  );
+}
+
+export function OppShowcase({ rows, ke, opps, external, headlines, reports = [] }: { rows: LiveRow[]; ke: number; opps: string[]; external?: External | null; headlines: Record<string, string>; reports?: string[] }) {
+  const byT = Object.fromEntries(rows.map((r) => [r.ticker, r]));
+  const extBy = Object.fromEntries((external?.empresas || []).map((e) => [e.ticker, e]));
+  const list = opps.map((t) => byT[t]).filter(Boolean);
+  const points = rows
+    .filter((r) => r.engine?.template !== "holding" && fin(r.L.irr) && fin(r.L.prob))
+    .map((r) => ({
+      ticker: r.ticker,
+      name: r.name,
+      irr: r.L.irr as number,
+      prob: r.L.prob as number,
+      upside: r.L.upside,
+      opp: opps.includes(r.ticker),
+      inZone: (r.L.irr as number) >= 0.2 && (r.L.prob as number) >= 0.45,
+    }));
+  const inZoneNow = points.filter((p) => p.inZone).length;
+  return (
+    <div className="space-y-5">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {list.map((r, i) => (
+          <OppCard key={r.ticker} r={r} rank={i + 1} ke={ke} ext={extBy[r.ticker]} headline={headlines[r.ticker] ?? r.summary} hasReport={reports.includes(r.ticker)} />
+        ))}
+      </div>
+      <OppMap
+        points={points}
+        ke={ke}
+        title="Onde estão as oportunidades"
+        subtitle={`${points.length} empresas pela TIR de dono e pela chance de o valor justo superar o preço, ao preço de agora. ${inZoneNow} estão na zona da regra (TIR ≥ 20% e chance ≥ 45%); a seleção ainda exige solidez (Altman) e confiança do analista.`}
+      />
+      {external && external.empresas.length > 0 && <TwoOpinions ext={external} rows={rows} opps={opps} />}
+    </div>
+  );
+}

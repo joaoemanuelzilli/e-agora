@@ -1,0 +1,249 @@
+{
+  "ticker": "TUPY3",
+  "name": "Tupy S.A.",
+  "sector": "Bens industriais / Fundição e componentes estruturais (blocos e cabeçotes) para veículos comerciais e off-road; MWM (motores, contratos de manufatura, reposição, geradores)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "TUPY3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem override. Ações: 131,08 mi (B3: 132.450.415 emitidas − 1.369.000 em tesouraria, igual à CVM 2T26). DL CVM R$ 2.161 mi = empréstimos e debêntures R$ 3.941 mi + 'Títulos a pagar e outros' R$ 256 mi (o pipeline pega essa linha pela regex de 'títulos a pagar') − caixa R$ 2.037 mi. A DL do release é R$ 1.899 mi (exclui essa linha e soma derivativos líquidos). Mantivemos a DL CVM porque a Tupy não abre o passivo de arrendamento IFRS-16 em linha própria; os pagamentos de arrendamento (R$ 35–58 mi/ano na DFC) indicam passivo de R$ 150–250 mi, então os R$ 256 mi fazem papel de proxy dos arrendamentos (o EBITDA CVM já é IFRS-16). Margem projetada na base CVM (EBIT + D&A), que fica ~1,2–1,4 p.p. abaixo do 'EBITDA ajustado' do release, porque inclui 'outras despesas operacionais' recorrentes (constituição de provisões, baixas: ~R$ 34 mi/trimestre)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.01,
+      0.08,
+      0.06,
+      0.05,
+      0.045
+    ],
+    "ebitda_margin": [
+      0.075,
+      0.0975,
+      0.105,
+      0.105,
+      0.105
+    ],
+    "da_pct_revenue": [
+      0.039,
+      0.037,
+      0.036,
+      0.035,
+      0.035
+    ],
+    "capex_pct_revenue": [
+      0.035,
+      0.038,
+      0.04,
+      0.04,
+      0.04
+    ],
+    "nwc_pct_revenue": 0.17,
+    "cost_of_net_debt": [
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12
+    ],
+    "other_financial": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tax_rate": [
+      0.27,
+      0.27,
+      0.27,
+      0.27,
+      0.27
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      0.0,
+      0.25,
+      0.35,
+      0.4,
+      0.5
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.035,
+    "roic": 0.12,
+    "roe": 0.15
+  },
+  "wacc": {
+    "kd_pre_tax": 0.14,
+    "target_debt_weight": 0.35,
+    "notes": "Kd marginal: debêntures/giro em CDI+1,5–2,0% sobre CDI a termo de ~15% (≈16,5%); bond em US$ 2031 (cupom de ~4,5% pelo histórico da emissão, não reconferido nesta rodada) + depreciação esperada do real (≈8–10% em R$); BNDES Brasil Soberano 10,4–11,9% pré. Média ponderada ≈14%. wd 35% é a estrutura-alvo (DL ~2x o EBITDA normalizado) e não os 45% da foto pré-eleição, inflados pelo EBITDA deprimido."
+  },
+  "adjustments": {
+    "other_debt_like": 380,
+    "non_operating_assets": 0,
+    "minority_value": 10.6,
+    "notes": "other_debt_like = obrigações de combinação de negócios (MWM/Teksid; CP R$ 14,0 mi + LP R$ 36,7 mi) R$ 50,7 mi + benefícios de aposentadoria R$ 125,2 mi + 50% das provisões fiscais, trabalhistas e cíveis (R$ 86,0 mi CP + R$ 321,1 mi LP = R$ 407,1 mi → R$ 203,5 mi; o haircut cobre depósitos judiciais e o prazo longo de desembolso). Total R$ 379,4 mi. Não há dividendos/JCP declarados a pagar (R$ 0,3 mi): a companhia teve prejuízo em 2025 e no 1S26. Créditos fiscais diferidos (R$ 689 mi) não entram como ativo: reduzem o IR futuro e já pesam na alíquota de 27%. Minoritários ≈ 0 (R$ 10,6 mi contábil; lucro dos não controladores ~0 no histórico)."
+  },
+  "target_multiples": {
+    "pe": 6.5,
+    "ev_ebitda": 4.5,
+    "pbv": 0.8,
+    "rationale": "Histórico próprio (multiples_history): P/L mediano de 9,0x (5 anos) e 8,8x (3 anos); EV/EBITDA de 5,8x (5 anos) e 5,5x (3 anos); P/VP de 1,03x (5 anos) e 0,89x hoje. Pares locais de bens de capital e autopeças pesadas negociam a 4,5–6x o EBITDA (MAHLE Metal Leve ~5,1x, mediana de 5 anos). Usamos P/L de 6,5x o LPA 2027E e EV/EBITDA de 4,5x o EBITDA CVM 2027E (base IFRS-16, a mesma da DL). É um desconto de ~25% à média histórica, por três motivos: alavancagem de 4,1x; risco estrutural de eletrificação no núcleo (blocos e cabeçotes diesel); e Ke de 25% do estudo, acima dos 11–15% embutidos nos múltiplos de mercado."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.04,
+      "ebitda_margin_shift": -0.02,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Real volta a R$ 5,0, ciclo de caminhões nos EUA não engata, Brasil (pesados e agro) segue em queda com juros altos e os ganhos de footprint não aparecem: margem CVM presa em 8%."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.02,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Real a R$ 5,6–5,8, upcycle de Classe 8 na América do Norte e captura integral dos R$ 180 mi/ano de eficiências: margem ajustada volta aos 12–13% pré-aquisições, como a gestão sinaliza."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.05,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.005
+  },
+  "debt_profile": {
+    "gross_debt_mn": 3945,
+    "pct_floating_cdi": 0.4,
+    "avg_cost": "57% em moeda estrangeira (principalmente bond em US$ com vencimento em 2031) e 43% em R$ (debêntures de R$ 1.594 mi indexadas ao CDI, FINEP). BNDES Brasil Soberano de R$ 600 mi contratado (10,41–11,90% pré, 60 meses), ainda não desembolsado no 2T26",
+    "avg_maturity_years": 4.5,
+    "next_24m_maturities_mn": 192,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -5,
+    "notes": "Dívida em R$ ≈ R$ 1,7 bi, contra ~R$ 1,0 bi de caixa em R$ (48% de R$ 2,04 bi). A exposição líquida ao CDI é de ~R$ 0,7 bi: +100 bp ≈ −R$ 7 mi pré-IR (−R$ 5 mi no lucro). O canal relevante da eleição é o câmbio, não o juro. Pela sensibilidade do release (R$ 104 mi de EBITDA perdidos num trimestre com real e peso mexicano ~11% mais fortes), cada 1% de real mais fraco vale ≈ R$ 35–40 mi/ano de EBITDA antes de repasses. Passar de R$ 5,05 (média do 2T26) para R$ 5,35–5,40 vale ~R$ 200 mi/ano brutos, parcialmente consumidos por insumos dolarizados e pelo peso mexicano."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.1788,
+    "ebitda_margin_avg_5y": 0.0884,
+    "roe_avg_5y": 0.0434,
+    "payout_avg_5y": 0.43,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": -0.058,
+      "ebitda_margin": 0.049,
+      "net_income_mn": -10.1,
+      "net_debt_ebitda": 4.14
+    },
+    "notes": "Receita de 2020 a 2025 cresceu +17,9% a.a., mas o número é inflado pelas aquisições de MWM e Teksid (2022). No orgânico de 3 anos, foi −1,6% a.a. (pico de R$ 11,4 bi em 2023). A margem CVM caiu de 11,3% (2021) para 8,9% (2024) e 2,3% (2025). Em 2025 houve R$ 544 mi de impactos de reestruturação (impairment, baixa de estoques e de créditos fiscais); o EBITDA ajustado foi de R$ 661 mi (6,8%). No 2T26, o EBITDA ajustado foi de R$ 156 mi (6,3%) e o CVM de R$ 122 mi (4,9%). Projetamos a receita de 2026 pelo run-rate do 2S26 (~R$ 4,9 bi; +7% sobre o 2S25, com carteira acima do orçamento e R$ 350 mi de novos projetos) e depois +8% em 2027, com câmbio a R$ 5,45 e recuperação na América do Norte e na Europa. A margem CVM vai de 7,5% (2S26) a 10,5% em 2028–30, igual à média 2021–24 da margem CVM e abaixo dos 12–13% ajustados que a gestão cita como meta de recuperação. Payout zero em 2026, porque há prejuízo acumulado de R$ 106 mi no PL; sobe a 50% em 2030 conforme a DL/EBITDA cai abaixo de 2x. Em 2024, o payout de 114% inclui dividendos de 2023 pagos em 2024."
+  },
+  "guidance": "Sem guidance numérico formal. Release do 2T26 (06–07/08/2026): receita de novos projetos acima de R$ 600 mi em 2026 (~R$ 250 mi já no 1S26); benefício do ajuste de footprint de R$ 40 mi no 1S26 e de mais de R$ 60 mi no 2S26 (turno de blocos e cabeçotes em Betim encerrado e transferido para Joinville); iniciativas de qualidade e manutenção de ~R$ 140 mi no ano; carteira do 2S26 acima do ano anterior e do orçamento. Resultado do 4T25: plano de capacidade de ~R$ 100 mi em 2026 e ~R$ 180 mi/ano recorrentes a partir de 2027; desalavancagem a partir do 2S26.",
+  "dividend_policy": "Dividendo mínimo obrigatório do estatuto (25% do lucro ajustado, percentual não reconferido nesta rodada); a prática histórica é de dividendos e JCP semestrais. Payout de 58–108% em 2017–19; de 11–28% em 2021–23 (ciclo de aquisições); R$ 190 mi pagos no 1T25, referentes a 2024. Recompras de R$ 142 mi em 2024 e R$ 156 mi no 1S25. Sem proventos referentes a 2025 (prejuízo) e nenhum declarado em 2026 até o 2T26.",
+  "election_impact": "TUPY3 caiu 23,6% em 26/10, em linha com o beta e com small caps alavancadas. A Tupy é das poucas do grupo em que o micro melhora com o choque. Cerca de 60% da receita vem do mercado externo (América do Norte 38%, Europa 17%) e os custos estão em R$ e pesos mexicanos. Com o real a R$ 5,35–5,49 contra R$ 5,05 na média do 2T26, o câmbio reverte grande parte dos R$ 104 mi trimestrais de EBITDA que a valorização do real tinha tirado. O que piora: (i) o mercado interno (42% da receita: caminhões pesados −14% no 2T26, agro inadimplente, geradores dependentes de crédito) sofre com DI mais alto por mais tempo; (ii) o Ke e o prêmio de small cap sobem, numa ação ilíquida (ADTV de R$ 13 mi) e com DL/EBITDA de 4,1x; (iii) inflação de mão de obra (+10,6% a/a no CPV do 2T26). A dívida tem pouca exposição líquida ao CDI. O bond em US$ é compensado pela receita em dólar, e o crédito do BNDES Brasil Soberano (R$ 600 mi pré) reduz o risco de refinanciamento.",
+  "summary": "Fundição global de componentes estruturais para motores diesel, com 60% da receita no exterior, saindo do pior ano da história (prejuízo de R$ 657 mi em 2025, com R$ 544 mi de reestruturação). O real mais fraco e os R$ 180 mi/ano de eficiências contratadas são os dois motores de recuperação de margem. O valor depende de a margem voltar a ~10,5% (CVM) e de a DL/EBITDA cair de 4,1x para menos de 2x; o risco de longo prazo é a eletrificação dos pesados.",
+  "thesis": [
+    "Câmbio a favor: 60% da receita é exportação e cada 1% de desvalorização do real vale ≈ R$ 35–40 mi/ano de EBITDA (sensibilidade do release do 2T26); o choque de 26/10 levou o dólar de R$ 5,04 para R$ 5,35–5,49.",
+    "Autoajuda já contratada: ganhos de footprint de R$ 40 mi no 1S26 mais de R$ 60 mi no 2S26, e R$ 180 mi/ano recorrentes a partir de 2027 (encerramento de turno em Betim, transferência para Joinville).",
+    "Caixa operacional forte mesmo no fundo do ciclo: R$ 303 mi no 2T26 e R$ 915 mi em 2025, com o ciclo de caixa caindo de 92 para 66 dias; a DL do release caiu 26% em 12 meses, para R$ 1,9 bi.",
+    "Ciclo externo virando: encomendas de caminhões na América do Norte em alta, fretes melhores e demanda off-road para motores de datacenter e mineração; carteira do 2S26 acima do orçamento."
+  ],
+  "risks": [
+    "Eletrificação e regulação de emissões reduzem a demanda de blocos e cabeçotes diesel no longo prazo, motivo do g terminal de 3,5%.",
+    "Execução: a margem ajustada foi de 6,3% no 2T26 contra 12% em 2024; a transferência de produtos entre plantas depende de homologações dos clientes.",
+    "Mercado interno: caminhões pesados (−14% no 2T26), agro e grupos geradores sofrem com Selic de 13,75% e DI acima de 14,5%.",
+    "Reapreciação do real ou do peso mexicano (que encarece a base do México), além de tarifas comerciais dos EUA sobre autopeças e veículos pesados.",
+    "Alavancagem de 4,1x DL/EBITDA ajustado, com prejuízo acumulado no PL que trava dividendos em 2026."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (início de novembro de 2026): primeiro trimestre com os ganhos de footprint e o câmbio mais fraco",
+    "Desembolso do BNDES Brasil Soberano (R$ 600 mi, 2S26)",
+    "Encomendas de Classe 8 nos EUA e definição das regras de emissões de 2027",
+    "Retomada de dividendos quando o PL voltar a ter lucro distribuível (2027)"
+  ],
+  "key_data": [
+    {
+      "label": "EBITDA ajustado 2T26",
+      "value": "R$ 156 mi (6,3%)",
+      "context": "−26% a/a; +57% t/t; câmbio tirou R$ 104 mi no trimestre"
+    },
+    {
+      "label": "DL/EBITDA ajustado (release)",
+      "value": "4,14x",
+      "context": "DL de R$ 1,9 bi (−26% a/a); DL CVM com títulos a pagar de R$ 2,16 bi"
+    },
+    {
+      "label": "Receita do mercado externo",
+      "value": "60%",
+      "context": "2T26: América do Norte 38%, Europa 17%"
+    },
+    {
+      "label": "Eficiências contratadas",
+      "value": "R$ 180 mi/ano a partir de 2027",
+      "context": "R$ 100 mi em 2026; footprint de R$ 40 mi no 1S26 + R$ 60 mi no 2S26"
+    },
+    {
+      "label": "Deck de câmbio (R$/US$)",
+      "value": "5,28 (2S26) · 5,45 (2027) · 5,55 (2028) · 5,65 (2029–30)",
+      "context": "premissa própria: abaixo do forward da B3, que embute o diferencial de juros, e ~em linha com a inflação relativa. Insumos (sucata e gusa) têm sido historicamente repassados por fórmulas de reajuste nos contratos"
+    },
+    {
+      "label": "Ajustes de reestruturação 2025",
+      "value": "R$ 544 mi",
+      "context": "impairment, estoques e créditos fiscais; prejuízo de R$ 657 mi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tupy — Release de resultados 2T26 (07/08/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/5ab6a371-dd2f-452a-b6b2-22c97ed0abbb/98ef4afe-d815-0240-1806-83df568b00e7?origin=2"
+    },
+    {
+      "title": "Quartr — Tupy 4T25: EBITDA ajustado de R$ 661 mi, R$ 544 mi de reestruturação, plano de R$ 180 mi/ano",
+      "url": "https://quartr.com/events/tupy-s-a-tupy3-q4-2025_FVgwJQdV"
+    },
+    {
+      "title": "Visno Invest — Tupy registra prejuízo de R$ 11 mi no 2T26",
+      "url": "https://visnoinvest.com.br/news/14612/tupy-tupy3-registra-prejuizo-de-r-11-mi-no-2t26"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/TUPY3.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    },
+    {
+      "title": "B3 — cotação e proventos (foto de 26/10/2026 13h02)",
+      "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/TUPY3"
+    }
+  ],
+  "confidence": "média-baixa — números do 2T26 conferidos no release oficial, mas o caso depende de dois drivers voláteis (câmbio e recuperação de margem após um 2025 de R$ 544 mi em reestruturação), e não abrimos a nota de arrendamentos/títulos a pagar nem o covenant do bond."
+}

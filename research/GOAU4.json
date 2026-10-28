@@ -1,0 +1,113 @@
+{
+  "ticker": "GOAU4",
+  "name": "Metalúrgica Gerdau S.A.",
+  "sector": "Holding / siderurgia (controladora da Gerdau S.A.)",
+  "template": "holding",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {"ticker": "GOAU3", "class": "ON"},
+    {"ticker": "GOAU4", "class": "PN"}
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem override. Ações: 1.322,69 mi = 486.802.764 ON + 835.885.284 PN após o cancelamento de 2.219.900 PN em tesouraria (04/08/2026). A bonificação de 33,3% de dez/2025 já está refletida (antes eram 993,7 mi). Até 09/10/2026, 100% das recompras do programa de 2026 (R$ 21,4 mi) já tinham sido canceladas, então não há tesouraria relevante. O consolidado CVM, que é o da Gerdau com 64,6% de minoritários, não é usado: o template é holding."
+  },
+  "projection": {
+    "_comment": "Não usado pelo template holding. Drivers do consolidado iguais aos de GGBR4, só como referência. Lucro dos não controladores ≈ 64–65% do lucro consolidado (LTM 2T26: 1.477 de 2.271).",
+    "years": [2026, 2027, 2028, 2029, 2030],
+    "revenue_growth": [0.02, 0.058, 0.016, 0.052, 0.051],
+    "ebitda_margin": [0.186, 0.163, 0.155, 0.152, 0.152],
+    "da_pct_revenue": [0.051, 0.051, 0.052, 0.052, 0.052],
+    "capex_pct_revenue": [0.068, 0.055, 0.053, 0.052, 0.052],
+    "nwc_pct_revenue": 0.2,
+    "cost_of_net_debt": [0.095, 0.095, 0.095, 0.095, 0.095],
+    "other_financial": [-550, -550, -550, -550, -550],
+    "tax_rate": [0.29, 0.28, 0.28, 0.28, 0.28],
+    "minority_share_ni": 0.645,
+    "payout": [0.44, 0.55, 0.6, 0.6, 0.6],
+    "buyback_mn": [0, 0, 0, 0, 0],
+    "equity_issuance_mn": [0, 0, 0, 0, 0]
+  },
+  "sotp": {
+    "components": [
+      {"name": "Gerdau S.A. (GGBR4) — 702.952.615 ações ON", "ticker": "GGBR4", "stake": 0.35807, "method": "fair", "value_mn": null}
+    ],
+    "holding_net_debt_mn": -41,
+    "holding_cost_mn": 13
+  },
+  "terminal": {"g": 0.045, "roic": 0.105, "roe": 0.105},
+  "wacc": {"kd_pre_tax": 0.115, "target_debt_weight": 0.0},
+  "adjustments": {
+    "other_debt_like": 0,
+    "non_operating_assets": 0,
+    "minority_value": null,
+    "notes": "Participação: 702.952.615 ações ON da Gerdau S.A. (nota 17 das DFs de 30/06/2026; 98,0% das ON; nenhuma PN), divididas por 1.963,18 mi de ações em circulação da Gerdau (a mesma base que o motor usa no valor justo de GGBR4) = 35,807%. A equivalência patrimonial confirma o número: investimento de R$ 19.172,6 mi = 35,81% do PL controlador da Gerdau (R$ 53.544,6 mi), e a equivalência do 1S26 (R$ 878,6 mi) = 35,8% do lucro controlador da Gerdau (R$ 2.456 mi). A participação econômica sobe um pouco a cada recompra/cancelamento da Gerdau. Dívida líquida da holding (individual, ITR 2T26): sem empréstimos nem debêntures; caixa de R$ 30,7 mi em 30/06. Depois do balanço, recebeu o dividendo do 2T26 da Gerdau (R$ 0,23 × 702,95 mi = R$ 161,7 mi, em 11/09) e pagou o seu (R$ 0,11 × 1.322,7 mi = R$ 145,5 mi, data-com 19/08, em 14/09); descontadas recompras pós-junho (~R$ 2 mi) e despesas (~R$ 4 mi), sobra caixa estimado de R$ 41 mi → holding_net_debt_mn = −41. O dividendo do 2T26 da Gerdau é debt-like no GGBR4 e o recebido aqui é caixa, sem dupla contagem. Os proventos do 3T26 (Gerdau R$ 0,34 → R$ 239 mi para a holding; Metalúrgica R$ 0,16 → R$ 212 mi, ambos em 15/12) ainda são fluxo de quem compra hoje. Custo de holding: G&A individual de R$ 12,6 mi (2025), R$ 13,3 mi (2024) e R$ 7,1 mi no 1S26, menos ~R$ 1,5 mi/ano de outras receitas → R$ 13 mi/ano, capitalizados a 1/(25% − 4,5%) ≈ 4,9x = R$ 63 mi. Sem IR relevante na holding: os dividendos recebidos são isentos e a equivalência não é tributada."
+  },
+  "target_multiples": {
+    "pe": null,
+    "ev_ebitda": null,
+    "pbv": 0.66,
+    "rationale": "Holding avaliada por SOTP, com a Gerdau ao valor justo do motor. Desconto histórico da holding: o valor de mercado da GOAU dividido pelo da Gerdau ficou em mediana de 0,277 de set/21 a out/26 (mín. 0,252; máx. 0,304), contra uma participação de ~33–36%. Isso dá um desconto de ~18–22% ao NAV calculado com o preço da PN. Em 26/10 a razão era de 0,290 (desconto de ~19%). Parte do desconto é técnica: a holding tem ações ON (GGBR3), que negociam ~13% abaixo da PN (28/10: R$ 20,63 vs R$ 23,75). Contra um NAV calculado na ON, o desconto cai a ~6–7%. P/VP de referência de 0,66x é a mediana de 5 anos (PL controlador de R$ 19,2 bi)."
+  },
+  "scenarios": {
+    "bear": {"probability": 0.3, "revenue_growth_shift": -0.03, "ebitda_margin_shift": -0.03, "terminal_g_shift": -0.01, "capex_pct_shift": 0.0, "narrative": "Igual ao bear de GGBR4 (spread de aço nos EUA devolve a alta, importação chinesa no Brasil), com o desconto de holding se ampliando para ~25%."},
+    "bull": {"probability": 0.2, "revenue_growth_shift": 0.02, "ebitda_margin_shift": 0.025, "terminal_g_shift": 0.005, "capex_pct_shift": 0.0, "narrative": "Igual ao bull de GGBR4 (tarifa de 50% mantida, antidumping no Brasil), com o desconto de holding voltando a ~15%."}
+  },
+  "uncertainty": {"revenue_growth_sd": 0.05, "ebitda_margin_sd": 0.025, "terminal_g_sd": 0.0075, "capex_pct_sd": 0.005},
+  "debt_profile": {
+    "gross_debt_mn": 0,
+    "pct_floating_cdi": 0.0,
+    "avg_cost": "Holding sem dívida (ITR individual 30/06/2026). O consolidado é o da Gerdau: R$ 13,6 bi, 53% em US$ a 6,13% e 46% em R$ a CDI −0,15%.",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": 0,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -9,
+    "notes": "Look-through: 35,8% × (−R$ 25 mi na Gerdau) ≈ −R$ 9 mi/ano. A holding em si tem só ~R$ 40 mi de caixa, então o efeito nela é desprezível. O câmbio domina, via América do Norte."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.0978,
+    "ebitda_margin_avg_5y": 0.202,
+    "roe_avg_5y": 0.177,
+    "payout_avg_5y": 1.52,
+    "last_quarter": {"period": "2T26", "revenue_yoy": 0.02, "ebitda_margin": 0.182, "net_income_mn": 519, "net_debt_ebitda": 0.69},
+    "notes": "O consolidado é o mesmo da Gerdau. O lucro controlador da Metalúrgica fica em ~35% do da Gerdau: LTM 2T26 de R$ 794 mi contra R$ 2.237 mi. ROE do controlador em 2021–25: 38 / 24 / 15 / 8 / 2,4%. O payout acima de 100% (2021–25: 122 / 139 / 133 / 101 / 262%, segundo a CVM) mistura os dividendos pagos aos minoritários da Gerdau no consolidado; não é payout da holding. Na holding, o repasse é quase integral: no 2T26 recebeu R$ 0,23 × 703 mi = R$ 162 mi e pagou R$ 145 mi; no 3T26 recebe R$ 239 mi e paga R$ 212 mi. O 3T26 da Gerdau (27/10) também saiu para a Metalúrgica: dividendo de R$ 0,16/ação."
+  },
+  "guidance": "Sem guidance próprio. Holding pura: o único ativo é a participação de 35,8% na Gerdau (98% das ON). Programa de recompra de até 10 mi de ações PN (28/04/2026 a 28/10/2027), com R$ 21,4 mi executados até 09/10/2026, tudo cancelado. Para guidance operacional, ver GGBR4: capex 2026 de R$ 4,7 bi, perspectiva de 4T26 com margem estável na América do Norte e compressão no Brasil.",
+  "dividend_policy": "Repassa os dividendos recebidos da Gerdau, deduzidas pequenas despesas. Estatuto: mínimo de 30% do lucro ajustado. 2026: R$ 0,05 (4T25), R$ 0,08 (1T26), R$ 0,11 (2T26; data-com 19/08, pago 14/09) e R$ 0,16 (3T26; R$ 212 mi, pagamento em 15/12/2026). Bonificação de 33,3% em dez/2025. Dividend yield histórico alto na tela de dados (5 anos: 28%), distorcido por 2021–23.",
+  "election_impact": "GOAU4 caiu 2,4% em 26/10 (13h02), enquanto GGBR4 subiu 2,4%. O desconto de holding se ampliou levemente: a razão GOAU/GGBR caiu de ~0,30 em set/26 para 0,29. A eleição não muda a estrutura da holding, que não tem dívida e tem custo administrativo de R$ 13 mi/ano. O efeito vem todo pela Gerdau: dolarização (74–77% do EBITDA nos EUA) e defesa comercial no Brasil a favor; Ke de 25% e demanda doméstica mais fraca contra. Liquidez menor (ADTV de R$ 109 mi contra R$ 245 mi da GGBR4) e controle familiar (Indac) explicam o desconto estrutural.",
+  "summary": "Holding pura sem dívida, cujo único ativo são 702,95 mi de ações ON da Gerdau (35,8% do capital econômico). O valor é a participação na Gerdau avaliada pelo motor, menos o custo de holding capitalizado (R$ 63 mi); a tela negocia com desconto de ~19% sobre o NAV na PN, perto da mediana de 5 anos.",
+  "thesis": [
+    "Holding limpa: sem empréstimos, com caixa de ~R$ 40 mi e despesas de R$ 13 mi/ano (0,1% do NAV a mercado).",
+    "Desconto ao NAV a mercado de ~19% em 26/10 (razão GOAU/GGBR de 0,29), dentro da faixa de 5 anos de 0,25–0,30. Quase metade é técnica: a holding detém ON, que negocia ~13% abaixo da PN.",
+    "Toda a tese operacional é a da Gerdau: EBITDA da América do Norte de R$ 2,9 bi no 3T26 (27,7%), DL/EBITDA de 0,58x e dividendos de R$ 0,34/ação no 3T26 (R$ 0,16 na Metalúrgica)."
+  ],
+  "risks": [
+    "Os mesmos da Gerdau: normalização do spread de aço nos EUA, importação chinesa no Brasil, câmbio.",
+    "O desconto de holding pode se ampliar com a liquidez menor (ADTV de R$ 109 mi) e o controle familiar.",
+    "As recompras da Gerdau aumentam a participação econômica da holding, mas a holding recompra pouco (R$ 21 mi em 2026)."
+  ],
+  "catalysts": [
+    "Pagamento de R$ 0,16/ação em 15/12/2026",
+    "Antidumping de HRC/fio-máquina no Brasil (dez/2026)",
+    "Resultado do 4T26 (16/02/2027)"
+  ],
+  "key_data": [
+    {"label": "Participação na Gerdau", "value": "702.952.615 ações ON (35,81%)", "context": "98,0% das ON; 35,4% do capital total, incluindo tesouraria (nota 17, 30/06/2026)"},
+    {"label": "DL da holding", "value": "−R$ 41 mi (caixa)", "context": "sem dívida; caixa de R$ 30,7 mi em 30/06 + dividendo líquido do 2T26"},
+    {"label": "Custo de holding", "value": "R$ 13 mi/ano", "context": "capitalizado em R$ 63 mi"},
+    {"label": "Razão GOAU/GGBR (valor de mercado)", "value": "0,290 em 26/10", "context": "mediana de 5 anos 0,277; participação de 0,358"},
+    {"label": "Dividendo 3T26", "value": "R$ 0,16/ação (R$ 212 mi)", "context": "pagamento em 15/12/2026"}
+  ],
+  "sources": [
+    {"title": "Gerdau — DFs intermediárias de 30/06/2026, Form 6-K (nota 17: Metalúrgica Gerdau com 702.952.615 ON)", "url": "https://www.sec.gov/Archives/edgar/data/0001073404/000110465926090481/tm2621830d1_ex99-1.htm"},
+    {"title": "CVM — ITR 2T26 da Metalúrgica Gerdau (BPA/BPP/DRE individuais) e DFP 2024–25", "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"},
+    {"title": "Gerdau — Release 3T26 com dividendos da Metalúrgica, Form 6-K (27/10/2026)", "url": "https://www.sec.gov/Archives/edgar/data/0001073404/000110465926118998/tm2628297d3_ex99-1.htm"},
+    {"title": "Investidor10 — Metalúrgica Gerdau: comentário de desempenho do 2T26", "url": "https://investidor10.com.br/acoes/link_comunicado/GOAU3/46700/"},
+    {"title": "Meus Dividendos — Gerdau/Metalúrgica anunciam R$ 0,23 e R$ 0,11 referentes ao 2T26", "url": "https://www.meusdividendos.com/news/ggbr3-gerdau-anuncia-dividendos-de-r023-e-r011-referentes-ao-2t26"},
+    {"title": "B3 — proventos e cotações (GOAU3/GOAU4, GGBR3/GGBR4)", "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"}
+  ],
+  "confidence": "média — a participação (nota 17), a holding sem dívida (ITR individual) e o custo são oficiais e simples; toda a incerteza vem do valor justo da Gerdau, que depende do ciclo do aço nos EUA."
+}

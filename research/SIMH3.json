@@ -117,7 +117,7 @@
     "name": "JSL (JSLG3)",
     "ticker": "JSLG3",
     "stake": 0.672,
-    "method": "market",
+    "method": "fair",
     "value_mn": null
    },
    {

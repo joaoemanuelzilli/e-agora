@@ -1,0 +1,258 @@
+{
+  "ticker": "UNIP6",
+  "name": "Unipar Carbocloro S.A.",
+  "sector": "Química básica / cloro-soda e PVC (Brasil e Argentina)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "UNIP3",
+      "class": "ON"
+    },
+    {
+      "ticker": "UNIP5",
+      "class": "PNA"
+    },
+    {
+      "ticker": "UNIP6",
+      "class": "PNB"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "shares_outstanding_mn": 108.12
+    },
+    "notes": "shares_outstanding_mn 108,12 = ações em 'equivalentes PNB'. As PN (PNA e PNB) recebem 110% do dividendo das ON (B3, dez/25: ON R$ 5,4822 + 0,4058; PNA/PNB R$ 6,0304 + 0,4464 por ação). Em circulação (CVM 30/06/26 e B3): 111,62 mi = ON 38,52 mi + PN 73,10 mi. Capital: 39,06 mi ON, 2,34 mi PNA e 71,78 mi PNB; tesouraria de 1,55 mi. Equivalentes PNB = 73,10 + 38,52/1,1 = 108,12, de modo que o valor por ação do motor é o da PNB. Coluna 2026 = run-rate do 2S26 anualizado (f26 ≈ 0,504). Receita de ~R$ 5,8 bi/ano (o 2T26 teve R$ 1,50 bi no trimestre): os preços internacionais devolvem parte do pico do 2T26, compensados pelo real a R$ 5,35–5,40 (média de R$ 5,05 no 2T26) e por mais volume, com Cubatão a plena carga e a liquefação de cloro em Camaçari desde jul/26. Margem EBITDA de 22% (recorrente de 27% no 2T26 e 12% no 1T26). Sem ajuste de base: receita e EBITDA CVM incluem o IAS 29 (Argentina), de efeito pequeno (−R$ 19 mi de receita e +R$ 28 mi de EBITDA no 1S26). IR: 22–24% em 2026–27 e 27–29% depois, refletindo o IR caixa reduzido por ~30 meses pela depreciação fiscal acelerada de Cubatão e Camaçari. O IR contábil seria maior (~29%), mas a diferença é pequena no DDM."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.1277,
+      -0.04,
+      0.0401,
+      0.0499,
+      0.05
+    ],
+    "ebitda_margin": [
+      0.22,
+      0.21,
+      0.23,
+      0.245,
+      0.24
+    ],
+    "da_pct_revenue": [
+      0.0603,
+      0.0647,
+      0.0648,
+      0.0641,
+      0.0634
+    ],
+    "capex_pct_revenue": [
+      0.0897,
+      0.0718,
+      0.0708,
+      0.0699,
+      0.0689
+    ],
+    "nwc_pct_revenue": 0.12,
+    "cost_of_net_debt": [
+      0.145,
+      0.15,
+      0.155,
+      0.155,
+      0.155
+    ],
+    "other_financial": [
+      -20,
+      -20,
+      -20,
+      -20,
+      -20
+    ],
+    "tax_rate": [
+      0.22,
+      0.24,
+      0.27,
+      0.29,
+      0.29
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      0.6,
+      0.75,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.04,
+    "roic": 0.14,
+    "roe": 0.18
+  },
+  "wacc": {
+    "kd_pre_tax": 0.155,
+    "target_debt_weight": 0.25,
+    "notes": "Kd 15,5%: debêntures em R$ (~CDI+), BNDES/BNB mais baratos, ECA e bancos em US$; CDI a termo de 14,5–15,5%. Peso da dívida de 25% ≈ DL de 2,3 bi / (DL + ~R$ 6,1 bi de mercado pré-eleição). cost_of_net_debt de 14,5–15,5%: o resultado financeiro ajustado do 1S26 (−R$ 184 mi) sobre a DL média de ~R$ 2,4 bi dá ≈ 15% a.a., com CDI de ~14,5%."
+  },
+  "adjustments": {
+    "other_debt_like": 171,
+    "non_operating_assets": 0,
+    "minority_value": 12,
+    "notes": "other_debt_like 171 = dividendos/JCP a pagar no balanço (R$ 44 mi) + provisões ambientais e de desativação (R$ 52 mi) + contingências fiscais/trabalhistas/cíveis (R$ 52 mi) + benefícios a empregados (R$ 23 mi). Nenhum provento foi declarado depois de 30/06/26 (B3). As participações em autoprodução de energia (Tucano, Lar do Sol, Veleiros, Solalban; R$ 153 mi) ficam no operacional: o resultado delas entra no EBITDA (equivalência), e a energia barata, na margem. minority_value = PL de não controladores (R$ 12 mi)."
+  },
+  "target_multiples": {
+    "pe": 8.0,
+    "ev_ebitda": 5.0,
+    "pbv": 2.0,
+    "rationale": "P/L 8,0x sobre o LPA 2027E e EV/EBITDA 5,0x sobre o EBITDA 2027E, ano com margem de 21%, abaixo do meio de ciclo. Histórico (data/market): EV/EBITDA mediana de 4,9x em 10 anos e 6,2x em 5 anos (p10 de 2,8x no pico de 2022; p90 de 9,8x nos vales de lucro); P/L mediana de 9,4x (10 anos) e 9,9x (5 anos). Química de commodity negocia barato no pico e caro no vale. Usamos o meio-baixo do histórico porque o múltiplo de mercado embute Ke de 11–15%. Pares globais de cloro-soda/PVC (Olin, Westlake) não foram verificados nesta sessão."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.04,
+      "ebitda_margin_shift": -0.04,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Os preços voltam ao vale de 2024–25 (margem de ~18%), o PVC importado da Ásia/EUA pressiona o Brasil, o real se aprecia e a Argentina volta a pesar."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.04,
+      "ebitda_margin_shift": 0.05,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Novo ciclo de alta como o de 2021–22: soda e PVC sustentam os níveis do 2T26 (margem acima de 28%) com real fraco e oferta global restrita."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.07,
+    "ebitda_margin_sd": 0.04,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.005
+  },
+  "debt_profile": {
+    "gross_debt_mn": 3691,
+    "pct_floating_cdi": 0.68,
+    "avg_cost": "Debêntures de R$ 2.528 mi (indexador não verificado; tratado como CDI+), BNDES R$ 590 mi, BNB R$ 201 mi, ECA em US$ R$ 190 mi, bancos em US$ R$ 182 mi; custo efetivo de ~15% a.a. no 1S26. Rating Fitch AA+(bra), perspectiva positiva. 90% do principal vence a partir de 2029; o caixa cobre 34 meses de amortização.",
+    "avg_maturity_years": 5.6,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -10,
+    "notes": "Debêntures de ~R$ 2,5 bi (indexador provável CDI+) − caixa de R$ 1,4 bi ≈ R$ 1,1–1,4 bi de exposição líquida: +100 bp ≈ −R$ 12–14 mi antes de IR (~−R$ 10 mi após IR), ~2% do lucro. O canal de juros relevante é o Ke. O câmbio pesa muito mais: 10% de real mais fraco ≈ +R$ 0,4 bi de receita e +R$ 0,25–0,30 bi de EBITDA. A estimativa supõe ~75% da receita com preço de paridade em US$ e ~30% dos custos caixa em US$ (etileno, por exemplo)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.0586,
+    "ebitda_margin_avg_5y": 0.301,
+    "roe_avg_5y": 0.465,
+    "payout_avg_5y": 1.128,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.174,
+      "ebitda_margin": 0.258,
+      "net_income_mn": 125.1,
+      "net_debt_ebitda": 2.52
+    },
+    "notes": "Ciclo completo na CVM, margem EBITDA: 2015 24%, 2017 19%, 2018 29%, 2019 19%, 2020 24%, 2021 50%, 2022 36%, 2023 25%, 2024 17%, 2025 22% (2016 fica fora por ser base pré-Indupa). Média de 2015–25 ex-2016 de 26,6% e mediana de 24,5%; vales de 17–19% (2017, 2019, 2024) e picos de 36–50% (2021–22). Premissa de margem: 22% no 2S26 (o pico geopolítico do 2T26 é devolvido em parte, com o real a ~R$ 5,4); 21% em 2027 (normalização do PVC); 23% em 2028; 24–24,5% em 2029–30, no meio de ciclo e com o ganho estrutural de Cubatão e Camaçari. Deck (US Gulf export, índice dez/24 = 100, consultorias citadas no release): PVC 2T26 136 → ~120 no 2S26 → ~105 em 2027 → ~110 em 2028–30 (+2% a.a. em US$); soda 2T26 111 → ~108 → ~108 → ~112. Câmbio de R$ 5,38 (dólar futuro de 28/10), R$ 5,40 em 2027 e R$ 5,50–5,70 em 2028–30. EBITDA de R$ 1,17–1,53 bi em 2027–30, contra média de R$ 1,51 bi em 2019–25 (mediana de R$ 1,11 bi). Volumes com a utilização no Brasil em 84% (2T26). ROE e payout históricos foram inflados pelo super-ciclo e pelos dividendos acima do lucro (2022 e 2025); projetamos ROE de 16–22% e payout de 75%. O capex volta a ~R$ 0,4 bi/ano, depois do ciclo de R$ 2,1 bi em 2024–1S26."
+  },
+  "guidance": "Sem guidance numérico. A companhia declara o fim do ciclo de capex estratégico (Cubatão a plena capacidade em abr/26; liquefação e purificação de cloro em Camaçari operando desde jul/26), IR/CS caixa reduzido por ~30 meses (depreciação fiscal acelerada) e desalavancagem (2,50x no 2T26, contra 2,58x no 1T26). Fechou nova parceria de autoprodução solar com a Casa dos Ventos (Paraíso Solar, MS).",
+  "dividend_policy": "As PN (PNA e PNB) recebem 110% do dividendo da ON. O histórico é de distribuição alta e irregular: pagos (DFC) R$ 1.365 mi (2021), 1.355 (2022), 345 (2023), 439 (2024) e 1.320 (2025). O payout médio de 5 anos passa de 100%: os dividendos acima do lucro em 2022 e 2025 levaram o PL de R$ 2,8 bi para R$ 1,8 bi e a posição de caixa líquido para uma DL de R$ 2,4 bi. Último provento: R$ 5,89/ON e R$ 6,48/PN (data-com 05/12/25, pago em 16/12/25). Nenhum provento declarado em 2026 até agora (B3). Premissa: payout de 60% sobre o 2S26 (o pagamento anual costuma sair em dezembro) e de 75% em 2027–30, abaixo do histórico, porque a DL de 2,3 bi já não comporta pagar mais que o lucro.",
+  "election_impact": "UNIP6 caiu 7,1% em 26/10, menos que o beta indicava (−10,7%), sem rali prévio (+2,2% de 12/08 a 23/10). O canal macro é misto. O real mais fraco (+9,5% no dólar futuro) eleva em reais os preços de paridade de soda e PVC: é o principal efeito positivo, de ~+R$ 0,25–0,30 bi de EBITDA por 10% de câmbio (estimativa). Os juros mais altos pesam pouco no resultado (DL de R$ 2,3 bi), mas muito no Ke. No canal micro, a política industrial do governo (defesa comercial contra PVC importado, cujo detalhe não foi verificado nesta sessão) tende a continuar protegendo o produtor local. A energia é o maior custo, e a autoprodução cobre ~56% do consumo no Brasil. Com a ação ilíquida (R$ 16 mi/dia), o preço quase não se mexeu no dia; já o valor a Ke 25% é sensível ao ponto do ciclo.",
+  "summary": "A Unipar saiu do vale de 2024–25 com o pico de preços de soda e PVC do 2T26 (margem recorrente de 27%) e concluiu o ciclo de capex (Cubatão e Camaçari), mas chega alavancada (2,5x) depois de pagar dividendos acima do lucro. O modelo usa o ciclo histórico de margens (vales de 17–19%, meio de ciclo de ~24%) e o real a ~R$ 5,4; o preço atual pressupõe um ciclo de alta mais longo.",
+  "thesis": [
+    "Fim do ciclo de capex (R$ 2,1 bi em 2024–1S26): o capex volta a ~R$ 0,4 bi/ano e o IR caixa fica reduzido por ~30 meses.",
+    "Recuperação de preços: no 2T26, a referência de PVC subiu 53% e a de soda 26% t/t; o EBITDA recorrente foi de R$ 402 mi (27%).",
+    "O real fraco ajuda: ~75% da receita segue a paridade de importação em US$.",
+    "A energia de autoprodução (~56% do consumo no Brasil) reduz o custo do insumo mais pesado da eletrólise."
+  ],
+  "risks": [
+    "Ciclo de preços: o pico do 2T26 foi geopolítico. A capacidade chinesa de PVC e o PVC importado (vendas de PVC −11% t/t por 'seletividade') podem devolver a margem ao vale de 17–19%.",
+    "Custo de etileno e gás natural (atrelado ao Brent de ~US$ 100) e curtailment nos parques de autoprodução.",
+    "Argentina (Indupa, ~20% da receita): hiperinflação (IAS 29), câmbio e demanda.",
+    "Liquidez baixa (R$ 16 mi/dia), controle concentrado e política de dividendos irregular."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (início de nov/26)",
+    "Dividendo anual (dez/26)",
+    "Decisões de defesa comercial sobre PVC",
+    "Preços de soda/PVC depois do conflito no Oriente Médio"
+  ],
+  "key_data": [
+    {
+      "label": "EBITDA ajustado recorrente 2T26",
+      "value": "R$ 402 mi (27%)",
+      "context": "1T26: R$ 145 mi (12%); 2T25: R$ 306 mi"
+    },
+    {
+      "label": "Preços internacionais 2T26 vs 1T26",
+      "value": "PVC +53%; soda +26%",
+      "context": "índice dez/24 = 100: PVC 136; soda 111"
+    },
+    {
+      "label": "DL 2T26",
+      "value": "R$ 2.316 mi (2,50x)",
+      "context": "prazo médio de 67 meses; 90% do principal a partir de 2029"
+    },
+    {
+      "label": "Utilização 2T26",
+      "value": "Brasil 84% (+12 p.p. t/t)",
+      "context": "Argentina 73%; Cubatão a plena capacidade desde abr/26"
+    },
+    {
+      "label": "Capex",
+      "value": "R$ 1.076 mi (2025)",
+      "context": "R$ 319 mi no 1S26; fim do ciclo estratégico"
+    },
+    {
+      "label": "Dividendos pagos 2025",
+      "value": "R$ 1.320 mi",
+      "context": "2,7x o lucro; PN recebe 110% da ON"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Unipar — Release de resultados 2T26 (ago/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/3c0b3516-7dff-44a5-946f-20e7ec87dfa0/bd18e23a-20cf-5455-dc94-ecb4f607acce?origin=2"
+    },
+    {
+      "title": "Argus — Higher PVC, soda prices boost Unipar Q2 results (lido via resumo de busca)",
+      "url": "https://www.argusmedia.com/es/news-and-insights/latest-market-news/2862907-higher-pvc-soda-prices-boost-unipar-q2-results"
+    },
+    {
+      "title": "Brazil Journal — Unipar enfrenta um tri duro, mas chega ao fim do ciclo de capex",
+      "url": "https://braziljournal.com/unipar-enfrenta-um-tri-duro-mas-chega-ao-fim-do-ciclo-de-capex/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (ações por classe e proventos, consultado em 28/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/UNIP6.json)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "baixa — o caso depende de um único driver (o ponto do ciclo de soda/PVC e do câmbio. O deck de preços usa os índices do release; não foram verificados os níveis em US$/t, o indexador das debêntures nem as regras de defesa comercial."
+}

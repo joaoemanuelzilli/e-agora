@@ -1,0 +1,265 @@
+{
+  "ticker": "TIMS3",
+  "name": "TIM S.A.",
+  "sector": "Telecomunicações / Operadora móvel (pós-pago, fibra Ultrafibra, B2B)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "TIMS3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "revenue_2025": 26620.0,
+      "equity_controlling_2025": 24000.0,
+      "net_debt": 19438.0
+    },
+    "notes": "Base CVM incompleta: a DFP padronizada de 2024 e 2025 da TIM veio zerada na CVM (os quadros estruturados foram entregues sem valores), então FY2024/FY2025 e o LTM do data/hist estão quebrados. Overrides: receita 2025 = R$ 26.620 mi (release 4T25: +4,6%); PL controlador 31/12/25 ≈ R$ 24.000 mi (PL 1T26 R$ 24.420 mi − LL 1T26 R$ 817 mi + JCP 1T26 R$ 388 mi; estimado). DL-base = R$ 19.438 mi: CVM 30/06/26 R$ 11.933 mi (dívida 2.649 + arrendamentos 13.848 − caixa/aplicações 4.564; I-Systems já consolidada desde 06/05/26) + JCP do 2T26 a pagar R$ 365 mi (pago 22/07) + JCP do 3T26 R$ 515 mi (R$ 0,2167/ação, data-com 22/09, pago 22/01/27) + recompras do 3T26 estimadas em R$ 190 mi (a B3 mostra 2.378,9 mi de ações contra 2.392,1 mi emitidas e 3,46 mi em tesouraria em 30/06: ~9,7 mi compradas e canceladas após o balanço) + taxas do Fistel suspensas judicialmente estimadas em R$ 4.900 mi ('impostos, taxas e contribuições a recolher' CP de R$ 5.326 mi menos ~R$ 0,4 bi de tributos correntes) + autorizações (espectro 5G) a pagar R$ 1.529 mi. Ações: 2.378,9 mi (B3, já líquidas dos cancelamentos). Atenção: P/L LTM, EV/EBITDA LTM e Graham do motor usam o LTM quebrado da base CVM e não têm significado."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.057,
+      0.05,
+      0.048,
+      0.045,
+      0.045
+    ],
+    "ebitda_margin": [
+      0.522,
+      0.515,
+      0.518,
+      0.52,
+      0.522
+    ],
+    "da_pct_revenue": [
+      0.257,
+      0.255,
+      0.252,
+      0.25,
+      0.248
+    ],
+    "capex_pct_revenue": [
+      0.23,
+      0.225,
+      0.222,
+      0.22,
+      0.218
+    ],
+    "nwc_pct_revenue": 0.15,
+    "cost_of_net_debt": [
+      0.125,
+      0.13,
+      0.135,
+      0.14,
+      0.14
+    ],
+    "other_financial": [
+      -50,
+      -50,
+      -50,
+      -50,
+      -50
+    ],
+    "tax_rate": [
+      0.12,
+      0.15,
+      0.16,
+      0.17,
+      0.18
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      1.0,
+      1.1,
+      1.1,
+      1.1,
+      1.1
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.045,
+    "roic": 0.25,
+    "roe": 0.25
+  },
+  "wacc": {
+    "kd_pre_tax": 0.15,
+    "target_debt_weight": 0.3,
+    "notes": "Kd 15% = CDI a termo 2027–30 + spread. Peso da dívida 0,30 = DL ajustada (R$ 19,4 bi) / (DL + valor de mercado pré-eleição R$ 45,4 bi)."
+  },
+  "adjustments": {
+    "other_debt_like": 1447.0,
+    "non_operating_assets": 0,
+    "minority_value": 0,
+    "notes": "other_debt_like R$ 1.447 mi = provisões para contingências R$ 1.605 mi − depósitos judiciais R$ 676 mi (1T26) + obrigações por pagamento baseado em ações liquidadas em caixa R$ 518 mi. Derivativos (ativo líquido no 1T26) e desmobilização (< R$ 0,1 bi) não incluídos. Sem minoritários (V8.Tech e I-Systems 100%). Proventos, recompras pós-balanço, Fistel e licenças estão na DL-base (overrides)."
+  },
+  "target_multiples": {
+    "pe": 8.5,
+    "ev_ebitda": 3.9,
+    "pbv": null,
+    "rationale": "P/L 8,5x LPA 2027E: pré-eleição 10,3x o LL UDM (R$ 19,09 × 2.378,9 mi / ~R$ 4,4 bi; UDM estimado com o release do 4T25 porque a base CVM está quebrada); 'choque neutro' = rendimento 9,7% + 3 p.p. → 7,9x. data/market 2021–25: p10 10,3x, mediana 18,1x (lucro deprimido em 2021–22). Desconto de ~20% à Vivo (10,5x), em linha com o diferencial pré-eleição (15,7x × 10,3x). EV/EBITDA 3,9x EBITDA 2027E na nossa DL (com Fistel, licenças e proventos, ~+0,5x): histórico CVM p10 3,55x, mediana 4,7x. Múltiplos de mercado embutem Ke de ~12–14%; ao Ke de 25% o DCF implica ~2,3x o EBITDA de saída."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.015,
+      "ebitda_margin_shift": -0.015,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.005,
+      "narrative": "Fim do JCP e revisão de incentivos da Sudene elevam o IR para ~25–28%; derrota no Fistel; guerra de preços no pós-pago e integração da I-Systems pior que o esperado."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.01,
+      "ebitda_margin_shift": 0.01,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": -0.005,
+      "narrative": "Sinergias da I-Systems (rede própria de fibra) e da V8.Tech, ARPU móvel +5% ao ano e vitória no Fistel."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.015,
+    "ebitda_margin_sd": 0.01,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.005
+  },
+  "debt_profile": {
+    "gross_debt_mn": 2649.2,
+    "pct_floating_cdi": null,
+    "avg_cost": "empréstimos R$ 1.539 mi + debêntures R$ 1.110 mi (CDI+/IPCA+, não verificado); arrendamentos R$ 13.848 mi a ~13% implícito (juros R$ 941 mi no 1S26)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -25,
+    "notes": "Exposição líquida a CDI/Selic pequena: Fistel (~R$ 4,9 bi) + dívida (R$ 2,6 bi) − caixa (R$ 4,6 bi) ≈ R$ 3 bi → −R$ 30 mi/ano pré-IR por +100 bp. Arrendamentos repactuam só na renovação."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.09,
+    "ebitda_margin_avg_5y": 0.498,
+    "roe_avg_5y": 0.12,
+    "payout_avg_5y": 0.7,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.055,
+      "ebitda_margin": 0.502,
+      "net_income_mn": 969.6,
+      "net_debt_ebitda": 0.86
+    },
+    "notes": "CVM 2021–23 + releases 2024–25 (base CVM zerada): receita 18.058 → 21.531 (Oi UPI) → 23.834 → ~25.450 → 26.620 (2020–25 +9,0% a.a.); margem EBITDA 52,3%, 46,4%, 49,7%, ~49,6% e 51,0% normalizada; LL 2.957, 1.671, 2.837, ~3.160 e 4.340 normalizado (2025 reportado ≈ R$ 4,4 bi, não verificado); ROE ~12% na média. Projeção: receita +5,7% em 2026 (1S26 +6,0%; V8.Tech desde jan/26) e 5%→4,5% depois. Margem CVM: a coluna 2026 usa o run-rate do 2S26 (52,2%; 2S25 ~52% e a I-Systems consolidada elimina o aluguel de rede pago pela TIM), depois 51,5%→52,2% (guidance de EBITDA +6–8% com receita +5%). D&A 25,7%→24,8%; capex = capex caixa ~16,3% (guidance R$ 4,4–4,6 bi) + adições de direito de uso ~6,5% = 23%→21,8%. Capital de giro 0,15. Kd 12,5%→14% sobre a DL ajustada (arrendamentos a ~13%, Fistel na Selic, licenças) calibra o resultado financeiro em −R$ 2,5 bi/ano (1S26: −R$ 2,2 bi anualizado). IR 12% no 2S26 (JCP maior no 2S; 1S26 15,6%; 2025 abaixo de 5%) subindo a 18% (Sudene + JCP com risco regulatório). Payout 100%→110% (TIM distribui ~100% do lucro + recompras; DL/EBITDA ajustada cai de 1,3x para 1,0x mesmo assim)."
+  },
+  "guidance": "Plano estratégico (confirmado pelo Gruppo TIM em 29/07/2026 para 2026–27): receita de serviços +~5% em 2026, EBITDA +6–8%, capex de R$ 4,4–4,6 bi. Detalhes por linha e guidance de remuneração de 2026 não verificados nesta sessão.",
+  "dividend_policy": "JCP trimestrais (2026: R$ 0,1633/ação no 1T, R$ 0,1675 no 2T e R$ 0,2167 no 3T, pago em 22/01/2027) + dividendos complementares/extraordinários (R$ 0,749/ação, ~R$ 1,8 bi, em dez/2025) + recompras com cancelamento (~13 mi de ações canceladas após jun/26). Itaú BBA estimava DY de ~7,5% para 2026. Payout histórico de 35–77% (2021–23), subindo para ~100% em 2025.",
+  "election_impact": "TIMS3 caiu 7,6% em 26/10 (às 13h02): beta de 0,73 e beta de crise de 0,64. Canal macro (Ke/DI longo) sobre um fluxo de dividendos de DY ~10%. Riscos micro do novo mandato: (i) JCP e incentivos regionais da Sudene, que explicam a alíquota efetiva baixa (15,6% no 1S26) — entram na alíquota crescente da base e no bear; (ii) disputa do Fistel (~R$ 4,9 bi suspensos). A empresa tem caixa líquido fora arrendamentos, então a Selic alta pesa pouco no lucro. A ação já vinha de −33% entre abril e agosto, ao redor do 2T26 e da compra da I-Systems; o motivo exato não foi verificado.",
+  "summary": "Segunda maior operadora móvel (62 mi de linhas, 54% pós-pago), agora dona de 100% da rede de fibra I-Systems e da V8.Tech, com margem EBITDA ~51% e distribuição de ~100% do lucro. Ao Ke de 25%, o valor depende do dividendo (DY ~10%) e de crescimento nominal de ~5%. Atenção à base CVM: os dados anuais de 2024–25 vieram zerados e foram recompostos com releases.",
+  "thesis": [
+    "Receita 2T26 +5,5% a/a (serviços fixos +27% com Ultrafibra e V8.Tech) e EBITDA normalizado +7% (margem 51,5%).",
+    "Lucro normalizado 2025 de R$ 4,34 bi (+37%); 2T26 R$ 1,04 bi (+6,2%).",
+    "Caixa líquido de R$ 1,9 bi fora arrendamentos em jun/26, mesmo após comprar 51% da I-Systems (R$ 0,9 bi) e a V8.Tech.",
+    "Remuneração ~100% do lucro: JCP trimestral crescente (R$ 0,22/ação no 3T26) + extraordinários e recompras."
+  ],
+  "risks": [
+    "JCP e Sudene: IR efetivo pode sair de ~15% para ~25–28%.",
+    "Fistel (~R$ 4,9 bi suspensos) e autorizações de espectro a pagar (R$ 1,5 bi).",
+    "Competição no pós-pago e em fibra; integração da I-Systems (rede neutra que atendia terceiros).",
+    "Controlador estrangeiro (Telecom Italia, ~67%) depende dos dividendos do Brasil — pressão por payout alto em vez de investimento.",
+    "Base CVM 2024–25 zerada: histórico e LTM recompostos com releases (risco de erro de dados)."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (data não verificada; histórico: fim de out/início de nov)",
+    "Pagamento do JCP do 3T26 (22/01/2027) e eventual dividendo extraordinário de fim de ano",
+    "Atualização do plano estratégico 2027–29",
+    "Reforma do IR/JCP"
+  ],
+  "key_data": [
+    {
+      "label": "Receita líquida 2T26",
+      "value": "R$ 6,97 bi",
+      "context": "+5,5% a/a"
+    },
+    {
+      "label": "EBITDA normalizado 2T26",
+      "value": "R$ 3,59 bi",
+      "context": "margem 51,5%; CVM R$ 3,50 bi"
+    },
+    {
+      "label": "LL normalizado 2025",
+      "value": "R$ 4,34 bi",
+      "context": "+37,4% a/a"
+    },
+    {
+      "label": "DL CVM / ajustada",
+      "value": "R$ 11,9 bi / R$ 19,4 bi",
+      "context": "ajustada inclui Fistel ~R$ 4,9 bi, licenças R$ 1,5 bi e proventos"
+    },
+    {
+      "label": "Compra da I-Systems (51%)",
+      "value": "R$ 917 mi",
+      "context": "líquido do caixa adquirido; 06/05/2026"
+    },
+    {
+      "label": "Queda em 26/10 (13h02)",
+      "value": "−7,6%",
+      "context": "beta 0,73"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Suno — TIM (TIMS3) lucra R$ 1,03 bi no 2T26",
+      "url": "https://www.suno.com.br/noticias/tims3-resultado-2t26-lucro-1-bilhao-alta-fibra-b2b-go/amp/"
+    },
+    {
+      "title": "Finance News — TIM reporta lucro normalizado de R$ 1,036 bi no 2T26 (aportes I-Systems/V8)",
+      "url": "https://financenews.com.br/2026/07/tim-reporta-lucro-liquido-normalizado-de-r-1036-bi-no-2t26-alta-anual-de-62/print/"
+    },
+    {
+      "title": "Gruppo TIM — Press release do 1S26 (29/07/2026): números do Brasil, I-Systems 100%, guidance confirmado",
+      "url": "https://www.gruppotim.it/en/press-archive/corporate/2026/PR-BoD-29-July-2026.html"
+    },
+    {
+      "title": "Teletime — TIM tem lucro de R$ 4,3 bi em 2025 (10/02/2026)",
+      "url": "https://teletime.com.br/10/02/2026/tim-tem-lucro-de-r-43-bilhoes-em-2025-alta-de-374/"
+    },
+    {
+      "title": "Nord — Lucro da TIM cresce 28% no 4T25 (Itaú BBA: DY ~7,5% em 2026)",
+      "url": "https://www.nordinvestimentos.com.br/blog/tim-brasil-tims3-resultados-4t25/"
+    },
+    {
+      "title": "Nasdaq — TIM Q1: confirma guidance 2026",
+      "url": "https://nasdaq.com/articles/tim-q1-ebitda-after-lease-slightly-declines-confirms-2026-guidance"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais, consultado em 26/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "baixa — a DFP padronizada de 2024–25 veio zerada na CVM (histórico, PL de dez/25 e LTM recompostos com releases), o Fistel foi estimado por diferença e a alíquota depende de JCP/Sudene."
+}

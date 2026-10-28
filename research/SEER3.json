@@ -1,0 +1,256 @@
+{
+ "ticker": "SEER3",
+ "name": "Ser Educacional S.A.",
+ "sector": "Educação / ensino superior presencial (saúde, direito, medicina) + EAD/semipresencial",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "SEER3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 1221.2
+  },
+  "notes": "Receita base = CVM FY2025 (R$ 2.216,5 mi). DL base = DL CVM 2T26 (R$ 1.127,4 mi = empréstimos e debêntures 671,0 + arrendamentos 726,2 − caixa 269,8) + swap da linha 4131 (passivo de R$ 17,7 mi, que a companhia soma aos empréstimos) + compromissos a pagar por aquisições líquidos do escrow da FAEL (88,2 − 64,1 = R$ 24,1 mi; o escrow não está no caixa CVM) + dividendos intermediários do 1S26 aprovados em 20/08/2026 (R$ 0,4055/ação × 128,04 mi = R$ 51,9 mi; data-com 31/08, pagos em 25/09 e 30/10: não são fluxo de quem compra hoje e não estavam no balanço de 30/06) = R$ 1.221,2 mi. Bate com a DL reportada ex-IFRS-16 (R$ 443,0 mi) + arrendamentos + dividendos. Margem EBITDA do modelo = margem CVM − 1,2 p.p.: os 'descontos concedidos' em acordos de mensalidades atrasadas (R$ 24,1 mi no 1S26), líquidos dos juros sobre mensalidades (R$ 8,1 mi), estão no resultado financeiro da CVM mas são custo operacional (checklist #4) e saem do Kd. Capex = capex CVM (~4,2% da ROL) + adições de direito de uso de ~2,5% (2026–28) subindo a ~3,3% (2029–30), rumo à depreciação de direito de uso (~3,5%) à medida que os contratos são renovados (principal de arrendamento pago = 3,1% da ROL em 2025; adições efetivas 1,4–1,5% porque a cia. está devolvendo imóveis), para coerência com EBITDA IFRS-16 e arrendamentos na DL."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.057,
+   0.055,
+   0.055,
+   0.05,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.296,
+   0.305,
+   0.31,
+   0.313,
+   0.313
+  ],
+  "da_pct_revenue": [
+   0.092,
+   0.09,
+   0.088,
+   0.086,
+   0.085
+  ],
+  "capex_pct_revenue": [
+   0.065,
+   0.065,
+   0.07,
+   0.075,
+   0.075
+  ],
+  "nwc_pct_revenue": 0.25,
+  "cost_of_net_debt": [
+   0.132,
+   0.134,
+   0.132,
+   0.128,
+   0.125
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.05,
+   0.06,
+   0.07,
+   0.08,
+   0.09
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.3,
+   0.35,
+   0.4,
+   0.45,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.17,
+  "roe": 0.18
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.3
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Itens debt-like (swap, aquisições a pagar líquidas do escrow FAEL, dividendos do 1S26 com data-com passada) já estão na DL base via overrides.base.net_debt; other_debt_like = 0 para não contar em dobro. Sem minoritários. Não tratados como ativo: fundo garantidor FG-FIES (R$ 76–87 mi) e depósitos judiciais (R$ 24 mi), que são restritos; provisão para contingências (R$ 26 mi) não tratada como dívida (o regime de competência passa pelo EBITDA)."
+ },
+ "target_multiples": {
+  "pe": 6.0,
+  "ev_ebitda": 4.5,
+  "pbv": 1.0,
+  "rationale": "EV/EBITDA IFRS-16 4,5x sobre o EBITDA 2027E: um pouco abaixo da mediana de 5 anos da própria SEER3 (4,6x; média 5,1x; p10 3,8x; mesma base, EV com arrendamentos) e em linha com os alvos dos pares revisados (COGN3, YDUQ3 e ANIM3 a 4,5x). P/L 6,0x sobre o LPA 2027E: abaixo do P/L a termo de antes da eleição (~6,5x a R$ 18,26, já inflado pelo rali eleitoral desde agosto) e entre ANIM3 (5,5x) e COGN3/YDUQ3 (6,5–7x); a mediana de 5 anos (13,7x) não serve porque o lucro de 2022–24 foi nulo ou negativo. Prêmio sobre o P/L de Gordon a Ke 25% (~3,6x com ROE 18% e g 5%) pela alavancagem baixa (0,75x ex-IFRS-16) e pelo crescimento de medicina. P/VP não entra no blend."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Juros altos e renda fraca derrubam a captação presencial e elevam a PDD; a Justiça derruba as 120 vagas de medicina judicializadas e o Mais Médicos abre concorrência nas praças da Ser; a margem volta para ~28%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "FIES ampliado no 4º mandato, maturação das vagas de medicina e ocupação maior dos campi levam a margem CVM a ~34%; o caixa líquido ex-arrendamentos permite elevar o payout ou fazer M&A."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.005
+ },
+ "debt_profile": {
+  "gross_debt_mn": 688.7,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "CDI+1,6% (média ponderada dos contratos em 30/06/2026; 7ª emissão de R$ 250 mi a CDI+1,1% refinanciou as 3ª e 4ª a CDI+2,0%)",
+  "avg_maturity_years": 1.7,
+  "next_24m_maturities_mn": 429,
+  "covenant_nd_ebitda": null,
+  "notes": "Release 2T26: empréstimos R$ 125,7 mi (capital de giro Itaú CDI+2,30%; 4131 em euro com swap para CDI+2,70%, incluindo o passivo do swap) + debêntures R$ 563,0 mi (5ª CDI+1,80%; 6ª CDI+1,40%/1,60%; 7ª CDI+1,10%) = R$ 688,7 mi; compromissos a pagar por aquisições R$ 88,2 mi (IPCA/CDI; R$ 24,1 mi líquidos do escrow da FAEL); caixa R$ 269,8 mi. DL reportada R$ 443,0 mi, 0,75x o EBITDA aj. ex-IFRS-16 UDM. Cronograma: R$ 210 mi em 12 meses, R$ 219 mi entre 1 e 2 anos, R$ 179 mi entre 2 e 3 anos, R$ 80 mi entre 3 e 4 anos. Arrendamentos IFRS-16 R$ 726,2 mi à parte (juros de ~10,3% a.a.). Limite de covenant não verificado."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -4,
+  "notes": "DL bancária pós-fixada (R$ 688,7 mi de dívida − R$ 269,8 mi de caixa ≈ R$ 419 mi) × 1 p.p. ≈ R$ 4,2 mi antes de IR; com IR efetivo de ~5% (ProUni) ≈ −R$ 4 mi/ano, ~1,3% do lucro de 2026E. Os arrendamentos têm taxa fixa. O canal relevante é o indireto: renda e crédito do aluno (PDD, evasão, captação)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.121,
+  "ebitda_margin_avg_5y": 0.229,
+  "roe_avg_5y": 0.003,
+  "payout_avg_5y": 0.21,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.056,
+   "ebitda_margin": 0.334,
+   "net_income_mn": 106.3,
+   "net_debt_ebitda": 0.75
+  },
+  "notes": "CVM: receita 2020–25 CAGR 12,1% (inclui as aquisições de 2021, como UNESC e FAEL; 3 anos 9,8%; 2025 +11,9%). Margem EBITDA CVM (IFRS-16) volátil: 25,8% (2021), 11,3% (2022), 23,7% (2023), 23,3% (2024) e 30,2% (2025), média de 22,9%; LTM 31,1%; 1S26 33,2% (2S25 28,9%). ROE médio ~0% (prejuízos em 2022–24), 16,8% em 2025 e 18,9% LTM. Premissas: receita +5,7% em 2026 (1S26 +6,8%; 2S26 +4,5%) e +5–5,5% depois (presencial: base +4,4% e ticket +5,5%; medicina com 4.424 alunos para 1.001 vagas; EAD+semipresencial com receita −23% no 1S26, caindo de ~13% para ~8% da ROL). Margem CVM 30,8% no 2S26, subindo a 32,5% (equivale a 29,6% → 31,3% no modelo, que tira 1,2 p.p. de descontos financeiros), ainda abaixo do 1S26. D&A 9,2% → 8,5% (LTM 9,7%; 1S26 9,1%). IR 5–9% (efetivo de 4–7% em 2025–LTM pelo ProUni). Kd de baixo para cima: bancos a CDI+1,6% mais ~0,3 p.p. de MTM/fees (CDI de 13,9% no 2S26, 14,6% em 2027 e ~15,4% em 2028–30), arrendamentos a 10,3% → 12,4% (renovações reprecificam), caixa a 97% do CDI ⇒ 13,1/13,3/13,1/12,4/10,7%; usamos 13,2/13,4/13,2/12,8/12,5% (piso conservador, porque a DL cai e passa a ser quase só arrendamento). NWC 25% do incremento de receita (recebíveis = 30% da ROL; Ser Solidário parcela descontos ao longo do curso). Payout 30% → 50% (política de 30% semestral retomada em 2025)."
+ },
+ "guidance": "Sem guidance numérico (release do 2T26, 12/08/2026). Direcionais da administração: crescimento do presencial em saúde e direito, maturação das vagas de medicina, eficiência (ocupação dos campi) e redução do custo da dívida. Resultado do 3T26 previsto para meados de novembro de 2026 (data não confirmada).",
+ "dividend_policy": "Mínimo estatutário de 25%; a companhia retomou em 2025 a distribuição semestral de ~30% do lucro: R$ 61,1 mi complementares de 2025 (R$ 0,4776/ação, data-com 06/04/2026, pagos em 30/04 e 29/05/2026, ~28,5% do lucro de 2025) e R$ 51,9 mi intermediários do 1S26 (R$ 0,4055/ação, data-com 31/08/2026, pagos em 25/09 e 30/10/2026, ~28,5% do lucro do 1S26). Não houve dividendos em 2022–24 (prejuízos). Recompras pequenas (R$ 9,9 mi em 2024; programa de 2021). Os dividendos do 1S26 já têm data-com passada e foram tratados como dívida. Projeção: 30% (2026) → 50% (2030), com a DL ex-arrendamentos virando caixa líquido.",
+ "election_impact": "A ação caiu 35,6% em 26/10 (de R$ 18,26 para R$ 11,76) e devolveu quase todo o rali eleitoral: tinha subido ~62% desde 14/08 (R$ 11,27, mínima do Ibovespa antes do rali) com o mercado precificando a vitória de Flávio e terminou só ~4% acima daquele preço. Canal macro (prêmio de risco, small caps −27%, DI longo +300 bp); o canal direto de juros é pequeno (+100 bp de CDI ≈ −R$ 4 mi/ano de lucro, porque a dívida bancária líquida é de só R$ 419 mi). Micro: o 4º mandato mantém o marco do EAD (Decreto 12.456/2025), mas o EAD já é só ~13% da receita da Ser e está encolhendo, e mantém FIES (6,2% da base presencial) e ProUni (8,2% da base, base da isenção de IR). O risco específico é a política de vagas de medicina (Mais Médicos e 120 vagas judicializadas). O valor intrínseco muda pouco; a queda foi sobretudo a reversão de uma expectativa política.",
+ "summary": "Ser virou a mais presencial e menos alavancada das listadas de massa: 58,6% da base no presencial, 65% dele em saúde, medicina com 4.424 alunos e DL ex-arrendamentos de 0,75x o EBITDA. O lucro do 1S26 subiu 46% com alavancagem operacional (margem CVM de 33,2%). A R$ 11,76 (13h02 de 26/10), a ação negocia a ~4x o P/L 2027E; o risco é a margem voltar ao histórico volátil e a regulação de medicina.",
+ "thesis": [
+  "Mix em transição favorável: mensalidades presenciais +10,3% no 1S26 (ticket presencial +5,5% e base +4,4%), enquanto o EAD, que encolhe, já é só ~13% da ROL; a saúde é 65% da base presencial.",
+  "Medicina em maturação: 1.001 vagas anuais (4.424 alunos, +5,6%) com ticket de ~R$ 9,6 mil/mês, ou ~22% da receita líquida, ainda subindo à medida que as turmas novas se formam.",
+  "Balanço folgado e mais barato: DL de R$ 443 mi (0,75x, contra 1,24x um ano antes), refinanciamento de CDI+2,0% para CDI+1,1% e dividendos semestrais de ~30% do lucro (R$ 113 mi aprovados em 2026)."
+ ],
+ "risks": [
+  "Histórico de margem volátil (EBITDA CVM de 11% a 30% em 2022–25): a expansão do 1S26 pode não se sustentar com consumidor endividado e juros de 15%.",
+  "Medicina: 120 das 1.001 vagas operam por decisão judicial sem trânsito em julgado (vestibulares suspensos desde fev/25), ticket de medicina −2,2% a −8,2% a/a, e o Mais Médicos pode abrir concorrência.",
+  "EAD/semipresencial: captação −33,9% e evasão de 29,2% no 1S26; eventual endurecimento do MEC no novo mandato.",
+  "Benefícios fiscais (ProUni) e a reforma tributária sobre consumo (IBS/CBS a partir de 2027) podem elevar a carga sobre a receita."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (meados de novembro de 2026; data não confirmada)",
+  "Captação 2027.1 do presencial e da medicina (outubro/2026 a março/2027)",
+  "Decisões judiciais sobre as vagas de medicina e editais do Mais Médicos; regras de FIES e ProUni para 2027"
+ ],
+ "key_data": [
+  {
+   "label": "ROL 2T26",
+   "value": "R$ 622,0 mi (+5,6%)",
+   "context": "1S26 R$ 1.205,8 mi (+6,8%); presencial +10,2%, EAD −30,2%"
+  },
+  {
+   "label": "EBITDA 2T26",
+   "value": "R$ 207,9 mi (33,4%)",
+   "context": "IFRS-16/CVM; ajustado ex-IFRS-16 R$ 180,7 mi (29,1%, +10,8%)"
+  },
+  {
+   "label": "Lucro líquido 1S26",
+   "value": "R$ 182,2 mi (+45,8%)",
+   "context": "2T26 R$ 106,3 mi (+30,7%); IR efetivo de 3,9%"
+  },
+  {
+   "label": "DL / EBITDA aj. UDM",
+   "value": "0,75x (R$ 443,0 mi)",
+   "context": "ex-IFRS-16; 1,6x com arrendamentos de R$ 726 mi (CVM)"
+  },
+  {
+   "label": "Medicina",
+   "value": "1.001 vagas; 4.424 alunos",
+   "context": "120 vagas por decisão judicial; ticket R$ 9.642/mês"
+  },
+  {
+   "label": "Ações em circulação",
+   "value": "128,04 mi",
+   "context": "valor de mercado ~R$ 1,5 bi a R$ 11,76"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Ser Educacional – Release de Resultados 2T26 (12/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/4e9e23d7-cea5-42fd-bf06-7a7ca01880fc/bd43857a-977c-c7b4-8b51-478fb227d657?origin=2"
+  },
+  {
+   "title": "BP Money – Ser Educacional aprova R$ 51,9 milhões em dividendos (21/08/2026)",
+   "url": "https://bpmoney.com.br/economia/ser-educacional-seer3-aprova-r-519-milhoes-em-dividendos/"
+  },
+  {
+   "title": "Investidor10 – Ser reverte prejuízo no 4T25 e aprova R$ 61,1 mi em dividendos",
+   "url": "https://investidor10.com.br/noticias/ser-educacional-seer3-reverte-prejuizo-no-4t25-e-aprova-r-61-1-mi-em-dividendos-119448/"
+  },
+  {
+   "title": "DGABC/Estadão Conteúdo – Ser Educacional lucra R$ 106,3 mi no 2T26",
+   "url": "https://www.dgabc.com.br/Noticia/4340842/ser-educacional-tem-lucro-de-r-106-3-milhoes-no-2tri26-alta-anual-de-30-7"
+  },
+  {
+   "title": "Estratégia Vestibulares – MEC anuncia vagas do Fies 2026–2028",
+   "url": "https://vestibulares.estrategia.com/portal/noticias/vagas-fies-2026-2027-2028/"
+  },
+  {
+   "title": "CVM – DFP/ITR padronizados (data/hist/SEER3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 – cotação ao vivo",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/SEER3"
+  }
+ ],
+ "confidence": "média — release 2T26 e CVM sólidos e balanço simples, mas a margem tem histórico volátil (11–30% em 2022–25), parte da medicina depende de liminares e o lucro de 2027E pressupõe manter a alavancagem operacional do 1S26."
+}

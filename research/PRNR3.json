@@ -1,0 +1,271 @@
+{
+ "ticker": "PRNR3",
+ "name": "Priner Serviços Industriais S.A.",
+ "sector": "Bens industriais / serviços de engenharia industrial (manutenção, inspeção, montagem e operação de minas)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "PRNR3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 793.55
+  },
+  "notes": "Ações: 57,02 mi (B3; CVM 56,99 mi em 30/06, diferença de exercício de opções). DL-base = DL CVM de 30/06/26 (R$ 649,9 mi = empréstimos, debêntures e arrendamentos IFRS-16 de R$ 966,2 mi − caixa e aplicações de R$ 316,4 mi) + Sellers Finance/earn-outs de aquisições (R$ 68,8 + 50,5 = R$ 119,3 mi: parcelas de 20% da SEMEP em out/26 e out/27 corrigidas pelo CDI, saldos de Real Estruturas e Welding) + swap passivo (R$ 8,7 mi, a companhia o soma à dívida) + dividendos a pagar (R$ 15,7 mi) = R$ 793,6 mi. Esses itens vão para a DL, não para other_debt_like, porque pagam CDI e saem do caixa em 2026–27; assim o DDM e o P/L carregam o custo. A coluna 2026 é o 2S26 anualizado (3T26 ~R$ 495 mi e 4T26 ~R$ 525 mi; ano cheio ≈ R$ 1,90 bi, +22%), conforme a sinalização de 'escada ascendente' do release do 2T26. A D&A projetada EXCLUI a amortização de intangíveis de PPA (~R$ 32 mi/ano; R$ 7,9 mi no 2T26), que não é caixa. A D&A econômica fica em 6,2% da receita (2T26 ex-PPA: R$ 28,5 mi sobre R$ 462,6 mi), e o lucro do motor equivale ao 'LL ajustado' da companhia. O 1T26 contábil tem o clawback da Real Estruturas (+R$ 49,5 mi no EBITDA e +R$ 11,2 mi no financeiro), não recorrente e fora da base de projeção."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.305,
+   0.11,
+   0.09,
+   0.07,
+   0.06
+  ],
+  "ebitda_margin": [
+   0.16,
+   0.168,
+   0.175,
+   0.175,
+   0.175
+  ],
+  "da_pct_revenue": [
+   0.062,
+   0.062,
+   0.062,
+   0.062,
+   0.062
+  ],
+  "capex_pct_revenue": [
+   0.098,
+   0.085,
+   0.07,
+   0.065,
+   0.065
+  ],
+  "nwc_pct_revenue": 0.13,
+  "cost_of_net_debt": [
+   0.18,
+   0.185,
+   0.185,
+   0.18,
+   0.18
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25
+  ],
+  "minority_share_ni": 0.3,
+  "payout": [
+   0.25,
+   0.25,
+   0.3,
+   0.35,
+   0.4
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.17,
+  "roe": 0.18
+ },
+ "wacc": {
+  "kd_pre_tax": 0.175,
+  "target_debt_weight": 0.35,
+  "notes": "Kd = CDI a termo de ~15% (curva DI 28/10) + ~2,3% (debêntures: 2ª emissão a CDI+2,10%/2,40%, 3ª a até CDI+2,10%, 4ª a até CDI+1,50%; bancos e sellers finance em CDI+). O custo da DL de 18–18,5% inclui o carrego negativo do caixa: o resultado financeiro do 2T26 foi R$ 35,3 mi, ou 18% anualizado sobre a DL-base. wd 0,35, entre a estrutura pré-eleição (DL/(DL+mcap) = 40%) e a meta de desalavancagem."
+ },
+ "adjustments": {
+  "other_debt_like": 10.3,
+  "non_operating_assets": 0,
+  "minority_value": 110,
+  "notes": "other_debt_like = provisões prováveis trabalhistas, cíveis e tributárias (R$ 10,3 mi). Earn-outs, swap e dividendos a pagar já estão na DL-base. A provisão para desmobilização de contratos (R$ 17,4 mi) é custo operacional recorrente e está nas margens. Minoritários: com a compra dos 49% restantes da gMaia no 2T26 (R$ 78,4 mi; −R$ 65,7 mi no PL como transação de capital), sobra basicamente a fatia de 40% da SEMEP. A SEMEP tinha receita de R$ 364,8 mi e EBITDA de R$ 128,4 mi nos 12 meses até jun/25 (margem de 35%) e foi comprada a 3,5x EV/EBITDA (60% por ~R$ 269 mi), o que põe os 40% em ≈ R$ 120 mi; uso R$ 110 mi (contábil: R$ 75,1 mi). Fatia de 30% no LL consolidado: a SEMEP tem pouca dívida e a dívida de aquisição fica na controladora. Histórico CVM: minoritários de R$ 20,2 mi contra LL total de R$ 8,4 mi em 2025; 64% em 2024."
+ },
+ "target_multiples": {
+  "pe": 15.0,
+  "ev_ebitda": 4.7,
+  "pbv": 1.5,
+  "rationale": "Regra do 'choque de juros neutro' (+300 bp no rendimento do múltiplo pré-eleição), medida nos números 2027E do próprio modelo, como nas revisões de ALOS3 e MULT3. Pré-eleição (R$ 20,79; mcap de R$ 1.185 mi), o P/L sobre o LPA 2027E do modelo (R$ 0,77) era 27x: E/P de 3,7% + 3 pp = 6,7%, ou 15x. O EV pré-eleição (mcap + DL-base de R$ 794 mi + minoritários de R$ 110 mi + provisões de R$ 10 mi = R$ 2,10 bi) sobre o EBITDA 2027E de R$ 381 mi dava 5,5x: 18,2% + 3 pp, ou 4,7x. Histórico próprio: EV/EBITDA com mediana de 6,3x em 5 anos (p10 de 3,9x); P/L com mediana de 21,6x em 5 anos, sobre lucro deprimido. O P/L alto convive com o EV/EBITDA baixo porque os juros (~R$ 150 mi/ano) levam 60–65% do EBIT: é o múltiplo de um patrimônio alavancado. Ao preço de 26/10, o EV/EBITDA 2027E é ~4,6x. P/VP de 1,5x, contra mediana de 1,86x em 5 anos."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.04,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "O ciclo de capex de mineração e O&G desacelera, a Montagem não volta, o ramp-up da SEMEP e do off-road atrasa; a margem fica em 14–15% e o covenant de 2,5x força um novo aumento de capital."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.03,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "A mineração dobra até set/27 com contratos de ~35% de margem, o off-road entra em operação plena e os juros cedem em 2027; a DL/EBITDA cai abaixo de 1,5x."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.05,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 1062.0,
+  "pct_floating_cdi": 0.9,
+  "avg_cost": "CDI + ~2,0–2,4% (debêntures: 2ª emissão a CDI+2,10%/2,40%; 3ª, de R$ 200 mi em abr/26, a até CDI+2,10%; 4ª, de R$ 50 mi em mai/26, a até CDI+1,50%); custo líquido efetivo de ~18% a.a. sobre a DL no 2T26",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 345,
+  "covenant_nd_ebitda": 2.5
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -6,
+  "notes": "DL-base de ~R$ 794 mi quase toda em CDI (bancos, debêntures e sellers finance corrigidos pelo CDI): +100 bp ≈ −R$ 8 mi antes do IR, ≈ −R$ 6 mi no LL, ~14% do LL controlador 2027E (R$ 44 mi). Dívida bruta de R$ 1.062 mi no conceito da companhia (bancos e debêntures R$ 946,6 mi + sellers R$ 115,4 mi). Amortizações: R$ 155 mi até dez/26 (bancos R$ 71,0, sellers R$ 68,7, debêntures R$ 15,3), R$ 190 mi em 2027 (bancos R$ 143,6, sellers R$ 46,7) e R$ 717 mi de 2028 em diante. Prazo médio não divulgado no material lido."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.452,
+  "ebitda_margin_avg_5y": 0.124,
+  "roe_avg_5y": 0.045,
+  "payout_avg_5y": 1.96,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.278,
+   "ebitda_margin": 0.154,
+   "net_income_mn": -1.4,
+   "net_debt_ebitda": 2.27
+  },
+  "notes": "A receita cresceu 45% a.a. em 2020–25 por aquisições (gMaia, Real Estruturas, Welding, SEMEP); o crescimento orgânico foi de +21% em 2025. Projeção: coluna 2026 = 2S26 anualizado (+30% sobre 2025; ano cheio ≈ +22%), depois +11/+9/+7/+6%. O CAGR 2025–30 fica em ~12%, abaixo do histórico, porque só considera o portfólio atual, sem novas aquisições. A margem EBITDA CVM teve média de 12,4% em 5 anos e foi de 15,4% no 2T26 (ajustada: 15,6%). Projeto de 16,0% a 17,5% pela mudança de mix: mineração com contratos de ~35% de margem; Montagem e Inspeção em recuperação. D&A ex-PPA de 6,2%; capex de 9,8% no 2S26 (equipamentos de mineração e off-road, R$ 90–100 mi) caindo a 6,5%; NWC de 13% da receita (49 dias no 2T26). ROE médio de 4,5% em 5 anos, deprimido por juros e PPA; projetado de 6% a 14%. O payout médio de 196% (dividendos pagos de R$ 91,6 mi contra LL controlador de R$ 46,8 mi em 2021–25) reflete um lucro muito pequeno; em valor, a Priner pagou R$ 12–43 mi/ano. LL controlador 2026E (coluna) de R$ 30 mi, contra R$ 9,2 mi ajustados no 1S26 — a alavancagem operacional do 2S26 é o que o modelo assume."
+ },
+ "guidance": "Sem guidance numérico formal. Release do 4T25 (12/03/26): para 2026, 'margens consolidadas mais elevadas, redução da alavancagem, crescimento da receita em linha com o nosso histórico e retorno do ROIC acima do custo de capital'; 65% da receita em contratos de longo prazo (80% OPEX, 20% CAPEX). Release e call do 2T26 (13/08/26): o 3T26 ainda não reflete a plena capacidade; Montagem acima de R$ 100 mi por trimestre no 3T e 4T26; mineração em plena recuperação desde agosto (a receita do contrato interrompido pelas chuvas é reposta entre ago e dez); primeiro lote off-road (~R$ 150 mi/ano de receita) em operação plena em jan/27; capex de ~R$ 90–100 mi no 2S26; headcount +25% em dois meses; a nova UN Engenharia & Montagem deve fechar 2026 com EBITDA 'levemente superior' à soma das duas frentes em 2025; SG&A ajustado de 9,5% da receita, com meta de 7–8% no médio prazo.",
+ "dividend_policy": "Estatuto: dividendo mínimo de 25% do lucro líquido ajustado, pago em dividendos e JCP anuais. Pagos (CVM): R$ 12,3 mi em 2022, R$ 43,1 mi em 2023, R$ 22,8 mi em 2024, R$ 13,4 mi em 2025 e R$ 27,9 mi no 1S26 (inclui dividendos a minoritários de controladas: R$ 17,6 mi no 2T26). Os R$ 15,7 mi a pagar em 30/06/26 foram tratados como dívida. Aumentos de capital: R$ 84,6 mi em 2024 e R$ 150 mi em jul/25 (para a SEMEP). Sem recompra. Projeção: payout de 25% (mínimo) subindo a 40% em 2030, à medida que a alavancagem cai.",
+ "election_impact": "PRNR3 caiu 29,5% em 26/10 (R$ 20,79 → R$ 14,66), mais que o Ibovespa (−17%) e em linha com as small caps (SMLL −27%). O canal é sobretudo macro: (i) prêmio de risco — small cap ilíquida (ADTV de R$ 12 mi), beta de ~1,1–1,2; (ii) juros — DL de ~R$ 794 mi com earn-outs, quase toda em CDI + 1,5–2,4%: +100 bp tira ~R$ 6 mi do LL (~14% do LL 2027E), e a folga no covenant de 2,5x é pequena (2,27x no 2T26), com histórico de aumentos de capital para financiar aquisições. No micro, a eleição muda pouco: os clientes são mineradoras e siderúrgicas exportadoras (Vale, ArcelorMittal), que ganham com o real mais fraco (dólar +9,5%), e a Petrobras/offshore (~37% da receita), cujo plano de investimentos tende a ser mantido ou ampliado no 4º mandato, com ênfase em conteúdo local; a carteira contratada (R$ 2,4 bi no 1S26) não depende do resultado. O que piora de fato é o custo da dívida e da mão de obra (reoneração da folha; pessoal é ~60% do valor adicionado) e o risco de refinanciamento ou diluição se o ramp-up atrasar.",
+ "summary": "Plataforma de serviços industriais (manutenção, inspeção, montagem e operação de minas) que cresceu por aquisições (Real Estruturas, Welding, SEMEP) e agora precisa executar uma carteira recorde (book-to-bill de 2,2x) com dívida de ~2,3x o EBITDA em CDI. Os juros consomem quase todo o EBIT ajustado de ~9% da receita (LL ajustado de R$ 8 mi no 2T26). O valor depende da alavancagem operacional da mineração e da desalavancagem, que pedem margem EBITDA perto de 17% e juros menores.",
+ "thesis": [
+  "Carteira recorde: R$ 2,39 bi em contratos no 1S26 (85% do total de 2025) e R$ 4,26 bi em 12 meses; book-to-bill LTM de 2,23x (1,51x orgânico).",
+  "Mix migrando para mineração, com contratos de ~35% de margem: Siderurgia & Mineração superou Óleo & Gás pela 1ª vez no 2T26, e o off-road (~R$ 150 mi/ano) começa em jan/27.",
+  "Margem EBITDA ajustada de 15,6% no 2T26 (+4,4 p.p. a/a) e turnaround da Inspeção, cuja margem operacional passou de −6,1% para +16,4% no 1S26.",
+  "A compra dos 49% restantes da gMaia (R$ 78,4 mi no 2T26) aumenta a fatia do lucro que fica com a Priner; os minoritários se resumem aos 40% da SEMEP."
+ ],
+ "risks": [
+  "Alavancagem: DL de ~R$ 794 mi com earn-outs (2,27x no conceito da companhia, contra covenant de 2,5x); juros de ~R$ 150 mi/ano, 60–65% do EBIT; risco de novo aumento de capital.",
+  "Execução do ramp-up (mineração e off-road, contratação de +25% de pessoal, entrega de equipamentos): o 1S26 teve interrupção por chuvas e máquinas paradas.",
+  "Volatilidade da Montagem (coeficiente de variação da margem bruta de 52%, contra 6% em Serviços Industriais) e concentração em grandes clientes (Petrobras, Vale, ArcelorMittal).",
+  "Earn-outs e cláusulas de ajuste de preço (clawback da Real Estruturas) tornam lucro e dívida voláteis; os 40% minoritários da SEMEP ficam com parte relevante do lucro.",
+  "Custo de mão de obra (reoneração da folha, dissídios) e cortes de capex das clientes num ciclo de juros altos."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (meados de nov/26): primeiro trimestre com mineração plena e Montagem acima de R$ 100 mi",
+  "Pagamento das parcelas de 20% da SEMEP (out/26 e out/27)",
+  "Início do off-road em jan/27",
+  "DL/EBITDA abaixo de 2x e eventual início de cortes de juros em 2027"
+ ],
+ "key_data": [
+  {
+   "label": "Receita líquida 2T26",
+   "value": "R$ 462,6 mi",
+   "context": "+27,8% a/a (SEMEP); +9,8% t/t"
+  },
+  {
+   "label": "EBITDA ajustado 2T26 / margem",
+   "value": "R$ 72,2 mi / 15,6%",
+   "context": "+77,9% a/a; contábil R$ 71,0 mi"
+  },
+  {
+   "label": "Lucro líquido ajustado 2T26",
+   "value": "R$ 8,0 mi",
+   "context": "contábil −R$ 1,0 mi (controladores −R$ 1,4 mi)"
+  },
+  {
+   "label": "DL / EBITDA LTM (companhia)",
+   "value": "R$ 745,6 mi / 2,27x",
+   "context": "covenant 2,5x; DL-base do modelo R$ 794 mi"
+  },
+  {
+   "label": "Contratos fechados",
+   "value": "R$ 966 mi no 2T26",
+   "context": "R$ 4,26 bi em 12 meses; book-to-bill 2,23x"
+  },
+  {
+   "label": "EV/EBITDA 2027E ao preço de 26/10",
+   "value": "~4,6x",
+   "context": "EV R$ 1,75 bi com earn-outs e minoritários"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Priner — Release de resultados 2T26 (13/08/2026)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/PRNR3/47845/"
+  },
+  {
+   "title": "Priner — Release de resultados 4T25 e 2025 (12/03/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/6aff4303-d559-4771-901f-8de7d8a88ef5/40e1d9af-9071-7e10-f4d9-c674b03ebd12?origin=2"
+  },
+  {
+   "title": "Transcrição do webcast 2T26 da Priner",
+   "url": "https://sozai.app/transcript/priner-prnr3-resultados-2t26-webcast/"
+  },
+  {
+   "title": "Priner — Fato relevante: aquisição de 60% da SEMEP (19/09/2025; 3,5x EV/EBITDA; 60% à vista, 20% em 12 e 20% em 24 meses, corrigidos pelo CDI)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/6aff4303-d559-4771-901f-8de7d8a88ef5/baa424b7-6443-4b34-af44-a636509f294d?origin=1"
+  },
+  {
+   "title": "Empiricus — Priner reforça portfólio com aquisição na mineração (SEMEP: receita R$ 364,8 mi, EBITDA R$ 128,4 mi)",
+   "url": "https://www.empiricus.com.br/artigos/investimentos/priner-prnr3-reforca-portfolio-com-aquisicao-no-setor-de-mineracao-como-avaliamos-o-negocio-jrey/"
+  },
+  {
+   "title": "Nord Investimentos — Priner adquire 60% da SEMEP (~R$ 269 mi)",
+   "url": "https://www.nordinvestimentos.com.br/blog/priner-prnr3-compra-semep-logistica/"
+  },
+  {
+   "title": "Visno — Priner anuncia 4ª emissão de debêntures de R$ 50 mi (até DI+1,50%)",
+   "url": "https://visnoinvest.com.br/news/13429/priner-prnr3-anuncia-emissao-de-debentures-de-r-50-mi"
+  },
+  {
+   "title": "Acionista — Priner aprova 3ª emissão de R$ 200 mi em debêntures com garantia real (até DI+2,10%)",
+   "url": "https://acionista.com.br/priner-prnr3-aprova-emissao-de-r-200-milhoes-em-debentures-com-garantia-real/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizadas (data/hist/PRNR3.json, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — cotação (API oficial; foto do estudo de 26/10 às 13h02)",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/PRNR3"
+  }
+ ],
+ "confidence": "baixa — o LL é muito pequeno perto dos juros, então pequenas mudanças de margem ou de CDI mudam o valor do patrimônio em dezenas de por cento; a SEMEP e a operação de minas têm histórico curto; earn-outs e clawbacks deixam dívida e lucro voláteis; o 3T26 ainda não saiu."
+}

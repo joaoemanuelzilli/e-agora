@@ -1,0 +1,216 @@
+{
+ "ticker": "PINE4",
+ "name": "Banco Pine S.A.",
+ "sector": "Financeiro / Banco médio — Varejo Colateralizado (consignado INSS, público e privado) + Atacado estruturado; controle da família Pinheiro",
+ "template": "financial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "PINE4",
+   "class": "PN"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "equity_controlling_2025": 1502
+  },
+  "notes": "Ações: 254,3 mi ex-tesouraria (B3 = CVM 2T26 líquida de 5,4 mi em tesouraria); a oferta primária de mar/26 (21,8 mi de ações a R$ 11,25 = R$ 245 mi) já está nas ações e no PL do 2T26 (R$ 1.801 mi CVM; R$ 1.802 mi no release, VPA R$ 6,95 com outra contagem de ações). PL-base pró-forma (técnica do BBAS3): o motor projeta a partir do FY2025 (R$ 1.405 mi), mas no 1S26 entraram ~R$ 259 mi de capital (oferta + planos) e saíram R$ 62 mi em recompras. Override equity_controlling_2025 = PL 2026E alvo − lucro 2026E retido no motor: 2.040 − 690 × (1 − 0,22) = R$ 1.502 mi; com ROE de abertura de 45,9%, LL 2026E = R$ 690 mi (1S26 R$ 316 mi CVM/R$ 315,6 mi release + 2S26E R$ 374 mi) e PL 2026E = R$ 2.040 mi = PL 2T26 1.801 + LL 2S26E 374 − JCP 3T26 45,5 − JCP 4T26E ~50 − recompras 2S26E ~40. O ROE médio de 2026 que o motor mostra (~39%) bate com o ROAE de 39,1% do 1S26. Payout 2026 de 22% = fluxo do stub (2S26 × 0,504 ≈ R$ 76 mi): só o JCP do 4T26 e as recompras de nov–dez; o JCP do 3T26 (R$ 0,178953/ação, data-com 20/10/26, pago em 29/10) e o do 2T26 (data-com 14/07) não são fluxo de quem compra em 26/10. Recompras entram no payout (convenção do motor). Minoritários ~0,5% do lucro (R$ 29,6 mi de PL): desprezíveis."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   0.22,
+   0.4,
+   0.45,
+   0.5,
+   0.55
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.459,
+   0.37,
+   0.32,
+   0.28,
+   0.255
+  ],
+  "ni_growth": null,
+  "payout": [
+   0.22,
+   0.4,
+   0.45,
+   0.5,
+   0.55
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roe": 0.22
+ },
+ "wacc": {
+  "kd_pre_tax": 0.165,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Banco: sem ponte EV→equity."
+ },
+ "valuation_weights": {
+  "ddm": 0.6,
+  "pbv": 0.4
+ },
+ "valuation_weights_rationale": "Mesma regra dos bancos revisados (BBAS3, BBDC4, BRSR6, BPAC11 — data/tests/robustness.md): DDM 60% / P/VP 40%. Aqui o P/L é ainda mais enganoso: aplicado ao LPA 2027E, ainda com ROE de ~35%, ele precifica como permanente um retorno que a concorrência e a regulação do consignado privado tendem a comprimir. Fica só como saída da TIR de 3 anos.",
+ "target_multiples": {
+  "pe": 4.5,
+  "ev_ebitda": null,
+  "pbv": 1.2,
+  "rationale": "P/VP 1,2x (sobre o PL 2026E) e P/L 4,5x (sobre o LPA 2027E). Gordon com ROE de longo prazo de 22%, Ke de mercado ~19% (curva longa a 15% + prêmio de banco médio) e g 5%: (0,22−0,05)/(0,19−0,05) ≈ 1,2x. O mercado pagou 1,1–2,5x o PL entre mai/25 e mai/26 (multiples_history; os pontos de 2024 com P/VP de ~800x são erro de escala dos ITRs 2T24/3T24 na CVM) e 2,3x na sexta pré-eleição; antes da virada do modelo (2016–23, ROE < 10%) negociava a 0,3–0,8x. P/L: o BTG via 4,2x o lucro 2026E em jun/26 e 4,6x em jul/26 — e dizia que esse múltiplo já embutia queda forte do ROE; 4,5x sobre o lucro 2027E (ainda com ROE ~35%) equivale a ~1,5x o PL de saída."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.35,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.08,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Inadimplência do consignado privado (setor 6,8% em ago/26) sobe com desemprego, governo endurece tetos de taxa e a curva a 15% comprime a margem do varejo prefixado: ROE cai para ~20% já em 2028 e ~15% no terminal."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.05,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Crédito do Trabalhador segue política de governo no 4º mandato, safras continuam rentáveis e a carteira cresce 25%+ ao ano: ROE fica acima de 30% até 2029 (lucro 2027E ~R$ 1 bi, como o BTG)."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.05,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "n/a (banco: captação é passivo operacional). Captação R$ 25,6 bi no 2T26 (+27% a/a): CDB/depósitos R$ 18,0 bi, compromissadas R$ 7,3 bi, LF/LCI/LCA/debêntures financeiras R$ 4,8 bi, dívida subordinada R$ 0,8 bi; prazo médio 28,3 meses, gap positivo de 4,8 meses; R$ 2,2 bi de caixa livre. Custo não divulgado.",
+  "avg_maturity_years": 2.4,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -35,
+  "notes": "Estimativa minha, não divulgada: o varejo (R$ 14,7 bi de consignado INSS, público e privado) é prefixado e tem taxa com teto regulatório (INSS pelo CNPS; privado perto de 4,98% a.m.), enquanto a captação (prazo médio de 28 meses) reprecifica com o CDI. Se ~40% da captação do varejo reprecifica em 12 meses sem repasse ao ativo, +100 bp ≈ −R$ 60 mi antes de IR ≈ −R$ 35 mi de lucro (~−1,5 p.p. de ROE). O banco faz ALM e hedge (book banking/trading), então o número real tende a ser menor. O atacado (R$ 7,1 bi) é pós-fixado e casado."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.113,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.14,
+  "payout_avg_5y": 0.35,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": null,
+   "ebitda_margin": null,
+   "net_income_mn": 166,
+   "net_debt_ebitda": null
+  },
+  "notes": "revenue_cagr_5y aqui = CAGR do PL controlador CVM 2020–25 (R$ 824 → 1.405 mi, 11,3% a.a., com aumentos de capital). ROE CVM 2021–25: 0,3/5,7/19,2/9,9/34,8% (média 14,0%); 2024 CVM (R$ 101 mi) tem provisão relevante no 4T24 e ITRs 2T24/3T24 com escala errada na base CVM. Payout (JCP/LL, DVA): 2023 34%, 2025 36% (+17% em recompras); 1S26 40% (+20% em recompras). Projeção: LL 2026E R$ 690 mi (+60% a/a; ROE médio ~39%), 2027E R$ 755 mi (~33%), 2028E R$ 798 mi (~29%), 2030E R$ 852 mi (~24%); terminal 22%, acima do 19–20% de 2023 (antes do consignado privado) e abaixo dos 35–39% de 2025–26."
+ },
+ "guidance": "Sem guidance numérico localizado nesta rodada. Na CEO Conference do BTG (out/26) a gestão falou em NIM acima de 13% e eficiência abaixo de 20%; o BTG projeta carteira +10% t/t no 3T26 e ROE acima de 30%. Política: carteira 'direcionada às linhas de maior retorno ajustado ao risco'. 3T26 sem data verificada (2T26 saiu em 12/08).",
+ "dividend_policy": "Mínimo de 25–30% do lucro ajustado (release 2T26). Na prática, JCP trimestral + recompras: 1S26 JCP de R$ 127,3 mi (R$ 0,20 + R$ 0,30/ação, incluindo parcela não recorrente) e recompra de R$ 62,4 mi (~60% do lucro somados); 3T26 JCP de R$ 0,178953/ação (~R$ 45,5 mi, perto do teto TJLP × PL). Em mar/26 o banco emitiu R$ 245 mi em oferta primária (o controlador pôs R$ 60 mi). Premissa: payout (JCP + recompras) de 40% em 2027 subindo a 55% em 2030, à medida que o crescimento desacelera.",
+ "election_impact": "−26,2% em 26/10 (R$ 16,44 → R$ 12,13; P/VP 2,3x → 1,7x), a pior queda do trio; em 28/10, R$ 10,74 (−10% no dia). Parte é macro (small cap, beta de crash 1,3, Ke mais alto). Mas há canal micro real: (i) o varejo prefixado com taxa tabelada é passivo-sensível — a curva a 15% encarece o funding sem repasse; (ii) Selic alta por mais tempo e emprego mais fraco pioram a inadimplência do consignado privado, que já subia (NPL +90 1,3% → 2,7% em 12 meses; custo do risco 5,0%); (iii) num 4º mandato o governo segue dono das regras do Crédito do Trabalhador (teto de 1,99% a.m. com garantia do FGTS; corte do teto a 4,52% a.m. em jul/26, depois revertido) — risco regulatório dos dois lados. Modelo: ROE converge de ~39% para 22% no longo prazo; o bear (35%) leva a ~15%.",
+ "summary": "Pine virou, em dois anos, um banco de consignado com ROAE de 37,5% (2T26), NIM de 12,5% e eficiência de 20%, crescendo 40% a/a. O retorno atual depende de um produto novo, de alto rendimento e de regras do governo (consignado privado, ~30% da carteira), com custo do risco já em 5% e inadimplência subindo. Com Ke de 25%, o preço de 26/10 só fecha se o ROE ficar acima de ~30% até 2030; minha premissa é convergência para ~24% em 2030 e 22% no longo prazo.",
+ "thesis": [
+  "Lucro de R$ 165,7 mi no 2T26 (+99,6% a/a; 4% acima do BTG), R$ 315,6 mi no 1S26 (+101,7%); margem financeira bruta de R$ 626 mi no trimestre (+162% a/a).",
+  "Carteira expandida de R$ 21,8 bi (+40% a/a): INSS R$ 6,1 bi, consignado privado R$ 6,5 bi (+183% a/a), público R$ 2,1 bi, atacado R$ 7,1 bi (~91% estruturado e colateralizado).",
+  "Capital para crescer: Basileia 14,3% (Nível I 11,2%), excesso de PR de R$ 679 mi, oferta de R$ 245 mi em mar/26; retorno ao acionista de ~60% do lucro no 1S26.",
+  "Preço de 26/10 = ~4,5x o lucro 2026E e ~1,5x o PL 2026E: o mercado já desconta queda de ROE; a questão é a velocidade (cada 1 p.p. de ROE de longo prazo vale ~0,05x o PL a Ke 25%)."
+ ],
+ "risks": [
+  "Crédito: custo do risco subiu de R$ 53 mi (2T25) para R$ 260 mi (2T26), 5,0% da carteira; NPL +90 2,7%, Estágio 3 4,6%, cobertura caiu de 122% para 105%; inadimplência setorial do consignado privado 6,8% em ago/26.",
+  "Regulação do consignado privado/FGTS e do teto do INSS: decisões de governo podem cortar o retorno do principal motor de lucro (precedente: teto reduzido a 4,52% a.m. em jul/26 e depois revertido).",
+  "Concorrência dos grandes bancos no Crédito do Trabalhador e compressão de spread; margem passivo-sensível com juro alto.",
+  "Baixa liquidez (ADTV ~R$ 15 mi), controle concentrado e histórico de prejuízos em 2016–20."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (nov/26; data não verificada) — custo do risco e NIM depois do choque de juros.",
+  "Regras do Crédito do Trabalhador e do teto do consignado INSS no início do novo mandato.",
+  "JCP do 4T26 (data-com prevista p/ jan/27) e ritmo de recompras com a ação em queda."
+ ],
+ "key_data": [
+  {
+   "label": "LL 2T26 / ROAE",
+   "value": "R$ 165,7 mi / 37,5%",
+   "context": "1S26 R$ 315,6 mi, ROAE 39,1% (1S25 26,6%)"
+  },
+  {
+   "label": "NIM / NIM ajustado ao risco",
+   "value": "12,5% / 7,4%",
+   "context": "2T25 6,2% / 4,8%"
+  },
+  {
+   "label": "Custo do crédito 2T26",
+   "value": "R$ 259,9 mi (5,0% a.a.)",
+   "context": "2T25 R$ 53,0 mi; NPL +90 2,7% (jun/25 1,3%)"
+  },
+  {
+   "label": "Carteira expandida",
+   "value": "R$ 21,8 bi (+40% a/a)",
+   "context": "Consignado privado R$ 6,5 bi (~30%)"
+  },
+  {
+   "label": "Basileia / Nível I",
+   "value": "14,3% / 11,2%",
+   "context": "Excesso de PR R$ 679 mi; PL R$ 1,8 bi (+55% a/a)"
+  },
+  {
+   "label": "Preço / P/VP",
+   "value": "R$ 12,13 / 1,7x",
+   "context": "Sexta R$ 16,44 (2,3x); 28/10 R$ 10,74"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Banco Pine — Análise Gerencial dos Resultados 2T26 (via Investidor10)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/PINE4/47610/"
+  },
+  {
+   "title": "BTG Pactual Research — PINE4 (resumo do 2T26, CEO Conference, JCP do 3T26)",
+   "url": "https://content.btgpactual.com/research/home/acoes/ativo/PINE4"
+  },
+  {
+   "title": "Suno — BTG vê Banco Pine barato, mas alerta para consignado privado (29/06/2026)",
+   "url": "https://www.suno.com.br/noticias/btg-banco-pine-pine4-consignado-privado-mt/amp/"
+  },
+  {
+   "title": "Eu Quero Investir — Banco Pine tem descompressão após alívio regulatório no consignado privado (23/07/2026)",
+   "url": "https://euqueroinvestir.com/acoes/banco-pine-tem-descompressao-apos-alivio-regulatorio-no-consignado-privado"
+  },
+  {
+   "title": "Money Times — Pine: ações caem após oferta abaixo do esperado (04/03/2026)",
+   "url": "https://www.moneytimes.com.br/banco-pine-pine4-acoes-desabam-11-apos-oferta-de-acoes-abaixo-do-esperado-rnda/"
+  },
+  {
+   "title": "Times Brasil — Lucro do Banco Pine e ROAE no 2T26",
+   "url": "https://timesbrasil.com.br/empresas-e-negocios/bancos-fintechs/lucro-banco-pine-roae-2t26/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/PINE4.json, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação (API oficial), 26 e 28/10/2026",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/PINE4"
+  }
+ ],
+ "confidence": "baixa — release oficial do 2T26 lido, mas o caso depende de um único driver (retorno do consignado privado sob regra do governo) com só 18 meses de história; base CVM de 2024 com erros de escala; custo de captação, hedge e inadimplência por safra não divulgados; o ROE terminal (22%) é julgamento."
+}

@@ -1,0 +1,257 @@
+{
+ "ticker": "JSLG3",
+ "name": "JSL S.A.",
+ "sector": "Logística rodoviária e intralogística (contratos dedicados de longo prazo) — controlada da Simpar",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "JSLG3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 7481
+  },
+  "notes": "DL econômica 2T26 = DL CVM R$ 6.182 mi (empréstimos/debêntures R$ 6.796 mi + arrendamentos IFRS-16 R$ 916 mi + derivativos passivos LP R$ 125 mi, que a CVM pôs na linha de debêntures − caixa/aplicações R$ 1.492 mi − derivativos ativos R$ 162 mi) + derivativos passivos CP R$ 133 mi (fora da linha de dívida na CVM) = R$ 6.315 mi (= DL da companhia R$ 5.400 mi + direito de uso R$ 916 mi). Somados os itens tipo dívida: obrigações por aquisição de empresas R$ 498 mi (corrigidas a CDI, ITR nota 4.4), dividendos a pagar R$ 421 mi (R$ 1,4803/ação, data-com 29/12/2025, pagamento 28/12/2026 — não é fluxo de quem compra hoje), provisão do Sistema S R$ 208 mi (STJ Tema 1.390, fev/26, reconstituída no 1T26 e corrigida pela Selic) e contingências prováveis líquidas de depósitos e do ativo de indenização R$ 39 mi (R$ 344 − 68 − 236). Total R$ 7.481 mi. Ações 285,37 mi (B3 = CVM; tesouraria cancelada). Receita/EBITDA sem ajuste: base CVM (IFRS-16), que inclui venda de ativos (R$ ~380 mi/ano) e o custo contábil dos ativos vendidos."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.046,
+   0.08,
+   0.08,
+   0.07,
+   0.06
+  ],
+  "ebitda_margin": [
+   0.195,
+   0.195,
+   0.196,
+   0.196,
+   0.196
+  ],
+  "da_pct_revenue": [
+   0.084,
+   0.082,
+   0.08,
+   0.079,
+   0.078
+  ],
+  "capex_pct_revenue": [
+   0.045,
+   0.06,
+   0.07,
+   0.075,
+   0.08
+  ],
+  "nwc_pct_revenue": 0.12,
+  "cost_of_net_debt": [
+   0.15,
+   0.155,
+   0.159,
+   0.16,
+   0.16
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.15,
+   0.18,
+   0.22,
+   0.24,
+   0.25
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.125,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.16,
+  "target_debt_weight": 0.6
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": 0,
+  "notes": "Itens tipo dívida já incluídos em overrides.base.net_debt (aquisições a pagar, dividendos declarados de 2025, Sistema S, contingências líquidas, derivativos CP). Ativos imobilizados disponíveis para venda (R$ 330 mi) tratados como parte do ciclo da frota (entram no capex líquido via custo de venda). Sem minoritários."
+ },
+ "target_multiples": {
+  "pe": 8.0,
+  "ev_ebitda": 4.2,
+  "pbv": 0.9,
+  "rationale": "Histórico (data/market, EV com DL CVM e EBITDA UDM): EV/EBITDA mediana 5a 4,8x (p10 4,3x; 4,4x a R$ 6,05); P/L mediana 5a 9,2x (p10 6,2x); P/VP 5a 1,43x. Na base do modelo (EBITDA 2027E e DL econômica de ~R$ 7,3 bi no fim de 2026, ~R$ 1,1 bi acima da DL CVM) a ação valia 4,1x em 12/08 (R$ 5,05, pré-rali), 5,9x em 23/10 (R$ 12,40) e 4,2x a R$ 6,05: alvo 4,2x, no nível pré-rali, como em MOVI3 (3,3x) e VAMO3 (3,8x), porque o spread ROIC−Kd ficou negativo com CDI a termo de 14,6–15,4%. P/L 8x 2027E (abaixo da mediana 9,2x); o LL de 2027E é deprimido pelos juros, então a perna P/L (R$ ~2) e a de EV/EBITDA (R$ ~6) divergem — a diferença é a própria alavancagem. Pares do grupo: Movida 3,2x e Vamos 3,9x EV/EBITDA. Múltiplos de mercado embutem Ke de 12–15%; a Ke de 25% o DCF dá EV de ~3,5x o EBITDA 2027E (saída implícita de 2,5x em 2030)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.35,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.015,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.01,
+   "narrative": "Curva DI de hoje persiste (CDI 15–16% até 2029), clientes industriais desaceleram e o repasse de diesel/salários atrasa: LL perto de zero até 2028 e DL/EBITDA-A acima de 3x (covenant 3,5x)."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Curva devolve o choque e os R$ 2,7 bi de contratos novos do 1S26 rampam: receita perto da trajetória do guidance 2030 (R$ 21,4 bi bruta) com capex leve (ativos alugados)."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.012,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 6892,
+  "pct_floating_cdi": 0.6,
+  "avg_cost": "Custo médio da DL 15,9% a.a. (dívida bruta 15,5%; pós-IR 10,5%) no 2T26; debêntures CDI+ R$ 1,89 bi, empréstimos CDI R$ 1,43 bi, CRA CDI R$ 0,36 bi, CRA/CRI IPCA R$ 1,57 bi, CRA/CRI pré R$ 1,02 bi, NCE em USD R$ 0,50 bi (com hedge); swaps ponta passiva CDI R$ 0,26 bi; arrendamentos IFRS-16 pré R$ 0,92 bi (ITR 2T26, nota 4.4)",
+  "avg_maturity_years": 3.5,
+  "next_24m_maturities_mn": 2000,
+  "covenant_nd_ebitda": 3.5
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -25,
+  "notes": "Exposição líquida a CDI/Selic (ITR 2T26): dívida pós-fixada R$ 4,45 bi (debêntures 1,89 + empréstimos 1,43 + CRA 0,36 + aquisições a pagar 0,50 + swap passivo 0,26) − caixa/títulos R$ 1,47 bi = R$ 2,99 bi; + Sistema S (Selic) R$ 0,21 bi → +100 bp ≈ −R$ 32 mi/ano pré-IR ≈ −R$ 25 mi de LL (~30% do LL 2027E de ~R$ 80–90 mi). A parcela IPCA (R$ 1,6 bi) e pré (R$ 1,0 bi) reprecifica conforme vence (prazo médio 3,5 anos). Curva de hoje vs pré-eleição (~+250 bp em 2027–30): −R$ 60–75 mi/ano de LL, ou seja, quase todo o lucro."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.278,
+  "ebitda_margin_avg_5y": 0.197,
+  "roe_avg_5y": 0.154,
+  "payout_avg_5y": 0.46,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.049,
+   "ebitda_margin": 0.195,
+   "net_income_mn": 12.0,
+   "net_debt_ebitda": 2.74
+  },
+  "notes": "CVM: receita 2020–25 de R$ 2,83 bi para R$ 9,64 bi (+27,8% a.a., com aquisições Fadel, TPC, Marvel, Transmoreno, IC, Truckpad); 3a +17%; orgânico recente 4–6% (1S26 +3,6%; serviços +10% ex-saída de contratos não rentáveis). Projeção +4,6% (2026: 2S26 a +5,5% a/a), +8%/8%/7%/6% — abaixo do guidance de receita bruta 2030 de R$ 21,4 bi (+14% a.a., inclui M&A). Margem EBITDA CVM 19,5–19,6% vs 19,7% média 5a e 19,5% no 2T26 (ajustada 19,8%). D&A 8,4% → 7,8% (asset-light). Capex líquido (bruto − custo dos ativos vendidos + adições de direito de uso) 4,5% no 2S26 (no 1S26 foi ~2%: capex bruto R$ 98 mi < venda de ativos R$ 196 mi, mais ~R$ 200 mi de direito de uso) subindo a 8% em 2030, perto do D&A (transição asset-light, sem zerar a reposição). ROE 5a de 15% inclui 2021–23 (CDI baixo); 2025 5,3% e UDM −8% (Sistema S). Payout médio distorcido pelo dividendo extraordinário de R$ 422 mi de dez/25. DL/EBITDA 2,74x (companhia, ex-Sistema S); 3,8x na DL econômica / EBITDA UDM CVM ajustado."
+ },
+ "guidance": "Receita bruta de R$ 21,4 bi em 2030 (divulgado em 10/08/2026; +14% a.a. sobre 2025, inclui consolidação via M&A). Sem guidance de margem/lucro. Foco declarado: desalavancagem e 'aluguel de ativos' no lugar de capex próprio.",
+ "dividend_policy": "Mínimo estatutário de 25% do lucro ajustado. Dividendo extraordinário de R$ 1,4803/ação (R$ 422 mi, data-com 29/12/2025, antes da nova tributação de dividendos, pagamento em 28/12/2026) e JCP de R$ 0,4312/ação (pago em 02/02/2026). Pagos (DFC CVM): R$ 100 mi (2022), R$ 135 mi (2023), zero (2024), R$ 107 mi (2025), R$ 104 mi no 1S26. Sem recompra relevante.",
+ "election_impact": "Queda de 51% em 26/10 (R$ 12,40 → R$ 6,05) e mais −10% hoje (R$ 5,48): é o canal juros. A JSL tem EBIT de ~R$ 1,15 bi/ano contra resultado financeiro de ~R$ 1,1 bi; o lucro antes de IR do 2T26 foi negativo (−R$ 6 mi) e o LL só ficou positivo por créditos de IR. Com CDI a termo de 14,6–15,4% em 2027–30 (antes ~12%), o lucro projetado fica perto de zero até 2027. Antes do choque a ação havia subido 146% desde agosto (R$ 5,05) no trade eleitoral; a R$ 6,05 ainda estava 20% acima do pré-rali. O negócio (contratos de 5 anos com repasse de diesel e dissídio, R$ 2,7 bi de contratos novos no 1S26) não piorou; a estrutura de capital é que não suporta Ke de 25%. Lula 4: BNDESPar é sócia da Simpar; risco de reoneração/encargos sobre folha (Sistema S já custou R$ 208 mi).",
+ "summary": "Operadora logística com contratos longos e margem EBITDA estável (~19,5%), mas o resultado financeiro consome quase todo o EBIT: com a curva DI de hoje o lucro fica perto de zero em 2026–27 e só se recupera com a desalavancagem. DL econômica de R$ 7,5 bi (com IFRS-16, aquisições a pagar, dividendo de 2025 e Sistema S) contra valor de mercado de ~R$ 1,7 bi faz do equity uma opção sobre juros.",
+ "thesis": [
+  "Receita contratada e repassável: contratos médios de 60 meses; R$ 2,7 bi de contratos novos no 1S26; serviços +10% a/a ex-saída de contratos não rentáveis no 2T26.",
+  "Geração de caixa após crescimento de R$ 861 mi em 12 meses (estratégia asset-light: capex bruto de R$ 69 mi no 2T26 abaixo da venda de ativos de R$ 92 mi).",
+  "Desalavancagem: DL/EBITDA 2,74x (−0,44x a/a), covenant 2,46x vs limite 3,5x; liquidez cobre amortizações até nov/27."
+ ],
+ "risks": [
+  "Juros: resultado financeiro ≈ EBIT; cada +100 bp tira ~R$ 25 mi de LL (~30% do lucro de 2027E).",
+  "Itens tipo dívida fora da DL reportada: dividendo de R$ 421 mi a pagar em 28/12/2026, aquisições a pagar R$ 498 mi e Sistema S R$ 208 mi.",
+  "Execução do asset-light (aluguel de frota, inclusive da Vamos, parte relacionada) e pressão de margem na JSL Digital (7,9%).",
+  "Controlador alavancado (Simpar, com TRS referenciado em JSLG3) e baixa liquidez/free float."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (previsto para 11/11/2026)",
+  "Copom de dez/26 e curva DI",
+  "Pagamento do dividendo de R$ 421 mi (28/12/2026)",
+  "Evolução do guidance de receita 2030"
+ ],
+ "key_data": [
+  {
+   "label": "Receita líquida 2T26",
+   "value": "R$ 2.499 mi (+4,9% a/a)",
+   "context": "serviços R$ 2.410 mi (+5,9%); venda de ativos R$ 89 mi"
+  },
+  {
+   "label": "EBITDA 2T26 (CVM / ajustado)",
+   "value": "R$ 486 mi / R$ 494 mi",
+   "context": "margem 19,5% / 19,8%"
+  },
+  {
+   "label": "Lucro líquido 2T26",
+   "value": "R$ 12 mi (ajustado R$ 30 mi)",
+   "context": "LAIR −R$ 6 mi; 1T26 −R$ 145 mi (Sistema S)"
+  },
+  {
+   "label": "DL companhia / econômica",
+   "value": "R$ 5,40 bi / R$ 7,48 bi",
+   "context": "econômica + IFRS-16, aquisições, dividendo 2025, Sistema S"
+  },
+  {
+   "label": "DL/EBITDA (companhia) 2T26",
+   "value": "2,74x",
+   "context": "covenant DL/EBITDA-A 2,46x vs ≤3,5x; cobertura 2,44x vs ≥2,0x"
+  },
+  {
+   "label": "Custo médio da DL",
+   "value": "15,9% a.a.",
+   "context": "prazo médio 4,1 anos"
+  },
+  {
+   "label": "Preço 26/10 vs 23/10 vs 12/08",
+   "value": "R$ 6,05 / 12,40 / 5,05",
+   "context": "28/10 15h27: R$ 5,48"
+  }
+ ],
+ "sources": [
+  {
+   "title": "JSL — Release de resultados 2T26 (10/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/5cb9c9f1-1ef6-4d5f-a2fd-fcdddc308a56/73f49850-5cff-1efc-a29d-c3cd755d3291?origin=2"
+  },
+  {
+   "title": "JSL — ITR 2T26 (dívida, sensibilidade, covenants, Sistema S, aquisições a pagar)",
+   "url": "https://ri.jsl.com.br/"
+  },
+  {
+   "title": "BTG via Eu Quero Investir — resultado fraco no 2T26, desalavancagem como catalisador",
+   "url": "https://euqueroinvestir.com/acoes/btg-ve-resultado-fraco-da-jsl-no-2tri-e-aponta-desalavancagem-como-principal-catalisador"
+  },
+  {
+   "title": "Visno Invest — JSL 2T26",
+   "url": "https://visnoinvest.com.br/news/14686/jsl-jslg3-registra-lucro-ajustado-de-r-302-mi-no-2t26"
+  },
+  {
+   "title": "B3 — proventos (GetListedSupplementCompany) e cotação",
+   "url": "https://sistemaswebb3-listados.b3.com.br/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/JSLG3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  }
+ ],
+ "confidence": "baixa — base contábil sólida (CVM/ITR), mas o valor do equity é residual de uma DL ~4x o valor de mercado e depende quase só do CDI (+100 bp ≈ −30% do lucro); taxa efetiva de IR e créditos fiscais oscilam."
+}

@@ -1,0 +1,261 @@
+{
+ "ticker": "EGIE3",
+ "name": "ENGIE Brasil Energia S.A.",
+ "sector": "Utilities / geração (11,3 GW próprios: hídrica, eólica, solar), comercialização no ACL, transmissão (Gralha Azul, Novo Estado, Asa Branca, Graúna, Colibri), 17,5% da TAG (gás) e, desde 17/07/2026, 40% de Jirau",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "EGIE3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 11350.0,
+   "net_debt": 24160.0,
+   "equity_controlling": 22541.0,
+   "equity_controlling_2025": 22541.0
+  },
+  "notes": "Receita-base FY2025 = ROL CVM R$ 12.860 mi − receita de construção da transmissão (ICPC 01, margem ~zero; DVA R$ 1.510 mi) = R$ 11.350 mi. A remuneração do ativo de contrato da transmissão e a equivalência (TAG 17,5%: R$ 130 mi no 2T26; Jirau 40% a partir de 17/07/26: lucro de R$ 389 mi em 2025 a 100%, ~R$ 0,16–0,3 bi/ano na fatia de 40%) ficam na margem, como no EBITDA ajustado da companhia (R$ 4.423 mi no 6M26; 63,9% da ROL com construção). Eventos depois do balanço refletidos aqui: (1) oferta primária de 274,08 mi ações a R$ 30,50 (R$ 8,36 bi), liquidada em 17/07: R$ 5,744 bi integralizados pela controladora (EBP) com 40% de Jirau e R$ 2,62 bi em dinheiro de minoritários; (2) pagamento de R$ 2,23 bi em 16–20/07 da repactuação da UBP de Cana Brava e Ponte de Pedra (Lei 15.235/2025), que extinguiu R$ 773 mi/ano de parcelas; (3) dividendo intercalar do 1S26 de R$ 770,8 mi (R$ 0,5442/ação, data-com 20/08/26, pagamento a definir). net_debt = DL CVM R$ 24.840 mi + ações preferenciais resgatáveis de controlada R$ 1.338 mi + arrendamentos (IFRS-16) não circulantes R$ 1.034 mi (o pipeline registrou zero) − depósitos vinculados ao serviço da dívida R$ 492 mi − caixa líquido da oferta ~R$ 2.560 mi = R$ 24.160 mi. PL controlador pró-forma = R$ 15.013 mi + R$ 8.360 mi da oferta − ~R$ 60 mi de custos − dividendo de R$ 771 mi = R$ 22.541 mi (usado também como base de 2025, só para o ROE não sair distorcido). Ações: 1.416,4 mi (B3 e capital social de R$ 15,22 bi depois da oferta; a CVM ainda mostra 1.142,3 mi em 30/06)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.148,
+   0.03,
+   0.03,
+   0.01,
+   0.04
+  ],
+  "ebitda_margin": [
+   0.67,
+   0.665,
+   0.66,
+   0.645,
+   0.645
+  ],
+  "da_pct_revenue": [
+   0.124,
+   0.125,
+   0.125,
+   0.125,
+   0.125
+  ],
+  "capex_pct_revenue": [
+   0.16,
+   0.18,
+   0.18,
+   0.15,
+   0.09
+  ],
+  "nwc_pct_revenue": 0.03,
+  "cost_of_net_debt": [
+   0.115,
+   0.12,
+   0.12,
+   0.12,
+   0.118
+  ],
+  "other_financial": [
+   -250,
+   -250,
+   -250,
+   -250,
+   -250
+  ],
+  "tax_rate": [
+   0.21,
+   0.22,
+   0.22,
+   0.23,
+   0.23
+  ],
+  "minority_share_ni": 0.06,
+  "payout": [
+   0.55,
+   0.55,
+   0.6,
+   0.65,
+   0.7
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.04,
+  "roic": 0.12,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.13,
+  "target_debt_weight": 0.4,
+  "notes": "wd ≈ (DL ajustada R$ 24,2 bi + debt-like R$ 5,5 bi) / (essas + valor de mercado pré-eleição 1.416,4 mi × R$ 30,79 = R$ 43,6 bi) ≈ 0,40. Kd: custo nominal declarado de 11,3% (IPCA + 6,4%) no 2T26, com 39,9% em CDI que a curva a termo de ~15% empurra para ~12,5–13%."
+ },
+ "adjustments": {
+  "other_debt_like": 5528,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like (CVM 2T26) = UBP (Uso do Bem Público) a pagar R$ 3.783 mi (898 circulante + 655 não circulante + ~R$ 2.230 mi da repactuação, pagos em jul/26; no arquivo padronizado aparecem na linha 'Arrendamentos a pagar' circulante de R$ 2.334 mi) + dividendo intercalar do 1S26 declarado depois do balanço e ainda não pago R$ 771 mi (data-com 20/08 já passou; não é fluxo de quem compra em 26/10) + provisão para desmobilização de eólicas/solares R$ 531 mi + benefícios pós-emprego R$ 245 mi + 70% das provisões fiscais/trabalhistas/cíveis (R$ 283 mi, dedutíveis no pagamento) R$ 198 mi. Jirau não entra em non_operating_assets porque a equivalência dela já está na margem (evita contar duas vezes). Minoritários: valor contábil de R$ 1.082 mi (parceiros em SPEs); minority_share_ni 6% (275/2.858 = 9,6% em 2025; 92/2.754 = 3,4% no 6M26 com o ganho da UBP na controladora; ~6% sobre o lucro ajustado). other_financial = −R$ 250 mi/ano: atualização da UBP remanescente (~R$ 0,19 bi) e outras despesas financeiras líquidas."
+ },
+ "target_multiples": {
+  "pe": 10.0,
+  "ev_ebitda": 6.5,
+  "pbv": 1.8,
+  "rationale": "multiples_history (EGIE3): P/L 5 anos média 12,7x / mediana 11,2x (p10 7,9x); EV/EBITDA 5 anos média 7,24x / mediana 7,22x; P/VP 5 anos 3,5x (antes da oferta, que aumentou o PL em ~55%). Na foto de 26/10: 9,9x P/L LTM e 7,95x EV/EBITDA LTM. Uso 10x P/L 2027E (abaixo da mediana, porque o múltiplo de mercado embute Ke de ~11–12% e há recontratação de 26–30% da energia em 2029–30) e 6,5x EV/EBITDA 2027E (o EV aqui inclui R$ 5,5 bi de UBP, desmobilização e dividendo declarado, mais preferenciais resgatáveis e arrendamentos na DL). P/VP 1,8x sobre o PL pró-forma, coerente com ROE de ~14%."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Preço no ACL cai para R$ 150–170/MWh justo quando 1.405–1.624 MWm (26–30% dos recursos) ficam descontratados em 2029–30; curtailment de 20%+ e GSF baixo; atraso/sobrecusto em Asa Branca e Graúna."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Demanda de data centers e abertura do mercado sustentam preço > R$ 220/MWh na recontratação; ressarcimento do curtailment (Portaria MME 140/2026) e Jirau com dívida caindo elevam o lucro."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.008
+ },
+ "debt_profile": {
+  "gross_debt_mn": 32152,
+  "pct_floating_cdi": 0.4,
+  "avg_cost": "11,3% a.a. nominal (IPCA + 6,4%) no 2T26; 53,9% IPCA, 39,9% CDI, 6,2% TJLP; sem exposição cambial",
+  "avg_maturity_years": 7.1,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -55,
+  "notes": "39,9% da dívida bruta de R$ 32,2 bi em CDI (≈ R$ 12,8 bi) menos caixa de ~R$ 5,5 bi depois da oferta, da UBP e do dividendo → exposição líquida ~R$ 7,3 bi: +100 bp ≈ −R$ 73 mi antes de IR, ≈ −R$ 55 mi depois (~2% do lucro). A parte IPCA (54%) é casada com receitas corrigidas por IPCA (ACR, transmissão). Custo da DL calibrado no 6M26 (despesa com debêntures/empréstimos/hedge de R$ 1.825 mi menos receita financeira de R$ 504 mi, anualizado, ≈ 10,8% sobre a DL) e levado a 11,5–12% com o CDI a termo de ~15% e menos caixa."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.01,
+  "ebitda_margin_avg_5y": 0.62,
+  "roe_avg_5y": 0.32,
+  "payout_avg_5y": 0.94,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.138,
+   "ebitda_margin": 0.621,
+   "net_income_mn": 1910,
+   "net_debt_ebitda": 3.1
+  },
+  "notes": "CVM 2020–25: receita de R$ 12,3 bi → R$ 12,9 bi (CAGR ~1%, com venda de térmicas a carvão e entrada de renováveis e transmissão); margem EBITDA média 62% (47–78%, com ganhos na venda de TAG e reversão de impairment); ROE médio 32% sobre um PL pequeno (payout ~100%). Recorrente: lucro ajustado de R$ 1.483 mi no 6M26 (+6,9%); o reportado de R$ 2.754 mi inclui o ganho de R$ 1,92 bi (R$ 1,3 bi líquido) da repactuação da UBP. Premissa: receita ex-construção +14,8% em 2026 (Assú Sol e Serra do Assuruá completos) e +1–4% depois (preço médio de venda caindo de R$ 244 para R$ 232/MWh, transmissão nova a partir de 2029, Jaguara +232 MW em ago/30); margem de 67% (2S26, com Jirau) caindo para 64,5% em 2029–30 com a recontratação. Com o PL pró-forma de R$ 22,5 bi, o ROE cai para ~13–14% (o ROE ajustado divulgado de 18,3% era sobre o PL pré-oferta)."
+ },
+ "guidance": "Sem guidance de resultado. Projetos em implantação: Asa Branca (RAP R$ 296 mi, capex Aneel R$ 2,67 bi, 32% energizado, prazo mar/29), Graúna (RAP R$ 281 mi, capex R$ 2,93 bi, dez/29), Colibri (RAP R$ 122,8 mi, capex R$ 1,57 bi, dez/29), ampliação de Jaguara no LRCAP (+232 MW, receita fixa de R$ 270 mi/ano por 15 anos a partir de ago/30, capex de R$ 1,2 bi). Balanço energético (30/06/26): saldo descontratado após hedge de 59 MWm (2026), 271 (2027), 619 (2028), 1.405 (2029) e 1.624 MWm (2030), sobre recursos de ~5.400–5.970 MWm; preço médio de venda líquido R$ 244,1 / 232,2 / 239,8 por MWh em 2026–28. Concessão de Jirau prorrogada até 16/08/2047 (Aneel, 14/07/2026).",
+ "dividend_policy": "Estatuto: mínimo de 30% do lucro distribuível; compromisso da administração de payout mínimo de 55%, pagamento semestral. 2025: payout de ~55% (JCP R$ 100 mi + dividendos R$ 1,28 bi; R$ 0,488/ação complementar pago em 20/05/26). 1S26: R$ 770,8 mi (55% do lucro distribuível ex-ganho da UBP), data-com 20/08/26, pagamento a definir; tratado como dívida. Premissa: 55% em 2026 (só o 2S26 é fluxo de quem compra hoje) e 2027, subindo para 70% em 2030 com o fim do ciclo de capex.",
+ "election_impact": "Caiu ~10,4% em 26/10 (R$ 30,79 → R$ 27,58 às 13h02), a metade da queda do IEEX (−21,7%), e ~R$ 27,1 em 28/10. Macro: alavancagem de 3,1x DL/EBITDA (antes da oferta), mas só ~R$ 7 bi líquidos expostos ao CDI (+100 bp ≈ −R$ 55 mi/ano); a maior parte da dívida é IPCA + 6,4%, casada com receita indexada. Não é estatal: o risco do 4º mandato é regulatório e setorial (preço de energia, curtailment, encargos/CDE, abertura do mercado), não de governança. A queda é quase toda prêmio de risco/juros sobre um ativo de duração longa; o valor intrínseco muda pouco, mas a 25% de Ke continua abaixo do preço.",
+ "summary": "Geradora privada de melhor qualidade do setor: contratos longos, transmissão e gás regulados (TAG), Jirau incorporada com equity em jul/26 e alavancagem em queda depois da oferta de R$ 8,36 bi. O risco está na recontratação de 26–30% da energia em 2029–30 com preço de ACL baixo e curtailment. A 25% de Ke, o retorno implícito fica bem abaixo do custo de capital.",
+ "thesis": [
+  "Portfólio contratado: só 1–5% da energia descontratada em 2026–27, preço médio líquido de R$ 232–244/MWh contra PLD/ACL mais baixo.",
+  "Jirau (40%, 3.750 MW, concessão até 2047) entrou via ações a R$ 30,50 e R$ 2,62 bi em caixa novo; desalavanca a companhia (DL/EBITDA de 3,1x para ~2,7x).",
+  "Repactuação da UBP: pagamento de R$ 2,23 bi extinguiu R$ 773 mi/ano de parcelas (ganho líquido de R$ 1,3 bi).",
+  "Crescimento regulado contratado: R$ 700 mi de RAP de transmissão até 2029 e R$ 270 mi/ano de receita fixa de Jaguara a partir de 2030."
+ ],
+ "risks": [
+  "Recontratação: 1.405 MWm (2029) e 1.624 MWm (2030) descontratados; vendas bilaterais caem de 3.160 MWm (2026) para 1.050 MWm (2030).",
+  "Curtailment de 20% no 2T26 (eólico 17%, solar 27%), 4 p.p. acima do 2T25; ressarcimento limitado ao período de 2023–25.",
+  "Execução de R$ 7,2 bi de capex de transmissão até 2029 e licenciamento ambiental.",
+  "Jirau com dívida líquida de R$ 7,4 bi (100%) e lucro baixo (R$ 389 mi em 2025): retorno de equivalência baixo sobre R$ 5,74 bi.",
+  "Partes relacionadas: transações com a controladora ENGIE (Jirau, TAG)."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (fim de out/início de nov 2026)",
+  "Data de pagamento do dividendo intercalar de R$ 770,8 mi",
+  "Leilões de transmissão e de capacidade em 2027",
+  "Recontratação de energia de 2029–30"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA ajustado 2T26",
+   "value": "R$ 2.179 mi (+16,8% a/a)",
+   "context": "6M26 R$ 4.423 mi; TAG R$ 130 mi no trimestre"
+  },
+  {
+   "label": "Lucro ajustado 2T26",
+   "value": "R$ 694 mi (+23%)",
+   "context": "reportado R$ 1.962 mi com ganho da UBP"
+  },
+  {
+   "label": "Dívida líquida 2T26",
+   "value": "R$ 25.210 mi; 3,1x EBITDA LTM",
+   "context": "antes da oferta (R$ 2,62 bi de caixa novo) e do pagamento da UBP (R$ 2,23 bi)"
+  },
+  {
+   "label": "Oferta de ações (jul/26)",
+   "value": "R$ 8,36 bi a R$ 30,50",
+   "context": "R$ 5,74 bi em ações de Jirau (EBP) + R$ 2,62 bi de minoritários"
+  },
+  {
+   "label": "Energia descontratada após hedge",
+   "value": "59 / 271 / 619 / 1.405 / 1.624 MWm",
+   "context": "2026–2030, sobre ~5.400–5.970 MWm de recursos"
+  }
+ ],
+ "sources": [
+  {
+   "title": "ENGIE Brasil — Apresentação de Resultados 2T26 (05/08/2026, CVM)",
+   "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1552755&numSequencia=1077461&numVersao=1"
+  },
+  {
+   "title": "Fato Relevante — Precificação da Oferta de Ações (14/07/2026)",
+   "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1544874&numSequencia=1069580&numVersao=2"
+  },
+  {
+   "title": "Transferência de Jirau — Materiais para discussão (jun/2026)",
+   "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1535382&numSequencia=1060088&numVersao=1"
+  },
+  {
+   "title": "Fato Relevante — Repactuação da UBP (16/04/2026)",
+   "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1505839&numSequencia=1030545&numVersao=1"
+  },
+  {
+   "title": "Aviso aos Acionistas — dividendos intercalares 1S26 (05/08/2026)",
+   "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1552753&numSequencia=1077459&numVersao=1"
+  },
+  {
+   "title": "B3 — dados do emissor (capital social e ações após a oferta)",
+   "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+  },
+  {
+   "title": "BCB/Contexto do estudo (Selic, Focus, curva DI)",
+   "url": "research/_context.md"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/EGIE3.json"
+  }
+ ],
+ "confidence": "média — números do 2T26 e da oferta são oficiais; incertezas: receita de construção do 1S26 e contribuição exata de Jirau (equivalência estimada), rótulos trocados no ITR padronizado (UBP repactuada/arrendamentos) e preço de recontratação em 2029–30. Release do 3T26 não verificado (busca esgotada)."
+}

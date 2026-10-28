@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-10-26T20:09:58",
- "started_at": "2026-10-26T20:09:45-03:00",
- "overview_generated_at": "2026-10-26T20:09:38",
+ "generated_at": "2026-10-28T17:19:34",
+ "started_at": "2026-10-28T17:19:17-03:00",
+ "overview_generated_at": "2026-10-28T17:19:17",
  "totals": {
-  "tests": 3074,
-  "passed": 3003,
-  "failed": 59,
+  "tests": 4491,
+  "passed": 4428,
+  "failed": 51,
   "skipped": 11,
   "xfailed": 1
  },
@@ -17,25 +17,25 @@
    "xfailed": 1
   },
   "mercado": {
-   "passed": 767,
-   "failed": 29,
+   "passed": 844,
+   "failed": 20,
    "skipped": 0,
    "xfailed": 0
   },
   "modelo": {
-   "passed": 691,
+   "passed": 1416,
    "failed": 0,
    "skipped": 0,
    "xfailed": 0
   },
   "paridade": {
-   "passed": 525,
-   "failed": 0,
+   "passed": 1082,
+   "failed": 1,
    "skipped": 1,
    "xfailed": 0
   },
   "app": {
-   "passed": 72,
+   "passed": 138,
    "failed": 0,
    "skipped": 0,
    "xfailed": 0
@@ -43,7 +43,7 @@
  },
  "next_build": {
   "rc": 0,
-  "pages": "75"
+  "pages": "140"
  },
  "failures": [
   {
@@ -53,12 +53,12 @@
   },
   {
    "block": "cvm",
-   "test": "test_ativo_igual_passivo_mais_pl[FLRY3~fora]",
+   "test": "test_ativo_igual_passivo_mais_pl[FLRY3]",
    "message": "1 problema(s): 2022Q3: ativo 6,784.0 × passivo+PL 6,601.4 (+2.7%)"
   },
   {
    "block": "cvm",
-   "test": "test_soma_4_trimestres_igual_ltm[BBSE3~fora]",
+   "test": "test_soma_4_trimestres_igual_ltm[BBSE3]",
    "message": "2 problema(s): ebit: Σ25Q3+25Q4+26Q1+26Q2 = 4,844.1 × LTM 4,789.3 (+1.1%); ebitda: Σ25Q3+25Q4+26Q1+26Q2 = 4,845.5 × LTM 4,790.7 (+1.1%)"
   },
   {
@@ -68,7 +68,7 @@
   },
   {
    "block": "cvm",
-   "test": "test_soma_4_trimestres_igual_ltm[KLBN11~fora]",
+   "test": "test_soma_4_trimestres_igual_ltm[KLBN11]",
    "message": "1 problema(s): ni_controlling: Σ25Q3+25Q4+26Q1+26Q2 = 502.9 × LTM 594.5 (-15.4%)"
   },
   {
@@ -78,12 +78,12 @@
   },
   {
    "block": "cvm",
-   "test": "test_soma_4_trimestres_igual_ltm[SANB11~fora]",
+   "test": "test_soma_4_trimestres_igual_ltm[SANB11]",
    "message": "2 problema(s): ni_controlling: Σ25Q3+25Q4+26Q1+26Q2 = 13,840.9 × LTM 15,700.6 (-11.8%); net_income: Σ25Q3+25Q4+26Q1+26Q2 = 14,501.1 × LTM 15,929.6 (-9.0%)"
   },
   {
    "block": "cvm",
-   "test": "test_acoes_coerentes_com_b3[EGIE3~fora]",
+   "test": "test_acoes_coerentes_com_b3[EGIE3]",
    "message": "1 problema(s): B3/CVM (último ITR, escala 1.0) = 1.2399 (eventos B3 posteriores ×1): quantidade da B3 difere >10% da CVM 1,142,298,836"
   },
   {
@@ -93,12 +93,12 @@
   },
   {
    "block": "cvm",
-   "test": "test_acoes_coerentes_com_b3[OPCT3~fora]",
+   "test": "test_acoes_coerentes_com_b3[OPCT3]",
    "message": "1 problema(s): B3/CVM (último ITR, escala 1.0) = 2.3730 (eventos B3 posteriores ×1): quantidade da B3 difere >10% da CVM 199,954,942"
   },
   {
    "block": "cvm",
-   "test": "test_historico_de_acoes_sem_quebra_de_escala[AUAU3~fora]",
+   "test": "test_historico_de_acoes_sem_quebra_de_escala[AUAU3]",
    "message": "1 problema(s): 2024-12-31→2025-03-31: 3,686,823 → 409,653,901 (×111.1)"
   },
   {
@@ -108,7 +108,7 @@
   },
   {
    "block": "cvm",
-   "test": "test_historico_de_acoes_sem_quebra_de_escala[DESK3~fora]",
+   "test": "test_historico_de_acoes_sem_quebra_de_escala[DESK3]",
    "message": "1 problema(s): 2020-12-31→2021-12-31: 28,249,338 → 86,992,026 (×3.079)"
   },
   {
@@ -128,7 +128,7 @@
   },
   {
    "block": "cvm",
-   "test": "test_historico_de_acoes_sem_quebra_de_escala[IRBR3~fora]",
+   "test": "test_historico_de_acoes_sem_quebra_de_escala[IRBR3]",
    "message": "1 problema(s): 2022-09-30→2022-12-31: 2,467,890,332 → 82,263,012 (×0.03333)"
   },
   {
@@ -143,12 +143,12 @@
   },
   {
    "block": "cvm",
-   "test": "test_historico_de_acoes_sem_quebra_de_escala[PRIO3~fora]",
+   "test": "test_historico_de_acoes_sem_quebra_de_escala[PRIO3]",
    "message": "1 problema(s): 2020-12-31→2021-12-31: 144,685,660 → 878,330,845 (×6.071)"
   },
   {
    "block": "cvm",
-   "test": "test_historico_de_acoes_sem_quebra_de_escala[SAUD3~fora]",
+   "test": "test_historico_de_acoes_sem_quebra_de_escala[SAUD3]",
    "message": "1 problema(s): 2026-03-31→2026-06-30: 545,825,286 → 2,924,199,731 (×5.357)"
   },
   {
@@ -168,37 +168,42 @@
   },
   {
    "block": "cvm",
-   "test": "test_historico_de_acoes_sem_quebra_de_escala[VTRU3~fora]",
+   "test": "test_historico_de_acoes_sem_quebra_de_escala[VTRU3]",
    "message": "1 problema(s): 2024-03-31→2024-06-30: 1,959,751,705 → 134,172,428 (×0.06846)"
   },
   {
    "block": "cvm",
-   "test": "test_sinais_receita_positiva_e_da_nao_negativa[BBSE3~fora]",
+   "test": "test_sinais_receita_positiva_e_da_nao_negativa[BBSE3]",
    "message": "30 problema(s): FY2015: receita 0.00; FY2016: receita 0.00; FY2017: receita 0.00; FY2018: receita 0.00; FY2019: receita 0.00; FY2020: receita 0.00; FY2021: receita 0.00; FY2022: receita 0.00; FY2023: receita 0.00; FY2024: receita 0.00; FY2025: receita 0.00; 2022Q1: receita 0.00 … (+18)"
   },
   {
    "block": "cvm",
-   "test": "test_sinais_receita_positiva_e_da_nao_negativa[BRAP4~fora]",
+   "test": "test_sinais_receita_positiva_e_da_nao_negativa[BRAP4]",
    "message": "30 problema(s): FY2015: receita 0.00; FY2016: receita 0.00; FY2017: receita 0.00; FY2018: receita 0.00; FY2019: receita 0.00; FY2020: receita 0.00; FY2021: receita 0.00; FY2022: receita 0.00; FY2023: receita 0.00; FY2024: receita 0.00; FY2025: receita 0.00; 2022Q1: receita 0.00 … (+18)"
   },
   {
    "block": "cvm",
-   "test": "test_sinais_receita_positiva_e_da_nao_negativa[CXSE3~fora]",
+   "test": "test_sinais_receita_positiva_e_da_nao_negativa[CXSE3]",
    "message": "32 problema(s): FY2015: receita 0.00; FY2016: receita 0.00; FY2017: receita 0.00; FY2018: receita 0.00; FY2019: receita 0.00; FY2020: receita 0.00; FY2021: receita 0.00; FY2022: receita 0.00; FY2023: receita 0.00; FY2024: receita 0.00; FY2025: receita 0.00; 2022Q1: receita 0.00 … (+20)"
   },
   {
    "block": "cvm",
-   "test": "test_sinais_receita_positiva_e_da_nao_negativa[TIMS3~fora]",
+   "test": "test_sinais_receita_positiva_e_da_nao_negativa[TIMS3]",
    "message": "11 problema(s): FY2024: receita 0.00; FY2025: receita 0.00; 2024Q1: receita 0.00; 2024Q2: receita 0.00; 2024Q3: receita 0.00; 2024Q4: receita 0.00; FY2024: ativo total 0.0; FY2025: ativo total 0.0; 2024Q1: ativo total 0.0; 2024Q2: ativo total 0.0; 2024Q3: ativo total 0.0"
   },
   {
    "block": "cvm",
-   "test": "test_sem_anos_ou_trimestres_faltantes[TIMS3~fora]",
+   "test": "test_sem_anos_ou_trimestres_faltantes[TIMS3]",
    "message": "2 problema(s): FY2024: DRE zerada (receita, EBIT e lucro = 0); FY2025: DRE zerada (receita, EBIT e lucro = 0)"
   },
   {
    "block": "mercado",
-   "test": "test_sem_saltos_diarios_nao_explicados[BRAP4~fora]",
+   "test": "test_series_com_datas_ordenadas_e_precos_positivos[quotes_val~fora]",
+   "message": "1 problema(s): daily_3y com 0 pregões"
+  },
+  {
+   "block": "mercado",
+   "test": "test_sem_saltos_diarios_nao_explicados[BRAP4]",
    "message": "1 problema(s): 2021-12-17: -58.5% (fora da janela de 3 anos, marcado pelo pipeline como não explicado)"
   },
   {
@@ -223,7 +228,7 @@
   },
   {
    "block": "mercado",
-   "test": "test_sem_saltos_diarios_nao_explicados[PRIO3~fora]",
+   "test": "test_sem_saltos_diarios_nao_explicados[PRIO3]",
    "message": "2 problema(s): 2016-03-24: +83.7% (fora da janela de 3 anos, marcado pelo pipeline como não explicado); 2020-03-09: -36.5% (fora da janela de 3 anos, marcado pelo pipeline como não explicado)"
   },
   {
@@ -238,68 +243,13 @@
   },
   {
    "block": "mercado",
-   "test": "test_sem_saltos_diarios_nao_explicados[USIM5~fora]",
+   "test": "test_sem_saltos_diarios_nao_explicados[USIM5]",
    "message": "1 problema(s): 2016-03-03: +35.1% (fora da janela de 3 anos, marcado pelo pipeline como não explicado)"
   },
   {
    "block": "mercado",
-   "test": "test_betas_plausiveis[ASAI3]",
-   "message": "1 problema(s): beta_crash_10y = 4.58 fora de [-0.5, 3.5] com só 12 dias de crash"
-  },
-  {
-   "block": "mercado",
-   "test": "test_betas_plausiveis[BMOB3~fora]",
-   "message": "1 problema(s): beta_crash_10y = -0.96 fora de [-0.5, 3.5] com só 13 dias de crash"
-  },
-  {
-   "block": "mercado",
-   "test": "test_betas_plausiveis[CBAV3~fora]",
-   "message": "1 problema(s): beta_crash_10y = -1.99 fora de [-0.5, 3.5] com só 11 dias de crash"
-  },
-  {
-   "block": "mercado",
-   "test": "test_betas_plausiveis[CMIN3~fora]",
-   "message": "1 problema(s): beta_crash_10y = -2.62 fora de [-0.5, 3.5] com só 13 dias de crash"
-  },
-  {
-   "block": "mercado",
-   "test": "test_betas_plausiveis[DXCO3~fora]",
-   "message": "1 problema(s): beta_crash_10y = -0.79 fora de [-0.5, 3.5] com só 10 dias de crash"
-  },
-  {
-   "block": "mercado",
-   "test": "test_betas_plausiveis[GGPS3]",
-   "message": "1 problema(s): beta_crash_10y = 3.85 fora de [-0.5, 3.5] com só 11 dias de crash"
-  },
-  {
-   "block": "mercado",
-   "test": "test_betas_plausiveis[ORVR3]",
-   "message": "1 problema(s): beta_crash_10y = -1.21 fora de [-0.5, 3.5] com só 13 dias de crash"
-  },
-  {
-   "block": "mercado",
-   "test": "test_betas_plausiveis[PLPL3]",
-   "message": "1 problema(s): beta_crash_10y = -0.52 fora de [-0.5, 3.5] com só 15 dias de crash"
-  },
-  {
-   "block": "mercado",
-   "test": "test_betas_plausiveis[SMFT3]",
-   "message": "1 problema(s): beta_crash_10y = 3.52 fora de [-0.5, 3.5] com só 11 dias de crash"
-  },
-  {
-   "block": "mercado",
-   "test": "test_betas_plausiveis[TFCO4~fora]",
-   "message": "1 problema(s): beta_crash_10y = -0.71 fora de [-0.5, 3.5] com só 15 dias de crash"
-  },
-  {
-   "block": "mercado",
-   "test": "test_betas_plausiveis[TTEN3]",
-   "message": "1 problema(s): beta_crash_10y = 3.50 fora de [-0.5, 3.5] com só 11 dias de crash"
-  },
-  {
-   "block": "mercado",
-   "test": "test_betas_plausiveis[VAMO3]",
-   "message": "1 problema(s): beta_crash_10y = -0.91 fora de [-0.5, 3.5] com só 13 dias de crash"
+   "test": "test_betas_plausiveis[quotes_val~fora]",
+   "message": "1 problema(s): sem beta diário de 2 anos"
   },
   {
    "block": "mercado",
@@ -313,12 +263,12 @@
   },
   {
    "block": "mercado",
-   "test": "test_multiplos_historicos_plausiveis[GOAU4~fora]",
+   "test": "test_multiplos_historicos_plausiveis[GOAU4]",
    "message": "1 problema(s): 6 meses com DY > 50% (ex.: 2022-04-30 50%)"
   },
   {
    "block": "mercado",
-   "test": "test_multiplos_historicos_plausiveis[IRBR3~fora]",
+   "test": "test_multiplos_historicos_plausiveis[IRBR3]",
    "message": "3 problema(s): valor de mercado 2020-02-29 41,738.3 → 2020-03-31 12,151.2 (×0.291); valor de mercado 2022-11-30 1,841.5 → 2022-12-31 70.4 (×0.0382); valor de mercado 2023-02-28 51.5 → 2023-03-31 1,820.2 (×35.3)"
   },
   {
@@ -328,18 +278,28 @@
   },
   {
    "block": "mercado",
-   "test": "test_multiplos_historicos_plausiveis[LWSA3~fora]",
+   "test": "test_multiplos_historicos_plausiveis[LWSA3]",
    "message": "1 problema(s): valor de mercado 2021-01-31 51,468.3 → 2021-02-28 14,490.9 (×0.282)"
   },
   {
    "block": "mercado",
-   "test": "test_multiplos_historicos_plausiveis[PETR3~fora]",
+   "test": "test_multiplos_historicos_plausiveis[PETR3]",
    "message": "1 problema(s): 4 meses com DY > 50% (ex.: 2023-03-31 56%)"
   },
   {
    "block": "mercado",
-   "test": "test_multiplos_historicos_plausiveis[PETR4~fora]",
+   "test": "test_multiplos_historicos_plausiveis[PETR4]",
    "message": "1 problema(s): 5 meses com DY > 50% (ex.: 2023-03-31 64%)"
+  },
+  {
+   "block": "mercado",
+   "test": "test_proventos_nao_negativos[RIAA3]",
+   "message": "1 problema(s): DY TTM 52%"
+  },
+  {
+   "block": "paridade",
+   "test": "YDUQ3 P(valor > preço) do painel (quantis) ≈ Monte Carlo do Python (±5 p.p.)",
+   "message": "YDUQ3 probAbove(mc_q)=0.3613 × prob_mc=0.3092 (quantis vêm de 400 amostras das 5.000)"
   }
  ]
 }

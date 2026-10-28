@@ -1,0 +1,34 @@
+{
+  "titulo": "Análise aprofundada externa",
+  "autor": "Projeto Claude do usuário (cerca de 1 hora de análise por empresa)",
+  "data": "2026-10-28",
+  "precos": "Fechamento de 26/10/2026 (BBAS3 e BPAC11 derivados da variação do dia, InfoMoney 17h52)",
+  "aviso": "Análise, não recomendação de investimento.",
+  "criterios": [
+    "Potencial até o valor justo de referência ≥ 30%",
+    "Cenário pessimista (ou conservador, na etapa 2) ≥ preço",
+    "TIR bruta em 3 anos com o múltiplo atual ≥ prefixado 2029 de 26/10 (15,40%) + 3 p.p.",
+    "Preço embute Ke acima do pedido (22% → 18%)"
+  ],
+  "regra_sinal": "ATRATIVA = critérios 1 e 3 passam e ≥ 75% atendidos; NEUTRA = ≥ 50%; NÃO ATRATIVA = < 50%. Valor justo de referência = o da etapa 2 quando já rodou; senão, o da 1ª análise.",
+  "regra_combinada": "Comprar = atrativa nos critérios do projeto, na lista de oportunidades do e-agora (Ke 25%) e com potencial ≥ 15% pelo valor justo mais baixo das duas fontes.",
+  "empresas": [
+    {"ticker": "PLPL3", "sinal": "ATRATIVA", "criterios": "4/4", "etapa": 1, "preco_2610": 5.31, "valor_justo": 10.21, "potencial": 0.92, "tir_3a": 0.276, "alerta": null, "decisao": "Comprar", "potencial_eagora": 0.20},
+    {"ticker": "HAPV3", "sinal": "ATRATIVA", "criterios": "4/4", "etapa": 2, "preco_2610": 3.98, "valor_justo": 7.20, "potencial": 0.81, "tir_3a": 0.52, "tir_3a_nota": "etapa 1", "alerta": "estresse ≈ 0", "decisao": "Acompanhar", "motivo_decisao": "fora da lista do e-agora por confiança baixa", "nota_geral": 2.9, "dy_12m": 0.0, "corte_vj_etapa2": -0.30},
+    {"ticker": "COGN3", "sinal": "ATRATIVA", "criterios": "4/4", "etapa": 1, "preco_2610": 1.87, "valor_justo": 3.32, "potencial": 0.78, "tir_3a": 0.225, "alerta": null, "decisao": "Acompanhar", "motivo_decisao": "passa nos dois filtros, mas só +5% de potencial no e-agora", "potencial_eagora": 0.05},
+    {"ticker": "TEND3", "sinal": "ATRATIVA", "criterios": "4/4", "etapa": 2, "preco_2610": 20.88, "valor_justo": 36.04, "potencial": 0.73, "tir_3a": 0.303, "alerta": null, "decisao": "Comprar", "potencial_eagora": 0.28, "nota_geral": 3.3, "dy_12m": 0.095, "corte_vj_etapa2": -0.09},
+    {"ticker": "BEEF3", "sinal": "ATRATIVA", "criterios": "3/4", "etapa": 2, "preco_2610": 3.32, "valor_justo": 5.10, "potencial": 0.54, "tir_3a": 0.38, "alerta": "conservador abaixo do preço", "decisao": "Comprar", "potencial_eagora": 0.64, "nota_geral": 2.9, "dy_12m": 0.034, "corte_vj_etapa2": -0.06},
+    {"ticker": "BBAS3", "sinal": "NEUTRA", "criterios": "2/3", "etapa": 1, "preco_2610": 17.47, "valor_justo": 20.71, "potencial": 0.19, "tir_3a": 0.19, "alerta": null, "decisao": "Evitar"},
+    {"ticker": "MDNE3", "sinal": "NÃO ATRATIVA", "criterios": "1/4", "etapa": 2, "preco_2610": 19.04, "valor_justo": 24.30, "potencial": 0.28, "tir_3a": 0.168, "alerta": null, "decisao": "Acompanhar", "motivo_decisao": "não atrativa nos critérios do projeto (potencial 28% contra mínimo de 30%; conservador ≈ preço)", "nota_geral": 3.4, "dy_12m": 0.079, "corte_vj_etapa2": -0.19},
+    {"ticker": "VIVA3", "sinal": "NÃO ATRATIVA", "criterios": null, "etapa": 1, "preco_2610": 19.54, "valor_justo": 16.30, "potencial": -0.17, "tir_3a": 0.16, "alerta": null, "decisao": "Evitar"},
+    {"ticker": "PETR3", "sinal": "NÃO ATRATIVA", "criterios": null, "etapa": 1, "preco_2610": 60.80, "valor_justo": 43.15, "potencial": -0.29, "tir_3a": 0.014, "alerta": "pessimista −88%", "decisao": "Evitar"},
+    {"ticker": "BPAC11", "sinal": "NÃO ATRATIVA", "criterios": null, "etapa": 1, "preco_2610": 60.00, "valor_justo": 33.20, "potencial": -0.45, "tir_3a": 0.152, "alerta": null, "decisao": "Evitar"},
+    {"ticker": "EQTL3", "sinal": "NÃO ATRATIVA", "criterios": null, "etapa": 1, "preco_2610": 35.15, "valor_justo": 13.90, "potencial": -0.60, "tir_3a": 0.173, "alerta": "pessimista −86%", "decisao": "Evitar"}
+  ],
+  "observacoes": [
+    "Nenhuma das 11 divulgou o 3T26 até 27/10; as primeiras são TEND3 e BEEF3, em 04/11.",
+    "MDNE3 caiu de NEUTRA para NÃO ATRATIVA com a etapa 2 (potencial de 28% contra mínimo de 30%; conservador ≈ preço).",
+    "PLPL3 e TEND3 são o mesmo risco (incorporação MCMV). COGN3, BEEF3 e HAPV3 são alavancadas.",
+    "Em 27/10: TEND3 ~+10%, HAPV3 +5% (R$ 4,18), BEEF3 −4% (R$ 3,18), VIVA3 ~−3%."
+  ]
+}

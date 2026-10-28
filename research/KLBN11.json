@@ -1,0 +1,266 @@
+{
+ "ticker": "KLBN11",
+ "name": "Klabin S.A.",
+ "sector": "Papel e celulose / Embalagens, papéis e celulose integrados",
+ "template": "industrial",
+ "as_of_quarter": "3T26",
+ "shares_per_unit": 5,
+ "listed_classes": [
+  {
+   "ticker": "KLBN11",
+   "class": "UNIT"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "balance_date": "2026-09-30",
+   "net_debt": 30488,
+   "equity_controlling": 9882.8,
+   "shares_outstanding_mn": 6116.7
+  },
+  "notes": "Balanço-base 3T26 (30/09/2026; release e ITR já publicados): data/hist ainda traz o 2T26. DL-base de R$ 30.488 mi = conceito CVM em 30/09 — empréstimos e debêntures R$ 34.993 mi + arrendamentos R$ 2.026 mi − caixa e TVM R$ 9.476 mi = R$ 27.544 mi — + risco sacado (fornecedores e fornecedores florestais, CP+LP) de R$ 2.144 mi, tratado como financiamento + R$ 800 mi de marcação ao câmbio de 28/10 (dívida 83% em US$ após swaps menos 23% do caixa em US$ ≈ US$ 4,96 bi × (5,342 − 5,1809)). A DL do release (R$ 23.977 mi) já desconta o MtM dos derivativos e exclui arrendamentos e risco sacado. PL controlador de 30/09: R$ 9.883 mi. Ações: 6.116,7 mi (6.152,9 mi em 30/06 − 7,24 mi units recompradas no 3T26 × 5), ou 1.223,3 mi units. Base de margem: EBITDA AJUSTADO (exclui valor justo de ativo biológico: +R$ 178 mi no 3T26, −R$ 99 mi nos 9M26 por −R$ 582 mi no 1T26, que explica o EBIT CVM negativo daquele trimestre; e hedge accounting). D&A a custo histórico (~18,5% da receita nos 9M26; exclui os R$ 511 mi de ajuste a valor justo na exaustão), convergindo para o capex até 2030. Capex = guidance 2026 de R$ 3,3 bi (4T26 ≈ R$ 1,05 bi) + renovação de arrendamentos (~R$ 0,33 bi/ano); floresta é capex operacional (silvicultura e compra de madeira em pé), não ativo não operacional. Coluna 2026 = run-rate do 4T26 (o motor só usa 25% do ano): receita ~R$ 5,6 bi/tri (câmbio 5,30) e margem de 35%. A divisão controlador/minoritários da CVM em 2025–26 está inconsistente (ex.: minoritários zerados em 2025); usamos o release: minoritários de R$ 295 mi nos 9M26 (lucro consolidado R$ 283 mi)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.082,
+   0.045,
+   0.055,
+   0.055,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.35,
+   0.355,
+   0.38,
+   0.385,
+   0.385
+  ],
+  "da_pct_revenue": [
+   0.185,
+   0.178,
+   0.17,
+   0.162,
+   0.155
+  ],
+  "capex_pct_revenue": [
+   0.2,
+   0.155,
+   0.152,
+   0.153,
+   0.155
+  ],
+  "nwc_pct_revenue": 0.15,
+  "cost_of_net_debt": [
+   0.065,
+   0.065,
+   0.065,
+   0.065,
+   0.065
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.22,
+   0.22,
+   0.22,
+   0.22,
+   0.22
+  ],
+  "minority_share_ni": 0.3,
+  "payout": [
+   1.0,
+   0.95,
+   0.9,
+   0.9,
+   0.9
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.2,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.09,
+  "target_debt_weight": 0.55,
+  "notes": "Kd marginal de 9%: 83% da dívida em US$ (custo US$ + 5,2%; nova emissão ~6%) + depreciação esperada do real de ~1,7% a.a., e 17% em reais (custo contábil 11,7%; CDI a termo ~15%). Peso da dívida de 55% ≈ DL/(DL + valor de mercado pré-eleição) = 30,5/(30,5 + 22,3) com minoritários à parte. Custo da DL no resultado (6,5%): juros contábeis sem variação cambial; caixa de R$ 7,3 bi em CDI rende mais do que a dívida em US$ custa, e o risco sacado (~CDI) e arrendamentos (~10%) puxam para cima; os 9M26 tiveram despesa financeira líquida ex-câmbio de R$ 1,39 bi (~R$ 1,86 bi/ano)."
+ },
+ "adjustments": {
+  "other_debt_like": 1300,
+  "non_operating_assets": 1805,
+  "minority_value": 6620.8,
+  "notes": "other_debt_like = última parcela do dividendo intercalar de dez/2025 (R$ 278 mi; data-com 15/12/2025, pagamento 12/11/2026) + contas a pagar a investidores de SCP (R$ 42 mi) + provisões fiscais, trabalhistas e cíveis (R$ 591 mi) e passivo atuarial (R$ 622 mi) líquidos de depósitos judiciais (R$ 233 mi). non_operating_assets = derivativos com MtM líquido de R$ 1.800 mi em 30/09 (swaps de dívida R$ 1.540 mi; ZCC R$ 250 mi; fora da DL CVM) − R$ 74 mi pela alta do dólar até 5,34 (ZCC) + participações R$ 79 mi. Minoritários: R$ 6.621 mi (contábil, 30/09) — sócios das SPEs florestais (Projeto Plateau) e imobiliárias que entraram em 2025 (PL de não controladores de R$ 2,0 bi para R$ 6,5 bi); recebem ~R$ 110–150 mi/tri de lucro (39% do LL no 3T26; 28% no 2T26), quase fixo, por isso minority_share_ni de 30% na média de 2026–30. Dividendos a SPEs/SCPs: R$ 242 mi nos últimos 12 meses."
+ },
+ "target_multiples": {
+  "pe": 9.0,
+  "ev_ebitda": 5.1,
+  "pbv": 2.0,
+  "rationale": "EV/EBITDA 5,1x e P/L 9,0x sobre 2027E (EBITDA ajustado IFRS-16; EV inclui DL com risco sacado e minoritários de R$ 6,6 bi). Histórico (multiples_history, base CVM, com valor justo de ativo biológico): mediana de 5 anos EV/EBITDA 6,4x (p10 5,2x) e P/L 11,6x; antes da eleição, ~7,1x o EBITDA UDM da CVM e ~7,7x o EBITDA ajustado de R$ 7,3 bi. Desconto de ~20% pela diferença entre o Ke embutido no mercado (~12%) e o Ke de 25%; o DCF a Ke 25% é coerente com ~3,9x. Não verificamos múltiplos de pares nesta rodada."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.025,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "El Niño prolongado (madeira, energia e logística), celulose fraca e real forte, papelão ondulado estagnado e paradas gerais de 2027 acima do previsto: receita −2,5 p.p., margem −3 p.p."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.025,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Celulose e kraftliner em alta em US$, real fraco e diluição de custos com a MP28 e Figueira: receita +2 p.p., margem +2,5 p.p."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.04,
+  "ebitda_margin_sd": 0.025,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.008
+ },
+ "debt_profile": {
+  "gross_debt_mn": 34993,
+  "pct_floating_cdi": 0.16,
+  "avg_cost": "US$ + 5,2% a.a. (moeda estrangeira, 83% da dívida após swaps); 11,7% a.a. em reais (custo contábil)",
+  "avg_maturity_years": 6.8,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 15,
+  "notes": "Dívida em reais ≈ R$ 5,6 bi (94% em CDI após swaps) contra ~R$ 7,3 bi de caixa em reais: posição líquida levemente ativa em CDI, então +100 bp ≈ +R$ 20 mi antes de IR (o risco sacado de R$ 2,1 bi, a ~CDI, reduz isso). O risco relevante é o câmbio e o IPCA: dívidas em IPCA swapadas para US$ ou CDI. Cada R$ 0,10/US$ ≈ +R$ 0,2–0,25 bi/ano de EBITDA e +R$ 0,5 bi na DL em reais."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.1161,
+  "ebitda_margin_avg_5y": 0.4597,
+  "roe_avg_5y": 0.386,
+  "payout_avg_5y": 0.463,
+  "last_quarter": {
+   "period": "3T26",
+   "revenue_yoy": 0.026,
+   "ebitda_margin": 0.333,
+   "net_income_mn": 393,
+   "net_debt_ebitda": 3.3
+  },
+  "notes": "Receita 2020–25 +11,6% a.a. (Puma II e MP28), mas só +1,1% a.a. em 3 anos. Margem EBITDA CVM média de 46% inclui valor justo; a margem ajustada foi de ~38% em 2025 (R$ 7,85 bi), 35% nos 9M26 e 33% no 3T26 (El Niño: R$ 111/t; insumos e fretes: R$ 66/t). Projetamos 35% (4T26), 35,5% (2027, ano de paradas gerais em todas as fábricas de celulose e papel) e 38–38,5% em 2028–30, abaixo da média histórica. Lucro controlador é fraco: 9M26 −R$ 12 mi (minoritários de R$ 295 mi sobre lucro consolidado de R$ 283 mi). ROE médio de 39% (2021–25) é sobre PL controlador pequeno (R$ 9,9 bi) e inclui valor justo. DECK: celulose fibra curta realizada US$ 620/t (3T26: US$ 623, +18% a/a), fibra longa/fluff ~US$ 1.000/t, ambos estáveis em US$ até 2030; containerboard exportado +2–3% a.a. em US$; papelão ondulado e cartões no mercado interno +IPCA (3T26: R$ 6.730/t e R$ 5.643/t). Câmbio médio R$ 5,30 (4T26), 5,40 (2027), 5,50, 5,60, 5,70. ~45% da receita ligada ao dólar (celulose e exportação de papéis): cada R$ 0,10/US$ ≈ +1% de receita e +2,5–3% de EBITDA."
+ },
+ "guidance": "Capex 2026 de R$ 3,3 bi (fato relevante de 09/12/2025): silvicultura e compra de madeira em pé 1,1; continuidade operacional 1,4; projetos especiais 0,2; modernização de Monte Alegre 0,7 (9M26: R$ 2,25 bi). Sem guidance de EBITDA. 2027 terá paradas gerais em todas as unidades de celulose e papéis. Programa de recompra de até 31,25 mi units em 18 meses (jun/2026), com cancelamento.",
+ "dividend_policy": "Política: proventos de 10% a 20% do EBITDA ajustado, em geral trimestrais. Em 08/12/2025: R$ 1,112 bi (R$ 0,9119/unit) pagos em quatro parcelas de R$ 278 mi (27/02, 20/05, 19/08 e 12/11/2026); R$ 1,152 bi pagos nos 12 meses até set/26 (dividend yield de 5,2%). Recompra: 7,24 mi units (R$ 127 mi, R$ 17,55 médio) até setembro. Como o lucro controlador é pequeno, o payout sobre o LL fica em 90–100% (≈ 13–15% do EBITDA). Nota: o motor só conta 25% do lucro de 2026; os proventos que a Klabin deve declarar em nov–dez/2026 (≈R$ 0,7–1,1 bi pela política) ficam subestimados no DDM.",
+ "election_impact": "KLBN11 subiu 4,1% em 26/10 (R$ 18,97 às 13h02): metade da receita é ligada ao dólar (celulose e exportação de papéis) e a dívida é 83% em US$. O que muda: (i) câmbio — cada R$ 0,10 soma ~R$ 0,2–0,25 bi/ano de EBITDA, mas ~R$ 0,5 bi à DL em reais (marcada a 5,34); (ii) a outra metade é embalagem e papel no mercado interno, ligada a PIB, alimentos e proteína exportada — um PIB 2027 de 1,3% (Focus) e juros altos pesam no volume de papelão ondulado; (iii) juros: o caixa em CDI compensa a dívida em reais, então a curva DI afeta pouco o resultado, mas o Ke de 25% pesa num acionista que é resíduo fino (DL ~4x o EBITDA UDM + R$ 6,6 bi de minoritários). Sem risco estatal relevante; a alta do dia é coerente com o câmbio, não com melhora operacional (EBITDA ajustado do 3T26 −12% a/a).",
+ "summary": "Único produtor integrado de celulose (fibra curta, longa e fluff), papéis e embalagens do país, com receita diversificada e metade ligada ao dólar; subiu 4,1% no dia da eleição. O negócio é bom, mas o acionista é residual: DL de ~4x o EBITDA ajustado UDM (com risco sacado, arrendamentos e câmbio de 28/10) e sócios minoritários nas SPEs florestais que levam 30–40% do lucro. Margem ajustada em 33% no 3T26 (El Niño, insumos) e 2027 com paradas gerais limitam a recuperação; a tese depende de celulose e câmbio fortes e de desalavancagem.",
+ "thesis": [
+  "Portfólio integrado e flexível: fibra curta US$ 623/t (+18% a/a) e fibra longa/fluff ~US$ 1.000/t no 3T26; papel-cartão +9% em volume com a MP28.",
+  "Embalagens com repasse: papelão ondulado a R$ 6.730/t (+3% a/a) mesmo com volume −4%; ~55% da receita no mercado interno, menos cíclico que celulose pura.",
+  "Desalavancagem lenta: DL/EBITDA de 3,3x (US$) no 3T26, de 3,6x um ano antes; capex cai após a caldeira de Monte Alegre; recompra de até 31 mi units.",
+  "Câmbio: cada R$ 0,10/US$ ≈ +2,5–3% no EBITDA; hedge pequeno (ZCC de US$ 0,46 bi), então a Klabin captura mais o real fraco que a Suzano."
+ ],
+ "risks": [
+  "Minoritários das SPEs (Plateau e imobiliárias) com ~R$ 0,5–0,6 bi/ano de lucro e R$ 6,6 bi de PL: o lucro controlador dos 9M26 foi negativo.",
+  "El Niño severo: custo de madeira, logística florestal e energia (R$ 111/t no 3T26); risco de incêndio/seca nas florestas do PR e SC.",
+  "Paradas gerais de 2027 em todas as unidades e inflação de químicos (enxofre +157%) e combustíveis.",
+  "Demanda doméstica de papelão ondulado com PIB fraco e juros altos; tarifas sobre sacos industriais exportados.",
+  "Câmbio a R$ 5,0–5,2 e celulose fraca; alavancagem alta deixa pouco espaço para choques."
+ ],
+ "catalysts": [
+  "Teleconferência do 3T26 (29/10/2026)",
+  "Proventos do 4T26 (nov–dez/2026, política de 10–20% do EBITDA)",
+  "Guidance de capex 2027 (dez/2026)",
+  "Execução da recompra (até 31,25 mi units, 18 meses)"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA ajustado 3T26",
+   "value": "R$ 1,86 bi (33%)",
+   "context": "−12% a/a; UDM R$ 7,3 bi"
+  },
+  {
+   "label": "DL/EBITDA 3T26 (US$)",
+   "value": "3,3x",
+   "context": "DL do release R$ 24,0 bi; com arrendamentos, risco sacado e câmbio de 28/10, R$ 30,5 bi"
+  },
+  {
+   "label": "Minoritários",
+   "value": "R$ 6,6 bi de PL · R$ 295 mi de lucro nos 9M26",
+   "context": "SPEs florestais (Plateau) e imobiliárias"
+  },
+  {
+   "label": "Preço celulose 3T26",
+   "value": "US$ 623/t (curta) · US$ 1.002/t (longa/fluff)",
+   "context": "+18% e 0% a/a"
+  },
+  {
+   "label": "Custo caixa total 3T26",
+   "value": "R$ 3.483/t",
+   "context": "+12% a/a (El Niño R$ 111/t)"
+  },
+  {
+   "label": "Deck celulose / câmbio",
+   "value": "US$ 620/t · R$ 5,40–5,70",
+   "context": "2027–30; fibra longa/fluff ~US$ 1.000/t"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Klabin — Release de Resultados 3T26 (30/09/2026)",
+   "url": "https://filemanager-cdn.mziq.com/published/1c41fa99-efe7-4e72-81dd-5b571f5aa376/3fd7f60a-7250-421a-801a-e1ef432b515c"
+  },
+  {
+   "title": "Klabin — ITR 3T26",
+   "url": "https://filemanager-cdn.mziq.com/published/1c41fa99-efe7-4e72-81dd-5b571f5aa376/da548873-bd56-403f-829b-2662b3932e45"
+  },
+  {
+   "title": "Klabin — Central de Resultados / RI",
+   "url": "https://ri.klabin.com.br/"
+  },
+  {
+   "title": "Suno (09/10/2026) — Suzano anuncia +US$ 20/t na Ásia e +US$ 50/t na Europa/Américas para outubro; BHKP China ~US$ 580/t em setembro",
+   "url": "https://www.suno.com.br/noticias/?p=666913"
+  },
+  {
+   "title": "InfoMoney/BBI (18/05/2026) — BHKP China US$ 606/t, fibra longa US$ 662/t",
+   "url": "https://www.infomoney.com.br/mercados/bbi-precos-da-celulose-perdem-forca-meses-antes-da-demanda-sazonal-cair/"
+  },
+  {
+   "title": "BCB — PTAX (SGS 1): 30/06/26 5,1766; 30/09/26 5,1809; 28/10/26 5,3420",
+   "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json"
+  },
+  {
+   "title": "B3 — GetListedSupplementCompany (proventos oficiais) e cotação instrumentQuotation (foto 26/10 13h02)",
+   "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do time)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  }
+ ],
+ "confidence": "baixa — o valor do acionista é resíduo fino (DL ~4x o EBITDA UDM + R$ 6,6 bi de minoritários), então o DCF fica perto de zero e oscila muito com WACC e margem; a divisão controlador/minoritários da CVM está inconsistente (usamos o release 3T26) e o lucro tem forte ruído de valor justo e câmbio; não verificamos os termos econômicos do Projeto Plateau."
+}

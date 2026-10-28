@@ -1,0 +1,252 @@
+{
+ "ticker": "VTRU3",
+ "name": "Vitru Educação S.A.",
+ "sector": "Educação / ensino superior digital (EAD e semipresencial: UniCesumar e Uniasselvi) + medicina",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "VTRU3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 1544.2
+  },
+  "notes": "Receita base = CVM FY2025 (R$ 2.259,1 mi). DL base = DL CVM 2T26 (R$ 1.543,7 mi = debêntures 1.861,2 + arrendamentos 380,4 − caixa e aplicações 697,9; igual à 'dívida líquida' do release) + dividendos a pagar R$ 0,5 mi = R$ 1.544,2 mi. Não há aquisições a pagar, parcelamentos ou derivativos relevantes no balanço; provisão para contingências de R$ 25,7 mi não tratada como dívida. Ações: 149,31 mi (149,83 mi emitidas − 0,52 mi em tesouraria), já com as 15,66 mi do follow-on de maio/2026 a R$ 13,00 (R$ 203,5 mi brutos; R$ 185,7 mi líquidos, usados com caixa no pré-pagamento de R$ 500 mi da 3ª emissão a CDI+2,45%). As 3,25 mi de opções (exercício de R$ 20–22,50) estão fora do dinheiro e não foram diluídas. Lucro de 1S26 (R$ 900,5 mi) inclui a baixa contábil de R$ 762,6 mi do IR diferido passivo das mais-valias da UniCesumar (incorporada em 01/01/2026), sem efeito caixa: não usado como base. IR do modelo = alíquota de caixa (a incorporação torna o ágio dedutível; o IR corrente caiu de R$ 49,2 mi no 1S25 para R$ 6,5 mi no 1S26 com lucro antes de IR maior) e não a contábil (~17% no 2T26, que inclui diferido não caixa). D&A cai de 9,2% para 5,9% da ROL porque a amortização de mais-valia (R$ 115 mi/ano) acaba: carteira de clientes (R$ 70,7 mi restantes, ~R$ 54 mi/ano) em 2027 e não concorrência (R$ 124 mi, ~R$ 36 mi/ano) até 2029–30; o resto (software, conteúdo, imobilizado e direito de uso) é ~4,6–5,0% da ROL. Capex = imobilizado + intangível (5,7% da ROL em 2025; 3,6% no 1S26 por timing, com aceleração anunciada para o 2S26) + ~2% de adições de direito de uso (2,7–3,0% em 2025–1S26; principal pago 1,4%)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.078,
+   0.065,
+   0.06,
+   0.055,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.385,
+   0.375,
+   0.375,
+   0.375,
+   0.375
+  ],
+  "da_pct_revenue": [
+   0.092,
+   0.079,
+   0.068,
+   0.065,
+   0.059
+  ],
+  "capex_pct_revenue": [
+   0.09,
+   0.075,
+   0.075,
+   0.075,
+   0.075
+  ],
+  "nwc_pct_revenue": 0.1,
+  "cost_of_net_debt": [
+   0.155,
+   0.163,
+   0.165,
+   0.16,
+   0.15
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.04,
+   0.05,
+   0.06,
+   0.08,
+   0.12
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.05,
+   0.15,
+   0.35,
+   0.5,
+   0.6
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.2,
+  "roe": 0.2
+ },
+ "wacc": {
+  "kd_pre_tax": 0.165,
+  "target_debt_weight": 0.25
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Sem minoritários. Dividendos a pagar (R$ 0,5 mi) já na DL base. O ativo fiscal diferido de prejuízos fiscais (R$ 486 mi, de uso limitado a 30% do lucro tributável e com realização esperada majoritariamente entre 2030 e 2036) NÃO foi somado como ativo não operacional: os anos de 2026–29 já usam IR de caixa baixo e a perpetuidade usa 12%, acima do que o ProUni + prejuízos implicariam (~6–10%). É um colchão conservador de ~R$ 100 mi a valor presente."
+ },
+ "target_multiples": {
+  "pe": 5.5,
+  "ev_ebitda": 4.5,
+  "pbv": 0.6,
+  "rationale": "EV/EBITDA IFRS-16 4,5x sobre o EBITDA 2027E: abaixo da média/mediana da VTRU3 desde a listagem na B3 (jun/2024: 4,9x/5,0x; p10 4,2x) e igual aos alvos de COGN3, YDUQ3 e ANIM3; os arrendamentos são pequenos (R$ 380 mi), então a base IFRS-16 quase coincide com a ex-IFRS-16. P/L 5,5x sobre o LPA 2027E com IR de caixa: abaixo de COGN3/YDUQ3 (6,5–7x) porque 97,6% da base está no EAD/semipresencial sob o novo marco e porque o lucro com IR de caixa vai convergir para uma alíquota maior depois de 2030; igual a ANIM3. O P/L histórico (1,6–4,9x em 2026) é distorcido por créditos de IR diferido. Coerente com Ke 25% (P/L de Gordon ~3,75x com ROE 20% e g 5%) mais um prêmio pela conversão de caixa (FCL do 1S26 de R$ 410 mi, 69% do EBITDA)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.35,
+   "revenue_growth_shift": -0.035,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "MEC endurece o semipresencial/EAD no novo mandato (mais carga presencial, polos com mais exigências), captação e ticket estagnam, e a PCLD volta a 10% da ROL com o aluno de massa endividado."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Vitru ganha participação com a saída de concorrentes do EAD, o semipresencial sustenta captação +20% com ticket maior, as faculdades presenciais de saúde (36 autorizadas) agregam receita e a companhia vira caixa líquido em 2028."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.035,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.005
+ },
+ "debt_profile": {
+  "gross_debt_mn": 1861.2,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "CDI+1,84% (5ª e 6ª emissões de debêntures, CDI+1,75% a CDI+1,95%; era CDI+1,99% antes do pré-pagamento da 3ª emissão a CDI+2,45%)",
+  "avg_maturity_years": 2.6,
+  "next_24m_maturities_mn": 270,
+  "covenant_nd_ebitda": 3.0,
+  "notes": "ITR 2T26 (nota 15): debêntures R$ 1.861,2 mi, com vencimentos de R$ 28,8 mi em 2026, R$ 241,1 mi em 2027, R$ 481,8 mi em 2028, R$ 732,7 mi em 2029 e R$ 376,8 mi em 2030 (98,45% no longo prazo). Caixa e aplicações R$ 697,9 mi; arrendamentos R$ 380,4 mi. DL ex-IFRS-16 R$ 1.163,3 mi = 1,36x o EBITDA aj. ex-IFRS-16 LTM (R$ 858 mi), contra 2,34x no 2T25. Covenants: dívida financeira líquida/EBITDA aj. ≤ 3,0x e EBITDA aj./resultado financeiro líquido ≥ 2,0x, verificados trimestralmente; folga ampla. Rating S&P brAA- (perspectiva positiva desde jul/2026) e Fitch AA(bra)."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -11,
+  "notes": "Dívida 100% em CDI (R$ 1.861 mi) − caixa remunerado (R$ 698 mi) ≈ R$ 1.163 mi × 1 p.p. ≈ R$ 11,6 mi antes de IR; com IR de caixa de ~4% ≈ −R$ 11 mi/ano, ~2,4% do lucro de 2026E. A exposição cai rápido com a amortização (R$ 1,8 bi vence até 2030). O canal relevante é o indireto: inadimplência do aluno de massa (PCLD de 7,7% da ROL no 1S26)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.376,
+  "ebitda_margin_avg_5y": 0.296,
+  "roe_avg_5y": 0.088,
+  "payout_avg_5y": 0.04,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.091,
+   "ebitda_margin": 0.41,
+   "net_income_mn": 105.8,
+   "net_debt_ebitda": 1.36
+  },
+  "notes": "CVM: receita 2021–25 CAGR 37,6% inorgânico (UniCesumar consolidada a partir de maio/2022); orgânico 2023–25 +7,3% a.a. (2025 +5,5%; 1S26 +7,7%; 2T26 +9,1%). Margem EBITDA CVM (IFRS-16): 21,8% (2021), 27,0%, 32,0%, 31,0% e 36,0% (2025), média de 29,6%; LTM 38,0%; 1S26 39,7%, com PCLD caindo de 10,0% para 7,7% da ROL e marketing mais eficiente. ROE médio de 8,8% (PL de R$ 4,0 bi, majoritariamente ágio e mais-valias). Premissas: receita +7,8% em 2026 (2S26 +7,9%) e 6,5% → 5% depois (base +4,8%, semipresencial +17% de receita no 2T26, ticket +1,5%, medicina +4%, educação continuada −17%). Margem 38,5% no 2S26 (2S25 36,2%) e 37,5% a partir de 2027: devolve parte do ganho de PCLD e absorve o custo de presencialidade do novo marco (custo dos serviços +11,3% contra receita +9,1% no 2T26). IR de caixa 4% → 12% (1S26: 3% do LAIR; ágio dedutível até 2030; ProUni isentou 77% do IR nominal no 1S26). Kd de baixo para cima: debêntures a CDI+1,85% + ~0,25 p.p. de fees, arrendamentos a ~10,5%, caixa a 97% do CDI (CDI 13,9% no 2S26, 14,6% em 2027, ~15,4% em 2028–30) ⇒ 15,5/16,3/16,9/16,0% em 2026–29; o carrego negativo de manter caixa e dívida brutos eleva o custo sobre a DL quando ela cai. 2030 = 15% (a conta daria menos, porque a DL fica próxima de zero; mantido conservador). NWC 10% (recebíveis = 11% da ROL; conversão EBITDA→caixa de ~100% em 2025)."
+ },
+ "guidance": "Sem guidance numérico (release do 2T26, 11/08/2026). Pilares declarados: lucratividade sustentável, eficiência de capital e controle da alavancagem; capex concentrado no 2S26 (laboratórios, faculdades presenciais de saúde, CRM Salesforce). Avaliação de até 36 faculdades presenciais de saúde (Portaria MEC 921, enfermagem presencial), sem plano definido. Resultado do 3T26 previsto para meados de novembro de 2026 (data não confirmada; em 2025 foi 13/11).",
+ "dividend_policy": "Estatuto exige só 1% do lucro líquido. Histórico de payout irrisório: R$ 21,2 mi (2023), R$ 6,3 mi (2024), R$ 2,6 mi (2025) e R$ 3,5 mi (R$ 0,0251/ação, data-com 30/04/2026, paga em 18/06/2026, antes do balanço-base). Prioridade foi desalavancar: follow-on primário de R$ 203,5 mi (maio/2026) e pré-pagamento de R$ 500 mi de debêntures. Sem recompras relevantes. Projeção: 5% (2026) → 15% (2027) → 35–60% (2028–30), quando a DL ex-IFRS-16 ficar abaixo de 0,5x; é premissa, não política anunciada.",
+ "election_impact": "A ação caiu 35,5% em 26/10 (de R$ 20,77 para R$ 13,39) e devolveu o rali eleitoral: tinha subido ~64% desde 14/08 (R$ 12,70, mínima do Ibovespa antes do rali) com o mercado precificando a vitória de Flávio e ficou só ~5% acima daquele preço, praticamente no preço do follow-on de maio (R$ 13,00). Canal macro (prêmio de risco, small caps, DI longo +300 bp); o canal direto de juros é moderado e decrescente (+100 bp de CDI ≈ −R$ 11 mi/ano de lucro, DL ex-IFRS-16 de 1,36x amortizando até 2030). Micro: é a listada mais exposta ao marco do EAD (97,6% dos alunos em EAD/semipresencial), e a reeleição tira a esperança de flexibilização do Decreto 12.456/2025, o que justifica parte do repricing. Por outro lado, a continuidade do ProUni preserva a isenção que, com o ágio dedutível da incorporação da UniCesumar, mantém o IR de caixa perto de zero. O valor intrínseco muda pouco no cenário base; o risco regulatório pesa mais no bear.",
+ "summary": "Vitru é a maior plataforma de EAD/semipresencial listada (1,03 milhão de alunos, 2.413 polos) e a que mais ganhou com o novo marco até aqui: captação engajada +21% e semipresencial +35% no 2T26, margem EBITDA CVM de 41% e FCL de R$ 410 mi no 1S26. Desalavancou de 2,34x para 1,36x em 12 meses e paga IR de caixa perto de zero depois da incorporação da UniCesumar. A R$ 13,39 (13h02 de 26/10), a ação negocia a ~3,6x o EV/EBITDA 2027E; a tese depende de o MEC não endurecer o semipresencial.",
+ "thesis": [
+  "Conversão de caixa alta: FCL de R$ 410 mi no 1S26 (+65%, 69% do EBITDA para fins de caixa), com PCLD caindo de 10,0% para 7,7% da ROL e IR pago de só R$ 4 mi no semestre (R$ 44,5 mi no 1S25).",
+  "Escala vencedora sob o novo marco: captação engajada de 87,8 mil (+21,3%) no 2T26, 58% dela no semipresencial (+35,3%), enquanto pares como Cogna e Yduqs encolhem no digital.",
+  "Desalavancagem rápida: DL ex-IFRS-16 −R$ 630 mi em 12 meses (1,36x), covenant de 3,0x distante e R$ 1,8 bi de debêntures a CDI+1,84% amortizando até 2030 com o caixa gerado."
+ ],
+ "risks": [
+  "Regulação: 97,6% da base está em EAD/semipresencial; novas portarias do MEC no 4º mandato (carga presencial, polos, cursos vedados) podem elevar custos ou cortar captação. A enfermagem semipresencial já foi suspensa em set/2025.",
+  "Ticket praticamente parado (+1,5% a/a, R$ 287/mês) e concorrência de preço no EAD; parte do ganho de margem veio de PCLD, que pode reverter com o consumidor endividado.",
+  "Benefício fiscal: o IR de caixa baixo depende do ProUni e da dedutibilidade do ágio até ~2030; mudanças na legislação (ou na interpretação da Receita) elevariam a alíquota.",
+  "Execução da expansão presencial em saúde (até 36 faculdades) pode consumir capital com retorno incerto."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (meados de novembro de 2026; data não confirmada)",
+  "Captação 2027.1 do semipresencial (out/2026 a mar/2027) e eventuais portarias do MEC no início do novo mandato",
+  "Decisão sobre as faculdades presenciais de saúde e início de distribuição de dividendos ou recompras com a alavancagem abaixo de 1x"
+ ],
+ "key_data": [
+  {
+   "label": "ROL 2T26",
+   "value": "R$ 661,4 mi (+9,1%)",
+   "context": "1S26 R$ 1.240,6 mi (+7,7%); semipresencial R$ 338,6 mi (+17,2%)"
+  },
+  {
+   "label": "EBITDA 2T26",
+   "value": "R$ 271,2 mi (41,0%)",
+   "context": "contábil/CVM; ajustado R$ 278,0 mi (42,0%)"
+  },
+  {
+   "label": "Lucro líquido ajustado caixa 1S26",
+   "value": "R$ 251,7 mi (+28,7%)",
+   "context": "contábil R$ 900,5 mi, inflado por R$ 762,6 mi de baixa de IR diferido sem efeito caixa"
+  },
+  {
+   "label": "DL ex-IFRS-16 / EBITDA aj.",
+   "value": "1,36x (R$ 1.163 mi)",
+   "context": "2,34x no 2T25; com arrendamentos R$ 1.544 mi; covenant 3,0x"
+  },
+  {
+   "label": "Base de alunos",
+   "value": "1,031 milhão (+4,8%)",
+   "context": "97,6% EAD/semipresencial; 2.413 polos; medicina R$ 161 mi de receita no 1S26"
+  },
+  {
+   "label": "Ações em circulação",
+   "value": "149,31 mi",
+   "context": "inclui 15,66 mi do follow-on a R$ 13,00 (maio/2026)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Vitru – Release de Resultados 2T26 e ITR (11/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/053b9d06-7899-42e6-978d-2f68f55dac9a/05a15372-15a0-7511-f356-b48f66cfe946?origin=2"
+  },
+  {
+   "title": "Visno – Vitru registra lucro ajustado de R$ 159,9 mi no 2T26",
+   "url": "https://visnoinvest.com.br/news/14719/vitru-educacao-vtru3-registra-lucro-ajustado-de-r-1599-mi-no-2t26"
+  },
+  {
+   "title": "Eu Quero Investir – Vitru reduz alavancagem para 1,36x e corta dívida em R$ 630 mi",
+   "url": "https://euqueroinvestir.com/acoes/vitru-reduz-alavancagem-para-136x-e-corta-divida-em-r-630-mi"
+  },
+  {
+   "title": "Estratégia Vestibulares – MEC anuncia vagas do Fies 2026–2028",
+   "url": "https://vestibulares.estrategia.com/portal/noticias/vagas-fies-2026-2027-2028/"
+  },
+  {
+   "title": "CVM – DFP/ITR padronizados (data/hist/VTRU3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 – cotação ao vivo",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/VTRU3"
+  }
+ ],
+ "confidence": "média-baixa — release, ITR e CVM sólidos, mas o caso depende de um driver regulatório (EAD/semipresencial = 97,6% da base, sob o novo marco e um 4º mandato que não vai flexibilizá-lo), o lucro contábil está poluído por efeitos fiscais da incorporação e o IR de caixa de 4–12% é premissa relevante (com IR contábil de ~17% o valor cai)."
+}

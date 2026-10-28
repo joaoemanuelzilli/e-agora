@@ -1,0 +1,276 @@
+{
+ "ticker": "LOGG3",
+ "name": "LOG Commercial Properties e Participações S.A.",
+ "sector": "Imobiliário / galpões logísticos classe A (desenvolvimento, locação e reciclagem para FIIs)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "LOGG3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 1288.45
+  },
+  "notes": "Do FY2025 CVM, só a receita entra como base (R$ 248,8 mi). O lucro do motor é locação + serviços + GANHO REALIZADO na venda de ativos (preço − custo histórico − custos de transação e impostos), SEM a variação de valor justo das propriedades para investimento (CVM 3.04.04.01: R$ 545 mi em 2025 e R$ 323 mi no 1S26), que não é caixa. A convenção é a das locadoras na spec: o ganho realizado entra no EBITDA, e por isso a 'margem' passa de 100% da receita de aluguel; o capex é o investimento em obras e terrenos MENOS o custo histórico dos ativos vendidos, negativo nos anos de venda líquida. Submodelo (dossiê): 723 mil m² próprios em operação em 30/06, depois da venda de 333 mil m² ao ILCP11 por R$ 1,02 bi. No 2S26, venda do Recife II (R$ 210 mi, margem bruta de 41%) e ~120 mil m² entregues. Em 2027–30, entregas de 350/300/280/280 mil m² e vendas de R$ 0,9/1,3/1,2/1,0 bi a R$ 3,00–3,45 mil/m², com margem bruta de 25–28% sobre o preço e 13% de custos de transação e impostos. Aluguel realizado de R$ 21,0/m²/mês no 2S26, +6–7% a.a. Obras de R$ 650 mi/ano. A coluna 2026 é o 2S26 anualizado (receita de ~R$ 103 mi no semestre); a queda de 17,5% sobre 2025 é a saída do portfólio do ILCP11. DL-base = dívida bruta de R$ 2.130,3 mi + arrendamentos de R$ 142,8 mi − caixa e TVM de R$ 1.281,5 mi (release do 2T26; R$ 722,5 mi de TVM estão em 'outros ativos circulantes' na CVM, por isso a DL CVM de R$ 1.714 mi é maior) + dividendos com data-com antes de hoje e pagos depois do balanço (R$ 250,0 mi em 01/07 e R$ 13,9 mi em 01/10) + permutas e terrenos a pagar (R$ 363,4 mi) − 95% dos recebíveis de vendas de ativos (R$ 347,9 mi, IPCA, antecipáveis) = R$ 1.288,5 mi. Com as permutas na DL, o capex projetado não inclui a liquidação desses terrenos."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   -0.1751,
+   0.1847,
+   0.0367,
+   -0.0483,
+   0.0014
+  ],
+  "ebitda_margin": [
+   1.2196,
+   1.1276,
+   1.4494,
+   1.3895,
+   1.2432
+  ],
+  "da_pct_revenue": [
+   0.03,
+   0.03,
+   0.03,
+   0.03,
+   0.03
+  ],
+  "capex_pct_revenue": [
+   2.1063,
+   -0.1028,
+   -1.1349,
+   -0.8923,
+   -0.2915
+  ],
+  "nwc_pct_revenue": 0.03,
+  "cost_of_net_debt": [
+   0.125,
+   0.13,
+   0.145,
+   0.155,
+   0.16
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.15,
+   0.15,
+   0.15,
+   0.15,
+   0.15
+  ],
+  "minority_share_ni": 0.01,
+  "payout": [
+   1.0,
+   1.2,
+   1.5,
+   1.5,
+   1.2
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.15,
+  "roe": 0.18
+ },
+ "wacc": {
+  "kd_pre_tax": 0.16,
+  "target_debt_weight": 0.3,
+  "notes": "Kd = CDI a termo de ~15% (curva DI 28/10) + 1,15% (custo efetivo do 2T26, já com swaps; custo de face CDI+0,70%; custo total de 15,61% a.a.). O custo da DL começa abaixo (12,5–13% em 2026–27) porque a DL-base tem R$ 363 mi de permutas e terrenos a pagar que não pagam CDI (permutas sem juros; terrenos corrigidos pelo INCC) e recebíveis em IPCA; ele converge para CDI+1,15% (~16%) à medida que esses itens vencem. wd de 0,30, perto da estrutura pré-eleição (DL-base/(DL-base + mcap) = 32%)."
+ },
+ "adjustments": {
+  "other_debt_like": 2.2,
+  "non_operating_assets": 100.0,
+  "minority_value": 26.3,
+  "notes": "non_operating_assets = participações em investidas pelo valor do NAV da companhia (R$ 73,9 mi; contábil R$ 159,6 mi, mas o NAV exclui o Parque Industrial Betim) + ativo mantido para venda (R$ 26,1 mi). other_debt_like = provisões para riscos (R$ 2,2 mi); permutas, terrenos a pagar e dividendos estão na DL-base. Derivativos com ativo líquido de R$ 87,3 mi (R$ 98,5 − 11,2) NÃO incluídos: são o hedge da dívida (a LOG paga CDI), foram marcados em 30/06, antes da alta da curva, e a dívida não está a mercado — o valor pós-choque é incerto (seriam ~+R$ 1/ação). As cotas do ILCP11 recebidas como 20% do preço (~R$ 204 mi) estão no caixa/TVM sem deságio. O IR diferido passivo (R$ 118 mi) vem do valor justo e não entra, pois os impostos das vendas já estão nos custos de 13%. Minoritários de ~1% do LL (CVM: 2,4% em 2025, ~0% no 1S26) e valor contábil de R$ 26,3 mi."
+ },
+ "target_multiples": {
+  "pe": 19.0,
+  "ev_ebitda": 10.0,
+  "pbv": 0.6,
+  "rationale": "Mesma regra das revisões (+300 bp no rendimento do múltiplo pré-eleição), medida na base do motor (lucro recorrente + ganho realizado, sem valor justo) e em 2027E. Pré-eleição (R$ 30,70; mcap de R$ 2.684 mi), o P/L sobre o LPA 2027E do modelo (R$ 0,69) era 44x: 2,2% + 3 pp = 5,2%, ou 19x. O EV pré-eleição (mcap + DL-base de R$ 1.288 mi + minoritários − investidas = R$ 3,90 bi) sobre o EBITDA 2027E de R$ 274 mi dava 14,2x: 7,0% + 3 pp, ou 10x. Os múltiplos parecem altos por dois motivos. Primeiro, 2027 é o vale do lucro recorrente: a base de aluguel acabou de ser vendida, as obras ainda não foram entregues e há juros sobre o capital parado em obras. Segundo, o mercado precifica a LOG por NAV (P/NAV de 0,75 na sexta e 0,56 hoje), não por lucro. Na base contábil, com valor justo, a ação negocia a 5,4x o LL LTM e 0,57x o PL. P/VP de 0,6x ≈ mediana de 5 anos (0,59x)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": 0.05,
+   "ebitda_margin_shift": -0.3,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.5,
+   "narrative": "O mercado de FIIs logísticos fecha (NTN-B e IFIX piores): as vendas caem para R$ 0,4–0,7 bi/ano com margem bruta de 20–25%, a LOG retém ativos (mais aluguel, muito menos ganho) e financia as obras com dívida em CDI. Por isso o crescimento da receita sobe no bear."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.0,
+   "ebitda_margin_shift": 0.18,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.12,
+   "narrative": "Os cap rates voltam para ~8,5%: margem bruta de 30–33% nas vendas (como em 2025–26), reciclagem de R$ 1,0–1,3 bi/ano e juros em queda em 2027."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.08,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.08
+ },
+ "debt_profile": {
+  "gross_debt_mn": 2130.3,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "CDI+1,15% efetivo após swaps (CDI+0,70% de face) no 2T26, contra CDI+1,35% um ano antes; custo total de 15,61% a.a.",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 990,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -9,
+  "notes": "Dívida líquida remunerada de ~R$ 1,0–1,1 bi equivalente a CDI (após swaps): +100 bp ≈ −R$ 10–11 mi antes do IR, ≈ −R$ 9 mi no LL, ~15% do LL 2027E do modelo. O canal mais forte é o cap rate: +100 bp no cap rate de compra dos FIIs ≈ −10% no preço de venda ≈ −R$ 100 mi de ganho para cada R$ 1 bi vendido. Cronograma de amortização do release (ordem dos anos inferida do gráfico e conferida com o circulante CVM de R$ 550 mi): ~R$ 353 mi no 2S26, R$ 395 mi em 2027, R$ 483 mi em 2028, R$ 310 mi em 2029, R$ 222 mi em 2030 e R$ 368 mi depois. Os ~R$ 990 mi em 24 meses são estimativa; prazo médio e covenants não foram verificados."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.119,
+  "ebitda_margin_avg_5y": 2.19,
+  "roe_avg_5y": 0.095,
+  "payout_avg_5y": 0.482,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.073,
+   "ebitda_margin": 1.209,
+   "net_income_mn": 58.7,
+   "net_debt_ebitda": 2.83
+  },
+  "notes": "Receita de locação e serviços: +11,9% a.a. em 2020–25. O EBITDA CVM, com valor justo, foi 2,4x a receita em 2025 (média de 5 anos: 2,19x), e o ROE de 9,5% em 5 anos é calculado sobre um PL a valor justo. Sem valor justo, o EBITDA recorrente consolidado foi ~73% da receita (1S26: ~R$ 96 mi de R$ 132 mi) e o EBITDA do segmento de locação, 85–86%. Depois do ILCP11 a base de aluguel cai ~1/3: o EBITDA de locação, já descontado o G&A de desenvolvimento, fica em ~R$ 130 mi/ano no 2S26, contra juros de ~R$ 160 mi sobre a DL-base. O lucro recorrente só fica positivo com os ganhos realizados nas vendas. Projeção: margem (EBITDA/receita, com ganho realizado) de 113–145% em 2027–30, contra 242% contábil em 2025; LL do motor de R$ 60–120 mi/ano, contra R$ 354,6 mi contábeis em 2025 (dos quais ~60% de valor justo). Payout contábil de 97,6% em 2025; em 2026, R$ 296 mi distribuídos até o 2T26. Última DL/EBITDA: 2,83x pela CVM (DL R$ 1.714 mi / EBITDA LTM R$ 605,8 mi com valor justo); 0,8x no conceito da companhia (DL ajustada de R$ 501 mi)."
+ },
+ "guidance": "Sem guidance formal para 2026 (o de 2025 era LL de R$ 350–450 mi; realizado, R$ 363,5 mi). Plano 'LOG 2 Milhões': 2 milhões de m² de ABL entregues até 2028 e receita multiplicada por 2–2,4x. Até o 2T26 foram 434 mil m² entregues, com 732 mil m² em obras (17 canteiros) e 459 mil m² de landbank, financiados 'majoritariamente pela reciclagem de ativos'. Em 2026, ~R$ 1,23 bi em vendas concluídas: ILCP11, R$ 1,02 bi em mai–jun/26; Recife II, R$ 210 mi em 23/09/26 (19% em 14 meses, corrigido pelo IPCA). Linhas regionais de financiamento à construção somam ~R$ 1 bi em 5 anos (8 de 17 projetos pré-aprovados). Pró-forma com o Recife II, a DL ajustada/EBITDA é de 0,48x.",
+ "dividend_policy": "Dividendos trimestrais de 25% do lucro líquido ajustado (contábil, com valor justo) + extraordinários com a reciclagem. 2025: R$ 346,1 mi (97,6% do LL; R$ 278,6 mi pagos em 29/12/25). 2026: R$ 31,8 mi do 1T26 (pagos em 30/06), R$ 250,0 mi complementares (R$ 2,86/ação; data-com 11/06; pagos em 01/07) e R$ 13,9 mi do 2T26 (R$ 0,159/ação; data-com 18/08; pagos em 01/10). Os dois últimos já não são do comprador de hoje e entram na DL-base. Recompra: R$ 314,9 mi em 2024; programa de out/24 (4,8 mi de ações, 18 meses; 1,23 mi recompradas). Entrou no IDIV em jan/26. Projeção: payout de 100–150% do lucro do motor (~R$ 70–180 mi/ano), abaixo do histórico porque o motor exclui o valor justo.",
+ "election_impact": "LOGG3 caiu 25,0% em 26/10 (R$ 30,70 → R$ 23,02), devolvendo o rali de ~31% iniciado em ago/26. Os canais são: (i) taxa de desconto — ativo imobiliário de duration longa, como os shoppings (MULT3 −31%, ALOS3 −26%); (ii) juros — a dívida custa CDI+1,15% após swaps e o aluguel já não cobre os juros sem os ganhos de venda: +100 bp ≈ −R$ 9 mi/ano no lucro; (iii) reciclagem — o modelo depende de vender galpões a FIIs; com NTN-B e IFIX piores, o cap rate de compra sobe (cada +100 bp ≈ −10% no preço de venda, ou −R$ 100 mi de ganho por R$ 1 bi vendido) e o volume pode secar (a oferta do KAML11 da Allos, em curso, é o teste); (iv) custo de obra — aço e insumos com o dólar +9,5%. A demanda por galpões classe A segue firme: vacância de 1,0% contra 5,7% do mercado, ticket +17,8% a/a, SCR acima da inflação há 16 trimestres e aluguéis indexados à inflação. O que muda o valor: com Ke de 25%, manter galpões que rendem ~9% destrói valor; o valor vem de vender a quem tem custo de capital menor, e é justamente esse mercado que a eleição piorou. Reforma tributária (IBS/CBS sobre locação a partir de 2027) e IR de 10% sobre dividendos acima de R$ 50 mil/mês pesam no retorno do acionista PF, não na operação.",
+ "summary": "Desenvolvedora e locadora de galpões classe A (723 mil m² próprios em operação e 732 mil m² em obras), cujo modelo é construir com yield on cost de 12–14% e vender a FIIs perto do NAV. Depois de vender um terço da base de aluguel ao ILCP11, o lucro recorrente, sem a reavaliação contábil dos imóveis, é pequeno e depende dos ganhos realizados nas vendas. A ação negocia a 0,57x o PL contábil (imóveis reavaliados pelo laudo), mas, com Ke de 25%, o valor depende da velocidade e do preço da reciclagem, que a eleição deixou mais incertos.",
+ "thesis": [
+  "Reciclagem comprovada: R$ 4,6 bi em vendas em 2023–25 e ~R$ 1,23 bi em 2026 (ILCP11 a R$ 3.065/m² com margem bruta de 33%; Recife II com 41%), sempre perto do NAV (R$ 40,87/ação no 2T26).",
+  "Operação forte: vacância estabilizada de 1,02% (mercado: 5,7%), ticket médio de R$ 25,03/m² (+17,8% a/a), entregas 100% pré-locadas e SCR acima da inflação pelo 16º trimestre.",
+  "Desconto patrimonial: a R$ 23,02, a ação negocia a 0,56x o NAV da companhia; com cap rates +100 bp e custos de saída de ~11%, o NAV ajustado fica em ~R$ 27/ação.",
+  "Pipeline de 732 mil m² em 17 obras e ~R$ 1 bi em linhas regionais para construção, a custo abaixo do mercado."
+ ],
+ "risks": [
+  "Dependência do mercado de FIIs para vender ativos (preço e volume); depois do choque, cap rates maiores comprimem a margem das vendas.",
+  "O aluguel não cobre os juros sem os ganhos de venda: DL-base de ~R$ 1,29 bi (com permutas, arrendamentos e dividendos) em CDI+1,15%.",
+  "Lucro contábil dominado pelo valor justo (~60% do LL de 2025) e sensível às premissas do laudo; impostos e custos de transação levam 10–15% do preço de venda (R$ 157 mi no ILCP11).",
+  "Obras de ~R$ 650 mi/ano com yield on cost de 12–14%, abaixo do custo de capital de 25% se os ativos não forem vendidos; custo de construção sobe com câmbio e INCC.",
+  "Reforma tributária (IBS/CBS sobre locação e venda de imóveis a partir de 2027) e IR sobre dividendos reduzem o retorno do acionista PF."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (início de nov/26): primeiro trimestre sem o portfólio do ILCP11",
+  "Novas vendas a FIIs depois do choque (preço por m² e cap rate)",
+  "Recompra de ações com P/NAV de ~0,56",
+  "Dividendo extraordinário de fim de ano (em dez/25 foram R$ 278,6 mi)"
+ ],
+ "key_data": [
+  {
+   "label": "ABL própria em operação (2T26)",
+   "value": "722,9 mil m²",
+   "context": "−31,8% a/a após as vendas; 732 mil m² em obras"
+  },
+  {
+   "label": "Vacância estabilizada / ticket médio",
+   "value": "1,02% / R$ 25,03/m²",
+   "context": "mercado 5,7%; ticket +17,8% a/a"
+  },
+  {
+   "label": "EBITDA de locação 2T26",
+   "value": "R$ 56,6 mi (85,8%)",
+   "context": "ainda com parte do trimestre dos ativos vendidos ao ILCP11"
+  },
+  {
+   "label": "Lucro líquido 2T26",
+   "value": "R$ 58,7 mi",
+   "context": "R$ 178,2 mi sem os custos do ILCP11 (R$ 157 mi); valor justo de R$ 187,8 mi no trimestre"
+  },
+  {
+   "label": "DL ajustada / EBITDA (companhia)",
+   "value": "R$ 501 mi / 0,8x",
+   "context": "DL-base do modelo R$ 1.288 mi (arrendamentos, permutas, dividendos pagos após o balanço)"
+  },
+  {
+   "label": "NAV por ação (2T26)",
+   "value": "R$ 40,87",
+   "context": "P/NAV de 0,56 a R$ 23,02 (26/10, 13h02)"
+  },
+  {
+   "label": "Vendas de ativos em 2026",
+   "value": "~R$ 1,23 bi",
+   "context": "ILCP11 R$ 1,02 bi (R$ 3.065/m²); Recife II R$ 210 mi (margem bruta 41%)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "LOG — Divulgação de resultados 2T26",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/LOGG3/47040/"
+  },
+  {
+   "title": "LOG — Divulgação de resultados 4T25 (NAV, custo da dívida, vendas de 2023–25)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/00a289ba-746d-4d34-9b24-94484fddb9b7/b5e504a0-cc7d-095c-1020-8a6e8a50e316?origin=2"
+  },
+  {
+   "title": "NeoFeed — Na maior venda da história da LOG, um efeito contábil pontual (custos de R$ 157,4 mi; consultoria de ~R$ 5 mi/ano)",
+   "url": "https://neofeed.com.br/negocios/na-maior-venda-da-historia-da-log-um-efeito-contabil-pontual/"
+  },
+  {
+   "title": "Investidor10 — LOG e FII do Itaú firmam acordo de R$ 1,02 bi (11 ativos, 332.851 m², 80% à vista e 20% em cotas)",
+   "url": "https://investidor10.com.br/noticias/log-logg3-e-fundo-imobiliario-do-itau-firmam-acordo-de-r-1-02-bilhao-120155/"
+  },
+  {
+   "title": "Visno — LOG conclui venda do LOG Recife II por R$ 210 mi",
+   "url": "https://visnoinvest.com.br/news/15395/log-logg3-conclui-venda-do-ativo-log-recife-ii-por-r-210-mi"
+  },
+  {
+   "title": "EuQueroInvestir — LOG vende o Recife II ao TRXF11 (68.575 m²; 19% em 14 meses corrigidos pelo IPCA)",
+   "url": "https://euqueroinvestir.com/fundos-imobiliarios/log-vende-empreendimento-logistico-em-recife-por-r-210-milhoes-ao-trxf11"
+  },
+  {
+   "title": "Análise de Ações — LOG tem lucro de R$ 58,7 mi no 2T26",
+   "url": "https://www.analisedeacoes.com/noticias/log-logg3-tem-lucro-de-58-7-milhoes-no-2t26-queda-de-32-6-em-um-ano/"
+  },
+  {
+   "title": "Allos — Fato relevante de 23/10/2026 (venda ao Kinea ALLOS Malls FII, cap rate ~9,5%; referência do mercado de FIIs)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/ALOS3/51222/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizadas (data/hist/LOGG3.json, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — cotação (API oficial; foto do estudo de 26/10 às 13h02) e proventos (GetListedSupplementCompany)",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/LOGG3"
+  }
+ ],
+ "confidence": "baixa — o lucro recorrente é pequeno e depende de vendas futuras (volume, preço e margem); a DL foi ajustada por itens fora da DL CVM (TVM em 'outros ativos', permutas, recebíveis, dividendos); o cronograma da dívida foi inferido do gráfico do release; o 3T26 ainda não saiu; e o motor, de empresa em operação contínua, não captura a opção de liquidar o portfólio perto do NAV."
+}

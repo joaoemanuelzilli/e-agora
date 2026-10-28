@@ -1,0 +1,212 @@
+{
+ "ticker": "IRBR3",
+ "name": "IRB-Brasil Resseguros S.A. — IRB(Re)",
+ "sector": "Financeiro / Resseguros (P&C, rural, vida) — corporation sem controlador",
+ "template": "financial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "IRBR3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "equity_controlling_2025": 5180
+  },
+  "notes": "Base de lucro: 'Visão Negócio' SUSEP (IFRS 4), que é a base do release, do consenso e dos dividendos; o lucro CVM (IFRS 17) é muito mais volátil por efeitos de taxa de desconto e locked-in (2T26: −R$ 3,3 mi IFRS 17 vs +R$ 157 mi SUSEP; 1S26 R$ 90 mi vs R$ 259 mi; FY2025 R$ 391 mi vs R$ 505 mi). As duas bases convergem no acumulado, mas o dividendo sai da SUSEP. PL: CVM IFRS 17 (R$ 5.328 mi no 2T26), ~5% acima do PL SUSEP implícito no ROE de 12,5% do 2T26 (BTG) — conservador para o ROE. O PL inclui R$ 2,31 bi de créditos tributários (~45%; prejuízos fiscais), que não rendem e só viram caixa com o limite de 30% de compensação. PL-base pró-forma (técnica do BBAS3): override equity_controlling_2025 = PL 2026E alvo − lucro 2026E retido no motor: 5.504 − 550 × (1 − 0,41) = R$ 5.180 mi; com ROE de abertura de 10,62%, LL 2026E = R$ 550 mi (1S26 R$ 259 mi + 2S26E R$ 291 mi) e PL 2026E = R$ 5.504 mi = PL 2T26 5.328 + LL 2S26E 291 − proventos 2S26E 115. Payout 2026 de 41% no motor = fluxo do stub (2S26 × 0,504 ≈ R$ 115 mi): payout total de 2026 de 35% do lucro (R$ 192 mi) menos os R$ 77,9 mi de JCP já com data-com em abr–jun/26. O dividendo de R$ 48,6 mi pago em abr/26 é do lucro de 2025 e não entra. Ações: 81,17 mi (B3 = CVM, 0,67 mi em tesouraria)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   0.41,
+   0.6,
+   0.7,
+   0.75,
+   0.75
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.1062,
+   0.115,
+   0.12,
+   0.125,
+   0.13
+  ],
+  "ni_growth": null,
+  "payout": [
+   0.41,
+   0.6,
+   0.7,
+   0.75,
+   0.75
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roe": 0.13
+ },
+ "wacc": {
+  "kd_pre_tax": 0.16,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Template financeiro: sem ponte EV→equity. As debêntures remanescentes (R$ 264,5 mi, todas no curto prazo) são pagas com o caixa das reservas livres; os juros já estão no lucro e a amortização não mexe no PL. Créditos tributários (R$ 2,31 bi) ficam dentro do PL, sem somar à parte."
+ },
+ "valuation_weights": {
+  "ddm": 0.6,
+  "pbv": 0.4
+ },
+ "valuation_weights_rationale": "Mesma regra dos bancos revisados (DDM 60% / P/VP 40%; data/tests/robustness.md). Para o IRB o P/L é ainda menos confiável: o lucro CVM (IFRS 17) e o SUSEP divergem trimestre a trimestre, e o lucro carrega ajustes não caixa de ativo fiscal. Fica só como saída da TIR de 3 anos.",
+ "target_multiples": {
+  "pe": 6.5,
+  "ev_ebitda": null,
+  "pbv": 0.65,
+  "rationale": "P/VP 0,65x (sobre o PL CVM 2026E) e P/L 6,5x (sobre o LPA SUSEP 2027E). Histórico pós-reestruturação (multiples_history, PL CVM): P/VP médio de 5 anos 0,77x (p10 0,56x; p90 0,96x); na sexta pré-eleição 1,03x, hoje 0,89x. Gordon com ROE de longo prazo de 13%, Ke de mercado ~17,5% e g 5%: (0,13−0,05)/(0,175−0,05) ≈ 0,64x. P/L: na sexta o papel valia ~10x o lucro SUSEP 2026E e ~8,7x o de 2027E; 6,5x fica abaixo de seguradoras listadas (~7–9x, estimativa não verificada nesta rodada) por o lucro ainda depender de prêmios em queda e de crédito tributário. Os P/L da série CVM (média 23x) estão distorcidos pelo IFRS 17 e por anos de prejuízo."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Evento catastrófico/rural ou piora do exterior (sinistralidade 89% no 2T26) + prêmios caindo e CDI recuando: ROE volta a 8–10%, como em 2024–25, e o payout fica no mínimo de 25%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.025,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "PL 3540/2026 aprovado (CSLL de 15% → 9% e fim do limite de 30% para prejuízos fiscais), CDI alto até 2028 e lucro recorrente acima de R$ 700 mi: ROE 15%+ e payout de 90%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.025,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 265,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "Debêntures remanescentes de R$ 264,5 mi (2T26, todas no passivo circulante); indexador e spread não verificados nesta rodada (premissa: CDI + spread). Amortizadas R$ 463 mi em 2023, R$ 88 mi em 2024 e R$ 188 mi em 2025. O CEO liga o aumento do payout a partir de 2027 ao fim desses pagamentos.",
+  "avg_maturity_years": 0.5,
+  "next_24m_maturities_mn": 265,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 24,
+  "notes": "Estimativa minha: carteira de R$ 8,3 bi (62% em reais); se ~70% da parte em reais é pós-fixada ou curta, +100 bp de CDI ≈ +R$ 36 mi/ano antes de IR ≈ +R$ 24 mi de lucro (~+0,45 p.p. de ROE). Na visão SUSEP as provisões técnicas não são descontadas, então juro alto é quase todo ganho; no IFRS 17 o desconto das reservas compensa parte. O resultado financeiro de 12 meses foi de R$ 718 mi (vs R$ 673 mi). A abertura da curva também marca negativamente títulos prefixados/IPCA em ORA (PL CVM tinha −R$ 535 mi de ajustes de avaliação no 2T26; não quantifiquei o efeito de 26/10)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.044,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": -0.023,
+  "payout_avg_5y": 0.0,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": null,
+   "ebitda_margin": null,
+   "net_income_mn": 157,
+   "net_debt_ebitda": null
+  },
+  "notes": "revenue_cagr_5y aqui = CAGR do PL CVM 2020–25 (R$ 4.256 → 5.283 mi, 4,4% a.a.). ROE CVM 2021–25: −17,3/−16,4/−3,0/+17,6 (crédito tributário)/+7,7% (média −2,3%), anos de reestruturação após a crise de 2020. Pós-reestruturação, base SUSEP: lucro 2024 ~R$ 374 mi (derivado do +35% de 2025), 2025 R$ 505 mi (~10% do PL), 12 meses até o 2T26 R$ 501 mi (R$ 592 mi recorrente), ROE de 12,5% no 2T26 (BTG). Receita CVM de resseguros caiu de R$ 7,99 bi (2021) para R$ 5,21 bi (2025): saída de linhas ruins e mais retenção. Sem proventos de 2020 a 2025; retomados em 2026. Projeção: LL 2026E R$ 550 mi (ROE médio ~10,3%; Genial vê R$ 595 mi), 2027E R$ 633 mi (~11,2%), 2030E R$ 800 mi (~12,8%); terminal 13%."
+ },
+ "guidance": "Sem guidance numérico. 4T25 (fev/26): 2025 encerrou o ciclo de três anos de transformação; foco em geração de caixa e em ampliar dividendos. Payout de 2026 começa no mínimo legal (25%), com revisão de capital após o 2T26; 'payout mais robusto' a partir de 2027, com o fim das debêntures. Expansão internacional em montagem (seguradoras P&C e Vida em constituição; pedidos na Suíça e em Malta). 3T26 sem data verificada.",
+ "dividend_policy": "Mínimo estatutário de 25% do lucro ajustado (dividendos ou JCP), retomado em 2026 depois de cinco anos sem proventos: R$ 48,6 mi de dividendos sobre 2025 (data-com 06/04/26) e R$ 77,9 mi de JCP em três parcelas de R$ 0,32/ação (data-com 30/04, 29/05 e 30/06/26). Solvência de 316% e suficiência de R$ 1,9 bi dão espaço; o JP Morgan projeta payout de 50% (2026), 75% (2027) e 90% (2028). Premissa: 35% em 2026 (stub de 41% no motor; ver overrides), 60% em 2027, 70% em 2028 e 75% em 2029–30.",
+ "election_impact": "−13,9% em 26/10 (R$ 67,67 → R$ 58,29; P/VP ~1,03x → ~0,89x); em 28/10, R$ 57,46. A queda é de prêmio de risco de small/mid cap (beta de crash 1,5), não de fundamento: o choque de juros AJUDA o IRB — o resultado financeiro sobre R$ 8,3 bi de reservas e caixa sobe com o CDI a termo de 14,5–15,5% (vs ~12% esperado antes) e o real fraco aumenta em reais o resultado da parte em dólar (38% dos ativos, casada com passivos em dólar). O que piora: marcação de títulos em ORA no PL e um governo que pode resistir à perda de arrecadação do PL 3540/2026 (CSLL menor para resseguradoras). Não há canal de intervenção estatal relevante. Modelo: ROE sobe de ~10% (2026) para 13% (2030) com CDI alto e retenção maior; sem o PL 3540 no caso-base.",
+ "summary": "Resseguradora reestruturada que voltou a dar lucro consistente (SUSEP: R$ 505 mi em 2025; R$ 259 mi no 1S26) e a pagar proventos, com solvência de 316%, sinistralidade de 41,8% e índice combinado de ~92%. O ROE de 10–13% depende do resultado financeiro das reservas (o CDI alto ajuda) e de prêmios que ainda caem; ~45% do PL são créditos tributários. Contra um Ke de 25%, o que manda no valor é a lenta subida do ROE e do payout.",
+ "thesis": [
+  "Subscrição forte: resultado de R$ 250,3 mi no 2T26 (+9,3% a/a) e R$ 838,7 mi em 12 meses (+33,6%); sinistralidade de 41,8% (2T25 51,9%; Brasil 13%).",
+  "Resultado financeiro de R$ 718 mi em 12 meses sobre R$ 8,3 bi de ativos; cada +100 bp de CDI ≈ +R$ 24 mi de lucro (estimativa).",
+  "Capital sobrando: solvência 316% (237% em jun/25) e suficiência de R$ 1,9 bi; payout pode ir de 25% para 60–75% a partir de 2027.",
+  "Opção fiscal: PL 3540/2026 (aprovado na Câmara) corta a CSLL de resseguradoras locais de 15% para 9% e derruba o limite de 30% para usar prejuízos fiscais (R$ 2,31 bi de créditos no PL)."
+ ],
+ "risks": [
+  "Receita: prêmios emitidos −14% a/a e retidos −5% no 2T26; disciplina de preço limita o crescimento.",
+  "Sinistros: exterior com sinistralidade de 89% no 2T26 (Vida, Rural); catástrofes e rural no Brasil (precedente 2020–22).",
+  "Qualidade do lucro e do PL: ~45% do PL é crédito tributário; lucro IFRS 17 muito abaixo do SUSEP no 1S26; ajustes não caixa de ativo fiscal (R$ 28 mi no 2T26).",
+  "Queda do CDI a partir de 2028 tiraria parte do resultado financeiro; marcação de títulos em ORA."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (nov/26; data não verificada) e dados mensais SUSEP.",
+  "Votação do PL 3540/2026 no Senado (CSLL de resseguradoras e limite de compensação).",
+  "Decisão sobre proventos complementares de 2026 e política de payout para 2027 (fim das debêntures)."
+ ],
+ "key_data": [
+  {
+   "label": "LL 2T26 (SUSEP) / recorrente",
+   "value": "R$ 157 mi / R$ 185 mi",
+   "context": "IFRS 17 (CVM): −R$ 3,3 mi; 1S26 SUSEP R$ 259 mi"
+  },
+  {
+   "label": "Sinistralidade / índice combinado 2T26",
+   "value": "41,8% / ~92%",
+   "context": "2T25 51,9%; Brasil 13%, exterior 89%"
+  },
+  {
+   "label": "Resultado financeiro 12m",
+   "value": "R$ 718 mi",
+   "context": "Ativos sob gestão R$ 8,3 bi (62% em reais)"
+  },
+  {
+   "label": "Solvência / suficiência",
+   "value": "316% / R$ 1,9 bi",
+   "context": "jun/25 237%; PL ajustado R$ 2,7 bi"
+  },
+  {
+   "label": "PL CVM 2T26",
+   "value": "R$ 5.328 mi",
+   "context": "Créditos tributários R$ 2,31 bi (~45%)"
+  },
+  {
+   "label": "Preço / P/VP",
+   "value": "R$ 58,29 / 0,89x",
+   "context": "Sexta R$ 67,67 (1,03x); 28/10 R$ 57,46"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Revista Apólice — IRB(Re) 2T26: lucro recorrente de R$ 185 mi e IFRS 17 (14/08/2026)",
+   "url": "https://revistaapolice.com.br/?p=141816"
+  },
+  {
+   "title": "Legismap — IRB(Re) registra lucro líquido recorrente de R$ 185 milhões no 2T26",
+   "url": "https://legismap.com.br/conteudos/artigos-e-noticias/irb-re-registra-lucro-liquido-recorrente-de-r-185-milhoes-no-2t26"
+  },
+  {
+   "title": "Eu Quero Investir — IRB: tese muda de recuperação para crescimento, diz BTG (14/08/2026)",
+   "url": "https://euqueroinvestir.com/acoes/irb-tese-muda-de-recuperacao-para-crescimento-diz-btg"
+  },
+  {
+   "title": "Investidor10 — Dividendos do IRB(Re) podem crescer mais a partir de 2027, diz CEO (13/02/2026)",
+   "url": "https://investidor10.com.br/noticias/dividendos-do-irb-re-irbr3-podem-crescer-mais-a-partir-de-2027-diz-ceo-118633/"
+  },
+  {
+   "title": "Status Invest — IRB(Re) retoma dividendos com mínimo de 25%",
+   "url": "https://www.statusinvest.com.br/noticias/irbre-retoma-dividendos-minimo-25-irbr3/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados IFRS 17 (data/hist/IRBR3.json, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação (API oficial) e proventos, 26 e 28/10/2026",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/IRBR3"
+  }
+ ],
+ "confidence": "baixa-média — números do 2T26 de fontes secundárias consistentes entre si (release oficial não lido); base de lucro (SUSEP) diferente da do PL (IFRS 17); PL SUSEP, indexador das debêntures, dados mensais de jul–set/26 e efeito da curva de 26/10 no ORA não verificados; o caso depende do resultado financeiro e de sinistros, voláteis."
+}

@@ -1,6 +1,6 @@
 {
  "snapshot": "2026-10-26 11:39 BRT (API oficial B3)",
- "rule": "queda >= 20% no dia e ADTV 3m >= R$ 20 mi (universo IBOV+IBrX100+SMLL)",
+ "rule": "1ª rodada (26/10): queda ≥ 20% no dia e ADTV 3m ≥ R$ 20 mi; ampliação (28/10): demais ações do universo IBOV+IBrX100+SMLL com ADTV 3m ≥ R$ 10 mi e dados da CVM",
  "coverage": [
   {
    "ticker": "RENT3",
@@ -789,6 +789,872 @@
    "indices": [
     "SMLL"
    ]
+  },
+  {
+   "ticker": "PETR4",
+   "name": "PETROBRAS",
+   "group": "G13_petroleo",
+   "chg_pct_1139": -11.72,
+   "price_1139": 51.75,
+   "prev_close_2310": 58.68,
+   "adtv_3m_mn": 2137.2,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "PETR3",
+   "name": "PETROBRAS",
+   "group": "G13_petroleo",
+   "chg_pct_1139": -8.98,
+   "price_1139": 59.27,
+   "prev_close_2310": 65.24,
+   "adtv_3m_mn": 599.0,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "PRIO3",
+   "name": "PRIO",
+   "group": "G13_petroleo",
+   "chg_pct_1139": -5.22,
+   "price_1139": 69.41,
+   "prev_close_2310": 73.8,
+   "adtv_3m_mn": 497.1,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "BRAV3",
+   "name": "BRAVA",
+   "group": "G13_petroleo",
+   "chg_pct_1139": -9.64,
+   "price_1139": 19.8,
+   "prev_close_2310": 21.69,
+   "adtv_3m_mn": 104.3,
+   "indices": [
+    "IBOV",
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "RECV3",
+   "name": "PETRORECSA",
+   "group": "G13_petroleo",
+   "chg_pct_1139": -13.83,
+   "price_1139": 11.05,
+   "prev_close_2310": 12.8,
+   "adtv_3m_mn": 22.5,
+   "indices": [
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "UGPA3",
+   "name": "ULTRAPAR",
+   "group": "G14_energia_quimica",
+   "chg_pct_1139": -10.77,
+   "price_1139": 35.05,
+   "prev_close_2310": 38.55,
+   "adtv_3m_mn": 368.2,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "ENEV3",
+   "name": "ENEVA",
+   "group": "G14_energia_quimica",
+   "chg_pct_1139": -19.76,
+   "price_1139": 25.24,
+   "prev_close_2310": 31.48,
+   "adtv_3m_mn": 303.3,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "UNIP6",
+   "name": "UNIPAR",
+   "group": "G14_energia_quimica",
+   "chg_pct_1139": -9.09,
+   "price_1139": 54.81,
+   "prev_close_2310": 58.98,
+   "adtv_3m_mn": 15.6,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "VALE3",
+   "name": "VALE",
+   "group": "G15_mineracao",
+   "chg_pct_1139": 6.19,
+   "price_1139": 64.8,
+   "prev_close_2310": 61.9,
+   "adtv_3m_mn": 1606.7,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "BRAP4",
+   "name": "BRADESPAR",
+   "group": "G15_mineracao",
+   "chg_pct_1139": 3.84,
+   "price_1139": 19.51,
+   "prev_close_2310": 19.01,
+   "adtv_3m_mn": 54.0,
+   "indices": [
+    "IBOV",
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "CBAV3",
+   "name": "CBA",
+   "group": "G15_mineracao",
+   "chg_pct_1139": -2.76,
+   "price_1139": 11,
+   "prev_close_2310": 11.24,
+   "adtv_3m_mn": 34.8,
+   "indices": [
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "GGBR4",
+   "name": "GERDAU",
+   "group": "G16_siderurgia",
+   "chg_pct_1139": -2.85,
+   "price_1139": 25.82,
+   "prev_close_2310": 25.22,
+   "adtv_3m_mn": 243.3,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "GOAU4",
+   "name": "GERDAU MET",
+   "group": "G16_siderurgia",
+   "chg_pct_1139": -8.95,
+   "price_1139": 11.13,
+   "prev_close_2310": 11.4,
+   "adtv_3m_mn": 108.2,
+   "indices": [
+    "IBOV",
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "USIM5",
+   "name": "USIMINAS",
+   "group": "G16_siderurgia",
+   "chg_pct_1139": -11.16,
+   "price_1139": 5.93,
+   "prev_close_2310": 6.63,
+   "adtv_3m_mn": 79.5,
+   "indices": [
+    "IBOV",
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "SUZB3",
+   "name": "SUZANO S.A.",
+   "group": "G17_papel_agro",
+   "chg_pct_1139": 7.92,
+   "price_1139": 46.68,
+   "prev_close_2310": 43.06,
+   "adtv_3m_mn": 294.4,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "KLBN11",
+   "name": "KLABIN S/A",
+   "group": "G17_papel_agro",
+   "chg_pct_1139": 1.21,
+   "price_1139": 18.97,
+   "prev_close_2310": 18.22,
+   "adtv_3m_mn": 100.7,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "SLCE3",
+   "name": "SLC AGRICOLA",
+   "group": "G17_papel_agro",
+   "chg_pct_1139": -5.72,
+   "price_1139": 17.26,
+   "prev_close_2310": 17.49,
+   "adtv_3m_mn": 47.6,
+   "indices": [
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "WEGE3",
+   "name": "WEG",
+   "group": "G18_bens_capital",
+   "chg_pct_1139": 4.89,
+   "price_1139": 44.89,
+   "prev_close_2310": 42.73,
+   "adtv_3m_mn": 466.9,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "EMBJ3",
+   "name": "EMBRAER",
+   "group": "G18_bens_capital",
+   "chg_pct_1139": 7.16,
+   "price_1139": 95.06,
+   "prev_close_2310": 88.35,
+   "adtv_3m_mn": 528.0,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "POMO4",
+   "name": "MARCOPOLO",
+   "group": "G18_bens_capital",
+   "chg_pct_1139": -18.24,
+   "price_1139": 4.1,
+   "prev_close_2310": 4.77,
+   "adtv_3m_mn": 74.4,
+   "indices": [
+    "IBOV",
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "RAPT4",
+   "name": "RANDON PART",
+   "group": "G18_bens_capital",
+   "chg_pct_1139": -46.9,
+   "price_1139": 4.35,
+   "prev_close_2310": 8.06,
+   "adtv_3m_mn": 19.7,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "TUPY3",
+   "name": "TUPY",
+   "group": "G18_bens_capital",
+   "chg_pct_1139": -20.28,
+   "price_1139": 15.59,
+   "prev_close_2310": 20.41,
+   "adtv_3m_mn": 13.0,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "LEVE3",
+   "name": "METAL LEVE",
+   "group": "G18_bens_capital",
+   "chg_pct_1139": -15.69,
+   "price_1139": 32.01,
+   "prev_close_2310": 37.74,
+   "adtv_3m_mn": 10.0,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "DXCO3",
+   "name": "DEXCO",
+   "group": "G18_bens_capital",
+   "chg_pct_1139": -36.6,
+   "price_1139": 5.35,
+   "prev_close_2310": 8.17,
+   "adtv_3m_mn": 19.3,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "ITUB4",
+   "name": "ITAUUNIBANCO",
+   "group": "G19_bancos",
+   "chg_pct_1139": -16.89,
+   "price_1139": 41,
+   "prev_close_2310": 48.3,
+   "adtv_3m_mn": 1229.5,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "ITSA4",
+   "name": "ITAUSA",
+   "group": "G19_bancos",
+   "chg_pct_1139": -16.53,
+   "price_1139": 13.2,
+   "prev_close_2310": 15.31,
+   "adtv_3m_mn": 402.5,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "SANB11",
+   "name": "SANTANDER BR",
+   "group": "G19_bancos",
+   "chg_pct_1139": -3.96,
+   "price_1139": 26.7,
+   "prev_close_2310": 27.53,
+   "adtv_3m_mn": 158.0,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "BBDC3",
+   "name": "BRADESCO",
+   "group": "G19_bancos",
+   "chg_pct_1139": -20.54,
+   "price_1139": 14.29,
+   "prev_close_2310": 18.06,
+   "adtv_3m_mn": 172.3,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "ABCB4",
+   "name": "ABC BRASIL",
+   "group": "G19_bancos",
+   "chg_pct_1139": -18.45,
+   "price_1139": 24.42,
+   "prev_close_2310": 29.49,
+   "adtv_3m_mn": 15.3,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "PINE4",
+   "name": "PINE",
+   "group": "G19_bancos",
+   "chg_pct_1139": -27.31,
+   "price_1139": 12.13,
+   "prev_close_2310": 16.44,
+   "adtv_3m_mn": 14.6,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "BBSE3",
+   "name": "BBSEGURIDADE",
+   "group": "G20_seguros",
+   "chg_pct_1139": -7.81,
+   "price_1139": 41.09,
+   "prev_close_2310": 43.68,
+   "adtv_3m_mn": 264.5,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "CXSE3",
+   "name": "CAIXA SEGURI",
+   "group": "G20_seguros",
+   "chg_pct_1139": -6.91,
+   "price_1139": 20.42,
+   "prev_close_2310": 21.41,
+   "adtv_3m_mn": 147.5,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "PSSA3",
+   "name": "PORTO SEGURO",
+   "group": "G20_seguros",
+   "chg_pct_1139": -11.55,
+   "price_1139": 46.76,
+   "prev_close_2310": 51.58,
+   "adtv_3m_mn": 91.1,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "IRBR3",
+   "name": "IRBBRASIL RE",
+   "group": "G20_seguros",
+   "chg_pct_1139": -16.57,
+   "price_1139": 58.29,
+   "prev_close_2310": 67.67,
+   "adtv_3m_mn": 50.8,
+   "indices": [
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "SAUD3",
+   "name": "BRADSAUDE",
+   "group": "G20_seguros",
+   "chg_pct_1139": -15.53,
+   "price_1139": 14.51,
+   "prev_close_2310": 16.55,
+   "adtv_3m_mn": 91.0,
+   "indices": [
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "AXIA3",
+   "name": "AXIA ENERGIA",
+   "group": "G21_eletricas",
+   "chg_pct_1139": -14.67,
+   "price_1139": 49.9,
+   "prev_close_2310": 58.0,
+   "adtv_3m_mn": 824.6,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "CMIG4",
+   "name": "CEMIG",
+   "group": "G21_eletricas",
+   "chg_pct_1139": -13.45,
+   "price_1139": 10.36,
+   "prev_close_2310": 11.67,
+   "adtv_3m_mn": 172.2,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "EGIE3",
+   "name": "ENGIE BRASIL",
+   "group": "G21_eletricas",
+   "chg_pct_1139": -12.8,
+   "price_1139": 27.58,
+   "prev_close_2310": 30.79,
+   "adtv_3m_mn": 110.7,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "CPFE3",
+   "name": "CPFL ENERGIA",
+   "group": "G21_eletricas",
+   "chg_pct_1139": -13.64,
+   "price_1139": 43.06,
+   "prev_close_2310": 49.79,
+   "adtv_3m_mn": 82.2,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "ISAE4",
+   "name": "ISA ENERGIA",
+   "group": "G21_eletricas",
+   "chg_pct_1139": -10.56,
+   "price_1139": 25.72,
+   "prev_close_2310": 28.32,
+   "adtv_3m_mn": 111.0,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "TAEE11",
+   "name": "TAESA",
+   "group": "G21_eletricas",
+   "chg_pct_1139": -11.62,
+   "price_1139": 40.24,
+   "prev_close_2310": 44.75,
+   "adtv_3m_mn": 88.0,
+   "indices": [
+    "IBOV",
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "CSMG3",
+   "name": "COPASA",
+   "group": "G22_saneamento",
+   "chg_pct_1139": -18.61,
+   "price_1139": 51.07,
+   "prev_close_2310": 64.58,
+   "adtv_3m_mn": 267.4,
+   "indices": [
+    "IBOV",
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "SAPR11",
+   "name": "SANEPAR",
+   "group": "G22_saneamento",
+   "chg_pct_1139": -17.49,
+   "price_1139": 35.31,
+   "prev_close_2310": 41.92,
+   "adtv_3m_mn": 60.9,
+   "indices": [
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "ABEV3",
+   "name": "AMBEV S/A",
+   "group": "G23_consumo",
+   "chg_pct_1139": -6.71,
+   "price_1139": 15.31,
+   "prev_close_2310": 16.68,
+   "adtv_3m_mn": 481.2,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "MDIA3",
+   "name": "M.DIASBRANCO",
+   "group": "G23_consumo",
+   "chg_pct_1139": -16.9,
+   "price_1139": 16.42,
+   "prev_close_2310": 19.11,
+   "adtv_3m_mn": 15.6,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "GRND3",
+   "name": "GRENDENE",
+   "group": "G23_consumo",
+   "chg_pct_1139": -19.06,
+   "price_1139": 3.83,
+   "prev_close_2310": 4.67,
+   "adtv_3m_mn": 12.2,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "VIVT3",
+   "name": "TELEF BRASIL",
+   "group": "G24_telecom_tech",
+   "chg_pct_1139": -7.49,
+   "price_1139": 30.41,
+   "prev_close_2310": 32.43,
+   "adtv_3m_mn": 181.3,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "TIMS3",
+   "name": "TIM",
+   "group": "G24_telecom_tech",
+   "chg_pct_1139": -3.46,
+   "price_1139": 17.63,
+   "prev_close_2310": 19.09,
+   "adtv_3m_mn": 162.9,
+   "indices": [
+    "IBOV",
+    "IBXX"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "DESK3",
+   "name": "DESKTOP",
+   "group": "G24_telecom_tech",
+   "chg_pct_1139": -2.81,
+   "price_1139": 18.99,
+   "prev_close_2310": 19.24,
+   "adtv_3m_mn": 11.7,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "BMOB3",
+   "name": "BEMOBI TECH",
+   "group": "G24_telecom_tech",
+   "chg_pct_1139": -27.0,
+   "price_1139": 25.75,
+   "prev_close_2310": 33.85,
+   "adtv_3m_mn": 18.6,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "LWSA3",
+   "name": "LWSA",
+   "group": "G24_telecom_tech",
+   "chg_pct_1139": -34.46,
+   "price_1139": 3.7,
+   "prev_close_2310": 5.34,
+   "adtv_3m_mn": 16.5,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "FLRY3",
+   "name": "FLEURY",
+   "group": "G25_saude_educacao",
+   "chg_pct_1139": -15.61,
+   "price_1139": 22.76,
+   "prev_close_2310": 27.87,
+   "adtv_3m_mn": 99.6,
+   "indices": [
+    "IBOV",
+    "IBXX",
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "PNVL3",
+   "name": "DIMED",
+   "group": "G25_saude_educacao",
+   "chg_pct_1139": -29.28,
+   "price_1139": 10.73,
+   "prev_close_2310": 15.64,
+   "adtv_3m_mn": 11.7,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "SEER3",
+   "name": "SER EDUCA",
+   "group": "G25_saude_educacao",
+   "chg_pct_1139": -38.12,
+   "price_1139": 11.76,
+   "prev_close_2310": 18.26,
+   "adtv_3m_mn": 14.7,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "VTRU3",
+   "name": "VITRUEDUCA",
+   "group": "G25_saude_educacao",
+   "chg_pct_1139": -33.9,
+   "price_1139": 13.39,
+   "prev_close_2310": 20.77,
+   "adtv_3m_mn": 13.8,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "RIAA3",
+   "name": "RIACHUELO",
+   "group": "G26_varejo",
+   "chg_pct_1139": -42.16,
+   "price_1139": 6.9,
+   "prev_close_2310": 11.55,
+   "adtv_3m_mn": 16.5,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "AUAU3",
+   "name": "PETZCOBASI",
+   "group": "G26_varejo",
+   "chg_pct_1139": -26.7,
+   "price_1139": 4.08,
+   "prev_close_2310": 5.28,
+   "adtv_3m_mn": 18.3,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "TFCO4",
+   "name": "TRACK FIELD",
+   "group": "G26_varejo",
+   "chg_pct_1139": -25.12,
+   "price_1139": 10.86,
+   "prev_close_2310": 14.65,
+   "adtv_3m_mn": 12.9,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "JSLG3",
+   "name": "JSL",
+   "group": "G27_logistica_servicos",
+   "chg_pct_1139": -45.4,
+   "price_1139": 6.05,
+   "prev_close_2310": 12.4,
+   "adtv_3m_mn": 11.9,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "MILS3",
+   "name": "MILLS",
+   "group": "G27_logistica_servicos",
+   "chg_pct_1139": -2.4,
+   "price_1139": 15.9,
+   "prev_close_2310": 16.26,
+   "adtv_3m_mn": 12.5,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "OPCT3",
+   "name": "OCEANPACT",
+   "group": "G27_logistica_servicos",
+   "chg_pct_1139": -21.95,
+   "price_1139": 7.91,
+   "prev_close_2310": 10.16,
+   "adtv_3m_mn": 15.7,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "PRNR3",
+   "name": "PRINER",
+   "group": "G27_logistica_servicos",
+   "chg_pct_1139": -27.56,
+   "price_1139": 14.66,
+   "prev_close_2310": 20.79,
+   "adtv_3m_mn": 11.9,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
+  },
+  {
+   "ticker": "LOGG3",
+   "name": "LOG COM PROP",
+   "group": "G27_logistica_servicos",
+   "chg_pct_1139": -30.88,
+   "price_1139": 23.02,
+   "prev_close_2310": 30.7,
+   "adtv_3m_mn": 15.3,
+   "indices": [
+    "SMLL"
+   ],
+   "round": 2
   }
  ]
 }

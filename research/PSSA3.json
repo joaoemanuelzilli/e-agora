@@ -1,0 +1,210 @@
+{
+ "ticker": "PSSA3",
+ "name": "Porto Seguro S.A. (Grupo Porto)",
+ "sector": "Financeiro / Seguros (auto, patrimonial, vida), saúde, banco (cartões, consórcio) e serviços — controle privado (free float ~28%)",
+ "template": "financial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "PSSA3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override. LL = lucro CVM do controlador (3.11.01, IFRS 17). O 1S26 (R$ 2.013 mi) inclui R$ 176 mi não recorrentes: reversão de IR diferido de R$ 185 mi da incorporação da ISAR no 1T26, líquida do benefício de ágio da CDF. O recorrente foi de R$ 1.847 mi. Minoritários somam ~1,3% do lucro (R$ 43 mi em 2025) e ficam fora do LL do controlador. Stub 2026 (f26 = 0,5) = proventos com data-com futura: JCP do 4T26 (~R$ 340 mi, data-com ~dez/26) + dividendo complementar de 2026 (~R$ 650 mi, data-com ~mar/27). Ficam de fora, porque já pertencem a quem tinha a ação: o JCP do 3T26 (R$ 0,52/ação, data-com 23/09/26, pago 30/04/27), o do 2T26 (data-com 22/06) e o dividendo de 2025 (data-com 31/03/26, pago 30/11/26). Payout 2026 de 52% × LL 3.813 × 0,5 = R$ 991 mi ≈ esses dois proventos. O PL 2026E do motor (R$ 17,6 bi) fica ~R$ 0,25 bi (1,5%) acima do PL contábil esperado, porque a retenção do motor ignora o dividendo de 2025 pago em 2026; efeito de ~0,4% no valor justo, não ajustado. Ações: 640,99 mi (646,59 mi emitidas − 5,59 mi em tesouraria; free float de 183,1 mi)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   0.52,
+   0.55,
+   0.55,
+   0.55,
+   0.55
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.2422,
+   0.2242,
+   0.2218,
+   0.2172,
+   0.2115
+  ],
+  "ni_growth": null,
+  "payout": [
+   0.52,
+   0.55,
+   0.55,
+   0.55,
+   0.55
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roe": 0.2
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Grupo financeiro: sem ponte EV→equity. Os passivos financeiros (R$ 23,7 bi) são funding do Porto Bank e obrigações operacionais, já refletidos no lucro e no PL."
+ },
+ "target_multiples": {
+  "pe": 8.0,
+  "ev_ebitda": null,
+  "pbv": 1.7,
+  "rationale": "P/L 8,0x sobre o LPA 2027E (R$ 6,15) e P/VP 1,7x sobre o VPA 2026E (R$ 27,4). Histórico (data/market, sobre LL/PL CVM de 12 meses): P/L mediana de 3 anos 9,2x (p10 8,1x; mín 7,6x), de 5 anos 9,1x; P/VP mediana de 3 anos 1,9x, de 5 anos 1,67x. Release do 2T26: P/L de 9,7x (jun/26), 9,2x (dez/25), 8,8x (dez/24) e 8,6x (dez/23). Sexta pré-eleição: ~9,0x LTM e 2,1x o PL; 26/10 às 13h: 8,1x / 1,86x. Alvo ~10% abaixo da mediana pelo regime de juros mais alto (Ke de mercado implícito de ~14% = DY ~5,5% + crescimento ~8%) e pelo ciclo de crédito do Porto Bank (perdas +67% a/a). Coerência: P/VP 1,7x ≈ P/L 8x × ROE 2027E sobre o PL de abertura (22,4%) = 1,8x. Com Ke de 25% e ROE terminal de 20%, o P/VP justo de Gordon é 0,75x."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Selic ~15% até 2028 aprofunda o ciclo de crédito do Porto Bank (perdas acima de R$ 4 bi/ano), há guerra de preços no auto e a sinistralidade da saúde volta a ~80%: ROE de 18–19%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "O crédito normaliza em 2027, a saúde cresce >20% a.a. com sinistralidade de ~75% e o float rende CDI acima de 14%: ROE de 23–24%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "n/a — os passivos financeiros (R$ 23,7 bi) são funding do Porto Bank e obrigações operacionais; juros sobre empréstimos de R$ 26 mi no 1S26",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 90,
+  "notes": "Sem sensibilidade oficial; a estimativa é minha. Carteira ex-previdência de R$ 18,7 bi (87,5% do CDI no 2T26; receita da tesouraria de R$ 475 mi no trimestre). Guidance de resultado financeiro para 2026: R$ 1,4–1,8 bi (1S26: R$ 694 mi). 1 p.p. de CDI ≈ +R$ 185 mi antes de IR na carteira, menos ~R$ 40 mi de custo de captação do Porto Bank (despesa financeira de R$ 117 mi no 2T26) ⇒ ~+R$ 90 mi líquidos (~2,5% do lucro). Curva pós-eleição +2,5–3,5 p.p. vs pré-eleição ⇒ +R$ 200–300 mi/ano. Mas o juro alto prolonga o ciclo de crédito (over-90 de 9,4%, custo do crédito de 12,7%; guidance de perdas elevado para R$ 3,1–3,5 bi) e pesa nas vendas de auto. Efeito líquido no lucro: neutro a levemente positivo. Não incorporo ganho extra além de manter o financeiro no topo do guidance."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.17,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.181,
+  "payout_avg_5y": 0.47,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.104,
+   "ebitda_margin": null,
+   "net_income_mn": 879,
+   "net_debt_ebitda": null
+  },
+  "notes": "Receita CVM 2020–25: R$ 18,7 → 40,9 bi (17% a.a.; a adoção do IFRS 17 em 2023 quebra a série). LL do controlador: 1.688 (2020) → 3.381 (2025), 14,9% a.a. ROE CVM 2021–25: 16,9/11,4/19,7/20,0/22,7% (média de 18,1%); o ROAE recorrente do release está acima de 20% há 8 trimestres (22,3% no 2T26). Payout declarado (release): 40% (2022), 43% (2023), 50% (2024), 55% (2025); o payout caixa CVM, distorcido pelo calendário do JCP, é menor. Projeção: LL 2026E R$ 3,81 bi (1S26 2.013 + 2S26E 1.800; recorrente ~R$ 3,65 bi, +8%); 2027E R$ 3,94 bi (+8% sobre o recorrente); 2030E R$ 4,94 bi (CAGR 2026–30 de 6,7% sobre o contábil e de 7,9% sobre o recorrente). ROE sobre o PL médio de 21–23% em 2026–28, caindo para ~20% em 2030 com retenção de 45%."
+ },
+ "guidance": "Projeções 2026 (release do 2T26, 07/08/26). Porto Seguro: prêmio ganho +3% a +7%; sinistralidade revisada para 50–54% (de 50,5–54,5%); G&A 10,0–10,6%. Porto Saúde: prêmio ganho +14% a +22%; sinistralidade 72–77%; G&A 4,7–5,7%. Porto Bank: receita revisada para R$ 7,7–8,1 bi (de 7,5–7,9); perdas de crédito revisadas para R$ 3,1–3,5 bi (de 2,7–3,1); eficiência 24–28% (de 27–31%). Porto Serviço: receita de R$ 2,6–2,9 bi; G&A 9–10%. Resultado financeiro: R$ 1,4–1,8 bi (mantido). Taxa efetiva: 23–27% (de 24–28%). 3T26 em 05/11/2026, antes da abertura.",
+ "dividend_policy": "JCP trimestral (~R$ 0,51–0,54/ação: 1T26 R$ 0,542; 2T26 R$ 0,513; 3T26 R$ 0,521, com data-com 23/09 e pagamento 30/04/27) + dividendo complementar anual (2025: R$ 0,886/ação, data-com 31/03/26, pago 30/11/26). O payout declarado subiu de 40% (2022) para 55% (2025); DY de 5,9% em 2025 (release). Recompras pontuais (R$ 251 mi em 2025). Premissa: 52% em 2026 (stub = JCP do 4T26 + complementar de 2026) e 55% em 2027–30.",
+ "election_impact": "Caiu −9,3% às 13h de 26/10 (R$ 51,58 → R$ 46,76), menos da metade do Ibovespa. É empresa privada, sem risco direto de intervenção. (i) Juros: o float de R$ 18,7 bi rende ~90% do CDI e o resultado financeiro sobe ~R$ 90 mi líquidos por p.p. Mas o juro alto prolonga o ciclo de crédito do Porto Bank (perdas de crédito +67% a/a no 2T26; o banco responde por 16% do lucro) e esfria as vendas de carros (auto é o maior ramo). (ii) Câmbio: o real fraco encarece peças e sinistros de auto (inflação de reparo) e insumos da saúde, com repasse de preço em 6–12 meses. (iii) Prêmio de risco: o múltiplo cai junto com o setor (IFNC −27,5%). O valor intrínseco fica quase inalterado, porque o ganho no financeiro ≈ perdas de crédito e sinistros mais altos. Ajusto os múltiplos ~10% abaixo da mediana, e o bear supõe Selic de ~15% até 2028.",
+ "summary": "Grupo segurador privado e diversificado: seguros (auto, patrimonial, vida; ROAE de 33%), saúde (904 mil vidas, lucro +36% a/a), banco (cartões e consórcio, com R$ 116 bi administrados) e serviços. Lucro recorrente de R$ 1,85 bi no 1S26 (+8%), ROAE de ~22% e payout crescente (55% em 2025). A eleição afeta pelo canal de juros e câmbio: mais financeiro sobre o float, mais perdas no Porto Bank e sinistros de auto mais caros, sem mudança relevante no valor do negócio. A 7,6x o lucro 2027E, o preço embute um Ke de mercado bem abaixo dos 25% do estudo.",
+ "thesis": [
+  "Motor de seguros forte: Porto Seguro com ROAE de 33% e índice combinado ampliado de 85% (sinistralidade de 49%, −1,4 p.p.).",
+  "Saúde como vetor de crescimento: receita +14%, beneficiários +20% e lucro +36% no 2T26; guidance de prêmio ganho de +14% a +22% em 2026.",
+  "Balanço líquido e float de R$ 18,7 bi aplicado a ~90% do CDI: ~R$ 90 mi de lucro por p.p. de juro, já líquido do funding do banco.",
+  "Payout em alta (40% em 2022 → 55% em 2025), com JCP trimestral."
+ ],
+ "risks": [
+  "Ciclo de crédito do Porto Bank: over-90 de 9,4%, custo do crédito de 12,7% e perdas revisadas para R$ 3,1–3,5 bi em 2026; Selic alta por mais tempo.",
+  "Auto: concorrência de preço, inflação de peças com o real fraco e vendas fracas de veículos com o juro alto.",
+  "Saúde: sinistralidade volátil (76,9% no 2T26; faixa de 72–77% no guidance) e regulação da ANS.",
+  "Reforma tributária (IBS/CBS a partir de 2027) sobre seguros."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 em 05/11/2026 (antes da abertura).",
+  "Guidance 2027 (fev/27) e dividendo complementar de 2026.",
+  "Normalização das perdas de crédito do Porto Bank."
+ ],
+ "key_data": [
+  {
+   "label": "LL recorrente 2T26",
+   "value": "R$ 888,6 mi (+1,2% a/a)",
+   "context": "1S26: R$ 1.846,7 mi (+8,0%)"
+  },
+  {
+   "label": "LL contábil 1S26",
+   "value": "R$ 2.013,4 mi (+17,7%)",
+   "context": "Inclui R$ 176 mi não recorrentes (IR diferido da ISAR)"
+  },
+  {
+   "label": "ROAE recorrente 2T26",
+   "value": "22,3%",
+   "context": "Seguros 32,9%; saúde 24,0%; bank 16,3%"
+  },
+  {
+   "label": "Perdas de crédito 2T26",
+   "value": "R$ 867 mi (+67% a/a)",
+   "context": "Over-90 de 9,4%; guidance 2026 de R$ 3,1–3,5 bi"
+  },
+  {
+   "label": "Resultado financeiro 1S26",
+   "value": "R$ 694 mi",
+   "context": "Guidance 2026: R$ 1,4–1,8 bi"
+  },
+  {
+   "label": "Carteira ex-previdência",
+   "value": "R$ 18,7 bi",
+   "context": "87,5% do CDI no 2T26"
+  },
+  {
+   "label": "P/L LTM / P/VP (26/10, 13h)",
+   "value": "8,1x / 1,86x",
+   "context": "Mediana de 3 anos: 9,2x / 1,9x"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Porto — Release de resultados 2T26 (07/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/b77a3922-d280-4451-b3ee-0afec4577834/4432e300-316c-530a-bf34-b5ac18038e09?origin=2"
+  },
+  {
+   "title": "Let's Money — Porto Bank e o ciclo de crédito no 2T26",
+   "url": "https://www.letsmoney.com.br/noticias/porto-bank-ciclo-credito-2t26/"
+  },
+  {
+   "title": "Investidor10 — Porto vê lucro de R$ 879,4 mi no 2T26",
+   "url": "https://investidor10.com.br/noticias/porto-pssa3-ve-receita-disparar-e-lucro-chegar-a-r-879-4-mi-no-2t26-121914/"
+  },
+  {
+   "title": "Safra — Porto Seguro 2T26",
+   "url": "https://oespecialista.safra.com.br/analise/porto-seguro-segundo-trimestre-2026/"
+  },
+  {
+   "title": "Seu Dinheiro — Calendário de balanços do 3T26",
+   "url": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/PSSA3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação (API oficial) e proventos",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/PSSA3"
+  }
+ ],
+ "confidence": "média — o release oficial do 2T26 foi lido (guidance, segmentos, balanço), e o lucro é diversificado e previsível. Pontos frágeis: a sensibilidade a juros é estimativa minha, o 2S26 depende do ciclo de crédito do Porto Bank (o 3T26 sai em 05/11) e o valor é sensível ao ROE terminal."
+}

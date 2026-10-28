@@ -1,0 +1,173 @@
+{
+ "ticker": "SEER3",
+ "headline": "A Ser Educacional, a mais presencial das listadas de massa (EAD e semipresencial em ~13% da receita), devolveu quase todo o rali eleitoral e negocia a 4,2x o lucro 2027E, com DL ex-arrendamentos de 0,75x o EBITDA: o preço embute receita crescendo 1,1% a.a., contra 5,3% no modelo.",
+ "verdict": "Na foto de 26/10, 13h02 (R$ 11,76; −35,6% no dia), o valor justo é de R$ 14,19 (+20,7%), 77,3% das 5.000 simulações ficam acima do preço e a TIR de 3 anos chega a 48,9% com saída a 6,0x o lucro (R$ 23,70 no fim de 2028). A TIR de dono, de ~23,4%, fica abaixo do Ke de 25%: com ROE de 20–22% em 2026–30E e payout de 30–50%, o DDM vale R$ 10,66, menos que o preço, e a alta vem do DCF (R$ 14,34; peso de 50%) e dos múltiplos-alvo (R$ 17,42; 25%). SEER3 entra na lista por cumprir a regra — TIR ≥ 20%, P(valor > preço) ≥ 45% (aqui, 77,3%), Altman Z″ de 6,41 (zona segura) e confiança média —, não por superar o Ke; a queda foi beta e reversão do prêmio eleitoral, não fundamento.",
+ "reasons": [
+  {
+   "title": "Presencial em saúde puxa a receita",
+   "body": "A ROL presencial cresceu 10,2% no 2T26 (ticket +5,5%, +7,9% ex-medicina; base de graduação +4,4%, a 195,1 mil alunos) e responde por ~83% da receita; 65% da base presencial está em saúde (release 2T26). O EAD + semipresencial (receita −23% no 1S26) já é só ~13% da ROL e o modelo o leva a ~8%: por isso a receita projetada cresce 5,7% em 2026 e 5–5,5% depois, abaixo dos 9,8% a.a. de 3 anos (CVM).",
+   "metric": {
+    "label": "ROL presencial 2T26 a/a (release)",
+    "value": "+10,2%"
+   }
+  },
+  {
+   "title": "Medicina em maturação",
+   "body": "São 1.001 vagas anuais e 4.424 alunos (+5,6%), com ticket de R$ 9.642/mês: ~22% da ROL, ainda crescendo à medida que as turmas novas avançam no curso (release 2T26). É o ativo de maior barreira de entrada do portfólio — e também o principal risco regulatório (ver riscos).",
+   "metric": {
+    "label": "Alunos de medicina (2T26)",
+    "value": "4.424 (+5,6%)"
+   }
+  },
+  {
+   "title": "Alavancagem operacional já nos números",
+   "body": "A margem EBITDA CVM (IFRS-16) saiu de 23,3% em 2024 para 30,2% em 2025 e 33,2% no 1S26 (33,4% no 2T26, +2,0 p.p.); o lucro do 1S26 foi de R$ 182,2 mi (+45,8%) e o ROE UDM, de 18,9%, depois de prejuízos em 2022–24 (CVM). Piotroski de 8/9: só a liquidez corrente não melhorou.",
+   "metric": {
+    "label": "Lucro líquido 1S26 (a/a)",
+    "value": "R$ 182,2 mi (+45,8%)"
+   }
+  },
+  {
+   "title": "Balanço folgado, juros quase irrelevantes",
+   "body": "DL ex-arrendamentos de R$ 443,0 mi, 0,75x o EBITDA ajustado UDM (1,24x no 2T25); a 7ª emissão (R$ 250 mi a CDI+1,1%, mar/26) refinanciou as 3ª e 4ª, que custavam CDI+2,0%. Como a dívida bancária líquida é de ~R$ 419 mi e os arrendamentos (R$ 726 mi) têm taxa fixa, +100 bp de CDI custam ~R$ 4 mi/ano, ~1,3% do lucro 2026E (release 2T26 + modelo).",
+   "metric": {
+    "label": "DL/EBITDA aj. UDM (ex-IFRS-16)",
+    "value": "0,75x"
+   }
+  },
+  {
+   "title": "Lucro a preço de piso",
+   "body": "A R$ 11,76, P/L 2027E de 4,2x e EV/EBITDA 2027E de 3,6x (com arrendamentos e itens equivalentes a dívida), contra P/L a termo de ~6,5x antes da eleição (a R$ 18,26). Os alvos são 6,0x o lucro e 4,5x o EV/EBITDA 2027E — a mediana de 5 anos da própria Ser é 4,6x e os pares revisados (COGN3, YDUQ3, ANIM3) estão a 4,5x.",
+   "metric": {
+    "label": "P/L 2027E (a R$ 11,76)",
+    "value": "4,2x"
+   }
+  },
+  {
+   "title": "Dividendos semestrais, payout em alta",
+   "body": "Política de ~30% do lucro retomada em 2025 (B3): R$ 61,1 mi complementares de 2025 (R$ 0,4776/ação, pagos em abr–mai/26) e R$ 51,9 mi do 1S26 (R$ 0,4055/ação; data-com 31/08, já fora do preço de hoje). Com payout de 30% → 50% e a DL com arrendamentos caindo de 1,6x para 0,0x o EBITDA em 2030E, o DY projetado é de 8,4% (2027E) e 11,6% (2028E).",
+   "metric": {
+    "label": "DY projetado 2027E (a R$ 11,76)",
+    "value": "8,4%"
+   }
+  }
+ ],
+ "statistics": [
+  {
+   "title": "A queda foi beta, não notícia própria",
+   "body": "Às 13h02, SEER3 caía 35,6% contra −33,9% previstos pelo beta de baixa (2,32 × Ibovespa −14,6%): resíduo de −1,7 p.p. (z = −0,53). No modelo multifator do pregão (147 ações; R² = 0,71), a previsão era −49,3%: a ação caiu 13,7 p.p. menos que o previsto (140º de 147). Não há sobrerreação a capturar — a tese é de valuation, não de reversão de resíduo.",
+   "stat": "resíduo vs beta −1,7 p.p. (z = −0,53); vs multifator +13,7 p.p. (z = +1,74)"
+  },
+  {
+   "title": "O crash devolveu o rali eleitoral",
+   "body": "A ação subiu 62,0% entre R$ 11,27 (14/08, dois dias depois do release do 2T26) e R$ 18,26 (23/10), com o mercado precificando a vitória de Flávio; a R$ 11,76 está só 4,3% acima do nível pré-rali, com valor de mercado de R$ 1,51 bi contra R$ 2,34 bi antes da eleição. O canal direto da reeleição sobre o valor é pequeno: juros (−R$ 4 mi/ano por +100 bp) e continuidade de FIES e ProUni.",
+   "stat": "rali +62,0%; atual +4,3% vs pré-rali"
+  },
+  {
+   "title": "Múltiplos contra a própria série de 5 anos",
+   "body": "P/L LTM de 5,54x contra média de 13,5x (z = −1,72; percentil 0, n = 60) e EV/EBITDA de 3,69x (DL da CVM) contra 5,12x (z = −0,95; percentil 5). A média do P/L é inflada pelos lucros nulos ou negativos de 2022–24; o P/VP (0,99x; z = +0,96, percentil 77) está acima da média porque o ROE saiu de ~0% para 18,9%. DY de 4,1%, no percentil 87.",
+   "stat": "z(P/L, 5a) = −1,72 (percentil 0); z(EV/EBITDA) = −0,95 (percentil 5)"
+  },
+  {
+   "title": "Monte Carlo: preço abaixo do p25",
+   "body": "Em 5.000 simulações (desvio-padrão de 3 p.p. no crescimento, 2 p.p. na margem, 0,75 p.p. no g e 0,5 p.p. no capex), o valor vai de R$ 10,26 (p10) a R$ 18,49 (p90), com mediana de R$ 14,13. R$ 11,76 fica abaixo do p25 (R$ 12,00) e 77,3% dos cenários o superam — bem acima do corte de 45%.",
+   "stat": "P(valor > R$ 11,76) = 77,3%; p10–p90 R$ 10,26–18,49"
+  },
+  {
+   "title": "DCF reverso e sensibilidade: a margem decide",
+   "body": "O preço exige receita crescendo 1,1% a.a. em 2026–30 (−4,3 p.p. vs 5,3% da base; +6,8% no 1S26), e mesmo −4 p.p. de crescimento em todos os anos deixam o valor em R$ 11,91, acima do preço. A variável crítica é a margem: −2 p.p. levam a R$ 12,30 (TIR de dono 21,5%) e −3 p.p. a R$ 11,36, abaixo do preço. Com Ke de 20% a 30% (g 5%), R$ 17,92 a R$ 11,87; bear (30%) R$ 10,36 (−11,9%), bull (20%) R$ 16,89 (+43,6%), ponderado R$ 13,58 (+15,5%). O DCF já usa EV/EBITDA de saída de só 3,2x.",
+   "stat": "crescimento implícito 1,1% a.a. vs 5,3%; margem −3 p.p. → R$ 11,36"
+  },
+  {
+   "title": "Crashes anteriores: a taxa-base do papel é ruim",
+   "body": "Nos 62 pregões com Ibovespa ≤ −5% desde 1998, o índice subiu em mediana 55,9% em 12 meses (87% positivos); a queda de 26/10 (z = −7,9) é a 3ª pior desde 1998. Mas, nos 7 dias de crash com histórico, SEER3 teve retorno mediano de −36,2% em 12 meses contra +34,8% do Ibovespa — inclusive no Joesley Day (18/05/2017: +35,1% em 6 meses, −17,1% em 12). Em 2020, com DL/EBITDA de 1,1x (menor que o 1,6x de hoje, ambos com arrendamentos), a margem ainda caiu a 11,3% em 2022 e o lucro virou prejuízo de R$ 222 mi: o risco é operacional, não de balanço.",
+   "stat": "SEER3 12m pós-crash: mediana −36,2% (n = 7) vs Ibov +34,8%"
+  }
+ ],
+ "risks": [
+  {
+   "title": "Margem de volta ao histórico volátil",
+   "body": "A margem EBITDA CVM oscilou de 11,3% (2022) a 30,2% (2025), média de 22,9% em 5 anos; o modelo usa 30,8% no 2S26, subindo a 32,5% (29,6% → 31,3% depois de tirar 1,2 p.p. de descontos lançados no financeiro). Consumidor endividado e juros de 15% podem elevar PDD e evasão — a captação presencial total caiu 8,2% no 1S26 (estável ex-ProUni) —, e com −3 p.p. de margem o valor (R$ 11,36) fica abaixo do preço.",
+   "mitigant": "A premissa já fica abaixo dos 33,2% do 1S26 e o ticket presencial sobe 5,5%; com −2 p.p. a TIR de dono ainda é de 21,5%. Alerta: margem CVM do 2S26 abaixo dos 28,9% do 2S25."
+  },
+  {
+   "title": "Regulação de medicina e Mais Médicos",
+   "body": "120 das 1.001 vagas operam por decisão judicial sem trânsito em julgado (vestibulares suspensos desde fev/25), o ticket já cai (R$ 9.642/mês, −2,2% a/a; −8,2% em 6 meses) e o Mais Médicos pode abrir concorrência nas praças da Ser; medicina é ~22% da ROL. O cenário bear (perda das 120 vagas, margem a ~28% e crescimento −3 p.p.) dá R$ 10,36 (−11,9%).",
+   "mitigant": "A base de medicina segue crescendo (4.424 alunos, +5,6%) e, com o bear a 30% de probabilidade, o valor esperado (R$ 13,58) fica 15,5% acima do preço. O andamento judicial das 120 vagas não foi verificado."
+  },
+  {
+   "title": "EAD e semipresencial sob o Decreto 12.456/2025",
+   "body": "A captação do digital caiu 33,9% e a evasão foi de 29,2% no 1S26; a receita do EAD + semipresencial recuou 23% e o modelo já a leva de ~13% para ~8% da ROL. Um endurecimento do MEC no 4º mandato (mais carga presencial ou vedação de cursos de saúde no semipresencial) aceleraria a queda.",
+   "mitigant": "Entre as listadas de massa, é a menos exposta ao marco: ~83% da receita vem do presencial e o formato do decreto já vigora desde 2026.1."
+  },
+  {
+   "title": "Alavancagem com arrendamentos e refinanciamento",
+   "body": "Com arrendamentos (R$ 726,2 mi), a DL CVM é de R$ 1.127 mi (1,58x o EBITDA UDM) e o EBIT cobre só 1,58x a despesa financeira; a DL do modelo, com swap, aquisições a pagar e dividendos do 1S26, é de R$ 1.221 mi. A dívida bancária é 100% CDI, com prazo médio de ~1,7 ano: R$ 429 mi vencem em 24 meses (R$ 210 mi em 12), contra caixa de R$ 269,8 mi; o limite de covenant não foi verificado.",
+   "mitigant": "Ex-arrendamentos, 0,75x; geração operacional pós-capex de R$ 167,6 mi no 1S26 e FCFF projetado de R$ 486 mi em 2026E; a 7ª emissão saiu a CDI+1,1%. Kd +1,5 p.p. leva o valor a R$ 14,03 (−R$ 0,16)."
+  },
+  {
+   "title": "ProUni e reforma tributária",
+   "body": "O IR efetivo de 4–7% (3,9% no 1S26) depende da isenção do ProUni (8,2% da base presencial); o modelo usa 5% → 9%. Com IR de 20%, o valor justo cai a R$ 11,91, praticamente o preço. A reforma do consumo (IBS/CBS a partir de 2027) pode elevar a carga sobre a receita — efeito não quantificado no modelo.",
+   "mitigant": "O 4º mandato mantém FIES e ProUni (o MEC prevê ~112 mil vagas de FIES/ano em 2026–28); o risco está na regulamentação do IBS/CBS para educação, ainda por vir."
+  }
+ ],
+ "monitor": [
+  {
+   "kpi": "Margem EBITDA CVM (IFRS-16) do 2S26",
+   "threshold": "Invalida se ficar abaixo de 28,9% (2S25), sem expansão a/a: o modelo usa 30,8%, e com −3 p.p. em todos os anos o valor (R$ 11,36) fica abaixo do preço. O 3T é sazonalmente fraco (25,0% no 3T25).",
+   "next": "Resultado 3T26 (meados de nov/2026, data não confirmada) e 4T26 (1T27)"
+  },
+  {
+   "kpi": "Medicina: 120 vagas judicializadas e ticket",
+   "threshold": "Invalida se a Justiça derrubar as 120 vagas e o ticket seguir em queda (R$ 9.642/mês no 2T26, −2,2% a/a): é o cenário bear, R$ 10,36.",
+   "next": "Decisões judiciais (sem data); base e ticket de medicina no resultado do 3T26"
+  },
+  {
+   "kpi": "ROL presencial e base de alunos",
+   "threshold": "Invalida se a ROL presencial crescer menos de 5% a/a (2T26: +10,2%) ou a base presencial de graduação passar a cair (195,1 mil, +4,4%): sem isso, a receita não sustenta os +5,5% do modelo em 2027E.",
+   "next": "Resultado 3T26; captação 2027.1 (out/2026–mar/2027), divulgada com o 1T27"
+  },
+  {
+   "kpi": "DL/EBITDA aj. UDM (ex-IFRS-16) e custo de rolagem",
+   "threshold": "Invalida se voltar acima de 1,24x (2T25; hoje 0,75x) ou se os R$ 210 mi que vencem em 12 meses forem rolados acima de CDI+2,0%.",
+   "next": "Resultado 3T26"
+  },
+  {
+   "kpi": "Alíquota efetiva de IR (ProUni) e IBS/CBS",
+   "threshold": "Invalida se a alíquota efetiva recorrente se aproximar de 20% (modelo 5–9%; 3,9% no 1S26): o valor justo cairia a R$ 11,91, praticamente o preço.",
+   "next": "Resultados trimestrais; regulamentação do IBS/CBS e regras do ProUni para 2027"
+  },
+  {
+   "kpi": "Regulação do MEC (EAD/semipresencial e Mais Médicos)",
+   "threshold": "Invalida se o MEC estender as restrições do Decreto 12.456/2025 ao semipresencial em saúde ou autorizar, via Mais Médicos, novos cursos de medicina nas praças da Ser.",
+   "next": "Início do 4º mandato (jan/2027) e calendário regulatório do MEC"
+  }
+ ],
+ "catalysts": [
+  {
+   "date": "meados de nov/2026 (data não confirmada)",
+   "event": "Resultado do 3T26: margem do 2S26, ticket de medicina, alavancagem e alíquota de IR"
+  },
+  {
+   "date": "out/2026–mar/2027",
+   "event": "Captação 2027.1 do presencial e da medicina"
+  },
+  {
+   "date": "jan/2027",
+   "event": "Início do 4º mandato: sinais do MEC sobre EAD/semipresencial, Mais Médicos e regras de FIES/ProUni para 2027"
+  },
+  {
+   "date": "1T27 (data a confirmar)",
+   "event": "Resultado do 4T26 e dividendos complementares de 2026 (em 2026, a data-com foi 06/04)"
+  },
+  {
+   "date": "2027",
+   "event": "Início do IBS/CBS (reforma tributária do consumo) e sua regulamentação para educação"
+  },
+  {
+   "date": "sem data",
+   "event": "Decisões judiciais sobre as 120 vagas de medicina judicializadas"
+  }
+ ],
+ "bottom_line": "Para quem aceita volatilidade alta (53,6% a.a.; beta de baixa de 2,3; drawdown de −91,8% em 10 anos) e liquidez curta (ADTV de R$ 14,8 mi; posição pequena) em troca de TIR de dono de ~23,4%, abaixo do Ke de 25%, com a reprecificação como prêmio (TIR de 3 anos de 48,9% a 6,0x o lucro). A tese funciona se a margem CVM do 2S26 superar a do 2S25 (28,9%), as vagas de medicina se mantiverem e o IR seguir perto de 5–9% pelo ProUni."
+}

@@ -1,0 +1,118 @@
+{
+  "ticker": "USIM5",
+  "name": "Usinas Siderúrgicas de Minas Gerais S.A. — Usiminas",
+  "sector": "Siderurgia / aços planos (Ipatinga e Cubatão), mineração de ferro (Mineração Usiminas) e transformação/distribuição",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {"ticker": "USIM3", "class": "ON"},
+    {"ticker": "USIM5", "class": "PNA"}
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem override. Ações: 1.230,94 mi em circulação (CVM 30/06/2026 = B3: 1.253.079.108 emitidas − 22.136.448 em tesouraria; inalterado desde 2025). DL base CVM = −R$ 359 mi (caixa líquido): dívida 6.223 (2.01.04 + 2.02.01) + forfaiting 144 + arrendamentos 96 − caixa e aplicações 6.823. O release usa −R$ 499 mi (inclui R$ 100 mi de tributos parcelados e exclui forfaiting e arrendamentos); os parcelados vão em other_debt_like. Receita 2025 sem ajuste. EBITDA no conceito CVM (inclui equivalência de ~R$ 300 mi/ano; MRS Logística, Usiroll e outras), ~R$ 35–40 mi/trimestre acima do ajustado do release. Resultado do 3T26 sai em 30/10/2026: a coluna 2026 reflete o run-rate do 2S26 (estimativa do Citi para o EBITDA ajustado do 3T26: R$ 588 mi; mineração com 1/3 da capacidade parada em setembro)."
+  },
+  "projection": {
+    "years": [2026, 2027, 2028, 2029, 2030],
+    "revenue_growth": [-0.087, 0.065, 0.045, 0.045, 0.045],
+    "ebitda_margin": [0.097, 0.105, 0.11, 0.11, 0.11],
+    "da_pct_revenue": [0.038, 0.04, 0.04, 0.041, 0.042],
+    "capex_pct_revenue": [0.058, 0.052, 0.05, 0.048, 0.048],
+    "nwc_pct_revenue": 0.22,
+    "cost_of_net_debt": [0.11, 0.11, 0.11, 0.11, 0.11],
+    "other_financial": [-100, -100, -100, -100, -100],
+    "tax_rate": [0.2, 0.24, 0.27, 0.27, 0.27],
+    "minority_share_ni": 0.14,
+    "payout": [0.5, 0.3, 0.35, 0.4, 0.4],
+    "buyback_mn": [0, 0, 0, 0, 0],
+    "equity_issuance_mn": [0, 0, 0, 0, 0]
+  },
+  "terminal": {"g": 0.04, "roic": 0.08, "roe": 0.08},
+  "wacc": {
+    "kd_pre_tax": 0.136,
+    "target_debt_weight": 0.05,
+    "notes": "Kd: debêntures em R$ (R$ 3,6 bi) a CDI +1,35–1,95% (~16,5% com o CDI a termo de 2027–30) e bond de US$ 500 mi a 7,5% (+~2% a.a. de depreciação esperada ≈ 9,5%) → ~13,6%. Peso de dívida de só 5% porque há caixa líquido; a dívida bruta existe pelo descasamento de moeda e prazo do caixa."
+  },
+  "adjustments": {
+    "other_debt_like": 630,
+    "non_operating_assets": 149,
+    "minority_value": 800,
+    "notes": "other_debt_like = tributos parcelados R$ 100 mi (fora da DL CVM) + passivo atuarial (Previdência Usiminas/saúde) 536 × (1 − 34%) = 354 + provisão para recuperação ambiental 266 × (1 − 34%) = 176 → 630. Provisões para demandas judiciais (R$ 507 mi) ficam fora, como no resto do estudo (e há R$ 642 mi em depósitos judiciais). Forfaiting (R$ 144 mi) e arrendamentos (R$ 96 mi) já estão na DL CVM. Sem dividendos com data-com passada a pagar (proventos a pagar de R$ 1,3 mi). non_operating_assets = propriedades para investimento (R$ 149 mi). Participações societárias (R$ 1.630 mi; MRS Logística, Usiroll etc.) ficam no EBIT via equivalência. Créditos de ICMS/PIS-Cofins a recuperar (R$ 1,6 bi) e IR diferido ativo (R$ 2,2 bi) não entram à parte: os créditos são capital de giro e o diferido está na alíquota efetiva de 20–27%. minority_value: ver notes em history_check (coerente com 14% do lucro)."
+  },
+  "target_multiples": {
+    "pe": 7.0,
+    "ev_ebitda": 3.5,
+    "pbv": 0.4,
+    "rationale": "Os múltiplos históricos da Usiminas estão distorcidos por lucros perto de zero: P/L 5 anos com mediana de 14,7x e EV/EBITDA de 6,1x, e o EV/EBITDA LTM da tela é de 59,6x por causa do impairment do 3T25. O P/VP é a âncora estável: mediana de 0,40x em 5 anos, 0,49x desde 2016, 0,35x na tela. Usamos EV/EBITDA de 3,5x sobre o EBITDA CVM 2027E, na ponta baixa da faixa de 3–5x das siderúrgicas brasileiras de planos e abaixo dos ~4,6x da Gerdau, cuja exposição aos EUA é maior. O número foi escolhido para ficar coerente com o P/L: a conversão de EBITDA em lucro é fraca (D&A de ~R$ 1 bi e minoritários de 14%), e 4,0x implicaria P/L de ~9x. Com 3,5x, o P/L implícito é de ~8x. O P/L de 7,0x sobre o LPA 2027E implica P/VP de ~0,4x com ROE de 5–6%, coerente com a mediana histórica. Os múltiplos de mercado embutem um Ke de ~12–15%."
+  },
+  "scenarios": {
+    "bear": {"probability": 0.35, "revenue_growth_shift": -0.03, "ebitda_margin_shift": -0.035, "terminal_g_shift": -0.01, "capex_pct_shift": 0.005, "narrative": "Importação de planos volta a subir (já +33,8% t/t no 3T26), o antidumping de HRC não sai, a placa e o carvão ficam caros e a mineração segue parcialmente parada: margem volta aos 6–7% de 2023–24."},
+    "bull": {"probability": 0.15, "revenue_growth_shift": 0.025, "ebitda_margin_shift": 0.03, "terminal_g_shift": 0.005, "capex_pct_shift": 0.0, "narrative": "Antidumping definitivo de HRC (dez/26) somado aos de laminados a frio e revestidos (fev/26) e ao real fraco devolve o prêmio doméstico; ganhos do PCI no AF3 e mineração normalizada levam a margem a 13–14%."}
+  },
+  "uncertainty": {"revenue_growth_sd": 0.05, "ebitda_margin_sd": 0.03, "terminal_g_sd": 0.0075, "capex_pct_sd": 0.005},
+  "debt_profile": {
+    "gross_debt_mn": 6324,
+    "pct_floating_cdi": 0.57,
+    "avg_cost": "Debêntures CDI +1,35% a +1,95% (R$ 3,6 bi; venc. 2028–32) e bond de US$ 500 mi a 7,5% (2032); duração R$ 33 meses, US$ 55 meses",
+    "avg_maturity_years": 3.7,
+    "next_24m_maturities_mn": 38,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": 1,
+    "notes": "Dívida em CDI de R$ 3,6 bi contra caixa em reais de R$ 3,7 bi: exposição líquida ao CDI ~zero, então +100 bp ≈ +R$ 1 mi. O canal relevante é o câmbio. O real fraco encarece placas, carvão e coque importados, mas eleva a paridade de importação do aço e a receita do minério exportado (75% do volume da mineração). O bond em US$ (R$ 2,6 bi) é compensado por R$ 3,1 bi de caixa em moeda estrangeira."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.103,
+    "ebitda_margin_avg_5y": 0.122,
+    "roe_avg_5y": 0.096,
+    "payout_avg_5y": 0.48,
+    "last_quarter": {"period": "2T26", "revenue_yoy": -0.075, "ebitda_margin": 0.124, "net_income_mn": 382, "net_debt_ebitda": -0.22},
+    "notes": "Receita CVM 2020–25: 16,1 → 26,3 bi (+10,3% a.a., pico de 33,7 bi em 2021); 3 anos −6,8% a.a. Margem EBITDA CVM 2021–25: 37,0 / 11,0 / 6,7 / 6,7 / −0,3% (2025 com impairment de ~R$ 2,0 bi no 3T25). Média de 10 anos: 14,5%. 1S26: 12,1%, com um evento de +R$ 57 mi de previdência. Projetamos 9,7% na coluna 2026 (2S26 com a mineração parcialmente parada), 10,5% em 2027 e 11% depois: acima do vale de 2023–24 (antidumping e cotas, PCI no AF3), abaixo da média de 10 anos. ROE 2021–25: 49,5 / 7,2 / 5,9 / −0,6 / −13,8%. O LL 2025 (−R$ 3,1 bi) inclui impairment e baixa de IR diferido (IR de −R$ 1,36 bi no 3T25). O 1T26 teve IR positivo de R$ 412 mi (reconhecimento de diferido). Minoritários (Sumitomo com 30% da Mineração Usiminas, Nippon Steel com 30% da Unigal e Metal One na Soluções Usiminas, estrutura conforme o FRE e não reconferida nesta rodada): 1S26 com 12,9% do lucro, 2023 15,2%, 2022 22,8%; usamos 14%. minority_value de R$ 800 mi = 14% do equity total implícito, ponderado pelos métodos (DCF ~R$ 0,57 bi; EV/EBITDA a 3,5x ~R$ 1,3 bi). O valor contábil é de R$ 2,9 bi, mas com ROE de ~5% a Ke de 25% o lucro dos minoritários (~R$ 150–200 mi/ano) não sustenta esse valor. Último trimestre: 2T26 (o 3T26 sai em 30/10)."
+  },
+  "guidance": "Capex 2026 de R$ 1,2–1,4 bi, revisado para cima no 2T26 (29/07/2026), em relação ao fato relevante de fevereiro (reconstrução e reparo a quente das baterias de coque e novo gasômetro). Expectativa da administração para o 3T26: siderurgia estável, sem os efeitos extraordinários do 2T26; mais vendas no mercado interno e preços maiores para clientes industriais; custos de carvão, coque e placas mais altos; mineração em queda (menos volume e frete alto, com a rota C3 a ~33% do preço de referência do minério). Resultado do 3T26 em 30/10/2026.",
+  "dividend_policy": "Mínimo estatutário de 25% do lucro líquido ajustado. Sem proventos declarados em 2026 até agora, então o mínimo sobre o lucro do exercício de 2026 (~R$ 0,39 bi = 25% × ~95% × LL de ~R$ 1,6 bi, incluindo o 1S26) ainda é de quem compra hoje. Por isso o payout da coluna 2026 é de 50% (o motor só conta o stub do 2S26). Com 80%, o fluxo ficaria completo, mas o DY de 2026 exibido distorceria; a diferença no valor justo é de ~R$ 0,03/ação; R$ 43 mi pagos em 2025 (prejuízo). 2021–23: R$ 1,85 bi, 1,23 bi e 0,73 bi (payout de 20%, 76% e 52%). Sem programa de recompra relevante.",
+  "election_impact": "USIM5 caiu 10,6% em 26/10 (13h02), menos que o SMLL. No acumulado, já tinha devolvido o rali de mai–jun/26, saindo de R$ 12,04 em 02/06 para R$ 6,63 em 23/10. A empresa tem caixa líquido e exposição líquida ao CDI de ~zero, então o canal dos juros no lucro é nulo. O que pesa é o canal da demanda: juros altos por mais tempo seguram veículos, máquinas e a construção, e o automotivo é 38% do volume no mercado interno. O câmbio tem dois lados: o real fraco eleva a paridade de importação e o minério exportado, mas encarece placa, carvão e coque. Um 4º mandato Lula tende a manter a defesa comercial (cotas com tarifa de 25% renovadas em jun/26; antidumping de laminados a frio e revestidos em fev/26; HRC com decisão definitiva prevista para dez/26), que é o principal driver micro. O que muda no valor é o Ke, não o caixa da empresa.",
+  "summary": "Siderúrgica de aços planos com caixa líquido (R$ 499 mi no 2T26) e pouca sensibilidade a juros. A rentabilidade é baixa e cíclica: margem EBITDA de 6–7% em 2023–24, 12% no 1S26, e o 2S26 sofre com a parada parcial da mineração. O valor depende da defesa comercial contra o aço chinês e do custo de matérias-primas, não do balanço.",
+  "thesis": [
+    "Balanço folgado: caixa de R$ 6,8 bi contra dívida bruta de R$ 6,3 bi (DL −0,22x EBITDA). Não há vencimentos relevantes até 2028.",
+    "Recuperação operacional: EBITDA ajustado da siderurgia de R$ 688 mi no 2T26 (margem de 12,8%, +26% t/t), com o PCI do AF3 concluído e receita/t +5% t/t.",
+    "Defesa comercial em camadas: cotas com tarifa de 25% renovadas (corte de 30% no volume de BQ e BF), antidumping de laminados a frio e revestidos da China (fev/26) e HRC com decisão definitiva prevista para dez/26.",
+    "Desconto contábil: P/VP de 0,35x na tela de 26/10, contra a mediana de 0,40x em 5 anos."
+  ],
+  "risks": [
+    "Importações diretas e indiretas de aço asiático: os planos subiram +33,8% t/t no 3T26 (dado da Gerdau) e pressionam preço e ocupação da capacidade.",
+    "Mineração: 1/3 da capacidade parada em set/26, segundo o Citi, e frete da rota C3 alto. O resultado do segmento pode ficar negativo no 3T–4T26.",
+    "Custos de placa, carvão e coque, com descasamento entre custo e preço. As baterias de coque ainda estão em reconstrução.",
+    "Minoritários relevantes (30% da Mineração Usiminas e da Unigal) e controle compartilhado Ternium/Nippon Steel. Histórico de impairments (R$ ~2 bi no 3T25)."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (30/10/2026)",
+    "Decisão definitiva do antidumping de HRC (prevista para dez/2026)",
+    "Retomada da capacidade parada da mineração",
+    "Proposta de dividendos sobre o lucro de 2026 (1T27)"
+  ],
+  "key_data": [
+    {"label": "EBITDA ajustado 2T26", "value": "R$ 761 mi (12,4%)", "context": "siderurgia R$ 688 mi (12,8%) · mineração R$ 71 mi (8,2%)"},
+    {"label": "Caixa líquido 2T26", "value": "R$ 499 mi", "context": "caixa R$ 6,8 bi; dívida R$ 6,3 bi (bond US$ 500 mi 7,5% 2032; debêntures CDI+)"},
+    {"label": "Receita líquida/t siderurgia 2T26", "value": "≈R$ 5.440/t", "context": "CPV/t R$ 4.738; vendas de 989 kt (94% no mercado interno)"},
+    {"label": "Mineração 2T26", "value": "2,47 Mt vendidas a ≈R$ 351/t (≈US$ 70/t)", "context": "75% exportação; frete C3 ~33% do preço de referência"},
+    {"label": "EBITDA 3T26E (Citi)", "value": "R$ 588 mi", "context": "mineração pode ficar negativa; preço-alvo cortado de R$ 10 para R$ 9 (14/10)"},
+    {"label": "P/VP na tela de 26/10", "value": "0,35x", "context": "PL controlador R$ 20,8 bi; mediana de 5 anos 0,40x"},
+    {"label": "Deck aço (receita líquida/t siderurgia, R$)", "value": "2T26 5.440 · 2S26 5.450 · 27 5.540 · 28 5.670 · 29 5.800 · 30 5.950", "context": "volumes 4,0 Mt (2026) → 4,12 → 4,2 → 4,3 → 4,4 Mt; margem EBITDA consolidada CVM 9,7% (2S26) → 10,5% → 11%; ancorado na paridade de importação com câmbio de 5,45–5,75 e antidumping/cotas, sem repassar todo o câmbio"},
+    {"label": "Deck minério (receita líquida realizada)", "value": "≈US$ 70/t (2T26: R$ 351/t) mantido em US$; volumes 8,0 Mt (2026) → 8,5 → 8,8 Mt", "context": "frete C3 ~33% do preço de referência (Usiminas, 29/07); a curva do minério 62% Fe não foi reconferida nesta rodada"},
+    {"label": "Deck câmbio (R$/US$, média)", "value": "2S26 5,25 · 27 5,45 · 28 5,55 · 29 5,65 · 30 5,75", "context": "PTAX 28/10 5,342; dólar futuro 5,38 + diferencial de inflação (mesmo deck de GGBR4/PETR4)"}
+  ],
+  "sources": [
+    {"title": "Usiminas — Release de resultados 2T26 (29/07/2026)", "url": "https://api.mziq.com/mzfilemanager/v2/d/5dcf459c-823d-4c02-ac4b-a2aa54a63486/d3f91994-9257-c40e-8a2a-4b581911af32?origin=2"},
+    {"title": "Eu Quero Investir — Usiminas tem EBITDA de R$ 761 mi e eleva projeção de capex 2026", "url": "https://euqueroinvestir.com/acoes/usiminas-tem-ebitda-de-r-761-mi-e-eleva-projcao-de-capex-em-2026"},
+    {"title": "BPMoney — Citi reduz preço-alvo da Usiminas para R$ 9 antes do 3T26 (14/10/2026)", "url": "https://bpmoney.com.br/?p=426842"},
+    {"title": "Gerdau — Release 3T26 (importações no Brasil, antidumping de HRC), Form 6-K 27/10/2026", "url": "https://www.sec.gov/Archives/edgar/data/0001073404/000110465926118998/tm2628297d3_ex99-1.htm"},
+    {"title": "Gecex — Resolução 854/2026 (antidumping de laminados a frio da China)", "url": "https://okai.com.br/documento/2026-02-13/resolucao-gecex-nº-854-de-12-de-fevereiro-de-2026"},
+    {"title": "Gecex — Resolução 856/2026 (antidumping de laminados revestidos)", "url": "https://okai.com.br/documento/2026-02-18/resolucao-gecex-nº-856-de-13-de-fevereiro-de-2026"},
+    {"title": "CVM — ITR 2T26 (BPP consolidado) e DFP padronizados (data/hist/USIM5.json)", "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"},
+    {"title": "B3 — cotações e proventos", "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"}
+  ],
+  "confidence": "baixa — a base contábil de 2025 vem distorcida por impairment e baixa de diferido; o 3T26 sai em 30/10 com a mineração parcialmente parada, e o valor depende quase só de um driver: o spread aço doméstico × importado, decidido pela defesa comercial."
+}

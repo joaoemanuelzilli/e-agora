@@ -1,0 +1,248 @@
+{
+  "ticker": "MDIA3",
+  "name": "M. Dias Branco S.A. Indústria e Comércio de Alimentos",
+  "sector": "Consumo não cíclico / Alimentos processados (biscoitos, massas, farinha e gorduras)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "MDIA3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem override. Ações: 335,57 mi (339,0 mi emitidas − 3,43 mi em tesouraria; B3 = CVM). DL CVM de −331,1 = dívida 1.451,1 + arrendamentos 325,0 − caixa 2.107,2. A empresa divulga caixa líquido de R$ 767 mi sem arrendamentos (a CVM dá −656). As subvenções de ICMS (R$ 463 mi em 2025, 4,4% da receita; R$ 214 mi no 1S26) já estão no CPV CVM e, portanto, na margem: não há ajuste de base. Derivativos de trigo/câmbio (perda de R$ 301,5 mi em 2025 e de R$ 23,8 mi no 1S26, na DFC) ficam no resultado financeiro da CVM, enquanto o efeito do câmbio vai para o CPV. Projetamos a margem já no custo com hedge e other_financial sem ganho ou perda de derivativos."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.01,
+      0.07,
+      0.06,
+      0.055,
+      0.05
+    ],
+    "ebitda_margin": [
+      0.115,
+      0.108,
+      0.115,
+      0.115,
+      0.105
+    ],
+    "da_pct_revenue": [
+      0.04,
+      0.04,
+      0.04,
+      0.04,
+      0.04
+    ],
+    "capex_pct_revenue": [
+      0.059,
+      0.049,
+      0.044,
+      0.044,
+      0.044
+    ],
+    "nwc_pct_revenue": 0.18,
+    "cost_of_net_debt": [
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "other_financial": [
+      25,
+      25,
+      25,
+      25,
+      25
+    ],
+    "tax_rate": [
+      0.12,
+      0.13,
+      0.13,
+      0.14,
+      0.14
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.6
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.045,
+    "roic": 0.15,
+    "roe": 0.12
+  },
+  "wacc": {
+    "kd_pre_tax": 0.155,
+    "target_debt_weight": 0.0,
+    "notes": "Caixa líquido (−0,3x EBITDA com IFRS-16): wd = 0 → WACC = Ke = 25%. cost_of_net_debt = rendimento do caixa líquido. O caixa de R$ 2,1 bi rende ~CDI (14,5–15% na curva) e a dívida de R$ 1,45 bi custa CDI + spread AAA. O resultado líquido de juros é de ~+R$ 45 mi/ano sobre −R$ 331 mi, ~13–13,5% pré-IR. O incremento de caixa rende CDI. O motor aplica a alíquota efetiva (~13%, por SUDENE, JCP e subvenções), mas receita financeira paga 34%, então informamos 13,3% × 0,66 / 0,87 ≈ 10%. O rendimento líquido no modelo fica em ~8,8% = 13,3% × (1 − 34%). Se a DL virar positiva, o custo marginal seria CDI + ~0,8% (debêntures AAA)."
+  },
+  "adjustments": {
+    "other_debt_like": 180,
+    "non_operating_assets": 55,
+    "minority_value": 0,
+    "notes": "other_debt_like = dividendos mensais de R$ 0,03/ação com data-com depois do balanço e antes de 26/10 (23/07, 21/08, 22/09 e 22/10; 4 × R$ 10,07 mi = 40,3, do vendedor) + provisões para contingências prováveis (fiscais 135,9 + trabalhistas 52,3 + cíveis 23,2 = 211,5) × (1 − 34%) = 139,6. Total: 179,9. Derivativos passivos (R$ 14 mi) e saldo residual de aquisições a pagar (amortizado em R$ 8 mi no 1S26) são imateriais e ficam fora. non_operating_assets = propriedades para investimento (R$ 55,1 mi). Créditos tributários e depósitos judiciais (outros ativos LP de R$ 726 mi) ficam fora: composição não verificada. Seus rendimentos (~R$ 25 mi/ano) estão em other_financial."
+  },
+  "target_multiples": {
+    "pe": 9.0,
+    "ev_ebitda": 5.5,
+    "pbv": 0.8,
+    "rationale": "Histórico (data/market): P/L mediana de 5 anos 14,3x, 3 anos 11,8x, 1 ano 10,5x, hoje 8,5x LTM (percentil 7% de 5 anos). EV/EBITDA mediana de 5 anos 8,8x, 3 anos 6,8x, 1 ano 6,0x, hoje 4,8x. P/VP de 5 anos 1,2x, hoje 0,65x. O ROE de 8–9% fica muito abaixo do Ke: com Ke de 25%, o P/VP justo de Gordon seria ~0,4x. Usamos P/L 9,0x sobre o LPA 2027E e EV/EBITDA 5,5x sobre o EBITDA 2027E (IFRS-16), próximos das mínimas de 1 ano, ~35% abaixo das medianas de 5 anos e em linha com pares de alimentos básicos na B3 (Camil, 5–7x de lucro). P/VP 0,8x."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.02,
+      "ebitda_margin_shift": -0.02,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Trigo e real fraco sem repasse (como em 2021–22, margem de 8,8%), concorrência regional em massas e incentivos de ICMS perdidos sem compensação após 2032."
+    },
+    "bull": {
+      "probability": 0.15,
+      "revenue_growth_shift": 0.015,
+      "ebitda_margin_shift": 0.015,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Projeto Acelera e automação entregam ganho de margem, adjacências seguem +10% a.a. e o trigo cede, como em 2023 (margem de 13,2%)."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.03,
+    "ebitda_margin_sd": 0.015,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.004
+  },
+  "debt_profile": {
+    "gross_debt_mn": 1451,
+    "pct_floating_cdi": null,
+    "avg_cost": "não divulgado no material lido (debêntures/financiamentos em reais, rating AAA(bra) Fitch; ~95% no longo prazo)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": 93,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": 4,
+    "notes": "Caixa (R$ 2,1 bi) maior que a dívida (R$ 1,45 bi): +100 bp de CDI ≈ +R$ 6 mi pré-IR se a dívida for pós-fixada (indexador não verificado). O canal relevante dos juros é o consumo e o capital de giro dos clientes (varejo alimentar), não a dívida."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.0755,
+    "ebitda_margin_avg_5y": 0.1077,
+    "roe_avg_5y": 0.0864,
+    "payout_avg_5y": 0.3,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": -0.0088,
+      "ebitda_margin": 0.1054,
+      "net_income_mn": 169,
+      "net_debt_ebitda": -0.31
+    },
+    "notes": "Receita 2020–25: +7,6% a.a. (2022 inflado pelo trigo pós-Ucrânia); 3 anos: +1,0%. Projetamos 2026 +1% (1S26 0%, com volume +4% e preço −4%; 2S26 +2%), 2027 +7% (repasse do trigo em reais: R$ 5,40 × US$ 245/t ≈ R$ 1.320/t, +7% sobre o 2S26, mais volume +2%) e 5–6% depois. Margem EBITDA CVM: 8,8/8,9/13,2/12,4/10,6% (2021–25; média 10,8%), 1S26 9,8%, 2T26 10,5% (com R$ 17,7 mi não recorrentes). 2026 = run-rate do 2S26, 11,5%: 2S25 teve 10,9%, e somam-se ~R$ 37 mi de corte de despesas no 2S26 e o fim dos não recorrentes. 2027 10,8%: o câmbio de R$ 5,4 entra no custo com 1–2 trimestres de defasagem. 2028–29 11,5%. 2030 10,5%, 1 p.p. abaixo da margem normalizada: na reforma tributária, as subvenções de ICMS (4,4% da receita) caem de 2029 a 2032, com fundo de compensação, e somem em 2033. Supomos repasse parcial. ROE 2021–25 médio 8,6%. Payout caixa (JCP/dividendos na DFC): 2023 8%, 2024 34%, 2025 67% (complementar de R$ 0,596/ação em dez/25, antes da tributação de dividendos). Capex caixa de 2,4–2,9% em 2023–25 e 5,6% no 1S26 (automação). Projeção com direito de uso (~1,1% da receita): 5,9% em 2026, 4,4% no longo prazo."
+  },
+  "guidance": "Sem guidance numérico. Em 14/08/2026 a empresa anunciou o Projeto Acelera (centro de serviços compartilhados terceirizado; −314 posições; R$ 12 mi não recorrentes no 2T26) e um ajuste de estrutura em ago/26 (−307 posições), com redução de ~R$ 37 mi de despesas no 2S26. Investimentos de R$ 274 mi no 1S26 (automação de massas e biscoitos).",
+  "dividend_policy": "Estatuto: mínimo de 25% do lucro ajustado. Desde 2026 paga dividendo mensal de R$ 0,03/ação (~R$ 121 mi/ano, ~20% do lucro) e complementa no fim do ano: R$ 0,596/ação em dez/25 (R$ 200 mi), antes da Lei 15.270/2025. Proventos pagos (DFC): R$ 70 mi (2023), R$ 222 mi (2024), R$ 439 mi (2025), R$ 60 mi no 1S26. Recompra pontual (R$ 50 mi em 2024). A família controla a empresa e prefere JCP (IRRF de 17,5%).",
+  "election_impact": "MDIA3 caiu 14,1% em 26/10. O canal é macro e de custo: (i) Ke/prêmio de risco; (ii) o dólar subiu de R$ 5,04 para R$ 5,34–5,49 e o trigo é cotado em dólar (US$ 244/t em jun/26, +3% a/a), assim como o óleo de palma (+23% a/a). Com ~4 meses de estoque e hedge, o choque chega ao custo entre o 1T27 e o 2T27. O histórico mostra repasse com atraso e compressão temporária da margem (2021–22: 8,8%). (iii) Consumo de baixa renda no Nordeste, que é sensível a juros e transferências: Lula reeleito sustenta o Bolsa Família e a renda do Nordeste, um fator positivo para volume. (iv) Reforma tributária, já aprovada e independente da eleição: transição do ICMS de 2029 a 2032 tira as subvenções (R$ 463 mi em 2025), com cesta básica (massas e farinha) a alíquota zero de IBS/CBS. A dívida é irrelevante (caixa líquido). Mudou o custo de 2027 e o Ke, não a franquia (liderança em biscoitos e massas).",
+  "summary": "Líder nacional em biscoitos e massas, com caixa líquido, rating AAA e quatro trimestres seguidos de alta de volume. A rentabilidade é baixa (ROE de 8–9%), depende de subvenções de ICMS que a reforma tributária extingue até 2033 e oscila com trigo e dólar. Com Ke de 25%, um negócio que rende menos que o custo de capital vale bem abaixo do patrimônio, e o real fraco adia a recuperação de margem para 2028.",
+  "thesis": [
+    "Volume +4% no 2T26 (477 mil t), quarto trimestre seguido de alta. Market share em alta com o mercado de biscoitos e massas em −1% em volume.",
+    "Margem bruta de 34,2% no 2T26 (+0,8 p.p. a/a), com custo variável de R$ 2,9/kg (vs R$ 3,2/kg): eficiência e mix (adjacências +12%).",
+    "Reestruturação: −621 posições e ~R$ 37 mi de despesas a menos no 2S26. Capex de automação de R$ 274 mi no 1S26.",
+    "Balanço: caixa de R$ 2,1 bi, caixa líquido de R$ 767 mi sem IFRS-16, rating AAA(bra) e ~95% da dívida no longo prazo."
+  ],
+  "risks": [
+    "Trigo e óleo de palma em dólar: real a R$ 5,4 sem repasse rápido. Em 2021–22 a margem EBITDA caiu a 8,8%.",
+    "Reforma tributária: subvenções de ICMS de 4,4% da receita (~40% do EBITDA) caem de 2029 a 2032 e somem em 2033.",
+    "Consumo de baixa renda e concorrência regional em massas e biscoitos. O preço médio caiu 5% a/a no 2T26.",
+    "Execução do Projeto Acelera (terceirização) e retorno do capex de automação. ROE estruturalmente abaixo do Ke."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (previsto para nov/26; data não verificada)",
+    "Repasse de preço do trigo e do câmbio (1S27)",
+    "Dividendo complementar de fim de ano (dez/26)",
+    "Regulamentação do fundo de compensação de benefícios de ICMS"
+  ],
+  "key_data": [
+    {
+      "label": "EBITDA 2T26",
+      "value": "R$ 284 mi",
+      "context": "margem de 10,5%; R$ 17,7 mi não recorrentes (Acelera e diesel)"
+    },
+    {
+      "label": "Volume 2T26",
+      "value": "477 mil t",
+      "context": "+4% a/a; preço médio R$ 5,7/kg (−5%)"
+    },
+    {
+      "label": "Caixa líquido 2T26",
+      "value": "R$ 767 mi",
+      "context": "−0,7x EBITDA (empresa, sem IFRS-16); CVM com arrendamentos: R$ 331 mi"
+    },
+    {
+      "label": "Trigo (SAFRAS) jun/26",
+      "value": "US$ 244/t",
+      "context": "+3% a/a; dólar médio do 2T26 R$ 5,05 → R$ 5,34–5,49 após a eleição"
+    },
+    {
+      "label": "Subvenções de ICMS 2025",
+      "value": "R$ 463 mi",
+      "context": "4,4% da receita; extintas até 2033 pela reforma"
+    },
+    {
+      "label": "Queda em 26/10",
+      "value": "−14,1%",
+      "context": "R$ 19,11 → R$ 16,42 (13h02)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "M. Dias Branco — Apresentação de Resultados 2T26/1S26 (14/08/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/fcf0301a-c792-45d6-a615-fc81722c9abe/ac77c3cb-2121-7ac0-2098-1707c00d7840?origin=2"
+    },
+    {
+      "title": "Investidor10 — M. Dias Branco lucra R$ 169 milhões no 2T26, queda de 22%",
+      "url": "https://investidor10.com.br/noticias/m-dias-branco-mdia3-lucra-r-169-milhoes-no-2t26-queda-de-22-122054/"
+    },
+    {
+      "title": "Safra (O Especialista) — M. Dias Branco: pressão nas margens no 2T26",
+      "url": "https://oespecialista.safra.com.br/analise/m-dias-branco-pressao-margens-2t26/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/MDIA3.json)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "média — base CVM limpa e balanço com caixa líquido. A margem depende de três variáveis voláteis (trigo, câmbio e repasse) e do tratamento das subvenções de ICMS na reforma, que não dá para quantificar com precisão. Não li o release em texto, só a apresentação, e o custo e o indexador da dívida não foram verificados."
+}

@@ -1,0 +1,254 @@
+{
+  "ticker": "DXCO3",
+  "name": "Dexco S.A.",
+  "sector": "Materiais de construção / Painéis de madeira (Duratex), metais e louças (Deca), revestimentos cerâmicos; ativos florestais; 49% da LD Celulose (JV com a Lenzing)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "DXCO3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "net_debt": 5949.6
+    },
+    "notes": "DL-base de R$ 5.949,6 mi = DL CVM de R$ 5.379,4 mi (empréstimos e debêntures de R$ 7.242,6 mi, mais arrendamentos IFRS-16 de R$ 958,6 mi, menos caixa e aplicações de R$ 2.821,9 mi) + derivativos de dívida passivos de R$ 570,2 mi (CP R$ 127,2 mi + LP R$ 443,0 mi). A Dexco soma esses derivativos na DL do release (R$ 5.135,1 mi = R$ 5.950 mi − arrendamentos R$ 959 mi + aplicações LP R$ 144 mi), e eles entram na base para que o motor cobre juros sobre eles. Ações: 907,87 mi (B3 919,03 mi − 11,16 mi em tesouraria, já após a bonificação de 12% de dez/2025). A base de margem não é a CVM. O EBITDA CVM (EBIT + D&A) inclui a equivalência da LD Celulose (R$ 223 mi em 2025; R$ 112 mi no UDM), a variação do valor justo dos ativos biológicos (R$ 329 mi em 2025; R$ 78 mi no 1S26), vendas de fazendas e reestruturações. Por isso projetamos o 'EBITDA ajustado e recorrente' do release, sem LD Celulose (UDM R$ 1.888 mi = 22,3%; 1S26 24,2%; 2T26 24,5%). Também usamos D&A 'efetivo' de ~11,5% da receita: D&A CVM de ~15% (inclui exaustão das florestas a valor justo) menos o ganho de valor justo, que em regime estável repõe essa exaustão. Assim o EBIT projetado fica comparável ao EBIT CVM ex-equivalência. O capex inclui o investimento em ativo biológico (R$ 525 mi em 2025; R$ 298 mi no 1S26) e as adições de arrendamento, porque o D&A inclui a depreciação do direito de uso."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.055,
+      0.04,
+      0.06,
+      0.06,
+      0.055
+    ],
+    "ebitda_margin": [
+      0.23,
+      0.23,
+      0.235,
+      0.24,
+      0.24
+    ],
+    "da_pct_revenue": [
+      0.115,
+      0.113,
+      0.111,
+      0.109,
+      0.107
+    ],
+    "capex_pct_revenue": [
+      0.11,
+      0.11,
+      0.113,
+      0.113,
+      0.113
+    ],
+    "nwc_pct_revenue": 0.2,
+    "cost_of_net_debt": [
+      0.145,
+      0.155,
+      0.1575,
+      0.1575,
+      0.155
+    ],
+    "other_financial": [
+      0.0,
+      160.0,
+      166.7,
+      226.7,
+      400.0
+    ],
+    "tax_rate": [
+      0.25,
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "minority_share_ni": 0.2,
+    "payout": [
+      0.3,
+      0.3,
+      0.35,
+      0.4,
+      0.45
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.04,
+    "roic": 0.1,
+    "roe": 0.1
+  },
+  "wacc": {
+    "kd_pre_tax": 0.165,
+    "target_debt_weight": 0.45,
+    "notes": "Kd marginal: CDI a termo de 2027–30 (~15,3%) + spread de ~1,2% (debêntures, CRA, CPR-F) ≈ 16,5%. wd de 45% ≈ DL/(DL + valor de mercado pré-eleição) = 5.950/(5.950 + 7.417)."
+  },
+  "adjustments": {
+    "other_debt_like": 133,
+    "non_operating_assets": 1172,
+    "minority_value": 481,
+    "notes": "non_operating_assets = LD Celulose (49%) a R$ 900 mi + ativos não circulantes mantidos para venda a R$ 272 mi (valor contábil 2T26: imóveis e fazendas não operacionais em venda). A LD Celulose não é consolidada, e tratamos a participação assim: (i) a equivalência sai do EBITDA e do LL projetados; (ii) os dividendos esperados da JV entram em other_financial a partir de 2027 (R$ 120/125/170/300 mi em 2027–30), brutos de IR (÷0,75), porque dividendo é isento e o motor tributa o LAIR; com isso o DDM e o P/L capturam a JV pelo caixa que ela remete; (iii) no DCF e no EV/EBITDA, que não enxergam esse caixa, a JV entra como ativo não operacional de R$ 900 mi, ~0,4x o valor contábil dos investimentos (R$ 2,4 bi). Os R$ 900 mi equivalem ao valor presente a 25% do fluxo ao acionista da JV, com a premissa de preço e alavancagem descrita em key_data, mais algum valor de opção de venda da fatia; equivalem a ~4,5x o EV/EBITDA da JV. Deck da LD Celulose: celulose solúvel a US$ 850/t (2026), US$ 900/t (2027) e US$ 950/t (2028–30); ~540 mil t/ano; câmbio R$ 5,35 (4T26), R$ 5,45 (2027), R$ 5,55 (2028) e R$ 5,65 (2029–30); EBITDA 100% de ~US$ 270–290 mi/ano (2T26: R$ 339 mi no trimestre, pró-forma do release); DL ~US$ 0,8 bi (bond de US$ 650 mi a 7,95% com vencimento em 2032 + term loan de US$ 350 mi em 60 meses a SOFR+3,95%, amortizando). A dívida da JV não tem aval da Dexco desde a reestruturação de set/2024. other_debt_like = 50% das provisões fiscais, trabalhistas e cíveis (R$ 266,7 mi → R$ 133 mi; haircut por depósitos judiciais e prazo). O risco sacado (R$ 225,7 mi) ficou como capital de giro. Minoritários: R$ 481 mi contábeis, crescentes com aportes de não controladores (R$ 150 mi em 2025 e R$ 207 mi no 1S26) numa controlada que não identificamos com segurança; lucro dos não controladores de R$ 62 mi em 2025 e de R$ 47 mi no 1S26 (o equivalente a ~R$ 90–100 mi/ano). Com minority_share_ni de 20%, o motor gera R$ 20–140 mi/ano em 2026–30; o valor contábil de R$ 481 mi ≈ PV a 25% de ~R$ 95 mi/ano. Dividendos/JCP a pagar no 2T26: R$ 1,8 mi (irrelevante)."
+  },
+  "target_multiples": {
+    "pe": 8.0,
+    "ev_ebitda": 5.0,
+    "pbv": 0.6,
+    "rationale": "Histórico próprio (multiples_history, desde ago/2021): EV/EBITDA mediano de 4,85x (5 anos) e 5,2x (1 ano); P/VP mediano de 0,92x (5 anos) e 0,70x hoje; P/L sem sentido no último ano (lucro perto de zero). O EV/EBITDA histórico usa o EBITDA CVM, que inclui a equivalência da LD Celulose e o valor justo das florestas. No EBITDA ajustado sem a JV e descontando a JV do EV, o múltiplo pré-eleição era de ~6x. Usamos 5,0x o EBITDA ajustado 2027E sem LD Celulose (base IFRS-16, a mesma da DL), com a JV somada à parte como ativo não operacional, e P/L de 8x o LPA 2027E, um lucro deprimido por juros de ~R$ 0,9 bi/ano. Pares: a Eucatex negocia a 4–5x o EBITDA. É um desconto à história da Duratex (6–8x), pelo ROIC de ~8–10% e pelo Ke de 25%."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.03,
+      "ebitda_margin_shift": -0.025,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "DI acima de 15% até 2028 trava reforma, móveis e lançamentos; resinas (metanol e ureia) sobem com o câmbio; Deca e revestimentos seguem perto do zero a zero; a celulose solúvel fica abaixo de US$ 850 e a JV não paga dividendos."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.02,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Ciclo de cortes de juros em 2027–28, painéis com preço firme, reestruturação de Deca e cerâmicos devolvendo margem de dois dígitos, e venda de terras ou da fatia na LD Celulose desalavancando a companhia."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.04,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.006
+  },
+  "debt_profile": {
+    "gross_debt_mn": 7813,
+    "pct_floating_cdi": 0.85,
+    "avg_cost": "Majoritariamente CDI+ (debêntures da 3ª emissão de R$ 1,5 bi, out/2025; CPR-F de R$ 1,6 bi da Duratex Florestal com aval da Dexco, dez/2025; NCE/CRA), com swaps para CDI (derivativos de dívida passivos de R$ 570 mi). Revolver de R$ 750 mi com o Banco do Brasil até set/2027. Spread médio exato não verificado",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": 4.0
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -37,
+    "notes": "Dívida bruta mais derivativos (R$ 7,8 bi, quase toda em CDI após swaps) menos caixa (R$ 2,8 bi, também em CDI) dá exposição líquida de ~R$ 5,0 bi. +100 bp ≈ −R$ 50 mi pré-IR (−R$ 37 mi no lucro), o que é muito para um LL controlador de −R$ 36 mi no UDM e um lucro recorrente de ~R$ 100–135 mi/ano. A curva de hoje contra a pré-eleição (+250–300 bp em 2027–30) custa ~R$ 125–150 mi/ano pré-IR quando toda a dívida reprecifica. O resultado financeiro líquido do UDM foi de −R$ 846 mi."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.0701,
+    "ebitda_margin_avg_5y": 0.2845,
+    "roe_avg_5y": 0.1202,
+    "payout_avg_5y": 0.62,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.052,
+      "ebitda_margin": 0.245,
+      "net_income_mn": -12.9,
+      "net_debt_ebitda": 2.72
+    },
+    "notes": "A margem CVM média de 28,5% (2021–25) está inflada por valor justo de florestas (R$ 769 mi em 2023, R$ 520 mi em 2024, R$ 329 mi em 2025), equivalência da LD Celulose e vendas de terras; a margem ajustada e recorrente ficou em ~22% no UDM 2T26 (R$ 1.888 mi). O ROE de 12% na média é puxado por 2021 (32%, ciclo de reforma pós-pandemia); 2024 teve 2,6% e 2025, 0%. Receita de +7,0% a.a. em 5 anos e de −0,9% a.a. em 3 anos. Projetamos: receita de 2026 pelo run-rate do 2S26 (+3% a/a sobre o 2S25, sobre um 1S26 que subiu 5,4%) e depois +4% em 2027 (juros altos) e 5,5–6% em 2028–30. Margem ajustada de 23% (2S26 e 2027, contra 24,2% no 1S26, porque as resinas sobem com o câmbio e o 4T é sazonalmente fraco), indo a 24% em 2029–30 com Deca e revestimentos reestruturados. Payout pelo estatuto (30%), subindo a 45% com a desalavancagem. O último trimestre usa a margem ajustada do release; a CVM foi de 26,3%, com equivalência e valor justo. O LL de −R$ 12,9 mi é o controlador; o consolidado foi de +R$ 14,8 mi."
+  },
+  "guidance": "Sem guidance numérico. Release do 2T26 (05/08/2026): foco em rentabilidade do portfólio, eficiência e geração de caixa; Madeira com EBITDA ajustado de R$ 485,1 mi (margem de 30,9%, volume +5,2%); Deca com R$ 55,6 mi (11,8%) após reajustes de preço e volume −19,2%; Revestimentos com R$ 6,7 mi (3,5%) e capacidade reduzida. Reestruturação de cerâmicos com impairment no 4T25 (eventos extraordinários de R$ 84,7 mi). Moody's Local (03/12/2025): perspectiva negativa do AAA.br e capex ajustado de ~R$ 1,0 bi em 2026, incluindo arrendamentos.",
+  "dividend_policy": "Estatuto: 30% do lucro líquido ajustado (Moody's Local, dez/2025), com JCP como instrumento usual. Proventos pagos: R$ 249 mi (2023), R$ 234 mi (2024), R$ 46 mi (2025) e R$ 63 mi no 1S26. Com o lucro perto de zero e DL/EBITDA de 2,7x, a remuneração fica limitada até a dívida cair. Não identificamos proventos com data-com entre 30/06 e 26/10/2026; a lista B3 do pipeline veio vazia para DXCO3, e isso não foi verificado na fonte.",
+  "election_impact": "DXCO3 caiu 34,5% em 26/10 (mínima −50% na abertura), com resíduo de −22 p.p. em relação ao beta, a maior queda idiossincrática do grupo. Parte é desmonte de posição: a ação tinha subido 64% no ano como aposta de corte de juros. Parte é economia real: (i) a Dexco é das mais alavancadas em CDI do universo, com ~R$ 5 bi de exposição líquida; +250–300 bp na curva custam ~R$ 125–150 mi/ano pré-IR, mais que o lucro recorrente; (ii) a demanda de painéis (móveis e construção), louças, metais e revestimentos depende de crédito imobiliário e ao consumidor; (iii) o real mais fraco encarece resinas (metanol e ureia), embora melhore o valor em reais da LD Celulose (receita em dólar), cuja dívida em dólar gera perda contábil no curto prazo. Não há risco de intervenção (controle Itaúsa e família Seibel). O MCMV forte com Lula ajuda volume de painéis e louças de entrada, mas não compensa o juro.",
+  "summary": "Líder em painéis de madeira, com base florestal própria, mais duas divisões em reestruturação (Deca e revestimentos) e 49% de uma fábrica de celulose solúvel (LD Celulose) que ainda não paga dividendos. O problema é a estrutura de capital: ~R$ 6 bi de DL (com arrendamentos e derivativos) em CDI consomem quase todo o EBIT. A tese depende de juros caindo, de as divisões não madeira voltarem a dar margem e de monetizar ativos (terras, florestas, a JV).",
+  "thesis": [
+    "Madeira é um ativo de qualidade: EBITDA ajustado de R$ 485 mi no 2T26 (margem de 30,9%) e ~89% do EBITDA consolidado, com floresta própria como vantagem de custo.",
+    "Reestruturação aparecendo: EBITDA ajustado e recorrente +23,7% a/a no 2T26 (R$ 547 mi; margem de 24,5%); Deca saiu de R$ 9 mi para R$ 56 mi com preço; G&A −10%.",
+    "Ativos para monetizar: 49% da LD Celulose (EBITDA pró-forma da fatia de R$ 166 mi no 2T26), ativos à venda de R$ 272 mi e base de terras e florestas (ativo biológico de R$ 3,0 bi).",
+    "Desalavancagem em curso: DL/EBITDA ajustado de 3,39x para 2,72x em 12 meses e fluxo de caixa livre de R$ 121 mi no 2T26."
+  ],
+  "risks": [
+    "Juros: ~R$ 5 bi de exposição líquida ao CDI; o resultado financeiro de −R$ 846 mi no UDM já consome o EBIT; covenant de DL/EBITDA ≤ 4,0x.",
+    "Demanda cíclica e dependente de crédito (móveis, reforma, construção); excesso de capacidade em revestimentos cerâmicos.",
+    "Custos de resinas (metanol e ureia) e de energia, que sobem com o câmbio e o petróleo.",
+    "LD Celulose: preço da celulose solúvel volátil, dívida em dólar e dividendos ainda não iniciados; valor de saída incerto.",
+    "Minoritários e aportes de não controladores numa controlada que não identificamos com segurança; consomem parte relevante do lucro (R$ 89 mi no UDM contra LL consolidado de R$ 53 mi)."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (previsto para 04/11/2026)",
+    "Início de dividendos da LD Celulose (a Moody's Local esperava a partir de 2026)",
+    "Vendas de terras e ativos à venda (R$ 272 mi no balanço)",
+    "Ciclo de cortes da Selic (2027–28), que reprecifica a dívida"
+  ],
+  "key_data": [
+    {
+      "label": "EBITDA ajustado e recorrente 2T26",
+      "value": "R$ 547,4 mi (24,5%)",
+      "context": "+23,7% a/a; pró-forma com LD Celulose: R$ 713,7 mi"
+    },
+    {
+      "label": "DL/EBITDA ajustado (release)",
+      "value": "2,72x",
+      "context": "DL de R$ 5,14 bi sem arrendamentos; 3,39x um ano antes; covenant de 4,0x"
+    },
+    {
+      "label": "Resultado financeiro UDM",
+      "value": "−R$ 846 mi",
+      "context": "contra EBIT CVM sem equivalência de ~R$ 700 mi"
+    },
+    {
+      "label": "Deck LD Celulose",
+      "value": "US$ 850–950/t; R$ 5,35–5,65",
+      "context": "540 mil t/ano; EBITDA 100% de US$ 270–290 mi; DL ~US$ 0,8 bi; fatia de 49% avaliada em R$ 0,9 bi"
+    },
+    {
+      "label": "Capex total 2025",
+      "value": "R$ 920 mi",
+      "context": "imobilizado R$ 386 mi + intangível R$ 8 mi + florestas R$ 525 mi (DFC CVM)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Money Times/Estadão Conteúdo — Dexco 2T26: lucro de R$ 14,8 mi; EBITDA ajustado de R$ 547,4 mi; divisões",
+      "url": "https://www.moneytimes.com.br/lucro-liquido-da-dexco-dxco3-tem-queda-de-61-e-vai-a-r-148-milhoes-no-2o-trimestre-fets/"
+    },
+    {
+      "title": "Quartr — Dexco 2T26: EBITDA pró-forma com LD Celulose R$ 713,7 mi; DL R$ 5.135,1 mi; 2,72x",
+      "url": "https://quartr.com/events/dexco-s-a-dxco3-q2-2026_33NKdRVl"
+    },
+    {
+      "title": "Moody's Local Brasil — Afirma AAA.br da Dexco, perspectiva negativa (03/12/2025): estrutura da dívida da LD Celulose, covenant, capex, estatuto",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/91f4a038-dddb-40a9-95b2-7a436386019c/9a167b0f-3f86-e749-e48f-b547a68c759c?origin=2"
+    },
+    {
+      "title": "Mercado & Consumo — Dexco tem prejuízo no 4T25 com reestruturação de cerâmicos (05/03/2026)",
+      "url": "https://mercadoeconsumo.com.br/05/03/2026/noticias-varejo/dexco-tem-prejuizo-no-4o-tri-com-reestruturacao-de-ceramicos-e-volumes-menores/"
+    },
+    {
+      "title": "Bloomberg Línea — JV de celulose de Dexco e Lenzing avalia emissão em dólar",
+      "url": "https://www.bloomberglinea.com.br/agro/joint-venture-de-celulose-de-dexco-e-lenzing-avalia-emissao-em-dolar-dizem-fontes/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/DXCO3.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    },
+    {
+      "title": "B3 — cotação (foto de 26/10/2026 13h02)",
+      "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/DXCO3"
+    }
+  ],
+  "confidence": "baixa — a base contábil precisa de muitos ajustes (valor justo de florestas, equivalência e dividendos da JV, derivativos, minoritários de origem não identificada), o release oficial do 2T26 não foi lido na íntegra (só a cobertura de imprensa e o Quartr) e o valor é muito sensível a um único driver: o CDI sobre ~R$ 5 bi de exposição líquida."
+}

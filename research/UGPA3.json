@@ -1,0 +1,275 @@
+{
+  "ticker": "UGPA3",
+  "name": "Ultrapar Participações S.A.",
+  "sector": "Distribuição de combustíveis (Ipiranga), GLP (Ultragaz), armazenagem (Ultracargo) e participação na Hidrovias",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "UGPA3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "revenue_2025": 140620.0,
+      "net_debt": 6467.0
+    },
+    "notes": "Hidrovias desconsolidada, como pede o estudo: a participação relevante entra como ativo não operacional/equivalência, sem dupla contagem. A Ultrapar detém 60,00% das ações da Hidrovias (816,28 mi de ~1.360,5 mi; comunicado de 13/04/2026) e a consolida desde mai/25. (i) revenue_2025 = 142.370 (CVM) − ~1.750 de receita da Hidrovias consolidada em mai–dez/25 (estimada pelos trimestrais de operações continuadas) = 140.620. (ii) net_debt = DL CVM 30/06/26 8.876 (inclui arrendamentos 1.700, sem derivativos; a empresa reporta 8.864 com derivativos de +12) − DL da Hidrovias 2.409 (dívida bruta 3.319 − caixa 1.154 = 2.165, + arrendamentos 244) = 6.467. (iii) A projeção cobre Ipiranga + Ultragaz + Ultracargo + holding. O lucro da Hidrovias entra por equivalência em other_financial: 60% × lucro estimado de R$ 210–310 mi/ano, bruto de IR, menos R$ 50 mi de outros itens financeiros. O valor da fatia entra em non_operating_assets a mercado. DCF e EV/EBITDA usam o ativo; DDM e P/L usam a equivalência; nenhum método usa os dois. Coluna 2026 = run-rate do 2S26 anualizado (o motor aplica f26 ≈ 0,504). Receita ex-Hidrovias de ~R$ 168 bi/ano: Ipiranga com 12,9 mi m³ no semestre a ~R$ 6.000/m³, com Brent ~US$ 100. EBITDA de R$ 9,5 bi/ano: Ipiranga a R$ 280/m³ no 2S26, contra R$ 365/m³ no 1S26. Por isso o +19,7% de receita e os 5,7% de margem de 2026 não são o exercício contábil, que deve fechar acima: o 1S26 já teve EBITDA ajustado recorrente de R$ 5,5 bi ex-Hidrovias. Ações: 1.090,75 mi (B3 1.115,85 mi − tesouraria CVM de 25,1 mi). O dividendo de R$ 1,085 bi a R$ 1,00/ação sugere ~1.085 mi em ago/26; as recompras posteriores ao balanço não foram quantificadas (diferença de 0,5%)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.1968,
+      -0.0826,
+      0.0382,
+      0.0543,
+      0.0521
+    ],
+    "ebitda_margin": [
+      0.0566,
+      0.0467,
+      0.043,
+      0.0429,
+      0.0428
+    ],
+    "da_pct_revenue": [
+      0.0118,
+      0.0133,
+      0.0133,
+      0.0131,
+      0.0129
+    ],
+    "capex_pct_revenue": [
+      0.0137,
+      0.0149,
+      0.0147,
+      0.0145,
+      0.0143
+    ],
+    "nwc_pct_revenue": 0.035,
+    "cost_of_net_debt": [
+      0.148,
+      0.157,
+      0.162,
+      0.163,
+      0.162
+    ],
+    "other_financial": [
+      136,
+      150,
+      131,
+      133,
+      134
+    ],
+    "tax_rate": [
+      0.31,
+      0.3,
+      0.3,
+      0.3,
+      0.3
+    ],
+    "minority_share_ni": 0.04,
+    "payout": [
+      0.55,
+      0.6,
+      0.65,
+      0.65,
+      0.65
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.045,
+    "roic": 0.16,
+    "roe": 0.18
+  },
+  "wacc": {
+    "kd_pre_tax": 0.16,
+    "target_debt_weight": 0.2,
+    "notes": "Kd 16% = 108% do DI (custo médio da dívida bruta no 2T26, DI+1,1%) sobre o CDI a termo de ~14,5–15,5%. Peso da dívida de 20% ≈ (DL ex-Hidrovias 6,5 bi + risco sacado 2,0 bi + dividendo já pago 1,1 bi) / (~R$ 42 bi de mercado pré-eleição + dívida). cost_of_net_debt = 1,08 × CDI a termo: 13,7% no 2S26, 14,5% em 2027 e 15,0–15,3% em 2028–30. Fica acima do custo efetivo do 1S26 (~1,03 × CDI sobre a DL média ex-Hidrovias), porque a DL cai e o carrego entre a dívida bruta (~R$ 14,5 bi a 108% do DI) e o caixa (~R$ 9,5 bi a 97% do DI) não some. other_financial de 2028–30 já inclui −R$ 40 a −80 mi desse carrego."
+  },
+  "adjustments": {
+    "other_debt_like": 3358,
+    "non_operating_assets": 2710,
+    "minority_value": 700,
+    "notes": "other_debt_like 3.358 = (a) dividendo de R$ 1,00/ação ref. 1S26 (R$ 1.085 mi; data-com 24/08/26, pago 03/09/26), posterior ao balanço-base e que não pertence a quem compra hoje; (b) fornecedores convênio/risco sacado de R$ 1.982 mi + passivo financeiro de clientes (vendor) de R$ 39 mi. A própria companhia soma esses itens na 'dívida líquida ajustada' (R$ 10.886 mi, 1,1x). O risco sacado subiu R$ 833 mi no 2T26 e financiou parte da liberação de capital de giro; (c) dividendos a pagar no balanço, R$ 37 mi; (d) benefícios pós-emprego de R$ 225 mi × (1 − 34%) = 148; (e) provisão de bônus de subscrição/indenização, R$ 67 mi. As provisões para contingências (R$ 531 mi) são compensadas por depósitos judiciais (R$ 505 mi) e não entram. Os tributos a recuperar (R$ 5,8 bi, dos quais R$ 3,6 bi de longo prazo) ficam fora como capital de giro de realização incerta: é upside não contado. Derivativos e contratos futuros de energia (ativos líquidos de ~R$ 0,1 bi e ~R$ 0,5 bi) também ficam fora. non_operating_assets 2.710 = 60% da Hidrovias a mercado: 816,28 mi de ações × R$ 3,32 (HBSA3 na foto de 26/10 13h02, −19,6% no dia; ao preço pré-eleição de R$ 4,13 seriam R$ 3.371 mi). minority_value 700 = minoritários ex-Hidrovias. O PL de não controladores era de R$ 665 mi em dez/24, antes da consolidação. Os R$ 2.068 mi de 30/06/26 incluem ~R$ 1,4 bi dos 40% de terceiros na Hidrovias, que saem junto com ela (estimativa)."
+  },
+  "target_multiples": {
+    "pe": 8.0,
+    "ev_ebitda": 4.8,
+    "pbv": 1.4,
+    "rationale": "P/L 8,0x sobre o LPA 2027E e EV/EBITDA 4,8x sobre o EBITDA 2027E ex-Hidrovias, na base IFRS-16 como no CVM. Histórico (data/market, 5 anos): P/L mediana 12,0x (p10 7,8x) e EV/EBITDA mediana 5,7x (p10 4,3x). O EV/EBITDA histórico inclui créditos fiscais (2023–25) e, desde 2025, a Hidrovias. Antes da crise de margens (nov/24–nov/25), a ação negociou a 7,6–8,0x P/L e 4,2–4,9x EV/EBITDA. O par VBBR3 usa 7,5x/6,0x no estudo. O EBITDA 2027E ainda embute margem acima do normal (R$ 190/m³ na Ipiranga), e os múltiplos de mercado embutem Ke de 11–15%, abaixo dos 25% do estudo; por isso ficamos perto do piso do histórico. P/VP de 1,4x é só referência (ROE normalizado de 13–15%)."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.02,
+      "ebitda_margin_shift": -0.006,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "A Petrobras volta a segurar preços abaixo da paridade (o importador perde margem), a crise de oferta se desfaz já no 4T26 e a Ipiranga volta a ~R$ 130–140/m³ com a informalidade reaparecendo."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.01,
+      "ebitda_margin_shift": 0.005,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "A escassez de diesel e as janelas de importação fechadas se estendem por 2027 (Ipiranga acima de R$ 220/m³) e o combate ao devedor contumaz sustenta ~R$ 200/m³ no terminal."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.03,
+    "ebitda_margin_sd": 0.004,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.002
+  },
+  "debt_profile": {
+    "gross_debt_mn": 19563,
+    "pct_floating_cdi": 0.9,
+    "avg_cost": "108% do DI (DI+1,1%) no 2T26; caixa rende 97% do DI. Dívida bruta da empresa de R$ 17.863 mi + arrendamentos de R$ 1.700 mi (inclui a Hidrovias, com dívida bruta de R$ 3.319 mi); dívida em moeda estrangeira com hedge. Parcela CDI estimada.",
+    "avg_maturity_years": 2.9,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -55,
+    "notes": "A exposição líquida ao CDI ex-Hidrovias é de ~R$ 7 bi (dívida bruta ~14,5 bi + risco sacado 2,0 bi − caixa ~9,5 bi): +100 bp ≈ −R$ 70 mi antes de IR (−R$ 46 mi após IR). A Hidrovias (60% × DL de 2,2 bi) acrescenta ≈ −R$ 9 mi. Total ≈ −R$ 55 mi/ano, ~2% do lucro normalizado. O canal relevante dos juros é o Ke, não o resultado financeiro."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.1396,
+    "ebitda_margin_avg_5y": 0.042,
+    "roe_avg_5y": 0.154,
+    "payout_avg_5y": 0.517,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.218,
+      "ebitda_margin": 0.086,
+      "net_income_mn": 1549,
+      "net_debt_ebitda": 0.91
+    },
+    "notes": "Receita CVM 2020–25 +14% a.a., puxada pelo preço do combustível (em 3 anos, −0,3% a.a.). Margem EBITDA CVM 2021–25: 2,7/3,4/5,0/5,0/4,9%; 2023–25 têm créditos fiscais (R$ 487 mi só no 2T25) e 2025 tem ~R$ 0,7 bi da Hidrovias. Ipiranga, EBITDA recorrente por m³: LTM 2T25 R$ 140, 1T26 R$ 276, 2T26 R$ 451 (crise no Oriente Médio, escassez de diesel importado e ganho de estoque), LTM 2T26 R$ 258. Volume de ~23,9 mi m³ em 2025 e 12,2 mi m³ no 1S26 (+8%). Premissas: R$ 280/m³ no 2S26 (o BTG espera ≥ R$ 350 no 3T26; o Morgan Stanley, R$ 300 de média em 2026), R$ 190 em 2027 e R$ 170/177/184 em 2028–30. É o nível do 2S25 (R$ 155/m³, já depois da Operação Carbono Oculto e antes da crise; deduzido do LTM) corrigido por ~4% a.a.; antes de 2025, a margem ficava em R$ 130–150. Volume +2% a.a. a partir de 2027. Deck: Brent ~US$ 100–105 em out/26 (EIA: US$ 87 de média em 2026) → ~US$ 95 no 2S26, ~80 em 2027 e ~75 em 2028–30. Receita da Ipiranga de R$ 6.000/m³ no 2S26, 5.500 em 2027 e 5.600–6.000 em 2028–30. Câmbio R$ 5,38–5,70. Ultragaz: R$ 1,9–2,1 bi/ano (LTM recorrente 1,79 bi). Ultracargo: R$ 0,68–0,86 bi (LTM 0,60 bi + Itaqui/Suape desde o 3T26). Holding e demais: −R$ 0,3 bi. EBITDA ex-Hidrovias: 9,5 bi (2S26 anualizado), 7,2 bi (2027), 6,9–7,6 bi (2028–30). D&A ex-Hidrovias de ~R$ 2,0–2,3 bi (inclui amortização de bonificações). Capex de R$ 2,3–2,55 bi (plano 2026 de ~R$ 2,6 bi com a Hidrovias). ROE de 13–14% em 2027–30, contra a média de 15% em 5 anos com créditos fiscais. Payout de 55–65% (média de 5 anos 52%; 2025 88%)."
+  },
+  "guidance": "Sem guidance de resultado. Plano de investimentos 2026 de ~R$ 2,6 bi (Money Times, mar/26; inclui a Hidrovias, detalhe não verificado). A Ultracargo concluiu o maior ciclo de investimentos (Suape e Itaqui operando no 3T26). Programa de recompra de até 18 mi de ações (ago/26). Alavancagem de 0,9x (1,1x com risco sacado), a menor desde 2008 (release 2T26, 12/08/2026).",
+  "dividend_policy": "Dividendos semestrais: R$ 1,00/ação ref. 2S25 (pago em 16/12/25) e R$ 1,00/ação ref. 1S26 (R$ 1.085 mi; data-com 24/08/26, pago em 03/09/26, tratado como dívida). Pagos (DFC): R$ 400 mi (2023), 834 (2024) e 2.172 (2025). Payout médio de 5 anos de 52% (2025: 88%). Recompras de R$ 149 mi (2024) e R$ 267 mi (2025); novo programa de até 18 mi de ações (ago/26). Mínimo estatutário não verificado nesta sessão. Premissa: payout de 55% sobre o lucro do 2S26 (≈ R$ 1,1/ação no próximo semestral) e de 60–65% em 2027–30.",
+  "election_impact": "UGPA3 caiu 9,1% em 26/10, com o Ibovespa a −17%: resíduo idiossincrático de +10,6 p.p. sobre o beta esperado (−19,7%). Devolveu só metade do rali eleitoral (+19,5% de 12/08 a 23/10). O canal macro é limitado: DL ex-Hidrovias de R$ 6,5 bi (0,7x) e receita em reais. O real fraco (+9,5% no dólar futuro) encarece o combustível importado e o capital de giro, mas é repassado. No canal micro: (i) num 4º mandato de Lula, o risco de a Petrobras praticar preços abaixo da paridade de importação é maior. A Ipiranga importa ~16% do diesel, e a margem do 2T26 dependeu de produto importado escasso. É o principal risco de intervenção e está no cenário bear. (ii) A continuidade do combate à informalidade (Operação Carbono Oculto, devedor contumaz, monofasia) é positiva para o volume e a margem estrutural. (iii) O 'Gás do Povo' (programa federal de GLP, em mais de 1.800 municípios) favorece a Ultragaz. O que muda de fato no valor é o Ke/múltiplo e o risco da política de preços da Petrobras, não a operação.",
+  "summary": "A Ultrapar vive margens excepcionais na Ipiranga (R$ 451/m³ no 2T26, três vezes o normal) por causa da crise de oferta de diesel ligada ao Oriente Médio, com alavancagem de 0,9x e geração de caixa recorde. O modelo avalia a Hidrovias (60%) à parte, a mercado, e projeta a Ipiranga normalizando para R$ 170–185/m³ (o nível do 2S25 corrigido pela inflação) a partir de 2028; o preço atual pressupõe margens de crise por mais tempo. Os riscos centrais são a velocidade da normalização e a política de preços da Petrobras.",
+  "thesis": [
+    "Ipiranga: EBITDA recorrente de R$ 2,78 bi no 2T26 (R$ 451/m³, contra R$ 118/m³ no 2T25), volume +8% a/a e +0,9 p.p. de participação no 1S26 com a saída de distribuidoras irregulares.",
+    "Balanço: DL de R$ 8,9 bi (0,9x; 1,1x com risco sacado), geração operacional recorde de R$ 4,8 bi no 2T26 e dívida a 108% do DI.",
+    "Hidrovias (60%, consolidada desde mai/25) avaliada à parte, a R$ 2,7 bi (HBSA3 a R$ 3,32), com DL própria de 2,4x; a Ultracargo põe Itaqui e Suape em operação no 3T26.",
+    "Proventos: R$ 2,17 bi pagos em 2025 e R$ 1,085 bi ref. 1S26, mais recompra de até 18 mi de ações."
+  ],
+  "risks": [
+    "Normalização da margem: cada R$ 10/m³ na Ipiranga vale ≈ R$ 250 mi de EBITDA/ano, e o 2T26 teve ganho de estoque e escassez que não se repetem.",
+    "Política de preços da Petrobras abaixo da paridade (risco maior após a reeleição) e mudanças tributárias (ICMS/monofasia).",
+    "Capital de giro e risco sacado (R$ 2,0 bi) sensíveis ao petróleo e ao câmbio.",
+    "Hidrovias: navegabilidade (secas no Norte), alavancagem de 2,4x e ação ilíquida. A Ultragaz perde volume (−3% a/a) e baixou R$ 124 mi com a venda da Stella."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (início de nov/2026)",
+    "Dividendo semestral ref. 2S26 (dez/26–fev/27)",
+    "Duração do conflito no Oriente Médio e das janelas fechadas de importação de diesel",
+    "Decisões de preço da Petrobras depois da eleição"
+  ],
+  "key_data": [
+    {
+      "label": "EBITDA ajustado recorrente 2T26",
+      "value": "R$ 3.657 mi",
+      "context": "+149% a/a; Ipiranga R$ 2.782 mi; Hidrovias R$ 322 mi"
+    },
+    {
+      "label": "Margem EBITDA Ipiranga",
+      "value": "R$ 451/m³ (2T26)",
+      "context": "LTM R$ 258; 2S25 ~R$ 155; premissa de R$ 170–184 em 2028–30"
+    },
+    {
+      "label": "DL/EBITDA 2T26",
+      "value": "0,9x",
+      "context": "DL R$ 8.864 mi; 1,1x com risco sacado (R$ 1.982 mi)"
+    },
+    {
+      "label": "Hidrovias (HBSA3)",
+      "value": "60,00% das ações",
+      "context": "R$ 2.710 mi a R$ 3,32 (26/10 13h02)"
+    },
+    {
+      "label": "Custo da dívida",
+      "value": "108% do DI",
+      "context": "prazo médio de 2,9 anos; caixa a 97% do DI"
+    },
+    {
+      "label": "Dividendo ref. 1S26",
+      "value": "R$ 1,00/ação",
+      "context": "R$ 1.085 mi, pago em 03/09/26 (fora do fluxo de quem compra hoje)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ultrapar — Divulgação de resultados 2T26 (12/08/2026), via Investidor10",
+      "url": "https://investidor10.com.br/acoes/link_comunicado/UGPA3/47667/"
+    },
+    {
+      "title": "Renova Invest — Ultrapar 2T26: lucro +46%, alavancagem 0,9x",
+      "url": "https://renovainvest.com.br/blog/ultrapar-ugpa3-resultado-2t26/"
+    },
+    {
+      "title": "BTG Pactual — Ultrapar resultados do 2T26 (margem ≥ R$ 350/m³ no 3T26; lido via resumo de busca)",
+      "url": "https://content.btgpactual.com/research/files/file/pt-BR/2026-08-13T115214.245_Ultrapar__UGPA3____Resultados_do_2T26_.pdf"
+    },
+    {
+      "title": "Investidor10 — Ultra eleva participação na Hidrovias para 60,00% (13/04/2026)",
+      "url": "https://investidor10.com.br/noticias/ultra-ugpa3-eleva-participacao-na-hidrovias-hbsa3-119741/"
+    },
+    {
+      "title": "SEC 6-K — Ultrapar assume o controle da Hidrovias (50,15%, mai/2025)",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001094972/000155485525000427/MainDocument.htm"
+    },
+    {
+      "title": "Investidor10 — Hidrovias 2T26 (DL R$ 2,165 bi, 2,4x)",
+      "url": "https://investidor10.com.br/noticias/hidrovias-do-brasil-hbsa3-dobra-lucro-e-soma-r-100-milhoes-no-2t26-121968/"
+    },
+    {
+      "title": "Cenário Energia — Diesel acumula alta de 20,1% em 2026 (19/10/2026)",
+      "url": "https://cenarioenergia.com.br/2026/10/19/diesel-acumula-alta-de-201-em-2026-apesar-de-estabilidade-em-outubro/"
+    },
+    {
+      "title": "S&P Global — EIA eleva Brent 2026 para US$ 87 por restrições em Hormuz (11/08/2026)",
+      "url": "https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/081126-us-eia-raises-brent-outlook-to-87b-on-hormuz-shipping-constraints"
+    },
+    {
+      "title": "Money Times — Ultra prevê investimento de R$ 2,6 bi em 2026",
+      "url": "https://www.moneytimes.com.br/ultra-tem-resultado-dentro-do-esperado-no-4o-tri-e-preve-investimento-de-r-26-bi-em-2026-kda/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (ações e proventos, consultado em 28/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/UGPA3.json)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "média — números oficiais (release 2T26 lido na íntegra e CVM), mas o valor depende de quando e onde a margem da Ipiranga normaliza (crise de oferta em curso, Brent ~US$ 100) e da política de preços da Petrobras; minoritários ex-Hidrovias e lucro da Hidrovias são estimativas."
+}

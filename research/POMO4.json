@@ -1,0 +1,253 @@
+{
+  "ticker": "POMO4",
+  "name": "Marcopolo S.A.",
+  "sector": "Bens industriais / Material de transporte (carrocerias de ônibus)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "POMO4",
+      "class": "PN"
+    },
+    {
+      "ticker": "POMO3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "net_debt": 344
+    },
+    "notes": "Balanço-base 2T26 (30/06/2026). DL CVM consolidada = empréstimos 3.400,4 + arrendamentos 65,7 − caixa 1.588,5 = R$ 1.877,7 mi. Essa DL inclui o funding do Banco Moneo (repasses BNDES/Finame, em moeda nacional), cuja contrapartida é a carteira de financiamento a clientes, contabilizada em contas a receber. Contas a receber somam R$ 3.281 mi (R$ 1.938 mi CP + R$ 1.343 mi LP), ~130 dias de receita, contra ~65 dias de uma operação só industrial. Por isso estimamos a carteira do Moneo em ~R$ 1,7 bi (estimativa; o número do release não foi verificado) e a tiramos da DL: DL industrial ≈ 1.877,7 − 1.700 = R$ 177,7 mi. Somamos ainda: dividendo de R$ 0,13/ação com data-com 25/08/2026, posterior ao balanço e pago em 09/09/2026 (R$ 161,4 mi), e dividendo mínimo a pagar (R$ 4,8 mi). DL ajustada = R$ 344 mi. EBITDA projetado SEM equivalência patrimonial: o EBIT CVM (3.05) inclui equivalência de −R$ 92 mi em 2025 e +R$ 88 mi no 1S26, volátil e não operacional. As coligadas (NFI Group e outras) entram a valor contábil em non_operating_assets. Ações: 1.241,4 mi em circulação (ON 447,9 + PN 793,5), após a bonificação de 10% de dez/2025."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.017,
+      0.06,
+      0.06,
+      0.055,
+      0.05
+    ],
+    "ebitda_margin": [
+      0.142,
+      0.145,
+      0.15,
+      0.15,
+      0.15
+    ],
+    "da_pct_revenue": [
+      0.019,
+      0.019,
+      0.019,
+      0.019,
+      0.019
+    ],
+    "capex_pct_revenue": [
+      0.034,
+      0.034,
+      0.033,
+      0.032,
+      0.032
+    ],
+    "nwc_pct_revenue": 0.25,
+    "cost_of_net_debt": [
+      0.135,
+      0.14,
+      0.14,
+      0.135,
+      0.13
+    ],
+    "other_financial": [
+      100,
+      100,
+      105,
+      110,
+      115
+    ],
+    "tax_rate": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "minority_share_ni": 0.01,
+    "payout": [
+      0.57,
+      0.55,
+      0.55,
+      0.55,
+      0.55
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.2,
+    "roe": 0.22
+  },
+  "wacc": {
+    "kd_pre_tax": 0.14,
+    "target_debt_weight": 0.05,
+    "notes": "DL industrial perto de zero. Dívida em R$ (BNDES/NCE, CDI+) e em moeda estrangeira (pré-pagamento de exportação e subsidiárias no exterior, ~7–8%). Kd de 14% pela curva DI 2027–28 (14,5%) mais spread, ponderado pela parcela em moeda estrangeira. WACC ~24%."
+  },
+  "adjustments": {
+    "other_debt_like": 0,
+    "non_operating_assets": 507,
+    "minority_value": 70,
+    "notes": "non_operating_assets = participações societárias por equivalência (R$ 462,7 mi, principal a NFI Group/New Flyer, listada em Toronto) + propriedades para investimento (R$ 44,8 mi), a valor contábil. A participação na NFI a mercado não foi verificada. Para não contar em dobro, a equivalência fica fora do EBITDA e do other_financial. other_financial = +R$ 100–115 mi/ano: spread líquido da carteira do Banco Moneo (juros da carteira de ~R$ 1,7 bi menos o custo do funding, já fora da DL) e rendimento de caixa no exterior. Calibrado no resultado financeiro LTM de +R$ 165 mi e no 1S26 de +R$ 99 mi, que tiveram ganhos cambiais com o real forte. Minoritários pequenos (1% do lucro; R$ 58,5 mi contábeis); usamos R$ 70 mi. Provisões para contingências (R$ 136 mi) não entram como dívida, mesmo critério dos pares."
+  },
+  "target_multiples": {
+    "pe": 6.5,
+    "ev_ebitda": 4.5,
+    "pbv": 1.3,
+    "rationale": "Histórico (multiples_history): P/L mediana 5 anos 7,4x (p10 6,1x; 2026: 4,2–7,1x); EV/EBITDA mediana 5 anos 8,8x (p10 5,7x), com DL consolidada (inclui o Moneo) e EBITDA com equivalência. Consenso de 10 analistas: preço-alvo médio de R$ 7,23 (StockAnalysis, 28/10/2026), ~7x o lucro de 2026. Usamos P/L-alvo de 6,5x o LPA 2027E (abaixo da mediana, pela margem em queda em 2026 e pelo Ke de 25%) e EV/EBITDA-alvo de 4,5x o EBITDA 2027E sem equivalência, com DL industrial. Coerentes entre si: dão R$ 5,6–6,0/ação. P/VP de 1,3x é só referência: ROE de 25% contra Ke de 25%."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.04,
+      "ebitda_margin_shift": -0.02,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Mercado brasileiro de ônibus cai com Selic/Finame caros e aperto fiscal nos programas públicos; contratos a preço fixo e México/Argentina mantêm a margem perto de 12%."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.03,
+      "ebitda_margin_shift": 0.02,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Real fraco devolve competitividade às exportações e a margem volta aos 17–18% de 2024–25; renovação de frota urbana (elétricos/BNDES) acelera."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.05,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.004
+  },
+  "debt_profile": {
+    "gross_debt_mn": 3400,
+    "pct_floating_cdi": 0.56,
+    "avg_cost": "não divulgado no material lido; R$ 1.900 mi em moeda nacional (inclui o funding do Banco Moneo) e R$ 1.501 mi em moeda estrangeira",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": 1089,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -6,
+    "notes": "DL industrial perto de zero. A dívida em R$ do Moneo é casada com a carteira (repasses BNDES), então +100 bp de CDI ≈ −R$ 5–10 mi no lucro. O canal relevante do juro é a demanda: ônibus são financiados por Finame/BNDES, e o frotista adia a renovação com Selic de 13,75%."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.2033,
+    "ebitda_margin_avg_5y": 0.1327,
+    "roe_avg_5y": 0.2308,
+    "payout_avg_5y": 0.4716,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.0296,
+      "ebitda_margin": 0.137,
+      "net_income_mn": 272.4,
+      "net_debt_ebitda": 1.26
+    },
+    "notes": "Receita 2020–25 +20% a.a.: recuperação pós-pandemia (2022 +55%), preço e Caminho da Escola. Em 2025 desacelerou para +5,4% e no 1S26, +1,2%. Projetamos +1,7% em 2026, +6% em 2027–28 e +5% no terminal, com câmbio mais fraco ajudando as exportações e as operações no exterior (~40% da receita, estimativa). Margem EBITDA sem equivalência: 2023 14,8%, 2024 18,0%, 2025 17,6% (3T25 19,3%), 1S26 13,8% (1T26 13,9%; 2T26 13,7%). Mix mais leve (micros), contratos a preço fixo, e México/Argentina fracos (teleconferência do 2T26). Projetamos 14,2% em 2026 e 14,5–15,0% depois, entre a média de 5 anos (13,5%) e o pico de 2024–25. A queda de margem de 2026 é o que derrubou a ação 40% em 12 meses antes da eleição. ROE 2024–25 de 31%; projetado ~22–24%. Payout em 5 anos de 47% (2025: 115%, com o extraordinário antes da tributação de dividendos); projetamos 55%. IR efetivo LTM 19%; usamos 20%."
+  },
+  "guidance": "Sem guidance numérico. Na teleconferência do 2T26 (05/08/2026), a empresa citou receita +3%, micro-ônibus fortes, rentabilidade menor por mix e contratos a preço fixo, Austrália forte e Argentina/México fracos; perspectiva dependente de renovação de frota, homologações e macro. No Investor Day (09/09/2026), destacou automação, digital, lançamentos e contratos governamentais. Resultado do 3T26 em 03/11/2026.",
+  "dividend_policy": "Estatuto: dividendo mínimo de 25% do lucro ajustado (critério não verificado). Na prática, JCP trimestral mais dividendos complementares; payout de 41% (2023), 55% (2024) e 115% (2025). Em dez/2025 houve R$ 0,69 + R$ 0,09 de JCP (data-com 24/11/2025), antecipando a tributação de dividendos, e bonificação de 10% em ações. Em 2026: JCP de R$ 0,085 (data-com 24/04/2026, pago em 08/05) e dividendo de R$ 0,13 (data-com 25/08/2026, pago em 09/09), este tratado como saída de caixa pós-balanço.",
+  "election_impact": "POMO4 caiu −14% em 26/10 (de R$ 4,77 para R$ 4,10 às 13h02) e ainda −6% em 28/10 (R$ 3,85). A queda de 2026 até a eleição (−40% em 12 meses) foi micro: margem EBITDA de 17,6% para 13,8%. A queda da eleição é macro: Ke, e juros/Finame que adiam a renovação de frota no Brasil. O câmbio, ao contrário, ajuda: exportações e operações no exterior são ~40% da receita (estimativa) e o real a R$ 5,45 contra R$ 5,15 nos 9M26 devolve competitividade. Num 4º mandato Lula, os programas públicos de compra de ônibus (Caminho da Escola, PAC/BNDES de ônibus elétricos) tendem a continuar, mas sob restrição fiscal. A DL industrial é quase zero; a companhia não sofre pelo canal da dívida.",
+  "summary": "Líder em carrocerias de ônibus, com balanço industrial sem dívida líquida e ROE acima de 25%. A ação já vinha caindo 40% pela queda de margem em 2026 (mix, contratos a preço fixo, México/Argentina) e a eleição levou o P/L a ~4–5x. A tese é a margem voltar para ~15% com câmbio e volume; o risco é a demanda doméstica com Selic alta.",
+  "thesis": [
+    "Preço: ~4,9x o LL 2027E e ~3,8x EV/EBITDA 2027E (DL industrial ~zero), contra P/L mediana de 5 anos de 7,4x.",
+    "Câmbio: exportações e operações no exterior são ~40% da receita (estimativa). O real a R$ 5,45 em 2027, contra R$ 5,15 nos 9M26, soma receita em R$ e devolve competitividade à exportação.",
+    "Margem já no vale: 13,8% no 1S26 contra 17,6% em 2025. A premissa de 14,5–15% não exige voltar ao pico.",
+    "Dividendos: payout histórico de ~50% e ROE de 25–30%; o dividend yield passa de 10% ao preço atual."
+  ],
+  "risks": [
+    "Demanda brasileira: ônibus dependem de Finame/BNDES e de compras públicas. Selic alta e aperto fiscal num 4º mandato podem derrubar volumes.",
+    "Margem: contratos a preço fixo e mix de micros podem manter a margem perto de 13%; aço e componentes ficam mais caros com o real fraco.",
+    "Operações externas: Argentina (macro) e México (demanda e tarifas) fracos.",
+    "Dados não verificados: carteira do Banco Moneo (estimada em R$ 1,7 bi) e participação na NFI a mercado."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (03/11/2026)",
+    "Proventos do 2S26 (nov–dez/2026)",
+    "Licitações do Caminho da Escola e programa de ônibus elétricos (BNDES) em 2027",
+    "Câmbio a R$ 5,3–5,5 nas exportações do 4T26–1T27"
+  ],
+  "key_data": [
+    {
+      "label": "Margem EBITDA ex-equivalência 1S26",
+      "value": "13,8%",
+      "context": "17,6% em 2025; 19,3% no 3T25"
+    },
+    {
+      "label": "Receita 2T26",
+      "value": "R$ 2.373 mi",
+      "context": "+3,0% a/a"
+    },
+    {
+      "label": "DL industrial (estimada)",
+      "value": "~R$ 0,2–0,3 bi",
+      "context": "DL CVM de R$ 1,88 bi inclui o funding do Banco Moneo"
+    },
+    {
+      "label": "P/L LTM na foto de 26/10",
+      "value": "4,2x",
+      "context": "mediana de 5 anos 7,4x"
+    },
+    {
+      "label": "Consenso",
+      "value": "preço-alvo R$ 7,23",
+      "context": "10 analistas, compra (StockAnalysis, 28/10/2026)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "StockAnalysis — POMO4: cotação, consenso, resumo das teleconferências 2T26 e Investor Day 2026",
+      "url": "https://stockanalysis.com/quote/bvmf/POMO4/"
+    },
+    {
+      "title": "StockAnalysis — POMO4 transcripts (2T26, 05/08/2026; Investor Day, 09/09/2026)",
+      "url": "https://stockanalysis.com/quote/bvmf/POMO4/transcripts/"
+    },
+    {
+      "title": "Investidor10 — POMO4 indicadores (28/10/2026)",
+      "url": "https://investidor10.com.br/acoes/pomo4/"
+    },
+    {
+      "title": "BCB — SGS 3698, PTAX média mensal (deck de câmbio)",
+      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.3698/dados?formato=json"
+    },
+    {
+      "title": "B3 — proventos oficiais (data/market/POMO4.json)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — ITR 2T26 padronizado (data/hist/POMO4.json)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "baixa — o release do 2T26 não foi lido na íntegra (busca na web esgotada). A DL industrial depende da carteira do Banco Moneo estimada (R$ 1,7 bi), a participação na NFI está a valor contábil e o caso depende de um único driver (a recuperação da margem)."
+}

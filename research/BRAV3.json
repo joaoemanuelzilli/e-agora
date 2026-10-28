@@ -1,0 +1,260 @@
+{
+ "ticker": "BRAV3",
+ "name": "Brava Energia S.A.",
+ "sector": "Petróleo e gás / E&P independente (offshore Atlanta e Papa-Terra; onshore Potiguar e Recôncavo; refinaria Clara Camarão)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "BRAV3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override. 464,5 mi de ações (B3 = CVM; tesouraria desprezível). DL CVM R$ 11.678 mi = empréstimos R$ 4,1 bi + debêntures R$ 11,0 bi + arrendamentos R$ 3,9 bi (FPSO/afretamentos, em 'outras obrigações') − caixa e aplicações R$ 7,3 bi (inclui R$ 2,7 bi de aplicações de LP). COLUNA 2026 = 2S26 anualizado. Receita trimestral calibrada no 1T26 e 2T26 (CVM): R$ 1.014 mi de parcela pouco sensível ao Brent (gás, refino de terceiros, serviços; +4% a.a.) + 4,97 × Brent em R$/bbl (≈ 55 kbpd de óleo com preço cheio de Brent) — 3T26 ≈ R$ 3,46 bi (Brent US$ 96; 5,14) e 4T26 ≈ R$ 3,91 bi (US$ 110; 5,30). Volume: +3% em 2027 (novos poços em Atlanta) e −2% a.a. depois (declínio de campos maduros parcialmente compensado pelo capex de ~16% da receita). Receita e margem estão SEM hedge: as perdas esperadas com derivativos estão como dívida (passivo marcado a mercado de R$ 529 mi em 30/06)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.2691,
+   0.0133,
+   -0.1002,
+   -0.0448,
+   -0.0295
+  ],
+  "ebitda_margin": [
+   0.55,
+   0.5,
+   0.45,
+   0.43,
+   0.41
+  ],
+  "da_pct_revenue": [
+   0.21,
+   0.215,
+   0.24,
+   0.25,
+   0.26
+  ],
+  "capex_pct_revenue": [
+   0.16,
+   0.16,
+   0.16,
+   0.16,
+   0.16
+  ],
+  "nwc_pct_revenue": 0.05,
+  "cost_of_net_debt": [
+   0.13,
+   0.13,
+   0.13,
+   0.13,
+   0.13
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.2,
+   0.22,
+   0.24,
+   0.25,
+   0.25
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.15,
+   0.25,
+   0.4,
+   0.5,
+   0.6
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.035,
+  "roic": 0.12,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.13,
+  "target_debt_weight": 0.45,
+  "notes": "Dívida mista: debêntures em R$ (R$ 11,0 bi; CDI/IPCA+, parte com swap), bonds/bancos em US$ (~10% + depreciação do deck ~1,8%) e arrendamentos (~9%); caixa de R$ 7,3 bi rende ~CDI. Juros pagos em 12m R$ 1,68 bi sobre ~R$ 19 bi brutos (8,8% caixa, sem variação cambial). Kd marginal 13%, coerente com DI 2027–30 de 14,5–15,2% menos a parcela em US$. wd = DL/(DL + valor de mercado pré-eleição R$ 10,1 bi) = 54%, limitado a 45% pela desalavancagem projetada."
+ },
+ "adjustments": {
+  "other_debt_like": 3499,
+  "non_operating_assets": 0,
+  "minority_value": 0,
+  "notes": "Balanço 30/06/2026 (CVM): valores a pagar por aquisições R$ 1.038 mi (651 CP + 387 LP; parcelas de Potiguar/Recôncavo/Papa-Terra) + derivativos passivos R$ 529 mi (hedge de óleo marcado a mercado com Brent alto) + adiantamento de clientes R$ 422 mi (pré-pagamento de óleo, funciona como dívida) + provisão para abandono (o capex projetado não inclui descomissionamento): parcela de 12 meses R$ 470 mi × (1 − 34%) = R$ 310 mi + parcela de longo prazo R$ 3.522 mi × (1 − 34%) × 50% = R$ 1.162 mi (regra comum às E&Ps do estudo: o valor contábil é descontado a taxa bem menor que o WACC de ~18–20%; 50% aproxima o valor presente de gastos de 2028–45) + contingências R$ 38 mi = R$ 3.499 mi. Dividendo de R$ 57 mi (data-com 20/04/2026) já pago em 30/04. Sem minoritários."
+ },
+ "target_multiples": {
+  "pe": 4.0,
+  "ev_ebitda": 2.8,
+  "pbv": 0.7,
+  "rationale": "EV/EBITDA 2,8x e P/L 4,0x sobre 2027E (Brent US$ 95 na curva, pico do ciclo). Histórico da Brava desde a fusão (set/24): EV/EBITDA LTM mediano 4,5x (3,4–6,8x), P/VP 0,63–1,0x; P/L LTM sem significado (lucro distorcido por hedge e câmbio). Desconto a PRIO (3,0x/4,5x) por lifting cost maior (US$ 14,9/boe em 2025 sem afretamento), alavancagem de 2x, perdas de hedge e ativos onshore maduros com abandono relevante. Ao preço de 26/10 o mercado paga ~2,8x o EBITDA 2027E do modelo (sem os itens debt-like)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.35,
+   "revenue_growth_shift": -0.06,
+   "ebitda_margin_shift": -0.06,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.02,
+   "narrative": "Imposto de exportação vira permanente, Brent volta a US$ 65–70 já em 2027, falhas em Atlanta/Papa-Terra e refinanciamento caro (DI ~15%) travam a desalavancagem."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.04,
+   "ebitda_margin_shift": 0.03,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Brent acima de US$ 85 até 2028 com o hedge vencendo, Atlanta no platô e venda de ativos onshore reduz dívida e abandono."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.07,
+  "ebitda_margin_sd": 0.04,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.02
+ },
+ "debt_profile": {
+  "gross_debt_mn": 18985,
+  "pct_floating_cdi": null,
+  "avg_cost": "não verificado no material lido (debêntures R$ CDI/IPCA+ com swaps parciais; bonds US$; arrendamento de FPSO); juros pagos 12m R$ 1,68 bi",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 747,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -40,
+  "notes": "Estimativa: debêntures indexadas a CDI (parcela não verificada) menos caixa de R$ 7,3 bi em CDI — exposição líquida pequena. Sensibilidade maior: US$ 1/bbl no Brent ≈ R$ 110 mi de receita/ano; hedge de óleo limita o ganho no curto prazo (volumes/strikes não verificados)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 1.244,
+  "ebitda_margin_avg_5y": 0.443,
+  "roe_avg_5y": 0.026,
+  "payout_avg_5y": 0.02,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.145,
+   "ebitda_margin": 0.538,
+   "net_income_mn": 871,
+   "net_debt_ebitda": 2.05
+  },
+  "notes": "Histórico distorcido pela fusão 3R + Enauta (2024) e pela entrada do FPSO Atlanta (2025): receita 2025 R$ 11,6 bi, margem EBITDA 40% (Brent US$ 69; lifting US$ 14,9/boe), lucro R$ 1,4 bi; 2024 teve prejuízo de R$ 910 mi (variação cambial e hedge). 1S26: receita R$ 6,7 bi, EBITDA R$ 3,6 bi (54%), lucro R$ 521 mi (resultado financeiro −R$ 1,4 bi com hedge e juros). Produção 2025: 81 kboe/d (RI); assumimos ~85–88 kboe/d em 2026–27 e declínio de 2% a.a. Margem 55% no 2S26 (Brent US$ 103) caindo a 41% em 2030 (US$ 71, ~nível de 2025). Payout baixo enquanto DL/EBITDA > 1,5x."
+ },
+ "guidance": "Não verificado nesta rodada (sites de RI e notícias não acessíveis; orçamento de busca esgotado). Referências públicas: produção de 81 kboe/d e EBITDA ajustado de US$ 806 mi em 2025, caixa de US$ 1,09 bi no fim de 2025 (RI). Premissas do modelo: produção ~85 kboe/d (2026) e ~88 kboe/d (2027), capex ~16% da receita (~R$ 2,4 bi/ano), sem desinvestimentos.",
+ "dividend_policy": "Mínimo estatutário (25% do lucro ajustado). Pagou R$ 57 mi (R$ 0,1236/ação, data-com 20/04/2026, pago em 30/04) referente a 2025 e R$ 94,5 mi em 2024; sem recompras relevantes. Modelo: payout de 15–25% até 2027 (desalavancagem) subindo a 60% em 2030.",
+ "election_impact": "BRAV3 caiu 8,7% em 26/10 (de R$ 21,69 para R$ 19,80), menos que o Ibovespa, porque vende óleo em dólar e o Brent passou de US$ 110. O que piora de fato: (i) Ke e DI longo (+300 bp) pesam mais numa empresa com DL de 2x EBITDA e R$ 11 bi em debêntures; (ii) o imposto de exportação de 12% (desde mar/26) atinge o óleo de Atlanta e Papa-Terra exportado e pode virar permanente num 4º mandato; (iii) hedge de óleo gera perdas com Brent alto (passivo de R$ 529 mi em 30/06). O real fraco ajuda a receita (R$ 0,10 no dólar ≈ +1,6%), mas também infla a dívida em US$.",
+ "summary": "Brava é a E&P independente mais alavancada da cobertura (DL/EBITDA 2,0x, mais R$ 3,5 bi de itens debt-like: aquisições a pagar, hedge, pré-pagamento e abandono) e a mais dependente de execução em Atlanta e de campos maduros onshore. Ganhou com o Brent de guerra (margem EBITDA de 54% no 1S26), mas parte do ganho fica no hedge e no imposto de exportação. O valor é muito sensível ao Brent da curva e ao custo de refinanciar a dívida.",
+ "thesis": [
+  "Margem EBITDA CVM de 54% no 1S26 (40% em 2025) com Brent médio de US$ 92; EBITDA UDM R$ 5,7 bi.",
+  "Lucro de R$ 871 mi no 2T26 após prejuízo de R$ 350 mi no 1T26 (hedge e câmbio): o resultado contábil oscila com derivativos, o caixa operacional é mais estável (FCO UDM R$ 4,25 bi).",
+  "Capex caindo para ~R$ 2,4 bi/ano depois do ciclo de Atlanta (R$ 3,0 bi em 2024–25) libera caixa para desalavancar.",
+  "Contrato de 5 anos (out/26–2030) para comprar ≥ 50% do óleo Potiguar da PetroReconcavo garante carga da refinaria Clara Camarão."
+ ],
+ "risks": [
+  "Alavancagem (DL/EBITDA 2,0x) e refinanciamento com DI de 14,5–15% e spread de crédito pós-eleição.",
+  "Imposto de exportação de 12% sobre óleo bruto renovável pela Gecex; risco de virar permanente.",
+  "Hedge: perdas de derivativos se o Brent seguir acima de US$ 100 (volumes e preços não verificados).",
+  "Execução operacional em Atlanta (FPSO afretado) e Papa-Terra; declínio e abandono dos campos onshore (provisão de R$ 4,0 bi).",
+  "Dados de produção 2026, guidance e perfil de dívida não verificados nesta rodada — premissas estimadas a partir do CVM."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (início de nov/2026)",
+  "Renovação ou fim do imposto de exportação (início de nov/2026)",
+  "Refinanciamento/alongamento de dívida e eventual venda de ativos onshore"
+ ],
+ "key_data": [
+  {
+   "label": "DL/EBITDA UDM (CVM)",
+   "value": "2,05x",
+   "context": "DL R$ 11,7 bi (inclui R$ 3,9 bi de arrendamentos) + R$ 3,5 bi debt-like"
+  },
+  {
+   "label": "Margem EBITDA 1S26",
+   "value": "54%",
+   "context": "40% em 2025 com Brent US$ 69"
+  },
+  {
+   "label": "Provisão de abandono",
+   "value": "R$ 4,0 bi",
+   "context": "R$ 1,5 bi tratados como dívida (líquido de IR; LP a 50%)"
+  },
+  {
+   "label": "Derivativos passivos 30/06",
+   "value": "R$ 529 mi",
+   "context": "hedge de óleo com Brent alto"
+  },
+  {
+   "label": "Deck Brent (US$/bbl)",
+   "value": "2S26 103 · 27 95 · 28 81 · 29 75 · 30 71",
+   "context": "curva ICE/NYMEX de 15–28/10/2026"
+  },
+  {
+   "label": "Deck câmbio (R$/US$)",
+   "value": "2S26 5,22 · 27 5,45 · 28 5,55 · 29 5,65 · 30 5,75",
+   "context": "dólar futuro 5,38 + ~1,8% a.a."
+  }
+ ],
+ "sources": [
+  {
+   "title": "Brava Energia RI — destaques 2025 (81 kboe/d; EBITDA ajustado US$ 806 mi; caixa US$ 1,09 bi)",
+   "url": "https://ri.bravaenergia.com/"
+  },
+  {
+   "title": "PetroReconcavo — contrato de venda de óleo de longo prazo com a Brava (06/08/2026)",
+   "url": "https://ri.petroreconcavo.com.br/fatos-relevantes-comunicados-e-avisos"
+  },
+  {
+   "title": "IstoÉ Dinheiro — MP 1.340/2026: imposto de exportação de 12% sobre óleo bruto",
+   "url": "https://istoedinheiro.com.br/dou-extra-subvencao-a-produtor-de-diesel-e-de-r-032-litro-aliquota-em-exportacao-e-de-50-2"
+  },
+  {
+   "title": "Mayer Brown — Resolução Gecex 957/2026 (prorrogação do imposto de 12%)",
+   "url": "https://www.mayerbrown.com/pt/insights/publications/2026/09/gecex-resolution-no-9572026-extension-of-the-12-export-tax-rate-on-crude-petroleum-oils-and-bituminous-minerals"
+  },
+  {
+   "title": "EIA — STEO outubro/2026",
+   "url": "https://www.eia.gov/outlooks/steo/archives/oct26.pdf"
+  },
+  {
+   "title": "Baratelli Institute — curva futura Brent (CME, 15/10/2026)",
+   "url": "https://baratelliinstitute.com/oil-futures-curve"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/BRAV3.json; balanço 30/06/2026)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — proventos oficiais BRAV3",
+   "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+  }
+ ],
+ "confidence": "baixa — premissas operacionais (produção 2026–27, hedge, custo da dívida, guidance) não puderam ser verificadas no release; valor depende de um único driver (Brent) com alavancagem alta e R$ 3,5 bi de passivos debt-like; o equity é fino (EV justo pouco acima de DL + debt-like), então pequenas mudanças de premissa movem muito o valor por ação."
+}

@@ -197,6 +197,7 @@ def main():
     cov = load(ROOT / "research" / "_coverage.json")["coverage"]
     mk = load(ROOT / "data" / "market" / "_market.json")
     quotes = load(ROOT / "data" / "market" / "quotes.json") or {}
+    val_label = (load(ROOT / "data" / "market" / "quotes_val.json") or {}).get("label")
     divs = load(ROOT / "data" / "market" / "dividends.json") or {"empresas": []}
     div_by = {e["ticker"]: e for e in divs.get("empresas", [])}
     rows = []
@@ -231,7 +232,7 @@ def main():
             "has_model": bool(m and m.get("fair_value") is not None), "has_research": rs is not None,
             "price_ref": val.get("price") or (quotes.get(tk) or {}).get("price"),
             "prev_close": (quotes.get(tk) or {}).get("prev_close") or c.get("prev_close_2310"),
-            "chg_snapshot": (quotes.get(tk) or {}).get("chg_pct"),
+            "chg_snapshot": ((quotes.get(tk) or {}).get("chg_pct") / 100) if (quotes.get(tk) or {}).get("chg_pct") is not None else None,
             "fair_value": r(val.get("fair_value")), "upside": r(val.get("upside")),
             "irr_implied": r(val.get("irr_implied")), "irr_3y": r(val.get("irr_3y")),
             "dy": [r(x) for x in (val.get("dy") or [])],
@@ -296,6 +297,7 @@ def main():
     ranked = sorted([x for x in rows if x["score"] is not None], key=lambda x: -x["score"])
     for i, x in enumerate(ranked):
         x["rank"] = i + 1
+        x["rank_of"] = len(ranked)
     for doc in docs:  # row é o mesmo objeto: já contém escores e ranking
         json.dump(doc, open(APP / "companies" / f"{doc['row']['ticker']}.json", "w"), ensure_ascii=False, separators=(",", ":"))
     # oportunidades: TIR de dono >= 20%, P(valor > preço) >= 45% no Monte Carlo, fora da zona de risco do
@@ -319,7 +321,8 @@ def main():
     reported = sorted(p.stem for p in (ROOT / "research" / "reports").glob("*.json") if not p.stem.startswith("_"))
     opp_set = {x["ticker"] for x in opp}
     by_tk = {x["ticker"]: x for x in rows}
-    dropped = [{"ticker": t, "reasons": fails(by_tk[t])} for t in reported if t not in opp_set and t in by_tk]
+    dropped = [{"ticker": t, "reasons": fails(by_tk[t]) or ["passa na regra, mas ficou fora das 8 primeiras pelo escore multifator"]}
+               for t in reported if t not in opp_set and t in by_tk]
     # macro ao vivo no build (o app também atualiza em tempo real)
     def sgs(code, n=1):
         d = get_json(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.{code}/dados/ultimos/{n}?formato=json")
@@ -333,7 +336,9 @@ def main():
     overview = {"generated_at": datetime.now().isoformat(timespec="seconds"), "ke": KE, "valuation_date": "2026-10-26",
                 "companies": rows, "opportunities": [x["ticker"] for x in opp],
                 "reports": reported, "opportunities_dropped": dropped,
-                "opportunity_rule": "TIR de dono ≥ 20%, P(valor justo > preço) ≥ 45% no Monte Carlo, fora da zona de risco do Altman Z″ e confiança do analista diferente de baixa; ordenadas pelo escore multifator. Seleção com os preços das 13h02 de 26/10/2026, depois da revisão independente das premissas.",
+                "valuation_label": val_label,
+                "opportunity_rule": "TIR de dono ≥ 20%, P(valor justo > preço) ≥ 45% no Monte Carlo, fora da zona de risco do Altman Z″ e confiança do analista diferente de baixa; as 8 primeiras pelo escore multifator. "
+                                    + (f"Seleção com o {val_label.lower()}." if val_label else "Seleção com os preços das 13h02 de 26/10/2026, depois da revisão independente das premissas."),
                 "market": {k: mk.get(k) for k in ("ibov_today", "ibov_daily_return_stats", "worst_days", "crash_forward_stats", "crash_threshold",
                                                    "elections", "drawdowns_25", "ibov_weekly", "ibov_return_hist", "indices_last", "crash_paths", "election_paths")},
                 "xsec": mk["xsec"], "sectors": mk["sectors"], "sector_stats": sector_stats, "macro": macro,

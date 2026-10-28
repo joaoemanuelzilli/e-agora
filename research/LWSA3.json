@@ -1,0 +1,255 @@
+{
+ "ticker": "LWSA3",
+ "name": "LWSA S.A. (Locaweb)",
+ "sector": "Tecnologia / software para PMEs: Commerce (Tray, Bling, Vindi, Melhor Envio, Wake) e BeOnline/SaaS (hospedagem, e-mail, cloud)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "LWSA3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 1414.0
+  },
+  "notes": "revenue_2025 = receita 2025 comparável, sem Squid (vendida em set/25, com perda de R$ 415,9 mi registrada no 3T25) e Nextios (vendida em dez/25): CVM R$ 1.488,5 mi − ~R$ 75 mi (diferença entre reportado e comparável: 2T25 370,8 vs 346,9; 6M25 719,7 vs 676,7; 2S25 estimado em ~R$ 32 mi) = R$ 1.414 mi (estimativa própria; 6M26 cresceu 9,1% sobre a base comparável). O EBITDA CVM de 2025 (−R$ 134,7 mi) e o LTM (−R$ 109,7 mi) incluem a perda na venda da Squid; o lucro de 2025 (−R$ 225,4 mi) também. MARGEM NO CONCEITO DO MODELO: EBITDA = EBITDA ajustado da companhia − despesa de antecipação de recebíveis (custo operacional do negócio de pagamentos, 0,44% do TPV; desde o 2T26 a própria contabilidade a lança no custo dos serviços) − remuneração em ações (custo real): 2T26 = 102,5 − 10,4 − 5,0 = R$ 87,1 mi (23,2%); 2T25 comparável ≈ 18,1%; 2S25 ≈ 21%. O EBITDA CVM do 2T26 (R$ 76,2 mi) está deprimido porque o reclasse do semestre inteiro (R$ 21,3 mi) caiu no 2T26. Atenção ao pipeline: a linha 2.01.05.02.04 de R$ 109,7 mi é 'Pessoal, encargos e benefícios sociais' (o rótulo antigo de 'derivativos' foi reaproveitado); derivativos de verdade somam R$ 3,2 mi. A dívida bruta CVM de R$ 71,9 mi é só arrendamento (sem dívida bancária) e já está na DL-base de −R$ 332,7 mi (arrendamentos 71,9 − caixa 314,5 − aplicações 90,1)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.08,
+   0.085,
+   0.09,
+   0.085,
+   0.08
+  ],
+  "ebitda_margin": [
+   0.235,
+   0.24,
+   0.245,
+   0.25,
+   0.25
+  ],
+  "da_pct_revenue": [
+   0.095,
+   0.09,
+   0.088,
+   0.086,
+   0.085
+  ],
+  "capex_pct_revenue": [
+   0.09,
+   0.09,
+   0.09,
+   0.09,
+   0.09
+  ],
+  "nwc_pct_revenue": 0.02,
+  "cost_of_net_debt": [
+   0.11,
+   0.115,
+   0.115,
+   0.11,
+   0.11
+  ],
+  "other_financial": [
+   -20,
+   -20,
+   -20,
+   -20,
+   -20
+  ],
+  "tax_rate": [
+   0.34,
+   0.34,
+   0.34,
+   0.34,
+   0.34
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.1,
+   0.9,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.055,
+  "roic": 0.25,
+  "roe": 0.25
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 161.9,
+  "non_operating_assets": 230,
+  "minority_value": null,
+  "notes": "other_debt_like = R$ 161,9 mi: (a) R$ 90,1 mi de 'aplicações financeiras' que são saldos de moeda eletrônica de usuários da Pagcerto (contas pré-pagas, contrapartida de 'recebimentos a repassar'; o release já os exclui do caixa de R$ 314,5 mi); (b) earn-outs de aquisições de R$ 31,6 mi (19,8 CP + 11,8 LP; 63% a pagar em 12 meses); (c) impostos parcelados de R$ 11,7 mi; (d) derivativos de R$ 3,2 mi; (e) dividendo complementar de R$ 0,0427/ação ≈ R$ 23,4 mi (data-com 18/08/26, pago 31/08/26 — declarado depois do balanço, não é do comprador de hoje); (f) contingências de R$ 2,9 mi × 0,66. Caixa líquido efetivo ≈ R$ 171 mi. non_operating_assets = R$ 230 mi: valor presente do benefício fiscal ainda não usado — IR/CS diferido ativo líquido de R$ 241 mi (prejuízo fiscal de R$ 193 mi, remensuração de earn-out de R$ 126 mi, mais-valias de R$ 30 mi, menos DTL de ágio de R$ 116 mi) + amortização fiscal remanescente do ágio das empresas incorporadas (Tray, Bling, Etus em ago/24; KingHost, Melhor Envio, Ideris em fev/25), ~R$ 340 mi nominais consumidos em ~4 anos (6M26: IR corrente de R$ 0,9 mi contra R$ 40,6 mi contábeis), descontados a ~24%. Por isso a alíquota do modelo é a contábil (34%) e o caixa do benefício entra aqui, sem contar duas vezes. 'Recebimentos a repassar' (R$ 697,6 mi) e contas a receber (R$ 804,8 mi) são float operacional do negócio de pagamentos (capital de giro)."
+ },
+ "target_multiples": {
+  "pe": 12.0,
+  "ev_ebitda": 6.5,
+  "pbv": 1.0,
+  "rationale": "P/L 12x sobre o LPA contábil 2027E (IR de 34%; o lucro ajustado da companhia exclui IR diferido e amortização de PPA e fica ~40–50% acima) e EV/EBITDA de 6,5x sobre o EBITDA 2027E no conceito do modelo (após antecipação de recebíveis e remuneração em ações). Pré-eleição (R$ 5,34 × 549,2 mi = R$ 2,93 bi): EV ≈ R$ 2,76 bi (− caixa líquido efetivo de R$ 171 mi) = 8,7x o EBITDA LTM no nosso conceito (~R$ 317 mi) e 7,3x o EBITDA ajustado LTM da empresa (R$ 375,8 mi); P/L ~16x o nosso lucro contábil 2027E. multiples_history: EV/EBITDA mediano de 13,4x em 2020–25 (inflado pela bolha de 2020–21), 4,7x (fev/25) a 7,4x (ago/25) no ciclo recente; P/L histórico quase sempre não significativo. Pares: TOTVS 17x/11x no estudo (qualidade e escala maiores). Usamos múltiplos abaixo do pré-eleição porque os de mercado embutem Ke de ~13–15%. P/VP 1,0x é referência (PL dominado por ágio)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Varejo online fraco com juros de 15% e PMEs migrando para marketplaces (Mercado Livre, Shopee, TikTok Shop) e plataformas globais (Shopify, Nuvemshop); BeOnline encolhe 5% a.a., a antecipação de recebíveis encarece com o CDI e a margem volta a ~21%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.025,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Commerce sustenta 13–15% (assinaturas de plataforma e ecossistema com IA/agentes) e a eficiência continua: margem no conceito do modelo de ~27% (ajustada ~31%) em 2030, com retorno de caixa via recompras."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.006
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0.0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "Sem dívida bancária; arrendamentos IFRS-16 de R$ 71,9 mi (juros de R$ 3,4 mi no 6M26)",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 20,
+  "covenant_nd_ebitda": null,
+  "notes": "Release 2T26: dívida bancária zero, caixa de R$ 314,5 mi, arrendamentos de R$ 72 mi e earn-outs de R$ 31,5 mi (63% em 12 meses). As antecipações a clientes do negócio de pagamentos são financiadas com capital de terceiros (cessão de recebíveis), sem dívida no balanço; o custo (R$ 10,4 mi no 2T26, 0,44% do TPV) varia com o CDI e está na margem do modelo. Nos últimos 24 meses os earn-outs consumiram ~R$ 790 mi (2024: R$ 561 mi; 2025: R$ 228 mi); agora são residuais."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -1,
+  "notes": "Efeito líquido pequeno e ambíguo (cálculo próprio): caixa livre de ~R$ 315 mi rende +R$ 3,1 mi antes de IR por +1 p.p., mas a antecipação de recebíveis (R$ ~42 mi/ano, ~R$ 9,4 bi de TPV/ano) encarece cerca de R$ 4–5 mi se o repasse aos clientes atrasar; somados, ≈ −R$ 1 mi no lucro. O efeito relevante dos juros é indireto: PMEs e varejo online fracos (ICVA real negativo em abr–jun/26) e Ke/duration (ação de crescimento)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.25,
+  "ebitda_margin_avg_5y": 0.054,
+  "roe_avg_5y": -0.017,
+  "payout_avg_5y": 0.6,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.082,
+   "ebitda_margin": 0.232,
+   "net_income_mn": 34.3,
+   "net_debt_ebitda": -0.97
+  },
+  "notes": "CAGR 2020–25 de 25% é quase todo aquisição (Tray, Bling, Vindi, Melhor Envio, Social Miner etc., 2020–22); 3 anos = 9,45%; orgânico recente 8–9% (6M26 +9,1% comparável; Commerce +12,4% e BeOnline −2,0% no 2T26). Projetamos 8% (2S26) e 8–9% em 2027–30, média 8,4%. Margem EBITDA CVM: 12,0% (2021), 13,1%, 15,8%, 17,8% (2024), −9,1% (2025, perda na venda da Squid); média 2021–25 de 5,4% (com 2025 contábil). No conceito do modelo: ~18% (2T25 comparável) → 21% (2S25) → 23,2% (2T26); a ajustada da companhia foi de 21,9% → 27,3% (24 trimestres de recorde). A coluna 2026 (23,5%) é o run-rate do 2S26 (4T forte em e-commerce); 2027–30 de 24% → 25% (ajustada da empresa ~28–29%), sem extrapolar o ganho de +5 p.p. do último ano. ROE médio 2021–25 de −1,7% (lucros de −15,8; 28,3; −73,7; 42,2; −225,4 sobre PL de ~R$ 2,5–3,0 bi dominado por ágio e intangíveis); projetado 6–10%. Payout: proventos + recompras sobre o lucro (2024: R$ 193 mi distribuídos contra lucro de R$ 42 mi; 2025: R$ 77 mi; 1S26: R$ 149 mi com a redução de capital) — no modelo 90–100% do lucro contábil, porque o FCFE ≈ lucro (cash tax ~0) e a empresa devolve o excedente. D&A 9,5% → 8,5% (PPA de R$ 10,8 mi no 6M26 em queda); capex 9% (desenvolvimento R$ 49 mi + imobilizado R$ 9,6 mi = 7,9% no 6M26, mais direito de uso ~1%). Capital de giro 2% (float de pagamentos ≈ recebíveis). Rendimento do caixa de 11–11,5% (≈ CDI × (1 − IR); rendimento contábil do 6M26 abaixo do CDI) e other_financial de −R$ 20 mi/ano (tarifas bancárias, IOF, atualização de earn-outs). Alíquota contábil de 34% (6M26: 42% com IR diferido); o benefício em caixa está em non_operating_assets."
+ },
+ "guidance": "Sem guidance numérico. Release 2T26 (13/08/26): foco em crescimento de Commerce (assinaturas de plataforma +14%), eficiência (margem ajustada recorde de 27,3%), renovação do portfólio de BeOnline (descontinuação de e-mail marketing, gestão de redes sociais e PABX; crescimento de VPS e Locaweb Cloud) e produtos de IA (orquestrador de agentes). Capex 'dentro do patamar previsto'. 3T26 em 12/11/2026 (call em 13/11).",
+ "dividend_policy": "Estatuto: dividendo mínimo obrigatório de 25% do lucro ajustado (percentual padrão, não verificado no estatuto). Prática: retorno de capital por recompras (4º programa, até 38,8 mi de ações, vigente; R$ 153 mi em 2024, R$ 48 mi em 2025, R$ 8,7 mi no 1T26), redução de capital (R$ 140 mi, R$ 0,2547/ação, paga em 20/02/26) e dividendos (R$ 40 mi em 2024, R$ 28,6 mi em 2025; complementar de R$ 0,0427/ação com data-com 18/08/26, pago 31/08/26, tratado como debt-like). 19,3 mi de ações em tesouraria (3,4%) em jun/26; a B3 já mostra 549,98 mi de ações emitidas (cancelamento posterior). Modelo: payout de 10% no stub de 2026 e 90–100% do lucro contábil em 2027–30 (proventos + recompras).",
+ "election_impact": "Queda de ~31% no dia (R$ 5,34 → R$ 3,70 às 13h02 de 26/10): ação de crescimento/duration com beta alto (1,4; 28 dias de crash no histórico) e base de clientes PME exposta ao varejo online. Canais que mudam o valor: (i) consumo e crédito das PMEs com Selic de 13,75% e DI de 15% (o ICVA já caía em termos reais no 2T26; o GMV do ecossistema ainda cresceu 15%); (ii) antecipação de recebíveis indexada ao CDI (custo de ~0,44% do TPV); (iii) taxa de desconto. Contrapontos: sem dívida, caixa líquido que rende mais, receita majoritariamente recorrente (assinaturas >50% de Commerce) e real fraco não afeta custos relevantes. O dano fundamental é pequeno (crescimento de 1–2 p.p. a menos); a queda é sobretudo de prêmio de risco.",
+ "summary": "Plataforma de software e pagamentos para PMEs (Tray, Bling, Vindi, Melhor Envio) com hospedagem legada (BeOnline), sem dívida, caixa líquido e geração de caixa forte, que depois de vender Squid e Nextios entrega margem ajustada recorde (27,3% no 2T26) e Commerce crescendo 12%. A queda de 31% em 26/10 é prêmio de risco de small cap de tecnologia; o valor a Ke de 25% é limitado pelo crescimento orgânico de 8–9% e pelo IR contábil pleno, compensado em parte pelo benefício fiscal do ágio.",
+ "thesis": [
+  "Rentabilidade em alta: EBITDA ajustado de R$ 102,5 mi no 2T26 (+35% comparável), margem de 27,3% (+5,4 p.p.; Commerce 27,7%); no conceito do modelo (após antecipação e remuneração em ações), 23,2%.",
+  "Caixa: FCF após capex de R$ 271 mi em 12 meses (~18% da receita), dívida bancária zero e earn-outs residuais (R$ 31,5 mi, contra ~R$ 790 mi pagos em 2024–25); IR corrente ~zero por ~4 anos com o ágio incorporado (R$ 230 mi de valor presente no modelo).",
+  "Commerce recorrente: 215,5 mil assinantes de plataforma (+8,8%), GMV do ecossistema de R$ 20,3 bi no trimestre (+15,2%) e TPV de R$ 2,35 bi (+13%).",
+  "Retorno de capital: R$ 149 mi devolvidos no 1S26 (redução de capital + recompra), dividendo complementar em ago/26 e programa de recompra de até 38,8 mi de ações em vigor."
+ ],
+ "risks": [
+  "Concorrência e desintermediação: marketplaces subsidiando PMEs (desviando GMV da loja própria) e plataformas globais/IA reduzindo barreiras.",
+  "BeOnline/SaaS em declínio (−2% no 2T26) e descontinuação de produtos; churn de PMEs com juros altos.",
+  "Custo de antecipação de recebíveis indexado ao CDI e risco de crédito/fraude no negócio de pagamentos (Vindi/Pagcerto).",
+  "Base contábil: perdas com venda de ativos e remensuração de earn-outs no histórico; lucro contábil volátil e ágio de R$ 640 mi sujeito a impairment.",
+  "Diluição por planos de ações (R$ 10 mi de despesa no 6M26) e alocação de capital em novas aquisições."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 em 12/11/2026 (após o fechamento) e Black Friday no 4T26.",
+  "Recompras no 4º programa a preços deprimidos e novos retornos de capital.",
+  "Monetização dos produtos de IA (orquestrador de agentes) e de Locaweb Cloud/VPS."
+ ],
+ "key_data": [
+  {
+   "label": "Preço 26/10 13h02 (B3, foto do estudo)",
+   "value": "R$ 3,70",
+   "context": "−30,7% no dia; R$ 5,34 em 23/10"
+  },
+  {
+   "label": "Receita 2T26 / Commerce",
+   "value": "R$ 375,2 mi (+8,2%) / R$ 276,0 mi (+12,4%)",
+   "context": "base comparável ex-Squid e Nextios"
+  },
+  {
+   "label": "EBITDA ajustado 2T26 (empresa) / no conceito do modelo",
+   "value": "R$ 102,5 mi (27,3%) / R$ 87,1 mi (23,2%)",
+   "context": "modelo desconta antecipação de recebíveis (R$ 10,4 mi) e remuneração em ações (R$ 5,0 mi)"
+  },
+  {
+   "label": "Caixa líquido efetivo (jun/26)",
+   "value": "~R$ 171 mi",
+   "context": "caixa 314,5 − arrendamentos 72 − earn-outs 31,5 − parcelamentos 11,7 − dividendo de ago/26 23,4 (os R$ 90 mi da Pagcerto são de terceiros)"
+  },
+  {
+   "label": "FCF após capex LTM",
+   "value": "R$ 271,4 mi",
+   "context": "6M26: R$ 137,2 mi (+51%)"
+  },
+  {
+   "label": "IR diferido ativo líquido",
+   "value": "R$ 241 mi",
+   "context": "+ ágio fiscal remanescente; IR corrente de R$ 0,9 mi no 6M26"
+  },
+  {
+   "label": "Ações",
+   "value": "549,2 mi",
+   "context": "19,3 mi em tesouraria em jun/26; B3 549,98 mi emitidas"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Release de resultados 2T26 (RI LWSA, 13/08/2026)",
+   "url": "https://ri.lwsa.com.br/Download.aspx?Arquivo=TOmC3kVeAtsc/dWynHBGlg=="
+  },
+  {
+   "title": "ITR 2T26",
+   "url": "https://ri.lwsa.com.br/Download.aspx?Arquivo=uSHfjXueah+e2REM90GjJQ=="
+  },
+  {
+   "title": "Apresentação de resultados 2T26",
+   "url": "https://ri.lwsa.com.br/Download.aspx?Arquivo=bxIBl/T6RAQbkW5NzPBhtw=="
+  },
+  {
+   "title": "RI LWSA (calendário: 3T26 em 12/11/2026)",
+   "url": "https://ri.lwsa.com.br/"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (data/hist/LWSA3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média — balanço limpo (sem dívida, caixa líquido) e release detalhado, mas a base contábil exige muitos ajustes (venda de Squid/Nextios, reclasse da antecipação, IR diferido do ágio, caixa de terceiros da Pagcerto) e a margem futura depende de eficiência ainda recente."
+}

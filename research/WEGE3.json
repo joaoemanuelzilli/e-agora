@@ -1,0 +1,253 @@
+{
+  "ticker": "WEGE3",
+  "name": "WEG S.A.",
+  "sector": "Bens industriais / Máquinas e equipamentos elétricos (motores, T&D, automação, tintas)",
+  "template": "industrial",
+  "as_of_quarter": "3T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "WEGE3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "net_debt": 2967.3
+    },
+    "notes": "Balanço-base 3T26 (30/09/2026). DL CVM = empréstimos 3.754,5 + arrendamentos 792,1 − caixa/aplicações 6.351,2 = −1.804,7 (caixa líquido). Somamos os proventos com data-com já passada e ainda não pagos, que não são de quem compra hoje: (i) 2ª e 3ª parcelas do dividendo extraordinário declarado em dez/2025 (data-com 19/12/2025; R$ 0,4128/ação cada, pagamento 11/08/2027 e 16/08/2028) = R$ 3.464 mi (balanço: R$ 1.732 mi no circulante + R$ 1.732 mi em 'dividendos a pagar' no não circulante); (ii) JCP de 1T26, 2T26 e 3T26 (R$ 0,3118/ação bruto, pagamento 10/03/2027) = R$ 1.308 mi. DL ajustada = −1.804,7 + 4.772 = +2.967,3. Entrou na própria DL (e não em other_debt_like) para que o caixa projetado já saia líquido desses pagamentos. Receita, EBITDA e ações sem ajuste (B3 = CVM: 4.195,8 mi em circulação)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.021,
+      0.095,
+      0.085,
+      0.078,
+      0.07
+    ],
+    "ebitda_margin": [
+      0.218,
+      0.22,
+      0.22,
+      0.22,
+      0.22
+    ],
+    "da_pct_revenue": [
+      0.026,
+      0.028,
+      0.03,
+      0.031,
+      0.032
+    ],
+    "capex_pct_revenue": [
+      0.081,
+      0.088,
+      0.075,
+      0.065,
+      0.06
+    ],
+    "nwc_pct_revenue": 0.25,
+    "cost_of_net_debt": [
+      0.09,
+      0.09,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "other_financial": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tax_rate": [
+      0.175,
+      0.175,
+      0.175,
+      0.175,
+      0.175
+    ],
+    "minority_share_ni": 0.062,
+    "payout": [
+      0.55,
+      0.5,
+      0.5,
+      0.55,
+      0.55
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.055,
+    "roic": 0.26,
+    "roe": 0.26
+  },
+  "wacc": {
+    "kd_pre_tax": 0.09,
+    "target_debt_weight": 0.05,
+    "notes": "Estrutura praticamente desalavancada (DL ajustada ~0,3x EBITDA). Kd 9%: 71% da dívida bruta é em moeda estrangeira (R$ 2,67 bi de R$ 3,75 bi), a custo de 5–6%; o restante é BRL. Peso de dívida-alvo de 5% leva o WACC a ~24%."
+  },
+  "adjustments": {
+    "other_debt_like": 0,
+    "non_operating_assets": 55,
+    "minority_value": 2850,
+    "notes": "Proventos declarados e não pagos (R$ 4.772 mi) já estão na DL ajustada (overrides). non_operating_assets = participações societárias a valor contábil (R$ 54,9 mi). Provisões para contingências (R$ 834 mi) não foram tratadas como dívida: a WEG mantém depósitos judiciais no ativo, e os pares do estudo seguem o mesmo critério. minority_value: os não controladores ficam com ~6,2% do lucro (LTM 6,3%; 2025 5,9%), por causa das subsidiárias com sócios (China, Índia, África do Sul, México). O valor contábil (R$ 1.410 mi) subestima esse direito, porque o DCF consolida 100% dos fluxos. Usamos R$ 2.850 mi ≈ 6,2% do equity total implícito no valor justo combinado (~R$ 46 bi, iterado no motor): entre o coerente com o DCF (6,2% × R$ 26,7 bi = R$ 1,7 bi) e o coerente com o EV/EBITDA-alvo (~R$ 7 bi), ponderado pelos pesos dos métodos."
+  },
+  "target_multiples": {
+    "pe": 18.0,
+    "ev_ebitda": 12.0,
+    "pbv": 4.5,
+    "rationale": "Histórico da própria WEG (multiples_history): P/L mediana 5 anos 33,1x (p10 27,6x) e EV/EBITDA mediana 5 anos 23,7x (p10 20,1x). Na foto de 26/10, o P/L LTM era 30,1x e o EV/EBITDA LTM, 21,0x. Pares globais de equipamentos elétricos (ABB, Schneider, Siemens) negociam ~20–28x o P/L em moeda forte, com Ke de 8–9%. Esses múltiplos embutem Ke de 10–12% em R$, contra 25% no estudo, e o DI longo subiu ~300 bp. Por isso usamos P/L-alvo de 18x o LPA 2027E e EV/EBITDA-alvo de 12x o EBITDA 2027E (base IFRS-16). Os dois alvos ficam abaixo do p10 histórico e são coerentes entre si: 12x EBITDA dá ~R$ 27/ação e 18x LPA, ~R$ 28. P/VP de 4,5x é só referência: ROE de 30% contra Ke de 25%, com prêmio de crescimento."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.03,
+      "ebitda_margin_shift": -0.015,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Real volta a se apreciar, tarifas dos EUA e cobre comprimem margem; ciclo de T&D na América do Norte esfria."
+    },
+    "bull": {
+      "probability": 0.25,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.01,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Real fraco (R$ 5,8+) e ciclo de transformadores/data centers nos EUA mantêm o mercado externo acima de +12% em US$ com margem de 23%."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.03,
+    "ebitda_margin_sd": 0.012,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.005
+  },
+  "debt_profile": {
+    "gross_debt_mn": 3754,
+    "pct_floating_cdi": 0.29,
+    "avg_cost": "não divulgado no material lido; 71% em moeda estrangeira (US$/€, linhas de subsidiárias), 29% em R$",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": 1918,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": 15,
+    "notes": "Caixa líquido contábil (R$ 2,6 bi ex-arrendamentos), mas ~R$ 4,8 bi saem para proventos já declarados até 2028. +100 bp de CDI rendem ~R$ 15–25 mi a mais após IR. O canal relevante do juro é o Ke e a demanda doméstica (36% da receita), não a dívida."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.1849,
+    "ebitda_margin_avg_5y": 0.2098,
+    "roe_avg_5y": 0.3129,
+    "payout_avg_5y": 0.5287,
+    "last_quarter": {
+      "period": "3T26",
+      "revenue_yoy": 0.0574,
+      "ebitda_margin": 0.2159,
+      "net_income_mn": 1665.2,
+      "net_debt_ebitda": -0.2
+    },
+    "notes": "Receita 2020–25 +18,5% a.a., com um boom de 2021–22 (+35%/+27%) puxado por preço, câmbio e aquisições. De 2023 a 2025 foi +8,7%, +16,9% e +7,4%. Em 2026 projetamos +2,1%: os 9M26 somam R$ 30,5 bi e projetamos R$ 11,2 bi no 4T26. O real médio de R$ 5,15 nos 9M26 (2025: 5,59) tirou ~3,5 p.p. da receita em R$; no 3T26 o mercado externo cresceu +14,8% em US$, mas só ~+8% em R$. De 2027 a 2030, +9,5% → +7%: externo +6–10% em US$, mais o câmbio do deck (5,45 → 5,75), e mercado interno +4–6%. Margem EBITDA: 5 anos 21,0%, 2025 22,1%, 9M26 21,9%, 3T26 21,6% (cobre, tarifas dos EUA, pessoal das fábricas novas). Projetamos 21,8% em 2026 e 22,0% depois: o real fraco ajuda a exportação a partir do Brasil, o cobre e as tarifas atrapalham. Capex: orçamento de R$ 3,6 bi em 2026 (9M26 DFC R$ 2,26 bi) e pico de ~R$ 4,0 bi em 2027 (BBI); depois, normaliza para 6% da receita. ROE 31% em 5 anos; projetado 30–31%. Payout em 5 anos de 53% (2025: 84%, com o extraordinário); projetamos 50–55%. IR efetivo de 16,8% (LTM, com JCP e subsidiárias no exterior); usamos 17,5%."
+  },
+  "guidance": "A WEG não dá guidance de resultado. Orçamento de capital de 2026: R$ 3,56 bi em imobilizado e intangível, confirmado à CVM em jul/2026; a ata da AGO cita R$ 4,4 bi, incluindo a parte financiada. No WEG Day (02/10/2026), a empresa citou R$ 3,6 bi, com destaque para a fábrica de transformadores no México (R$ 765 mi, conclusão no 1T27).",
+  "dividend_policy": "Estatuto: dividendo mínimo de 25%. Na prática, ~45–50% do lucro, em JCP trimestral e dividendos semestrais. Em dez/2025, antes da tributação de dividendos (Lei 15.270/2025), a WEG declarou R$ 5,2 bi extraordinários (R$ 1,2385/ação, data-com 19/12/2025), pagos em 3 parcelas: 12/08/2026, 11/08/2027 e 16/08/2028. Também declarou JCP de R$ 0,3118/ação sobre 1T–3T26 (R$ 1,31 bi, pagamento 10/03/2027). Não houve dividendo intermediário do 1S26 em julho. Tudo o que tem data-com passada foi tratado como dívida.",
+  "election_impact": "WEGE3 subiu +5% em 26/10 (de R$ 42,73 para R$ 44,89 às 13h02), depois de cair ~17% desde meados de setembro (3T26 abaixo do consenso em 21/10, com margem de 21,6%). O canal da eleição é o câmbio: 62,5% da receita do 3T26 veio do exterior (US$ 1,32 bi), e o real de R$ 5,14 no 3T26 contra R$ 5,45 no 3T25 tirou crescimento em R$. Sensibilidade estimada: real 10% mais fraco → receita +6% (efeito de conversão sobre os 62,5%), EBITDA +8–10% (as exportações saem do Brasil com custo em reais) e LL +8–9%. No deck de câmbio (média de R$ 5,20 em 2026 e R$ 5,45 em 2027, +4,8%), isso já vale ~+3 p.p. de receita em 2027. O que piora: Ke e DI longo (+300 bp), que comprimem o múltiplo de uma ação a ~29x o lucro de 2027, e a demanda doméstica de bens de capital com Selic de 13,75%. O negócio em si não muda com a eleição.",
+  "summary": "Líder global em motores e equipamentos de T&D, com ROIC de 33% e 62% da receita no exterior. É a principal ganhadora operacional de um real mais fraco. A ação negocia ~29x o lucro de 2027 e embute Ke de um dígito em US$. Ao Ke de 25% do estudo, nem a melhor execução da bolsa sustenta esse múltiplo: a eleição melhora o câmbio, mas não o retorno de quem compra.",
+  "thesis": [
+    "Mercado externo recorde: 62,5% da receita do 3T26, US$ 1,32 bi (+14,8% a/a), com a América do Norte +31% (transformadores e data centers).",
+    "ROIC de 33,2% (3T26 LTM) e caixa líquido contábil. Os R$ 4,8 bi de proventos já declarados (2026–28) consomem a maior parte desse caixa e foram tratados como dívida.",
+    "Câmbio: cada 10% de real mais fraco soma ~6% à receita e ~8–10% ao EBITDA. O deck (R$ 5,45 em 2027 contra R$ 5,20 em 2026) já dá ~+3 p.p. de crescimento.",
+    "Capex no pico (R$ 3,6 bi em 2026 e ~R$ 4,0 bi em 2027) para expandir T&D no México, nos EUA e na Índia: crescimento contratado, mas o fluxo livre fica comprimido até 2027."
+  ],
+  "risks": [
+    "Múltiplo: P/L de ~29x 2027E. Mesmo voltando ao p10 histórico (27,6x), o preço não embute prêmio de risco a Ke de 25%.",
+    "Tarifas dos EUA (América do Norte = 55% da receita externa) e preço do cobre pressionam a margem (−0,6 p.p. a/a no 3T26).",
+    "Ciclo de capex/T&D global: a desaceleração de data centers ou de investimentos em rede reduziria o crescimento externo.",
+    "Real voltando a se apreciar (o 2026 com R$ 5,15 mostrou o efeito) e demanda doméstica fraca com Selic alta."
+  ],
+  "catalysts": [
+    "Pagamento do JCP 1T–3T26 (10/03/2027) e declaração do 4T26/2S26 (dez/2026–fev/2027)",
+    "Resultado do 4T26 (fev/2027), com o câmbio a R$ 5,3–5,4",
+    "Conclusão da fábrica de transformadores no México (1T27)",
+    "Definição das tarifas norte-americanas para 2027"
+  ],
+  "key_data": [
+    {
+      "label": "Receita externa 3T26",
+      "value": "62,5% (US$ 1,32 bi)",
+      "context": "+14,8% a/a em US$; América do Norte +31%"
+    },
+    {
+      "label": "Margem EBITDA 3T26",
+      "value": "21,6%",
+      "context": "−0,6 p.p. a/a (cobre, tarifas, pessoal)"
+    },
+    {
+      "label": "ROIC LTM 3T26",
+      "value": "33,2%",
+      "context": "+0,8 p.p. a/a"
+    },
+    {
+      "label": "Proventos declarados a pagar",
+      "value": "R$ 4,77 bi",
+      "context": "dividendo extra 2027–28 (R$ 3,46 bi) + JCP 1T–3T26 (R$ 1,31 bi); tratados como dívida"
+    },
+    {
+      "label": "P/L LTM na foto de 26/10",
+      "value": "30,1x",
+      "context": "mediana de 5 anos 33,1x; p10 27,6x"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Rankia — WEG lucra R$ 1,67 bi no 3T26, abaixo do consenso; exterior chega a recorde de 62,5% da receita (21/10/2026)",
+      "url": "https://rankia.com.br/weg-lucro-3t26-1-67-bilhao-abaixo-consenso-exterior-62-5/"
+    },
+    {
+      "title": "Cenário Energia — WEG lucra R$ 1,67 bilhão no 3T26, mas margem EBITDA recua (21/10/2026)",
+      "url": "https://cenarioenergia.com.br/2026/10/21/weg-lucra-r-167-bilhao-no-3t26-mas-margem-ebitda-recua/"
+    },
+    {
+      "title": "Investidor10 — WEG confirma investimentos de R$ 3,56 bi em 2026",
+      "url": "https://investidor10.com.br/noticias/weg-wege3-confirma-investimentos-de-r-3-56-bi-em-2026-veja-121711/"
+    },
+    {
+      "title": "InfoMoney — WEG volta a cair com perspectiva de investimento prolongado (capex com pico em 2027, BBI)",
+      "url": "https://www.infomoney.com.br/mercados/queridinha-da-bolsa-weg-volta-a-cair-com-perspectiva-de-investimento-prolongado/"
+    },
+    {
+      "title": "BCB — SGS 3698, PTAX média mensal (deck de câmbio)",
+      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.3698/dados?formato=json"
+    },
+    {
+      "title": "B3 — proventos oficiais (data/market/WEGE3.json, GetListedSupplementCompany)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — ITR 3T26 padronizado (data/hist/WEGE3.json)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "média — base CVM de alta qualidade (3T26) e dívida simples, mas o valor justo a Ke de 25% depende quase todo do múltiplo terminal; DCF e múltiplos divergem mais de 2× por construção (o mercado precifica a WEG a Ke de um dígito)."
+}

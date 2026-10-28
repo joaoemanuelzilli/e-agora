@@ -1,0 +1,307 @@
+{
+  "ticker": "PETR3",
+  "name": "Petróleo Brasileiro S.A. – Petrobras",
+  "sector": "Petróleo e gás / integrada (E&P pré-sal, refino, gás e energia) — estatal",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "PETR4",
+      "class": "PN"
+    },
+    {
+      "ticker": "PETR3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem override de base. Premissas da empresa inteira (ON+PN, 12.888,7 mi de ações: 7.442,2 mi ON + 5.446,5 mi PN, B3 = CVM); servem para PETR3 e PETR4 (mesmo valor justo por ação; o mercado cobra ágio de ~13% na ON). DL CVM (R$ 312,8 bi) já inclui arrendamentos IFRS-16 (2.01.04.03 + 2.02.01.03 = R$ 232,8 bi) e financiamentos (R$ 133,7 bi), menos caixa e aplicações (R$ 53,8 bi): bate com a dívida bruta de US$ 70,8 bi do release (PTAX 30/06 5,1766). COLUNA 2026 = run-rate do 2S26 anualizado (o motor usa só ~50% do ano): receita 2S26 ≈ R$ 352 bi (3T26 R$ 165 bi com Brent US$ 96 e câmbio 5,14; 4T26 R$ 187 bi com Brent US$ 110 e 5,30) × 2. Receita por boe calibrada em 2025 e 2T26: R$/boe ≈ 154,5 (parcela fixa, +4% a.a.) + 0,776 × Brent em R$ (elasticidade ~0,65: preço doméstico de diesel/gasolina segue o Brent com atraso e parcialmente; exportação ~1 MMbpd segue integralmente) × produção. CAPEX = capex próprio do Plano 2026-30 (US$ 22→18 bi/ano, inclui US$ 9,7 bi de descomissionamento no quinquênio) + novas adições de arrendamento estimadas em R$ 30–32 bi/ano (renovação de sondas e embarcações de apoio; os FPSOs do Plano até 2030 são majoritariamente próprios, ao contrário de 2023–25, quando o passivo de arrendamento subiu de US$ 34 bi para US$ 45 bi). Como a DL inclui arrendamentos (amortização de principal de ~R$ 42 bi/ano sai da DL) e o EBITDA é IFRS-16, afretamentos novos precisam entrar no FCFF; com isso capex total = 20,5–22,6% da receita."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.417,
+      -0.01,
+      -0.083,
+      -0.026,
+      -0.039
+    ],
+    "ebitda_margin": [
+      0.53,
+      0.5,
+      0.48,
+      0.47,
+      0.46
+    ],
+    "da_pct_revenue": [
+      0.125,
+      0.132,
+      0.148,
+      0.155,
+      0.164
+    ],
+    "capex_pct_revenue": [
+      0.205,
+      0.208,
+      0.222,
+      0.224,
+      0.226
+    ],
+    "nwc_pct_revenue": 0.03,
+    "cost_of_net_debt": [
+      0.095,
+      0.095,
+      0.095,
+      0.095,
+      0.095
+    ],
+    "other_financial": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tax_rate": [
+      0.27,
+      0.27,
+      0.27,
+      0.27,
+      0.27
+    ],
+    "minority_share_ni": 0.004,
+    "payout": [
+      0.35,
+      0.42,
+      0.45,
+      0.5,
+      0.5
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.04,
+    "roic": 0.13,
+    "roe": 0.16
+  },
+  "wacc": {
+    "kd_pre_tax": 0.095,
+    "target_debt_weight": 0.28,
+    "notes": "Kd em R$ = custo em US$ da dívida financeira e dos arrendamentos (~7–7,5% a.a.) + depreciação esperada do real no deck (~1,8% a.a.). Peso da dívida = DL R$ 313 bi / (DL + valor de mercado pré-eleição ~R$ 805 bi) ≈ 28%."
+  },
+  "adjustments": {
+    "other_debt_like": 77538,
+    "non_operating_assets": 3387,
+    "minority_value": 904,
+    "notes": "other_debt_like = (i) dividendos/JCP a pagar no balanço de 30/06 (R$ 8.192 mi; parcelas do 1T26 pagas em 20/08 e 21/09/2026) + (ii) proventos do 2T26 aprovados em 06/08 (R$ 1,348/ação × 12.888,7 mi = R$ 17.374 mi; data-com 21/08/2026, pagos em 23/11 e 21/12/2026 — quem compra hoje não recebe) + (iii) provisões fiscais/trabalhistas/cíveis prováveis (R$ 17.752 mi) + (iv) desmantelamento além do Plano: provisão total R$ 153,7 bi − ~R$ 50 bi ligados aos US$ 9,7 bi de descomissionamento de 2026-30 que já estão no capex = R$ 103,7 bi × (1 − 34%) × 50% = R$ 34.220 mi (regra comum às E&Ps do estudo: o balanço desconta a obrigação a taxa muito menor que o WACC de ~20%; 50% aproxima o valor presente de gastos pós-2030). Total R$ 77.538 mi. NÃO somado: passivo atuarial de pensão e saúde (R$ 92,5 bi) — a despesa com inativos (juros sobre o déficit) já passa pelo EBIT e, portanto, pelo FCFF; somar o passivo contaria duas vezes. Sensibilidade: somar todo o desmantelamento líquido de IR (R$ 101 bi) em vez de R$ 34 bi tiraria mais ~R$ 5,2/ação. non_operating_assets = investimentos em coligadas (R$ 3.387 mi, sobretudo Braskem). Minoritários pelo valor contábil (R$ 904 mi; 0,3–0,4% do lucro)."
+  },
+  "target_multiples": {
+    "pe": 4.0,
+    "ev_ebitda": 2.6,
+    "pbv": 1.0,
+    "rationale": "P/L 5,0x o LPA 2027E e EV/EBITDA 3,2x o EBITDA 2027E (IFRS-16, com arrendamentos na DL). Histórico próprio (data/market multiples_history): P/L mediano de 5 anos 4,5x (p10 2,9x), EV/EBITDA mediano 3,0x (p10 2,1x; atual 3,6x), P/VP 1,2x. Petrobras sempre negociou com desconto a majors (EV/EBITDA 4–6x) pelo risco de interferência; pós-reeleição não há razão para alargar o múltiplo. Os múltiplos de mercado embutem Ke de ~15–18%, abaixo dos 25% do estudo — por isso o peso de múltiplos fica em 25%."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.05,
+      "ebitda_margin_shift": -0.05,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.03,
+      "narrative": "Intervenção pós-reeleição: subvenção ao diesel acaba e a Petrobras absorve parte da defasagem (2013–14), Plano 2027-31 infla capex em refino/fertilizantes/naval e Brent volta rápido a US$ 70–75."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.04,
+      "ebitda_margin_shift": 0.02,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Conflito no Golfo prolonga Brent acima de US$ 90 até 2028, preços domésticos convergem à paridade e a dívida abaixo de US$ 65 bi destrava dividendos extraordinários."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.06,
+    "ebitda_margin_sd": 0.035,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.015
+  },
+  "debt_profile": {
+    "gross_debt_mn": 366533,
+    "pct_floating_cdi": 0.03,
+    "avg_cost": "US$ ~6,5–7% (bonds e bancos) e ~7–8% implícito nos arrendamentos; 63% da dívida bruta é arrendamento (R$ 232,8 bi)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": 200,
+    "notes": "Estimativa: dívida quase toda em US$ a taxa fixa e caixa de R$ 53,8 bi parcialmente em R$ — +100 bp de CDI rende um pouco mais no caixa do que custa nas debêntures (~+R$ 0,2–0,3 bi no lucro). O canal relevante é o câmbio: cada R$ 0,10 no dólar ≈ +R$ 6–7 bi de receita anual e ~−R$ 6,6 bi de variação na DL em R$ (contabilizada em grande parte via hedge accounting)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.1283,
+    "ebitda_margin_avg_5y": 0.5146,
+    "roe_avg_5y": 0.3048,
+    "payout_avg_5y": 1.133,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.423,
+      "ebitda_margin": 0.554,
+      "net_income_mn": 52445,
+      "net_debt_ebitda": 1.14
+    },
+    "notes": "Receita 2020–25 +12,8% a.a., guiada por Brent (US$ 42 → 99 → 69) e produção; 2025 R$ 497,5 bi com Brent US$ 69 e câmbio 5,59. Margem EBITDA CVM: 62% (2021), 58% (2022, Brent US$ 99 e paridade plena), 50% (2023), 42% (2024, com transação tributária e pensão), 46% (2025), 55% no 2T26 (Brent US$ 103 com subvenção ao diesel). Projetamos 53% no 2S26, 50% em 2027 (Brent US$ 95) e 46% em 2030 (Brent US$ 71, ~nível de 2025, já com +12% de produção e lifting < US$ 6). Payout caixa médio de 5 anos (113%) é distorcido pelos extraordinários de 2022–24; a política atual (45% do FCO − capex com dívida bruta ≤ US$ 75 bi) deu 28–33% do lucro no 1S26 — usamos 35% no 2S26 subindo a 50% com a desalavancagem. ROE projetado ~31% (2026) → ~20% (2030)."
+  },
+  "guidance": "Plano de Negócios 2026–2030 (27/11/2025): capex US$ 109 bi (US$ 91 bi em implantação, sendo US$ 69,2 bi em E&P — inclui US$ 9,7 bi de descomissionamento — e US$ 15,8 bi em RTM); produção de óleo de 2,5 MMbpd em 2026 (±4%), pico de 2,7 MMbpd de óleo em 2028 e 3,4 MMboed totais em 2028–29; 8 novos sistemas até 2030; lifting < US$ 6/bbl; dividendos ordinários de US$ 45–50 bi no quinquênio (Brent do plano US$ 63 em 2026 e US$ 70 em 2027–30); dívida bruta máxima US$ 75 bi, convergindo a US$ 65 bi; caixa mínimo US$ 6 bi. Execução 2026 acima do plano: 3,23 MMboed no 1T26 e 3,34 MMboed no 2T26 (óleo ~2,7 MMbpd). Plano 2027–31 deve sair em nov/2026. Curva de produção usada (MMboed): 2026 3,30 · 2027 3,40 · 2028 3,40 · 2029 3,40 · 2030 3,30.",
+  "dividend_policy": "Remuneração mínima anual de US$ 4 bi (Brent > US$ 40) e 45% do FCO − capex quando a dívida bruta ≤ teto (US$ 75 bi), com extraordinários possíveis se a dívida ficar abaixo do teto e a solidez financeira permitir; pagamentos trimestrais em dividendos + JCP. 2026: 1T26 R$ 0,70/ação (data-com 01/06; pago 20/08 e 21/09) e 2T26 R$ 1,348/ação = R$ 17,4 bi (data-com 21/08; JCP de R$ 0,674 em 23/11 e R$ 0,674 em 21/12) — ambos ficam fora do fluxo de quem compra hoje (tratados como dívida). Histórico: R$ 194,6 bi pagos em 2022, ~R$ 100 bi/ano em 2023–24 e R$ 45,4 bi em 2025.",
+  "election_impact": "PETR4 caiu 11,8% em 26/10 (de R$ 58,68 para R$ 51,75 às 13h02), perto do Ibovespa, apesar de o Brent estar acima de US$ 110 e o real mais fraco ajudar a receita (cada R$ 0,10 no dólar ≈ +1,9% de receita). A queda é o canal de intervenção, que aqui é real e não só macro: (i) o diesel está 145 dias sem reajuste e a defasagem nas refinarias chegou a R$ 3,53/l (108%) em 22/10, acima da subvenção federal (MPs 1.340, 1.363 e 1.391/2026; R$ 27,4 bi autorizados em 2026, renovação a cada 30 dias por portaria da Fazenda) — se a subvenção não for renovada, a pressão para a Petrobras absorver a diferença cresce num 4º mandato; (ii) o imposto de exportação de 12% sobre o óleo bruto (desde 12/03, mantido pela Gecex por resoluções de 60 dias) atinge ~1 MMbpd exportado; (iii) o Plano 2027–31 (nov/26) pode trazer mais capex em refino, fertilizantes, naval e Margem Equatorial e menos dividendos. Do outro lado: produção recorde, dívida abaixo do teto e Brent em backwardation forte (Dez/26 US$ 114, Dez/27 US$ 87). No modelo, a intervenção entra em margem (53% → 46%, abaixo de 2022 com Brent semelhante), payout de 35–50% e capex de ~23–25% da receita; o bear corta margem em 5 p.p., soma 3 p.p. de capex e antecipa a normalização do Brent.",
+  "summary": "Petrobras entra no 4º mandato com produção recorde (3,34 MMboed no 2T26, acima do pico do plano para 2028), dívida bruta de US$ 70,8 bi abaixo do teto e Brent de guerra (US$ 115 em 28/10). Caiu 11,8% em 26/10 pelo risco de intervenção (diesel com defasagem de 108%, subvenção temporária, imposto de exportação, Plano 2027–31). O valor depende de dois drivers: a curva do Brent em backwardation e quanto da renda do petróleo o governo vai capturar via preço, capex e dividendos.",
+  "thesis": [
+    "Produção 3,34 MMboed no 2T26 (+14% a/a) e óleo ~2,7 MMbpd — o pico de 2028 do Plano 2026-30 já foi alcançado; lifting < US$ 6/bbl e breakeven de dívida líquida neutra de US$ 59/bbl (2026).",
+    "Lucro de R$ 52,4 bi (recorrente R$ 55,8 bi) e FCO de R$ 61,8 bi no 2T26 com Brent médio de US$ 97–103 (imprensa × EIA); proventos de R$ 17,4 bi (US$ 3,4 bi) aprovados para o trimestre.",
+    "Dívida bruta US$ 70,8 bi (teto US$ 75 bi; meta US$ 65 bi) e DL/EBITDA 1,1x: a política de 45% do FCO − capex devolve caixa rápido com Brent de US$ 95 em 2027 na curva.",
+    "Real fraco (dólar de R$ 5,04 para R$ 5,34 em uma semana) e exportação de ~1 MMbpd: cada R$ 0,10 no câmbio ≈ +R$ 6–7 bi de receita/ano."
+  ],
+  "risks": [
+    "Intervenção em preços: defasagem do diesel de R$ 3,53/l (108%) em 22/10, acima da subvenção de ~R$ 3,52/l; fim ou não renovação da subvenção (vigência de 30 dias) joga o custo na Petrobras.",
+    "Imposto de exportação de 12% sobre óleo bruto renovado por 60 dias (Gecex 938 e 957/2026) e judicializado; pode virar permanente para financiar a subvenção.",
+    "Plano 2027–31 (nov/26) com mais capex em refino, fertilizantes, navios e Margem Equatorial e dividendo só no mínimo; troca de diretoria.",
+    "Brent em backwardation forte (Dez/27 US$ 87, Dez/30 US$ 69): cessar-fogo no Golfo derruba o preço mais rápido que a curva; EIA (out/26) vê US$ 84 em 2027.",
+    "Passivos de longo prazo: desmantelamento R$ 153,7 bi (só R$ 34 bi líquidos tratados como dívida) e pensão/saúde R$ 92,5 bi (custo no EBIT) — ver adjustments.notes."
+  ],
+  "catalysts": [
+    "Decisão da Petrobras sobre reajuste do diesel pós-eleição (conselho em 26/10) e renovação da subvenção (ciclos de 30 dias)",
+    "Renovação ou fim do imposto de exportação de 12% (resolução Gecex vence no início de nov/2026)",
+    "Resultado 3T26 e proventos do trimestre (início de nov/2026)",
+    "Plano de Negócios 2027–2031 (fim de nov/2026)"
+  ],
+  "key_data": [
+    {
+      "label": "Produção 2T26",
+      "value": "3,34 MMboed",
+      "context": "+14% a/a; óleo ~2,7 MMbpd; pico do plano 3,4 MMboed em 2028–29"
+    },
+    {
+      "label": "Dívida bruta 30/06/26",
+      "value": "US$ 70,8 bi",
+      "context": "teto US$ 75 bi; 63% é arrendamento (R$ 232,8 bi)"
+    },
+    {
+      "label": "DL/EBITDA UDM (CVM)",
+      "value": "1,14x",
+      "context": "DL R$ 312,8 bi; EBITDA UDM R$ 273,3 bi"
+    },
+    {
+      "label": "Defasagem do diesel (Abicom, 22/10)",
+      "value": "R$ 3,53/l (108%)",
+      "context": "subvenção federal ~R$ 3,52/l; 145 dias sem reajuste"
+    },
+    {
+      "label": "Proventos 2T26",
+      "value": "R$ 1,348/ação",
+      "context": "R$ 17,4 bi; data-com 21/08; pagos em 23/11 e 21/12/26"
+    },
+    {
+      "label": "Deck Brent (US$/bbl)",
+      "value": "2S26 103 · 27 95 · 28 81 · 29 75 · 30 71",
+      "context": "curva ICE/NYMEX de 15–28/10/2026; EIA out/26: 2026 96, 2027 84"
+    },
+    {
+      "label": "Deck câmbio (R$/US$)",
+      "value": "2S26 5,22 · 27 5,45 · 28 5,55 · 29 5,65 · 30 5,75",
+      "context": "dólar futuro 5,38 + diferencial de inflação ~1,8% a.a."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Petrobras — Plano de Negócios 2026-2030 (Agência Petrobras, 27/11/2025)",
+      "url": "https://agencia.petrobras.com.br/en/w/petrobras-aprova-plano-de-neg%C3%B3cios-2026-2030"
+    },
+    {
+      "title": "Cenário Energia — Petrobras 2T26: lucro R$ 52,4 bi, FCO R$ 61,8 bi, dívida bruta US$ 70,8 bi, proventos R$ 17,4 bi (07/08/2026)",
+      "url": "https://cenarioenergia.com.br/2026/08/07/petrobras-resultados-2t26-lucro-refino-presal-dividendos/"
+    },
+    {
+      "title": "Money Times — Petrobras lucra R$ 52,4 bi no 2T26",
+      "url": "https://www.moneytimes.com.br/petrobras-petr4-lucra-r-524-bilhoes-no-2t26-e-supera-consenso/"
+    },
+    {
+      "title": "Acionista — Petrobras: recordes de produção no 2T26 (3,34 MMboed)",
+      "url": "https://acionista.com.br/petrobras-petr4-recordes-de-producao-no-2t26/"
+    },
+    {
+      "title": "Mercado&Consumo — Defasagem do diesel ultrapassa subvenção e atinge R$ 3,53/l (23/10/2026)",
+      "url": "https://mercadoeconsumo.com.br/23/10/2026/economia/defasagem-do-diesel-nas-refinarias-da-petrobras-ultrapassa-subvencao-e-atinge-r-353-l/"
+    },
+    {
+      "title": "Poder360 — Governo oficializa nova subvenção ao diesel",
+      "url": "https://www.poder360.com.br/poder-infra/governo-oficializa-nova-subvencao-ao-diesel/"
+    },
+    {
+      "title": "Senado — Sumário da MP 1.363/2026 (subvenção R$ 1,12/l, jun–dez/2026)",
+      "url": "https://www12.senado.leg.br/publicacoes/estudos-legislativos/tipos-de-estudos/sumarios-de-proposicoes/mpv1363"
+    },
+    {
+      "title": "IstoÉ Dinheiro — MP 1.340: subvenção ao diesel e imposto de exportação de 12% sobre óleo bruto (12/03/2026)",
+      "url": "https://istoedinheiro.com.br/dou-extra-subvencao-a-produtor-de-diesel-e-de-r-032-litro-aliquota-em-exportacao-e-de-50-2"
+    },
+    {
+      "title": "Poder360 — Gecex renova imposto de exportação do petróleo em 12% (09/07/2026)",
+      "url": "https://www.poder360.com.br/poder-governo/governo-renova-imposto-de-exportacao-do-petroleo-e-mantem-em-12/"
+    },
+    {
+      "title": "Mayer Brown — Resolução Gecex 957/2026: prorrogação do imposto de 12% (03/09/2026)",
+      "url": "https://www.mayerbrown.com/pt/insights/publications/2026/09/gecex-resolution-no-9572026-extension-of-the-12-export-tax-rate-on-crude-petroleum-oils-and-bituminous-minerals"
+    },
+    {
+      "title": "eixos — TRF-1 derruba liminar e imposto de exportação volta a valer (01/09/2026)",
+      "url": "https://eixos.com.br/petroleo-e-gas/trf-1-derruba-liminar-e-imposto-de-exportacao-do-petroleo-volta-a-valer/"
+    },
+    {
+      "title": "EIA — Short-Term Energy Outlook, outubro/2026 (Brent 3T26 US$ 95,95; 4T26E US$ 105; 2027E US$ 84)",
+      "url": "https://www.eia.gov/outlooks/steo/archives/oct26.pdf"
+    },
+    {
+      "title": "Baratelli Institute — curva futura Brent/WTI (liquidação CME de 15/10/2026)",
+      "url": "https://baratelliinstitute.com/oil-futures-curve"
+    },
+    {
+      "title": "Trading Economics — Brent US$ 115 em 28/10/2026",
+      "url": "https://tradingeconomics.com/commodity/brent-crude-oil"
+    },
+    {
+      "title": "SEC — Petrobras 6-K 4T25 (passivo atuarial líquido US$ 16,4 bi)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1119639/000129281426000706/pbrfs4q25usd_6k.htm"
+    },
+    {
+      "title": "BCB — PTAX (SGS 1) e CVM DFP/ITR padronizados (data/hist/PETR4.json)",
+      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json"
+    },
+    {
+      "title": "B3 — proventos oficiais PETR4 (GetListedSupplementCompany)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    }
+  ],
+  "confidence": "média — base contábil sólida e plano detalhado, mas o valor depende de um Brent em backwardation extrema (guerra no Golfo) e da intensidade da intervenção pós-reeleição, que não é observável ainda (subvenção, imposto de exportação e Plano 2027–31 em aberto).",
+  "copied_from": "PETR4"
+}

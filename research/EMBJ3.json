@@ -1,0 +1,261 @@
+{
+  "ticker": "EMBJ3",
+  "name": "Embraer S.A.",
+  "sector": "Bens industriais / Material aeronáutico e de defesa",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "EMBJ3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "net_debt": 2394
+    },
+    "notes": "Modelo da EMBRAER SEM A EVE (a Eve Air Mobility, 72% da Embraer e listada na NYSE como EVEX, entra como ativo não operacional a valor de mercado). Balanço-base 2T26 (30/06/2026). DL CVM consolidada = empréstimos 12.756,4 + arrendamentos 630,3 − caixa/aplicações 12.116,3 = R$ 1.270,4 mi. Ajustes à DL: (i) tiramos o caixa líquido da Eve, que está consolidado mas não pertence ao acionista da Embraer: caixa de US$ 403 mi no 2T26, menos dívida BNDES estimada em ~US$ 250 mi = ~US$ 150 mi ≈ R$ 770 mi (estimativa coerente com a DL ex-Eve de 0,2x o EBITDA ajustado divulgada pela companhia); (ii) somamos os JCP com data-com já passada e ainda não pagos: 2T26 (R$ 0,2810/ação, R$ 200 mi brutos, já no passivo) e 3T26 (R$ 0,2163/ação, R$ 154 mi, data-com 21/09/2026), ambos com pagamento em 24/05/2027. DL ex-Eve ajustada = 1.270 + 770 + 354 = R$ 2.394 mi. Receita sem ajuste (a Eve não tem receita relevante). As margens projetadas são ex-Eve: somam de volta o custo operacional da Eve (P&D + SG&A de ~US$ 37 mi/trimestre no 2T26, ~1,7–1,9 p.p. da receita)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.036,
+      0.133,
+      0.089,
+      0.079,
+      0.069
+    ],
+    "ebitda_margin": [
+      0.15,
+      0.145,
+      0.147,
+      0.148,
+      0.148
+    ],
+    "da_pct_revenue": [
+      0.031,
+      0.031,
+      0.031,
+      0.031,
+      0.031
+    ],
+    "capex_pct_revenue": [
+      0.055,
+      0.055,
+      0.053,
+      0.05,
+      0.05
+    ],
+    "nwc_pct_revenue": 0.1,
+    "cost_of_net_debt": [
+      0.07,
+      0.07,
+      0.07,
+      0.07,
+      0.07
+    ],
+    "other_financial": [
+      -370,
+      -400,
+      -420,
+      -440,
+      -460
+    ],
+    "tax_rate": [
+      0.27,
+      0.27,
+      0.27,
+      0.27,
+      0.27
+    ],
+    "minority_share_ni": 0.08,
+    "payout": [
+      0.16,
+      0.3,
+      0.35,
+      0.4,
+      0.4
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.055,
+    "roic": 0.18,
+    "roe": 0.18
+  },
+  "wacc": {
+    "kd_pre_tax": 0.07,
+    "target_debt_weight": 0.1,
+    "notes": "Dívida quase toda em US$ (bonds; ex-Eve: prazo médio de 9,2 anos e custo de 5,1%, segundo a apresentação do 2T26). Em R$, o custo esperado é ~7% (5,1% mais a depreciação esperada do real de ~1,8% a.a. no deck). Peso de dívida-alvo de 10% (DL ex-Eve ~0,3x o EBITDA) leva o WACC a ~23%."
+  },
+  "adjustments": {
+    "other_debt_like": 505,
+    "non_operating_assets": 2499,
+    "minority_value": 2000,
+    "notes": "other_debt_like = fornecedores com risco sacado (R$ 111 mi nacionais + R$ 167 mi estrangeiros = R$ 279 mi) + benefícios pós-emprego (R$ 227 mi). Passivos de contrato (adiantamentos de clientes, R$ 19,4 bi) NÃO são dívida: financiam o estoque de aeronaves do backlog e estão no capital de giro operacional (nwc_pct 0,10, coerente com estoque de R$ 19,2 bi contra adiantamentos de R$ 19,4 bi). non_operating_assets = 72% da Eve a mercado (250,5 mi ações × ~US$ 1,62–1,65 × R$ 5,40 ≈ R$ 2.250 mi; EVEX US$ 1,62 em 28/10/2026, valor de mercado de US$ 565 mi) + participações por equivalência a valor contábil (R$ 249 mi). Como a Eve sai da DL e das margens, não há dupla contagem. Minoritários: a parcela da Eve (28%) fica fora, porque a Eve inteira está fora do modelo. Os demais não controladores (participações com sócios, como a OGMA em Portugal) ganham ~R$ 55–85 mi por trimestre, depois de somar de volta os 28% do prejuízo da Eve que vão a eles: ~8% do lucro ex-Eve. A composição não foi verificada. minority_value ≈ 8% do equity total implícito no valor justo combinado (iterado no motor), acima do contábil ex-Eve estimado (~R$ 1,5 bi de R$ 1.924 mi)."
+  },
+  "target_multiples": {
+    "pe": 12.0,
+    "ev_ebitda": 7.0,
+    "pbv": 2.5,
+    "rationale": "A Embraer não tem histórico útil de múltiplos: prejuízo de 2020 a 2022 e listagem nova como EMBJ3. Em 2026 negociou a P/L LTM de 28–40x e EV/EBITDA LTM de 11,6–14,3x (consolidado, com o prejuízo da Eve). Ex-Eve, na foto de 26/10, ficava a 19,8x o LL 2027E e 10,1x o EBITDA 2027E. Pares: Bombardier ~15x P/L e ~9x EV/EBITDA; Airbus ~20–25x P/L; Textron ~14x P/L. Esses múltiplos embutem Ke de 8–10% em US$ (~11–13% em R$), contra 25% no estudo. Usamos P/L-alvo de 12x o LPA 2027E ex-Eve e EV/EBITDA-alvo de 7x o EBITDA 2027E ex-Eve (IFRS-16), coerentes entre si: dão R$ 60–67/ação. P/VP de 2,5x é só referência."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.03,
+      "ebitda_margin_shift": -0.015,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Atrasos de cadeia de suprimentos e motores (E2), volta das tarifas dos EUA e real apreciado de novo; margem EBIT ex-Eve volta a ~9%."
+    },
+    "bull": {
+      "probability": 0.25,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.01,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Novas encomendas do KC-390 na Europa e do E2 nos EUA, executiva no pico, com real a R$ 5,8+ reduzindo o custo em US$."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.04,
+    "ebitda_margin_sd": 0.015,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.005
+  },
+  "debt_profile": {
+    "gross_debt_mn": 12756,
+    "pct_floating_cdi": 0.05,
+    "avg_cost": "5,1% a.a. em US$ (ex-Eve, apresentação 2T26); 95% em moeda estrangeira (bonds), R$ 677 mi em moeda nacional",
+    "avg_maturity_years": 9.2,
+    "next_24m_maturities_mn": 641,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": 5,
+    "notes": "A dívida é em US$ a taxa fixa e o caixa fica parte em R$ (CDI) e parte em US$, então o CDI quase não afeta o lucro. +100 bp rendem ~R$ 5–10 mi sobre a parcela do caixa em R$. A sensibilidade relevante é ao câmbio. Estimativa: 10% de real mais fraco → receita em R$ +10% (100% dolarizada); EBIT em US$ +~US$ 70 mi, pois ~US$ 1,5 bi/ano de custos são em R$ e cerca de metade está protegida; e despesa de IR diferido não caixa, porque a base fiscal é em R$ e a moeda funcional é o US$."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.1635,
+    "ebitda_margin_avg_5y": 0.0962,
+    "roe_avg_5y": 0.0386,
+    "payout_avg_5y": 0.038,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.1037,
+      "ebitda_margin": 0.158,
+      "net_income_mn": 1084.2,
+      "net_debt_ebitda": 0.24
+    },
+    "notes": "Histórico de 5 anos distorcido pela crise de 2020–22 (pandemia e fim do acordo com a Boeing): margem EBITDA consolidada de −0,8% a 14,4%, ROE médio de 4%. Receita 2020–25 +16% a.a. em R$ e ~+15% em US$ (US$ 4,2 bi em 2021 → US$ 7,5 bi em 2025). Projetamos em US$: US$ 8,35 bi em 2026 (meio do guidance de US$ 8,2–8,5 bi), depois +8%, +7%, +6% e +5% a.a. (backlog recorde de US$ 35,7 bi, 4,3x a receita). Convertemos pelo deck de câmbio médio: R$ 5,59 (2025) → 5,20 (2026, efetivo) → 5,45 / 5,55 / 5,65 / 5,75. Em R$, isso dá +3,6% em 2026 e +13,3% em 2027 (+8% em US$ e +4,9% de câmbio). Margem EBITDA ex-Eve: o LTM consolidado é 12,1%; somando de volta a Eve (~1,9 p.p.), fica ~14,0%. O guidance de margem EBIT ajustada consolidada de 2026 foi elevado para 10,0–10,6%, com 0,8 p.p. de crédito fiscal extraordinário e a isenção de tarifas no 2S26: ex-Eve, ~12% de EBIT, ou ~15% de EBITDA. Projetamos 15,0% em 2026 e 14,5–14,8% depois (sem o crédito, com algum ganho de câmbio). IR normalizado de 27% (34% − JCP − incentivos); o efetivo contábil oscila com o IR diferido cambial (2024: 38%; 2025: −37%). Resultado financeiro: 1S26 de −R$ 276 mi (−R$ 550 mi anualizado). Projetamos −7% sobre a DL mais −R$ 370 a −460 mi de outros (componente financeiro dos adiantamentos, câmbio e hedge)."
+  },
+  "guidance": "Guidance 2026 (revisado em 10/08/2026): receita de US$ 8,2–8,5 bi (mantida); margem EBIT ajustada de 10,0–10,6% (antes 8,7–9,3%; +US$ 110 mi no ponto médio = US$ 68 mi de crédito fiscal + US$ 38 mi de isenção de tarifas dos EUA no 2S26 + US$ 4 mi operacionais); FCF ajustado ex-Eve ≥ US$ 400 mi (antes ≥ US$ 200 mi); entregas de 80–85 jatos comerciais e 160–170 executivos. Eve: consumo de caixa de ~US$ 250 mi em 2026, com financiamento até 2028.",
+  "dividend_policy": "Estatuto: mínimo de 25% do lucro ajustado. A Embraer voltou a distribuir em 2025: JCP de R$ 0,605/ação (data-com 15/12/2025, pago no 1S26) e dividendos complementares. Em 2026, JCP trimestral: R$ 0,2810 (2T26) e R$ 0,2163 (3T26), ambos pagos em 24/05/2027. Os dois têm data-com passada e foram tratados como dívida. Há programa de recompra: a tesouraria foi de R$ 1,09 bi para R$ 2,04 bi no 1S26 (28,6 mi ações). Projetamos payout de 30–40% do lucro ex-Eve.",
+  "election_impact": "EMBJ3 subiu +7,6% em 26/10 (de R$ 88,35 para R$ 95,06 às 13h02). É uma exportadora pura: 100% da receita e quase toda a dívida em US$, com ~20% dos custos em R$. O canal da eleição é o câmbio: o real mais fraco aumenta a receita e o lucro em R$ na conversão (+10% de câmbio → +10% de receita em R$) e reduz o custo em US$ da mão de obra brasileira (~+US$ 70 mi de EBIT por 10%, líquido de hedge, estimativa). Pelo canal juro, a Embraer quase não sofre: dívida em US$ a taxa fixa e caixa líquido ex-Eve perto de zero. O risco político é outro: a Defesa (14% da receita) depende do orçamento federal (KC-390, Gripen) e o fiscal piorou, mas o crescimento da Defesa hoje vem da exportação (Europa). O valor intrínseco em R$ sobe com o câmbio; o múltiplo de mercado (~20x 2027E ex-Eve) é que não se sustenta a Ke de 25%.",
+  "summary": "Embraer em ciclo de alta: receita recorde, backlog de US$ 35,7 bi (3T26), guidance de margem e caixa elevado em agosto e Defesa crescendo 38% a/a. É das poucas ganhadoras diretas da eleição, via câmbio. Avaliada sem a Eve (que entra a valor de mercado), a ação negocia ~20x o lucro de 2027, preço de qualidade global que não fecha a Ke de 25%.",
+  "thesis": [
+    "Backlog recorde de US$ 35,7 bi no 3T26 (+3% t/t, segundo a AeroTime; 4,3x a receita de 2026). Entregas do 3T26 de 66 aeronaves, melhor 3º trimestre da história.",
+    "Guidance 2026 elevado em 10/08: margem EBIT ajustada de 10,0–10,6% (antes 8,7–9,3%) e FCF ex-Eve ≥ US$ 400 mi (antes ≥ US$ 200 mi).",
+    "Câmbio: receita 100% em US$ e ~20% dos custos em R$. O deck (R$ 5,45 em 2027 contra R$ 5,20 em 2026) soma ~5 p.p. à receita em R$ de 2027.",
+    "Eve (72%) a mercado vale ~R$ 2,2 bi (~R$ 3/ação), praticamente o caixa dela. Tirá-la do modelo evita capitalizar a Ke 25% um prejuízo de P&D temporário de ~US$ 150 mi/ano."
+  ],
+  "risks": [
+    "Execução da cadeia de suprimentos (motores Pratt & Whitney do E2, peças) e concentração em poucos clientes de aviação comercial.",
+    "Tarifas dos EUA: isenção para importação direta só no 2S26. Ainda há ~US$ 12 mi/ano de tarifas indiretas, e a renovação não está garantida.",
+    "Real voltando a se apreciar (2026 com R$ 5,0–5,2 mostrou o efeito) e IR diferido cambial volátil no lucro contábil.",
+    "Eve: diluição ou necessidade de aporte se o programa eVTOL atrasar além de 2028; dependência de orçamento federal na Defesa doméstica."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (início de nov/2026)",
+    "Guidance 2027 (fev–mar/2027)",
+    "Novas encomendas do KC-390 e do E2",
+    "Pagamento dos JCP de 2T26–3T26 (24/05/2027)"
+  ],
+  "key_data": [
+    {
+      "label": "Backlog 3T26",
+      "value": "US$ 35,7 bi",
+      "context": "recorde; 2T26 US$ 34,5 bi (+16% a/a)"
+    },
+    {
+      "label": "Receita 2T26",
+      "value": "US$ 2,24 bi",
+      "context": "+23% a/a; Defesa US$ 304 mi (+38%), Executiva US$ 725 mi (+32%)"
+    },
+    {
+      "label": "EBIT ajustado 2T26",
+      "value": "13,3%",
+      "context": "10,6% sem crédito fiscal e tarifas"
+    },
+    {
+      "label": "Guidance FCF ex-Eve 2026",
+      "value": "≥ US$ 400 mi",
+      "context": "antes ≥ US$ 200 mi"
+    },
+    {
+      "label": "Eve (72%) a mercado",
+      "value": "~R$ 2,2 bi",
+      "context": "EVEX US$ 1,62 (28/10/2026); caixa da Eve US$ 403 mi no 2T26"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Embraer — Earnings Results 2nd Quarter 2026 (press release, 10/08/2026)",
+      "url": "https://www.placera.se/pressmeddelanden/embraer-earnings-results-2nd-quarter-2026-20260810"
+    },
+    {
+      "title": "Embraer — release 2T26 (PDF, segmentos e backlog)",
+      "url": "https://www.edrmagazine.eu/wp-content/uploads/2026/08/Q2-26-Embraer.pdf"
+    },
+    {
+      "title": "Pulse 2.0 — crédito fiscal e isenção de tarifas explicam US$ 106 mi dos US$ 110 mi de alta do guidance de EBIT",
+      "url": "https://pulse2.com/embraer-tax-credit-and-u-s-tariff-exemption-account-for-106-million-of-110-million-ebit-guidance-lift/"
+    },
+    {
+      "title": "AeroTime — Embraer reaches record company-wide backlog of $35.7 billion (3T26)",
+      "url": "https://www.aerotime.aero/articles/embraer-reaches-record-company-wide-backlog-of-35-7-billion/amp"
+    },
+    {
+      "title": "Zawya — Embraer delivers 66 aircraft in Q3 (2026)",
+      "url": "https://www.zawya.com/en/business/embraer-delivers-66-aircraft-in-q3-up-6-1496662"
+    },
+    {
+      "title": "Finviz — Eve Holding Reports Second Quarter 2026 Results",
+      "url": "https://finviz.com/news/376442/eve-holding-inc-reports-second-quarter-2026-results"
+    },
+    {
+      "title": "StockAnalysis — EVEX (cotação e ações, 28/10/2026)",
+      "url": "https://stockanalysis.com/stocks/evex/"
+    },
+    {
+      "title": "BCB — SGS 3698, PTAX média mensal (deck de câmbio)",
+      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.3698/dados?formato=json"
+    },
+    {
+      "title": "CVM — ITR 2T26 padronizado (data/hist/EMBJ3.json)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "média — operação e guidance claros e backlog dá visibilidade, mas o tratamento ex-Eve usa estimativas (dívida da Eve, composição dos minoritários não-Eve) e o lucro em R$ depende do câmbio; a Ke de 25% faz o DCF divergir dos múltiplos de mercado."
+}

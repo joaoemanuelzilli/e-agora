@@ -59,7 +59,7 @@ _quote_cache = {}
 # bancos — valor = ROE contra Ke sobre o PL, P/L sai (redundante com o DDM e distorcido por provisões/JCP).
 # Nos demais setores as baterias divergem e fica o padrão 50/25/25. Premissa com valuation_weights próprio prevalece (EZTC3).
 _HOMEBUILDERS = ("CURY3", "CYRE3", "DIRR3", "EZTC3", "JHSF3", "MDNE3", "MRVE3", "PLPL3", "TEND3")
-_BANKS = ("BBAS3", "BBDC4", "BRSR6", "BPAC11")
+_BANKS = ("BBAS3", "BBDC4", "BBDC3", "BRSR6", "BPAC11")
 SECTOR_WEIGHTS = {**{t: {"ddm": 0.5, "pe": 0.3, "dcf": 0.2} for t in _HOMEBUILDERS},
                   **{t: {"ddm": 0.6, "pbv": 0.4} for t in _BANKS}}
 
@@ -68,9 +68,11 @@ def live_quote(ticker):
     if ticker in _quote_cache:
         return _quote_cache[ticker]
     q = None
-    if os.environ.get("EAGORA_SNAPSHOT") == "1":  # rodada final: mesma foto de preços do módulo de mercado
-        snap = ROOT / "data" / "market" / "quotes.json"
-        if snap.exists():
+    if os.environ.get("EAGORA_SNAPSHOT") == "1":  # rodada final: foto de valuation (quotes_val) ou a do dia do crash
+        for name in ("quotes_val.json", "quotes.json"):
+            snap = ROOT / "data" / "market" / name
+            if not snap.exists():
+                continue
             sq = json.load(open(snap)).get(ticker)
             if sq and sq.get("price"):
                 q = {"price": sq["price"], "chg_pct": sq.get("chg_pct"), "prev_close": sq.get("prev_close"), "ts": sq.get("ts"), "source": "B3 (foto do estudo)"}

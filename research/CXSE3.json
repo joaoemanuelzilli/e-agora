@@ -1,0 +1,211 @@
+{
+ "ticker": "CXSE3",
+ "name": "Caixa Seguridade Participações S.A.",
+ "sector": "Financeiro / Seguros, previdência, capitalização e consórcio — holding de participações controlada pela Caixa Econômica Federal (80%)",
+ "template": "financial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "CXSE3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "balance_date": "2026-03-31"
+  },
+  "notes": "Override de balance_date (2026-03-31) SÓ para o stub de proventos. O dividendo do 2T26 (R$ 1.050 mi, R$ 0,35/ação; data-com 03/11/2026, pagamento 17/11) tem data-com depois de hoje e, portanto, é fluxo de quem compra hoje, assim como os do 3T26 (~jan/27) e do 4T26 (~mai/27). Com o balanço-base de 30/06, o motor contaria só 50% dos proventos de 2026 (dois trimestres) e perderia R$ 0,35/ação. Com f26 = 0,75, o stub fica em 0,75 × 92% × R$ 4.670 mi = R$ 3.222 mi ≈ 2T26 (1.050) + 3T26E (~1.080) + 4T26E (~1.090). PL e lucro não mudam (o motor projeta a partir do PL FY2025 de R$ 13.550 mi). Efeito colateral: o desconto do stub é antecipado em ~2 meses (+~R$ 0,10/ação no DDM). O dividendo do 1T26 (data-com 03/08, pago 17/08) fica de fora, corretamente. LL = lucro contábil CVM (CPC 50/IFRS 17): 1S26 R$ 2.310 mi vs gerencial (CPC 11) R$ 2.284 mi; os dividendos são pagos sobre o gerencial (92% no 2T26). O PL CVM inclui R$ 5.404 mi de 'ajustes de avaliação patrimonial' (ORA das investidas e efeitos de reorganização societária; composição não verificada). Por isso o ROE contábil (~34%) é cerca de metade do ROE 'recorrente' do release (70,9%, calculado sobre PL ajustado). Ações: 3.000 mi, sem tesouraria."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   0.92,
+   0.92,
+   0.92,
+   0.92,
+   0.92
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.3446,
+   0.3591,
+   0.3749,
+   0.3843,
+   0.3913
+  ],
+  "ni_growth": null,
+  "payout": [
+   0.92,
+   0.92,
+   0.92,
+   0.92,
+   0.92
+  ]
+ },
+ "terminal": {
+  "g": 0.055,
+  "roe": 0.34
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Holding financeira: sem ponte EV→equity. Aplicações da holding (R$ 1,3 bi no 2T26) e participações já estão no PL e no lucro. Arrendamento de R$ 10 mi, irrelevante."
+ },
+ "target_multiples": {
+  "pe": 10.0,
+  "ev_ebitda": null,
+  "pbv": 3.3,
+  "rationale": "P/L 10,0x sobre o LPA 2027E (R$ 1,67) e P/VP 3,3x sobre o VPA 2026E (R$ 4,64, PL CVM). Histórico (data/market, sobre LL/PL CVM de 12 meses): P/L mediana de 5 anos 12,4x (p10 9,6x; mín 8,9x), de 3 anos 12,1x; P/VP mediana de 5 anos 3,1x, de 3 anos 3,4x, e hoje 4,4x (máxima da série). Release do 2T26: P/L 13,0x e P/VPA 4,79x (VPA gerencial de R$ 4,11) em 30/06. Sexta pré-eleição: ~14,2x LTM. Alvo ~20% abaixo da mediana por três motivos. (i) Curva longa +250–300 bp encarece um papel de DY ~7% (Ke de mercado implícito de ~13,5% = DY 7% + g ~6,5%). (ii) Controle estatal com free float de só 20% e risco de canal/fees num 4º mandato. (iii) O re-rating recente (P/VP de 3,7x em jun/25 → 4,4x) já incorporou o crescimento de 2025–26. Coerência: P/VP 3,3x ≈ P/L 10x × ROE 2027E sobre o PL de abertura (35,9%) = 3,6x, com pequeno desconto. Com Ke de 25% e ROE terminal de 34%, o P/VP justo de Gordon é (34% − 5,5%) / (25% − 5,5%) = 1,46x."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.04,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "A Caixa e o governo usam o canal como política: corte de preço do seguro habitacional do MCMV, alta do fee de serviço CAIXA (hoje 11% das comissões) ou do 'acesso à rede'. O prestamista segue travado e a Selic cai para ~11% em 2028: lucro ~11% abaixo do base e g de 4,5%."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.025,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "O MCMV e o crédito imobiliário da Caixa aceleram (habitacional +15% a.a.), a previdência mantém captação forte e o prestamista volta com o consignado INSS: lucro ~8% acima do base."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.025,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "n/a — sem dívida financeira (arrendamento de R$ 10 mi); holding com R$ 1,3 bi aplicados",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 90,
+  "notes": "Sem sensibilidade oficial; a estimativa é minha. Carteira agrupada (proporcional às participações) de R$ 16,2 bi em jun/26: 42,3% pós-fixada, 33,6% prefixada e 17,3% em inflação; rendeu 13,1% em 12 meses (94% do CDI). O resultado financeiro agrupado foi 35,2% do lucro do 2T26 (+19,3% a/a). 1 p.p. de CDI × R$ 16,2 bi ≈ R$ 160 mi antes de IR ≈ R$ 90–100 mi depois (~2% do lucro). Nos primeiros 12 meses são ~R$ 40 mi, porque só a parcela pós-fixada reprecifica de imediato. Curva de 28/10 vs pré-eleição: +2,5 a +3,5 p.p. em 2027–30 ⇒ +R$ 200–300 mi/ano no regime (+4–5% do lucro). Contrapesos: o prestamista (−10% no 2T26) e o consórcio sofrem com o custo do crédito, e a marcação a mercado vai majoritariamente para o ORA das investidas (PL). A holding em si tem só ~R$ 1,3 bi aplicados (resultado financeiro de R$ 74 mi no 1S26)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.194,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.279,
+  "payout_avg_5y": 0.84,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.085,
+   "ebitda_margin": null,
+   "net_income_mn": 1160,
+   "net_debt_ebitda": null
+  },
+  "notes": "revenue_cagr_5y aqui = CAGR do LL CVM 2020–25 (1.769 → 4.292; 19,4% a.a., com a entrada das novas parcerias de 2021 e a Selic de 2% → 15%); revenue_yoy = receitas operacionais do release (+8,5%). ROE CVM 2021–25: 19,3/27,5/30,5/29,6/32,5% (média de 27,9%). Payout caixa CVM médio: 84%. Payout declarado: 89% (2023), 92% (2024), 91% (2025: R$ 3,93 bi sobre R$ 4,315 bi gerencial). Projeção: LL 2026E R$ 4,67 bi (1S26 2.310 + 2S26E 2.360, +6,6% a/a no semestre vs +11% no 1S26); 2027E R$ 5,00 bi; 2030E R$ 5,95 bi (CAGR 2026–30 de 6,3%). O ROE sobre o PL médio sobe de 34% para 38,5% porque o payout de 92% retém pouco; o terminal é de 34%."
+ },
+ "guidance": "Sem guidance numérico. 3T26 previsto para ~12/11/2026, após o fechamento (o calendário do Seu Dinheiro traz datas inconsistentes).",
+ "dividend_policy": "Dividendos trimestrais (jan, mai, ago e nov), com payout de ~90–92% do lucro gerencial (CPC 11). 2025: R$ 3,93 bi (91,1%). 1T26: R$ 1,05 bi (R$ 0,35; data-com 03/08, pago 17/08). 2T26: R$ 1,05 bi (92%; R$ 0,35; data-com 03/11, pagamento 17/11/2026). Mínimo estatutário de 25%. A Caixa (80%) usa o dividendo para o capital e para pagar a União, o que torna improvável um corte de payout. Premissa: 92% em 2026–30.",
+ "election_impact": "Caiu só −4,6% às 13h de 26/10 (R$ 21,41 → R$ 20,42) e fechou 27/10 a ~R$ 21,59 (implícito na variação de 28/10), acima da sexta. O mercado leu a reeleição como neutra a positiva para o habitacional (continuidade do MCMV e do papel da Caixa no crédito imobiliário). (i) Juros: o resultado financeiro agrupado é ~35% do lucro, e um CDI 2,5–3,5 p.p. acima da curva pré-eleição soma ~R$ 200–300 mi/ano (+4–5% do lucro). Mas o mesmo juro trava o prestamista e o consórcio e eleva o retorno exigido de um papel de DY ~7%. (ii) Risco estatal: a Caixa (80%) controla o canal. Num 4º mandato, o risco é de uso político (preço do seguro habitacional do MCMV, fee de serviço CAIXA, 'acesso à rede'), não de payout, que a Caixa precisa alto. (iii) Oferta: uma eventual venda de ações pela Caixa (free float ou capital) pesaria no preço, não no valor. Entra no ROE terminal (34% vs 38,5% em 2030E) e no bear (30%).",
+ "summary": "Holding das parcerias de bancassurance na rede da Caixa: Caixa Vida e Previdência (com a CNP), Caixa Residencial (Tokio Marine), Caixa Capitalização (Icatu), Caixa Consórcio etc. Cerca de 60% da receita vem de equivalência patrimonial (R$ 1,79 bi no 1S26, +14%); o resto, de corretagem e acesso à rede. O lucro cresce ~10% a.a. (gerencial de R$ 2,28 bi no 1S26, +11%), com payout de ~92% e ROE contábil de ~34% (70,9% no conceito do release). A eleição não muda o operacional: o CDI mais alto ajuda o financeiro e o MCMV sustenta o habitacional. Mas, a 13,5x o lucro e DY ~7%, o preço já remunera o crescimento com um Ke de mercado bem abaixo dos 25% do estudo.",
+ "thesis": [
+  "Crescimento acima dos pares: lucro gerencial +11,4% no 1S26; habitacional +14% (crédito imobiliário da Caixa), previdência com R$ 214 bi em reservas (+16%) e capitalização +25%.",
+  "Exclusividade de longo prazo na rede da Caixa (parcerias de 2021) e baixa necessidade de capital: payout de ~92% em dividendos trimestrais.",
+  "O resultado financeiro agrupado (~35% do lucro, +19% a/a no 2T26) sobe com o CDI: ~R$ 90–100 mi por p.p. no regime."
+ ],
+ "risks": [
+  "Controlador estatal (80%, free float de 20%): uso do canal como política pública e mudança de fees/comissões para a Caixa.",
+  "Prestamista (−10% no 2T26) travado pelo juro alto e pela suspensão do consignado INSS; consórcio −6%.",
+  "Uma queda futura da Selic reduz o financeiro (~35% do lucro); há marcação a mercado no ORA das investidas.",
+  "Valuation: o P/VP de 4,4x é a máxima da série, e o múltiplo é vulnerável a juros longos e a uma oferta secundária da Caixa."
+ ],
+ "catalysts": [
+  "Dividendo do 2T26: data-com 03/11 e pagamento 17/11/2026.",
+  "Resultado do 3T26 (~12/11/2026).",
+  "Orçamento do MCMV/FGTS para habitação em 2027 e diretrizes do novo mandato para a Caixa."
+ ],
+ "key_data": [
+  {
+   "label": "LL gerencial 2T26",
+   "value": "R$ 1.140,9 mi (+9,5% a/a)",
+   "context": "Contábil: R$ 1.160,0 mi (+12,8%)"
+  },
+  {
+   "label": "LL gerencial 1S26",
+   "value": "R$ 2.283,8 mi (+11,4%)",
+   "context": "Contábil: R$ 2.310,2 mi (+11,1%)"
+  },
+  {
+   "label": "Equivalência patrimonial 1S26",
+   "value": "R$ 1.787,7 mi (+14,3%)",
+   "context": "Novas parcerias R$ 1.395 mi; run-off R$ 392 mi"
+  },
+  {
+   "label": "ROE recorrente (release) 2T26",
+   "value": "70,9%",
+   "context": "ROE sobre o PL CVM: ~34%"
+  },
+  {
+   "label": "Dividendo 2T26",
+   "value": "R$ 1,05 bi (R$ 0,35/ação)",
+   "context": "Payout de 92%; data-com 03/11/26"
+  },
+  {
+   "label": "Reservas de previdência",
+   "value": "R$ 214,4 bi (+16,1%)",
+   "context": "Carteira agrupada de R$ 16,2 bi a 94% do CDI em 12 meses"
+  },
+  {
+   "label": "P/L LTM / P/VP (26/10, 13h)",
+   "value": "13,5x / 4,4x",
+   "context": "Mediana de 5 anos: 12,4x / 3,1x"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Caixa Seguridade — Release de resultados 2T26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/3972906b-e50b-4f74-ab74-4d0d32125d11/460a0d8d-9a1d-b81b-5b0d-ebbf391e4cd4?origin=2"
+  },
+  {
+   "title": "Investidor10 — CXSE3 lucra R$ 1,14 bi no 2T26 e aprova R$ 1,05 bi em dividendos (data-com 03/11)",
+   "url": "https://investidor10.com.br/noticias/caixa-seguridade-cxse3-lucra-r-1-14-bi-no-2t26-e-aprova-r-1-05-bi-em-dividendos-121972/"
+  },
+  {
+   "title": "Mercado & Consumo — Caixa Seguridade tem lucro de R$ 1,14 bi no 2T26",
+   "url": "https://mercadoeconsumo.com.br/11/08/2026/mc-capital/caixa-seguridade-tem-lucro-liquido-de-r-114-bi-no-2tri26-alta-de-95-ante-2tri25/"
+  },
+  {
+   "title": "BB Investimentos — CXSE3 1T26",
+   "url": "https://investalk.bb.com.br/noticias/mercado/CXSE1T26"
+  },
+  {
+   "title": "Seu Dinheiro — Calendário de balanços do 3T26",
+   "url": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/CXSE3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação (API oficial) e proventos",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/CXSE3"
+  }
+ ],
+ "confidence": "média — o release oficial do 2T26 foi lido; o lucro é previsível e o payout estável. Pontos frágeis: a sensibilidade a juros é estimativa minha (não há número oficial), a composição dos R$ 5,4 bi de AAP no PL não foi verificada, os prazos de exclusividade das parcerias não foram reverificados nesta rodada, e o override de balance_date é uma solução de contorno para o stub."
+}

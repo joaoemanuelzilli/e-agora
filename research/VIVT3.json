@@ -1,0 +1,264 @@
+{
+  "ticker": "VIVT3",
+  "name": "Telefônica Brasil S.A. (Vivo)",
+  "sector": "Telecomunicações / Operadora integrada (móvel, fibra, B2B)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "VIVT3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "net_debt": 26767.0
+    },
+    "notes": "DL-base substituída por R$ 26.767 mi (CVM 30/06/26: R$ 11.116 mi = debêntures/empréstimos 4.932 + arrendamentos IFRS-16 14.785 − caixa 8.629). Somamos itens que saem do caixa de 30/06 para quem NÃO compra hoje ou que são dívida de fato: (a) redução de capital de R$ 4.000 mi (R$ 1,2517/ação, data-com 22/05, paga em 14/07/26; está em 'outros passivos' CP); (b) JCP declarados no 1S26 e a pagar (R$ 1.682,5 mi no balanço; pagamento 30/04/27); (c) JCP com data-com 27/07, 26/08 e 25/09/26 (R$ 0,4225/ação = R$ 1.350 mi, pagos em 30/04/27), posteriores ao balanço; (d) passivo do grupamento/desdobramento de 2025 (R$ 824 mi: frações leiloadas, caixa devido a acionistas); (e) 'Impostos, taxas e contribuições a recolher' LP de R$ 7.794 mi — taxas do Fistel (TFF/CFRP/Condecine) com exigibilidade suspensa por liminar, que crescem ~R$ 1,2–2,4 bi/ano e são corrigidas pela Selic. Tratar (e) como dívida deixa o motor coerente: o custo anual já está no EBITDA e a correção no resultado financeiro, então o motor 'paga' o que a empresa só provisiona. Ações: 3.195,6 mi (B3 3.226,5 mi − 30,9 mi em tesouraria)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.07,
+      0.06,
+      0.055,
+      0.05,
+      0.05
+    ],
+    "ebitda_margin": [
+      0.428,
+      0.42,
+      0.422,
+      0.423,
+      0.424
+    ],
+    "da_pct_revenue": [
+      0.229,
+      0.225,
+      0.222,
+      0.22,
+      0.218
+    ],
+    "capex_pct_revenue": [
+      0.21,
+      0.21,
+      0.208,
+      0.206,
+      0.205
+    ],
+    "nwc_pct_revenue": 0.3,
+    "cost_of_net_debt": [
+      0.125,
+      0.13,
+      0.135,
+      0.14,
+      0.14
+    ],
+    "other_financial": [
+      -250,
+      -250,
+      -250,
+      -250,
+      -250
+    ],
+    "tax_rate": [
+      0.17,
+      0.19,
+      0.2,
+      0.21,
+      0.22
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      1.0,
+      1.05,
+      1.05,
+      1.05,
+      1.05
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.045,
+    "roic": 0.28,
+    "roe": 0.25
+  },
+  "wacc": {
+    "kd_pre_tax": 0.15,
+    "target_debt_weight": 0.2,
+    "notes": "Kd 15% = CDI a termo 2027–30 (~14,5–15,5%) + spread AAA local. Peso da dívida 0,20 = DL ajustada (R$ 26,8 bi) / (DL + valor de mercado pré-eleição R$ 103,6 bi)."
+  },
+  "adjustments": {
+    "other_debt_like": 4665.5,
+    "non_operating_assets": 0,
+    "minority_value": 74.0,
+    "notes": "other_debt_like R$ 4.665,5 mi = benefícios pós-emprego R$ 790,9 mi + provisão para desmantelamento R$ 415,1 mi + 50% das provisões para contingências (fiscais, trabalhistas, cíveis e regulatórias R$ 5.662 mi + passivos contingentes de combinações de negócios R$ 1.257 mi = R$ 6.919 mi). O haircut de 50% é um proxy para os depósitos judiciais, que a base padronizada não separa de 'outros ativos não circulantes' (R$ 3.855 mi). Proventos a pagar, redução de capital, frações e Fistel estão na DL-base (overrides) para não contar duas vezes. Minoritários a valor contábil (R$ 74 mi; FiBrasil 100% desde 2025). Participações em coligadas (R$ 413 mi) ficam no EBIT via equivalência."
+  },
+  "target_multiples": {
+    "pe": 10.5,
+    "ev_ebitda": 4.2,
+    "pbv": null,
+    "rationale": "P/L 10,5x LPA 2027E: data/market 5 anos — mediana 16,3x, p10 11,2x; pré-eleição 15,7x o LL UDM (R$ 32,43 × 3.195,6 mi / R$ 6.599 mi). Regra 'choque de juros neutro': rendimento do lucro 6,4% + 3 p.p. = 9,4% → 10,6x. EV/EBITDA 4,2x EBITDA 2027E na nossa definição de DL (com Fistel e proventos a pagar, ~+0,4–0,5x de EBITDA): histórico CVM mediana 4,5x, p10 4,05x, mínimo 3,85x — 4,2x aqui equivale a ~3,8x na definição CVM, no piso histórico. Múltiplos de mercado embutem Ke de ~10–13% para uma tele AAA de payout 100%; ao Ke de 25% e g de 4,5%, o P/L de Gordon seria ~5x — daí a distância entre múltiplos e DCF/DDM."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.015,
+      "ebitda_margin_shift": -0.015,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.005,
+      "narrative": "Fim/limitação do JCP na reforma da renda (alíquota efetiva de ~17% para ~28%), derrota no Fistel e guerra de preços em fibra/pós-pago; capex mais caro com câmbio."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.01,
+      "ebitda_margin_shift": 0.01,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": -0.005,
+      "narrative": "Vitória judicial no Fistel (reversão de parte dos R$ 7,8 bi), JCP preservado, venda de cobre/imóveis acima do esperado e alta de preços acima da inflação."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.015,
+    "ebitda_margin_sd": 0.01,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.005
+  },
+  "debt_profile": {
+    "gross_debt_mn": 19716.5,
+    "pct_floating_cdi": null,
+    "avg_cost": "debêntures/empréstimos R$ 4.932 mi (majoritariamente CDI+); arrendamentos R$ 14.785 mi a ~12% implícito (juros pagos/saldo)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -55,
+    "notes": "Exposição líquida a CDI/Selic ≈ Fistel (R$ 7,8 bi, corrigido pela Selic) + debêntures (~R$ 3,1 bi) − caixa médio (~R$ 3–6 bi) ≈ R$ 6–8 bi → −R$ 60–80 mi/ano pré-IR por +100 bp. Arrendamentos são majoritariamente pré-fixados no contrato (repactuam na renovação)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.0668,
+    "ebitda_margin_avg_5y": 0.414,
+    "roe_avg_5y": 0.0781,
+    "payout_avg_5y": 0.7513,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.076,
+      "ebitda_margin": 0.418,
+      "net_income_mn": 1572.6,
+      "net_debt_ebitda": 0.43
+    },
+    "notes": "Receita 2020–25 +6,7% a.a. (inclui a UPI móvel da Oi em 2022); 1S26 +7,5% a/a. Projetamos 7% em 2026 e 6%→5% depois (IPCA LP 3,5% + mix fibra/pós-pago). Margem EBITDA CVM 40–43% há 10 anos (média 2021–25: 41,4%); a coluna 2026 usa o run-rate do 2S26 (42,8%: 2S é sazonalmente mais forte e a venda de cobre/imóveis acelera no 2S), depois 42,0%→42,4%. D&A cai de 25,3% (2T26) para ~22,9% no 2S26 com o fim da depreciação acelerada do cobre (−R$ 0,3 bi/tri a partir do 3T26, segundo a companhia) e converge a 21,8% em 2030. Capex = capex caixa ~15,5% + adições de direito de uso (arrendamentos) ~5,5% = 21%→20,5%. Capital de giro 0,30 da receita incremental: sem o Fistel (tratado como dívida), o giro consumiu R$ 0,8–2,4 bi/ano em 2023–25 (recebíveis, custos de contrato IFRS 15, impostos a recuperar). Resultado financeiro: Kd 12,5%→14% sobre a DL ajustada (arrendamentos contratados a ~12%, debêntures CDI+, Fistel na Selic) + R$ −250 mi/ano de outros itens (atualização de provisões e taxas, líquido do rendimento do caixa que financia o JCP pago com ~9 meses de defasagem). Isso dá −R$ 3,7 bi em 2027, contra −R$ 2,9 bi anualizado no 1S26, quando o caixa ainda guardava os R$ 7 bi de proventos. IR efetivo 17%→22% (2025: 15%; 1S26: 19%): JCP reduz a alíquota, mas há risco regulatório crescente. Payout 100%→105% (compromisso de ≥100% do lucro de 2024–26; remuneração declarada em 2025 ≈ 115% do LL: JCP R$ 3,37 bi + redução de capital R$ 2,0 bi + recompras R$ 1,75 bi). O payout CVM do campo acima (75%) mede só dividendos pagos em caixa no ano."
+  },
+  "guidance": "Sem guidance numérico de receita/EBITDA. Compromissos (release 2T26, 27–28/07/2026): distribuir ≥100% do lucro líquido de 2026; recompra de até R$ 1,0 bi até fev/2027; D&A cai ~R$ 0,3 bi por trimestre a partir do 3T26 (fim da depreciação acelerada de cobre e legados); vendas de ativos (cobre e imóveis) devem acelerar no 2S26; efeitos da reforma tributária só a partir de 2027.",
+  "dividend_policy": "Remuneração ≥100% do lucro líquido (compromisso para 2024–2026), via JCP mensais (pagos em abril do ano seguinte), reduções de capital (R$ 1,5 bi em 2024, R$ 2,0 bi em 2025, R$ 4,0 bi pagos em 14/07/2026) e recompras com cancelamento (R$ 1,3 bi em 2024, R$ 1,75 bi em 2025; programa atual de até R$ 1,0 bi até fev/2027). Em 7M26 pagou R$ 6,99 bi (R$ 2,99 bi de JCP de 2025 + R$ 4,0 bi de redução de capital) e declarou R$ 2,22 bi de JCP de 2026 até julho (+34,5% a/a).",
+  "election_impact": "VIVT3 caiu 6,2% em 26/10 (às 13h02), menos que o Ibovespa: beta de 0,76 e beta de crise de 0,49. O canal é quase só macro: a ação é um 'título' de dividendos (DY ~8% sobre o lucro de 2026E), e o DI longo +300 bp encarece esse fluxo. O que muda de fato no valor com a reeleição: (i) risco de fim ou limitação do JCP na reforma do IR, que eleva a alíquota efetiva de ~17% para ~28% e corta ~13% do lucro — entra no bear e na alíquota crescente da base; (ii) disputa do Fistel (R$ 7,8 bi suspensos por liminar), num governo que precisa de receita; (iii) a Selic alta encarece a correção do Fistel e reduz o rendimento do caixa. Não há risco de intervenção (controle privado, Telefónica S.A.) nem dívida relevante em CDI fora o Fistel. O câmbio fraco encarece parte do capex (equipamentos em US$), mas a receita é 100% em reais e indexada à inflação.",
+  "summary": "Maior operadora do país (105 mi de acessos, 8,2 mi de clientes de fibra), com receita crescendo ~7%, margem EBITDA de ~42% e compromisso de distribuir ≥100% do lucro. Ao Ke de 25%, o valor depende do dividendo e do crescimento nominal de ~5%, e há R$ 15,6 bi de itens tipo dívida fora da DL do release (Fistel suspenso por liminar e proventos já declarados). A queda de 26/10 foi pequena e macro; os riscos micro do novo mandato são o JCP e o Fistel.",
+  "thesis": [
+    "Crescimento acima da inflação: receita 2T26 +7,6% a/a (serviço móvel +6,6%, fixo +6%), EBITDA +10,9% e margem de 41,8% (+1,3 p.p.).",
+    "Lucro sobe em 2027 sem esforço de caixa: o fim da depreciação acelerada do cobre tira ~R$ 1,2 bi/ano de D&A a partir do 3T26.",
+    "Remuneração ≥100% do lucro: R$ 6,99 bi pagos em 7M26 e R$ 2,22 bi de JCP de 2026 declarados até julho; recompra de até R$ 1 bi.",
+    "Beta baixo (0,76; 0,49 em crises): caiu só 6,2% em 26/10, contra −13,9% do Ibovespa no fechamento."
+  ],
+  "risks": [
+    "JCP: fim ou limitação na reforma da renda eleva o IR efetivo de ~17% para ~28% (−13% no lucro).",
+    "Fistel: R$ 7,8 bi de taxas suspensas por liminar (corrigidas pela Selic) e acréscimo de ~R$ 1,2–2,4 bi/ano; derrota exige caixa.",
+    "Competição em fibra (ISPs regionais, Claro+Desktop) e no pós-pago; ARPU pós-pago subiu só 0,8% a/a no 2T26.",
+    "Reforma tributária do consumo a partir de 2027 (CBS/IBS substituindo PIS/Cofins/ICMS) com efeito incerto sobre preço e margem.",
+    "Geração de caixa: FCF do 2T26 caiu 10,7% a/a (impostos e capital de giro) e analistas apontam lucro recorrentemente abaixo do esperado."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (fim de out/início de nov/2026; data não verificada)",
+    "Primeiro trimestre com D&A menor (3T26)",
+    "Execução da recompra de até R$ 1 bi (até fev/2027)",
+    "Proposta de remuneração de 2027 (redução de capital) e tramitação da reforma do IR/JCP",
+    "Decisões judiciais sobre TFF/CFRP/Condecine"
+  ],
+  "key_data": [
+    {
+      "label": "Receita líquida 2T26",
+      "value": "R$ 15,76 bi",
+      "context": "+7,6% a/a; EBITDA R$ 6,58 bi (41,8%)"
+    },
+    {
+      "label": "Lucro líquido 2T26",
+      "value": "R$ 1,57 bi",
+      "context": "+17% a/a; 1S26 R$ 2,83 bi"
+    },
+    {
+      "label": "DL CVM / ajustada",
+      "value": "R$ 11,1 bi / R$ 26,8 bi",
+      "context": "ajustada inclui Fistel R$ 7,8 bi e R$ 7,9 bi de proventos/frações a pagar"
+    },
+    {
+      "label": "Remuneração paga em 7M26",
+      "value": "R$ 6,99 bi",
+      "context": "JCP R$ 2,99 bi + redução de capital R$ 4,0 bi"
+    },
+    {
+      "label": "D&A a partir do 3T26",
+      "value": "−R$ 0,3 bi/tri",
+      "context": "fim da depreciação acelerada do cobre"
+    },
+    {
+      "label": "Queda em 26/10 (13h02)",
+      "value": "−6,2%",
+      "context": "beta 0,76; Ibovespa fechou −13,9%"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Money Times — Ações da Telefônica Brasil caem após balanço do 2T26 e dividem analistas (28/07/2026)",
+      "url": "https://www.moneytimes.com.br/acoes-da-telefonica-brasil-vivt3-caem-apos-balanco-do-2t26-e-divide-opiniao-de-analistas-o-que-desagradou-lmrs/"
+    },
+    {
+      "title": "Suno — VIVT3: queda após 2T26, FCF R$ 2,66 bi e redução de D&A a partir do 3T26 (28/07/2026)",
+      "url": "https://www.suno.com.br/noticias/vivt3-telefonica-queda-resultado-2t26-fluxo-caixa-28072026-go/amp/"
+    },
+    {
+      "title": "Newsfile — 2Q26 Results Telefônica Brasil S.A. (remuneração 7M26, recompra R$ 1 bi, ≥100% do LL)",
+      "url": "https://www.newsfilecorp.com/release/306906/2q26-results-telefonica-brasil-s.a."
+    },
+    {
+      "title": "InfoMoney — Telefônica Brasil vê lucro subir 17% no 2º tri, a R$ 1,57 bi",
+      "url": "https://www.infomoney.com.br/?p=3428013"
+    },
+    {
+      "title": "DPL News — Vivo: Fistel perdeu sentido e liminar garante não pagamento da taxa",
+      "url": "https://dplnews.com/brasil-vivo-fistel-perdeu-sentido-e-liminar-garante-nao-pagamento-da-taxa/"
+    },
+    {
+      "title": "Teletime — Teles conseguem liminar contra TFF (30/03/2020)",
+      "url": "https://teletime.com.br/30/03/2020/pagamento-do-fistel-deve-ser-postergado-por-pelo-menos-15-dias-teles-conseguem-liminar-contra-tff/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais, consultado em 26/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "média — base contábil sólida e previsível, mas o valor ao Ke de 25% é muito sensível ao tratamento do Fistel (R$ 7,8 bi como dívida), das provisões (haircut de 50% sem dado de depósitos judiciais) e ao regime do JCP."
+}

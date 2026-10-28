@@ -1,0 +1,265 @@
+{
+ "ticker": "CSMG3",
+ "name": "Copasa — Companhia de Saneamento de Minas Gerais",
+ "sector": "Utilities / saneamento (água e esgoto em ~75% dos municípios de MG; privatizada em jun/2026, Equatorial 30%)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "CSMG3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 7422.5
+  },
+  "notes": "Receita-base FY2025 = receita líquida CVM R$ 8.330,2 mi − receita de construção (ICPC 01, conta 3.01.03) R$ 907,7 mi = R$ 7.422,5 mi (água R$ 4.891 mi + esgoto R$ 2.526 mi + resíduos R$ 5 mi). A Copasa registra construção com margem zero (custo de construção idêntico), então o EBITDA CVM não muda; a margem passa a ser medida sobre a receita de serviços (FY2025: 39,8%; 1S26 ajustado: 39,9%). Capex inclui o investimento em ativo de contrato/intangível (inclusive capitalizações de pessoal e materiais), mas não os R$ 1,3 bi + R$ 0,3 bi do convênio de Belo Horizonte, que já estão no intangível e no passivo (Obrigações com o Poder Concedente) e por isso entram em other_debt_like. Ações: 379,18 mi em circulação (B3 = CVM)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.075,
+   0.095,
+   0.1,
+   0.1,
+   0.095
+  ],
+  "ebitda_margin": [
+   0.395,
+   0.42,
+   0.445,
+   0.465,
+   0.475
+  ],
+  "da_pct_revenue": [
+   0.133,
+   0.137,
+   0.141,
+   0.145,
+   0.148
+  ],
+  "capex_pct_revenue": [
+   0.44,
+   0.42,
+   0.4,
+   0.38,
+   0.355
+  ],
+  "nwc_pct_revenue": 0.08,
+  "cost_of_net_debt": [
+   0.128,
+   0.133,
+   0.135,
+   0.135,
+   0.133
+  ],
+  "other_financial": [
+   100,
+   100,
+   100,
+   100,
+   100
+  ],
+  "tax_rate": [
+   0.19,
+   0.21,
+   0.22,
+   0.22,
+   0.23
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.3,
+   0.5,
+   0.5,
+   0.5,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.14,
+  "roe": 0.17
+ },
+ "wacc": {
+  "kd_pre_tax": 0.14,
+  "target_debt_weight": 0.3
+ },
+ "adjustments": {
+  "other_debt_like": 2035,
+  "non_operating_assets": 0,
+  "minority_value": 0,
+  "notes": "other_debt_like (balanço CVM 2T26 + proventos posteriores) = Obrigações com o Poder Concedente R$ 1.194,9 mi (convênio BH: R$ 1,3 bi a repassar ao município em 2026–28 + R$ 0,3 bi da ACP de recomposição asfáltica, a valor presente; já ativados no intangível, fora do capex projetado) + derivativos passivos R$ 197,2 mi (hedges das dívidas em euro; a Copasa os inclui na DL de R$ 8.177 mi, a CVM não) + PPP Rio Manso R$ 104,0 mi + benefícios pós-emprego R$ 49,4 mi + provisão para demandas judiciais R$ 250,5 mi (trabalhistas em alta) + JCP do 2T26 R$ 142,5 mi (data-com 23/06, pago 17/08, ainda no caixa do balanço) + JCP do 3T26 R$ 96,9 mi (R$ 0,2556/ação, data-com 21/09/2026, pagamento 09/11/2026: quem compra hoje não recebe). Total R$ 2.035 mi. A DL CVM (R$ 7.862 mi) já inclui arrendamentos (R$ 130 mi). Não incluí como ativo o ativo financeiro de indenização (R$ 2,1 bi), que é parte do valor da concessão (perpetuidade). Payout de 2026 reduzido para 30% para tirar do stub o JCP do 3T26 já 'com data-com'."
+ },
+ "target_multiples": {
+  "pe": 12.0,
+  "ev_ebitda": 7.0,
+  "pbv": 1.8,
+  "rationale": "multiples_history: P/L 5 anos mediana 7,5x e EV/EBITDA 4,8x (era estatal, com desconto de governança); depois da privatização o mercado reprecificou para P/L 15–18x e EV/EBITDA 9–10,6x (jul–set/2026), níveis que embutem Ke de ~11–13% (a XP fala em TIR real de 12,1% a ~R$ 60). Uso P/L 12x sobre o LPA 2027E do motor, igual ao alvo da Sabesp. Esse LPA é ~28% menor que o contábil, porque exclui ~R$ 330 mi/ano de atualização não caixa do ativo financeiro e cobra no resultado os juros que a Copasa capitaliza; equivale a ~8,7x o LPA contábil. EV/EBITDA 7,0x 2027E (IFRS-16, EV com os R$ 2,0 bi de itens tipo dívida), um pouco abaixo dos 7,5x da Sabesp. Os dois métodos dão R$ 35–39. O desconto à Sabesp reflete o risco político novo em MG (governador eleito crítico de concessões) e uma regulação menos testada."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.03,
+   "narrative": "Governo Cleitinho (posse em jan/2027) pressiona a Arsae-MG: reajustes abaixo da fórmula e reconhecimento parcial do capex; sindicatos e TCE travam o plano de eficiência da Equatorial; CDI acima de 15% até 2029."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.015,
+   "ebitda_margin_shift": 0.025,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.02,
+   "narrative": "Equatorial repete o roteiro da Sabesp: margem acima de 50% em 2029, novos contratos (URAED-1, esgoto em 273 municípios) e rolling forward anual reconhecem o capex; curva devolve o choque."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.025,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.03
+ },
+ "debt_profile": {
+  "gross_debt_mn": 9568,
+  "pct_floating_cdi": 0.32,
+  "avg_cost": "Cupom médio 9,5% a.a. (jun/26, sem a inflação); mix: ~59% IPCA+ (7,1–8,6%, incluindo o euro com hedge para IPCA+6–10%), ~32% CDI+0,5–1,3%, ~8% TR+7,3–9% (FGTS/CEF). Passivo circulante de dívida: R$ 778 mi (12 meses)",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -12,
+  "notes": "Exposição direta a CDI: ~R$ 3,0 bi de debêntures CDI+ contra caixa de ~R$ 1,5 bi rendendo CDI → +100 bp ≈ −R$ 15 mi/ano antes de IR (≈ −R$ 12 mi após IR). O canal maior é o IPCA (59% da dívida em IPCA+, ~R$ 5,5 bi): +1 p.p. de IPCA ≈ −R$ 55 mi/ano de despesa, parcialmente compensado pela tarifa (reajuste anual por IPCA). E o custo marginal: o plano de ~R$ 3,5–4,2 bi/ano será financiado com dívida nova (CDI+0,5–0,7% ou IPCA+8,2–8,6% nas últimas emissões); com a DL indo de R$ 7,9 bi para ~R$ 15–16 bi em 2030, a sensibilidade dobra. Custo da DL na premissa: 12,8% no 2S26 → 13,3–13,5% em 2027–30 (curva DI F28 14,46%, F29 14,91%; IPCA 4–4,5%)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.093,
+  "ebitda_margin_avg_5y": 0.33,
+  "roe_avg_5y": 0.145,
+  "payout_avg_5y": 0.56,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.089,
+   "ebitda_margin": 0.39,
+   "net_income_mn": 227,
+   "net_debt_ebitda": 2.8
+  },
+  "notes": "CAGR 2020–25 CVM (9,3%) inclui construção; a receita de serviços cresceu 6,1% a.a. em 2023–25 (R$ 6.592 → 7.422 mi) sob a regulação estatal (WACC pós-impostos 7,92%). Margem EBITDA média CVM 33% sobre receita total; sobre receita de serviços, 39–40% em 2023–25. Premissa: receita +7,5% em 2026 (3ª RTP de 6,56% desde 22/01/2026 + volume +2,1%) e +9–9,5% a.a. em 2027–30, abaixo do que daria o reconhecimento anual integral do capex (base de ativos crescendo ~15% a.a. com capex de R$ 3,5–4,2 bi contra D&A de ~R$ 1,1–1,7 bi). Margem 39,5% → 47,5% em 2030: metade vem da alavancagem operacional (receita indexada à base de ativos, opex à inflação) e metade da eficiência da Equatorial (pessoal R$ 1,7 bi/ano; 9.733 empregados para 11,9 mi de habitantes). ROE 2021–25 médio 14,5% (2023–25 ~17%). Payout médio 56% (proventos/LL)."
+ },
+ "guidance": "Sem guidance formal. Programa de investimentos de 2026 de ~R$ 3,48 bi incluindo capitalizações (release 2T26), mais R$ 1,3 bi a repassar a BH em 2026–28 (fundos de vale, incorporados à base regulatória). Cobertura de água >99%; esgoto 80,1% contra meta de 90% em 2033. Conselho decidiu (11/12/2025) pagar 50% do lucro ajustado em 2026; a nova gestão (Equatorial, desde a AGE de 28/09/2026) ainda não divulgou plano nem política nova.",
+ "dividend_policy": "Política de 2023: 25% a 50% do lucro líquido, declarações trimestrais (JCP), pagamento em até 60 dias. Para 2026, 50% do lucro ajustado (RCA de 11/12/2025): JCP 1T26 R$ 177,6 mi, 2T26 R$ 142,5 mi, 3T26 R$ 96,9 mi (data-com 21/09, pagamento 09/11). Payout médio 2021–25 de 56%. Com o fim do acordo de acionistas (29/09/2026), a Equatorial decide sozinha investimentos e dividendos; a holding financiou a compra com ponte de ~R$ 7,5 bi, o que favorece payout alto. Premissa: 50% em 2027–30 (2026 em 30% só para tirar do fluxo o JCP do 3T26 já com data-com).",
+ "election_impact": "Caiu 20,9% em 26/10 (R$ 64,58 → R$ 51,07 na foto das 13h02); em 28/10 está em ~R$ 50. Canal macro: o plano de capex de ~R$ 4 bi/ano é financiado com dívida, 59% dela em IPCA+ e 32% em CDI+, e a alta de ~300 bp na curva encarece a dívida marginal e o Ke de mercado. Canal político estadual, não federal: o poder concedente são os municípios e o regulador é a Arsae-MG (autarquia estadual). O governador eleito em 04/10 (Cleitinho, Republicanos, 55,4% no 1º turno) é crítico de concessões: segundo a imprensa, tratou a Copasa como 'patrimônio' de Minas na campanha, e já levou ao TCE-MG um reajuste de pedágio. Daí o risco de pressão sobre a Arsae nos reajustes de 2028 em diante. A eleição presidencial não muda contrato, tarifa nem o Marco do Saneamento. Parte da queda devolve o rali de +78% em 12 meses (re-rating da privatização).",
+ "summary": "Privatizada em jun/2026 (Equatorial 30%, Estado 5% + golden share); a tese é a de 'Sabesp 2.0': eficiência de custos, contratos renovados até 2073 com WACC regulatório maior (13,7% pré-impostos) e reconhecimento anual do capex. O valor depende de executar ~R$ 20 bi de capex até 2030 com dívida a 13–15%: a Ke de 25%, crescer a um retorno regulatório nominal de ~14% destrói valor, e o novo governo de MG adiciona risco regulatório.",
+ "thesis": [
+  "3ª Revisão Tarifária (22/01/2026): WACC pré-impostos de 13,70% (9,79% pós-impostos, contra 7,92% no ciclo anterior), reconhecimento anual dos investimentos e compartilhamento de eficiência só a partir da 4ª RTP (25%).",
+  "43 contratos renovados até 07/02/2073 (37,5% da receita, incluindo BH, Contagem e Betim); prazo médio da carteira foi de 13 para 29 anos.",
+  "Espaço de eficiência: margem EBITDA ajustada de 39% contra ~58% da Sabesp; perdas caíram de 37,6% para 35,0% em 12 meses e o headcount caiu 2,6%.",
+  "Alavancagem moderada (2,8x DL/EBITDA no 2T26) e ratings AAA(bra)/AAA.br permitem financiar o plano com dívida longa."
+ ],
+ "risks": [
+  "Político-regulatório: governador eleito de MG (Cleitinho, posse em jan/2027) é crítico de concessões e reajustes; a Arsae-MG é estadual e o Estado mantém golden share e uma cadeira no conselho.",
+  "Capex intensivo (~44% da receita) com retorno regulatório nominal de ~14% contra Ke de 25% e dívida marginal de 13–15%; DL deve ir de R$ 7,9 bi para ~R$ 15 bi até 2030.",
+  "Contingências trabalhistas em alta (demandas judiciais +77% a/a no 2T26) e 58 concessões vencidas (5,2% da receita).",
+  "Execução: transição de gestão (Equatorial desde 28/09/2026), possível PDV com custo não recorrente, e o mercado já paga múltiplo de 'privatização bem-sucedida'."
+ ],
+ "catalysts": [
+  "Resultado 3T26, o primeiro sob a Equatorial (≈ meados de nov/2026)",
+  "Plano estratégico/capex e eventual nova política de dividendos da gestão Equatorial",
+  "Reajuste anual da Arsae-MG (vigência ~jan/2027) e posse do novo governador (01/01/2027)",
+  "Adesão de municípios à URAED-1 e novos contratos de esgoto (273 municípios elegíveis)"
+ ],
+ "key_data": [
+  {
+   "label": "Receita de serviços 2T26",
+   "value": "R$ 1.952 mi (+8,9% a/a)",
+   "context": "construção R$ 319 mi à parte (margem zero)"
+  },
+  {
+   "label": "EBITDA ajustado 2T26",
+   "value": "R$ 762 mi (+11,7%)",
+   "context": "margem 39,0%; reportado R$ 700 mi (TCE R$ 60 mi não recorrente)"
+  },
+  {
+   "label": "Lucro líquido 2T26",
+   "value": "R$ 227 mi (−21,5%)",
+   "context": "ajustado R$ 275,5 mi (−4,8%); waivers da desestatização no financeiro"
+  },
+  {
+   "label": "DL / DL/EBITDA jun/26",
+   "value": "R$ 8,18 bi / 2,8x",
+   "context": "inclui derivativos; + R$ 1,2 bi de obrigações com BH fora da DL"
+  },
+  {
+   "label": "Privatização",
+   "value": "R$ 49,03/ação (jun/2026)",
+   "context": "Equatorial 30%, Estado 5% + golden share; acordo de acionistas rescindido em 29/09"
+  },
+  {
+   "label": "Capex",
+   "value": "1S26 R$ 1,54 bi (+27%)",
+   "context": "programa 2026 ~R$ 3,48 bi"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Copasa — Release de Resultados 2T26 (12/08/2026), cópia em investidor10",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/CSMG3/47519/"
+  },
+  {
+   "title": "Money Times — Privatização da Copasa a R$ 49,03 por ação",
+   "url": "https://www.moneytimes.com.br/privatizacao-da-copasa-csmg3-movimenta-r-83-bilhoes-com-venda-de-acoes-a-r-4903-diz-valor/"
+  },
+  {
+   "title": "Agência Infra — Equatorial comunica intenção de rescindir acordo de acionistas (25/09/2026)",
+   "url": "https://agenciainfra.com/blog/copasa-informa-intencao-de-investidora-de-rescindir-acordo-de-acionistas/"
+  },
+  {
+   "title": "Cenário Energia — Equatorial assume governança da Copasa (30/09/2026)",
+   "url": "https://cenarioenergia.com.br/2026/09/30/grupo-equatorial-assume-governanca-copasa-augusto-dantas/"
+  },
+  {
+   "title": "O Fator — 'Alerta amarelo' do mercado com gesto de Cleitinho (07/10/2026)",
+   "url": "https://ofator.com.br/sem-categoria/o-alerta-amarelo-do-mercado-financeiro-com-gesto-de-cleitinho/"
+  },
+  {
+   "title": "TSE — Cleitinho Azevedo eleito governador de MG (04/10/2026)",
+   "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/cleitinho-azevedo-republicanos-e-eleito-governador-de-minas-gerais"
+  },
+  {
+   "title": "InfoMoney — XP vê Copasa ainda barata (14/07/2026)",
+   "url": "https://www.infomoney.com.br/?p=3409990"
+  },
+  {
+   "title": "Investimentos.com.br — Análise do 2T26 da Copasa",
+   "url": "https://investimentos.com.br/artigos/analise-dos-resultados-do-2t26-de-copasa-csmg3/"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/CSMG3.json"
+  }
+ ],
+ "confidence": "média — base contábil limpa (release 2T26 e CVM conferidos, construção excluída); o valor depende de três drivers incertos: reconhecimento tarifário do capex, ganho de eficiência da Equatorial (margem 39,5% → 47,5%) e a postura do novo governo de MG em relação à Arsae."
+}

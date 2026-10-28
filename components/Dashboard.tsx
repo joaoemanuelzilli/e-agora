@@ -61,11 +61,11 @@ export const avg = (a?: (number | null)[] | null) => {
 };
 
 export function Hero({ rows, ke }: { rows: LiveRow[]; ke: number }) {
-  const sorted = [...rows].filter((r) => r.L.price).sort((a, b) => (b.L.irr ?? -1) - (a.L.irr ?? -1));
+  const sorted = [...rows].filter((r) => r.L.price).sort((a, b) => (b.L.irr ?? -1) - (a.L.irr ?? -1)).slice(0, 25);
   return (
     <Dumbbell
       ke={ke}
-      title="Preço de hoje contra valor justo, das 59 que mais caíram"
+      title="As 25 maiores TIRs de dono: preço de agora contra valor justo"
       subtitle={`Ordenado pela TIR de dono. Faixa azul: TIR acima do Ke de ${Math.round(ke * 100)}%. Escala logarítmica.`}
       rows={sorted.map((r) => ({ ticker: r.ticker, name: r.name, price: r.L.price as number, fair: r.L.fair, pre: r.prev_close, irr: r.L.irr, href: `/empresa/${r.ticker}` }))}
       table={{
@@ -154,7 +154,7 @@ export function Screener({ rows, ke, opps }: { rows: LiveRow[]; ke: number; opps
                     <Link href={`/empresa/${r.ticker}`} className="group flex items-baseline gap-2">
                       <span className="font-semibold group-hover:text-accent">{r.ticker}</span>
                       <span className="max-w-[150px] truncate text-[12px] text-muted">{r.name}</span>
-                      {isOpp && <span className="rounded bg-accent-soft px-1 text-[10.5px] text-accent-ink" style={{ background: "var(--accent-soft)" }}>relatório</span>}
+                      {isOpp && <span className="rounded bg-accent-soft px-1 text-[10.5px] text-accent-ink" style={{ background: "var(--accent-soft)" }}>oportunidade</span>}
                     </Link>
                     <div className="text-[11px] text-muted">{r.sector?.subsetor}</div>
                   </td>

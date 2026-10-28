@@ -1,0 +1,254 @@
+{
+  "ticker": "LEVE3",
+  "name": "MAHLE Metal Leve S.A.",
+  "sector": "Autopeças / Componentes de motor (pistões, anéis, bronzinas, camisas), filtros e gerenciamento térmico; equipamento original, reposição e exportação",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "LEVE3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem override. Ações: 135,54 mi (B3 = CVM, sem tesouraria). DL CVM de R$ 1.099 mi = financiamentos de R$ 1.556,6 mi + arrendamentos de R$ 42,2 mi − caixa e aplicações de R$ 499,7 mi. O release mostra R$ 1.103,1 mi: exclui os arrendamentos e soma o mútuo com a controladora, de R$ 46,2 mi, que vai em other_debt_like. A margem EBITDA CVM inclui dois itens não caixa: equivalência (~R$ 16 mi/ano) e o ganho de posição monetária da controlada argentina (IAS 29, R$ 36 mi no 1S26), parcialmente compensado por custo inflacionado. O release mostra a margem do 1S26 sem IAS 29 em 20,1%, contra 20,3% na CVM, e projetamos nessa base."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.0,
+      0.05,
+      0.06,
+      0.055,
+      0.05
+    ],
+    "ebitda_margin": [
+      0.193,
+      0.195,
+      0.195,
+      0.195,
+      0.195
+    ],
+    "da_pct_revenue": [
+      0.024,
+      0.024,
+      0.024,
+      0.024,
+      0.024
+    ],
+    "capex_pct_revenue": [
+      0.026,
+      0.028,
+      0.028,
+      0.028,
+      0.028
+    ],
+    "nwc_pct_revenue": 0.2,
+    "cost_of_net_debt": [
+      0.06,
+      0.065,
+      0.07,
+      0.075,
+      0.08
+    ],
+    "other_financial": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tax_rate": [
+      0.28,
+      0.28,
+      0.28,
+      0.28,
+      0.28
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      0.65,
+      0.65,
+      0.7,
+      0.7,
+      0.7
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.04,
+    "roic": 0.35,
+    "roe": 0.45
+  },
+  "wacc": {
+    "kd_pre_tax": 0.11,
+    "target_debt_weight": 0.15,
+    "notes": "Kd marginal ≈ 11%: NCE em euro a ~5% com ~2%/ano de depreciação esperada do real (≈7% em R$) e FINAME a 12%; a alternativa em reais seria CDI+1% ≈ 16%. wd de 15% ≈ DL/(DL + valor de mercado pré-eleição) = 1.099/(1.099 + 5.115) = 18%, arredondado para baixo porque a DL cai com a geração de caixa."
+  },
+  "adjustments": {
+    "other_debt_like": 172,
+    "non_operating_assets": 0,
+    "minority_value": 2.2,
+    "notes": "other_debt_like soma: mútuo a pagar à MAHLE (fornecedores estrangeiros partes relacionadas, que a companhia inclui na própria DL) R$ 46,2 mi; provisão para passivos ambientais e de desativação R$ 41,8 mi; e 50% das provisões fiscais, trabalhistas e previdenciárias de R$ 167,9 mi, ou R$ 84 mi. O haircut serve de proxy para depósitos judiciais (não abertos no ITR que lemos) e para o prazo longo de desembolso. Total R$ 172 mi. Não há proventos declarados e não pagos: R$ 1,8 mi a pagar no 2T26, e os proventos de 2025 (R$ 386,5 mi) foram quitados até 27/05/2026. A participação em coligada (R$ 67,9 mi) fica no EBITDA via equivalência, sem somar como ativo, para não contar duas vezes. Minoritários irrelevantes (R$ 2,2 mi)."
+  },
+  "target_multiples": {
+    "pe": 6.5,
+    "ev_ebitda": 4.8,
+    "pbv": 3.0,
+    "rationale": "Histórico próprio (multiples_history): P/L mediano de 6,7x (5 e 3 anos) e de 7,2x no último ano; EV/EBITDA de 5,1x (5 anos) e 5,4x (1 ano). Antes da eleição a ação estava a 6,6x o LL UDM e 5,3x o EBITDA. Usamos 6,5x o LPA 2027E e 4,8x o EBITDA 2027E (base CVM IFRS-16, a mesma da DL). Ficam ~5% abaixo das medianas porque o Ke do estudo (25%) supera o embutido no mercado; o desconto é pequeno porque o payout de 60–70% e o ROE acima de 40% sustentam o múltiplo. Como o P/VP de 4,5x reflete o PL encolhido por dividendos e pelo ágio das aquisições de 2024 (−R$ 345 mi em ORA), ele não serve de âncora."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.03,
+      "ebitda_margin_shift": -0.02,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Juros altos derrubam vendas de veículos em 2027, importados chineses pressionam a reposição, a Argentina segue fraca e a margem volta aos 17–18% de 2025."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.01,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Real a R$ 5,5–5,6 impulsiona exportações (28% da receita), as sinergias das aquisições de 2024 seguem acima do laudo e o off-road ganha escala: margem de 20,5% e payout perto de 80%."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.03,
+    "ebitda_margin_sd": 0.015,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.004
+  },
+  "debt_profile": {
+    "gross_debt_mn": 1557,
+    "pct_floating_cdi": 0.0,
+    "avg_cost": "6,0% a.a. (1S26): NCE em euro 80,4% a 5,1%; FINEP 6,8% a 5,4%; FINAME/BNDES 12,7% a 12,0%. As NCE são lastreadas em exportações futuras, com hedge natural; a variação cambial delas não tem efeito caixa imediato",
+    "avg_maturity_years": 1.7,
+    "next_24m_maturities_mn": 953,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": 3,
+    "notes": "A dívida praticamente não usa CDI (euro, FINEP, FINAME), e o caixa de R$ 500 mi rende CDI. +100 bp ≈ +R$ 5 mi pré-IR (+R$ 3 mi no lucro). O canal financeiro da eleição é o câmbio: euro/real de 5,91 (30/06) para ~6,2 (+5–6%) gera perda contábil de ~R$ 60–75 mi pré-IR na NCE de R$ 1,25 bi, sem efeito caixa e compensada ao longo do tempo pela receita de exportação (28% da receita, R$ 1,4 bi/ano)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.1761,
+    "ebitda_margin_avg_5y": 0.2079,
+    "roe_avg_5y": 0.5407,
+    "payout_avg_5y": 0.83,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": -0.027,
+      "ebitda_margin": 0.208,
+      "net_income_mn": 159.5,
+      "net_debt_ebitda": 1.05
+    },
+    "notes": "Receita de 2020 a 2025 +17,6% a.a.: base de 2020 deprimida pela pandemia, mais as aquisições de 2024 (gerenciamento térmico), que somaram +19% em 2025. Em 3 anos, +8,6% a.a.; o orgânico fica ~5–6%. O 1S26 caiu 1,8%: o OE doméstico subiu 3,2%, mas a reposição recuou 6,2% e a exportação 3,2%. Projetamos 2026 estável (run-rate do 2S26 ≈ 2S25, com câmbio ajudando a exportação no 4T26) e depois 5–6% a.a., com a produção brasileira de veículos em +5,8% (Anfavea 2026). A margem EBITDA CVM fica em 19,3–19,5%, perto do 1S26 sem IAS 29 (20,1%) e da média 2022–25 (20,4%), abaixo dos 22,8% de 2021. O payout de 65–70% segue a prática de 2024–25 (59% e 63,5%). A média de 83% em 5 anos inclui o dividendo extraordinário de 2023 (180%). O ROE de 50–60% vem do PL pequeno (R$ 0,96 bi) após dividendos altos e o ágio de 2024 no PL."
+  },
+  "guidance": "Sem guidance numérico. Release do 2T26 (12/08/2026) e videoconferência (13/08): ambiente competitivo mais desafiador, sobretudo na reposição (importados) e na Argentina; ganho de participação no OE; foco em eficiência, sinergias das aquisições de 2024 (EBIT acima dos laudos de avaliação) e expansão em off-road. Anfavea (citada no release): emplacamentos de mais de 3 mi em 2026 (+11,7%), produção +5,8%, exportações de veículos −12,8%, caminhões e ônibus −6%.",
+  "dividend_policy": "Distribuição semestral e trimestral, com JCP e dividendos complementares; percentual mínimo estatutário não reconferido nesta rodada. Proventos referentes a 2025: R$ 386,5 mi (63,5% do LL), com JCP do 1S25 (data-com 14/11/2025), JCP do 4T25 (16/12/2025) e dividendos de R$ 2,036/ação (data-com 29/04/2026, pagos em 27/05/2026). Payout de 59% em 2024 e de 96% em 2022; em 2023, extraordinário de R$ 1,34 bi. A controladora MAHLE GmbH tem a grande maioria das ações, e dividendos altos são o canal natural de remessa.",
+  "election_impact": "LEVE3 caiu 15,2% em 26/10, menos que o SMLL e em linha com o beta baixo (0,65–0,69). O canal é quase todo de custo de capital, porque o micro muda pouco. A favor: 28% da receita é exportação (euro e dólar) e os custos são em reais, então o real mais fraco melhora a margem do 4T26 em diante; a dívida não usa CDI (NCE em euro a 5,1%, FINEP, FINAME), e o caixa de R$ 500 mi rende mais com o DI alto. Contra: (i) o OE doméstico (~40% da receita) e a reposição dependem de crédito ao consumidor e de frota rodando; com DI de 14,5–15% por mais tempo, 2027 tende a ser mais fraco que os +11,7% de emplacamentos de 2026; (ii) a NCE em euro gera perda cambial contábil no 4T26 (~R$ 60–75 mi pré-IR, sem efeito caixa); (iii) importados chineses na reposição e na Argentina. Não há risco regulatório ou de intervenção relevante.",
+  "summary": "Líder brasileira em componentes de motor e filtros, com geração de caixa alta e estável: margem EBITDA de ~20%, ROE acima de 50% e payout de ~60–70%. A dívida (DL/EBITDA de 1,05x) é barata, em euro e lastreada em exportações. O valor depende de manter a margem perto de 19,5% com o mercado doméstico de veículos esfriando sob juros altos; o choque eleitoral pesa mais no Ke do que no lucro.",
+  "thesis": [
+    "Margens resilientes: EBIT de 18,4% e EBITDA de 20,8% no 2T26, mesmo com a receita caindo 2,7% a/a; o EBITDA do 1S26 sem IAS 29 subiu de 18,8% para 20,1% com sinergias e fretes menores.",
+    "Remuneração: R$ 386,5 mi distribuídos sobre 2025 (63,5% do LL), sem proventos pendentes de data-com passada.",
+    "Dívida barata e casada com exportação: custo médio de 6,0% a.a. (80% em NCE em euro a 5,1%), sem exposição ao CDI e DL/EBITDA de 1,05x.",
+    "Câmbio a favor: 28% da receita é exportação; real mais fraco desde 26/10 ajuda a margem a partir do 4T26.",
+    "Diversificação de 2024 (gerenciamento térmico) reduz a dependência do motor a combustão; EBIT das aquisições acima dos laudos (release do 2T26)."
+  ],
+  "risks": [
+    "Eletrificação no longo prazo: pistões, anéis e bronzinas dependem do motor a combustão. O mercado brasileiro (flex e híbrido a etanol) e a reposição de uma frota velha alongam o ciclo; o g terminal é de 4%.",
+    "Ciclo doméstico: com juros altos por mais tempo, 2027 pode trazer queda de produção e de reposição.",
+    "Concorrência de importados (China) na reposição e no mercado argentino; hiperinflação e câmbio na Argentina (IAS 29).",
+    "Governança de controlada: preços de transferência, mútuos e aquisições intragrupo (as de 2024 foram feitas com a MAHLE, com efeito de −R$ 345 mi no PL).",
+    "Perda cambial contábil na NCE em euro quando o real se desvaloriza (volatilidade do LL)."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (previsto para 11/11/2026)",
+    "JCP do 1S26 (em 2025, a data-com do equivalente foi 14/11)",
+    "Dividendo complementar de 2026 (abril–maio de 2027)",
+    "Dados mensais da Anfavea de produção e emplacamentos"
+  ],
+  "key_data": [
+    {
+      "label": "Margem EBITDA 2T26",
+      "value": "20,8%",
+      "context": "ajustada de 20,5%; 1S26 sem IAS 29 de 20,1% (contra 18,8% no 1S25)"
+    },
+    {
+      "label": "DL/EBITDA ajustado 1S26",
+      "value": "1,05x",
+      "context": "DL de R$ 1.103 mi; custo médio de 6,0% a.a."
+    },
+    {
+      "label": "Proventos sobre 2025",
+      "value": "R$ 386,5 mi",
+      "context": "63,5% do LL; último pagamento em 27/05/2026"
+    },
+    {
+      "label": "Exportação/receita 1S26",
+      "value": "28%",
+      "context": "R$ 722 mi de R$ 2.589 mi"
+    },
+    {
+      "label": "Deck de câmbio",
+      "value": "R$/US$ 5,28 (2S26) · 5,45 (2027) · 5,55–5,65 (2028–30)",
+      "context": "euro/real ~1,16x o dólar; exportação (28%) ganha ~R$ 14 mi de receita/ano por 1% de real mais fraco"
+    },
+    {
+      "label": "Vencimentos em 12 meses",
+      "value": "R$ 586 mi",
+      "context": "37,6% da dívida; refinanciamento em NCE em euro"
+    }
+  ],
+  "sources": [
+    {
+      "title": "MAHLE Metal Leve — Release de resultados 2T26/1S26 (12/08/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/6b90b8ef-4914-4021-8296-c5aca7b388eb/f6b3a1fb-748d-aadc-d1f1-1af157aef8e0?origin=2"
+    },
+    {
+      "title": "MAHLE Metal Leve — Apresentação da videoconferência 2T26 (13/08/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/6b90b8ef-4914-4021-8296-c5aca7b388eb/89745070-1ebb-5782-9798-030a36f5fdd5?origin=2"
+    },
+    {
+      "title": "Meus Dividendos — LEVE3 aprova R$ 275,99 mi (R$ 2,036/ação), data-com 29/04/2026",
+      "url": "https://www.meusdividendos.com/news/leve3-dividendos-de-r2036-por-acao-geram-yield-de-581"
+    },
+    {
+      "title": "Renova Invest — LEVE3 lucra R$ 159,6 mi no 2T26",
+      "url": "https://renovainvest.com.br/?p=103521"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/LEVE3.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    },
+    {
+      "title": "B3 — proventos (GetListedSupplementCompany) e cotação (foto de 26/10/2026 13h02)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    }
+  ],
+  "confidence": "média-alta — base contábil limpa e conferida no release (dívida, custo, vencimentos, proventos); a incerteza está no ciclo doméstico de 2027 e no longo prazo do motor a combustão, não nos números."
+}

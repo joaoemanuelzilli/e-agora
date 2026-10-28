@@ -1,0 +1,275 @@
+{
+ "ticker": "BRAP4",
+ "name": "Bradespar S.A.",
+ "sector": "Holding de participação (ativo único: 3,84% da Vale)",
+ "template": "holding",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "BRAP4",
+   "class": "PN"
+  },
+  {
+   "ticker": "BRAP3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override: 393,10 mi ações (137,99 mi ON + 255,11 mi PN; CVM, B3 e boletim de RI, sem tesouraria). As PN têm prioridade e dividendo 10% maior que as ON; o motor divide o equity pelo total de ações, o que é neutro dentro da margem de erro. O consolidado CVM não é usado (template holding): o único ativo é a Vale, avaliada por equivalência (contábil R$ 7.746 mi)."
+ },
+ "projection": {
+  "_comment": "Não usado pelo template holding. A Bradespar não tem receita: o lucro é a equivalência da Vale (~3,84% do LL da Vale), menos ~R$ 40 mi/ano de despesas, mais rendimento do caixa. Arrays neutros só para manter o formato.",
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "ebitda_margin": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "da_pct_revenue": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "capex_pct_revenue": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "nwc_pct_revenue": 0.0,
+  "cost_of_net_debt": [
+   0.1,
+   0.1,
+   0.1,
+   0.1,
+   0.1
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   0.95
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "sotp": {
+  "components": [
+   {
+    "name": "Vale (VALE3) — 163.354.595 ações ON",
+    "ticker": "VALE3",
+    "stake": 0.0383843,
+    "method": "fair",
+    "value_mn": null,
+    "shares_mn": 163.354595
+   }
+  ],
+  "holding_net_debt_mn": -513,
+  "holding_cost_mn": 40
+ },
+ "terminal": {
+  "g": 0.04,
+  "roic": 0.1,
+  "roe": 0.1
+ },
+ "wacc": {
+  "kd_pre_tax": 0.1,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Participação: 163.354.595 ações ON da Vale (boletins de RI de 16/07, 01/09, 16/09, 01/10 e 16/10/2026; sem variação no período). stake = 163,354595 ÷ 4.255,76 mi de ações da Vale em circulação no modelo da VALE3 = 3,83843%. A Bradespar informa 3,84% do capital ex-tesouraria. Holding: caixa líquido de R$ 513,3 mi em 15/10/2026 (boletim de RI), sem dívida. Já inclui o provento da Vale do 1S26 recebido em 02/09 (R$ 2,0307 × 163,35 mi = R$ 332 mi bruto; ~R$ 293 mi líquido do IRRF sobre o JCP); o caixa foi de R$ 229 mi (31/08) para R$ 517 mi (15/09). É coerente com o modelo da VALE3, que trata esse provento como dívida: entra uma vez só. Nenhum provento da Bradespar com data-com passada e não pago foi localizado (os de 2025 foram pagos até 13/03/26). Custo de holding: despesas administrativas de R$ 40 mi/ano (R$ 9,9 mi no 1T26 e R$ 10,1 mi no 2T26), capitalizadas a 1/(25% − 4%) ≈ 4,8x = R$ 190 mi. JCP recebido da Vale é repassado como JCP aos acionistas (neutro em IR); não há outros passivos relevantes (R$ 48 mi no total, dos quais R$ 11 mi de dividendos a pagar em 30/06, já pagos)."
+ },
+ "target_multiples": {
+  "pe": null,
+  "ev_ebitda": null,
+  "pbv": 0.65,
+  "rationale": "Holding avaliada por SOTP, com a Vale ao valor justo do motor (method fair). Desconto ao NAV a mercado nos boletins de RI: 34,7% (15/07), 36,4% (31/08), 36,6% (15/09), 36,0% (30/09) e 33,2% (15/10/26); a série histórica do boletim vai de ~32% a 46%. P/VP de referência: 0,65x sobre o PL de R$ 8.050 mi (equivalência). Mediana de 5 anos de 1,09x (multiples_history) e 0,95x hoje; o PL contábil fica abaixo do valor de mercado da participação. Sem P/L e EV/EBITDA: o lucro é só a equivalência."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Mesmo bear da Vale (minério a US$ 75–80, pressão política) e desconto de holding acima de 40%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Minério a US$ 95–100 e o desconto de holding fecha para menos de 30% (venda de ações da Vale para recompra ou dividendo extraordinário)."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.06,
+  "ebitda_margin_sd": 0.035,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "Sem dívida; caixa líquido de R$ 513 mi (15/10/26) aplicado em CDI.",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 5,
+  "notes": "Caixa de ~R$ 0,5 bi em CDI: +100 bp ≈ +R$ 5 mi/ano. A exposição relevante é indireta, via Vale: dívida em US$, então pouco sensível a CDI e muito sensível a minério e câmbio. Look-through: cada +R$ 0,10 no câmbio ≈ +R$ 85 mi/ano de EBITDA da Vale atribuível (3,84% de ~R$ 2,2 bi)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": null,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.364,
+  "payout_avg_5y": 0.75,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": null,
+   "ebitda_margin": null,
+   "net_income_mn": 252,
+   "net_debt_ebitda": null
+  },
+  "notes": "LL = equivalência da Vale: R$ 8.079 mi (2021), 3.728, 1.897, 1.192 e 547 (2025, com o impairment da Vale no 4T25). 1S26: R$ 806 mi (R$ 553 + 252). ROE médio de 36% (2021–22 extraordinários; 7% em 2025). Payout médio de 75% do LL (172% em 2025, sobre lucro deprimido). A Bradespar repassa praticamente todo o provento recebido da Vale, menos despesas. Caixa líquido: R$ 254 mi em 30/06 → R$ 513 mi em 15/10/26."
+ },
+ "guidance": "Sem guidance. A Bradespar publica quinzenalmente o boletim de NAV contra valor de mercado (último em 16/10/2026: NAV de R$ 11,36 bi, valor de mercado de R$ 7,59 bi, desconto de 33,2%).",
+ "dividend_policy": "Mínimo estatutário de 25%; na prática repassa os proventos da Vale (dividendos e JCP), menos despesas. As PN recebem 10% a mais que as ON. Em 2025: JCP de R$ 0,8146 (data-com 12/11/25), dividendos de R$ 0,8672 e JCP de R$ 0,6753 (data-com 17/12/25, pagos em 30/12/25 e 13/03/26), ~R$ 2,36/ação no total. O provento da Vale do 1S26 (R$ 332 mi) está em caixa; esperamos que seja distribuído no 4T26, o que é neutro para o valor.",
+ "election_impact": "BRAP4 subiu +2,6% em 26/10 (R$ 19,01 → 19,51), menos que VALE3 (+4,7%). É a mesma exposição: câmbio a favor, minério contra; a holding não tem dívida. Não há canal próprio de juros: o caixa em CDI até ganha com o DI mais alto. O risco político é o mesmo da Vale (royalties, Imposto Seletivo, governança). O desconto de holding em 33% (15/10) está perto da mínima recente (32–37% em 2026) e não abriu com o choque. O valor é o da Vale vezes 3,84%.",
+ "summary": "Veículo puro de 163,35 mi ações da Vale (3,84%), com R$ 513 mi de caixa líquido e ~R$ 40 mi/ano de custo. A tela mostra um desconto de 33% sobre o NAV a mercado, mas o desconto não cria valor se a própria Vale não entrega a Ke de 25% no deck de minério de consenso. O resultado acompanha integralmente o minério, o câmbio e a política de proventos da Vale.",
+ "thesis": [
+  "Ativo único: 163.354.595 ações VALE3 (3,84% ex-tesouraria), sem dívida e com caixa líquido de R$ 513 mi (15/10/26).",
+  "Desconto ao NAV a mercado de 33,2% (15/10/26); entre 32% e 46% no histórico do boletim; custo de holding de só ~R$ 40 mi/ano (0,4% do NAV).",
+  "Repasse integral dos proventos da Vale: o provento do 1S26 (R$ 332 mi bruto) está em caixa e deve ser distribuído.",
+  "Dependência total da Vale: minério de US$ 90 → 85/t no deck, cobre como opção e passivos de Mariana e Brumadinho."
+ ],
+ "risks": [
+  "Todos os da Vale (minério, cobre, câmbio, Mariana/Brumadinho, política).",
+  "Desconto de holding persistente ou maior (liquidez da BRAP4 de R$ 54 mi/dia contra R$ 1,6 bi da VALE3).",
+  "Governança e uso do caixa (eventual reinvestimento fora da Vale)."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 da Vale (fim de out/início de nov/2026)",
+  "Proventos da Bradespar no 4T26 (repasse do 1S26 da Vale)",
+  "Proventos da Vale do 2S26 (dez/2026)"
+ ],
+ "key_data": [
+  {
+   "label": "Ações VALE3 detidas",
+   "value": "163.354.595",
+   "context": "3,84% do capital ex-tesouraria (boletim de 16/10/26)"
+  },
+  {
+   "label": "Caixa líquido da holding",
+   "value": "R$ 513 mi",
+   "context": "15/10/26; sem dívida"
+  },
+  {
+   "label": "NAV a mercado (15/10/26)",
+   "value": "R$ 11,36 bi",
+   "context": "VALE3 a R$ 66,42; valor de mercado R$ 7,59 bi; desconto de 33,2%"
+  },
+  {
+   "label": "Custo de holding",
+   "value": "R$ 40 mi/ano",
+   "context": "capitalizado a 4,8x = R$ 190 mi"
+  },
+  {
+   "label": "Ações BRAP",
+   "value": "393,10 mi",
+   "context": "137,99 mi ON + 255,11 mi PN"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Bradespar — Boletim de RI de 16/10/2026 (NAV × valor de mercado)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/BRAP3/50950/"
+  },
+  {
+   "title": "Bradespar — Boletim de RI de 01/10/2026",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/BRAP4/50285/"
+  },
+  {
+   "title": "Bradespar — Boletim de RI de 16/09/2026",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/BRAP4/49459/"
+  },
+  {
+   "title": "Bradespar — Boletim de RI de 01/09/2026",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/BRAP3/48936/"
+  },
+  {
+   "title": "Bradespar — Boletim de RI de 16/07/2026",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/BRAP3/45842/"
+  },
+  {
+   "title": "Eu Quero Investir — Bradespar: lucro do 2T26 (R$ 252,3 mi; 3,83% da Vale)",
+   "url": "https://euqueroinvestir.com/acoes/bradespar-lucro-2t26-resultados"
+  },
+  {
+   "title": "Vale — 6-K 2T26 (SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000917851/000129281426004002/valepr2q26_6k.htm"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/BRAP4.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — cotação oficial e proventos (BRAP4/BRAP3)",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/BRAP4"
+  }
+ ],
+ "confidence": "média — participação, caixa e custo da holding são oficiais (boletins de RI) e simples, mas o valor herda toda a incerteza da Vale, que depende de um único driver: minério 62% Fe."
+}

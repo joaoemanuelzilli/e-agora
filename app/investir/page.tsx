@@ -40,7 +40,7 @@ export default function Page() {
           Até que preço comprar cada ação para render a meta de retorno, e quantas ações pedir com o valor que você tem. Preço-teto é o menor entre o preço que dá TIR de dono igual ao Ke e o valor justo; acima dele, não compre.
         </p>
       </header>
-      <InvestView rows={ov.companies} opps={ov.opportunities} monitors={monitors} portfolio={portfolio} />
+      <InvestView rows={ov.companies} opps={ov.opportunities} monitors={monitors} portfolio={portfolio} reports={ov.reports ?? []} />
     </div>
   );
 }

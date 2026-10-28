@@ -1,0 +1,252 @@
+{
+  "ticker": "RAPT4",
+  "name": "Randoncorp S.A. (Randon Implementos e Participações)",
+  "sector": "Bens industriais / Material rodoviário (implementos, autopeças, Frasle Mobility, serviços financeiros)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "RAPT4",
+      "class": "PN"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "net_debt": 4811.5
+    },
+    "notes": "Balanço-base 2T26 (30/06/2026). DL CVM consolidada (critério do estudo) = R$ 5.532,6 mi. Ela não inclui a 'captação de recursos de terceiros' do Banco Randon (R$ 573 mi), mas inclui o restante do funding do banco. Usamos a DL ex-Banco Randon divulgada pela companhia no release do 2T26, de R$ 4.298,6 mi: dívida bancária, derivativos, partes relacionadas e contas a pagar por combinação de negócios (R$ 245,8 mi), menos caixa. Somamos os arrendamentos IFRS-16 (R$ 512,9 mi): DL ajustada = R$ 4.811,5 mi. O Banco Randon fica dentro da operação: o custo de captação dele está no CPV ('custos de intermediação financeira') e a receita na vertical Soluções Financeiras. Sua carteira menos o funding é capital de giro, não dívida do grupo. O EBITDA projetado não inclui equivalência patrimonial (Addiante, −R$ 73 mi no 1S26), que entra em other_financial. A Delta Global (descontinuada no 2T26) sai das projeções; a receita-base 2025 CVM (R$ 13.143 mi) inclui ~R$ 50 mi da Delta, efeito imaterial. Ações: 348,7 mi (ON 125,5 + PN 223,2, ex-tesouraria). listed_classes só com RAPT4: o preço da RAPT3 (R$ 10,97 em 23/10) embute a OPA de permuta por FRAS3 lançada pelo controlador DRAMD, que não se estende às PN."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      -0.016,
+      0.05,
+      0.07,
+      0.06,
+      0.055
+    ],
+    "ebitda_margin": [
+      0.136,
+      0.135,
+      0.14,
+      0.14,
+      0.14
+    ],
+    "da_pct_revenue": [
+      0.039,
+      0.039,
+      0.039,
+      0.039,
+      0.039
+    ],
+    "capex_pct_revenue": [
+      0.031,
+      0.032,
+      0.034,
+      0.035,
+      0.035
+    ],
+    "nwc_pct_revenue": 0.2,
+    "cost_of_net_debt": [
+      0.145,
+      0.145,
+      0.145,
+      0.14,
+      0.14
+    ],
+    "other_financial": [
+      -95,
+      -25,
+      0,
+      0,
+      0
+    ],
+    "tax_rate": [
+      0.4,
+      0.36,
+      0.33,
+      0.32,
+      0.32
+    ],
+    "minority_share_ni": 0.6,
+    "payout": [
+      0.0,
+      0.25,
+      0.35,
+      0.4,
+      0.4
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.12,
+    "roe": 0.14
+  },
+  "wacc": {
+    "kd_pre_tax": 0.16,
+    "target_debt_weight": 0.35,
+    "notes": "Custo médio da dívida em R$ ex-Banco Randon de 14,9% a.a. em jun/26 (CDI + ~1,2%); em moeda estrangeira, 7,9%. 83% da dívida é pós-fixada (CDI). Com o CDI a termo de 14,5–15,5% em 2027–30, o custo marginal da dívida em R$ vai a ~16%. Peso de dívida-alvo de 35%, o da desalavancagem em curso: hoje a DL é ~60% do EV a mercado. WACC ~20%."
+  },
+  "adjustments": {
+    "other_debt_like": 8,
+    "non_operating_assets": 263,
+    "minority_value": 1600,
+    "notes": "other_debt_like = dividendos/JCP a pagar (R$ 8,4 mi). As contas a pagar por aquisições já estão na DL da companhia. non_operating_assets = participações por equivalência a valor contábil (R$ 44,5 mi, principalmente a Addiante, JV de locação, com resultado negativo) + propriedades para investimento (R$ 88,6 mi) + ~R$ 130 mi a receber da Pátria: os 40% restantes do aporte de ~R$ 327 mi na Rands (consórcios e seguros), devidos um ano após o fechamento, em jan/2026, com correção. Estimativa. MINORITÁRIOS: os sócios da Frasle Mobility (~49% de uma subsidiária lucrativa: LL LTM R$ 293 mi), da JOST Brasil, da Master e da Rands (Pátria, 18,5%) ficam com o lucro das partes rentáveis. O prejuízo da holding e o juro da dívida ficam 100% com a Randon. Por isso o lucro dos não controladores (LTM +R$ 211 mi) é maior que o consolidado (−R$ 135 mi). Projetamos que a fatia dos minoritários cai de ~80% do LL consolidado em 2027 para ~50% em 2030, conforme a dívida cai. minority_share_ni de 0,60 é a média aproximada. minority_value = R$ 1,6 bi: P/L-alvo de 6x sobre o lucro médio 2027–28 dos minoritários (~R$ 270 mi), ≈ o contábil (R$ 1,55 bi). Ao nosso Ke, a fatia de 49% da Frasle valeria ~R$ 0,9–1,2 bi (4,5–6x o LL 2027E de ~R$ 420 mi), mais ~R$ 0,4–0,5 bi dos demais sócios. A preço de mercado da FRAS3 (R$ 22,84 na foto), a fatia de 49% valeria R$ 3,1 bi: sensibilidade no dossiê."
+  },
+  "target_multiples": {
+    "pe": 6.0,
+    "ev_ebitda": 5.0,
+    "pbv": 0.8,
+    "rationale": "Histórico (multiples_history): P/L mediana 5 anos 7,6x (p10 4,5x; sem P/L desde 2025 por causa do prejuízo); EV/EBITDA mediana 5 anos 5,3x (p10 4,4x); P/VP mediana 5 anos 1,17x (0,50x na foto). Frasle, controlada, a 7,96x EV/EBITDA e 21,9x P/L LTM. Usamos EV/EBITDA-alvo de 5,0x o EBITDA 2027E sem equivalência, com DL ex-banco e IFRS-16, perto da mediana histórica, e P/L-alvo de 6,0x o LPA 2027E, abaixo da mediana, pela alavancagem e pela fatia dos minoritários. Os dois divergem porque o lucro ao controlador de 2027 ainda é deprimido pelo juro: é o problema da tese. P/VP de 0,8x é referência (ROE projetado de 5–14% contra Ke de 25%)."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.35,
+      "revenue_growth_shift": -0.05,
+      "ebitda_margin_shift": -0.02,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Mercado de implementos e caminhões cai com DI a 15% e fim do Move Brasil; margem volta a ~11% (2025) e a DL/EBITDA não sai de ~3x."
+    },
+    "bull": {
+      "probability": 0.15,
+      "revenue_growth_shift": 0.03,
+      "ebitda_margin_shift": 0.015,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Recuperação do ciclo de implementos (agro), Frasle com margem de 20%+, real fraco e corte de juros em 2027–28 aceleram a desalavancagem."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.05,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.004
+  },
+  "debt_profile": {
+    "gross_debt_mn": 9977,
+    "pct_floating_cdi": 0.83,
+    "avg_cost": "R$ ex-Banco Randon 14,9% a.a. (jun/26); moeda estrangeira 7,9% a.a.; consolidada em R$ 16,0% a.a.",
+    "avg_maturity_years": 4.0,
+    "next_24m_maturities_mn": 2800,
+    "covenant_nd_ebitda": 3.5
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -30,
+    "notes": "DL ex-banco de R$ 4,3 bi com 83% pós-fixada: +100 bp de CDI ≈ −R$ 45 mi antes do IR e ~−R$ 30 mi no lucro, quase todo da controladora. Isso equivale a ~20% do LL ao controlador projetado para 2027. Covenant de DL/EBITDA de 3,5x (ex-banco e ex-equivalência): 2,53x no 2T26."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.1964,
+    "ebitda_margin_avg_5y": 0.133,
+    "roe_avg_5y": 0.1363,
+    "payout_avg_5y": 0.4104,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.0049,
+      "ebitda_margin": 0.133,
+      "net_income_mn": -90.5,
+      "net_debt_ebitda": 2.91
+    },
+    "notes": "Receita 2020–25 +19,6% a.a., quase toda por aquisições (Frasle/Nakata, Dacomsa por R$ 2,2 bi em 2025, EBS, AXN). No orgânico, 2023–25 cresceu +5,6% a.a. e o 1S26 caiu −1,2%. Guidance 2026: receita de R$ 12,5–14,0 bi, margem EBITDA ajustada de 12–14%, capex de R$ 380–420 mi. Projetamos 2026 em R$ 12,9 bi (−1,6%; o 2S26 ~estável a/a com o fim do efeito Move Brasil), depois +5% a +7% (ciclo de implementos com juros ainda altos). Margem EBITDA sem equivalência: 2022 13,5%, 2023 14,4%, 2024 13,5%, 2025 11,4% (12,1% ajustada), 1S26 13,9% (2T26 14,4%). Projetamos 13,5–14,0%. ROE de 5 anos de 14%, negativo em 2025–26. Projetamos o LL ao controlador de ~R$ 110 mi (2026) a ~R$ 300 mi (2030): o juro sobre R$ 4,8 bi de DL consome 55–65% do EBIT em 2026–27. IR efetivo alto (61% no 2T26), porque a holding não reconhece IR diferido sobre prejuízo fiscal; projetamos de 40% caindo a 32%. DL ex-banco/EBITDA: 3,86x (2T25) → 2,91x (2T26); 2,53x no critério do covenant."
+  },
+  "guidance": "Guidance 2026 (mantido em 13/08/2026): receita líquida consolidada de R$ 12,5–14,0 bi (1S26: R$ 6,4 bi); receita no mercado externo de US$ 780–840 mi (1S26: US$ 398 mi); margem EBITDA ajustada de 12–14% (1S26: 12,8%); investimentos orgânicos de R$ 380–420 mi (1S26: R$ 113 mi). Na perspectiva por vertical, carteira de implementos estável (~90 dias) e cenário cauteloso para o 2S26, com o fim do efeito Move Brasil.",
+  "dividend_policy": "Estatuto: dividendo mínimo obrigatório (percentual não verificado); historicamente JCP trimestral, com payout de 37–87% entre 2021 e 2024. Por causa do prejuízo, distribuiu R$ 0,00/ação referente a 2025 e não declarou proventos em 2026 (lista B3 vazia). Projetamos 0% em 2026, 25% em 2027 e 35–40% depois, com o LL positivo e a desalavancagem.",
+  "election_impact": "RAPT4 caiu −46% em 26/10 (de R$ 8,06 para R$ 4,35 às 13h02) e foi a R$ 3,71 em 28/10. Na prática, devolveu o rali de +47% (R$ 5,47 em 02/10, véspera do 1º turno, → R$ 8,06 em 23/10), feito quando o mercado precificava vitória de Flávio. Não achamos fato relevante que explique a queda; a PN é ilíquida (R$ 17 mi/dia no 2T26). O canal é macro e real: a Randon é das empresas mais expostas a juros da cobertura. Com DL ex-banco de R$ 4,8 bi, 83% em CDI, cada 100 bp de CDI tira ~R$ 30 mi do lucro da controladora, e implementos e caminhões dependem de Finame/crédito. A curva DI a 14,5–15,2%, contra ~12,6% antes da eleição, adia a desalavancagem e o ciclo. O câmbio ajuda pouco: 30% da receita é externa, mas a maior parte vem da Frasle, cujo lucro é dividido com os minoritários. Já a OPA da DRAMD por RAPT3 (troca por FRAS3, leilão em 16/11/2026) não alcança a PN.",
+  "summary": "Conglomerado de implementos e autopeças, alavancado (DL ex-banco de 2,9x o EBITDA) e com o lucro das partes boas, como a Frasle, dividido com minoritários. É o caso mais sensível a juros desta rodada. A operação melhorou em 2026 (margem de 14% no 2T26, fluxo de caixa livre positivo), mas o lucro do controlador depende da queda da dívida e do CDI.",
+  "thesis": [
+    "Operação em recuperação: margem EBITDA ajustada de 13,3% no 2T26 (+206 bp a/a; 14,4% sem a equivalência da Addiante), FCF ex-banco de +R$ 141 mi e DL ex-banco/EBITDA de 3,86x para 2,91x em 12 meses.",
+    "Na soma das partes, os 51% da Frasle a mercado (~R$ 3,3 bi na foto de 26/10) valem o dobro de todo o valor de mercado da Randon (R$ 1,5 bi). O desconto reflete a dívida da holding e a governança, e pode fechar se a desalavancagem continuar.",
+    "Juros: cada 100 bp a menos de CDI soma ~R$ 30 mi ao lucro da controladora (~20% do LL 2027E). A reversão do choque da curva é a principal opção da ação."
+  ],
+  "risks": [
+    "Juros: DI a 15% mantém o lucro ao controlador perto de zero e adia dividendos. Covenant de 3,5x (2,53x hoje) é a linha de corte.",
+    "Ciclo de implementos e caminhões: fim do Move Brasil, agro e Finame. A produção de caminhões caiu −14% no 1S26.",
+    "Estrutura: minoritários ficam com ~50–80% do lucro consolidado; Addiante (cliente em recuperação judicial) e integração de aquisições (Dacomsa, AXN, EBS).",
+    "Governança e liquidez da PN: a OPA do controlador é só para as ON (RAPT3), e a liquidez da RAPT4 caiu 47% a/a."
+  ],
+  "catalysts": [
+    "Leilão da OPA de permuta RAPT3 → FRAS3 (16/11/2026)",
+    "Resultado do 3T26 (nov/2026)",
+    "Fenatran (nov/2026) e carteira de implementos para 2027",
+    "Fim das perdas da Addiante e conclusão da descontinuação da Delta Global"
+  ],
+  "key_data": [
+    {
+      "label": "DL ex-Banco Randon/EBITDA 2T26",
+      "value": "2,91x",
+      "context": "3,86x no 2T25; covenant 3,5x (2,53x no critério do covenant)"
+    },
+    {
+      "label": "Margem EBITDA ajustada 2T26",
+      "value": "13,3%",
+      "context": "+206 bp a/a; 14,4% sem equivalência"
+    },
+    {
+      "label": "LL controlador 2T26",
+      "value": "−R$ 90,5 mi",
+      "context": "Delta Global (−R$ 79,6 mi), Addiante (−R$ 37,1 mi), IR alto"
+    },
+    {
+      "label": "Custo da dívida em R$ ex-banco",
+      "value": "14,9% a.a.",
+      "context": "83% pós-fixada (CDI)"
+    },
+    {
+      "label": "Frasle (51%) a mercado",
+      "value": "~R$ 3,3 bi",
+      "context": "vs. valor de mercado da Randon de R$ 1,5 bi (26/10)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Randoncorp — Earnings Release 2Q26 (13/08/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/a8409c46-1419-4694-b935-b868e0b64e35/6f2c28ba-ba66-b463-42bb-fb2e32e006d4?origin=2"
+    },
+    {
+      "title": "Investidor10 — OPA da Randon tem data (16/11/2026); termos de troca RAPT3 por FRAS3 (24/10/2026)",
+      "url": "https://investidor10.com.br/noticias/opa-da-randon-ja-tem-data-para-ser-realizada-veja-os-termos-de-troca-da-rapt3-123469/"
+    },
+    {
+      "title": "Money Times — Randoncorp recebe pedido de registro de OPA para troca de ações por papéis da Frasle",
+      "url": "https://moneytimes.com.br/randoncorp-rapt3-recebe-pedido-de-registro-de-opa-para-troca-de-acoes-por-papeis-da-frasle-mobility-fras3/"
+    },
+    {
+      "title": "Brazil Journal — Pátria avalia consórcios da Randon em R$ 1,6 bi",
+      "url": "https://braziljournal.com/patria-avalia-consorcios-da-randon-em-r-16-bi-60-de-seu-market-cap/"
+    },
+    {
+      "title": "Visno Invest — Randoncorp registra prejuízo de R$ 90,5 mi no 2T26",
+      "url": "https://visnoinvest.com.br/news/14807/randoncorp-rapt4-registra-prejuizo-de-r-905-mi-no-2t26"
+    },
+    {
+      "title": "B3 — cotações RAPT3/RAPT4 e FRAS3 (foto de 26/10 e 28/10/2026)",
+      "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/RAPT4"
+    },
+    {
+      "title": "CVM — ITR 2T26 padronizado (data/hist/RAPT4.json e FRAS3.json)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "baixa — lucro ao controlador residual (alavancagem + minoritários): pequenas mudanças em CDI, margem ou na fatia dos minoritários movem o valor por ação em dezenas de por cento. A participação exata na Frasle (~51%) e o recebível da Pátria não foram verificados em documento primário."
+}

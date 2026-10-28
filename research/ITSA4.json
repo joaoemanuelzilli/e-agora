@@ -1,0 +1,311 @@
+{
+ "ticker": "ITSA4",
+ "name": "Itaúsa S.A.",
+ "sector": "Holding de participações (Itaú Unibanco ~92% do NAV; Alpargatas, Dexco, Motiva, Aegea, Copa Energia, NTS)",
+ "template": "holding",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "ITSA4",
+   "class": "PN"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override: 11.207,35 mi ações em circulação (B3 11.213,7 mi emitidas − tesouraria CVM 30/06; já após a bonificação de 2% de dez/25 e a recompra de 5 mi PN de mai/26 para o ILP) — igual ao usado pela Itaúsa no cálculo do desconto (R$ 14,60 × 11.207 mi). Consolidado CVM não é usado (template holding): ele consolida a Dexco e põe o resto em equivalência."
+ },
+ "projection": {
+  "_comment": "Não usado pelo template holding. Referência: o lucro da Itaúsa é ~97% equivalência do Itaú; o consolidado CVM (receita R$ 8,2 bi) é basicamente a Dexco. Arrays aproximados da Dexco só para manter o formato.",
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.05,
+   0.05,
+   0.05,
+   0.05,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.26,
+   0.26,
+   0.26,
+   0.26,
+   0.26
+  ],
+  "da_pct_revenue": [
+   0.15,
+   0.15,
+   0.15,
+   0.15,
+   0.15
+  ],
+  "capex_pct_revenue": [
+   0.11,
+   0.11,
+   0.11,
+   0.11,
+   0.11
+  ],
+  "nwc_pct_revenue": 0.15,
+  "cost_of_net_debt": [
+   0.155,
+   0.155,
+   0.155,
+   0.15,
+   0.15
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.02,
+   0.02,
+   0.02,
+   0.02,
+   0.02
+  ],
+  "minority_share_ni": 0.004,
+  "payout": [
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   0.95
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "sotp": {
+  "components": [
+   {
+    "name": "Itaú Unibanco (ITUB4)",
+    "ticker": "ITUB4",
+    "stake": 0.3752,
+    "method": "fair",
+    "value_mn": null
+   },
+   {
+    "name": "Alpargatas (ALPA4)",
+    "ticker": "ALPA4",
+    "stake": 0.3062,
+    "method": "fair",
+    "value_mn": null
+   },
+   {
+    "name": "Motiva (MOTV3)",
+    "ticker": "MOTV3",
+    "stake": 0.104,
+    "method": "fair",
+    "value_mn": null
+   },
+   {
+    "name": "Dexco (DXCO3)",
+    "ticker": "DXCO3",
+    "stake": 0.377,
+    "method": "fair",
+    "value_mn": null
+   },
+   {
+    "name": "Aegea Saneamento (ON + PN classe D)",
+    "ticker": null,
+    "stake": 0.1401,
+    "method": "fixed",
+    "value_mn": 23983
+   },
+   {
+    "name": "Copa Energia (GLP)",
+    "ticker": null,
+    "stake": 0.489,
+    "method": "fixed",
+    "value_mn": 4141
+   },
+   {
+    "name": "NTS (gasodutos)",
+    "ticker": null,
+    "stake": 0.085,
+    "method": "fixed",
+    "value_mn": 12941
+   }
+  ],
+  "holding_net_debt_mn": 2373,
+  "holding_cost_mn": 235
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.12,
+  "roe": 0.19
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Participações (RI Itaúsa, 30/09/26, % do capital total ex-tesouraria): Itaú 37,52% (19,98% direto + 17,54% via 66,53% da IUPAR; 65,06% das ON), Dexco 37,7%, Alpargatas 30,62%, Motiva 10,4%, Aegea 14,01% (após o aporte de R$ 732 mi de ago/26), Copa Energia 48,9%, NTS 8,5%. ISA Energia (ISAE4) NÃO está no portfólio (não aparece no RA 2T26, nas DFs nem na composição do NAV) e foi excluída. Ações detidas implícitas: Itaú ~4.135 mi; Dexco ~342 mi; Alpargatas ~208 mi; Motiva ~209 mi. Itens 'fixed' (value_mn = 100% implícito; o que importa é stake × value_mn): (i) Aegea R$ 3.360 mi para a fatia da Itaúsa = marcação da própria Itaúsa (R$ 6.108 mi: ON ao preço do aumento de capital de mar/26, R$ 55,29, + aporte de ago/26 + PN classe D a valor contábil R$ 828 mi) com desconto de 45%: saneamento listado caiu 16–21% em 26/10 (SBSP3 −19%, CSMG3 −21%, SAPR11 −16%), a Aegea é mais alavancada (DL/EBITDA 3,87x no covenant, prejuízo controlador de R$ 222 mi no 2T26, DFs reapresentadas, plano de governança) e o estudo usa Ke 25% (SBSP3 a Ke 25% vale ~20% da tela); o mecanismo de ajuste de participação de jul/26 protege parte do retorno. (ii) Copa Energia R$ 2.025 mi = valor contábil (a Itaúsa diz que o justo é maior); equivale a ~5,8x o lucro recorrente anualizado da fatia (R$ 175 mi no 1S26), entre o DDM a Ke 25% (~3,75x → ~R$ 1,3 bi) e pares de distribuição (~7x → ~R$ 2,5 bi). (iii) NTS R$ 1.100 mi vs valor justo contábil de R$ 1.505 mi: dividendos de ~R$ 220 mi/ano (R$ 109 mi no 1S26, −20%; contrato Malhas SE venceu em dez/25) perpetuados a Ke 25% com g 4% ≈ R$ 1,05 bi. holding_net_debt_mn R$ 2.373 mi = 'demais ativos e passivos' do balanço individual em 30/06 (−R$ 1.241 mi, cálculo da própria Itaúsa no NAV de 30/09: inclui DL financeira de R$ 1.184 mi — dívida bruta R$ 3.375 mi, caixa R$ 2.191 mi —, provisões/passivos fiscais de R$ 2.195 mi, tributos a recolher, IR diferido e créditos a compensar, Itautec) + R$ 732 mi do aporte na Aegea pago depois de 30/06 (já incluído no valor da Aegea) + R$ 400 mi de PIS/COFINS sobre JCP do 2S26 (ineficiência de R$ 458 mi no 1S26, direta e via IUPAR; extinta pela reforma a partir de jan/27). JCP de R$ 2,72 bi a pagar e R$ 2,50 bi a receber do Itaú em 30/06 foram pagos em 28/08 (líquido −R$ 224 mi, já nos −1.241). Custo de holding R$ 235 mi/ano (despesas administrativas R$ 89 mi no 1S26 → ~R$ 180 mi/ano, doações ~R$ 25 mi, tributárias residuais sem o PIS/COFINS do JCP ~R$ 30 mi) capitalizado a 1/(25% − 5%) = 5x = R$ 1.175 mi."
+ },
+ "target_multiples": {
+  "pe": null,
+  "ev_ebitda": null,
+  "pbv": 1.3,
+  "rationale": "Holding avaliada por SOTP. Referências: desconto de holding calculado pela Itaúsa de 20,8% (30/06/26) e 18,2% (30/09/26, ITSA4 R$ 14,60); P/VP mediana 5 anos 1,31x (10 anos 1,52x; hoje 1,58x sobre PL de R$ 93,8 bi); P/L mediana 5 anos 7,6x. Parte do desconto é estrutural (PIS/COFINS sobre JCP, que acaba em 2027; custo administrativo), parte é a Copa marcada a valor contábil."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Itaú no bear (ROE ~20–21% com fim do JCP/CSLL maior), desconto de holding volta a 25% e a Aegea precisa de novos aportes."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Fim do PIS/COFINS sobre JCP em 2027 (+R$ 0,9 bi/ano de eficiência) fecha o desconto para ~10% e o Itaú sustenta ROE de 25%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 3375,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "CDI + 1,11% a.a. (debêntures da holding; ~15,5–16,5% a.a. com o CDI a termo de 2027–30)",
+  "avg_maturity_years": 6.7,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -20,
+  "notes": "Holding: dívida bruta R$ 3,4 bi a CDI+1,11% contra caixa de ~R$ 1,4–2,2 bi a ~CDI → cada +100 bp ≈ −R$ 15–20 mi/ano (cobertura de juros de 23x). Look-through: o Itaú (92% do NAV) é pouco sensível ou levemente beneficiado por Selic alta; Motiva (DL/EBITDA 3,6x), Aegea (3,87x) e Dexco (2,7x) perdem; Alpargatas (0,5x) e Copa pouco. O canal relevante é a taxa de desconto do Itaú, não o resultado financeiro da holding."
+ },
+ "history_check": {
+  "revenue_cagr_5y": null,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.185,
+  "payout_avg_5y": 0.52,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.071,
+   "ebitda_margin": null,
+   "net_income_mn": 4306,
+   "net_debt_ebitda": null
+  },
+  "notes": "Lucro controlador CVM 2021–25: 12,2 → 16,5 bi (CAGR 7,8%); ROE CVM 19,8/19,7/17,3/17,1/18,4% (média 18,5%). Recorrente 2T26 R$ 4.306 mi (+7,1%; ROE recorrente 18,7%), contábil R$ 5.244 mi (Itautec +R$ 851 mi não recorrente). Itaú = 97% do resultado das investidas (R$ 4.468 mi de R$ 4.568 mi); não financeiras R$ 141 mi (−27%). Payout em caixa (DFC) 27/28/34/55/115% (2025 inclui os extraordinários do Itaú repassados); a prática é repassar 100% dos proventos do Itaú. DL/NAV de 0,6%. revenue_yoy do last_quarter = crescimento a/a do lucro recorrente."
+ },
+ "guidance": "Sem guidance. Diretrizes: repassar integralmente os proventos do Itaú; alocação de capital em ativos não financeiros (Aegea: R$ 418 mi em mar/26 + R$ 732 mi em ago/26; Alpargatas: R$ 97 mi em compras desde o 4T25); gestão de passivos (R$ 2,5 bi de dívida amortizados; sem vencimento de principal até 2028). Resultado do 3T26 em 09/11/2026.",
+ "dividend_policy": "Mínimo estatutário de 25%; na prática repassa 100% dos proventos recebidos do Itaú (1S26: R$ 2.797 mi recebidos do Itaú = R$ 2.797 mi declarados). JCP trimestral (R$ 0,0242/ação, data-com 31/08 paga em 01/10) + JCP/dividendos semestrais e extraordinários quando o Itaú paga adicionais. LTM 30/06: R$ 14,7 bi brutos (R$ 1,147/ação), DY de 9,8%. JCP de R$ 2,3 bi líquidos pago em 28/08 (data-com 16/03 e 15/06) — fora do fluxo de quem compra hoje.",
+ "election_impact": "ITSA4 −13,8% (R$ 15,31 → 13,20) na foto de 26/10, menos que a ITUB4 (−15,1%), apesar das não financeiras terem caído mais (DXCO3 −34,5%, MOTV3 −31,4%, ALPA4 −23,3%): elas são só ~5% do NAV. O desconto de holding ficou estável (~18% a mercado). O valor depende do Itaú: re-rating do ativo de duration longa com o DI +300 bp, lucro pouco afetado. Específico da holding: (i) a reforma tributária elimina em jan/27 o PIS/COFINS sobre o JCP recebido (R$ 458 mi de ineficiência no 1S26) — ganho já contratado; (ii) um eventual fim do JCP num 4º mandato encerra essa ineficiência de qualquer jeito, mas reduz o lucro do Itaú; (iii) a Aegea (14%), alavancada e em plano de ajuste, é o ativo mais atingido pelos juros e não tem marcação a mercado.",
+ "summary": "Itaúsa é, na prática, um veículo do Itaú (37,5% do capital; ~92% do NAV) com dívida líquida pequena (R$ 1,2 bi no 2T26, ~R$ 1,9 bi após o aporte na Aegea) e custo de holding que cai em 2027 com o fim do PIS/COFINS sobre JCP. O valor justo segue o do Itaú a Ke 25%; o desconto a mercado (~18%) é a principal diferença entre comprar ITSA4 ou ITUB4, e a fatia não financeira (Aegea, Dexco, Motiva) é a mais sensível a juros.",
+ "thesis": [
+  "Look-through barato do Itaú: 37,52% do capital (65% das ON) negociando com desconto de 18–21% sobre o NAV a mercado (RI Itaúsa, jun e set/26).",
+  "Holding desalavancada: DL de R$ 1,2 bi (0,6% do NAV), custo CDI+1,11%, prazo de 6,7 anos e nenhum vencimento de principal até 2028.",
+  "Fim do PIS/COFINS sobre JCP recebido a partir de jan/27: ineficiência de ~R$ 0,9 bi/ano (R$ 458 mi no 1S26) deixa de existir.",
+  "Repasse integral dos proventos do Itaú: DY LTM de 9,8% (30/06)."
+ ],
+ "risks": [
+  "Concentração: ~92% do NAV no Itaú — qualquer re-rating ou mudança tributária (JCP, CSLL) do Itaú passa direto.",
+  "Aegea: alavancada (3,87x), prejuízo, DFs reapresentadas e aportes sucessivos (R$ 1,15 bi em 2026) — pode pedir mais capital com a Selic alta.",
+  "Alocação de capital em ativos não financeiros de retorno abaixo do Ke (Dexco ROE ~1%, Aegea negativa) mantém o desconto.",
+  "Passivos fiscais provisionados (R$ 2,2 bi) e disputas de IRPJ/CSLL."
+ ],
+ "catalysts": [
+  "Resultado do Itaú em 03/11 e da Itaúsa em 09/11/2026.",
+  "Dividendos adicionais do Itaú de fim de ano (repasse integral).",
+  "Jan/2027: fim do PIS/COFINS sobre JCP recebido (reforma tributária)."
+ ],
+ "key_data": [
+  {
+   "label": "Participação no Itaú",
+   "value": "37,52% do capital (65,06% das ON)",
+   "context": "19,98% direto + 17,54% via IUPAR (66,53%)"
+  },
+  {
+   "label": "NAV a mercado / desconto (30/09/26)",
+   "value": "R$ 199,95 bi / 18,2%",
+   "context": "30/06: R$ 189,4 bi / 20,8%"
+  },
+  {
+   "label": "Dívida líquida holding 2T26",
+   "value": "R$ 1.184 mi",
+   "context": "Bruta R$ 3.375 mi a CDI+1,11%; caixa R$ 2.191 mi; prazo 6,7 anos"
+  },
+  {
+   "label": "Lucro recorrente 2T26",
+   "value": "R$ 4.306 mi (+7,1%)",
+   "context": "ROE recorrente 18,7%; contábil R$ 5.244 mi"
+  },
+  {
+   "label": "Ineficiência PIS/COFINS sobre JCP",
+   "value": "R$ 458 mi no 1S26",
+   "context": "Extinta a partir de jan/27"
+  },
+  {
+   "label": "Não financeiras (fatia Itaúsa, 30/09)",
+   "value": "Aegea 6,1 · Motiva 3,5 · Alpargatas 2,9 · Copa 2,0 · Dexco 2,0 · NTS 1,5 (R$ bi)",
+   "context": "Aegea e Copa a valores contábeis/transação"
+  },
+  {
+   "label": "Preço ITSA4",
+   "value": "R$ 13,20",
+   "context": "Sexta R$ 15,31; 30/09 R$ 14,60"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Itaúsa — Kit do Investidor 2T26 (Relatório da Administração, DFs, dados históricos)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/afd9200b-9b01-4d1c-bdd9-9b2c1e9b3b4d/68055d0d-aa63-8b36-872c-f27026a2a42e?origin=2"
+  },
+  {
+   "title": "Itaúsa RI — Valor do Portfólio e Desconto (cotações de 30/09/2026)",
+   "url": "https://ri.itausa.com.br/informacoes-financeiras/valor-do-portfolio-e-desconto/"
+  },
+  {
+   "title": "Money Times — Itaúsa lucra R$ 4,3 bilhões, alta de 7%, no 2T26",
+   "url": "https://www.moneytimes.com.br/itausa-itsa4-lucra-r-43-bilhoes-alta-de-7-no-2t26/"
+  },
+  {
+   "title": "Seu Dinheiro — Calendário de balanços do 3T26 (Itaúsa em 09/11)",
+   "url": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/ITSA4.json)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação (API oficial), foto de 26/10/2026 13h02",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/ITSA4"
+  }
+ ],
+ "confidence": "média-alta — participações, dívida e NAV são oficiais (RI/DFs 2T26) e 92% do valor é o Itaú; incertezas: valores 'fixed' de Aegea/Copa/NTS (julgamento, ~4% do NAV) e itens do 3T26 da holding ainda não publicados."
+}

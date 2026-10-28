@@ -1,0 +1,249 @@
+{
+ "ticker": "PNVL3",
+ "name": "Dimed S.A. Distribuidora de Medicamentos (Panvel)",
+ "sector": "Saúde / varejo farmacêutico (líder na Região Sul) + marca própria e distribuição",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "PNVL3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 1199
+  },
+  "notes": "DL base = DL CVM do pipeline R$ 1.109 mi (empréstimos/debêntures R$ 614 mi + arrendamentos IFRS-16 R$ 789 mi, que a CVM já põe em 2.01.04.03/2.02.01.03, − caixa e aplicações R$ 295 mi; DL sem arrendamentos R$ 319 mi = 0,9x EBITDA, igual ao release) + ~R$ 90 mi de JCP declarados e não pagos (estimativa): a Panvel declara JCP trimestral e paga 12–24 meses depois — data-com 15/01, 26/03 e 26/06/2026 somam R$ 53 mi a pagar em 2027 (B3), data-com 24/09/2026 mais R$ 18 mi (pagos em 2028), e estimamos ~R$ 20 mi de JCP de 2025 ainda em aberto (saldo exato do ITR não verificado). São passivos com acionistas de registro, não fluxo de quem compra hoje. Receita base = CVM FY2025 (R$ 5.512 mi, receita líquida). EBITDA no conceito CVM IFRS-16: 8,8% em 2025 e no 1S26 (a cia. reporta 'EBITDA ajustado' pré-IFRS-16 sobre receita bruta: 5,4% no 2T26). Capex do modelo = capex caixa (2,7–3,2% da ROL; R$ 160 mi em 2025) + principal de arrendamentos (~2%; pagamentos de R$ 203 mi/ano na DFC incluem ~R$ 90 mi de juros)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.139,
+   0.125,
+   0.12,
+   0.11,
+   0.1
+  ],
+  "ebitda_margin": [
+   0.089,
+   0.091,
+   0.093,
+   0.0945,
+   0.0955
+  ],
+  "da_pct_revenue": [
+   0.042,
+   0.042,
+   0.042,
+   0.042,
+   0.042
+  ],
+  "capex_pct_revenue": [
+   0.05,
+   0.054,
+   0.054,
+   0.052,
+   0.05
+  ],
+  "nwc_pct_revenue": 0.2,
+  "cost_of_net_debt": [
+   0.118,
+   0.122,
+   0.126,
+   0.128,
+   0.128
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.15,
+   0.17,
+   0.19,
+   0.21,
+   0.22
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.3,
+   0.35,
+   0.35,
+   0.4,
+   0.4
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.055,
+  "roic": 0.13,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.135,
+  "target_debt_weight": 0.3
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "JCP a pagar e arrendamentos já na DL base. Sem minoritários. Contingências: provisões de R$ 20 mi; depósitos judiciais subiram ~R$ 83 mi no 1S26 (DFC), não somados como ativo por falta de detalhe. Recebíveis de cartão não descontados (a DL da cia. não inclui antecipação). Créditos tributários (ICMS/PIS-COFINS) não monetizados não somados."
+ },
+ "target_multiples": {
+  "pe": 12.0,
+  "ev_ebitda": 5.5,
+  "pbv": 1.3,
+  "rationale": "P/L 12x e EV/EBITDA 5,5x (IFRS-16) sobre 2027E. Histórico PNVL3 (data/market, 5 anos): P/L média 18,8x, mediana 17,9x, p10 12,6x; EV/EBITDA média 7,2x, mediana 6,8x, p10 5,6x; na foto de 26/10 negocia a ~11,6x P/L LTM e ~5,3x EV/EBITDA LTM, os menores níveis da série. Usamos o p10 histórico porque múltiplos de mercado embutem Ke de ~13–15% (estudo: 25%) e a ação é pouco líquida (ADTV ~R$ 12 mi); entre os pares do estudo: RADL3 (15x / 7x, líder nacional e líquida) e PGMN3 (8x / 4,5x, mais alavancada e de margem menor)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.007,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Expansão para ~1.000 lojas destrói retorno (lojas novas em SP/Sudeste maturam devagar), farmácias em supermercados (Lei 15.357/2026) e RD Saúde no Sul pressionam preço, CMED baixo e GLP-1 genérico comprimem margem bruta; EBITDA fica em ~8,5%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.006,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Guidance 2030 entregue (receita bruta R$ 11,5–12 bi, EBITDA pré-IFRS-16 de 6,7–7%, até 1.000 lojas), digital e marca própria seguem ganhando participação e a diluição de despesas continua."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.025,
+  "ebitda_margin_sd": 0.006,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.004
+ },
+ "debt_profile": {
+  "gross_debt_mn": 614,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "CDI−1,4% (2T26, release; linhas com custo abaixo do CDI)",
+  "avg_maturity_years": 2.5,
+  "next_24m_maturities_mn": 300,
+  "covenant_nd_ebitda": null,
+  "notes": "Dívida bruta R$ 614 mi (CP R$ 146 mi, LP R$ 468 mi; debêntures R$ 434 mi + empréstimos R$ 180 mi), caixa R$ 295 mi, DL R$ 319 mi = 0,9x EBITDA LTM (1,1x no 2T25). Custo reportado CDI−1,3% a CDI−1,6% nos últimos 5 trimestres. Arrendamentos R$ 789 mi. Prazo médio e vencimentos em 24 meses: estimativas a partir da divisão CP/LP (cronograma não lido); covenant não informado no release."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -2.5,
+  "notes": "Exposição líquida a CDI ≈ R$ 319 mi ⇒ +100 bp ≈ −R$ 3 mi antes de IR ≈ −R$ 2,5 mi depois de IR (~1,5% do lucro). O canal relevante dos juros é outro: capital de giro (estoques de R$ 1,2 bi) e o múltiplo, não a despesa financeira."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.144,
+  "ebitda_margin_avg_5y": 0.083,
+  "roe_avg_5y": 0.085,
+  "payout_avg_5y": 0.28,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.149,
+   "ebitda_margin": 0.085,
+   "net_income_mn": 30.4,
+   "net_debt_ebitda": 0.9
+  },
+  "notes": "Receita líquida CVM 2020–25: 2,82 → 3,23 → 3,99 → 4,46 → 4,94 → 5,51 bi (CAGR 14,4%); 1S26 +15,0%. Margem EBITDA CVM (IFRS-16) 2021–25: 8,0/8,1/8,2/8,2/8,8% (média 8,3%); LTM 8,9%. Lucro 79 → 86 → 93 → 106 → 125 mi; LTM 138 mi; ROE CVM 7,7/8,0/8,1/8,8/9,9% (LTM 10,6%). Payout de caixa 21–31% (JCP pagos com 1–2 anos de atraso). Premissas: receita +13,9% em 2026 (1S26 +15%, 2S26 ~+13%) desacelerando a 10% em 2030 — abaixo do guidance (R$ 11,5–12 bi de receita bruta em 2030 ≈ CAGR 14–15%; nosso 2030 dá ~R$ 10,5 bi brutos); margem 8,9% → 9,55% (captura metade da expansão do guidance); IR 15% → 22% (alíquota efetiva baixa por JCP e incentivos: 14,4% em 2025); custo da DL incl. arrendamentos 11,8% → 12,8% (efetivo LTM ~11%: dívida a CDI−1,4%, arrendamentos a taxas fixas; sobe com a renovação das linhas e dos aluguéis a juros de mercado)."
+ },
+ "guidance": "Ciclo 2026–2030 (release 2T26, 06/08/2026): receita (bruta) de R$ 11,5–12 bi em 2030, EBITDA de 6,7–7% (conceito ajustado da cia., pré-IFRS-16, sobre receita bruta; 5,4% no 2T26) e até 1.000 lojas (664 em jun/26). Perspectivas 2026: vendas fortes em marca (GLP-1) e genéricos, pressão de mix e CMED na margem bruta, despesas crescendo abaixo das vendas, continuidade da redução do endividamento líquido e dívida com custo abaixo do CDI. Data do 3T26 não verificada.",
+ "dividend_policy": "Mínimo estatutário de 25%; distribui quase só via JCP trimestral, com pagamento diferido de 12 a 24 meses (ex.: JCP do 3T26, data-com 24/09/2026, paga em mar–mai/2028). Payout de caixa 2021–25: 21–31%; JCP declarados em 2026 ≈ R$ 70 mi (~45% do lucro). Pequenas recompras (R$ 8 mi em 2025). Projeção: 30% (JCP de dez/2026) e 35–40% em 2027–30 — a expansão consome caixa (capital de giro de ~20% do incremento de receita).",
+ "election_impact": "Queda de −31% (R$ 15,64 → R$ 10,73), uma das maiores do setor e muito acima do que o beta explica (resíduo −11%, z de −7): o canal é liquidez/small cap (SMLL −27%, ADTV ~R$ 12 mi) e compressão de múltiplo, não fundamento. A dívida financeira é pequena (DL R$ 319 mi, custo abaixo do CDI) e +100 bp custam ~R$ 2,5 mi/ano de lucro. 4º mandato de Lula tende a ser neutro a positivo para o varejo farmacêutico: renda (salário mínimo, isenção de IR até R$ 5 mil), Farmácia Popular e envelhecimento sustentam volume; CMED segue fórmula legal. Riscos de política: liberação de farmácias em supermercados (já aprovada) e pressão de custo de pessoal. O valor intrínseco quase não muda com a eleição.",
+ "summary": "Líder do varejo farmacêutico na Região Sul (664 lojas, 13,5% de market share regional, 25 trimestres seguidos de ganho de participação) com o digital em 33,7% das vendas e marca própria forte. Cresce ~15% ao ano com alavancagem financeira baixa e tem um plano de expansão para até 1.000 lojas até 2030. A queda de 31% na eleição foi de liquidez e múltiplo; o ROE baixo (~11%) e a margem fina são o que limita o valor a Ke 25%.",
+ "thesis": [
+  "Crescimento com ganho de share: receita bruta do varejo +15,8% no 2T26 (SSS 13,5%, lojas maduras 11,4% vs IPCA 4,6%), venda média por loja R$ 819 mil/mês (+13,1%) e market share no Sul de 13,5% (+1,0 p.p.).",
+  "Alavancagem operacional: EBITDA ajustado +26,4% e lucro ajustado +39,1% no 2T26 com despesas de vendas e G&A diluindo; guidance de EBITDA de 6,7–7% em 2030 vs 5,4% hoje.",
+  "Diferenciais defensáveis: digital em 33,7% das vendas (app +156%), marca própria com 19,2% de higiene e beleza e DL de 0,9x EBITDA com custo abaixo do CDI."
+ ],
+ "risks": [
+  "Execução da expansão (de 664 para até 1.000 lojas) fora do Sul, onde a marca é menos conhecida e a RD Saúde é dominante.",
+  "Margem bruta: CMED abaixo da inflação, mix com mais GLP-1 (preço da semaglutida caiu 22% no 1S26 com o genérico) e menos OTC.",
+  "Concorrência: farmácias em supermercados (Lei 15.357/2026), Assaí e Mateus entrando no setor; RD Saúde e Pague Menos.",
+  "Liquidez baixa (ADTV ~R$ 12 mi) e controle familiar concentrado ampliam a volatilidade (queda de −31% no dia).",
+  "Capital de giro: estoques de R$ 1,2 bi; crescimento acelerado consome caixa e pressiona a DL com juros altos."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (novembro/2026; data a confirmar)",
+  "Ritmo de aberturas de lojas no 2S26 e em 2027 (meta de até 1.000 lojas)",
+  "Reajuste CMED de abril/2027"
+ ],
+ "key_data": [
+  {
+   "label": "Receita bruta do varejo 2T26",
+   "value": "R$ 1,63 bi (+15,8%)",
+   "context": "SSS 13,5% / MSSS 11,4%; receita líquida CVM R$ 1.509 mi (+14,9%)"
+  },
+  {
+   "label": "EBITDA ajustado 2T26 (pré-IFRS-16)",
+   "value": "R$ 88,5 mi (5,4% da RB)",
+   "context": "+26,4%; CVM IFRS-16 R$ 129 mi (8,5% da RL)"
+  },
+  {
+   "label": "Lucro líquido ajustado 2T26",
+   "value": "R$ 38,9 mi (+39,1%)",
+   "context": "CVM R$ 30,4 mi; ex-IFRS-16 R$ 32,8 mi"
+  },
+  {
+   "label": "DL / EBITDA LTM (cia.)",
+   "value": "R$ 319 mi / 0,9x",
+   "context": "custo CDI−1,4%; + arrendamentos R$ 789 mi"
+  },
+  {
+   "label": "Lojas",
+   "value": "664",
+   "context": "+15 em 12 meses; meta de até 1.000 em 2030"
+  },
+  {
+   "label": "Ações em circulação",
+   "value": "149,4 mi",
+   "context": "ADTV 3m ~R$ 12 mi"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Panvel – Apresentação de Resultados 2T26 (06/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/d19425c2-0ba6-490e-af3b-87fc04d4fc88/a2784af6-1abb-abee-745e-6bd9463bc50b?origin=2"
+  },
+  {
+   "title": "Panvel – Release 4T25 (19/03/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/d19425c2-0ba6-490e-af3b-87fc04d4fc88/56723a75-7ee1-831e-6269-e3fe16fae948?origin=2"
+  },
+  {
+   "title": "Mercado & Consumo – Panvel se destaca no 2T26, analisa XP",
+   "url": "https://mercadoeconsumo.com.br/07/08/2026/mc-capital/panvel-se-destaca-entre-gigantes-do-setor-farma-no-2t26-analisa-xp/"
+  },
+  {
+   "title": "CVM – DFP/ITR padronizados (data/hist/PNVL3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 – cotação ao vivo e proventos",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/PNVL3"
+  }
+ ],
+ "confidence": "média — apresentação oficial do 2T26 lida e base CVM consistente; saldo de JCP a pagar estimado, valor sensível à execução da expansão e à margem (ROE ~11%), e papel pouco líquido."
+}

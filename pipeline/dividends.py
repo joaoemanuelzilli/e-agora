@@ -266,6 +266,9 @@ def main(raw_b3):
     sup = json.load(open(raw / "supplement.json"))
     cov = json.load(open(ROOT / "research" / "_coverage.json"))["coverage"]
     quotes = json.load(open(ROOT / "data" / "market" / "quotes.json"))
+    qv = ROOT / "data" / "market" / "quotes_val.json"
+    if qv.exists():  # foto de valuation mais recente tem prioridade nos yields
+        quotes = {**quotes, **{k: v for k, v in json.load(open(qv)).items() if isinstance(v, dict)}}
     issuers = sorted({c["ticker"][:4] for c in cov})
 
     det = json.load(open(raw / "details.json")) if (raw / "details.json").exists() else {}

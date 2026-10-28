@@ -1,0 +1,267 @@
+{
+ "ticker": "ISAE4",
+ "name": "ISA Energia Brasil S.A. (antiga ISA CTEEP)",
+ "sector": "Utilities / transmissão de energia (Concessão Paulista 059/2001 renovada até 2042 + RBSE; contratos licitados; IE Madeira 100% desde 31/07/2026; AIE 50% por equivalência)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "ISAE3",
+   "class": "ON"
+  },
+  {
+   "ticker": "ISAE4",
+   "class": "PN"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 4450,
+   "net_debt": 16875,
+   "equity_controlling": 11616,
+   "equity_controlling_2025": 10203
+  },
+  "notes": "Base REGULATÓRIA (contabilidade ANEEL), não IFRS. No IFRS a ISA registra receita de implementação de infraestrutura, remuneração e correção do ativo de contrato (inclusive o recebível da RBSE): LL IFRS 1S26 R$ 1.297,7 mi contra R$ 531,6 mi regulatório; receita IFRS 2T26 R$ 2.597,5 mi contra R$ 1.243,4 mi. A visão regulatória registra a RAP faturada (incluindo as parcelas da RBSE) e é a base da política de proventos (≥75% do LL regulatório). revenue_2025 = receita líquida regulatória FY2025 ESTIMADA em R$ 4.450 mi (1S25 R$ 2.160,5 mi oficial + 2S25 estimado em ~R$ 2,29 bi; o release 4T25 não foi obtido). A coluna 2026 é o run-rate anualizado do 2S26 (R$ 5.900 mi): ciclo RAP 2026/27 (IPCA +4,72%), Piraquê e Jacarandá integrais e IE Madeira consolidada a 100% desde 31/07/2026 (RAP R$ 796,7 mi; EBITDA regulatório 2025 R$ 660 mi). Trajetória de receita: RBSE (ciclo 26/27: componente financeiro R$ 1.350 mi + econômico R$ 667 mi, valores reais jun/26) segue até jun/2028; no ciclo 28/29 o componente financeiro zera e o econômico cai para ~R$ 350 mi → perda de ~R$ 1,8 bi/ano de receita a partir de jul/2028 (≈29% da receita de 2027), compensada em parte pela RTP de 2028 (R&M de pequeno porte, ~54% dos R$ ~4 bi autorizados fev/23–jun/27, hoje sem receita), Serra Dourada (RAP R$ 337 mi; suposta a partir de jul/2028) e Itatiaia (R$ 260 mi; jul/2029). Dívida líquida-base = DL da companhia em 30/06 (R$ 16.289,9 mi, que exclui o caixa das controladas em conjunto nos fundos exclusivos) + dívida líquida da IE Madeira (R$ 588 mi) + torna paga à AXIA (R$ 1.167 mi) − follow-on líquido (44,4 mi PN a R$ 27 = R$ 1.199 mi brutos, ~R$ 1.170 mi líquidos, liquidado em 28/07) = R$ 16.875 mi. Ações: 703,3 mi (B3, já com o follow-on); a CVM de 30/06 mostra 658,9 mi. PL controlador regulatório: R$ 10.445,8 mi em 30/06 + R$ 1.170 mi do follow-on = R$ 11.616 mi (o PL IFRS é R$ 22,2 bi). PERPETUIDADE: g 3% e ROIC_T 10% / ROE_T 12% (abaixo da Alupar) porque o componente econômico da RBSE some até o ciclo 33/34, a IE Madeira vence em fev/2039 e a Concessão Paulista em 2042."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.326,
+   0.058,
+   -0.019,
+   0.01,
+   0.062
+  ],
+  "ebitda_margin": [
+   0.8,
+   0.805,
+   0.79,
+   0.79,
+   0.795
+  ],
+  "da_pct_revenue": [
+   0.183,
+   0.183,
+   0.2,
+   0.21,
+   0.21
+  ],
+  "capex_pct_revenue": [
+   0.78,
+   0.66,
+   0.44,
+   0.29,
+   0.25
+  ],
+  "nwc_pct_revenue": 0.02,
+  "cost_of_net_debt": [
+   0.13,
+   0.133,
+   0.13,
+   0.127,
+   0.127
+  ],
+  "other_financial": [
+   80,
+   85,
+   90,
+   95,
+   100
+  ],
+  "tax_rate": [
+   0.14,
+   0.15,
+   0.16,
+   0.17,
+   0.18
+  ],
+  "minority_share_ni": 0.04,
+  "payout": [
+   0.75,
+   0.75,
+   0.75,
+   0.75,
+   0.75
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.03,
+  "roic": 0.1,
+  "roe": 0.12
+ },
+ "wacc": {
+  "kd_pre_tax": 0.125,
+  "target_debt_weight": 0.45
+ },
+ "adjustments": {
+  "other_debt_like": 332,
+  "non_operating_assets": 650,
+  "minority_value": null,
+  "notes": "other_debt_like = JCP declarado após o balanço com data-com 08/10/2026 e pagamento em 07/12 (R$ 0,188959 × 703,3 mi ações = R$ 132,9 mi; referente ao 1S26, não é fluxo de quem compra hoje) + JCP/dividendos a pagar em 30/06 (R$ 12,5 mi) + provisões para contingências (R$ 180,1 mi) + derivativos passivos (R$ 6,7 mi). non_operating_assets = 50% da AIE (Aimorés, Paraguaçu, Ivaí), não consolidada: EBITDA proporcional ~R$ 315 mi/ano × 7x − dívida líquida proporcional ~R$ 1,46 bi ≈ R$ 0,75 bi, com desconto pela iliquidez e Ke 25% ≈ R$ 650 mi; a equivalência regulatória da AIE (~R$ 80 mi/ano; R$ 39,6 mi no 1S26) entra em other_financial só nos métodos de lucro. A IE Madeira, antes 51% por equivalência, passou a 100% consolidada (receita, EBITDA e dívida já nas linhas); a IE Garanhuns (51%) foi entregue à AXIA. Não incluí o recebível da Secretaria da Fazenda de SP (Lei 4.819/58, complementação de aposentadorias) por estar em litígio. Minoritários a valor contábil (R$ 321,5 mi: participação das controladas em conjunto nos fundos exclusivos)."
+ },
+ "target_multiples": {
+  "pe": 8.5,
+  "ev_ebitda": 6.0,
+  "pbv": 1.2,
+  "rationale": "Sobre números regulatórios de 2027E, que ainda contêm ~R$ 1,43 bi de componente financeiro da RBSE e ~R$ 0,7 bi do econômico, que acabam/caem em jul/2028. Valor de referência: ~11x P/L e ~7,5x EV/EBITDA sobre a base recorrente pós-2028 (próximo de ALUP11 no estudo: 11x e 7x) mais o valor presente das parcelas restantes da RBSE (2027 e 1S28, ~R$ 2,7 bi antes de IR). Equivale a ~8,5x o LPA de 2027E (11 × LPA recorrente ~R$ 1,0 + RBSE restante ~R$ 3,2/ação, sobre LPA 2027E ~R$ 1,75) e ~6x o EBITDA de 2027E (7,5x × EBITDA ex-RBSE financeira + R$ 2,7 bi). Mercado na foto de 26/10: ~13x o LL regulatório UDM (~R$ 1,56 bi) e ~8x o EBITDA regulatório UDM pró-forma com Madeira; multiples_history (IFRS, desde nov/2024) P/L médio 5,7x e EV/EBITDA 6,4x, inflados pelo lucro IFRS. Múltiplos de mercado embutem Ke de 11–13%, abaixo dos 25% do estudo."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.015,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.03,
+   "narrative": "Judicialização da RBSE avança (TRF1 declarou nulo o §3º do art. 1º da Portaria MME 120/2016 em 5 de 40 ações), RTP 2028 com WACC regulatório baixo, estouro de capex em Serra Dourada/Itatiaia e CDI >15% com DL/EBITDA acima de 4,5x."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.03,
+   "narrative": "RTP 2028 com WACC regulatório maior (NTN-B alta) e retroativos de R&M, greenfields antecipados com eficiência de capex (média de 23%) e curva devolve o choque."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.012,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.03
+ },
+ "debt_profile": {
+  "gross_debt_mn": 17726,
+  "pct_floating_cdi": 0.29,
+  "avg_cost": "Custo médio nominal 12,17% a.a. (real 7,11%) em 30/06/2026; IPCA 67% (debêntures IPCA+3,5% a +7,4%), CDI 29% (CDI+0,55% a +0,84% após o liability management da 21ª emissão; 18ª emissão swapada para CDI−0,60%), TJLP/TLP 4% (BNDES). Pós-balanço: 23ª (R$ 1,5 bi) e 24ª (R$ 1,0 bi) emissões a CDI+0,42%",
+  "avg_maturity_years": 8.7,
+  "next_24m_maturities_mn": 800,
+  "covenant_nd_ebitda": 3.0
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -45,
+  "notes": "Dívida CDI de ~R$ 5,1 bi em 30/06 + R$ 2,5 bi emitidos depois (23ª e 24ª), menos caixa de ~R$ 2,5 bi rendendo CDI → exposição líquida ~R$ 5 bi: +100 bp ≈ −R$ 50 mi antes de IR, ≈ −R$ 45 mi no lucro (~4% do LL projetado de 2027). A parcela IPCA (67%) tem hedge natural na RAP, mas a variação monetária entra no resultado antes do reajuste anual (2T26: IPCA de 2,14% no trimestre levou a despesa financeira a +82% a/a). Covenant de 3,0x DL/EBITDA só nos contratos BNDES (R$ 665 mi), com waiver para 2025; alavancagem gerencial 3,78x no 2T26 e, no modelo, ~4,6x em 2028–29 (capex de ~R$ 12 bi e fim da RBSE financeira). Custo da DL de 13,0% no 2S26 subindo a 13,3% em 2027 (CDI a termo 14,6–15,5%; IPCA 4,8%) e 12,7% em 2029–30."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.206,
+  "ebitda_margin_avg_5y": 0.636,
+  "roe_avg_5y": 0.168,
+  "payout_avg_5y": 0.436,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.209,
+   "ebitda_margin": 0.778,
+   "net_income_mn": 174,
+   "net_debt_ebitda": 3.78
+  },
+  "notes": "Médias de 5 anos são IFRS/CVM (receita +20,6% a.a. 2020–25 puxada por receita de construção; margem EBITDA 64%; ROE 17%; payout em caixa 44% do LL IFRS) e não servem de âncora. Regulatório: 1S26 receita líquida R$ 2.469,6 mi (+14,3%), EBITDA R$ 1.988,1 mi (80,5%), LL R$ 531,6 mi (−10,4%); 2T26 receita R$ 1.243,4 mi (+20,9%; ex-RBSE +52%), EBITDA R$ 966,9 mi (77,8%), LL R$ 173,9 mi (−32%, despesa financeira +82%). FY2025: proventos de ~R$ 1,22 bi = payout de 75% do LL regulatório → LL regulatório ~R$ 1,6 bi (inferido; release 4T25 não obtido). ROE regulatório UDM 17,1% (companhia). Projeção: LL ~R$ 1,23–1,26 bi/ano em 2026–27 (anualizado), caindo para ~R$ 0,7–0,8 bi em 2028–29 com o fim da RBSE financeira e a dívida de ~R$ 22 bi, e voltando a ~R$ 0,83 bi em 2030."
+ },
+ "guidance": "Sem guidance de resultado. RAP do ciclo 2026/27 (ex-PA, consolidada + proporcional das controladas em conjunto, já com o descruzamento) R$ 7.082 mi: Concessão Paulista R$ 3.806 mi (RBSE R$ 1.989 mi, O&M R$ 921 mi, R&M R$ 897 mi), licitadas em operação R$ 2.679 mi, em construção R$ 597 mi (Serra Dourada R$ 337 mi, capex ANEEL R$ 3.731 mi, 49% de avanço; Itatiaia R$ 260 mi, R$ 2.719 mi, 33%; ambos com prazo ANEEL em mar/2029). Capex remanescente de greenfield ~R$ 4,6 bi (jul/26–2028) e pipeline de R&M autorizado de R$ 7,2 bi; ~R$ 12 bi de investimento autorizado até 2033. Fluxo da RBSE (ANEEL, jun/2025): componente financeiro R$ 1.350 mi/ano nos ciclos 26/27 e 27/28 e zero a partir de 28/29; componente econômico R$ 667 mi/ano caindo até o ciclo 33/34. RTP da Concessão Paulista em 2028.",
+ "dividend_policy": "Prática anunciada em 2018: distribuir no mínimo 75% do lucro líquido regulatório (proxy de geração de caixa), em JCP e dividendos intercalares; sem política formal aprovada (Formulário de Referência 2026). Exercício 2025: ~R$ 1,2 bi (payout de 75%). 1S26: JCP de R$ 0,188959/ação (R$ 132,9 mi; data-com 08/10/2026, pagamento 07/12/2026). Premissa: 75% em 2026–30; com DL/EBITDA projetada de ~4,6x em 2028–29 há risco de payout menor.",
+ "election_impact": "Caiu ~9% no dia (R$ 28,32 → R$ 25,72 na foto de 26/10), menos que o Ibovespa. É sobretudo taxa de desconto (NTN-B e prêmio de risco): a RAP é indexada ao IPCA e contratada, e 67% da dívida é IPCA. O que muda de fato: (i) a exposição a CDI subiu com as emissões feitas após o 2T26 (23ª e 24ª, R$ 2,5 bi a CDI+0,42%) (~R$ 5 bi líquidos; +100 bp ≈ −R$ 45 mi no lucro) num momento de capex alto e alavancagem de 3,8x; (ii) o fim do componente financeiro da RBSE em jun/2028 (~R$ 1,35 bi/ano em valores de 2026) já estava contratado e independe da eleição; (iii) os riscos regulatórios federais (RTP de 2028, judicialização da RBSE no TRF1, Portaria MME 120/2016) ficam sob um 4º mandato com foco em modicidade tarifária. O controlador é o grupo colombiano ISA (Ecopetrol), sem efeito direto da eleição brasileira.",
+ "summary": "Maior transmissora privada listada, com execução de projetos acima da média (greenfields antecipados ~11 meses, eficiência de capex de ~23%) e RAP de R$ 7,1 bi indexada ao IPCA. Mas o lucro regulatório de 2026–27 ainda carrega o componente financeiro da RBSE, que acaba em jun/2028, e a alavancagem sobe com capex de ~R$ 12 bi: o lucro cai ~40% em 2028–29 antes de os novos projetos repô-lo. A 25% de Ke, o fluxo de dividendos fica muito abaixo do preço.",
+ "thesis": [
+  "RAP de R$ 7.082 mi (ciclo 26/27, +11%), 100% IPCA, com IE Madeira a 100% (RAP R$ 796,7 mi, margem EBITDA ~93%) somada desde 31/07/2026.",
+  "Execução: Piraquê (RAP R$ 359 mi) energizado 16 meses antes do prazo; Jacarandá com capex 33% abaixo do ANEEL; pipeline de R&M de R$ 7,2 bi remunerado pela RTP de 2028.",
+  "Payout mínimo de 75% do LL regulatório e dívida longa (prazo médio 8,7 anos, 91% vencendo a partir de 2030)."
+ ],
+ "risks": [
+  "Fim do componente financeiro da RBSE em jun/2028 (R$ 1.350 mi/ano, reais de jun/26) e queda do econômico (R$ 667 mi → ~R$ 350 mi): ~29% da receita de 2027.",
+  "Judicialização da RBSE: 40 ações contra a Portaria MME 120/2016; em 26/05/2026 o TRF1 declarou nulo o §3º do art. 1º em 5 delas (cabe recurso), o que pode afetar o recebimento remanescente.",
+  "Alavancagem: DL de R$ 16,3 bi (3,78x) no 2T26, ~R$ 22 bi projetada em 2028; covenant BNDES de 3,0x com waiver; risco de payout menor ou nova emissão de ações.",
+  "Execução de Serra Dourada e Itatiaia (R$ 6,45 bi de capex ANEEL; Itatiaia ainda em licenciamento) e WACC regulatório da RTP de 2028."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (03/11/2026, primeiro trimestre com IE Madeira consolidada)",
+  "Decisões nos recursos da RBSE (TRF1/STJ)",
+  "Reajuste da RAP do ciclo 2027/28 (jul/2027) e RTP da Concessão Paulista (2028)",
+  "Energização de Serra Dourada e Itatiaia (prazo ANEEL mar/2029)"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA regulatório 2T26",
+   "value": "R$ 966,9 mi (+22,5% a/a)",
+   "context": "margem 77,8%; 1S26 R$ 1.988,1 mi"
+  },
+  {
+   "label": "LL regulatório 2T26",
+   "value": "R$ 173,9 mi (−32%)",
+   "context": "IFRS: R$ 688,6 mi"
+  },
+  {
+   "label": "DL jun/26",
+   "value": "R$ 16.289,9 mi (3,78x)",
+   "context": "pró-forma pós-Madeira/follow-on ~R$ 16,9 bi"
+  },
+  {
+   "label": "RBSE ciclo 26/27",
+   "value": "R$ 1.989 mi",
+   "context": "financeiro R$ 1.350 mi termina em jun/2028"
+  },
+  {
+   "label": "Follow-on (jul/26)",
+   "value": "44,4 mi PN a R$ 27 (R$ 1,2 bi)",
+   "context": "pagou torna de R$ 1.167 mi à AXIA pela IE Madeira"
+  },
+  {
+   "label": "Ações",
+   "value": "703,3 mi (238,2 ON + 465,2 PN)",
+   "context": "ISAE3 ~R$ 34 vs ISAE4 R$ 25,72"
+  }
+ ],
+ "sources": [
+  {
+   "title": "ISA Energia — Earnings Release 2T26 (03/08/2026)",
+   "url": "https://ri.isaenergiabrasil.com.br/pt/documentos/6758-Earnings-Release-2T26-vfinal.pdf"
+  },
+  {
+   "title": "ISA Energia — Resultados em Excel 2T26",
+   "url": "https://ri.isaenergiabrasil.com.br/pt/documentos/6757-1.-Resultados-Excel-2T26-(PT-EN).xlsx"
+  },
+  {
+   "title": "ISA Energia — Apresentação de resultados 2T26",
+   "url": "https://ri.isaenergiabrasil.com.br/pt/documentos/6766-ISA-ENERGIA-Resultados-2T26-v4.pdf"
+  },
+  {
+   "title": "ISA Energia — Apresentação de resultados 1T26 (payout de 75% em 2025)",
+   "url": "https://ri.isaenergiabrasil.com.br/pt/documentos/6582-ISA-ENERGIA-Resultados-1T26-vfinal.pdf"
+  },
+  {
+   "title": "ISA Energia — Formulário de Referência 2026 (política de proventos)",
+   "url": "https://ri.isaenergiabrasil.com.br/pt/documentos/6671-Formulario-de-Referencia-v8-10-09-26.pdf"
+  },
+  {
+   "title": "Renova Invest — ISA assume 100% da IE Madeira e paga R$ 1,17 bi de torna à AXIA",
+   "url": "https://renovainvest.com.br/blog/isa-energia-ie-madeira/"
+  },
+  {
+   "title": "Contexto do estudo (Selic, Focus, curva DI 26–28/10/2026)",
+   "url": "research/_context.md"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/ISAE4.json"
+  }
+ ],
+ "confidence": "média — RAP, RBSE, dívida e descruzamento vêm de documentos oficiais do 2T26; mas a receita/lucro regulatórios de FY2025 são estimados (release 4T25 não obtido), a data de energização de Serra Dourada/Itatiaia e o efeito da RTP de 2028 são premissas, e o caso depende do desfecho judicial da RBSE."
+}

@@ -167,8 +167,13 @@ def zscore(vals):  # igual ao build.py
 
 
 def spearman(a, b):
-    ra = np.argsort(np.argsort(a)).astype(float)
-    rb = np.argsort(np.argsort(b)).astype(float)
+    # pares com valor ausente (ex.: holding sem TIR, empresa sem P(MC)) ficam de fora
+    pairs = [(x, y) for x, y in zip(a, b) if x is not None and y is not None and np.isfinite(x) and np.isfinite(y)]
+    if len(pairs) < 3:
+        return float("nan")
+    a2, b2 = zip(*pairs)
+    ra = np.argsort(np.argsort(a2)).astype(float)
+    rb = np.argsort(np.argsort(b2)).astype(float)
     return float(np.corrcoef(ra, rb)[0, 1])
 
 

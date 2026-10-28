@@ -1,0 +1,209 @@
+{
+ "ticker": "ABCB4",
+ "name": "Banco ABC Brasil S.A.",
+ "sector": "Financeiro / Banco de atacado (Corporate, Large Corporate e Middle) — controle Arab Banking Corporation (Bahrein)",
+ "template": "financial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "ABCB4",
+   "class": "PN"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "equity_controlling_2025": 6919,
+   "equity_controlling": 7428
+  },
+  "notes": "Ações: uso as ações atuais da B3 (266,6 mi ex-tesouraria), que já incluem as ~8,7 mi de ações da recapitalização de JCP anunciada em jun/26 ('até R$ 169 mi', liquidada no 3T26 junto com o pagamento do JCP de 12/08). O PL CVM do 2T26 (R$ 7.259 mi; 257,7 mi de ações no release) ainda não tem esse dinheiro, então o PL 'atual' vai a R$ 7.428 mi (7.259 + 169) — mesmas ações, mesmo PL; nunca as duas coisas. PL-base pró-forma (mesma técnica do BBAS3): o motor projeta a partir do FY2025 (R$ 6.759 mi), mas no 1S26 entraram R$ 314 mi de recapitalização (aumento de dez/25 homologado em abr/26) e sai em 2026 o JCP bruto de ~62% do lucro. Override equity_controlling_2025 = PL 2026E alvo − lucro 2026E retido no motor: 7.628 − 1.012 × (1 − 0,30) = R$ 6.919 mi; com ROE de abertura de 14,63%, LL 2026E = R$ 1.012 mi (1S26 R$ 487,5 mi + 2S26E R$ 525 mi) e PL 2026E = R$ 7.628 mi = PL 2T26 7.259 + recap. jun/26 169 + LL 2S26E 525 − JCP 2S26E bruto ~325. Lucro CVM = lucro recorrente do release (1S26 R$ 487,5 mi nos dois). Payout é LÍQUIDO da recapitalização: o banco paga JCP de ~60% do lucro (2025: R$ 631 mi / R$ 1.002 mi; 1S26: R$ 301 mi / R$ 487,5 mi) e recaptura parte com aumentos de capital em que o acionista subscreve ações com o JCP (2023 R$ 157 mi, 2024 R$ 146 mi, 1S26 R$ 314 mi, 3T26 até R$ 169 mi). O fluxo líquido ao conjunto dos acionistas é ~25–40% do lucro; é ele que entra no DDM, e é o que sustenta PL crescendo ~9% a.a., em linha com o guidance de carteira de 6–10%. Payout 2026 de 30% = fluxo do stub (2S26 × 0,504): JCP do 2S26 (~R$ 325 mi, data-com prevista p/ fim de dez/26) menos a recapitalização associada (~R$ 170 mi, fev/27) ≈ R$ 150 mi; o JCP do 1S26 (data-com 29/06/26, pago em 12/08) já saiu do PL e não é fluxo de quem compra hoje."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   0.3,
+   0.4,
+   0.4,
+   0.45,
+   0.45
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.1463,
+   0.146,
+   0.15,
+   0.155,
+   0.155
+  ],
+  "ni_growth": null,
+  "payout": [
+   0.3,
+   0.4,
+   0.4,
+   0.45,
+   0.45
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Banco: sem ponte EV→equity. Minoritários do release (R$ 2,8 mi/tri, ~1% do lucro) já estão fora do lucro recorrente e do PL controlador."
+ },
+ "valuation_weights": {
+  "ddm": 0.6,
+  "pbv": 0.4
+ },
+ "valuation_weights_rationale": "Mesma regra dos bancos revisados (BBAS3, BBDC4, BRSR6, BPAC11 — data/tests/robustness.md): valor de banco é ROE contra Ke sobre o PL; o DDM é o fluxo do acionista e sua perpetuidade é o P/VP de Gordon; o P/VP-alvo é a âncora de mercado. O P/L sai do blend (redundante com o DDM e distorcido por provisões/JCP), mas fica como saída da TIR de 3 anos.",
+ "target_multiples": {
+  "pe": 5.0,
+  "ev_ebitda": null,
+  "pbv": 0.7,
+  "rationale": "P/VP 0,70x (sobre o PL 2026E) e P/L 5,0x (sobre o LPA 2027E). Histórico do próprio papel (data/market multiples_history, CVM): P/VP médio de 5 anos 0,84x (p10 0,74x; p90 0,97x), P/L médio de 5 anos 6,3x (mediana 5,9x; p10 5,0x). O ABC negociava a ~0,84x no fim do 2T26 (release) e ~1,06x na sexta pré-eleição, depois de subir 30% no rali de outubro. Com ROE normalizado de ~15% e Ke de mercado que subiu de ~17% (implícito em 0,84x) para ~19–20% com a curva longa a 15%, Gordon dá (0,15−0,05)/(0,195−0,05) ≈ 0,69x; P/L 5,0x é o p10 de 5 anos e equivale a 0,70x/14% de ROE. Pares de atacado (Daycoval, BTG em outro patamar de ROE) não usados como âncora por diferença de ROE."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Selic ≥ 14% até 2028 leva o ciclo de crédito ao Corporate/Middle (custo do crédito de 0,7% → 1,2–1,5% da carteira) e encarece o funding de banco médio: ROE 12–13%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Juros caem a partir de 2027, banco de investimento e serviços normalizam e o Middle ganha escala com garantias: ROE volta a 16–17% (4T25 15,5%; 2022–24 ~15,5–16%)."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "n/a (banco: captação é passivo operacional). Captação com terceiros R$ 52,2 bi no 2T26 (+7,2% a/a): depósitos, LCA/LF, repasses e multilaterais; 1,4x o PL em caixa líquido no vértice de 30 dias.",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 25,
+  "notes": "Estimativa minha, não divulgada pelo banco: o 'PL remunerado a CDI' rendeu R$ 333 mi no 1S26; +100 bp de CDI ≈ +R$ 45 mi/ano antes de IR e PLR ≈ +R$ 25 mi de lucro (~+0,3 p.p. de ROE). A carteira é majoritariamente pós-fixada e casada com a captação (gap positivo em todos os vértices), então o efeito direto na margem é pequeno. O efeito de segunda ordem é negativo e maior: juro alto por mais tempo pressiona caixa das empresas médias (Middle +28,7% a/a), eleva o custo do crédito (CFO: 'guarda alta') e alarga o spread de captação de banco médio em momentos de estresse — isso está no bear (−2,5 p.p. de ROE)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.093,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.149,
+  "payout_avg_5y": 0.45,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": null,
+   "ebitda_margin": null,
+   "net_income_mn": 257,
+   "net_debt_ebitda": null
+  },
+  "notes": "revenue_cagr_5y aqui = CAGR do PL controlador CVM 2020–25 (R$ 4.327 → 6.759 mi, 9,3% a.a., inclui recapitalizações). ROE CVM 2021–25: 12,5/15,9/15,3/15,8/15,2% (média 14,9%). Payout bruto de JCP (DVA) 2023–25: 42/41/63%; líquido de recapitalizações ~25–35%. Projeção: LL 2026E R$ 1.012 mi (+1% a/a; ROE médio 13,9%), 2027E R$ 1.114 mi (14,0%), 2030E R$ 1.521 mi (14,9%); terminal 15% = média CVM 2021–25. Não assumo volta aos 16% do 4T25 enquanto a Selic seguir em 13,75%+ e a curva longa a 15%."
+ },
+ "guidance": "Guidance 2026 (fev/26): carteira expandida +6% a +10% (Middle +12% a +18%); despesas +4% a +8%; índice de eficiência 37,5%–39,5%. 2T26: carteira +8,3% a/a (dentro), Middle +28,7% (acima), despesas de pessoal e administrativas +10,8% a/a e eficiência de 41,2% (fora da faixa). Não localizei revisão formal do guidance. 3T26 previsto para o início de nov/26 (data não verificada).",
+ "dividend_policy": "JCP semestral próximo do teto legal (TJLP × PL), ~60% do lucro: 2S25 R$ 1,532/ação (data-com 29/12/25, pago em 11/02/26); 1S26 R$ 1,168/ação = R$ 301 mi (data-com 29/06/26, pago em 12/08/26). A cada semestre o banco abre aumento de capital para o acionista reinvestir o JCP (dez/25: R$ 314 mi, homologado em abr/26; jun/26: até R$ 169 mi). DY anualizado do release: 9,8%. Premissa: payout LÍQUIDO de 40% (2027–28) e 45% (2029–30).",
+ "election_impact": "−17,2% em 26/10 (R$ 29,49 → R$ 24,42; P/VP ~1,06x → ~0,88x); em 28/10, R$ 23,03. Canal quase todo macro: (i) Ke — o papel tinha subido 30% no rali de outubro apostando em vitória da oposição e queda de juros, e devolveu tudo; (ii) juros altos por mais tempo (DI F29 14,9%, F31 15,2%) atrasam o ciclo de corte que o banco esperava para recuperar o ROE e pressionam o crédito de empresas médias. O que de fato muda no valor: pouco na margem (PL remunerado a CDI ganha com Selic alta; carteira pós-fixada), algo no custo do crédito e no funding (spread de banco médio). Não há canal de intervenção (controle privado estrangeiro). Modelo: ROE de 14,0% em 2026–27 e 15% terminal, ~1 p.p. abaixo do que se esperava com cortes de juros.",
+ "summary": "Banco de atacado bem capitalizado (Basileia 16,2%, CET1 11,9%) com ROE estável em 14–16% há cinco anos, inadimplência +90 de 0,6% e cobertura de 377%. A queda da eleição veio de prêmio de risco e de juros altos por mais tempo, não de deterioração do balanço; mas com ROE de ~15% contra um Ke de 25%, o valor depende do ROE sobre o PL, que pouco muda com o choque.",
+ "thesis": [
+  "Lucro recorrente estável: R$ 257,3 mi no 2T26 (+11,8% t/t; +5,4% a/a), ROAE 14,3%; LL CVM 2021–25 cresceu de R$ 563 mi para R$ 1.002 mi (15,5% a.a.).",
+  "Qualidade de crédito sob controle: atraso +90 de 0,6% da carteira, Estágio 3 de 2,9%, provisão ampliada de 0,6% a.a. no 2T26 e provisão prospectiva de R$ 190 mi.",
+  "PL remunerado a CDI (R$ 333 mi no 1S26) amortece Selic alta; capital confortável permite payout bruto de ~60% com recapitalização opcional.",
+  "Preço ~0,88x o PL pró-forma (R$ 27,9/ação) e ~5,8x o LPA 2027E no fechamento de 26/10."
+ ],
+ "risks": [
+  "Ciclo de crédito corporativo com Selic alta por mais tempo; o Middle (R$ 5,1 bi, +28,7% a/a) tem atraso +90 de 3,3% e Estágio 3 de 9,0%.",
+  "Custo de captação de banco médio sobe em estresse (depósitos a prazo, LF, multilaterais) e o funding externo depende do controlador (ABC Bahrein).",
+  "Despesas acima do guidance (eficiência 41,2% vs. 37,5–39,5%) e receitas de banco de investimento voláteis (−26,7% a/a no 1S26).",
+  "Diluição contínua via recapitalização de JCP (ações +9% em 2026); baixa liquidez (ADTV ~R$ 15 mi)."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (início de nov/26; data não verificada).",
+  "Guidance 2027 (fev/27) e ritmo de cortes da Selic.",
+  "JCP do 2S26 (data-com prevista p/ fim de dez/26) e nova janela de recapitalização."
+ ],
+ "key_data": [
+  {
+   "label": "LL recorrente 2T26",
+   "value": "R$ 257,3 mi (+5,4% a/a)",
+   "context": "1S26 R$ 487,5 mi; ROAE 14,3% (1S26 14,0%)"
+  },
+  {
+   "label": "Carteira expandida",
+   "value": "R$ 56,5 bi (+8,3% a/a)",
+   "context": "Corporate 63%, Large 28%, Middle 9%"
+  },
+  {
+   "label": "Atraso +90 / Estágio 3",
+   "value": "0,6% / 2,9%",
+   "context": "Cobertura 377% do +90; provisão ampliada 0,6% a.a."
+  },
+  {
+   "label": "Basileia / CET1 (2T26)",
+   "value": "16,2% / 11,9%",
+   "context": "+29 bp pró-forma com a recapitalização de jun/26"
+  },
+  {
+   "label": "PL pró-forma",
+   "value": "R$ 7.428 mi",
+   "context": "PL 2T26 R$ 7.259 mi + recapitalização de até R$ 169 mi"
+  },
+  {
+   "label": "Preço / P/VP",
+   "value": "R$ 24,42 / 0,88x",
+   "context": "Sexta R$ 29,49 (1,06x); 28/10 R$ 23,03"
+  }
+ ],
+ "sources": [
+  {
+   "title": "ABC Brasil — Earnings Release 2T26 (06/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/6298ef6f-2b75-43f8-b2ab-99e3fe33e809/8db543c9-499b-8f37-ccd9-1a66c8a81343?origin=2"
+  },
+  {
+   "title": "PR Newswire — ABC Brasil entrega desempenho sólido no 2T26",
+   "url": "https://www.prnewswire.com/br/comunicados-para-a-imprensa/abc-brasil-entrega-desempenho-solido-no-2t26-com-lucro-liquido-de-r257-3-milhoes-302844991.html"
+  },
+  {
+   "title": "Seu Dinheiro — 'Temos que estar com a guarda alta', diz CFO do ABC Brasil após queda no ROE do 1T26",
+   "url": "https://www.seudinheiro.com/2026/empresas/temos-que-estar-com-a-guarda-alta-diz-cfo-do-abc-brasil-abcb4-apos-queda-no-roe-do-1t26-miql/"
+  },
+  {
+   "title": "Acionista — Guidance 2026 do ABC Brasil",
+   "url": "https://acionista.com.br/guidance-2026-revela-crescimento-impressionante-do-banco/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/ABCB4.json, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação (API oficial), 26 e 28/10/2026",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/ABCB4"
+  }
+ ],
+ "confidence": "média — release oficial do 2T26 lido (lucro, PL, capital, qualidade de crédito); incertos: o valor exato da recapitalização de jun/26 (usei o teto de R$ 169 mi, coerente com as +8,7 mi de ações na B3), o JCP do 2S26 e o efeito do choque de juros no custo do crédito de 2027."
+}

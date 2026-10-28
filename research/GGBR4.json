@@ -1,0 +1,120 @@
+{
+  "ticker": "GGBR4",
+  "name": "Gerdau S.A.",
+  "sector": "Siderurgia / aços longos, especiais e planos (Brasil, América do Norte e América do Sul)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {"ticker": "GGBR3", "class": "ON"},
+    {"ticker": "GGBR4", "class": "PN"}
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem override. Ações: 1.963,18 mi em circulação (data/hist) = capital pós-cancelamento de 04/08/2026 (716.975.719 ON + 1.261.042.330 PN = 1.978.018.049, release 2T26) − tesouraria de 30/06 líquida dos cancelamentos. As recompras de jul–out/26 (≈1,5 mi de ações; o programa de 2026 somava R$ 344,1 mi em 09/10) reduziriam a base a ~1.961,7 mi (−0,07%), efeito desprezível. Base contábil = 2T26 (CVM, 30/06/2026); o release do 3T26 (27/10/2026) já saiu e foi usado para calibrar o run-rate do 2S26 na coluna 2026. EBITDA do modelo no conceito CVM (EBIT + D&A, com equivalência patrimonial e sem o EBITDA proporcional das JVs): fica ~R$ 160–190 mi/trimestre abaixo do EBITDA ajustado do release (2T26: CVM 3.254 vs ajustado 3.430)."
+  },
+  "projection": {
+    "years": [2026, 2027, 2028, 2029, 2030],
+    "revenue_growth": [0.02, 0.058, 0.016, 0.052, 0.051],
+    "ebitda_margin": [0.186, 0.163, 0.155, 0.152, 0.152],
+    "da_pct_revenue": [0.051, 0.051, 0.052, 0.052, 0.052],
+    "capex_pct_revenue": [0.068, 0.055, 0.053, 0.052, 0.052],
+    "nwc_pct_revenue": 0.2,
+    "cost_of_net_debt": [0.095, 0.095, 0.095, 0.095, 0.095],
+    "other_financial": [-550, -550, -550, -550, -550],
+    "tax_rate": [0.29, 0.28, 0.28, 0.28, 0.28],
+    "minority_share_ni": 0.01,
+    "payout": [0.44, 0.55, 0.6, 0.6, 0.6],
+    "buyback_mn": [0, 0, 0, 0, 0],
+    "equity_issuance_mn": [0, 0, 0, 0, 0]
+  },
+  "terminal": {"g": 0.045, "roic": 0.105, "roe": 0.105},
+  "wacc": {
+    "kd_pre_tax": 0.115,
+    "target_debt_weight": 0.15,
+    "notes": "Kd em base BRL: 53% da dívida bruta em US$ a 6,13% a.a. (+~2% a.a. de depreciação esperada do real ≈ 8,1%) e 46% em R$ a CDI −0,15% (CDI a termo 2027–30 ~14,5–15,5%) → ~11,5%. wd = DL/(DL + valor de mercado) ≈ 9,7/(9,7 + ~50) ≈ 15%."
+  },
+  "adjustments": {
+    "other_debt_like": 1477,
+    "non_operating_assets": 0,
+    "minority_value": null,
+    "notes": "other_debt_like = (i) dividendo do 2T26 de R$ 451,3 mi (R$ 0,23/ação; data-com 19/08/2026, pago 11/09/2026: saiu do caixa de 30/06 e não é de quem compra hoje); (ii) fornecedores – risco sacado R$ 427 mi (BP 30/06, financiamento de fornecedor fora da DL CVM); (iii) benefícios a empregados (355,8 − 9,3 de pré-pago) × (1 − 34%) = 229; (iv) passivos ambientais (CP 234,6 + LP 326,5) × (1 − 34%) = 370. Total 1.477. Provisões para contingências (R$ 2.383 mi, contra depósitos judiciais de R$ 170 mi) ficam fora, como no resto do estudo. A compra da Dona Francisca Energética (R$ 292 mi de M&A no 3T26) saiu do caixa depois do balanço-base, mas troca caixa por um ativo de energia; tratada como neutra. Investimentos em coligadas/JVs (R$ 3.701 mi; México, Brasil) ficam no EBIT via equivalência, por isso não entram como ativo não operacional. Créditos tributários não circulantes (R$ 1.465 mi) tratados como capital de giro. Minoritários pelo valor contábil (R$ 190 mi), coerente com 1% do lucro."
+  },
+  "target_multiples": {
+    "pe": 7.0,
+    "ev_ebitda": 4.0,
+    "pbv": 0.8,
+    "rationale": "Histórico próprio (multiples_history): P/L 5 anos mediana 6,9x (média 9,6x); EV/EBITDA 5 anos média 4,2x (mediana 3,7x); P/VP 5 anos mediana 0,82x. Usamos P/L 7,0x sobre o LPA 2027E e EV/EBITDA 4,0x sobre o EBITDA CVM 2027E (base IFRS-16, com equivalência e sem EBITDA proporcional das JVs). O 2027E ainda carrega margem acima do meio de ciclo na América do Norte (22% vs ~19% no terminal), por isso não usamos a média de 5 anos com prêmio. Pares norte-americanos (Nucor, Steel Dynamics, CMC) negociam com múltiplos maiores, mas embutem Ke em dólar de ~9–10%; pares brasileiros (Usiminas, CSN) ficam em 3–5x. A tela de 26/10 (~4,7x EV/EBITDA ajustado 2026E e ~9x P/L 2026E) embute Ke de ~12–14%, bem abaixo dos 25% do estudo."
+  },
+  "scenarios": {
+    "bear": {"probability": 0.3, "revenue_growth_shift": -0.03, "ebitda_margin_shift": -0.03, "terminal_g_shift": -0.01, "capex_pct_shift": 0.0, "narrative": "Preço do aço nos EUA devolve a alta de +50% (nova capacidade de aciarias elétricas, revisão da Seção 232/USMCA) e a margem da América do Norte cai a ~14%; no Brasil, a importação chinesa segue acima de 20% do consumo e o antidumping de bobinas a quente/fio-máquina não sai."},
+    "bull": {"probability": 0.2, "revenue_growth_shift": 0.02, "ebitda_margin_shift": 0.025, "terminal_g_shift": 0.005, "capex_pct_shift": 0.0, "narrative": "Tarifa de 50% mantida e carteira acima de 100 dias sustentam margem de ~24% nos EUA; antidumping definitivo (dez/26) e Miguel Burnier levam a margem do Brasil a 14–15%; real fraco amplia o lucro em reais."}
+  },
+  "uncertainty": {"revenue_growth_sd": 0.05, "ebitda_margin_sd": 0.025, "terminal_g_sd": 0.0075, "capex_pct_sd": 0.005},
+  "debt_profile": {
+    "gross_debt_mn": 13558,
+    "pct_floating_cdi": 0.46,
+    "avg_cost": "US$ 6,13% a.a. (53% da dívida bruta; bonds) e R$ a CDI −0,15% (46%); 3T26: R$ a CDI −0,21%",
+    "avg_maturity_years": 7.6,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -25,
+    "notes": "Dívida em R$ ~R$ 6,2 bi (CDI −0,15%) contra caixa em R$ (parte dos R$ 5,4 bi): exposição líquida ao CDI de ~R$ 3,5–4 bi → +100 bp ≈ −R$ 35–40 mi antes do IR, ≈ −R$ 25 mi no lucro (0,5% do LL 2027E). Câmbio pesa muito mais: 74–77% do EBITDA vem da América do Norte; cada +10% no US$/R$ ≈ +R$ 0,9 bi de EBITDA ajustado/ano (antes do efeito nos custos em dólar do Brasil)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.0978,
+    "ebitda_margin_avg_5y": 0.202,
+    "roe_avg_5y": 0.19,
+    "payout_avg_5y": 0.502,
+    "last_quarter": {"period": "3T26", "revenue_yoy": 0.039, "ebitda_margin": 0.202, "net_income_mn": 1550, "net_debt_ebitda": 0.58},
+    "notes": "Receita CVM 2020–25: 43,8 → 69,9 bi (+9,8% a.a., puxada por 2021); 3 anos −5,4% a.a. Margem EBITDA CVM 2021–25: 30,0 / 25,1 / 19,7 / 15,8 / 10,6% (2025 com impairment no 4T25: EBITDA CVM do trimestre de R$ 145 mi); média de 10 anos (2016–25) 15,6%. Projetamos 18,6% na coluna 2026 (run-rate do 2S26: 3T26 ajustado 20,2%, 4T26 com compressão no Brasil), 16,3% em 2027, 15,5% em 2028 e 15,2% em 2029–30 — o meio de ciclo de 10 anos, não o pico de 2021–22. Construção por segmento (EBITDA ajustado → CVM menos ~R$ 0,55–0,70 bi/ano de EBITDA proporcional de JVs líquido de equivalência): América do Norte 26,2% (2026) → 22% → 20% → 19% → 19%; Brasil 9,8% → 11% → 12% → 12,5% → 12,5%; América do Sul 13%; corporativo −R$ 0,2–0,27 bi. ROE 2021–25: 42 / 26 / 16 / 8,5 / 2,5%; o modelo dá ~9–10%. Payout em dividendos 2021–25 de 34–52% (2025 93% sobre lucro deprimido), mais recompras (R$ 1,2 bi/ano em 2024–25); usamos 44–60% incluindo recompras (2S26: R$ 667 mi do 3T26 + ~R$ 450 mi do 4T26 + recompras). 3T26 (release 27/10): receita R$ 18.691 mi (+3,9% a/a), EBITDA ajustado R$ 3.771 mi (20,2%), lucro ajustado ~R$ 1,55 bi (LPA R$ 0,79), DL/EBITDA 0,58x."
+  },
+  "guidance": "Capex 2026 de R$ 4,7 bi (66% executado até set/26; ~55% em US$). Sem guidance de resultado. Perspectiva do 3T26 para o 4T26 (27/10/2026, 'não constitui guidance'): América do Norte com margem estável, volumes sazonalmente menores, sucata mais cara e parada em Midlothian; Brasil com compressão de margem (demanda sazonal, preço, carvão). Projetos: expansão de Midlothian (fase 1, +150 kt/ano, EBITDA potencial ~R$ 275 mi) no 2S26; Miguel Burnier (mineração) e centro de reciclagem de Pindamonhangaba em partida no 4T26. Próximo resultado: 16/02/2027.",
+  "dividend_policy": "Mínimo de 30% do lucro líquido ajustado da controladora após reservas, pago trimestralmente. 2026: R$ 0,10 (4T25), R$ 0,18 (1T26), R$ 0,23 (2T26, R$ 451 mi, data-com 19/08, pago 11/09) e R$ 0,34 (3T26, R$ 667 mi, pagamento 15/12/2026). Recompra 2026 de até 55 mi PN + 1,44 mi ON (R$ 344 mi executados até 09/10; 84% das ações recompradas canceladas). Payout com recompras de 40,3% no 2T26.",
+  "election_impact": "GGBR4 subiu 2,4% em 26/10 (às 13h02), contra queda de 13,9% do Ibovespa no dia: o mercado tratou a Gerdau como dolarizada. 74–77% do EBITDA vem da América do Norte, e o real mais fraco (dólar futuro de 5,04 para 5,38–5,49) aumenta o lucro em reais. O DI mais alto quase não pesa: DL/EBITDA de 0,58x e 53% da dívida em dólar a 6,1%. No Brasil, a reeleição mantém a política industrial e de defesa comercial — cotas renovadas em jun/26 com corte de 30% em fio-máquina, BQ e BF; antidumping de laminados a frio e revestidos em fev/26; HRC e fio-máquina com decisão preliminar positiva e definitiva prevista para dez/26. Juros altos por mais tempo, porém, freiam construção e indústria, que são os clientes de vergalhão e aço especial. O que muda no valor: o Ke de 25% do estudo, não o negócio. O caso depende de quanto tempo o spread de aço nos EUA fica no pico. O HRC de lá está em US$ 1.255–1.300/st (+52% a/a), com a tarifa da Seção 232 a 50% e a renegociação do USMCA em aberto.",
+  "summary": "Siderúrgica com 3/4 do EBITDA nos EUA, beneficiada pela tarifa de 50% da Seção 232 e pelo real fraco, com balanço folgado (DL/EBITDA 0,58x no 3T26). No Brasil, a margem segue em ~10% sob pressão da importação chinesa (penetração de 22,5%). O valor a Ke de 25% depende de quanto da margem de pico nos EUA (27,7% no 3T26) persiste; projetamos volta gradual ao meio de ciclo.",
+  "thesis": [
+    "América do Norte: EBITDA de R$ 2,9 bi no 3T26 (margem 27,7%, recorde do período) e carteira de vergalhão acima de 100 dias, sustentada por data centers, energia renovável e construção não residencial.",
+    "Dolarização: cada +10% no câmbio ≈ +R$ 0,9 bi/ano de EBITDA; dívida 53% em US$ a 6,1% e DL/EBITDA de 0,58x — juros locais quase não afetam o lucro (+100 bp ≈ −R$ 25 mi).",
+    "Brasil em recuperação gradual: margem de 9,2% (1T26) → 10,5% (2T26) → 10,7% (3T26); cotas renovadas, antidumping de HRC/fio-máquina previsto para dez/26, Miguel Burnier e Pinda em partida no 4T26.",
+    "Retorno ao acionista: dividendos trimestrais (R$ 0,34 no 3T26) mais recompras (R$ 344 mi em 2026); capex cai de R$ 6,7 bi (2025) para R$ 4,7 bi (2026)."
+  ],
+  "risks": [
+    "Normalização do spread metálico nos EUA: novas aciarias elétricas (vergalhão e barras), sucata mais cara e eventual redução da tarifa de 50% na revisão do USMCA.",
+    "Importações no Brasil: +19,8% t/t no 3T26 (planos +33,8%); antidumping de HRC e fio-máquina ainda depende de decisão definitiva.",
+    "Demanda brasileira: juros de 13,75–15% freiam construção e indústria (veículos pesados −11% no 1S26).",
+    "Câmbio de dois lados: real forte reduz o lucro em reais; custo de carvão e frete pressiona o Brasil no 4T26."
+  ],
+  "catalysts": [
+    "Decisão definitiva do antidumping de bobinas a quente e fio-máquina (prevista para dez/2026)",
+    "Pagamento de R$ 0,34/ação em 15/12/2026",
+    "Partida da expansão de Midlothian, de Miguel Burnier e de Pindamonhangaba (2S26/4T26)",
+    "Revisão do USMCA e da Seção 232",
+    "Resultado do 4T26 (16/02/2027)"
+  ],
+  "key_data": [
+    {"label": "EBITDA ajustado 3T26", "value": "R$ 3.771 mi (20,2%)", "context": "AN R$ 2.912 mi (27,7%) · BR R$ 741 mi (10,7%) · AS R$ 160 mi"},
+    {"label": "DL/EBITDA 3T26", "value": "0,58x", "context": "DL R$ 7,7 bi (sem arrendamentos); CVM 2T26 com IFRS-16: R$ 9,73 bi"},
+    {"label": "Receita líquida/t AN", "value": "≈US$ 1.560/t (3T26)", "context": "2T26 US$ 1.489/t; HRC EUA US$ 1.255–1.300/st em out/26"},
+    {"label": "Receita líquida/t Brasil", "value": "≈R$ 5.140/t (3T26)", "context": "2T26 R$ 4.945/t; importação = 22,5% do consumo no 1S26"},
+    {"label": "Capex 2026", "value": "R$ 4,7 bi", "context": "vs R$ 6,7 bi em 2025; 66% executado em 9M26"},
+    {"label": "Dividendo 3T26", "value": "R$ 0,34/ação (R$ 667 mi)", "context": "pagamento 15/12/2026"},
+    {"label": "Dívida bruta 2T26", "value": "R$ 13,6 bi", "context": "53% US$ (6,13%), 46% R$ (CDI −0,15%), prazo 7,6 anos"},
+    {"label": "Deck América do Norte (receita líquida/t, US$)", "value": "3T26 1.559 · 4T26 1.560 · 27 1.465 · 28 1.405 · 29 1.435 · 30 1.465", "context": "volumes 5,16 Mt (2026) → 5,26 → 5,31 → 5,36 → 5,41 Mt (Midlothian +150 kt); margem 26,2% → 22% → 20% → 19%; HRC EUA US$ 1.255–1.300/st em out/26 (+52% a/a), premissa de devolução parcial"},
+    {"label": "Deck Brasil (receita líquida/t, R$)", "value": "3T26 5.143 · 4T26 5.080 · 27 5.250 · 28 5.430 · 29 5.620 · 30 5.820", "context": "inclui minério e coprodutos; volumes 5,33 Mt (2026) → 5,45 → 5,56 → 5,67 → 5,78 Mt; margem 9,8% → 11% → 12% → 12,5%"},
+    {"label": "Deck câmbio (R$/US$, média)", "value": "3T26 5,14 · 4T26 5,35 · 27 5,45 · 28 5,55 · 29 5,65 · 30 5,75", "context": "PTAX 28/10 5,342 e dólar futuro 5,38 + diferencial de inflação de ~1,8% a.a.; abaixo do forward da B3, que embute o diferencial de juros (mesmo deck de PETR4/TUPY3)"}
+  ],
+  "sources": [
+    {"title": "Gerdau — Release de resultados 2T26 (04/08/2026)", "url": "https://api.mziq.com/mzfilemanager/v2/d/21e1d193-5cab-456d-8bb8-f00a49a43c1c/468641d5-ab4d-b20a-aeab-eb13a681e66c?origin=2"},
+    {"title": "Gerdau — Release 3T26, Form 6-K (27/10/2026)", "url": "https://www.sec.gov/Archives/edgar/data/0001073404/000110465926118998/tm2628297d3_ex99-1.htm"},
+    {"title": "Gerdau — Demonstrações financeiras intermediárias 30/06/2026, Form 6-K (nota 17: composição acionária)", "url": "https://www.sec.gov/Archives/edgar/data/0001073404/000110465926090481/tm2621830d1_ex99-1.htm"},
+    {"title": "InfoMoney — Gerdau 1T26: custo melhor no Brasil e solidez na América do Norte (28/04/2026)", "url": "https://www.infomoney.com.br/?p=3308959"},
+    {"title": "GMK Center — Nucor eleva preço do HRC; HRC EUA US$ 1.255–1.300/st (out/2026)", "url": "https://gmk.center/en/news/nucor-has-increased-prices-for-hot-rolled-coils-by-15-t/"},
+    {"title": "Gecex — Resoluções 854 e 856 (fev/2026): antidumping de laminados a frio e revestidos da China", "url": "https://okai.com.br/documento/2026-02-18/resolucao-gecex-nº-856-de-13-de-fevereiro-de-2026"},
+    {"title": "B3 — proventos (GetListedSupplementCompany) e cotações", "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"},
+    {"title": "CVM — DFP/ITR padronizados (data/hist/GGBR4.json)", "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"}
+  ],
+  "confidence": "média — balanço e dados oficiais sólidos (2T26 CVM + 3T26 release), mas o valor depende de um único driver cíclico (spread de aço nos EUA no pico, com tarifa de 50%) e do câmbio; a velocidade da normalização é julgamento."
+}

@@ -1,0 +1,272 @@
+{
+  "ticker": "ENEV3",
+  "name": "Eneva S.A.",
+  "sector": "Energia / geração térmica a gás (receita fixa contratada) e E&P onshore integrado",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "ENEV3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "net_debt": 25681.0
+    },
+    "notes": "net_debt 25.681 = DL CVM de 30/06/26, 24.017 (dívida 22.617 + arrendamentos 3.936 − caixa 2.537; a empresa reporta 19.826 sem arrendamentos) + antecipação de recebíveis futuros de ~2.700 − caixa à vista da venda de Pecém II (R$ 748,4 mi, 31/08/26) − caixa da venda de Itaqui (R$ 365,3 mi, 21/10/26) + earn-out de Linhares em caixa (R$ 77,9 mi, aprovado depois do trimestre). A antecipação é um passivo financeiro de 3.136 no BPP (814 CP + 2.322 LP), com pagamentos de R$ 256 mi/trimestre de principal e juros e AVP de R$ 211 mi no 1S26, swapado para CDI. Assumimos que ~R$ 0,4 bi era de Itaqui e saiu com a usina (não verificado). As 7,34 mi de ações do earn-out de Viana 1/Povoação 1 já estão na contagem da B3 (1.944,4 mi emitidas − ~24 mi em tesouraria). Coluna 2026 = run-rate do 2S26 anualizado (o motor usa f26 ≈ 0,504). Exclui Pecém II (desconsolidada no 1T26) e tem Itaqui só até out/26. Inclui os novos CRCAPs das UTEs do ES (R$ 201 mi/ano da LORM desde jul/26 + R$ 283 mi/ano de LORM 1/Viana 1/Povoação 1 desde ago/26) e Azulão I (COD em 04/08/26, R$ 278 mi/ano). A receita CVM inclui a comercialização de energia (R$ 4,2 bi no 1S26, margem de ~3%); por isso a margem EBITDA consolidada fica em 35–41%. Juros: o modelo lança todo o juro como despesa (kd × DL), inclusive o que a companhia capitaliza nas obras (imobilizado em andamento de R$ 14,2 bi), e o capex projetado é o 'econômico' da companhia, sem juros. Por isso o lucro do modelo em 2026–28 fica abaixo do contábil (~R$ 0,6–0,8 bi/ano de juros capitalizados)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      -0.0769,
+      0.0765,
+      0.1148,
+      0.1373,
+      0.1638
+    ],
+    "ebitda_margin": [
+      0.347,
+      0.369,
+      0.387,
+      0.401,
+      0.407
+    ],
+    "da_pct_revenue": [
+      0.1206,
+      0.1257,
+      0.125,
+      0.1228,
+      0.1204
+    ],
+    "capex_pct_revenue": [
+      0.388,
+      0.361,
+      0.284,
+      0.207,
+      0.133
+    ],
+    "nwc_pct_revenue": 0.03,
+    "cost_of_net_debt": [
+      0.11,
+      0.115,
+      0.118,
+      0.118,
+      0.118
+    ],
+    "other_financial": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tax_rate": [
+      0.18,
+      0.18,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "minority_share_ni": 0.22,
+    "payout": [
+      0.0,
+      0.0,
+      0.3,
+      0.5,
+      0.6
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.045,
+    "roic": 0.18,
+    "roe": 0.16
+  },
+  "wacc": {
+    "kd_pre_tax": 0.135,
+    "target_debt_weight": 0.45,
+    "notes": "Kd 13,5%: 86% da dívida em IPCA+ (spread médio de 5,4%) e 14% em CDI+1,4%. O custo marginal da dívida nova ≈ NTN-B (~8% real) + spread, ou CDI+1,5% (~16%). Peso da dívida de 45%: estrutura de project finance para ativos contratados. A mercado, DL + minoritários (≈ R$ 28,5 bi) sobre ~R$ 60 bi de valor pré-eleição dariam 32%; a Ke 25% o peso econômico da dívida é maior. cost_of_net_debt de 11,0% a 11,8%: (a) IPCA+5,4% com IPCA de ~5% (acima do Focus pré-choque, entre ele e a inflação implícita na curva: DI F31 a 15,2% contra NTN-B ~8%) ≈ 10,4% sobre 86% da dívida; é o mesmo IPCA que reajusta a receita fixa; (b) CDI+1,4% (15–17%) sobre o resto; (c) o arrendamento do FSRU (~10%); (d) a antecipação swapada para CDI; menos o caixa a CDI. A dívida nova para o capex do LRCAP 2026 entra a ~13–15%. O custo não cai para 9–10% (o accrual com o IPCA de 3,5% do Focus) para manter a coerência com a curva. IR de 18–20%: os incentivos SUDENE/SUDAM (a reserva de incentivos fiscais cresceu R$ 262 mi no 1S26) compensam o ágio não dedutível. ROIC terminal de 18%: o crescimento nominal vem em boa parte do reajuste pelo IPCA dos contratos, sem reinvestimento proporcional."
+  },
+  "adjustments": {
+    "other_debt_like": 170,
+    "non_operating_assets": 190,
+    "minority_value": 2800,
+    "notes": "other_debt_like 170 = provisão de abandono (E&P). non_operating_assets 190 = parcelas contingentes das vendas, ponderadas por ~50% e ~25%: até R$ 149 mi de Pecém II (ligada à antecipação de receitas reguladas) e até R$ 467 mi de Itaqui (ligada à antecipação do suprimento do LRCAP 2026). O caixa à vista das vendas (R$ 1.114 mi) já reduziu a DL (overrides). minority_value 2.800: o lucro de não controladores é estável, em R$ 507–573 mi/ano (2024, 2025 e LTM). Boa parte é o preferencialista Itaú na Eneva Participações III (dividendos semestrais de R$ 127 mi no 2T26), um direito quase fixo que o PL contábil (R$ 1.642 mi) subestima; capitalizado a ~20%, ≈ R$ 2,8 bi. minority_share_ni de 22% reproduz R$ 0,2–0,6 bi/ano de minoritários em 2027–30. Ficam fora, por serem operacionais: o valor justo dos contratos de comercialização (ativo líquido de R$ 702 mi), os derivativos e as contas a pagar do setor elétrico/P&D."
+  },
+  "target_multiples": {
+    "pe": 12.0,
+    "ev_ebitda": 8.0,
+    "pbv": 1.0,
+    "rationale": "EV/EBITDA 8,0x sobre o EBITDA 2027E (IFRS-16, como no CVM) e P/L 12x sobre o LPA 2027E 'econômico' (com os juros integralmente na despesa). Histórico (data/market, 5 anos): EV/EBITDA mediana 11,2x (p10 10,2x); P/L mediana 27,7x, distorcido pelo lucro baixo. O Bradesco BBI (27/07/26) projeta 12,6x EV/EBITDA em 2026E e 10,6x em 2027E, e P/L de 47x e 22x. A receita fixa reajustada pelo IPCA (~75–80% da receita ex-comercialização) aproxima a Eneva de uma transmissora, setor que negocia a 7–9x. Mas o múltiplo de mercado embute Ke de ~12–13% nominal mais crescimento; a Ke 25%, usamos 8,0x, abaixo do p10 da própria empresa. O P/L de 12x é aplicado a um LPA deprimido pela despesa integral de juros. Sobre o lucro contábil de consenso (BBI: LL 2027E de R$ 2,2 bi), o valor desse método equivale a ~4x. P/VP de 1,0x é só referência."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.03,
+      "ebitda_margin_shift": -0.03,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.03,
+      "narrative": "O capex do LRCAP 2026 estoura e atrasa, Parnaíba despacha pouco (hidrologia boa), a comercialização perde margem e a política de gás da Petrobras/governo (preço e acesso à malha) aperta; DL/EBITDA passa de 5x."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.025,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": -0.01,
+      "narrative": "Estiagem e PLD alto elevam o despacho de Parnaíba, os sócios (49% do Hub Sudeste, 30% de Jandaia 2/3) financiam parte do capex e Azulão II entra no prazo (jul/27, +R$ 2,3 bi/ano de receita fixa)."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.03,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.02
+  },
+  "debt_profile": {
+    "gross_debt_mn": 22363,
+    "pct_floating_cdi": 0.142,
+    "avg_cost": "IPCA+5,4% (85,8% da dívida) e CDI+1,4% (14,2%) no 2T26. Fora da dívida bruta: arrendamentos de R$ 3.936 mi (FSRU em US$ com hedge accounting) e antecipação de recebíveis de R$ 3.136 mi (swapada para CDI). Financiamentos recentes: BB/FDA a IPCA+3,68% e BNB a IPCA+3,49%.",
+    "avg_maturity_years": 6.0,
+    "next_24m_maturities_mn": 1506,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -20,
+    "notes": "A exposição líquida ao CDI é pequena: dívida CDI+ de R$ 3,2 bi + antecipação swapada de ~R$ 2,7 bi − caixa de ~R$ 3,6 bi (com as vendas) ≈ R$ 2,3 bi, ou −R$ 23 mi/ano antes de IR por +100 bp. O risco é o IPCA: +1 p.p. ≈ −R$ 190 mi/ano de variação monetária sobre R$ 19 bi de dívida IPCA+. Em parte, isso é compensado pela receita fixa reajustada pelo IPCA (~R$ 6–7 bi/ano em 2027, ou +R$ 60–70 mi; mais com Azulão II e o LRCAP). O canal dominante do choque é a taxa real longa (NTN-B ~8%) no valor presente de contratos de 10–15 anos."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.415,
+    "ebitda_margin_avg_5y": 0.379,
+    "roe_avg_5y": 0.05,
+    "payout_avg_5y": 0.0,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.131,
+      "ebitda_margin": 0.312,
+      "net_income_mn": 31.2,
+      "net_debt_ebitda": 3.85
+    },
+    "notes": "Receita +41,5% a.a. em 5 anos, por aquisições (CELSE/Sergipe em 2022, térmicas do BTG em 2024) e pela comercialização. Margem EBITDA CVM 2021–25: 42,9/34,6/42,4/34,3/35,3%. ROE médio de 5%: o lucro sempre foi pequeno diante do PL (≤ 3% em 2022–24), por amortização de mais-valia, juros e minoritários. 2T26: EBITDA de R$ 1.239 mi (−25,8% a/a; R$ 1.366 mi sem a baixa de Pecém II), com o fim dos contratos PCS do ES (−R$ 484 mi no segmento), e lucro de R$ 31 mi. DL/EBITDA de 3,85x no CVM (com arrendamentos); 3,18x no critério da empresa. Premissa de EBITDA: R$ 5,9 bi no 2S26 anualizado; R$ 6,75 bi em 2027 (Azulão II a partir de jul/27, +R$ 2,3 bi/ano de receita fixa; sem Itaqui); R$ 7,9 bi em 2028; R$ 9,3 bi em 2029; R$ 11,0 bi em 2030 (hubs do LRCAP 2026 entrando até 2031). O Bradesco BBI (27/07/26) projeta 5,7/6,9/8,1 bi em 2026–28 e CAGR de 16% até 2031. Capex: R$ 6,6 bi/ano em 2026–27, depois 5,8, 4,8 e 3,6 bi. O LRCAP 2026 soma R$ 18,2 bi, com R$ 2,8 bi gastos até jun/26; Azulão 950 está no fim; o upstream consome ~R$ 0,8–1,0 bi/ano. Sem dividendos até 2027 e payout de 30–60% em 2028–30. Deck: receita fixa reajustada pelo IPCA (~4,5–5%/ano); o Brent (~US$ 100) e o GNL afetam o custo variável repassado no despacho, e não a receita fixa."
+  },
+  "guidance": "Sem guidance de resultado. Já contratado: Azulão I (295 MW, R$ 278 mi/ano, COD em ago/26); CRCAPs do ES (R$ 484 mi/ano desde jul–ago/26); estágio 2 do Azulão 950 (+R$ 2,3 bi/ano de receita fixa a partir de jul/27, segundo o BBI). No LRCAP 2026 (homologado pela ANEEL em 21/05/26), ~5 GW: recontratação de Parnaíba I/III, LORM, Viana, Povoação, Itaqui e Pecém II (as duas últimas vendidas), mais hubs novos no Ceará (~1,2 GW) e no Sudeste (~1,1 GW); capex total de ~R$ 18,2 bi até 2031. As vendas de Pecém II (R$ 839 mi; 31/08/26) e de Itaqui (R$ 365 mi + contingente de até R$ 467 mi; 21/10/26) encerram a geração a carvão. A Eneva passou a deter 100% do Hub Ceará (PPTM).",
+  "dividend_policy": "A Eneva não paga dividendos a seus acionistas: a B3 não registra proventos de ENEV3. Os 'dividendos pagos' da DFC (R$ 43/234/451 mi em 2023–25) são de minoritários, como o preferencialista Itaú na Eneva Participações III (R$ 127 mi por semestre). Recompras de R$ 222 mi em 2025 e R$ 157 mi no LTM; tesouraria de ~24 mi de ações. Os lucros ficam retidos na reserva de incentivos fiscais (SUDENE/SUDAM; R$ 2,1 bi). Premissa: sem dividendos em 2026–27; payout de 30% em 2028, 50% em 2029 e 60% em 2030, à medida que o capex do LRCAP diminui. O BBI projeta dividend yield de 5,1% em 2028.",
+  "election_impact": "ENEV3 caiu 19,8% em 26/10, perto do que o beta indicava (−15,5%), e devolveu todo o rali eleitoral (+28,8% de 12/08 a 23/10). O canal dominante é o macro. A Eneva é um ativo de duração longa: contratos de 10–15 anos reajustados pelo IPCA e um ciclo de capex de ~R$ 18 bi até 2031 financiado com dívida IPCA+. A alta da taxa real (NTN-B) e da curva DI reduz o valor presente e encarece a dívida nova. No canal micro, com Lula reeleito, as políticas de gás (Petrobras, acesso à malha, preço) e de expansão térmica tendem a continuar favorecendo térmicas a gás contratadas; o LRCAP 2026 já foi homologado pela ANEEL em 21/05/26. Em contrapartida, o risco de interferência no mercado de gás/GNL e na comercialização é maior. A receita fixa contratada não muda com a eleição. Mudam a taxa de desconto e o custo de financiar a expansão.",
+  "summary": "A Eneva virou uma plataforma de térmicas a gás com ~75–80% da receita (ex-comercialização) fixa e reajustada pelo IPCA, e contratou ~5 GW no LRCAP 2026, com capex de ~R$ 18 bi até 2031. O caixa para o acionista só aparece depois de 2028, com DL/EBITDA acima de 4x em 2026–27 e minoritários relevantes. A Ke de 25%, o valor depende quase todo da perpetuidade e do custo de financiar a expansão.",
+  "thesis": [
+    "Receita fixa contratada em alta: +R$ 763 mi/ano já no 3T26 (Azulão I e CRCAPs do ES) e +R$ 2,3 bi/ano com o Azulão 950 a partir de jul/27.",
+    "LRCAP 2026: ~5 GW (recontratação de Parnaíba I/III e ES + hubs novos no Ceará e no Sudeste), com capex de ~R$ 18,2 bi. O BBI vê CAGR de 16% no EBITDA de 2026 a 2031.",
+    "Portfólio reciclado: saída do carvão (Pecém II por R$ 839 mi; Itaqui por R$ 365 mi + contingente) e 100% do Hub Ceará.",
+    "Dívida longa (6 anos) e barata em termos reais (IPCA+5,4%; BNB/FDA a IPCA+3,5–3,7%)."
+  ],
+  "risks": [
+    "Execução do capex do LRCAP 2026 (turbinas Siemens/GE, terminais de GNL, prazos até 2031) com alavancagem de 4,6–4,7x no pico (CVM, com arrendamentos e antecipação).",
+    "Taxa real alta por mais tempo: R$ 19 bi de dívida IPCA+ e valor presente de contratos longos.",
+    "Despacho e comercialização voláteis (hidrologia, PLD, MtM do book de energia); poços secos no upstream.",
+    "Minoritários quase fixos (~R$ 0,5–0,6 bi/ano) e futuros sócios nos hubs reduzem a fatia do acionista; bloco BTG Pactual (25,7%) + BPAC Infra (22,6%) concentra o controle.",
+    "Política de gás e de preços da Petrobras (insumo do Hub Sergipe e do GNL, acesso à malha)."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (nov/26), o primeiro trimestre com Azulão I e os CRCAPs do ES",
+    "Entrada de Azulão II (jul/27)",
+    "Exercício das opções de sócios nos hubs (49% do Sudeste; 30% de Jandaia 2/3)",
+    "Novos leilões de capacidade (a EPE estima ~40 GW necessários até 2035)"
+  ],
+  "key_data": [
+    {
+      "label": "Receita fixa nova no 3T26",
+      "value": "R$ 762,6 mi/ano",
+      "context": "Azulão I (R$ 278 mi) + CRCAPs do ES (R$ 484 mi)"
+    },
+    {
+      "label": "EBITDA 2T26",
+      "value": "R$ 1.239 mi",
+      "context": "R$ 1.366 mi ex-baixa de Pecém II; margem de 31,2%"
+    },
+    {
+      "label": "DL/EBITDA 2T26",
+      "value": "3,18x (empresa)",
+      "context": "DL R$ 19,8 bi sem arrendamentos; CVM com arrendamentos 3,85x"
+    },
+    {
+      "label": "Perfil da dívida",
+      "value": "85,8% IPCA+5,4%",
+      "context": "14,2% CDI+1,4%; prazo médio de 6,0 anos"
+    },
+    {
+      "label": "Capex 1S26",
+      "value": "R$ 3,64 bi",
+      "context": "Azulão 950 R$ 1,42 bi; LRCAP 2026 R$ 1,35 bi"
+    },
+    {
+      "label": "Minoritários",
+      "value": "R$ 573 mi de lucro LTM",
+      "context": "37% do lucro total; Itaú preferencialista na Eneva Participações III"
+    },
+    {
+      "label": "Acionistas",
+      "value": "BTG 25,7% + BPAC Infra 22,6%",
+      "context": "Dynamo 7,1%; GQG 5,2%; tesouraria 1,2%"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Eneva — Release de resultados 2T26 (12/08/2026), via Investidor10",
+      "url": "https://investidor10.com.br/acoes/link_comunicado/ENEV3/47538/"
+    },
+    {
+      "title": "Ágora/Bradesco BBI — Eneva: LRCAP, receita fixa e projeções (28/07/2026)",
+      "url": "https://acionista.com.br/wp-content/uploads/2026/07/20260727-cn-enev3-42a27a85-9354-41fa-be40-4deca90c20d1_compressed.pdf"
+    },
+    {
+      "title": "InfoMoney — Eneva, Copel e mais: o que mudou com o LRCAP (capex R$ 18,2 bi; VPL Itaú BBA)",
+      "url": "https://www.infomoney.com.br/?p=3258045"
+    },
+    {
+      "title": "eixos — LRCAP 2026: 19 GW, preço médio de R$ 2,33 mi/MW-ano",
+      "url": "https://eixos.com.br/?p=424018"
+    },
+    {
+      "title": "Cenário Energia — Eneva conclui venda de Pecém II por R$ 839,2 mi (31/08/2026; lido via resumo de busca)",
+      "url": "https://cenarioenergia.com.br/2026/09/01/eneva-conclui-venda-da-termeletrica-pecem-ii-para-a-diamante-por-r-8392-milhoes/"
+    },
+    {
+      "title": "Cenário Energia — Eneva conclui venda da UTE Itaqui e assume 100% do Hub Ceará (22/10/2026)",
+      "url": "https://cenarioenergia.com.br/2026/10/22/eneva-conclui-venda-da-ute-itaqui-e-assume-100-do-hub-ceara/"
+    },
+    {
+      "title": "Atlas Público — ANEEL homologa o LRCAP 2026 (21/05/2026; lido via resumo de busca)",
+      "url": "https://atlaspublico.com.br/noticias/aneel-homologa-leilao-lrcap-2026-e-adjudica-cerca-de-2-gw-a-30740"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (ações e proventos, consultado em 28/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/ENEV3.json)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "baixa — a receita fixa e a dívida são oficiais, mas a Ke 25% o valor depende quase todo da perpetuidade (TV ~80% do EV) e da execução de ~R$ 18 bi de capex. Não foram verificados: a receita fixa e as datas de entrada dos hubs do LRCAP 2026, a natureza do minoritário (Itaú preferencialista) e a parcela de Itaqui na antecipação de recebíveis."
+}

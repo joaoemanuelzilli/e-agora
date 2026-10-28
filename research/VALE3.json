@@ -1,0 +1,291 @@
+{
+ "ticker": "VALE3",
+ "name": "Vale S.A.",
+ "sector": "Mineração / minério de ferro, pelotas e metais básicos (cobre, níquel)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "VALE3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override de ações: 4.255,76 mi em circulação (B3 menos tesouraria). Confere com o provento do 1S26 (R$ 8,64 bi ÷ R$ 2,0307/ação ≈ 4.255 mi) e com o boletim da Bradespar de 15/10/26 (163,35 mi ações = 3,84% do capital ex-tesouraria). O campo 'total' da CVM no 2T26 (4.255,8 mi) já vem líquido da tesouraria; usar a outra conta da CVM (4.072 mi) contaria a tesouraria duas vezes. Receita-base FY2025 CVM de R$ 213.595 mi, sem ajuste. A margem projetada é o EBITDA 'caixa' consolidado, que é menor que o EBITDA proforma da Vale em três itens. (i) Sem o streaming não caixa: o ouro de Salobo e o cobalto são entregues aos detentores do stream a ~US$ 450/oz, mas o EBITDA ajustado contabiliza a preço cheio (US$ 291 mi no 2T26). (ii) Sem o EBITDA proporcional de coligadas e JVs (US$ 335 mi no 2T26); as coligadas entram via equivalência em other_financial e via non_operating_assets. (iii) Com os gastos incorridos de Brumadinho não provisionados (~US$ 150 mi/tri). Base 2T26: proforma de US$ 4.066 mi, menos 335, menos 291, menos ~150, dá ~US$ 3,29 bi/tri, ou 31% da receita. É coerente com o EBITDA CVM (R$ 15.945 mi), que inclui encargos de Brumadinho/descaracterização e não recorrentes (US$ 390 mi). Assim as provisões de Mariana, Brumadinho e descaracterização entram uma vez só, como dívida (adjustments), e seus desembolsos ficam fora do FCFF. COMO A MARGEM SEGUE O DECK. A margem está no conceito de EBITDA caixa em todos os anos, sem encargo de Brumadinho, Samarco ou descaracterização, que já estão no debt-like. Ponto de partida: EBITDA caixa do 2T26 anualizado de US$ 13,16 bi sobre receita de US$ 41,99 bi (31,3%), com 62% Fe a ~US$ 107, cobre realizado a US$ 14.062, níquel a US$ 18.061 e câmbio de 5,05. A cada ano somam-se: (i) minério: US$ 0,29 bi por US$ 1/t, aplicado à diferença para 107 (≈ 0,75 p.p. de margem por US$ 1/t); (ii) volume de minério: margem unitária vezes Mt adicionais; (iii) cobre (realizado = LME × 1,03) e níquel (realizado = LME × 1,10): preço vezes kt, mais margem dos volumes adicionais; (iv) câmbio: +US$ 0,24 bi por +R$ 0,10, porque ~US$ 12 bi de custo é em R$; (v) deriva de custo de −US$ 0,42 bi/ano a partir de 2027 e Imposto Seletivo de −US$ 0,1 bi. Resultado em US$ bi (margem): 2S26 anualizado 10,31 (25,6%; minério a 94 = −3,8; volume sazonal de 344 Mt = +0,6; câmbio de 5,25 = +0,5; cobre e níquel = +0,0); 2027 9,30 (23,9%); 2028 8,37 (21,7%); 2029 7,55 (19,8%); 2030 7,64 (19,7%). A queda de 31,3% para 25,6% é de preço, não de conceito: o 62% Fe CFR foi de 99,6 (04/09) e 96,9 (28/09) para 90,7 (27/10), segundo a Trading Economics, o que dá ~97 no 3T26 e ~90,5 no 4T26."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   -0.01,
+   0.002,
+   0.009,
+   0.008,
+   0.033
+  ],
+  "ebitda_margin": [
+   0.256,
+   0.239,
+   0.217,
+   0.198,
+   0.197
+  ],
+  "da_pct_revenue": [
+   0.09,
+   0.095,
+   0.097,
+   0.099,
+   0.099
+  ],
+  "capex_pct_revenue": [
+   0.159,
+   0.142,
+   0.143,
+   0.144,
+   0.142
+  ],
+  "nwc_pct_revenue": 0.06,
+  "cost_of_net_debt": [
+   0.085,
+   0.085,
+   0.085,
+   0.085,
+   0.085
+  ],
+  "other_financial": [
+   -4500,
+   -3800,
+   -3100,
+   -2550,
+   -2050
+  ],
+  "tax_rate": [
+   0.21,
+   0.22,
+   0.22,
+   0.22,
+   0.22
+  ],
+  "minority_share_ni": 0.03,
+  "payout": [
+   0.8,
+   0.91,
+   1.08,
+   1.42,
+   1.46
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.04,
+  "roic": 0.1,
+  "roe": 0.1
+ },
+ "wacc": {
+  "kd_pre_tax": 0.1,
+  "target_debt_weight": 0.35,
+  "notes": "Kd de 10% em R$. Composição: bonds em US$ a taxa fixa (~6–6,5%), mais a depreciação do real implícita no deck (~1,8% a.a.); provisões indexadas ao IPCA (~IPCA + 4–5%); debêntures participativas (~11%). wd de 35% ≈ (DL CVM R$ 80 bi + debt-like R$ 89 bi) ÷ (isso + valor de mercado de R$ 276 bi). WACC ≈ 18,6%. A dívida não é CDI. Usar o DI aqui exigiria projetar a receita no câmbio a termo (~R$ 5,9 em 2027, com carrego de ~10% a.a.), o que inflaria a receita em R$; escolhemos câmbio e Kd coerentes entre si (PPC)."
+ },
+ "adjustments": {
+  "other_debt_like": 88884,
+  "non_operating_assets": 10000,
+  "minority_value": 4832,
+  "notes": "Debt-like (R$ mi, balanço CVM de 30/06/26, câmbio de fechamento 5,1766): Brumadinho 9.185 (4.178 CP + 5.007 LP; US$ 1,77 bi); Mariana/Samarco 10.853 ('passivos relacionados a participação em coligadas e JVs', 3.424 + 7.429; US$ 2,10 bi); descaracterização de barragens + desmobilização de ativos (ARO) 31.839 (5.792 + 26.047; US$ 6,15 bi); concessão de ferrovias (renegociação de EFVM/EFC, pagamentos à União) 12.521 (3.255 + 9.266); benefícios pós-emprego 6.493; provisões judiciais e fiscais prováveis 9.241 (5.993 + 3.248; depósitos judiciais não abatidos, o que é conservador); dividendos a pagar em 30/06: 110; provento do 1S26 declarado depois do balanço, com data-com de 11/08/26 já passada e pagamento em 02/09/26 (R$ 2,0307 × 4.255,76 mi = 8.642). Total: 88.884. Já estão na DL CVM (R$ 80.165 mi) as debêntures participativas (11.973) e os arrendamentos (3.282); a DL da Vale é de US$ 13,17 bi, ou R$ 68,2 bi. Fora do debt-like: o streaming (R$ 10.064 mi), porque seu custo econômico (ouro e cobalto entregues abaixo do preço) já está excluído do EBITDA projetado; e os derivativos, cujo líquido é ~zero (swaps de moeda de US$ 0,37 bi ativos contra R$ 1,65 bi passivos). non_operating_assets = coligadas e JVs (VLI, MRN, PTVI e outras; contábil de R$ 27.248 mi), avaliadas a Ke de 25%: equivalência recorrente de ~R$ 1,9 bi/ano (US$ 100 mi no 2T26) ÷ (25% − 4%) ≈ R$ 9 bi, mais dividendos; usamos R$ 10 bi (0,37x o contábil). minority_value = contábil (R$ 4.832 mi; 10% da Vale Base Metals com a Manara e outros). É coerente com 3% do LL e com a VBM a Ke de 25% (FCF de ~US$ 1,5 bi/ano → 10% ≈ R$ 4–5 bi)."
+ },
+ "target_multiples": {
+  "pe": 7.0,
+  "ev_ebitda": 4.5,
+  "pbv": 1.0,
+  "rationale": "P/L-alvo de 7,0x sobre o LPA 2027E. Histórico de 5 anos (multiples_history): mediana de 6,6x e média de 8,6x; p10–p90 de 3,2–20x, com o topo inflado por lucros deprimidos por impairments. EV/EBITDA-alvo de 4,5x sobre o EBITDA caixa 2027E, no conceito de EV expandido: o motor desconta a DL e as provisões tipo dívida de R$ 89 bi. A mediana de 5 anos é de 4,4x, mas no conceito de EV com DL CVM e EBITDA CVM, que é deprimido por encargos de Brumadinho, Samarco e descaracterização; no conceito expandido, o histórico equivale a ~5,5x. Pares globais (Rio Tinto, BHP, Fortescue) estão em 5–6x. Aplicamos desconto porque esses múltiplos embutem Ke de 10–13%, e não os 25% do estudo. Hoje (26/10): P/L UDM de 26,6x (lucro deprimido) e EV/EBITDA UDM de 6,95x."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.05,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Minério a US$ 75–80 (rampa de Simandou mais rápida, aço chinês em queda), cobre volta a US$ 10–11 mil e o governo pressiona por royalties, Mariana e gestão; conselho revê a política de proventos para baixo."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.03,
+   "ebitda_margin_shift": 0.06,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Estímulo chinês sustenta minério em US$ 95–100, cobre fica acima de US$ 14 mil com Bacaba e Salobo e o real fraco reduz o custo em US$."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.06,
+  "ebitda_margin_sd": 0.035,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 94752,
+  "pct_floating_cdi": null,
+  "avg_cost": "Majoritariamente bonds em US$ a taxa fixa (custo médio não localizado no release; ~6–6,5% a.a. estimado). Dívida bruta de US$ 18,3 bi, arrendamentos de US$ 0,63 bi e caixa de US$ 5,77 bi em 30/06/26. DL de US$ 13,17 bi (0,8x o EBITDA ajustado UDM). DL expandida de US$ 16,68 bi; a meta é de US$ 10–20 bi.",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -30,
+  "notes": "A exposição líquida a CDI é pequena: a dívida é quase toda em US$ a taxa fixa, e o caixa em R$ (~30% de R$ 29,8 bi) rende CDI. O canal relevante é o câmbio. Cada +R$ 0,10 no USD/BRL soma ≈ +R$ 2,2 bi/ano ao EBITDA 2027E (US$ 9,3 bi × 0,10 + ~US$ 0,24 bi de custo em R$ que fica mais barato em US$), ou +4,4%. Provisões indexadas ao IPCA (Mariana, Brumadinho, ferrovias): +1 p.p. de IPCA ≈ −R$ 0,6 bi/ano de atualização."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.0072,
+  "ebitda_margin_avg_5y": 0.395,
+  "roe_avg_5y": 0.318,
+  "payout_avg_5y": 0.75,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.064,
+   "ebitda_margin": 0.301,
+   "net_income_mn": 6847,
+   "net_debt_ebitda": 1.54
+  },
+  "notes": "Receita em R$ estagnada há 5 anos (+0,7% a.a.; 2021 foi o pico, com minério a US$ 160). Margem EBITDA CVM de 53,7% em 2021, caindo a 23,1% em 2025 (encargos de Samarco, impairment de níquel de US$ 3,5 bi no 4T25). A margem caixa de 25,6% (2S26) → 19,7% (2030) parte de 31,3% no 2T26 e segue o deck (ver overrides.notes): minério a US$ 94 → 85, contra ~US$ 105–110 em 2024–1S26, e a exclusão do streaming e das coligadas. Não é pessimismo operacional: o C1 está em US$ 24/t e o cobre cresce. ROE médio de 32% com 2021–22 extraordinários; ROE projetado de 8–10%. Payout médio de 75% do LL (2025: 145% sobre lucro deprimido). 2T26: receita +6,4% a/a, margem EBITDA CVM de 30,1%, LL de R$ 6.847 mi, DL CVM/EBITDA UDM de 1,54x (a Vale reporta 0,8x sem as debêntures participativas e com EBITDA ajustado)."
+ },
+ "guidance": "Guidance 2026 (6-K do 2T26, 30/07/2026): produção de minério de 335–345 Mt, cobre de 360–380 kt e níquel de 185–200 kt. C1 de US$ 22,5–23,5/t (ex-terceiros); all-in de minério de US$ 58–62/t; all-in de cobre de US$ 0–500/t; all-in de níquel de US$ 10.000–11.500/t. Capex de US$ 5,4–5,7 bi; câmbio de referência de 5,13. Médio prazo: Bacaba (cobre) partindo no 3T27, 'ambição de dobrar o cobre até 2035' e DL expandida de US$ 10–20 bi. O 3T26 sai depois de 28/10 e não foi incorporado.",
+ "dividend_policy": "Política: mínimo de 30% de (EBITDA ajustado − capex de manutenção), em pagamentos semestrais, mais extraordinários e recompras. 1S26: US$ 1,70 bi = R$ 2,0307/ação (JCP de R$ 1,5687 e dividendo de R$ 0,4620), data-com de 11/08/26, pago em 02/09/26 (R$ 8,64 bi). Está fora do fluxo de quem compra hoje e entra como dívida. 2S25: R$ 3,5817/ação, pagos em jan e mar/26. Recompra: o programa de fev/25 terminou em ago/26 (US$ 140 mi no 2T26); novo programa de até 100 mi ações em 18 meses. Payout médio de 5 anos de 75% do LL. MODELO = MÍNIMO DA POLÍTICA, sem extraordinários. Conta: EBITDA ajustado da Vale = EBITDA caixa + ~US$ 2,7 bi (coligadas 1,34 + streaming 1,16 + Brumadinho incorrido 0,6 − encargos recorrentes de Brumadinho e descaracterização 0,4); capex de manutenção de US$ 3,72 bi (2T26: US$ 931 mi/tri), +2,5% a.a. Proventos: R$ 14,6 bi (taxa anual do 2S26) / 13,4 / 11,9 / 10,6 / 10,7 bi, o que dá payout sobre o LL de 80% / 91% / 108% / 142% / 146%. Calibração: o 1S26 dá 30% × (US$ 7,51 bi − ~1,85 bi) = US$ 1,70 bi, igual ao pago. Como o mínimo é calculado sobre o EBITDA e não sobre o lucro, passa de 100% do LL quando o minério cai. No deck, o FCFE não cobre o mínimo: a DL CVM sobe a R$ 132 bi em 2030, e a DL expandida passa do teto de US$ 20 bi a partir de 2028. O risco de revisão da política fica no bear, não no caso-base.",
+ "election_impact": "VALE3 subiu +4,7% em 26/10 (R$ 61,90 → 64,80 às 13h02), contra Ibovespa −13,9% no dia. É a exportadora clássica: receita em US$ e ~45% do custo caixa em R$. O real a R$ 5,38–5,49 (contra 5,04 na sexta) eleva o EBITDA em R$ em ~R$ 2,2 bi/ano a cada R$ 0,10. Em 28/10, VALE3 recuou a R$ 61,58 com o minério na mínima de 2 anos (SGX US$ 89,25 em 27/10; estoques portuários de 152 Mt, +14% a/a). O que muda de verdade: (i) câmbio, positivo; (ii) Ke e DI, neutros para a dívida, que está em US$, mas pesados no valor a 25%; (iii) risco político num 4º mandato Lula: histórico de pressão sobre a sucessão do CEO (2023–24), renegociação das concessões ferroviárias (passivo de R$ 12,5 bi), repactuação de Mariana (R$ 82,4 bi desembolsados até jun/26), Imposto Seletivo sobre extração (0,25% a partir de 2027) e risco de alta de CFEM. Esse risco entra no bear (30%), junto com a revisão da política de proventos. O valor intrínseco é dominado pelo minério, não pela eleição.",
+ "summary": "Maior produtora de minério de alta qualidade do mundo, com C1 de US$ 24/t e um negócio de cobre em expansão. A eleição ajudou pelo câmbio, mas o driver é o minério: o deck de US$ 94 (2S26) → 85/t (62% Fe), ancorado na curva da SGX e no consenso, leva a margem caixa de 31% no 2T26 para 26% → 20%. Pesam ainda ~R$ 89 bi de passivos tipo dívida (Mariana, Brumadinho, descaracterização, ferrovias, previdência). A Ke de 25%, o fluxo ao acionista fica muito aquém do preço; a tese exige minério bem acima da curva.",
+ "thesis": [
+  "Custo de 1º quartil: C1 de US$ 24,1/t e all-in de US$ 61,6/t no 2T26; vendas de 79,7 Mt (melhor 2T desde 2018) e guidance de 335–345 Mt.",
+  "Cobre como opção: preço realizado de US$ 14.062/t no 2T26 e LME a ~US$ 14,5 mil em 27/10; guidance de 360–380 kt, Bacaba no 3T27, meta de dobrar até 2035.",
+  "Exportadora: cada +R$ 0,10 no câmbio ≈ +R$ 2,2 bi/ano de EBITDA (2027E); o real fraco pós-eleição ajuda no curto prazo.",
+  "Mas o minério normaliza: SGX a US$ 89 (mínima desde set/24) com Simandou em rampa (até 120 Mt/ano em 2030). A US$ 85/t, o FCF depois de Mariana e Brumadinho fica perto de zero em 2028–29.",
+  "Passivos tipo dívida de R$ 88,9 bi (R$ 20,9/ação) somados à DL CVM de R$ 80,2 bi: Samarco US$ 2,1 bi, Brumadinho US$ 1,8 bi, descaracterização/ARO US$ 6,2 bi, ferrovias R$ 12,5 bi."
+ ],
+ "risks": [
+  "Minério abaixo de US$ 80 com a oferta de Simandou e de Brasil/Austrália e a produção de aço chinesa em queda. Cada US$ 1/t ≈ US$ 290 mi/ano de EBITDA.",
+  "Intervenção ou pressão política (4º mandato): royalties e CFEM, Imposto Seletivo, governança (Previ como acionista relevante), novos acordos de Mariana e Brumadinho acima das provisões.",
+  "Execução no cobre e no níquel: impairment de US$ 3,5 bi no níquel do Canadá no 4T25; paradas como a do SAG de Sossego (110 dias a partir de ago/26).",
+  "Câmbio: uma apreciação do real devolveria parte do ganho; alíquota efetiva sobe com Pilar 2 e o fim de incentivos (SUDAM)."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (fim de out/início de nov/2026)",
+  "Proventos do 2S26 (anúncio ~dez/2026)",
+  "Vale Day e guidance 2027 (dez/2026)",
+  "Estímulo chinês e Conferência Central de Trabalho Econômico (dez/2026)",
+  "Bacaba (3T27)"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA proforma 2T26",
+   "value": "US$ 4,07 bi (+19% a/a)",
+   "context": "ajustado US$ 3,68 bi; caixa (ex-streaming e coligadas) ~US$ 3,3 bi"
+  },
+  {
+   "label": "DL expandida 30/06/26",
+   "value": "US$ 16,7 bi",
+   "context": "DL US$ 13,2 bi + Brumadinho 1,8 + Samarco 2,1; meta US$ 10–20 bi"
+  },
+  {
+   "label": "Passivos tipo dívida (motor)",
+   "value": "R$ 88,9 bi",
+   "context": "inclui descaracterização/ARO R$ 31,8 bi, ferrovias R$ 12,5 bi e provento do 1S26 R$ 8,6 bi"
+  },
+  {
+   "label": "Minério SGX (27/10/26)",
+   "value": "US$ 89,25/t",
+   "context": "mínima desde set/2024; deck 2S26 US$ 94, 2027 90, 2028 87, 2029–30 85 (62% Fe CFR)"
+  },
+  {
+   "label": "Cobre LME (27/10/26)",
+   "value": "~US$ 14,5 mil/t",
+   "context": "deck 2027 13,5 mil, 2028 13 mil, 2029–30 12,5 mil"
+  },
+  {
+   "label": "Proventos 1S26",
+   "value": "R$ 2,0307/ação",
+   "context": "data-com 11/08/26, pagos 02/09/26, fora do fluxo de quem compra hoje"
+  },
+  {
+   "label": "Câmbio do deck",
+   "value": "R$ 5,25 (2S26) → 5,75 (2030)",
+   "context": "futuro R$ 5,38 em 28/10; PPC ~1,8% a.a."
+  }
+ ],
+ "sources": [
+  {
+   "title": "Vale — Performance in 2Q26 (6-K, SEC, 30/07/2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000917851/000129281426004002/valepr2q26_6k.htm"
+  },
+  {
+   "title": "InfoMoney — Vale tem prejuízo de US$ 3,8 bi no 4T25 por baixas contábeis",
+   "url": "https://www.infomoney.com.br/mercados/vale-vale3-resultados-quarto-trimestre-2025/"
+  },
+  {
+   "title": "Forbes Brasil — Vale distribui R$ 2,03 por ação e lança recompra de até 100 mi ações (jul/2026)",
+   "url": "https://forbes.com.br/forbes-money/2026/07/vale-distribui-r-203-por-acao-e-lanca-nova-recompra-de-ate-100-milhoes-de-papeis/"
+  },
+  {
+   "title": "Meus Dividendos — VALE3 anuncia R$ 8,64 bi em proventos (set/2026)",
+   "url": "https://www.meusdividendos.com/news/vale3-anuncia-r864-bi-em-proventos-jcp-e-dividendos-com-pagamento-em-set2026"
+  },
+  {
+   "title": "Webull/Reuters — Vale mantém guidance 2026 (335–345 Mt; cobre 360–380 kt; níquel 185–200 kt)",
+   "url": "https://www.webull.com/news/15322250046759936"
+  },
+  {
+   "title": "Bloomberg — Iron ore declines to two-year low (27/10/2026)",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-27/iron-ore-declines-to-two-year-low-as-demand-outlook-weakens"
+  },
+  {
+   "title": "TokenPost/Bloomberg — Iron ore hits two-year low at $89.25; port stocks 152 Mt (27/10/2026)",
+   "url": "https://www.tokenpost.com/news/investing/42235"
+  },
+  {
+   "title": "Trading Economics — Iron ore 62% Fe CFR (99,57 em 04/09; 96,92 em 28/09; 90,70 em 27/10/2026)",
+   "url": "https://tradingeconomics.com/commodity/iron-ore"
+  },
+  {
+   "title": "Market Index — 2026-27 commodities outlook (REQ set/2026: US$ 88 FOB 2026, US$ 82 FOB 2027)",
+   "url": "https://www.marketindex.com.au/news/2026-27-commodities-outlook-iron-ore-copper-uranium-lithium-and-more"
+  },
+  {
+   "title": "Kitco/Reuters — Copper price climbs (LME 3M US$ 14.487,50; 27/10/2026)",
+   "url": "https://www.kitco.com/news/off-the-wire/2026-10-27/copper-price-climbs-ai-rebound-china-demand-strength"
+  },
+  {
+   "title": "Trading Economics — Nickel (US$ 15.530/t, 27/10/2026)",
+   "url": "https://tradingeconomics.com/commodity/nickel"
+  },
+  {
+   "title": "Bradespar — Boletim de RI de 16/10/2026 (163,35 mi ações VALE = 3,84% ex-tesouraria)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/BRAP3/50950/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/VALE3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 — cotação oficial (API instrumentQuotation) e proventos",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/VALE3"
+  }
+ ],
+ "confidence": "média — o balanço e os passivos são oficiais (6-K e CVM) e o custo é verificável, mas o valor depende de um único driver (minério 62% Fe; cada US$ 1/t ≈ US$ 290 mi de EBITDA). O 3T26 ainda não foi incorporado. Desconto e cronograma das provisões, custo médio da dívida e depósitos judiciais não foram verificados."
+}

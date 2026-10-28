@@ -64,7 +64,8 @@ export function ReportView({ doc, notesHtml, rank, total, rule, dropped }: { doc
 
       <header className="space-y-4">
         <div className="text-[12.5px] text-muted">
-          {dropped ? "Relatório de 26 de outubro de 2026, fora da seleção atual" : `Relatório de oportunidade ${rank} de ${total}, 26 de outubro de 2026`}
+          {dropped ? "Relatório de 26 de outubro de 2026, fora da seleção atual" : rank > 0 ? `Relatório de oportunidade ${rank} de ${total}` : "Relatório de 26 de outubro de 2026, fora da seleção atual"}
+          . Texto escrito com os preços de 26/10 (13h02); os números do quadro abaixo são ao vivo.
         </div>
         {dropped && (
           <div className="rounded border border-hairline bg-surface-2 px-4 py-3 text-[13.5px] text-ink-2">

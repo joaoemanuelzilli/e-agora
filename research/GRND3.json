@@ -1,0 +1,253 @@
+{
+  "ticker": "GRND3",
+  "name": "Grendene S.A.",
+  "sector": "Consumo cíclico / Calçados (Melissa, Ipanema, Rider, Grendha, Zaxy; exportação ~25% da receita bruta)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "GRND3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem override de base. Ações: 902,16 mi (sem tesouraria; B3 = CVM). DL CVM de −769,9 = empréstimos de R$ 96,6 mi (ACC em US$ 78,7 + BNDES/R$) − caixa e aplicações CP/LP de R$ 866,5 mi. A 'disponibilidade líquida' de R$ 1,5 bi da empresa soma as participações em SCPs imobiliárias (R$ 731,7 mi), que tratamos à parte (non_operating_assets). PADRONIZAÇÃO DO EBITDA (checklist 4): (i) a equivalência das SCPs (R$ 133 mi em 2025, R$ 1,8 mi no 1S26) está no EBIT CVM, mas é retorno de ativo financeiro/imobiliário e sai da margem (vai para other_financial); (ii) o ajuste a valor presente das vendas a prazo (AVP, R$ 54,4 mi no 1S26 e R$ 25,4 mi no 2T26, ~4% da receita) está no resultado financeiro, mas é parte do preço de venda: o prazo longo ao cliente está no capital de giro (45% da receita). Entra na margem. ebitda_margin = margem EBITDA CVM sem SCP + AVP. Base histórica: 2S25 13,4% + 3,4% = 16,8%; 1S26 8,2% + 5,0% = 13,2%; UDM 11,2% + ~4,1% = 15,3%; 2024 22,0% + ~3,5%."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      -0.018,
+      0.045,
+      0.045,
+      0.04,
+      0.04
+    ],
+    "ebitda_margin": [
+      0.16,
+      0.165,
+      0.17,
+      0.17,
+      0.155
+    ],
+    "da_pct_revenue": [
+      0.034,
+      0.034,
+      0.034,
+      0.034,
+      0.034
+    ],
+    "capex_pct_revenue": [
+      0.042,
+      0.042,
+      0.042,
+      0.042,
+      0.042
+    ],
+    "nwc_pct_revenue": 0.45,
+    "cost_of_net_debt": [
+      0.095,
+      0.095,
+      0.095,
+      0.095,
+      0.095
+    ],
+    "other_financial": [
+      30,
+      35,
+      40,
+      40,
+      45
+    ],
+    "tax_rate": [
+      0.08,
+      0.1,
+      0.11,
+      0.12,
+      0.12
+    ],
+    "minority_share_ni": 0.0,
+    "payout": [
+      0.6,
+      0.95,
+      0.95,
+      0.95,
+      0.95
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.045,
+    "roic": 0.16,
+    "roe": 0.14
+  },
+  "wacc": {
+    "kd_pre_tax": 0.155,
+    "target_debt_weight": 0.0,
+    "notes": "Caixa líquido: wd = 0 → WACC = Ke = 25%. cost_of_net_debt = rendimento do caixa líquido: aplicações em CDB/debêntures/COE renderam R$ 33,3 mi no 2T26 (juros de 21,9 + outros ativos financeiros de 11,4) sobre ~R$ 1,04 bi médios, ou 12,8% a.a. pré-IR (CDI do trimestre ~14,6%); usamos 13% pré-IR. A receita financeira não tem redução SUDENE (só o lucro da exploração tem) e paga 34% na margem; o motor aplica a efetiva de 8–12%, então informamos 13% × 0,66 / 0,90 ≈ 9,5%. O rendimento líquido no modelo fica em ~8,6% = 13% × (1 − 34%)."
+  },
+  "adjustments": {
+    "other_debt_like": 254,
+    "non_operating_assets": 620,
+    "minority_value": 0,
+    "notes": "other_debt_like = dividendos a pagar em 30/06/2026, R$ 180,0 mi (última parcela do extraordinário de dez/25, R$ 0,1995/ação, paga em 09/09/2026) + 2ª antecipação de 2026, R$ 58,6 mi (dividendo de R$ 0,0317 + JCP de R$ 0,03325/ação, data-com 21/08/2026, paga em 09/09: do vendedor) + provisões para riscos (12,0 + 11,2) × 0,66 = 15,3. Total: 253,9. non_operating_assets = participações em SCPs (empreendimentos imobiliários) de R$ 731,7 mi com desconto de 15% por liquidez e prazo = 620. A administração as trata como aplicação financeira. O retorno esperado (~7% a.a., ~R$ 50 mi) entra em other_financial só para o lucro/DDM, sem dupla contagem no DCF. other_financial = SCPs +50 − outras operações financeiras ~−18 (R$ −13,8 mi no 1S26) ≈ +30 a +45. O câmbio de exportação fica neutro e o AVP vai para a margem. Grendene Global Brands (GGB) está consolidada, sem minoritários na CVM. Os prejuízos da GGB, que a empresa trata como 'não recorrentes' (R$ 10,1 mi no 1S26; R$ 51,2 mi no 1S25), ficam na margem como recorrentes."
+  },
+  "target_multiples": {
+    "pe": 8.0,
+    "ev_ebitda": 5.5,
+    "pbv": 1.0,
+    "rationale": "Histórico (data/market): P/L mediana de 5 anos 9,5x, 3 anos 6,8x, 1 ano 5,9x, hoje 6,0x LTM. O LTM ainda carrega a receita financeira do caixa de R$ 2 bi, antes dos extraordinários. EV/EBITDA mediana de 5 anos 9,4x, 1 ano 6,1x, hoje 7,4x no EBITDA CVM deprimido. P/VP de 5 anos 1,46x, hoje 1,08x. Pares: Vulcabras e Alpargatas (alvos do estudo: 8x/6x e 11x/7,5x). Usamos P/L 8,0x sobre o LPA 2027E, cujo lucro já tem caixa menor, e EV/EBITDA 5,5x sobre o EBITDA 2027E na base padronizada (sem SCP, com AVP). Desconto às medianas de 5 anos pelo ROE em queda e pelo Ke de 25%."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.3,
+      "revenue_growth_shift": -0.03,
+      "ebitda_margin_shift": -0.03,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Importados chineses e consumo fraco seguem derrubando preço por par, Melissa perde volume e o fim do ICMS incentivado (2029–33) não é repassado."
+    },
+    "bull": {
+      "probability": 0.15,
+      "revenue_growth_shift": 0.02,
+      "ebitda_margin_shift": 0.02,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Real fraco dá competitividade à exportação, o mix volta a subir e a margem EBIT recorrente se aproxima da meta de ~20% (2024: 22% de EBITDA sem SCP)."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.035,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.004
+  },
+  "debt_profile": {
+    "gross_debt_mn": 97,
+    "pct_floating_cdi": 0.0,
+    "avg_cost": "ACC em US$ (R$ 78,7 mi) e financiamentos em reais (R$ 17 mi); dívida operacional de exportação",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": 83,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": 5,
+    "notes": "Caixa e aplicações de ~R$ 0,63 bi depois dos pagamentos de set/26, rendendo ~CDI: +100 bp ≈ +R$ 6 mi pré-IR (+R$ 4–5 mi no lucro). Juros altos pesam mais pelo consumo e pelo crédito do varejo calçadista (inadimplência, reposição de estoques)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.0638,
+    "ebitda_margin_avg_5y": 0.1769,
+    "roe_avg_5y": 0.1581,
+    "payout_avg_5y": 1.0,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": -0.0044,
+      "ebitda_margin": 0.054,
+      "net_income_mn": 89,
+      "net_debt_ebitda": -2.12
+    },
+    "notes": "Receita 2020–25: +6,4% a.a. (2020 deprimido pela pandemia); 3 anos: +0,9%, quase parada desde 2022 (R$ 2,51–2,63 bi). Projetamos 2026 −1,8% (1S26 −2,9%; 2S26 ~−1%), depois +4,5% e +4% (inflação + exportação; real fraco ajuda ~25% da receita bruta, mas o PVC é cotado em dólar: hedge natural). Margem EBITDA CVM com SCP: 20,6/13,2/15,1/23,8/15,8% (2021–25; média 17,7%). UDM 14,2%, 2T26 5,4%. Base padronizada (sem SCP, com AVP): 2026 16,0% (run-rate do 2S26; o 2S25 teve 16,8%), 2027 16,5%, 2028–29 17,0%, 2030 15,5%. O ICMS incentivado (reserva de R$ 51,5 mi no 1S26, ~4% da receita) cai na reforma de 2029 a 2033; supomos repasse parcial. ROE 2021–25 médio 15,8%, ajudado pela receita financeira do caixa. Payout caixa (DFC, dividendos + JCP): 2023 220% (R$ 1,25 bi), 2024 50%, 2025 86%, mais R$ 980 mi extraordinários declarados em dez/25 e pagos em 2026 (média ~100%). Payout projetado: 60% no stub de 2026 (antecipação trimestral do 3T/4T26) e 95% em 2027–30. Equivale ao ordinário de ~60% mais extraordinários periódicos, ≈ FCFE: o caixa líquido fica estável em ~1,4–1,8x o EBITDA. Lucro modelado: 2026E ~R$ 390 mi no run-rate do 2S (UDM R$ 579 mi com caixa maior)."
+  },
+  "guidance": "Sem guidance numérico. Referências internas: margem EBIT recorrente de ~20% e margem bruta de ~50%. No 2T26 (06/08/2026), a administração esperava recuperação de margem no 2S26 com lançamentos de maior valor agregado e sazonalidade. Também monitora as tarifas dos EUA.",
+  "dividend_policy": "Distribui trimestralmente quase todo o lucro após as reservas de incentivo fiscal (ICMS e IRPJ/SUDENE): 1S26 R$ 114,3 mi = 60% do lucro (R$ 55,7 mi em jun/26 e R$ 58,6 mi em set/26, metade em JCP com IRRF de 17,5%). Periodicamente paga extraordinários com o caixa acumulado: R$ 1,25 bi em 2023 e R$ 979,9 mi (R$ 1,0862/ação) declarados em 24/12/2025, antes da Lei 15.270/2025, pagos de jan a set/2026. Mínimo estatutário: 25%.",
+  "election_impact": "GRND3 caiu 18,0% em 26/10, mais que o Ibovespa. Canal macro: Ke e prêmio de risco de small cap, consumo discricionário de baixa renda com juros altos e varejo calçadista com crédito restrito. O que muda no valor: (i) o real a R$ 5,34–5,49 (antes R$ 5,04) ajuda a exportação (25,7% da receita bruta no 2T26; US$ 37,2 mi, +14,8%), mas encarece o PVC (matéria-prima ~24% da receita líquida): efeito líquido pequeno; (ii) o caixa, menor depois dos extraordinários, rende mais com o DI alto; (iii) importados chineses (preço médio exportado pelo Brasil −19% em US$) e a política comercial (tarifas dos EUA e antidumping sobre calçados chineses) são o risco micro. A reforma tributária, já aprovada, extingue o ICMS incentivado do Ceará entre 2029 e 2033, independentemente da eleição. Não há canal de dívida nem de intervenção.",
+  "summary": "Maior exportadora de calçados do Brasil, sem dívida e com caixa e SCPs de R$ 1,5 bi, mas com receita estagnada desde 2022 e margem operacional em queda (EBIT ajustado de 3,3% no 2T26) por concorrência chinesa e consumo fraco. Depois dos R$ 980 mi de dividendos extraordinários, o lucro depende menos da receita financeira e mais da recuperação operacional, que ainda não apareceu. O real fraco ajuda a exportação, mas não muda o quadro doméstico.",
+  "thesis": [
+    "Balanço: caixa e aplicações de R$ 866 mi, SCPs imobiliárias de R$ 732 mi e dívida de só R$ 97 mi (ACC). 'Disponibilidade líquida' de R$ 1,5 bi, ~43% do valor de mercado de 26/10.",
+    "Política de distribuição: ~60% do lucro por trimestre mais extraordinários (R$ 1,25 bi em 2023; R$ 980 mi em dez/25).",
+    "Exportação em recuperação: +14,8% em US$ no 2T26, com receita por par em US$ +9,5%, contra −13,3% das exportações brasileiras. O real a R$ 5,4 amplia a margem em reais.",
+    "Capex baixo (~4% da receita ≈ depreciação) e marcas fortes (Melissa com receita por par +6% no 2T26; Ipanema, Rider e Zaxy em alta)."
+  ],
+  "risks": [
+    "Concorrência chinesa e consumo fraco: receita bruta por par −3,1% no mercado interno no 2T26 e EBIT ajustado de 3,3%.",
+    "Reforma tributária: o ICMS incentivado (~4% da receita) e parte da vantagem do Nordeste caem de 2029 a 2033.",
+    "Capital de giro alto (recebíveis longos, ~45% da receita) e risco de crédito do varejo multimarcas.",
+    "SCPs imobiliárias ilíquidas, com retorno volátil (R$ 133 mi em 2025, R$ 1,8 mi no 1S26). Internacionalização (GGB) ainda com prejuízo.",
+    "PVC e resinas cotados em dólar. Tarifas dos EUA e volatilidade cambial na América Latina."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (previsto para o início de nov/26; data não verificada) e 3ª antecipação de dividendos",
+    "Coleção de verão e sell-out no 4T26",
+    "Eventual nova distribuição extraordinária com as SCPs/caixa",
+    "Medidas antidumping/importação de calçados"
+  ],
+  "key_data": [
+    {
+      "label": "Receita líquida 2T26",
+      "value": "R$ 552,8 mi",
+      "context": "−0,4% a/a; 26,8 mi de pares (−0,9%)"
+    },
+    {
+      "label": "EBIT ajustado 2T26",
+      "value": "R$ 15,8 mi",
+      "context": "margem de 3,3% (vs 6,1%); meta interna de ~20%"
+    },
+    {
+      "label": "Exportação 2T26",
+      "value": "US$ 37,2 mi",
+      "context": "+14,8% em US$; 25,7% da receita bruta"
+    },
+    {
+      "label": "Disponibilidade líquida 30/06/26",
+      "value": "R$ 1,50 bi",
+      "context": "caixa R$ 866 mi + SCPs R$ 732 mi − dívida R$ 96 mi"
+    },
+    {
+      "label": "Dividendos extraordinários dez/25",
+      "value": "R$ 979,9 mi",
+      "context": "R$ 1,0862/ação, pagos de jan a set/2026"
+    },
+    {
+      "label": "Queda em 26/10",
+      "value": "−18,0%",
+      "context": "R$ 4,67 → R$ 3,83 (13h02)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Grendene — Press Release 2T26 & 1S26 (06/08/2026)",
+      "url": "https://investidor10.com.br/acoes/link_comunicado/GRND3/47023/"
+    },
+    {
+      "title": "World Footwear — Grendene reports lower revenue and profitability in the second quarter",
+      "url": "https://www.worldfootwear.com/news/grendene-reports-lower-revenue-and-profitability-in-the-second-quarter/11710.html"
+    },
+    {
+      "title": "Quartr — Grendene Q2 2026 earnings summary",
+      "url": "https://quartr.com/events/grendene-s-a-grnd3-q2-2026_FVPMtneE"
+    },
+    {
+      "title": "O Povo — Grendene vende mais no 1º semestre de 2026, mas receita cai com preços baixos na disputa com a China",
+      "url": "https://mais.opovo.com.br/jornal/economia/2026/08/06/grendene-vende-mais-no-1-semestre-de-2026-mas-receita-cai-com-precos-baixos-na-disputa-com-china.html"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/GRND3.json)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "baixa — o caso depende de um único driver, a recuperação da margem operacional. A margem está no pior nível em anos (EBIT ajustado de 3,3% no 2T26) e o 3T26 ainda não saiu. Além disso, ~40% do valor está em caixa e SCPs imobiliárias de liquidez e retorno incertos, e a padronização (AVP na margem, SCP fora) muda o EBITDA em ~4–5 p.p."
+}

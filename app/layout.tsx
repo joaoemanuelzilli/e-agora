@@ -11,7 +11,7 @@ const serif = IBM_Plex_Serif({ variable: "--font-plex-serif", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: "E agora? Valuation pós-eleição",
-  description: "Estudo de valuation das 59 ações brasileiras que mais caíram após a reeleição de Lula (26/10/2026): DCF, múltiplos, DDM, TIR de dono, Monte Carlo e evidência estatística, com cotações ao vivo da B3.",
+  description: "Estudo de valuation das ações brasileiras mais líquidas depois da reeleição de Lula (26/10/2026): DCF, múltiplos, DDM, TIR de dono, Monte Carlo e evidência estatística, com cotações ao vivo da B3.",
 };
 
 export const viewport: Viewport = { themeColor: [{ media: "(prefers-color-scheme: light)", color: "#ffffff" }, { media: "(prefers-color-scheme: dark)", color: "#101a2b" }] };

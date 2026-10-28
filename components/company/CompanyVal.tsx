@@ -323,7 +323,7 @@ export function Quant({ doc }: { doc: any }) {
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
       <div className="lg:col-span-5">
         <HBarChart
-          title={`Escore multifator: ${row.rank ? `${row.rank}º de 59` : "—"}`}
+          title={`Escore multifator: ${row.rank ? `${row.rank}º de ${row.rank_of ?? "—"}` : "—"}`}
           subtitle="Desvios-padrão em relação à cobertura (z). Pesos: valor 30%, qualidade 20%, solidez 15%, probabilidade 15%, upside 10%, sobrerreação 10%."
           items={items}
           fmt="num1"

@@ -1,0 +1,218 @@
+{
+ "ticker": "BBSE3",
+ "name": "BB Seguridade Participações S.A.",
+ "sector": "Financeiro / Seguros, previdência e capitalização — holding de participações controlada pelo Banco do Brasil (~68% após o cancelamento de ações de 2026)",
+ "template": "financial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "BBSE3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override de base. LL = lucro CVM do controlador (3.11.01, IFRS 17), próximo do gerencial recorrente: FY2025 CVM R$ 9.017 mi vs recorrente R$ 9.080 mi; 1S26 CVM R$ 4.552 mi vs recorrente R$ 4.372 mi (+R$ 180 mi de efeitos IFRS 17 que não projeto repetir no 2S26). PL FY2025 CVM (R$ 10.384 mi) já está líquido do dividendo do 2S25 (R$ 4.950 mi em 'obrigações societárias'); PL 2T26 (R$ 10.890 mi) já está líquido do dividendo do 1S26 (R$ 3.850 mi; data-com 06/08, pago 03/09/26), que não é fluxo de quem compra hoje e não entra no stub. Stub 2026 (f26 = 0,5) = dividendo do 2S26 (pago ~mar/27): 89% × LL 2026E R$ 9.050 mi × 0,5 = R$ 4.028 mi ≈ 90% do LL recorrente do 2S26E (~R$ 4,5 bi). PL 2026E do motor (R$ 11.380 mi) ≈ PL 2T26 + 2S26E − dividendo do 2S26E (~R$ 11.340 mi). Ações: 1.941,25 mi (1.941,4 mi emitidas após o cancelamento de 58,6 mi em tesouraria em 2026, menos 0,15 mi em tesouraria). A base CVM padronizada põe R$ 3,87 bi do passivo não circulante como 'dívida LP': são comissões a apropriar (receita diferida da BB Corretora, R$ 3,6 bi) + provisões e IR diferido. Não há dívida financeira (irrelevante no template financeiro)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   0.89,
+   0.9,
+   0.9,
+   0.9,
+   0.9
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.8715,
+   0.8067,
+   0.7928,
+   0.7647,
+   0.7398
+  ],
+  "ni_growth": null,
+  "payout": [
+   0.89,
+   0.9,
+   0.9,
+   0.9,
+   0.9
+  ]
+ },
+ "terminal": {
+  "g": 0.045,
+  "roe": 0.7
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Holding financeira: sem ponte EV→equity. Caixa da holding (R$ 9,65 bi no 2T26, dos quais R$ 3,85 bi saíram como dividendo em set/26) e as participações nas coligadas já estão no PL e na geração de lucro (equivalência + resultado financeiro)."
+ },
+ "target_multiples": {
+  "pe": 7.0,
+  "ev_ebitda": null,
+  "pbv": 5.5,
+  "rationale": "P/L 7,0x sobre o LPA 2027E (R$ 4,73) e P/VP 5,5x sobre o VPA 2026E (R$ 5,86). Histórico (data/market, sobre LL/PL CVM de 12 meses): P/L mediana de 3 anos 8,1x (mín 7,1x; máx 9,5x), de 5 anos 8,6x; P/VP mediana de 3 anos 6,15x (p10 5,3x). Sexta pré-eleição: 9,2x LTM / 7,7x PL; 26/10 às 13h: 8,7x / 7,3x. Desconto de 10–15% sobre a mediana por três motivos. (i) Curva longa +250–300 bp: a BBSE é um 'proxy de renda' — DY ~11% + g ~4,5% ⇒ Ke de mercado ~15,5% antes da eleição; com o DI longo a 15,2%, o retorno exigido vai a ~17,5% ⇒ P/L ≈ 0,92 × 1,045 / (0,175 − 0,045) ≈ 7,4x. (ii) Risco de controlador estatal depois da reeleição. (iii) Lucro operacional em queda em 2026 (guidance de −7% a −3%). Coerência: P/VP 5,5x ≈ P/L 7,0x × ROE 2027E sobre o PL de abertura (80,7%) = 5,6x. Com o Ke de 25% do estudo, o P/VP justo de Gordon é (70% − 4,5%) / (25% − 4,5%) = 3,2x; a diferença é o prêmio que o mercado paga por um fluxo estável de dividendos."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.1,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Num 4º mandato o BB antecipa a renegociação do acordo de distribuição (vence em 2031) e cobra mais pelo canal, usa o seguro rural e o prestamista como política pública, o El Niño eleva os sinistros agrícolas e a Selic volta a ~11% em 2028: lucro 12–14% abaixo do base e g de 3,5%."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.05,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "O crédito rural e PJ volta a crescer com a MP de renegociação, a sinistralidade agrícola segue baixa, as reservas da Brasilprev crescem >10% a.a. e o payout vai a ~95% porque o BB precisa de capital: lucro ~6% acima do base."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.06,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "n/a — sem dívida financeira (holding com caixa e aplicações de R$ 9,65 bi no 2T26, antes do dividendo de R$ 3,85 bi pago em set/26)",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 100,
+  "notes": "CFO (Rafael Sperendio, set/25): cada 1 p.p. de Selic muda o lucro em ~R$ 100 mi/ano (~1,1% do LL). O efeito vem da holding (caixa de R$ 6–10 bi), da Brasilcap (reservas de R$ 11,5 bi, margem de juros de 4,2 p.p.), do float da Brasilseg e da BB Corretora. Resultado financeiro líquido de impostos: R$ 909 mi no 1S26 (20,8% do LL recorrente, +16% a/a). Curva de 28/10 vs expectativa pré-eleição: CDI médio de 2027–30 de ~14,5–15,5% a termo, contra ~11,5–12,5% antes (Focus de 23/10: Selic de 11,75% no fim de 2027). São +2,5 a +3,5 p.p. ⇒ +R$ 250–350 mi/ano de lucro (+3–4%). Uso CDI de 14,5/15,0/14,5/14,0% em 2027–30, abaixo do a termo, para não perpetuar o prêmio de risco. Contrapesos: (i) juro alto deprime o prestamista e o rural, vinculados a crédito; (ii) a abertura da curva real gera MTM negativo (−R$ 18 mi no 1S26, após IR); (iii) o IGP-M, pressionado pelo câmbio, encarece com 1 mês de defasagem os planos de benefício definido da Brasilprev (−R$ 63 mi no 2T26)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.185,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.818,
+  "payout_avg_5y": 0.71,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": -0.028,
+   "ebitda_margin": null,
+   "net_income_mn": 2413,
+   "net_debt_ebitda": null
+  },
+  "notes": "revenue_cagr_5y aqui = CAGR do LL CVM 2020–25 (3.851 → 9.017; 18,5% a.a., inflado pela Selic de 2% → 15%); revenue_yoy = receita de corretagem da BB Corretora (−2,8%). ROE CVM 2021–25: 57,5/81,3/91,3/89,2/89,8% (média de 81,8%). Payout caixa CVM 2021–25: média de 71%. Payout declarado (DVA): 71% (2023), 82% (2024), 96,7% (2025); 1S26: 88% do recorrente. LL 2T26: CVM R$ 2.413 mi; gerencial recorrente R$ 2.152 mi (−3,9% a/a). Projeção: LL 2026E R$ 9,05 bi (1S26 CVM 4.552 + 2S26E 4.500). Recorrente ~R$ 8,9 bi (−2% a/a), coerente com o guidance de resultado operacional de −7% a −3%. 2027E R$ 9,18 bi; 2030E R$ 10,57 bi (CAGR 2026–30 de 3,9%): operacional +3,5–5% nominal, financeiro estável com CDI de 14–15%. O ROE sobre o PL médio cai de 83% para 71% porque o payout de 90% retém ~10% do lucro (PL 2030E de R$ 15,3 bi)."
+ },
+ "guidance": "Guidance 2026 (fev/26), mantido no 2T26 (04/08/26). Reservas PGBL/VGBL da Brasilprev: +8% a +11% (1S26: +11%). Prêmios emitidos da Brasilseg: −3% a +2% (1S26: −3,5%; o CFO vê a 'metade de baixo' como factível). Resultado operacional não decorrente de juros (ex-holding): −7% a −3% (1S26: −0,2%; o CFO vê probabilidades 'assimétricas para o topo'). Não há guidance de resultado financeiro. 3T26 em 03/11/2026 (após o fechamento).",
+ "dividend_policy": "Dividendos semestrais (fev/mar e ago/set), com payout recente de ~90%. 2025: R$ 8,72 bi (96,7% do LL); o do 2S25 somou R$ 4,95 bi com dividendos prescritos (R$ 2,55 + R$ 0,057 de atualização por ação). 1S26: R$ 3,85 bi (88% do recorrente; R$ 1,98/ação, data-com 06/08, pago 03/09/26). Houve recompras em 2023–24 (R$ 1,8 bi) e o cancelamento de 58,6 mi ações em 2026. O BB (~68%) depende desse dividendo para o capital (CET1 de 11,27% no 2T26), o que torna improvável um corte de payout. Premissa: 89% em 2026 (stub = dividendo do 2S26, pago ~mar/27) e 90% em 2027–30.",
+ "election_impact": "Caiu −5,9% às 13h de 26/10 (R$ 43,68 → R$ 41,09), um terço da queda do Ibovespa: é o papel mais defensivo do grupo (beta ~0,5, caixa líquido, DY ~11%). (i) Juros: o DI longo +250–300 bp eleva o resultado financeiro (~R$ 100 mi de lucro por p.p. de Selic ⇒ +R$ 250–350 mi/ano vs a curva pré-eleição, +3–4% do lucro). Mas também sobe o retorno exigido de um 'proxy de renda fixa', e o prestamista e o rural, vinculados a crédito, ficam deprimidos. (ii) Câmbio: o real fraco acelera o IGP-M, que corrige com defasagem os planos de benefício definido da Brasilprev (efeito pontual de dezenas de milhões). (iii) Risco estatal num 4º mandato: o controlador BB está com o capital pressionado e pode querer extrair mais do canal (o acordo de distribuição vence em 2031) ou direcionar produtos (seguro rural, renegociações do agro). O risco de corte de payout é baixo, porque o BB precisa do dividendo. O valor intrínseco muda pouco: o ganho no financeiro compensa parte do de-rating. O risco de canal entra no ROE terminal de 70% (vs ~74% projetado para 2030) e no bear (30%).",
+ "summary": "Holding que recebe por equivalência patrimonial (R$ 5,3 bi em 2025) o lucro de Brasilseg (seguro rural, vida e prestamista), Brasilprev (R$ 496 bi em reservas) e Brasilcap, mais a comissão da BB Corretora (R$ 5,0 bi de receita); tudo é vendido na rede do Banco do Brasil. O lucro é estável (recorrente de R$ 4,4 bi no 1S26, +3%), o ROE contábil fica em ~85% e o payout em ~90%: o valor depende quase só do fluxo de dividendos. A eleição pesa pouco no operacional (o CDI mais alto até ajuda o financeiro), mas aumenta o risco do controlador e o retorno exigido. O Ke de 25% do estudo fica muito acima do que o mercado embute num papel de DY ~11%.",
+ "thesis": [
+  "Fluxo de dividendos previsível: R$ 8,7 bi distribuídos em 2025 (96,7% do lucro) e R$ 3,85 bi no 1S26; a holding não tem dívida e tem caixa.",
+  "Juro alto ajuda: resultado financeiro de R$ 909 mi no 1S26 (+16%, 21% do lucro), ~R$ 100 mi de lucro por p.p. de Selic, e a curva pós-eleição está ~2,5–3,5 p.p. acima da pré-eleição.",
+  "Previdência ganhando tração: reservas de R$ 496 bi (+10,6% a/a), captação líquida de +R$ 2,8 bi no 1S26 (vs −R$ 5,2 bi no 1S25) e índice de resgates −3 p.p.",
+  "Sinistralidade agrícola na mínima histórica e eficiência melhorando (índice de eficiência da Brasilprev −2,4 p.p. no 1S26)."
+ ],
+ "risks": [
+  "Dependência do canal BB (~90% das vendas): o acordo de distribuição vence em 2031; risco de renegociação com mais fee para o banco ou de uso político de produtos num 4º mandato.",
+  "Crédito rural e prestamista: o juro alto e a inadimplência do agro no BB derrubam prêmios (rural −6% e vida −5% no 1S26); o El Niño de 2026/27 pode elevar os sinistros agrícolas.",
+  "Queda da Selic a partir de 2027–28 (−R$ 100 mi de lucro por p.p.) e descasamento IGP-M × IPCA na Brasilprev.",
+  "Reforma tributária (IBS/CBS a partir de 2027) sobre seguros e resseguro ainda indefinida; a empresa não quantifica o impacto."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 em 03/11/2026 (após o fechamento).",
+  "Dividendo do 2S26 e guidance 2027 (fev/27).",
+  "Diretrizes do novo mandato para o BB e para o acordo de distribuição com a BB Seguridade."
+ ],
+ "key_data": [
+  {
+   "label": "LL recorrente 1S26",
+   "value": "R$ 4.372 mi (+3,2% a/a)",
+   "context": "2T26: R$ 2.152 mi (−3,9%); CVM 1S26: R$ 4.552 mi"
+  },
+  {
+   "label": "Resultado financeiro 1S26 (após IR)",
+   "value": "R$ 909 mi (+16%)",
+   "context": "20,8% do lucro recorrente"
+  },
+  {
+   "label": "Dividendos 1S26",
+   "value": "R$ 3,85 bi (R$ 1,98/ação)",
+   "context": "Payout de 88%; data-com 06/08, pago 03/09/26"
+  },
+  {
+   "label": "Reservas Brasilprev",
+   "value": "R$ 496,5 bi (+10,6% a/a)",
+   "context": "Captação líquida de +R$ 2,8 bi no 1S26"
+  },
+  {
+   "label": "Prêmios emitidos Brasilseg 1S26",
+   "value": "R$ 7,5 bi (−3,5%)",
+   "context": "Rural = 46,7% do total; guidance de −3% a +2%"
+  },
+  {
+   "label": "Sensibilidade a juros",
+   "value": "~R$ 100 mi de lucro por p.p. de Selic",
+   "context": "CFO, set/25"
+  },
+  {
+   "label": "P/L LTM / P/VP (26/10, 13h)",
+   "value": "8,7x / 7,3x",
+   "context": "Mediana de 3 anos: 8,1x / 6,15x"
+  }
+ ],
+ "sources": [
+  {
+   "title": "BB Seguridade — Apresentação de resultados 2T26 (03/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/d4ee6df5-1dd8-4fb5-b518-e05397c304e4/fa5caef6-36c1-0723-694f-d58e72198c8d?origin=2"
+  },
+  {
+   "title": "BB Seguridade — Transcrição da teleconferência 2T26 (04/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/d4ee6df5-1dd8-4fb5-b518-e05397c304e4/ad660cba-2c7c-d3b4-71d4-10e288e2a783?origin=2"
+  },
+  {
+   "title": "Mercado & Consumo — BB Seguridade tem lucro gerencial de R$ 2,151 bi no 2T26",
+   "url": "https://mercadoeconsumo.com.br/04/08/2026/mc-capital/bb-seguridade-tem-lucro-liquido-gerencial-de-r-2151-bi-no-2o-trimestre-queda-de-39/"
+  },
+  {
+   "title": "Money Times — BB Seguridade fecha 2025 com recorde (payout de 96,7%)",
+   "url": "https://www.moneytimes.com.br/bb-seguridade-bbse3-lucra-r-23-bilhoes-no-4o-trimestre-e-fecha-2025-com-recorde-vtra/"
+  },
+  {
+   "title": "Money Times — R$ 4,95 bi em dividendos do 2S25",
+   "url": "https://www.moneytimes.com.br/bb-seguridade-bbse3-atualiza-valor-por-acao-dos-r-495-bilhoes-em-dividendos-que-distribuira-aos-acionistas-veja-lmrs/"
+  },
+  {
+   "title": "Nord Investimentos — CFO: ~R$ 100 mi por p.p. de Selic; contrato com o BB até 2031 (25/09/2025)",
+   "url": "https://www.nordinvestimentos.com.br/blog/amp/bbse3-perspectivas-dividendos-2026/"
+  },
+  {
+   "title": "Seu Dinheiro — Calendário de balanços do 3T26",
+   "url": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/BBSE3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação (API oficial) e proventos",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/BBSE3"
+  }
+ ],
+ "confidence": "média — dados primários (apresentação e transcrição do 2T26) e lucro estável. Mas o valor é quase todo perpetuidade de dividendos (sensível a g e ao ROE terminal), e o risco de canal e de controlador estatal não é quantificável. A participação exata do BB depois do cancelamento (~68%) e o vencimento do acordo de distribuição (2031) vêm de fontes secundárias."
+}

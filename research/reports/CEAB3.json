@@ -1,7 +1,7 @@
 {
  "ticker": "CEAB3",
- "headline": "A C&A caiu 47% por fator de mercado, mas saiu da seleção na revisão: sem o JCP de 2025, que não é de quem compra hoje, o valor justo é R$ 6,91 (−6%) e a chance de o valor superar o preço, 43,9%, fica abaixo do corte de 45%.",
- "verdict": "A R$ 7,35 (foto da B3 às 13h02 de 26/10), a C&A entrega TIR de dono de 21,1% no cenário-base, acima do corte de 20%, mas deixou de ser oportunidade. A revisão independente passou a tratar como dívida o JCP de 2025 (R$ 139,8 mi), que estava no caixa de jun/26 mas foi pago a quem tinha a ação em 23/12/25: o valor justo a Ke 25% caiu de R$ 7,20 para R$ 6,91, 6,1% abaixo do preço, e a probabilidade de o valor superar o preço no Monte Carlo, de 47,6% para 43,9%, abaixo do corte de 45%. Se o P/L voltar a 7x, a TIR de 3 anos chega a ~53%.",
+ "headline": "A C&A voltou à seleção no fechamento de 28/10: a R$ 6,87, abaixo do gatilho de ~R$ 7,20, a chance de o valor justo superar o preço sobe para 50,2%.",
+ "verdict": "Atualização de 28/10: no fechamento de R$ 6,87, abaixo do gatilho de ~R$ 7,20 descrito abaixo, a C&A voltou à seleção, com TIR de dono de 22,1% e chance de 50,2% de o valor superar o preço. Texto original, com a foto de 26/10: A R$ 7,35 (foto da B3 às 13h02 de 26/10), a C&A entrega TIR de dono de 21,1% no cenário-base, acima do corte de 20%, mas deixou de ser oportunidade. A revisão independente passou a tratar como dívida o JCP de 2025 (R$ 139,8 mi), que estava no caixa de jun/26 mas foi pago a quem tinha a ação em 23/12/25: o valor justo a Ke 25% caiu de R$ 7,20 para R$ 6,91, 6,1% abaixo do preço, e a probabilidade de o valor superar o preço no Monte Carlo, de 47,6% para 43,9%, abaixo do corte de 45%. Se o P/L voltar a 7x, a TIR de 3 anos chega a ~53%.",
  "reasons": [
   {
    "title": "Público C/D no centro da política de renda",
@@ -159,5 +159,5 @@
    "event": "Novo salário mínimo e reforço do Bolsa Família (MS: +R$ 22,7 bi em 2027)"
   }
  ],
- "bottom_line": "Hoje não é oportunidade: a chance de o valor superar o preço (43,9%) está abaixo do corte de 45%. Volta à seleção com o preço ~2% abaixo do atual (~R$ 7,20 ou menos), ou com evidência operacional melhor que a do modelo: margem EBITDA ajustada acima dos 19,5% projetados para 2026–27 mesmo com o câmbio, ou retorno da expansão perto da meta de 18% (com ROIC terminal de 18%, a chance sobe a 51%). Se a margem bruta ceder abaixo de ~55% ou o NPL90 passar de ~16%, o cenário bear (R$ 3,30) vira o central."
+ "bottom_line": "Atualização de 28/10: o gatilho de preço foi atingido e a ação voltou à seleção. Hoje não é oportunidade: a chance de o valor superar o preço (43,9%) está abaixo do corte de 45%. Volta à seleção com o preço ~2% abaixo do atual (~R$ 7,20 ou menos), ou com evidência operacional melhor que a do modelo: margem EBITDA ajustada acima dos 19,5% projetados para 2026–27 mesmo com o câmbio, ou retorno da expansão perto da meta de 18% (com ROIC terminal de 18%, a chance sobe a 51%). Se a margem bruta ceder abaixo de ~55% ou o NPL90 passar de ~16%, o cenário bear (R$ 3,30) vira o central."
 }

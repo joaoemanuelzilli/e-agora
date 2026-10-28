@@ -124,7 +124,7 @@ def test_multiplos_historicos_plausiveis(t):
 
 
 def test_cotacoes_da_foto_coerentes():
-    """quotes.json: preço e fechamento anterior > 0 e variação = preço/anterior − 1 para as 59 empresas."""
+    """quotes.json: preço e fechamento anterior > 0 e variação = preço/anterior − 1 para as empresas da cobertura."""
     q = load(MARKET / "quotes.json")
     bad = []
     for t in coverage():
@@ -173,6 +173,6 @@ def test_proventos_nao_negativos(e):
     assert not bad, fails(bad)
 
 
-def test_proventos_cobrem_as_59_empresas():
+def test_proventos_cobrem_toda_a_cobertura():
     got = {e["ticker"] for e in DIV["empresas"]}
     assert got == set(coverage()), f"faltam {sorted(set(coverage()) - got)}; sobram {sorted(got - set(coverage()))}"

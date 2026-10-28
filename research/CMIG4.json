@@ -1,0 +1,257 @@
+{
+ "ticker": "CMIG4",
+ "name": "Cemig — Companhia Energética de Minas Gerais",
+ "sector": "Utilities / integrada estatal (MG): distribuição (Cemig D, 9,2 mi clientes), geração hídrica (Cemig GT), transmissão, gás (Gasmig), comercialização; 21,68% da Taesa",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "CMIG4",
+   "class": "PN"
+  },
+  {
+   "ticker": "CMIG3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 36517.0
+  },
+  "notes": "Receita-base FY2025 = ROL CVM R$ 42.751 mi − receita de construção de distribuição (DVA 7.01.02.05: R$ 5.657 mi) − receita de construção de transmissão (R$ 577 mi), ambas com margem ~zero = R$ 36.517 mi. Ficam na base o VNR (~R$ 0,3 bi/ano) e a atualização da bonificação de outorga (R$ 451 mi em 2025), que têm contrapartida de caixa via tarifa/RAG. EBITDA ajustado FY2025 ≈ R$ 7,3 bi (20%; o CVM de R$ 8,3 bi inclui o ganho do fim do plano de saúde no 4T25 e vendas de ativos); 1S26 ajustado R$ 4.261 mi sobre R$ 18.280 mi de receita ex-construção (23,3%). Margem projetada inclui a equivalência (Taesa ~R$ 0,4 bi/ano; Belo Monte negativa). Ações: 2.860,7 mi (956,6 mi ON + 1.904,1 mi PN), iguais na CVM e na B3; o valor justo por ação vale para as duas classes (direitos econômicos iguais; a PN tem dividendo mínimo prioritário, a ON prêmio de controle/tag along)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.025,
+   0.04,
+   0.05,
+   0.06,
+   0.045
+  ],
+  "ebitda_margin": [
+   0.245,
+   0.242,
+   0.24,
+   0.251,
+   0.25
+  ],
+  "da_pct_revenue": [
+   0.044,
+   0.047,
+   0.049,
+   0.05,
+   0.052
+  ],
+  "capex_pct_revenue": [
+   0.18,
+   0.21,
+   0.2,
+   0.185,
+   0.17
+  ],
+  "nwc_pct_revenue": 0.04,
+  "cost_of_net_debt": [
+   0.128,
+   0.13,
+   0.131,
+   0.13,
+   0.128
+  ],
+  "other_financial": [
+   -500,
+   -500,
+   -500,
+   -500,
+   -500
+  ],
+  "tax_rate": [
+   0.14,
+   0.17,
+   0.18,
+   0.19,
+   0.2
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.36,
+   0.5,
+   0.5,
+   0.5,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.045,
+  "roic": 0.12,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.135,
+  "target_debt_weight": 0.4,
+  "notes": "wd ≈ (DL R$ 19,7 bi + debt-like R$ 8,4 bi) / (essas + valor de mercado pré-eleição ~R$ 38,7 bi com ON a ~R$ 17 e PN a R$ 11,67) ≈ 0,42; uso 0,40. Kd: 53% IPCA + ~6,3% (≈ 10,6% com IPCA de 4,3%), 40% CDI + ~0,8% (≈ 15,8% com o CDI a termo), 7% em US$ com swap → ≈ 13,1–13,5%."
+ },
+ "adjustments": {
+  "other_debt_like": 8428,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like (CVM 2T26) = dividendos e JCP a pagar R$ 2.668 mi (JCP de dez/25, mar/26 e jun/26 e 2ª parcela do dividendo de abr/26, todos com data-com já passada e pagos só em 30/12/26, 30/06/27 e 30/12/27) + JCP declarado em 22/09/2026 depois do balanço (R$ 0,0699/ação × 2.860,7 mi = R$ 200 mi) + obrigações pós-emprego (Forluz) R$ 1.819 mi + indenização compensatória do fim do plano de saúde (acordo no TRT) R$ 832 mi + antecipação de CDE recebida no 1S26 R$ 710 mi + PIS/COFINS a restituir a consumidores R$ 484 mi + 70% das provisões para contingências R$ 2.325 mi = R$ 1.627 mi (dedutíveis no pagamento) + derivativos R$ 88 mi (a companhia os soma à DL). Não incluí os créditos de GD a pagar a consumidores (R$ 1,94 bi, compensados em energia; a atualização entra no other_financial), nem os fundos vinculados (~R$ 2 bi aplicados em 2025–26, sem detalhe de liquidez). other_financial = −R$ 0,5 bi/ano: atualização dos créditos de GD (R$ 168 mi no 2T26) e das provisões (R$ 123 mi no 2T26), em parte compensadas pela remuneração de ativos setoriais. Minoritários desprezíveis (0,43% da Gasmig)."
+ },
+ "target_multiples": {
+  "pe": 6.0,
+  "ev_ebitda": 5.0,
+  "pbv": 1.0,
+  "rationale": "multiples_history (CMIG4): P/L 5 anos média 5,96x / mediana 6,15x (p10 4,4x, p90 7,6x); EV/EBITDA 5 anos média 4,72x / mediana 4,32x; P/VP 5 anos 1,17x. Na foto de 26/10: 6,45x P/L LTM, 5,82x EV/EBITDA LTM e 1,02x P/VP. Uso a mediana de P/L (6,0x sobre o LPA 2027E, que cai com juros maiores e a perda de Emborcação/Nova Ponte) e 5,0x EV/EBITDA 2027E (acima da média de 5 anos porque o EV aqui inclui R$ 8,4 bi de itens debt-like que o histórico não tem). O desconto de estatal está no histórico; um P/L de 6x ainda embute Ke de ~14% (payout 55%, g 4,5%), abaixo dos 25% do estudo."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.015,
+   "ebitda_margin_shift": -0.02,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.01,
+   "narrative": "Estado/União usam a Cemig para política (tarifa, capex sem retorno, payout cortado), RTP 2028 dura e Emborcação/Nova Ponte saem sem compensação; DL/EBITDA passa de 3,5x."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.01,
+   "narrative": "Privatização/corporation com tag along; RTP de mai/2028 reconhece a base da Cemig D, que mais que dobra, com WACC regulatório maior; renovação de Emborcação/Nova Ponte."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.012,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 22353,
+  "pct_floating_cdi": 0.47,
+  "avg_cost": "53% IPCA, 40% CDI e 7% US$ (com hedge); custo médio não divulgado no release (estimado ~13% nominal)",
+  "avg_maturity_years": 6.7,
+  "next_24m_maturities_mn": 3414,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -55,
+  "notes": "47% da dívida bruta (R$ 22,4 bi) em CDI ou US$ com swap para CDI (≈ R$ 10,5 bi) menos caixa de R$ 3,1 bi → exposição líquida ~R$ 7,4 bi: +100 bp ≈ −R$ 74 mi antes de IR, ≈ −R$ 55 mi depois (~1,5% do lucro). A sensibilidade maior é ao IPCA (53% da dívida; o IPCA de 1,42% no 2T26 fez a variação monetária das debêntures subir R$ 175 mi a/a), compensada no longo prazo pela correção da Parcela B e da RAP. Com DL subindo para ~R$ 30–35 bi até 2030 (capex de R$ 43,7 bi em 2026–30), a exposição cresce. Custo da DL de 12,8–13,1% ao longo de 2026–30 (não cai: o CDI a termo é ~15%)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.111,
+  "ebitda_margin_avg_5y": 0.229,
+  "roe_avg_5y": 0.22,
+  "payout_avg_5y": 0.52,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.034,
+   "ebitda_margin": 0.222,
+   "net_income_mn": 945,
+   "net_debt_ebitda": 2.58
+  },
+  "notes": "CVM 2020–25: receita +11,1% a.a. (com receita de construção); margem EBITDA média 22,9%; ROE médio 22% inflado por créditos de PIS/COFINS, ganho na RTP da transmissão (2024, R$ 1,7 bi), vendas de ativos e fim do plano de saúde (2025). Recorrente: lucro ajustado de R$ 2,10 bi no 1S26 (−11% a/a) e ROE ~14%. Premissa: margem ex-construção de 24–25% (2S26 com o reajuste de mai/26 de 6,5%; 2027–28 sem Emborcação (1.192 MW, concessão até mai/27) e Nova Ponte (510 MW, até ago/27), ~R$ 1,0 bi/ano de EBITDA a preço de mercado, e sem a RBSE da GT a partir de jul/28 (R$ 0,4 bi/ano); 2029–30 com a RTP de mai/2028 da Cemig D: a base líquida de R$ 15,2 bi (2023) deve mais que dobrar com o capex de 2023–27, +R$ 2,2 bi/ano de Parcela B). ROE projetado cai para 9–11% (juros e base de PL maior). Payout 55% (estatuto exige ≥ 50%; média 52% em 2021–25, 81% em 2025)."
+ },
+ "guidance": "Plano de investimentos de R$ 43,70 bi em 2026–30, sendo R$ 6,72 bi em 2026 (Cemig D R$ 5,27 bi; geração R$ 0,63 bi; transmissão R$ 0,20 bi; Gasmig R$ 0,23 bi; GD R$ 0,38 bi); R$ 3,28 bi realizados no 1S26 (+19%). Sem guidance de EBITDA ou lucro. Alavancagem de 2,58x DL/EBITDA ajustado no 2T26 (1,59x um ano antes); 81% da dívida vence a partir de 2029, depois da RTP. Reajuste da Cemig D de 28/05/2026: efeito médio de 6,5% (Parcela B +1,40 p.p.; correção da Parcela B de 4,9%).",
+ "dividend_policy": "Estatuto: mínimo de 50% do lucro líquido, com dividendo mínimo garantido às PN; pagamento majoritariamente em JCP, em duas parcelas (30/06 e 30/12) até 18 meses depois da declaração. 2025: payout de 81% (DY de 12–14%). 2026 até agora: JCP de R$ 0,23 (data-com 24/03), R$ 0,2204 (23/06; R$ 630,5 mi) e R$ 0,0699/ação (22/09), pagos em 2027 — já fora do fluxo de quem compra em 26/10 e tratados como dívida. Premissa: 2026 stub ≈ R$ 0,7 bi restante (JCP de dez/26 e complemento na AGO de 2027); 2027–30 55%.",
+ "election_impact": "CMIG4 caiu ~11% em 26/10 (R$ 11,67 → R$ 10,36 às 13h02), menos que o IEEX (−21,7%); em 28/10 ~R$ 10,14. CMIG3 negocia a ~R$ 16,7 (prêmio de ~65% sobre a PN), o que sugere que o mercado precifica um evento de controle (privatização, federalização para abater a dívida de MG via Propag ou unificação de classes) que beneficiaria mais a ON; não verifiquei o status nem o resultado da eleição para governador de MG em 2026. Macro: alavancagem de 2,58x, 53% da dívida em IPCA e só ~R$ 7 bi líquidos expostos ao CDI (+100 bp ≈ −R$ 55 mi/ano). Político: estatal mineira com capex de R$ 43,7 bi, perto de 5x a QRR, com retorno a WACC regulatório real de 7,4% após impostos, o que a Ke de 25% destrói valor. A reeleição aumenta a chance de a União virar sócia relevante (Propag) e de interferência em tarifa/capex; isso entra no bear (margem −2 p.p., capex +1 p.p., payout cortado), não só no texto.",
+ "summary": "Lucro recorrente estável (~R$ 4 bi/ano) e P/L de ~6–7x, mas a empresa está numa fase de capex muito acima da depreciação (R$ 43,7 bi em 5 anos) financiado com dívida a ~13%, e perde ~52% da garantia física própria em 2027 (Emborcação, Nova Ponte). A RTP de 2028 devolve parte do capex via tarifa, mas a 25% de Ke o retorno regulatório não cobre o custo do capital.",
+ "thesis": [
+  "Cemig D com desempenho acima do regulatório (EBITDA R$ 666 mi acima no 1S26; perdas de 11,40% vs limite de 11,48%; DEC 8,43 h, mínimo histórico).",
+  "RTP de mai/2028: base de remuneração líquida de R$ 15,2 bi (2023) deve mais que dobrar com capex de R$ 5,3–5,5 bi/ano; ~+R$ 2,2 bi/ano de Parcela B.",
+  "Dividendo estatutário ≥ 50% do lucro, rating AAA(bra) e 81% da dívida vencendo depois de 2029."
+ ],
+ "risks": [
+  "Concessões de Emborcação (mai/27) e Nova Ponte (ago/27): 731 MWm de garantia física (~49% da GF própria) sem renovação confirmada.",
+  "Capex de R$ 43,7 bi em 2026–30 contra EBITDA de ~R$ 9 bi/ano: DL deve passar de R$ 19,4 bi para R$ 30–35 bi e DL/EBITDA para >3x antes da RTP.",
+  "Interferência política: controle de MG, Propag/federalização e um 4º mandato federal; payout e tarifa como instrumento de política.",
+  "Comercialização exposta a preço (EBITDA −R$ 192 mi a/a no 2T26 e provisão arbitral de R$ 191 mi); fim da RBSE da GT em 2028 (−R$ 0,4 bi/ano); migração de clientes da Gasmig para o mercado livre."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (12/11/2026; webcast 13/11)",
+  "Decisão sobre Emborcação/Nova Ponte (antes de mai/2027)",
+  "Pagamento dos JCP/dividendos (30/12/2026)",
+  "Agenda de privatização/Propag do novo governo de MG (2027)",
+  "Revisão tarifária da Cemig D (mai/2028)"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA ajustado 2T26",
+   "value": "R$ 2.472 mi (+9,3% a/a)",
+   "context": "Cemig D R$ 1.508 mi (+21%); GT R$ 679 mi; Gasmig R$ 206 mi"
+  },
+  {
+   "label": "Lucro ajustado 2T26",
+   "value": "R$ 1.117 mi (−15,5%)",
+   "context": "reportado R$ 945 mi; resultado financeiro −R$ 796 mi (+155%)"
+  },
+  {
+   "label": "DL / DL/EBITDA jun/26",
+   "value": "R$ 19.358 mi; 2,58x",
+   "context": "1,59x em jun/25; prazo médio 6,7 anos"
+  },
+  {
+   "label": "Capex plano 2026–30",
+   "value": "R$ 43,7 bi",
+   "context": "R$ 6,72 bi em 2026; R$ 3,28 bi no 1S26"
+  },
+  {
+   "label": "Concessões vencendo",
+   "value": "Emborcação mai/27; Nova Ponte ago/27",
+   "context": "1.702 MW; 731 MWm de GF"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Cemig — Release de Resultados 2T26 (14/08/2026)",
+   "url": "https://ri.cemig.com.br/docs/Cemig-2026-06-30-THtJzCB9.pdf"
+  },
+  {
+   "title": "Cemig — Demonstrações Financeiras Intermediárias 30/06/2026",
+   "url": "https://ri.cemig.com.br/docs/Demonstracoes-Financeiras-Intermediarias-Cemig-2026-06-30-qKk6PbzQ.pdf"
+  },
+  {
+   "title": "Cemig RI — dividendos",
+   "url": "https://ri.cemig.com.br/informacoes-financeiras/dividendos"
+  },
+  {
+   "title": "Aneel — NT 12/2023 RTP Cemig D",
+   "url": "https://www2.aneel.gov.br/aplicacoes/tarifa/arquivo/NT%2012%202023%20RTP%20Cemig.pdf"
+  },
+  {
+   "title": "B3 — proventos e cotações (data/market/CMIG4.json)",
+   "url": "data/market/CMIG4.json"
+  },
+  {
+   "title": "BCB/Contexto do estudo (Selic, Focus, curva DI)",
+   "url": "research/_context.md"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/CMIG4.json"
+  }
+ ],
+ "confidence": "média-baixa — números do 2T26 oficiais, mas o caso depende de três eventos que não verifiquei: renovação de Emborcação/Nova Ponte, parâmetros da RTP de 2028 e agenda política de MG/União (inclusive o resultado da eleição estadual); custo médio da dívida estimado."
+}

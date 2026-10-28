@@ -1,0 +1,258 @@
+{
+ "ticker": "SAPR11",
+ "name": "Sanepar — Companhia de Saneamento do Paraná",
+ "sector": "Utilities / saneamento (água e esgoto em 346 municípios do PR e 1 de SC; estatal, Estado do PR com 60% do capital votante)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 5,
+ "listed_classes": [
+  {
+   "ticker": "SAPR11",
+   "class": "UNIT"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 5695.0
+  },
+  "notes": "Receita: a Sanepar não registra receita de construção na DRE (ROL CVM = release; FY2025 R$ 7.206 mi), então não há ajuste. O precatório da ação de IRPJ (R$ 4,26 bi reconhecidos no 1S25; caixa recebido no 3T25) entrou fora da receita, em 'outras receitas' e no financeiro. DL ajustada = DL CVM R$ 2.587,6 mi (dívida bruta R$ 7.250,0 mi, inclusive arrendamentos R$ 524,5 mi, − caixa R$ 4.662,5 mi) + passivo regulatório do precatório em base econômica R$ 3.108 mi. O passivo contábil é de R$ 4.408,0 mi (R$ 1.128,7 mi circulante + R$ 3.279,3 mi não circulante): 100% do líquido do precatório vai ao consumidor por decisão da Agepar (23/06/2026; recurso negado em 18/08/2026), corrigido pelo WACC regulatório real de 8,08% a.a. (1) Metade (R$ 2.204 mi) vira desconto nas faturas (25% na tarifa mínima). Entra a 66%, porque a provisão não foi dedutível (2T26: IR de R$ 221 mi sobre prejuízo antes de IR) e o faturamento menor reduz o IR: R$ 1.455 mi. (2) A outra metade (R$ 2.204 mi) vira investimento não oneroso, fora da base remunerada. Entra a 75%: 100% se for gasto adicional ao plano, ~50% se só substituir capex do plano (aí a perda é o retorno regulatório): R$ 1.653 mi. A faixa plausível é R$ 2,9–3,7 bi. O passivo fica na DL, e não em other_debt_like, porque o caixa do precatório rende CDI e inflaria o lucro (e o DDM) se ficasse líquido na DL. Assim o motor cobra o custo do passivo, e a receita projetada é a 'cheia', sem o desconto: o desconto é a liquidação desse passivo e deixa a DL total inalterada. Ações: 1.511,2 mi (503,7 mi ON + 1.007,5 mi PN); unit = 1 ON + 4 PN."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.083,
+   0.065,
+   0.065,
+   0.09,
+   0.07
+  ],
+  "ebitda_margin": [
+   0.41,
+   0.41,
+   0.41,
+   0.42,
+   0.42
+  ],
+  "da_pct_revenue": [
+   0.092,
+   0.095,
+   0.098,
+   0.1,
+   0.102
+  ],
+  "capex_pct_revenue": [
+   0.34,
+   0.285,
+   0.245,
+   0.3,
+   0.275
+  ],
+  "nwc_pct_revenue": 0.06,
+  "cost_of_net_debt": [
+   0.103,
+   0.115,
+   0.12,
+   0.125,
+   0.128
+  ],
+  "other_financial": [
+   60,
+   60,
+   60,
+   60,
+   60
+  ],
+  "tax_rate": [
+   0.3,
+   0.27,
+   0.27,
+   0.27,
+   0.27
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.2,
+   0.3,
+   0.3,
+   0.3,
+   0.35
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.115,
+  "roe": 0.13
+ },
+ "wacc": {
+  "kd_pre_tax": 0.13,
+  "target_debt_weight": 0.35
+ },
+ "adjustments": {
+  "other_debt_like": 1077,
+  "non_operating_assets": 0,
+  "minority_value": 0,
+  "notes": "other_debt_like (balanço 2T26) = planos de aposentadoria e saúde pós-emprego R$ 1.172,6 mi (R$ 78,2 mi circulante + R$ 1.094,4 mi não circulante) + provisões para contingências R$ 578,3 mi líquidas de depósitos judiciais R$ 399,4 mi (= R$ 178,9 mi) + derivativos R$ 5,8 mi + dividendos a pagar R$ 1,7 mi − depósitos vinculados a financiamentos R$ 282,5 mi (caixa restrito; não está na DL CVM) = R$ 1.076,5 mi. Não há provento com data-com posterior ao balanço: os JCP de 2025 (R$ 585 mi) foram pagos em 26/06/2026, e o Conselho não declarou JCP do 1S26. O passivo regulatório do precatório está na DL ajustada (overrides). Ativo financeiro contratual (R$ 929 mi) e ativo de contrato (R$ 4,1 bi) são operacionais."
+ },
+ "target_multiples": {
+  "pe": 6.0,
+  "ev_ebitda": 4.8,
+  "pbv": 0.8,
+  "rationale": "multiples_history (5 anos): P/L médio 6,0x (mediana 5,3x; p90 6,5x), EV/EBITDA médio 4,46x (mediana 4,5x; faixa 3,8–5,0x), P/VP médio 0,82x. São múltiplos de estatal com regulação politizada (diferimento da 2ª RTP em 2017, precatório em 2026) e Ke implícito acima de 15%. P/L 6,0x sobre o LPA 2027E (já líquido do custo do passivo regulatório). EV/EBITDA 4,8x 2027E: média histórica + ~0,3x, porque o EV do motor agora inclui previdência/saúde (R$ 1,2 bi) e o passivo regulatório, fora do EV histórico. Pares estatais: Copasa negociava a P/L 5,5–7x e EV/EBITDA 4,4–5,2x antes da privatização (2024–25)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.025,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.02,
+   "narrative": "O 'choque de gestão' do novo governo (Moro, posse em jan/2027) vira contenção tarifária: a Agepar repete o diferimento de 2017 na 4ª RTP de 2029, o desconto do precatório se estende e o Estado pede mais dividendos com o capex de R$ 13 bi mantido."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.015,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.02,
+   "narrative": "Justiça restabelece a divisão 75/25 do precatório (~R$ 1,1 bi de volta), a 4ª RTP reconhece o capex do plano e o choque de gestão corta custos de terceiros e energia."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.025,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.03
+ },
+ "debt_profile": {
+  "gross_debt_mn": 7250,
+  "pct_floating_cdi": 0.22,
+  "avg_cost": "~11,4% a.a. econômico (juros + variação monetária do 2T26 anualizados / dívida bruta); mix: 37% CEF/FGTS TR+6,6–12%, 30% IPCA+3,6–7,9% (debêntures/BNDES), 22% CDI+0–1,9%, 7% arrendamentos (11–14%), 2% TJLP+, 2,5% euro (KfW 1,35%)",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 20,
+  "notes": "Hoje a Sanepar é credora líquida em CDI: caixa de R$ 4,66 bi (quase todo do precatório) contra R$ 1,58 bi de dívida CDI+ → +100 bp ≈ +R$ 31 mi/ano antes de IR (≈ +R$ 20 mi após IR). O efeito se inverte à medida que o caixa do precatório é consumido (descontos nas faturas e investimentos não onerosos, 2026–28) e o plano de R$ 13 bi passa a ser financiado com dívida nova (CDI+1–2% ou FGTS TR+); em 2028–30, com DL ajustada de ~R$ 8–10 bi e ~40% em CDI/IPCA, +100 bp ≈ −R$ 40 a −50 mi após IR. O passivo regulatório é corrigido pelo WACC real de 8,08% + IPCA (~12,5–13% nominal). Custo da DL ajustada na premissa: 10,3% no 2S26 (caixa rende CDI) → 12,8% em 2030 (mais dívida nova; FGTS TR+ e IPCA+ mantêm a média abaixo do CDI)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.085,
+  "ebitda_margin_avg_5y": 0.424,
+  "roe_avg_5y": 0.158,
+  "payout_avg_5y": 0.326,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.115,
+   "ebitda_margin": 0.421,
+   "net_income_mn": -505,
+   "net_debt_ebitda": 1.0
+  },
+  "notes": "Receita CVM 2020–25 +8,5% a.a. (inclui a recomposição do diferimento da 2ª RTP). Margem EBITDA média 42,4% (2021 43,7%, 2022 39,2%, 2023 44,9%, 2024 42,9%, 2025 41,1% CVM, que soma +R$ 531 mi do precatório no 1S25 e PDV/contingências não recorrentes). EBITDA ajustado do 1S26: R$ 1.643 mi, margem 42,7% (2T26: 42,1%; reportado 28,4% pela provisão regulatória de R$ 259,6 mi no operacional). ROE 2021–25 médio 15,8% (2025 inflado pelo precatório). Payout 29,6–39,6% do lucro ajustado (média 32,6%). DL/EBITDA CVM de 1,0x no 2T26 é enganoso: com o passivo regulatório (R$ 4,4 bi) fica em ~2,6x o EBITDA CVM UDM e ~2,2x o EBITDA ajustado. Premissas: receita +8,3% em 2026 (1S26 +9,6%, IRT de 2,50% desde 17/05/2026, volume +3–4%), +6,5% em 2027–28, +9% na 4ª RTP (2029) e +7% em 2030; margem 41–42% (energia +24% e PPPs de esgoto pressionam); capex = plano plurianual (R$ 2,6 / 2,4 / 2,2 / 3,0 / 2,9 bi, sem doações de redes)."
+ },
+ "guidance": "Plano Plurianual de Investimentos 2026–2030 (Fato Relevante de 11/12/2025): R$ 13.077 mi, sendo R$ 2.624 mi em 2026, R$ 2.421 mi em 2027, R$ 2.166 mi em 2028, R$ 2.973 mi em 2029 e R$ 2.893 mi em 2030 (capex regulatório R$ 9,3 bi, parcerias R$ 2,5 bi, capitalizações R$ 1,0 bi). Capex do 1S26: R$ 1.152 mi (+4,8%). Concessões de 343 municípios padronizadas até 06/05/2048. Sem guidance de resultado.",
+ "dividend_policy": "Estatuto: mínimo de 25% do lucro líquido ajustado (art. 202 da Lei 6.404); a política permite dividendo adicional de até 25% do lucro, 'sujeito à saúde financeira e ao interesse público'. JCP semestral (data-com em junho e dezembro, pagamento no ano seguinte); PN recebe 10% a mais que ON. Payout de 2021–25 entre 29,6% e 39,6%; 2025: R$ 585 mi (29,6%), pago em 26/06/2026. Em 24/06/2026 o Conselho não declarou JCP do 1S26, por prudência diante da decisão da Agepar. Premissa: 20% no stub de 2026 (o lucro contábil de 2026 sai deprimido pelo prejuízo do 2T26), 30% em 2027–29 e 35% em 2030.",
+ "election_impact": "Caiu 15,8% em 26/10 (R$ 41,92 → R$ 35,31 na foto das 13h02) e 28/10 opera ~R$ 32,3. Canal macro: menor que nas pares, porque hoje a empresa tem caixa líquido em CDI (o caixa do precatório) e 37% da dívida é FGTS/TR; o choque de juros pesa via prêmio de risco de estatal e custo do capex futuro (R$ 13 bi até 2030, FCF negativo). Canal político: estadual, não federal. O controlador é o Estado do PR, o regulador é a Agepar (estadual), e o governador eleito em 04/10 (Sergio Moro, PL, 50,1% no 1º turno) disse que não há compromisso com privatização e defendeu um 'choque de gestão'. A reeleição de Lula não muda a tarifa nem os contratos. O que de fato mudou o valor em 2026 foi a Agepar destinar 100% do precatório ao consumidor (−R$ 1,1 bi para o acionista em relação à regra 75/25), não a eleição.",
+ "summary": "Estatal de saneamento barata em múltiplos (P/VP ~0,8x, EV/EBITDA ~4,5–5x) com concessões até 2048 e dívida subsidiada, mas a regulação já mostrou que é política: a Agepar destinou 100% do precatório de R$ 4,4 bi ao consumidor, e o IRT de 2026 foi de 2,5%. O valor depende de a 4ª RTP (2029) remunerar o plano de capex de R$ 13 bi a um WACC real de ~8%, financiado em CDI+ a partir de 2027.",
+ "thesis": [
+  "Concessões de 343 municípios padronizadas até 2048 (microrregiões MRAE 1–3); Curitiba é 21,8% da receita, com 99,6% de cobertura de esgoto.",
+  "Operação resiliente: receita +9,6% e EBITDA ajustado de R$ 1.643 mi (margem 42,7%) no 1S26; volume faturado +3–4%; inadimplência baixa (1,9%).",
+  "Dívida barata e longa: 37% FGTS/CEF TR+ até 2046 e 30% IPCA+3,6–7,9%; DL/EBITDA ajustada de ~2,2x mesmo contando o passivo do precatório.",
+  "Preço de estatal: P/VP de 0,88x e EV/EBITDA UDM de ~6x (com o passivo do precatório no EV), perto da média de 5 anos; uma regulação mais racional na 4ª RTP é opcionalidade."
+ ],
+ "risks": [
+  "Regulatório-político: a Agepar mudou a regra do precatório de 75/25 para 100% ao consumidor (23/06/2026), negou o recurso (18/08/2026) e tem histórico de diferimento tarifário (2ª RTP, 2017).",
+  "Controlador estatal: payout, tarifa e capex sujeitos ao ciclo político; o governo eleito (Moro) promete 'choque de gestão' sem privatização.",
+  "Custos: energia +24%, terceiros +19%, PPPs de esgoto e headcount +5% (concurso) no 2T26, contra IRT de 2,5%.",
+  "FCF negativo com capex de R$ 2,2–3,0 bi/ano; o caixa do precatório não é do acionista, e a DL ajustada sobe para ~R$ 9–10 bi até 2030.",
+  "Tratamento fiscal e contábil do desconto e dos investimentos não onerosos ainda incerto; disputa judicial contra a Agepar."
+ ],
+ "catalysts": [
+  "Resultado 3T26 (≈ meados de nov/2026): primeiro trimestre com o desconto de 25% na tarifa mínima",
+  "Ação judicial da Sanepar contra a decisão da Agepar sobre o precatório",
+  "Posse do governador Sergio Moro (01/01/2027) e eventual troca na diretoria/conselho",
+  "IRT 2027 (vigência ~mai/2027) e preparação da 4ª RTP (2029)"
+ ],
+ "key_data": [
+  {
+   "label": "Receita líquida 2T26",
+   "value": "R$ 1.901 mi (+11,5% a/a)",
+   "context": "IRT 2,4993% desde 17/05/2026; RTP 3,7753% de mai/2025"
+  },
+  {
+   "label": "EBITDA ajustado 2T26",
+   "value": "R$ 799,9 mi (margem 42,1%)",
+   "context": "reportado R$ 540,3 mi (28,4%) com provisão regulatória"
+  },
+  {
+   "label": "Lucro 2T26",
+   "value": "−R$ 505,2 mi",
+   "context": "pro forma R$ 447,5 mi; provisão adicional de R$ 952,7 mi"
+  },
+  {
+   "label": "Passivo regulatório (precatório)",
+   "value": "R$ 4.408 mi",
+   "context": "100% ao consumidor: 50% em desconto, 50% em investimento não oneroso"
+  },
+  {
+   "label": "Caixa / dívida bruta jun/26",
+   "value": "R$ 4,66 bi / R$ 7,25 bi",
+   "context": "DL CVM R$ 2,59 bi (1,0x); ajustada ~R$ 6,2 bi"
+  },
+  {
+   "label": "Plano de investimentos 2026–30",
+   "value": "R$ 13,1 bi",
+   "context": "R$ 2,2–3,0 bi/ano; 1S26 R$ 1,15 bi"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Sanepar — Earnings Release 2T26 (13/08/2026)",
+   "url": "https://ri.sanepar.com.br/docs/Release-Sanepar-2026-06-30-fhRTrJgf.pdf"
+  },
+  {
+   "title": "Sanepar — Fato Relevante: Programa de Investimentos 2026–2030 (11/12/2025)",
+   "url": "https://ri.sanepar.com.br/docs/Fato-Relevante-Sanepar-2025-12-11-Gg8LBmcH.pdf"
+  },
+  {
+   "title": "Renova Invest — Sanepar perde recurso na Agepar e precatório vai integralmente ao consumidor",
+   "url": "https://renovainvest.com.br/blog/sanepar-agepar-precatorio/"
+  },
+  {
+   "title": "O Liberal — Sergio Moro é eleito governador do Paraná no 1º turno",
+   "url": "https://www.oliberal.com/politica/sergio-moro-e-eleito-governador-do-parana-no-primeiro-turno-1.1177164"
+  },
+  {
+   "title": "Tribuna PR — Moro defende choque de gestão na Sanepar",
+   "url": "https://www.tribunapr.com.br/noticias/parana/moro-defende-choque-gestao-sanepar/"
+  },
+  {
+   "title": "Visno — Sanepar registra prejuízo de R$ 505 mi no 2T26",
+   "url": "https://visnoinvest.com.br/news/14790/sanepar-sapr4-registra-prejuizo-de-r-505-mi-no-2t26"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/SAPR11.json"
+  }
+ ],
+ "confidence": "baixa — a operação é estável, mas a base contábil está distorcida pelo precatório (passivo de R$ 4,4 bi, com tratamento fiscal e prazo de devolução não confirmados e disputa judicial), e o valor depende de um único driver político: o reconhecimento tarifário do capex pela Agepar."
+}

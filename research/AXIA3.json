@@ -1,0 +1,274 @@
+{
+ "ticker": "AXIA3",
+ "name": "Axia Energia S.A. (antiga Eletrobras)",
+ "sector": "Utilities / geração hidrelétrica (44,4 GW, 81 usinas) e transmissão (74,8 mil km; RAP 26/27 R$ 17,6 bi) — corporation desde 2022",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "AXIA3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 39158.0,
+   "net_debt": 55618.0,
+   "shares_outstanding_mn": 2737.3
+  },
+  "notes": "Base na VISÃO REGULATÓRIA da companhia (mais próxima do caixa: receita de transmissão = RAP, D&A regulatória sobre a base de ativos), e não IFRS: no IFRS a cobrança do ativo de contrato da transmissão (inclusive a RBSE) não passa pelo EBIT nem pela D&A, o que subestimaria o FCFF e esconderia o fim da RBSE em 2028. Receita-base FY2025 = receita líquida regulatória de R$ 39.158 mi (IFRS CVM R$ 41.282 mi inclui R$ 4.800 mi de receita de construção). EBITDA regulatório ajustado FY2025 R$ 23.004 mi (58,7%), com térmicas vendidas em mai e out/2025; 6M26 R$ 15.283 mi sobre receita de R$ 21.625 mi (70,7%; 1T26 sazonalmente forte no MCP). Margem e D&A projetadas incluem a equivalência patrimonial (ISA Energia, Equatorial Maranhão, Jirau, Belo Monte etc.), como no EBITDA ajustado da companhia; o motor tributa essa linha de novo (conservador). net_debt = DL CVM 2T26 R$ 47.221 mi (já com empréstimo compulsório a devolver R$ 1.523 mi + acordos a pagar R$ 712 mi + IFRS-16 R$ 684 mi) + derivativos de hedge líquidos R$ 1.857 mi (a companhia os soma à dívida bruta) − caixa restrito para dívida R$ 941 mi + resgates de PNC pagos/devidos depois do balanço R$ 7.480 mi (≈ 70,8 mi de ações canceladas entre jul e 26/10 a ~R$ 56 ≈ R$ 4,0 bi + 6ª rodada de 59,2 mi a R$ 58,72 = R$ 3,48 bi, data-com 21/10, liquidação 06/11, que não pertence a quem compra em 26/10). Ações: B3 hoje 2.796,5 mi (2.476,9 mi ON + 319,7 mi PNC, já sem as 75,9 mi em tesouraria e as PNC resgatadas até a 5ª rodada) − 59,2 mi da 6ª rodada (preço de resgate acima da cotação, então assumo resgate quase integral) = 2.737,3 mi. AXIA7 (PNC) negocia ~ao preço da ON e é conversível 1:1; por isso listo só AXIA3 para o valor de mercado."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.083,
+   0.06,
+   -0.03,
+   -0.025,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.635,
+   0.655,
+   0.63,
+   0.61,
+   0.615
+  ],
+  "da_pct_revenue": [
+   0.16,
+   0.16,
+   0.162,
+   0.165,
+   0.163
+  ],
+  "capex_pct_revenue": [
+   0.27,
+   0.22,
+   0.215,
+   0.21,
+   0.19
+  ],
+  "nwc_pct_revenue": 0.03,
+  "cost_of_net_debt": [
+   0.133,
+   0.137,
+   0.14,
+   0.14,
+   0.138
+  ],
+  "other_financial": [
+   -6200,
+   -5600,
+   -5300,
+   -5000,
+   -4700
+  ],
+  "tax_rate": [
+   0.12,
+   0.14,
+   0.16,
+   0.18,
+   0.2
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.5,
+   0.75,
+   0.7,
+   0.7,
+   0.7
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.04,
+  "roic": 0.11,
+  "roe": 0.12
+ },
+ "wacc": {
+  "kd_pre_tax": 0.145,
+  "target_debt_weight": 0.42,
+  "notes": "wd = (DL ajustada R$ 55,6 bi + obrigações debt-like R$ 61,4 bi) / (essas + valor de mercado pré-eleição R$ 162 bi) ≈ 0,42. Kd = CDI a termo 2027–30 (~15%) + 0,9 p.p. na parcela CDI (57%), IPCA+5,9% (30%), ponderado ≈ 14,5%."
+ },
+ "adjustments": {
+  "other_debt_like": 61390,
+  "non_operating_assets": 1400,
+  "minority_value": null,
+  "notes": "other_debt_like (CVM 2T26) = obrigações da Lei 14.182/2021 (CDE + revitalização de bacias, condição da privatização; corrigidas por IPCA + juros) R$ 42.959 mi (4.389,5 circulante + 38.569,5 não circulante; a linha não circulante aparece como 'Contratos onerosos' no arquivo padronizado, mas o release confirma que é a obrigação da Lei 14.182) + 70% das provisões para litígios R$ 19.790 mi = R$ 13.853 mi (inclui R$ 10,76 bi de empréstimo compulsório; os 30% de desconto refletem a dedutibilidade fiscal no pagamento (34%), parcialmente compensada pela correção Selic; acordos têm saído com deságio) + UBP a pagar à União R$ 3.272 mi + contratos onerosos R$ 988 mi + benefício pós-emprego R$ 318 mi. Não conto o ativo fiscal diferido de R$ 20,0 bi (prejuízos fiscais reconhecidos no 4T25): ele aparece só como alíquota efetiva baixa (12% → 20%). non_operating_assets = participação de 49% na IE Madeira vendida à ISA Energia com recebimento líquido de R$ 1.167 mi depois do balanço (ainda 'mantido para venda' em 30/06) + Eletronuclear (venda à Âmbar/J&F por R$ 535 mi, assinada em out/25, ainda não concluída) a 50% ≈ R$ 1,4 bi. other_financial = custo contábil das obrigações da Lei 14.182 (encargos CDE −R$ 1.395 mi, correção IPCA −R$ 1.316 mi e bacias −R$ 325 mi no 6M26 ≈ −R$ 6,1 bi/ano, caindo com a amortização e o IPCA menor) + correção Selic do compulsório/litígios (−R$ 0,6 bi/ano, que a companhia exclui do lucro ajustado, mas é custo real) ± outras receitas/despesas financeiras. Os pagamentos de principal dessas obrigações (R$ 3,2 bi no 6M26) e de litígios (R$ 1,5 bi no 6M26) não aparecem no lucro, por isso o payout foi limitado a 70–75% (a política de capital alocável os desconta antes de distribuir). Minoritários desprezíveis (R$ 44 mi no PL)."
+ },
+ "target_multiples": {
+  "pe": 9.0,
+  "ev_ebitda": 6.0,
+  "pbv": 0.8,
+  "rationale": "Histórico próprio curto e distorcido (AXIA3 só existe desde nov/25; P/L CVM 12,6–26,9x e EV/EBITDA CVM 12–26x em 2026 por remensurações e provisões). Pré-eleição (R$ 58, 26/10 abertura), a ação valia ~18x o meu LPA 2027E e ~9x EV/EBITDA regulatório 2027E no conceito de EV TOTAL usado aqui (DL + obrigações da privatização + litígios), o que embute Ke de ~11%. Pares cobertos no estudo: CPLE3 10x / 6,5x, EQTL3 11x / 6,5x. Uso 9x P/L e 6,0x EV/EBITDA porque (i) o EV inclui R$ 61 bi de obrigações que os pares não têm, (ii) a RBSE (~R$ 5,5 bi/ano de RAP) acaba em jun/2028 e o EBITDA 2027E é o pico, e (iii) ROE contábil de 5–7%. P/VP 0,8x ≈ (ROE 7% − 4%)/(25% − 4%) com prêmio por ativos de longa duração."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.01,
+   "narrative": "PLD e preço no ACL caem com sobreoferta e curtailment justo quando 27–43% da energia de 2027–28 está descontratada; governo no 4º mandato pressiona via CDE/modicidade, RBSE e garantias da Eletronuclear/Angra 3."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Preço de energia acima de R$ 220/MWh, descotização completa em 2027 e RAP nova de R$ 2 bi compensam a RBSE; acordos do compulsório com deságio e venda da Eletronuclear concluída."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.025,
+  "ebitda_margin_sd": 0.025,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 72829,
+  "pct_floating_cdi": 0.64,
+  "avg_cost": "CDI − 0,02% a.a. (consolidado, 2T26); 57,3% em CDI + 0,92%, 6,8% a 122% do CDI, 30,0% em IPCA + 5,92%, 3,6% TJLP + 1,98%, 2,2% pré/euro",
+  "avg_maturity_years": 4.5,
+  "next_24m_maturities_mn": 15200,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -260,
+  "notes": "64% da dívida bruta de R$ 72,8 bi em CDI (≈ R$ 46,6 bi) menos caixa de R$ 27 bi (rende CDI) → exposição líquida ~R$ 19,6 bi, mais ~R$ 10,8 bi do compulsório corrigido pela Selic: +100 bp ≈ −R$ 0,3 bi antes de IR, ≈ −R$ 0,26 bi depois de IR (alíquota efetiva ~12–15%), ~3% do lucro ajustado anualizado. A sensibilidade maior é ao IPCA: 30% da dívida e as obrigações da Lei 14.182 (R$ 43 bi) são corrigidas por IPCA (+1 p.p. ≈ −R$ 0,65 bi/ano de despesa), compensadas em parte pela RAP corrigida por IPCA (~R$ 0,17 bi por p.p.). Custo da DL calibrado no 6M26: (encargos R$ 2.855 mi + hedge R$ 2.079 mi + correção de dívida R$ 355 mi − receita financeira R$ 2.131 mi) × 2 / DL média ≈ 13,7% a CDI de ~14,9%; projeção 13,3% (2S26) → 14,0% com o CDI a termo de ~15% em 2027–30."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.073,
+  "ebitda_margin_avg_5y": 0.412,
+  "roe_avg_5y": 0.06,
+  "payout_avg_5y": 0.65,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.097,
+   "ebitda_margin": 0.668,
+   "net_income_mn": 1191,
+   "net_debt_ebitda": 1.7
+  },
+  "notes": "CVM é ruidosa (remensurações da RBSE, provisões do compulsório, venda de térmicas, ativo fiscal diferido de R$ 13,9 bi no 4T25): margem EBITDA CVM 21–65% e ROE 4–9% em 2021–25. Na visão regulatória ajustada: FY2024 R$ 23,5 bi e FY2025 R$ 23,0 bi de EBITDA (58,7%); 6M26 R$ 15,3 bi (70,7%) e LTM R$ 27,4 bi, puxados por descotização (cotas de 2.626 MWm em 2025 → 1.313 em 2026 → zero em 2027), PLD mais alto e equivalência. Premissa: 2S26 a 63,5% (sazonalidade do MCP e 2S25 a 61%), 2027 no pico (65,5%, recursos próprios hídricos +1.189 MWm) e queda para 61–63% em 2028–29 com o fim da RBSE (~R$ 5,5 bi/ano de RAP com margem ~100%) só parcialmente compensado por RAP nova de R$ 2 bi até 2030. ROE projetado ~5–6%, igual ao histórico. Payout 2025 de 186% e programa de 2026 (R$ 11,7 bi em resgates de PNC, ~130% do lucro) foram financiados também por venda de térmicas, IE Madeira e capital de giro; projeto 70–75%."
+ },
+ "guidance": "Sem guidance numérico de resultado. Capital alocável aprovado: até R$ 4,0 bi (1T26) + R$ 3,7 bi (2T26) = R$ 7,7 bi no 1S26; orçamento de 2026 para resgate/conversão de PNC elevado de R$ 7,7 bi para R$ 11,7 bi em 25/09/2026 (não é obrigação). Investimentos de R$ 9,6 bi em 2025 e R$ 4,5 bi no 6M26 (+47%); 288 projetos de transmissão de grande porte com capex de R$ 15,5 bi e RAP adicional de R$ 2 bi em 2026–30; R$ 757 mi de RAP previstos até jun/27. Balanço energético (30/06/26): energia descontratada após hedge de 7–24% em 2026, 27–43% em 2027 e 24–57% em 2028; preço médio de venda R$ 190–210/MWh (2026), 200–230 (2027) e 190–230 (2028).",
+ "dividend_policy": "Mínimo legal/estatutário de 25% do lucro ajustado; metodologia de 'capital alocável' trimestral (FCF após investimentos, serviço da dívida, encargos da privatização e litígios). Em 2026 a remuneração vem sobretudo de resgates de PNC (AXIA7, criadas por bonificação de R$ 30 bi em dez/25, resgatáveis/conversíveis até 2031): seis rodadas, a última de R$ 3,48 bi a R$ 58,72 (data-com 21/10, pagamento 06/11). O CFO disse que, ao preço atual, prefere resgates e manterá o dividendo no mínimo de 25%. FY2025: dividendo de R$ 1,8895/ação (R$ 4,3 bi pagos em dez/25) e payout de 186% no ano. Premissa: 2026 stub = dividendo mínimo sobre o lucro de 2026; 2027–30 = 70–75% do lucro (dividendos + resgates).",
+ "election_impact": "Caiu ~14% em 26/10 (R$ 58,00 → R$ 49,90 às 13h02), menos que o setor (IEEX −21,7%), e voltou a cair em 28/10 (~R$ 48,5). Macro: alavancagem financeira moderada (1,7x DL/EBITDA regulatório), dívida a CDI − 0,02% e +100 bp custam só ~R$ 0,26 bi/ano; a maior parte da queda é prêmio de risco sobre ativo de duração muito longa (concessões hídricas até 2052) e o IPCA mais alto encarece as obrigações da privatização (R$ 43 bi). Político/micro: a União tem ~40% do capital, mas voto limitado a 10%; a conciliação homologada pelo STF em 11/12/2025 (fim da ADI 7.385) deu à União 3 dos 10 assentos no conselho em troca de manter o limite de voto e liberar a Axia de novos aportes em Angra 3. Um 4º mandato de Lula reabre o risco de pressão por canais indiretos: conselho, golden share, Aneel/MME (RBSE, CDE e modicidade tarifária), destino da Eletronuclear/Angra 3 e da venda à Âmbar ainda não concluída. Não vejo reestatização como cenário-base, mas o risco entra no bear (margem −3 p.p., capex +1 p.p.).",
+ "summary": "Maior geradora/transmissora do país, com EBITDA regulatório no pico em 2026–27 (descotização + PLD alto) e programa agressivo de resgate de PNC. Mas o equity fica atrás de R$ 117 bi de passivos (dívida, obrigações da privatização, compulsório) e perde ~R$ 5,5 bi/ano de RAP com o fim da RBSE em 2028. A 25% de Ke o DCF zera; o valor vem de dividendos e múltiplos.",
+ "thesis": [
+  "Descotização: cotas caem de 2.626 MWm (2025) para 1.313 (2026) e zero (2027); recursos hídricos próprios sobem de 15.263 para 16.452 MWm em 2027, vendidos a R$ 190–230/MWh contra R$ ~105/MWh das cotas.",
+  "Transmissão com RAP corrigida por IPCA (R$ 17,6 bi no ciclo 26/27, +6,6%) e R$ 15,5 bi de projetos com R$ 2 bi de RAP nova até 2030.",
+  "Gestão de passivos: estoque do compulsório caiu de R$ 25,9 bi (3T22) para R$ 10,8 bi; DL/EBITDA regulatório 1,7x; custo da dívida CDI − 0,02%.",
+  "Remuneração: R$ 11,7 bi de resgates de PNC em 2026 (~8% do valor de mercado) e PNC remanescentes a resgatar/converter até 2031."
+ ],
+ "risks": [
+  "Fim do componente financeiro da RBSE em jun/2028 (~R$ 5,5 bi/ano de RAP; S&P vê DL/EBITDA subindo para 4,5–5,0x com as obrigações).",
+  "Preço de energia: 27–43% da energia de 2027 e 24–57% de 2028 descontratados; PLD baixo, curtailment e GSF.",
+  "Obrigações da Lei 14.182 (R$ 43 bi, corrigidas por IPCA) e encargos de privatização de R$ 2,3 bi no 2T26 consomem o caixa livre.",
+  "Risco político num 4º mandato: limite de voto da União, golden share, conselho, Eletronuclear/Angra 3 (venda à Âmbar não concluída; ~R$ 23 bi para terminar a obra) e decisões da Aneel sobre RBSE.",
+  "Litígios: provisões de R$ 19,8 bi (compulsório R$ 10,8 bi), corrigidas pela Selic."
+ ],
+ "catalysts": [
+  "Liquidação da 6ª rodada de resgate de PNC (06/11/2026)",
+  "Resultado 3T26 e aprovação do capital alocável do trimestre (≈ início de nov/2026)",
+  "Conclusão da venda da Eletronuclear à Âmbar e decisão do CNPE sobre Angra 3",
+  "Reajuste de RAP ciclo 2027/28 (jun/2027) e fim da RBSE (jun/2028)",
+  "Copom dez/2026"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA regulatório ajustado 2T26",
+   "value": "R$ 6.683 mi (+21,5% a/a)",
+   "context": "6M26 R$ 15.283 mi; IFRS ajustado R$ 6.307 mi"
+  },
+  {
+   "label": "Lucro líquido ajustado 2T26",
+   "value": "R$ 1.608 mi (+9,5%)",
+   "context": "reportado R$ 1.191 mi; 6M26 ajustado R$ 5.315 mi"
+  },
+  {
+   "label": "Dívida líquida 2T26",
+   "value": "R$ 45.461 mi; 1,7x EBITDA regulatório LTM",
+   "context": "custo CDI − 0,02%; prazo 4,5 anos"
+  },
+  {
+   "label": "Obrigações da Lei 14.182 (CDE + bacias)",
+   "value": "R$ 42.959 mi",
+   "context": "custo de ~R$ 6 bi/ano no resultado financeiro; encargos pagos de R$ 2,3 bi no 2T26"
+  },
+  {
+   "label": "Provisão do empréstimo compulsório",
+   "value": "R$ 10,8 bi",
+   "context": "era R$ 25,9 bi no 3T22; total de litígios R$ 19,8 bi"
+  },
+  {
+   "label": "Resgates de PNC em 2026",
+   "value": "orçamento R$ 11,7 bi",
+   "context": "6ª rodada R$ 3,48 bi a R$ 58,72, pagamento 06/11/26"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Axia — Relatório de Resultados 2T26 (05/08/2026)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/AXIA6/46797/"
+  },
+  {
+   "title": "Axia — Relatório de Resultados 4T25 (mar/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/abb77a17-3348-4bc7-849a-154998e06ca3/092713c2-e089-4dfb-86e6-a9c96891da79?origin=2"
+  },
+  {
+   "title": "Investidor10 — 6ª rodada de resgate de PNC, R$ 3,48 bi (20/10/2026)",
+   "url": "https://investidor10.com.br/noticias/axia-axia3-vai-resgatar-mais-r-3-48-bilhoes-em-acoes-preferenciais-123363/"
+  },
+  {
+   "title": "Investidor10 — 5ª rodada, R$ 4 bi; CFO prefere resgates e dividendo mínimo (07/10/2026)",
+   "url": "https://investidor10.com.br/noticias/axia-axia3-vai-resgatar-mais-r-4-bilhoes-em-acoes-preferenciais-123092/"
+  },
+  {
+   "title": "AUVP — orçamento de resgates elevado para R$ 11,7 bi (25/09/2026)",
+   "url": "https://analitica.auvp.com.br/noticias/axia-energia-amplia-orcamento-para-resgate-de-acoes-preferenciais-para-r-117-bilhoes"
+  },
+  {
+   "title": "Suno — RBSE: últimas parcelas de ~R$ 5,5 bi até o ciclo 2027/28",
+   "url": "https://www.suno.com.br/noticias/axia-energia-axia3-cai-decisao-justica-rbse-go/amp/"
+  },
+  {
+   "title": "InvestNews — venda da Eletronuclear à J&F travada (fev/2026)",
+   "url": "https://investnews.com.br/negocios/eletronuclear-venda-travada-jef/amp/"
+  },
+  {
+   "title": "Agência Infra — Eletrobras vende Eletronuclear à J&F (15/10/2025)",
+   "url": "https://agenciainfra.com/blog/eletrobras-vende-sua-participacao-integral-na-eletronuclear-para-a-j-e-f/"
+  },
+  {
+   "title": "BCB/Contexto do estudo (Selic, Focus, curva DI)",
+   "url": "research/_context.md"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/AXIA3.json"
+  }
+ ],
+ "confidence": "baixa — caso depende de poucos drivers grandes e incertos (preço de energia descontratada a partir de 2027, tamanho exato da queda da RBSE em 2028, valor econômico de R$ 61 bi de obrigações e litígios). Ações e caixa dos resgates de PNC depois do balanço estimados pela contagem da B3; status da venda da Eletronuclear não verificado depois de mar/2026."
+}

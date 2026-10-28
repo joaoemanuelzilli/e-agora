@@ -95,6 +95,8 @@ export type Row = {
   scores?: Record<string, number | null>;
   score?: number | null;
   rank?: number;
+  rank_of?: number;
+  headline?: string | null;
 };
 
 export type Overview = {

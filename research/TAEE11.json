@@ -1,0 +1,261 @@
+{
+ "ticker": "TAEE11",
+ "name": "Transmissora Aliança de Energia Elétrica S.A. (Taesa)",
+ "sector": "Utilities / transmissão de energia (44 concessões: holding + investidas integrais; TBE, AIE e ETAU por equivalência)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 3,
+ "listed_classes": [
+  {
+   "ticker": "TAEE11",
+   "class": "UNIT"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 2513.3
+  },
+  "notes": "Base REGULATÓRIA (contabilidade ANEEL, auditada anualmente), não IFRS. No IFRS (CPC 47/ICPC 01) a transmissora registra receita de implementação de infraestrutura com margem, remuneração e correção monetária do ativo de contrato: receita, EBITDA e lucro descolam do caixa (LL IFRS 6M26 R$ 920,8 mi contra R$ 399,4 mi regulatório; receita IFRS 2T26 R$ 1.067,6 mi contra R$ 679,2 mi). A visão regulatória registra a RAP faturada como receita e o investimento como imobilizado depreciado: é a que se aproxima do caixa e a base dos proventos (100% do lucro regulatório). Base FY2025 (release 4T25): receita líquida regulatória R$ 2.513,3 mi; EBITDA R$ 2.104,4 mi (83,7%); LL R$ 1.124,1 mi. TBE, AIE (Aimorés, Paraguaçu, Ivaí) e ETAU não são consolidadas: a equivalência regulatória (R$ 181,3 mi no 6M26) entra em other_financial e o valor das participações em non_operating_assets. A coluna 2026 é o run-rate anualizado do 2S26 (ciclo RAP 2026/27: IGP-M +1,95%, IPCA +4,72%, energizações de Ananaí, Tangará e Saíra); o capex de 2026 inclui o EV de R$ 2.293 mi da compra das 5 transmissoras da Energisa (fechamento suposto no fim de 2026; ANEEL pendente), dividido pela fração do ano (0,504) porque o motor só usa o stub do 2S26. PERPETUIDADE: g 3,0%, ROIC_T 8% e ROE_T 6% calibrados para o vencimento das concessões antigas (TSN e Novatrans em dez/2030; ETEO em 2030; GTESA, PATESA e NTE em 2032; Munirah, STE e ATE em 2034; ATE II em 2035; ATE III em 2036), que somam ~61% da RAP consolidada (R$ 2,05 bi de R$ 3,37 bi no ciclo 26/27). Um fluxo explícito pós-2030 com perda de 65% da receita de cada concessão no vencimento (renovação com RAP só de O&M + remuneração do residual de R$ 3,6 bi, ou relicitação com indenização) dá valor terminal de FCFF ~R$ 9,7 bi a WACC de 17,5%, contra R$ 11,2 bi da fórmula com ROIC 12%; ROIC_T 8% reproduz isso (R$ 9,5 bi). No DDM, ROE_T 6% equivale a exigir reinvestimento de 50% do lucro em novos leilões e reforços para crescer 3% a.a., que é o que a reposição da RAP vencida exige."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.122,
+   0.135,
+   0.052,
+   0.045,
+   0.025
+  ],
+  "ebitda_margin": [
+   0.85,
+   0.855,
+   0.855,
+   0.855,
+   0.85
+  ],
+  "da_pct_revenue": [
+   0.195,
+   0.195,
+   0.195,
+   0.195,
+   0.195
+  ],
+  "capex_pct_revenue": [
+   1.825,
+   0.088,
+   0.062,
+   0.043,
+   0.042
+  ],
+  "nwc_pct_revenue": 0.02,
+  "cost_of_net_debt": [
+   0.123,
+   0.128,
+   0.129,
+   0.127,
+   0.126
+  ],
+  "other_financial": [
+   360,
+   370,
+   385,
+   400,
+   410
+  ],
+  "tax_rate": [
+   0.05,
+   0.06,
+   0.07,
+   0.08,
+   0.08
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   1.0,
+   0.95,
+   0.95,
+   0.95,
+   0.95
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.03,
+  "roic": 0.08,
+  "roe": 0.06
+ },
+ "wacc": {
+  "kd_pre_tax": 0.125,
+  "target_debt_weight": 0.45
+ },
+ "adjustments": {
+  "other_debt_like": 625,
+  "non_operating_assets": 2700,
+  "minority_value": null,
+  "notes": "other_debt_like = JCP do 1T26 a pagar no balanço de 30/06 (R$ 161,1 mi; data-com 11/05, pago 26/08) + proventos do 2T26 declarados em 11/08 (R$ 206,8 mi = R$ 0,60/unit; data-com 14/08, pagamento 26/11, ainda não pagos e fora do fluxo de quem compra hoje) + derivativos passivos (R$ 57,6 mi) + provisões para contingências prováveis (R$ 199,1 mi, quase todas cíveis). non_operating_assets = participações em TBE (49,99%), AIE (50%: Aimorés, Paraguaçu, Ivaí) e ETAU (75,6%), não consolidadas: EBITDA regulatório proporcional ~R$ 0,92 bi/ano (consolidação proporcional 2T26: R$ 806,3 mi − R$ 577,2 mi consolidado = R$ 229 mi/tri) × 7x − dívida líquida proporcional R$ 2,58 bi (R$ 13.002 − R$ 10.423 mi) ≈ R$ 3,85 bi, com desconto de 30% (iliquidez, coerência com Ke 25% e vencimento das concessões antigas da TBE em 2030–2034) ≈ R$ 2,7 bi; valor contábil IFRS das participações R$ 3.276 mi. A equivalência regulatória (não o caixa) entra em other_financial, só nos métodos de lucro; o EBITDA projetado exclui a equivalência, então não há dupla contagem no EV/EBITDA. Dívida líquida-base = CVM 2T26 (R$ 10.371,6 mi; companhia R$ 10.422,7 mi). A dívida das 5 SPEs da Energisa (~R$ 0,75 bi) e o equity (R$ 1,545 bi) entram via capex de 2026 (EV R$ 2.293 mi)."
+ },
+ "target_multiples": {
+  "pe": 8.5,
+  "ev_ebitda": 6.5,
+  "pbv": 1.5,
+  "rationale": "Sobre números regulatórios de 2027E (EBITDA consolidado, sem equivalência; o valor das investidas entra à parte). Mercado: na foto de 26/10 a Taesa negociava a ~12x o LL regulatório de 2025 (R$ 13,9 bi / R$ 1.124 mi; ~13,7x antes da eleição) e ~10x o EBITDA regulatório UDM ex-investidas; o P/L IFRS de 5 anos (multiples_history) é 8,2x, mas o lucro IFRS é inflado pela correção do ativo de contrato. Pares (ALUP11 no estudo: 11x P/L e 7x EV/EBITDA regulatórios). Uso 8,5x e 6,5x, abaixo da Alupar, porque ~37% da RAP consolidada (TSN, Novatrans, ETEO) vence em 2030 com ativos quase depreciados (residual de R$ 1,3 bi para 2030–2032): essa parcela vale ~4 anos de fluxo + residual (~3,8x EBITDA), e o restante ~8,5x → média ponderada ~6,8x. P/L: o lucro de 2027E carrega ~R$ 1,0 bi de EBITDA de concessões que vencem em 2030 com D&A regulatória perto de zero. Múltiplos de mercado embutem Ke de 11–13%, abaixo dos 25% do estudo."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.015,
+   "ebitda_margin_shift": -0.01,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Regra federal das concessões vincendas (ANEEL CP 43/2025) com relicitação e indenização só do residual histórico, IGP-M/IPCA baixos na RAP com CDI >15% até 2030 e compra da Energisa diluindo lucro por anos."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.005,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": -0.005,
+   "narrative": "Prorrogação de TSN/Novatrans com RAP que remunera reforços pelo WACC regulatório, curva devolve o choque e novos leilões/reforços repõem a receita vencida."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.015,
+  "ebitda_margin_sd": 0.01,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 11009,
+  "pct_floating_cdi": 0.43,
+  "avg_cost": "Contratual: IPCA 67,5% (IPCA+4,5% a +7,7%), CDI 29,6% (CDI+0,3% a +1,7%), IGP-M 3%; swaps das 17ª e 18ª emissões (R$ 1,45 bi IPCA → CDI−0,7%/−0,8%) levam a exposição efetiva a ~43% CDI",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 203,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -40,
+  "notes": "Exposição líquida a CDI ~R$ 4,1 bi (CDI contratual R$ 3,25 bi + R$ 1,45 bi swapados − caixa R$ 0,59 bi): +100 bp ≈ −R$ 41 mi antes de IR, ~−R$ 40 mi no lucro (alíquota efetiva baixa por JCP e SUDAM/SUDENE), ~4–5% do lucro regulatório projetado. Se a compra da Energisa (EV R$ 2,3 bi) for financiada em CDI, a sensibilidade sobe para ~−R$ 60 mi a partir de 2027. A parcela IPCA/IGP-M (57%) tem hedge natural na RAP, reajustada todo julho. Custo da DL de 12,3% no 2S26 (IPCA ~4,5% anualizado, CDI ~14%) subindo a 12,8–12,9% em 2027–28 com o CDI a termo de 14,6–15,5% e a dívida da aquisição; o resultado financeiro regulatório do 6M26 foi −R$ 674,8 mi (~13% a.a. sobre a DL, com IPCA de 1,99% e IGP-M de 3,07% só no 2T26)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.054,
+  "ebitda_margin_avg_5y": 0.804,
+  "roe_avg_5y": 0.248,
+  "payout_avg_5y": 0.766,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.093,
+   "ebitda_margin": 0.85,
+   "net_income_mn": 207,
+   "net_debt_ebitda": 4.2
+  },
+  "notes": "Médias de 5 anos são IFRS/CVM (receita +5,4% a.a. 2020–25, margem EBITDA 80%, ROE 25%, payout em caixa 77% do LL IFRS) e servem pouco: a margem IFRS oscila de 60% a 99% com a receita de construção. Regulatório: receita 2025 +7,9% (R$ 2.513 mi), EBITDA +12,5% (R$ 2.104 mi), LL +13,4% (R$ 1.124 mi; 2024 ≈ R$ 991 mi), payout 100% do lucro regulatório. 2T26: receita regulatória R$ 679,2 mi (+9,3%), EBITDA R$ 577,2 mi (85,0%), LL R$ 206,8 mi (−28,5%: IPCA/IGP-M altos na dívida); DL/EBITDA proporcional 4,2x. A projeção leva o LL para R$ 0,8–0,9 bi/ano em 2026–27 (dívida maior com a Energisa e CDI de 14–15%) e de volta a R$ 1,1–1,25 bi em 2029–30 com desalavancagem; margem 85–85,5% (6M26: 85,4%)."
+ },
+ "guidance": "Sem guidance de resultado. RAP total do ciclo 2026/27 (com investidas, proporcional) R$ 4,56 bi, sendo R$ 4,29 bi operacional (Despacho ANEEL 2.268/2026). Greenfield em implantação: Ananaí (RAP R$ 173,3 mi; energização parcial, prazo mar/27), Tangará (R$ 113,5 mi; mar/28), Saíra 2ª fase (R$ 200,8 mi; mar/28), Juruá (R$ 20,5 mi; capex ANEEL R$ 244 mi, eficiência >25%; jun/28); a companhia indica eficiência média de 15% sobre o capex ANEEL e antecipação de 10–25 meses. Reforços: R$ 348,8 mi de capex ANEEL e RAP de R$ 66,1 mi em 5 projetos + R$ 193 mi autorizados em jan/26 (Despacho 200). Aquisição de 100% de 5 transmissoras da Energisa (GO, PA, TO; RAP ~R$ 291 mi; EV R$ 2.293 mi, equity R$ 1.545 mi) assinada em 21/05/2026, aprovada pelo CADE (jun) e pela AGE (14/07); falta a ANEEL.",
+ "dividend_policy": "Pratica 100% do lucro líquido regulatório, trimestralmente, majoritariamente via JCP. Exercício 2025: R$ 1.124,1 mi (R$ 3,26/unit; 100%). 1T26: JCP de R$ 192,6 mi (R$ 0,56/unit; pago 26/08). 2T26: R$ 206,8 mi (R$ 0,60/unit; data-com 14/08, pagamento 26/11). Mínimo estatutário não verificado nesta pesquisa. Premissa: 100% em 2026 e 95% em 2027–30 (alavancagem de ~4,5x DL/EBITDA proporcional após a Energisa).",
+ "election_impact": "Caiu ~10% no dia (R$ 44,75 → R$ 40,24 na foto de 26/10), metade da queda do Ibovespa. O canal é taxa de desconto: a RAP é contratada em leilão e indexada (IGP-M/IPCA), sem risco de demanda, e só ~43% da dívida é CDI após swaps (+100 bp ≈ −R$ 40 mi no lucro). O que muda de fato: (i) o CDI a termo de 14,5–15,5% encarece a dívida da compra da Energisa e mantém o lucro regulatório em ~R$ 0,8–0,9 bi em 2026–27, abaixo de 2025; (ii) o NTN-B mais alto reduz o valor de uma renda indexada de longo prazo; (iii) a regra das concessões vincendas (TSN, Novatrans e ETEO em 2030 = ~37% da RAP consolidada) será definida pelo governo federal (ANEEL CP 43/2025; conclusão prevista para o 2S26) num 4º mandato com foco em modicidade tarifária. O controle (Cemig, estatal mineira, e grupo ISA) não muda com a eleição federal.",
+ "summary": "Transmissora madura e bem operada (disponibilidade ~100%, PV 0,73% da receita), com RAP indexada e payout de 100% do lucro regulatório. O problema é o calendário: ~37% da RAP consolidada vence em 2030 (TSN, Novatrans, ETEO) e mais ~24% até 2036, com ativos quase depreciados, e a compra alavancada da Energisa com CDI de 14–15% comprime o lucro de 2026–27. A 25% de Ke, o fluxo de dividendos não sustenta o preço; a opção está na regra de prorrogação.",
+ "thesis": [
+  "Receita contratada e indexada: RAP consolidada de ~R$ 3,4 bi (ciclo 26/27; R$ 4,56 bi com investidas), 57% IGP-M/IPCA no lado da dívida como hedge parcial; margem EBITDA regulatória de 85%.",
+  "Crescimento contratado no curto prazo: Ananaí, Tangará, Saíra e Juruá (RAP R$ 491 mi, R$ 290 mi já em operação) + Energisa (RAP ~R$ 291 mi) elevam a receita regulatória de R$ 2,5 bi (2025) para ~R$ 3,2 bi em 2027.",
+  "Payout de 100% do lucro regulatório pago trimestralmente; dividend yield de ~6% sobre o preço da foto mesmo com o lucro comprimido por juros."
+ ],
+ "risks": [
+  "Vencimento das concessões antigas: TSN e Novatrans (dez/2030; R$ 1,09 bi de RAP), ETEO (2030), GTESA/PATESA/NTE (2032), Munirah/STE/ATE (2034), ATE II (2035), ATE III (2036); valor residual de só R$ 3,6 bi (R$ 1,3 bi no bloco 2030–32) e regra de indenização/prorrogação ainda em consulta (ANEEL CP 43/2025).",
+  "Alavancagem: DL/EBITDA proporcional de 4,2x no 2T26, subindo com a aquisição da Energisa (EV R$ 2,3 bi); lucro regulatório −16,4% no 6M26 por IPCA/IGP-M na dívida.",
+  "Fechamento da compra da Energisa depende da ANEEL e de credores; se não fechar, a receita de 2027 fica ~8% menor (e a dívida também).",
+  "Investidas (TBE, AIE) com equivalência em queda (−11,3% no 6M26) e concessões antigas da TBE vencendo em 2030–2034."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (novembro/2026; data não verificada)",
+  "Resolução da ANEEL sobre concessões vincendas e indenização (prevista para o 2S26)",
+  "Aprovação da ANEEL e fechamento da compra das 5 transmissoras da Energisa",
+  "Energização final de Ananaí (prazo mar/27), Tangará e Saíra (mar/28)",
+  "Reajuste da RAP do ciclo 2027/28 (jul/2027)"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA regulatório 2T26",
+   "value": "R$ 577,2 mi (+10,6% a/a)",
+   "context": "margem 85,0%; 6M26 R$ 1.139,3 mi"
+  },
+  {
+   "label": "LL regulatório 2T26",
+   "value": "R$ 206,8 mi (−28,5%)",
+   "context": "IFRS: R$ 567,1 mi"
+  },
+  {
+   "label": "DL consolidada jun/26",
+   "value": "R$ 10.422,7 mi",
+   "context": "proporcional R$ 13.002 mi; 4,2x EBITDA"
+  },
+  {
+   "label": "RAP ciclo 2026/27",
+   "value": "R$ 4,56 bi (com investidas)",
+   "context": "~R$ 3,37 bi consolidada; 61% vence entre 2030 e 2036"
+  },
+  {
+   "label": "Compra Energisa (5 SPEs)",
+   "value": "EV R$ 2.293 mi; RAP ~R$ 291 mi",
+   "context": "assinada 21/05/2026; falta ANEEL"
+  },
+  {
+   "label": "Units",
+   "value": "344,5 mi (1 ON + 2 PN)",
+   "context": "1.033,5 mi ações"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Taesa — Divulgação de Resultados 2T26 (11/08/2026)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/TAEE3/47455/"
+  },
+  {
+   "title": "Taesa — Material de resultados 4T25 (números regulatórios de 2025)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/TAEE3/34372"
+  },
+  {
+   "title": "Finance News — Taesa: LL regulatório de R$ 313,1 mi no 4T25 (18/03/2026)",
+   "url": "https://financenews.com.br/2026/03/taesa-reporta-lucro-liquido-regulatorio-de-r-3131-milhoes-no-4t25-alta-de-561-e-anuncia-dividendo/"
+  },
+  {
+   "title": "Cenário Energia — Taesa adquire cinco ativos de transmissão da Energisa por R$ 2,3 bi (21/05/2026)",
+   "url": "https://cenarioenergia.com.br/2026/05/21/taesa-adquire-cinco-ativos-de-transmissao-da-energisa-por-r-23-bi/"
+  },
+  {
+   "title": "Agência Infra — Taesa aprova aquisição de 5 transmissoras da Energisa (15/07/2026)",
+   "url": "https://agenciainfra.com/blog/taesa-aprova-aquisicao-de-5-transmissoras-da-energisa-por-r-15-bi/"
+  },
+  {
+   "title": "Taesa — RI",
+   "url": "https://ri.taesa.com.br/"
+  },
+  {
+   "title": "Contexto do estudo (Selic, Focus, curva DI 26–28/10/2026)",
+   "url": "research/_context.md"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (DFP/ITR) via pipeline do líder",
+   "url": "data/hist/TAEE11.json"
+  }
+ ],
+ "confidence": "média — curto prazo bem ancorado (RAP publicada, release 2T26 oficial, dívida aberta por emissão), mas o valor depende da regra de vencimento de TSN/Novatrans (dez/2030), ainda não definida, e do fechamento da compra da Energisa; datas de vencimento por concessão e custo médio/prazo da dívida não verificados em fonte primária."
+}

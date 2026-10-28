@@ -1,0 +1,268 @@
+{
+ "ticker": "OPCT3",
+ "name": "OceanPact Serviços Marítimos S.A. (combinada com a CBO Holding desde 16/09/2026)",
+ "sector": "Petróleo e gás — apoio marítimo offshore (PSV, AHTS, RSV, OSRV) e serviços submarinos/ambientais, majoritariamente para a Petrobras",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "OPCT3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 4300,
+   "net_debt": 5117,
+   "equity_controlling": 3036,
+   "equity_controlling_2025": 3050
+  },
+  "notes": "BASE PRO FORMA OceanPact + CBO Holding. A incorporação da CBO foi concluída em 16/09/2026 (CADE sem restrições em 27/07; aprovação definitiva em 01/09) com emissão de 274,55 mi ações (troca 1,98057 OPCT por ação CBO); hoje são 474,51 mi ações, das quais 57,86% com ex-acionistas da CBO (Pátria, Vinci, BNDESPar). O balanço CVM de 30/06/2026 em data/hist ainda é só da OceanPact (199,95 mi ações), então somamos a CBO (DF consolidadas do Grupo CBO 2T26): receita 2025 = OPCT R$ 2.134 mi + CBO ~R$ 2.166 mi (US$ 391 mi; 1S25 a 5,70 e 2S25 a ~5,40) = R$ 4.300 mi. DL = OPCT CVM R$ 1.619 mi (bancária R$ 1.459 mi + arrendamentos R$ 146 mi + credor por financiamento R$ 4 mi) + CBO R$ 3.339 mi (empréstimos/FMM/debêntures R$ 3.613 mi + arrendamentos R$ 44 mi − caixa, aplicações e aplicações restritas R$ 300 mi − derivativos ativos R$ 19 mi; US$ 640 mi) + itens tipo dívida R$ 59 mi (multas contratuais a clientes da OPCT R$ 26 mi, contingências da CBO líquidas de depósitos e ativo indenizatório R$ 14 mi, tributos a pagar LP da CBO R$ 19 mi) + R$ 100 mi de remarcação da dívida em dólar (~US$ 660 mi líquidos) de R$ 5,18 para R$ 5,35 = R$ 5.117 mi. PL = 1.035 + 2.000. O direito à Parcela Contingente da UP Offshore (processos Coral/Turquoise contra a Petrobras) foi segregado na Holding UP para os acionistas pré-fusão da OPCT e não pertence a OPCT3."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.225,
+   0.05,
+   0.06,
+   0.05,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.39,
+   0.4,
+   0.405,
+   0.405,
+   0.405
+  ],
+  "da_pct_revenue": [
+   0.19,
+   0.185,
+   0.18,
+   0.178,
+   0.175
+  ],
+  "capex_pct_revenue": [
+   0.26,
+   0.18,
+   0.175,
+   0.175,
+   0.175
+  ],
+  "nwc_pct_revenue": 0.12,
+  "cost_of_net_debt": [
+   0.104,
+   0.108,
+   0.111,
+   0.113,
+   0.115
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.3,
+   0.3,
+   0.3,
+   0.3,
+   0.3
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.25,
+   0.25,
+   0.4,
+   0.5,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.045,
+  "roic": 0.11,
+  "roe": 0.14
+ },
+ "wacc": {
+  "kd_pre_tax": 0.115,
+  "target_debt_weight": 0.5
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": 0,
+  "notes": "Itens tipo dívida e remarcação cambial já em overrides.base.net_debt. Aquisição da Dock Brasil (estaleiro, R$ 119 mi livre de dívida, assinada em 28/07/2026, ainda sujeita a condições) incluída no capex de 2026. Custos da transação com a CBO (R$ 33–39 mi) cobertos pela margem menor de 2026. Sem minoritários relevantes."
+ },
+ "target_multiples": {
+  "pe": 8.0,
+  "ev_ebitda": 4.5,
+  "pbv": 1.2,
+  "rationale": "OPCT standalone (data/market, EV com DL CVM e EBITDA UDM): EV/EBITDA mediana 5a 4,9x (p10 4,2x; p90 6,9x); P/L histórico pouco útil (prejuízos 2021–22, 2024; mediana 32x). Na base combinada pro forma, a R$ 7,91 a companhia vale ~4,0x o EBITDA 2027E (EV R$ 8,8 bi) e ~8x o LL 2027E; a R$ 10,16 (23/10), ~4,6x. Relação de troca da fusão (fev/26, OPCT a R$ 9,56) implicava ~5x EV/EBITDA para a OPCT e ~5,5x para a CBO. Pares globais de OSV (Tidewater, DOF) negociam a ~5–7x no ciclo de alta de diárias. Alvo 4,5x EV/EBITDA e 8x P/L sobre 2027E: abaixo da mediana e dos pares por Ke de 25%, risco de concentração na Petrobras e alavancagem pro forma de ~2,6x; 4,5x implica P/L ~11x, então a perna EV/EBITDA fica acima da de P/L."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.04,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.01,
+   "narrative": "Petrobras corta/adiará capex sob pressão política e de preço do petróleo; PSVs da CBO (backlog −33% no tri) são recontratados a diárias menores e a ocupação volta a ~75%; integração atrasa e DL/EBITDA fica acima de 2,75x (novo covenant)."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.03,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Ciclo de diárias de apoio offshore segue em alta (novas FPSOs da Petrobras, conteúdo local valorizado no 4º mandato), sinergias da fusão e ocupação de 88% elevam a margem para ~43% e a alavancagem cai abaixo de 2x em 2028."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.05,
+  "ebitda_margin_sd": 0.025,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.015
+ },
+ "debt_profile": {
+  "gross_debt_mn": 5786,
+  "pct_floating_cdi": 0.35,
+  "avg_cost": "Pro forma 30/06/2026: CBO US$ 698 mi (FMM ~70%, debêntures 14%, outros 16%; custo médio 5,7% a.a. em dólar; cronograma longo até 2038) ≈ R$ 3,6 bi; OPCT dívida bancária R$ 1,82 bi (debêntures 6ª/7ª em CDI+, NCs; R$ 409 mi em moeda estrangeira) + arrendamentos R$ 0,15 bi. ~60% da dívida bruta é dolarizada (FMM), casada com contratos indexados ao dólar com a Petrobras.",
+  "avg_maturity_years": 5.0,
+  "next_24m_maturities_mn": 1600,
+  "covenant_nd_ebitda": 3.0
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -12,
+  "notes": "Exposição líquida a CDI pro forma ~R$ 1,8 bi (dívida em reais OPCT R$ 1,4 bi + debêntures CBO R$ 0,6 bi + arrendamentos R$ 0,2 bi − caixa em reais R$ 0,4 bi) → +100 bp ≈ −R$ 18 mi pré-IR ≈ −R$ 12 mi de LL (~3% do LL 2027E). O risco maior é câmbio: dívida líquida em dólar ~US$ 660 mi (R$ 3,5 bi): cada +R$ 0,10 no dólar ≈ +R$ 66 mi de DL e perda cambial contábil, compensada em parte por receita/backlog em dólar (CBO US$ 1,09 bi de backlog). Deck: US$/R$ 5,35 (2S26), 5,40 (2027), 5,50 (2028), 5,60 (2029), 5,70 (2030); custo da dívida em dólar em reais = 5,7% + ~1,6% a.a. de desvalorização."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.271,
+  "ebitda_margin_avg_5y": 0.273,
+  "roe_avg_5y": -0.004,
+  "payout_avg_5y": 0.04,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.447,
+   "ebitda_margin": 0.325,
+   "net_income_mn": 56.0,
+   "net_debt_ebitda": 1.91
+  },
+  "notes": "Histórico CVM é só da OceanPact: receita 2020–25 de R$ 643 mi para R$ 2.134 mi (+27% a.a., aquisição da UP em 2021), margem EBITDA média 27% (2025 30,6%; 2T26 32,5% CVM e 37% ajustada ex-parcerias), ROE médio ~0 (prejuízos em 2021–22 e 2024; 2025 10,5%). CBO: receita US$ 391 mi em 2025 e US$ 425 mi UDM; EBITDA ajustado US$ 205 mi (2025) e US$ 215 mi UDM (margem ~50%); DL US$ 640 mi (2,98x). Pro forma 2T26: receita R$ 1.330 mi no tri (OPCT 736 + CBO 594) e EBITDA recorrente ~R$ 540 mi (40%). Premissas: 2026 = run-rate do 2S26 anualizado (R$ 5,27 bi, +22,5% sobre o pro forma 2025, por consolidar a CBO e a ocupação da OPCT subir de 76% para 80–88% conforme o guidance); 5–6% a.a. depois (diárias e câmbio). Margem 39% → 40,5% (sinergias). D&A 19% → 17,5% (CBO deprecia ~26% da receita). Capex 26% em 2026 (conversões de RSVs, Dock Brasil) e 17,5% depois (docagens e manutenção ≈ D&A). DL/EBITDA pro forma ~2,6x (covenant 3,0x até dez/27, 2,75x depois; dividendo acima do mínimo só com ≤2,5x) → payout 25% até 2027 e 40–50% depois."
+ },
+ "guidance": "OceanPact: taxa de ocupação de embarcações 2026 revisada para 78% (fato relevante de 04/03/2026), com 80% no 3T26 e 88% no 4T26. Sem guidance para a combinada. Backlog: OPCT R$ 6,5 bi (jun/26) + CBO US$ 1,09 bi; combinada ~R$ 13,6 bi (anúncio da fusão), majoritariamente Petrobras.",
+ "dividend_policy": "Mínimo estatutário de 25%. Primeiro dividendo desde o IPO: R$ 0,0972/ação (R$ 19,4 mi, todo o lucro de 2025 após compensar prejuízos), pago em 27/04/2026. Escrituras de debêntures: dividendo acima do mínimo só com DL/EBITDA ≤ 2,5x (antes 2,0x). Programa de recompra de até 3% do capital aprovado em 30/03/2026. Acordo de acionistas de 5 anos (Flávio Andrade, Pátria, Vinci, BNDESPar; 67,5% do capital) com lock-up de 9 meses.",
+ "election_impact": "Caiu 22% em 26/10 (R$ 10,16 → R$ 7,91), em linha com o beta e o SMLL (resíduo ~0). O canal juros é pequeno (só ~R$ 1,8 bi de dívida em CDI; FMM em dólar a 5,7%), e o real fraco ajuda a receita dolarizada da CBO, mas aumenta a DL em reais (~R$ 66 mi por R$ 0,10). O risco específico do 4º mandato é a Petrobras: uso político (preço de combustíveis, capex) pode tanto ampliar a demanda por apoio marítimo (mais FPSOs, conteúdo local) quanto pressionar diárias de fornecedores; a OceanPact depende dela para a maior parte do backlog. Aumento de ações (de 200 mi para 474,5 mi) não é diluição de valor: veio com a CBO e sua dívida.",
+ "summary": "A fusão com a CBO criou o maior grupo brasileiro de apoio marítimo (73 embarcações, receita pro forma ~R$ 5,3 bi/ano, EBITDA ~R$ 2,1 bi) com backlog longo na Petrobras, mas também uma DL pro forma de ~R$ 5,1 bi, majoritariamente em dólar. O valor a Ke de 25% depende da manutenção do ciclo de diárias e da desalavancagem; o choque de juros pesa pouco, o câmbio e a Petrobras pesam mais.",
+ "thesis": [
+  "Escala e backlog: frota combinada de 73 embarcações e backlog de ~R$ 13,6 bi, majoritariamente com a Petrobras; diária média da OPCT +27% a/a no 2T26 e EBITDA recorde da CBO (US$ 55,7 mi no 2T26).",
+  "Dívida barata e longa: ~60% da dívida pro forma é FMM em dólar a ~5,7% a.a. com vencimentos até 2038, casada com receita dolarizada.",
+  "Desalavancagem com geração de caixa: DL/EBITDA da OPCT 1,91x (covenant) e da CBO 2,98x (de 3,16x); pro forma ~2,6x, abaixo do novo covenant de 3,0x."
+ ],
+ "risks": [
+  "Concentração na Petrobras (diárias, renovações, uso político da estatal no 4º mandato).",
+  "Recontratação dos PSVs da CBO (backlog de PSV caiu 33% no 2T26) e ociosidade/docagens (ocupação OPCT 76% no 2T26 vs guidance 81%).",
+  "Câmbio: DL em dólar de ~US$ 660 mi; integração da fusão e governança compartilhada entre fundador e fundos (Pátria, Vinci) com saída futura via venda de ações (lock-up de 9 meses).",
+  "Base contábil pro forma estimada (receita 2025 da CBO em reais e DL remarcada ao câmbio de hoje); primeiro balanço combinado só no 3T26/4T26."
+ ],
+ "catalysts": [
+  "Primeiro resultado com a CBO consolidada (3T26, nov/26)",
+  "Ocupação de 88% prevista para o 4T26",
+  "Recontratação dos PSVs da CBO",
+  "Plano de negócios 2027–31 da Petrobras (nov/26)"
+ ],
+ "key_data": [
+  {
+   "label": "Receita líquida 2T26 OPCT / CBO",
+   "value": "R$ 736 mi (+45%) / US$ 117 mi (+31%)",
+   "context": "pro forma R$ 1.330 mi no tri"
+  },
+  {
+   "label": "EBITDA ajustado 2T26 OPCT / CBO",
+   "value": "R$ 256 mi / US$ 55,7 mi",
+   "context": "margens 37% (ex-parcerias) / 47,5%"
+  },
+  {
+   "label": "Lucro líquido 2T26 OPCT / CBO",
+   "value": "R$ 56 mi / US$ 3,8 mi",
+   "context": "CBO 1S26 R$ 51 mi"
+  },
+  {
+   "label": "DL pro forma",
+   "value": "~R$ 5,1 bi",
+   "context": "OPCT R$ 1,6 bi + CBO US$ 640 mi; ~2,6x o EBITDA UDM pro forma"
+  },
+  {
+   "label": "Ações",
+   "value": "474,51 mi",
+   "context": "199,95 mi OPCT + 274,55 mi emitidas à CBO (16/09/2026)"
+  },
+  {
+   "label": "Backlog",
+   "value": "OPCT R$ 6,5 bi + CBO US$ 1,09 bi",
+   "context": "jun/26"
+  },
+  {
+   "label": "Preço 26/10 vs 23/10",
+   "value": "R$ 7,91 / 10,16",
+   "context": "28/10 15h27: R$ 8,82"
+  }
+ ],
+ "sources": [
+  {
+   "title": "OceanPact — Release de resultados 2T26 (06/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/d3d19aad-2471-4309-a7e5-a5dbc02c0a1c/0fc8d41f-1fb8-a0bc-2433-efe908d8171a?origin=2"
+  },
+  {
+   "title": "Grupo CBO — Relatório da Administração e DF 2T26 (US$ e R$)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/d3d19aad-2471-4309-a7e5-a5dbc02c0a1c/28d46ca4-f3d7-41ba-8065-6226d6209a39?origin=2"
+  },
+  {
+   "title": "OceanPact — Fato relevante: acordo de associação com a CBO (27/02/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/d3d19aad-2471-4309-a7e5-a5dbc02c0a1c/33deaab5-8ecb-1f30-fa61-2e3f14911847?origin=2"
+  },
+  {
+   "title": "OceanPact — Fato relevante: closing da combinação com a CBO Holding (16/09/2026)",
+   "url": "https://filemanager-cdn.mziq.com/published/d3d19aad-2471-4309-a7e5-a5dbc02c0a1c/250c669f-061d-4633-a59e-2dcef98672da"
+  },
+  {
+   "title": "OceanPact — Fato relevante: revisão do guidance de ocupação 2026 (04/03/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/d3d19aad-2471-4309-a7e5-a5dbc02c0a1c/4e443ed5-7999-1435-21c7-573040a2d154?origin=2"
+  },
+  {
+   "title": "Renova Invest — OceanPact conclui fusão com CBO (474,51 mi ações)",
+   "url": "https://renovainvest.com.br/?p=106703"
+  },
+  {
+   "title": "CBO — Demonstrações financeiras 2024 (Monitor Mercantil)",
+   "url": "https://publicidadelegal.monitormercantil.com.br/wp-content/uploads/2025/07/CBO-Companhia-Brasileira-de-Offshore-BALANA_O-2024.pdf"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/OPCT3.json, só OceanPact) e B3 (cotação, proventos)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  }
+ ],
+ "confidence": "baixa — a base é pro forma montada à mão (CVM ainda sem a CBO; receita 2025 da CBO em reais estimada e DL remarcada ao câmbio de hoje), a companhia combinada não tem histórico nem guidance, e o valor depende de diárias com um único grande cliente."
+}

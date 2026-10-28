@@ -250,11 +250,11 @@ def test_sem_anos_ou_trimestres_faltantes(t):
 
 
 def test_cobertura_tem_todos_os_artefatos():
-    """As 59 empresas da cobertura têm hist (CVM), mercado, premissas e modelo."""
+    """Todas as empresas da cobertura têm hist (CVM), mercado, premissas e modelo."""
     miss = []
     for t in coverage():
         for p in (HIST / f"{t}.json", MARKET / f"{t}.json", RESEARCH / f"{t}.json", HIST.parent / "model" / f"{t}.json"):
             if not p.exists():
                 miss.append(str(p.relative_to(HIST.parents[1])))
-    assert len(coverage()) == 59, f"cobertura com {len(coverage())} empresas"
+    assert len(coverage()) >= 59, f"cobertura com {len(coverage())} empresas"
     assert not miss, fails(miss)

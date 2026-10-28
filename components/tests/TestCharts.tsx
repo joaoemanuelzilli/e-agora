@@ -234,7 +234,7 @@ export function CrashCharts({ c }: { c: any }) {
       />
       <RangeChart
         title="Retorno esperado em 3 meses pelo modelo de crises"
-        subtitle="15 maiores das 59, compra no preço de hoje; faixa de 80% dominada pela trajetória do mercado"
+        subtitle="15 maiores da cobertura, compra no preço de 26/10; faixa de 80% dominada pela trajetória do mercado"
         rows={rk.map((x: any) => ({ label: x.ticker, lo: x.lo, hi: x.hi, mid: x.exp, note: fin(x.vs_ibov) ? `contra o Ibovespa ${pctS(x.vs_ibov, 1)}` : undefined }))}
         fmt={(v: number) => pctS(v)}
         refValue={0}
@@ -391,7 +391,7 @@ export function SuiteTiles({ s }: { s: any }) {
         items={[
           { label: "Testes", value: t.tests.toLocaleString("pt-BR") },
           { label: "Aprovados", value: t.passed.toLocaleString("pt-BR"), sub: pctU(t.passed / t.tests, 1) },
-          { label: "Falhas", value: t.failed.toLocaleString("pt-BR"), sub: "a maioria em empresas fora das 59" },
+          { label: "Falhas", value: t.failed.toLocaleString("pt-BR"), sub: "a maioria em empresas fora da cobertura" },
           { label: "Build do site", value: s.next_build?.rc === 0 ? "ok" : "falhou", sub: s.next_build?.pages ? `${s.next_build.pages} páginas` : undefined },
         ]}
       />

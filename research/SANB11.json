@@ -1,0 +1,228 @@
+{
+ "ticker": "SANB11",
+ "name": "Banco Santander (Brasil) S.A.",
+ "sector": "Financeiro / Banco múltiplo privado — controlado pelo Banco Santander S.A. (Espanha, ~90%)",
+ "template": "financial",
+ "as_of_quarter": "3T26",
+ "shares_per_unit": 2,
+ "listed_classes": [
+  {
+   "ticker": "SANB11",
+   "class": "UNIT"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "equity_controlling_2025": 95878,
+   "equity_controlling": 99000,
+   "ni_controlling_2025": 15615,
+   "balance_date": "2026-09-30"
+  },
+  "notes": "Base contábil BRGAAP (release gerencial), não IFRS/CVM. Motivo: o PL controlador CVM (IFRS) de R$ 127.275 mi (2T26) inclui ~R$ 28–30 bi de ágio do Banco Real que não existe no BRGAAP; o ROE e o P/VP de mercado do Santander são citados sobre o PL BRGAAP (ROAE 11,9% no 3T26; BTG cita ~1x PL). Usar lucro gerencial sobre o PL IFRS daria ROE de ~9% e uma exigência de reinvestimento (g/ROE) inflada pelo ágio. PL FY2025 = VPA de R$ 25,61/unit (Ativa, conciliado com o release) × 3.743,8 mi units = R$ 95.878 mi; PL 3T26 = R$ 99,0 bi (release, +5,4% a/a). Data-base 30/09/2026: o release do 3T26 saiu hoje (28/10, antes da abertura); o ITR CVM ainda não está em data/hist (que vai até o 2T26), daí balance_date por override. LL 2026E = 9M26 gerencial R$ 9.687 mi (1T 3.788 + 2T 3.014 + 3T 2.885) + 4T26E R$ 2.777 mi = R$ 12.464 mi → ROE de abertura 13,0% × 95.878. Checagem de PL: motor 2026E R$ 100,9 bi vs PL 3T26 99,0 + LL 4T ~2,8 − JCP de out/26 1,5 ≈ R$ 100,3 bi. LL 2025 gerencial R$ 15.615 mi (Ativa/release). Ações: 7.487,5 mi em circulação = 3.743,8 mi units (B3 7.498,5 mi − tesouraria CVM 30/06)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   0.6,
+   0.55,
+   0.55,
+   0.6,
+   0.65
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.13,
+   0.119,
+   0.1275,
+   0.1375,
+   0.145
+  ],
+  "ni_growth": null,
+  "payout": [
+   0.6,
+   0.55,
+   0.55,
+   0.6,
+   0.65
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Banco: sem ponte EV→equity. Minoritários (~R$ 1,8 bi de PL IFRS; ~1,5% do lucro: LTM CVM R$ 229 mi de 15.930; release ~R$ 107–118 mi/tri) já fora do lucro gerencial e do PL usados. A OPA de permuta do controlador NÃO entra no valor (ver dividend_policy e dossiê): o valor justo é o do Santander Brasil sozinho."
+ },
+ "target_multiples": {
+  "pe": 7.0,
+  "ev_ebitda": null,
+  "pbv": 0.85,
+  "rationale": "P/VP 0,85x (sobre o PL BRGAAP 2026E) e P/L 7,0x (sobre o LPA gerencial 2027E). Histórico (data/market, base CVM/IFRS com ágio): P/VP mediana 5 anos 0,93x (mínimo 0,75x), P/L mediana 5 anos 8,3x (p10 7,0x); em base BRGAAP (fator ~1,3x) a mediana de 5 anos equivale a ~1,2x PL. Antes da OPA (30/06/26) a unit negociava ~1,0x o PL BRGAAP com ROAE de ~12–13%; Ativa (04/09/26) via 1,1x VPA 2027E a R$ 30,44 com Ke de 13,9%. Com ROE_T de 15%, g 5% e Ke de mercado ~16–17% pós-choque, Gordon dá ~0,85–0,9x. P/L 7x ≈ 0,85 × VPA 2026E / LPA 2027E (7,1x). Pares: BBDC4 0,9x/6,5x com ROE 16%; ITUB4 1,7x/7,5x com ROE ~22%. Esses múltiplos embutem Ke de 14–17%; a Ke 25% o P/VP justo é 0,5x."
+ },
+ "valuation_weights": {
+  "ddm": 0.6,
+  "pbv": 0.4
+ },
+ "valuation_weights_rationale": "Mesmo critério que o motor aplica aos demais bancos do estudo (SECTOR_WEIGHTS de BBAS3/BBDC4/BRSR6/BPAC11, definidos pelas baterias de teste em data/tests): valor = ROE contra Ke sobre o PL. O P/L sai do blend (redundante com o DDM; distorcido por JCP, créditos fiscais e alíquota negativa como a do 3T26) e fica só na TIR 3 anos.",
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Selic acima de 15% em 2027 aprofunda a margem com mercado negativa (balanço sensível a passivo), NPL 90 passa de 4% e a alíquota volta ao normal: ROE de 9–11% até 2028."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Ciclo vira em 2027 (PDD de pico no 2T26, como diz a Ativa), migração para crédito com garantia estabiliza o spread e o ROE volta a 16–17% em 2029."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "n/a (banco: captação é passivo operacional; ver Basileia/LCR)",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": null,
+  "notes": "Sensibilidade oficial não localizada. O balanço é sensível a passivo: a margem com mercado é negativa e piorou com a Selic alta (−R$ 771 mi 1T26, −R$ 718 mi 2T26, −R$ 895 mi 3T26). A curva de hoje (DI F28 14,5%, F31 15,2%) adia a melhora dessa linha e encarece o crédito ao consumo/PME (NPL 90 3,4%, +0,6 pp a/a; PDD R$ 7,4 bi no 3T26). A alíquota efetiva foi negativa no 3T26 (−11,6%, JCP e créditos fiscais) e sustentou o lucro — benefício não recorrente na escala de 2026. CET1 11,2% (2T26), o mais baixo entre os grandes privados: marcação de títulos com a alta da curva tem pouco espaço."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.034,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.17,
+  "payout_avg_5y": 0.5,
+  "last_quarter": {
+   "period": "3T26",
+   "revenue_yoy": -0.28,
+   "ebitda_margin": null,
+   "net_income_mn": 2885,
+   "net_debt_ebitda": null
+  },
+  "notes": "revenue_cagr_5y = CAGR do PL controlador CVM 2020–25 (3,4% a.a.). ROE CVM/IFRS 2021–25: 14,7/13,2/8,4/11,4/10,4% (média 11,6%, deprimida pelo ágio no PL); ROAE gerencial (BRGAAP) aproximado: ~21% (2021), ~17% (2022), ~12% (2023), ~17% (2024), 16,8% (2025) → média ~17% (2021–23 de memória, não verificados nesta rodada). 2026: 15,7% (1T), 12,3–12,5% (2T), 11,9% (3T). Lucro gerencial 2025 R$ 15,6 bi; 9M26 R$ 9,7 bi (−16% a/a). Payout ~50% (2025: R$ 7,62 bi de JCP/dividendos sobre R$ 15,6 bi = 49%); 2026 já declarado R$ 2,006/unit (jan, abr, jul e out) ≈ R$ 7,5 bi ≈ 60% do LL 2026E. Projeção: LL 2026E R$ 12,5 bi, 2027E R$ 12,0 bi (alíquota normaliza, juros altos), 2030E R$ 17,2 bi; ROE sobre PL médio 12,7% (2026) → 14,2% (2030), terminal 15% — abaixo da média gerencial de ~17%. revenue_yoy do last_quarter = variação a/a do lucro gerencial (−28%)."
+ },
+ "guidance": "Sem guidance numérico. A administração fala em 'recuperação gradual da rentabilidade' e já havia sinalizado que uma recuperação mais consistente fica para o início de 2027. Ativa (04/09/26, antes do 3T26 e da eleição): LL gerencial 2026E R$ 12,8 bi, 2027E R$ 13,4 bi, 2028E R$ 14,8 bi; ROAE 13,0/13,0/13,5%. O 3T26 (R$ 2,885 bi vs consenso Bloomberg de R$ 3,161 bi; lucro antes de impostos ~30% abaixo do BTG) torna essas estimativas otimistas.",
+ "dividend_policy": "Política: payout de 50% a 75% do lucro (piso e teto citados pela Ativa), quase todo em JCP trimestral. 2026 declarado: R$ 0,5359 (data-com 20/01) + 0,5347 (20/04) + 0,5347 (21/07) + 0,4010/unit (20/10, paga em 09/11) — todos com data-com antes de 26/10, fora do fluxo de quem compra hoje; o próximo JCP deve ter data-com em jan/27 (é o stub de 2026 do motor). Premissa: 60% em 2026, 55% em 2027–28 (CET1 de 11,2% e ROE baixo pedem retenção), 60–65% em 2029–30 (terminal: g/ROE = 33% de retenção). OPA de permuta do controlador (fato relevante de 30/07/26): 0,4056 ação do Banco Santander S.A. (via BDR) por unit, prêmio de 15% sobre R$ 25,25; até € 1,908 bi (~R$ 11 bi) pelos ~10% em circulação; sem adesão mínima; a unit continua listada na B3 (ADS podem sair da NYSE); depende de CVM, SEC e assembleia do Santander S.A.; conclusão esperada em 2027. Para quem já tem, é uma opção de trocar o Santander Brasil por SAN; não é dinheiro.",
+ "election_impact": "SANB11 caiu só 3,0% em 26/10 (R$ 27,53 → 26,70), contra −15% do Itaú e −24% do Bradesco PN, porque o preço está ancorado na relação de troca da OPA: 0,4056 ação SAN por unit. O real −9,5% elevou o valor em reais das ações SAN e compensou o choque — na foto, 0,4056 × € 11,15 × ~R$ 6,0/€ ≈ R$ 27, perto da cotação. Fundamentalmente o Santander Brasil é o grande privado mais exposto ao cenário pós-eleição: balanço sensível a passivo (margem com mercado já negativa), foco em consumo/PME com inadimplência subindo e o menor CET1 do grupo. Estimo o lucro 2027E ~10% abaixo da trajetória pré-eleição (Ativa R$ 13,4 bi → R$ 12,0 bi). Em 28/10, com o 3T26 fraco e a ação SAN −5,6% em Madri, a unit caiu ~4,8%.",
+ "summary": "O Santander Brasil está no pior momento de rentabilidade desde 2023 (ROAE 11,9% no 3T26, lucro −28% a/a sustentado por alíquota negativa) e é o grande privado mais exposto a Selic alta por mais tempo. Sozinho, com ROE de 12–15%, vale bem menos que o preço a Ke 25%; o preço de tela não reflete os fundamentos locais, e sim a OPA de permuta do controlador (0,4056 SAN por unit), isto é, ação SAN × câmbio euro/real.",
+ "thesis": [
+  "Franquia grande (carteira de R$ 721 bi, eficiência ~38–39%) com ciclo de PDD possivelmente no pico (R$ 7,65 bi no 2T26 → R$ 7,4 bi no 3T26) e migração para crédito com garantia.",
+  "Payout de 50–75% em JCP: R$ 2,0/unit declarados em 2026, ~60% do lucro.",
+  "Âncora de preço: OPA de permuta a 0,4056 SAN por unit (prêmio de 15% sobre 30/07); o preço passa a seguir SAN × EUR/BRL, não o resultado do Brasil.",
+  "Cada 1 pp de ROE terminal vale ~0,05x PL a Ke 25% (~R$ 5 bi, ~R$ 1,3/unit)."
+ ],
+ "risks": [
+  "Margem com mercado negativa e crescente (−R$ 895 mi no 3T26) com a Selic alta mais longa; balanço sensível a passivo.",
+  "Inadimplência subindo (NPL 90 3,4%, +0,6 pp a/a; formação de NPL R$ 7,2 bi) e alíquota negativa do 3T26 que não se repete.",
+  "Capital: CET1 de 11,2% (2T26), o mais baixo dos grandes privados → payout pode ir ao piso de 50%.",
+  "OPA: a unit passa a carregar o risco de SAN e do euro/real; se a oferta atrasar ou falhar, o preço volta a refletir o standalone (ROE ~12%)."
+ ],
+ "catalysts": [
+  "Edital e registro da OPA de permuta na CVM/SEC (BDR do Santander S.A.) e assembleia do Santander S.A.",
+  "JCP do 1T27 (data-com esperada em jan/27).",
+  "4T26 em fev/27: sinal de virada do ciclo de crédito e da margem com mercado."
+ ],
+ "key_data": [
+  {
+   "label": "Lucro gerencial 3T26",
+   "value": "R$ 2.885 mi (−28% a/a; −4,3% t/t)",
+   "context": "Consenso R$ 3.161 mi; 9M26 R$ 9,7 bi (−16%)"
+  },
+  {
+   "label": "ROAE 3T26",
+   "value": "11,9%",
+   "context": "2T26 12,3–12,5%; 3T25 17,5%"
+  },
+  {
+   "label": "PDD / NPL 90 3T26",
+   "value": "R$ 7,4 bi (+14,3% a/a) / 3,4%",
+   "context": "Carteira R$ 721 bi (+4,7%)"
+  },
+  {
+   "label": "Margem financeira 3T26",
+   "value": "R$ 14,96 bi (−1,6% a/a)",
+   "context": "Clientes R$ 15,9 bi (−4,2%); mercado −R$ 895 mi"
+  },
+  {
+   "label": "PL BRGAAP 3T26 / CET1 2T26",
+   "value": "R$ 99,0 bi / 11,2%",
+   "context": "PL IFRS CVM 2T26 R$ 127,3 bi (inclui ágio)"
+  },
+  {
+   "label": "OPA de permuta (30/07/26)",
+   "value": "0,4056 SAN por unit",
+   "context": "≈ R$ 27 na foto de 26/10 (SAN € 11,15; EUR/BRL ~6,0)"
+  },
+  {
+   "label": "Preço / P/VP BRGAAP",
+   "value": "R$ 26,70 / ~1,0x",
+   "context": "Sexta R$ 27,53; 28/10 R$ 24,63 após o 3T26"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Seu Dinheiro — Santander frustra no 3T26: lucro tomba 28% e ROE cai a 11,9% (28/10/2026)",
+   "url": "https://www.seudinheiro.com/2026/empresas/santander-sanb11-lucro-roe-rentabilidade-3t26-veja-os-destaques-do-balanco-miql/"
+  },
+  {
+   "title": "Money Times — Santander tem lucro de R$ 2,9 bi no 3T26; ROAE 11,9%",
+   "url": "https://www.moneytimes.com.br/santander-sanb11-lucro-3t26-acima-abaixo-do-esperado-roae-miql/"
+  },
+  {
+   "title": "Money Times — Santander cai após balanço fraco; o que dizem Itaú BBA, BTG e Safra",
+   "url": "https://www.moneytimes.com.br/santander-sanb11-cai-mais-de-4-apos-balanco-fraco-veja-o-que-dizem-itau-bba-btg-e-safra-miql/"
+  },
+  {
+   "title": "Suno — Santander Brasil vê lucro cair 28% (PL R$ 99 bi; 9M26 R$ 9,7 bi)",
+   "url": "https://www.suno.com.br/noticias/santander-brasil-tem-lucro-liquido-recorrente-queda-3t26-go/"
+  },
+  {
+   "title": "Ativa Investimentos — Santander Brasil: retomada de cobertura (04/09/2026; 2T26, VPA, payout, CET1)",
+   "url": "https://acionista.com.br/wp-content/uploads/2026/09/SANB11-Retomada-de-Cobertura_compressed.pdf"
+  },
+  {
+   "title": "Seu Dinheiro — Grupo espanhol lança oferta de R$ 11 bilhões pelas ações dos minoritários (OPA de permuta)",
+   "url": "https://www.seudinheiro.com/2026/empresas/santander-brasil-sanb11-vai-sair-da-b3-grupo-espanhol-lanca-oferta-de-r-11-bilhoes-pelas-acoes-dos-minoritarios-no-brasil-veja-se-vale-a-pena-a-troca-miql/"
+  },
+  {
+   "title": "Times Brasil — Santander avança na troca de ações de minoritários (protocolos CVM/B3/SEC)",
+   "url": "https://timesbrasil.com.br/empresas-e-negocios/santander-avanca-na-troca-de-acoes-de-minoritarios/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/SANB11.json, até 2T26)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação (API oficial), foto de 26/10/2026 13h02",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/SANB11"
+  }
+ ],
+ "confidence": "baixa-média — 3T26 só por imprensa (release do dia, sem DFs/CET1 do trimestre); PL FY2025 BRGAAP derivado do VPA da Ativa; o preço de tela é governado pela OPA (SAN × câmbio), então o valor justo standalone pouco diz sobre o preço no curto prazo."
+}

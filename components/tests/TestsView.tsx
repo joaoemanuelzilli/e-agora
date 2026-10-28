@@ -124,6 +124,7 @@ function Decisions({ data }: { data: any }) {
     ["Escore multifator", "Momentum de 12 meses entrou com 10%; valor e qualidade cederam 5 p.p. cada. Pesos otimizados não se sustentaram fora da amostra."],
     ["Seleção", `${(data.opportunities || []).join(", ")}.${dropped.length ? ` Saíram ${dropped.map((d) => d.ticker).join(" e ")}: chance de o valor justo superar o preço abaixo de 45%.` : ""}`],
     ["Código e dados", "Corrigidos: escala das ações da CVM, ano reapresentado zerado, 4º trimestre com bases misturadas, TIR sem raiz, holdings fora do Ke escolhido e preços das controladas fixados na foto das 13h02."],
+    ["Ampliação (28/10)", "63 empresas novas (todas as do universo com liquidez de R$ 10 mi/dia ou mais), feitas por 20 analistas sob um checklist com as lições da revisão, sem segunda revisão independente. A busca na web esgotou no meio do trabalho, então parte dos dados ficou só com documentos oficiais; cada dossiê lista o que não foi verificado."],
   ];
   return (
     <div className="panel divide-y divide-hairline">

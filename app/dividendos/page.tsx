@@ -12,7 +12,7 @@ export default function Page() {
       <header>
         <h1 className="h1">Mapa de dividendos</h1>
         <p className="mt-2 max-w-[72ch] text-[15px] text-ink-2">
-          Quem paga, quanto, em que meses e o que já está aprovado para cair, nas 59 empresas do estudo. Histórico oficial da B3 desde 2016; yields recalculados ao preço ao vivo.
+          Quem paga, quanto, em que meses e o que já está aprovado para cair, em todas as empresas do estudo. Histórico oficial da B3 desde 2016; yields recalculados ao preço ao vivo.
         </p>
       </header>
       <DividendMap rows={ov.companies} data={data} opps={ov.opportunities} />

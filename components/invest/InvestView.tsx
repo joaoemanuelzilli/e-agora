@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useLiveRows, type LiveRow } from "@/components/Dashboard";
 import { EntryLadder } from "@/components/charts/EntryLadder";
 import { brl, num, pct, signClass } from "@/lib/format";
-import { ddmPerShare, fairValue, irrImplied } from "@/lib/valuation";
+import { ceilingPrice, irrImplied } from "@/lib/valuation";
 import type { Row } from "@/lib/types";
 
 export type Monitor = { kpi: string; threshold: string; next?: string };
@@ -25,15 +25,8 @@ const STUDY_SCHEME = { id: "estudo" as Scheme, label: "Carteira do estudo", note
 const up2 = (v: number) => Math.ceil(v * 100 - 1e-6) / 100;
 const down2 = (v: number) => Math.floor(v * 100 + 1e-6) / 100;
 
-/** Preço máximo para render `ke`: o menor entre o preço com TIR de dono = ke e o valor justo calculado com esse ke. */
 function priceAt(r: LiveRow, ke: number): number | null {
-  const e = r.engine;
-  if (!e || e.template === "holding") return null;
-  const d = ddmPerShare(e, ke);
-  if (d === null || !Number.isFinite(d) || d <= 0) return null;
-  const ddm = d * (e.per_unit || 1);
-  const f = fairValue(e, ke);
-  return f !== null && f > 0 ? Math.min(ddm, f) : ddm;
+  return r.engine?.template === "holding" ? null : ceilingPrice(r.engine, ke);
 }
 
 // Mesmos filtros da seleção de oportunidades (pipeline/build.py), para avisar quando o preço está bom mas o risco não.
@@ -67,7 +60,7 @@ function capWeights(raw: Record<string, number>, cap: number): Record<string, nu
   return w;
 }
 
-export function InvestView({ rows, opps, monitors, portfolio }: { rows: Row[]; opps: string[]; monitors: Record<string, Monitor[]>; portfolio?: StudyPortfolio | null }) {
+export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { rows: Row[]; opps: string[]; monitors: Record<string, Monitor[]>; portfolio?: StudyPortfolio | null; reports?: string[] }) {
   const sleeve = useMemo(() => Object.fromEntries((portfolio?.sleeve || []).map((x) => [x.ticker, x.w])), [portfolio]);
   const SCHEMES = portfolio?.sleeve?.length ? [STUDY_SCHEME, ...BASE_SCHEMES] : BASE_SCHEMES;
   const [capital, setCapital] = useState(0);
@@ -331,7 +324,7 @@ export function InvestView({ rows, opps, monitors, portfolio }: { rows: Row[]; o
                   <tr key={`${o.x.r.ticker}-${li}`}>
                     <td className="freeze-col">
                       {li === 0 ? (
-                        <Link href={opps.includes(o.x.r.ticker) ? `/relatorio/${o.x.r.ticker}` : `/empresa/${o.x.r.ticker}`} className="font-semibold hover:text-accent">
+                        <Link href={reports.includes(o.x.r.ticker) ? `/relatorio/${o.x.r.ticker}` : `/empresa/${o.x.r.ticker}`} className="font-semibold hover:text-accent">
                           {o.x.r.ticker}
                         </Link>
                       ) : (
@@ -418,7 +411,7 @@ export function InvestView({ rows, opps, monitors, portfolio }: { rows: Row[]; o
 
       <section className="panel sticky-host">
         <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-hairline px-4 py-3">
-          <h2 className="h2">Preço-teto das 59</h2>
+          <h2 className="h2">Preço-teto de todas as {all.length}</h2>
           <span className="text-[12px] text-muted">Marque para incluir na calculadora. Ordenado pela distância até o preço-teto.</span>
         </div>
         <div className="freeze-wrap">

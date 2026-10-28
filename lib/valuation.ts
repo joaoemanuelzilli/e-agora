@@ -164,3 +164,16 @@ export function live(e: Engine | null, price: number | null, ke: number, mcQ?: n
   const pe = e?.eps && fin(price) && e.eps[1] > 0 ? price / unit / e.eps[1] : null;
   return { price, fair, upside, irr, irr3, prob, dy, pe };
 }
+
+
+/** Preço máximo para render `ke`: o menor entre o preço com TIR de dono = ke e o valor justo nesse ke (por unidade negociada).
+ *  Holding: soma das partes no ke. */
+export function ceilingPrice(e: Engine | null, ke: number): number | null {
+  if (!e) return null;
+  if (e.template === "holding") return fairValue(e, ke);
+  const d = ddmPerShare(e, ke);
+  if (d === null || !fin(d) || d <= 0) return null;
+  const ddm = d * (e.per_unit || 1);
+  const f = fairValue(e, ke);
+  return f !== null && f > 0 ? Math.min(ddm, f) : ddm;
+}

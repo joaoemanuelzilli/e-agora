@@ -236,7 +236,7 @@ def main():
     fl = [r for key in results for r in (results[key]["rows"] or []) if r["status"] == "failed"]
     f_cov = sum(1 for r in fl if ticker_of(r["name"]) in COV)
     f_out = sum(1 for r in fl if ticker_of(r["name"]) and ticker_of(r["name"]) not in COV)
-    W(f"Das {len(fl)} falhas de teste, **{f_cov} são de empresas da cobertura (59)**, {f_out} de outras empresas com dados em `data/hist` ou `data/market` "
+    W(f"Das {len(fl)} falhas de teste, **{f_cov} são de empresas da cobertura**, {f_out} de outras empresas com dados em `data/hist` ou `data/market` "
       f"e {pl(len(fl) - f_cov - f_out, 'é verificação global', 'são verificações globais')}.")
     par = results["paridade"]["rows"] or []
 
@@ -268,7 +268,7 @@ def main():
         motivo = (RAW / "node_routes.log").read_text(errors="replace").strip()[:300] if (RAW / "node_routes.log").exists() else ""
         W(f"**Rotas não testadas** (código {a.routes_rc}): {motivo}")
         W("")
-    W(f"`next build`: {bstat}{pages}. Rotas: `next start -p 3300` com as 4 páginas gerais, as 59 páginas `/empresa/{{T}}`, "
+    W(f"`next build`: {bstat}{pages}. Rotas: `next start -p 3300` com as 4 páginas gerais, as páginas `/empresa/{{T}}` da cobertura, "
       f"os {len(ov.get('opportunities') or [])} relatórios `/relatorio/{{T}}`, `/api/quotes?t=RENT3` e `/api/market`; o servidor é encerrado ao fim pela porta 3300.")
     W("")
     # ---- bugs
@@ -343,7 +343,7 @@ def main():
     W("## O que é testado")
     W("")
     W("1. **Paridade TS × Python** (`tests/engine_parity.test.mjs`, motor transpilado em memória com o TypeScript local, sem tocar em `lib/`): "
-      "`fairValue`, `irrImplied`, `irr3y` e o upside do painel contra o `overview.json` (Ke 25%, preço = `price_ref`) nas 59 empresas; `fairValue` em Ke 20% e 30% "
+      "`fairValue`, `irrImplied`, `irr3y` e o upside do painel contra o `overview.json` (Ke 25%, preço = `price_ref`) em todas as empresas da cobertura; `fairValue` em Ke 20% e 30% "
       "contra `pipeline/model.py` recalculado (`tests/pyref.py`, com `EAGORA_SNAPSHOT=1`, controladas das holdings reavaliadas no mesmo Ke). Coerência interna: TIR no preço do DDM "
       "devolve 25%, o valor justo não cresce com o Ke, `probAbove` é monotônica e as probabilidades dos quantis ficam a até 5 p.p. do Monte Carlo.")
     W("2. **CVM** (`tests/test_cvm_integrity.py`, 141 arquivos): ativo = passivo + PL (1%, também na conta 1 × conta 2 brutas), Σ 4 trimestres = LTM (1% + R$ 1 mi), "

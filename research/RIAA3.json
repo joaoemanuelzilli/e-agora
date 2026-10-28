@@ -1,0 +1,293 @@
+{
+ "ticker": "RIAA3",
+ "name": "Guararapes Confecções S.A. (Riachuelo)",
+ "sector": "Varejo / moda de massa verticalizada (fábricas Guararapes) + Midway (financeira: cartões e empréstimo pessoal)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "RIAA3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 10380
+  },
+  "notes": "Receita-base 2025 ex-Midway Mall: o shopping (vendido em 18/12/2025 por R$ 1,61 bi à Capitânia; liquidação integral antecipada para 29/12/2025) gerava ~R$ 29–31 mi de receita por trimestre (diferença entre a receita CVM e a base comparável do release: 2T25 2.635,4 vs ~2.605; 1T25 2.205,0 vs ~2.176). Receita CVM 2025 de R$ 10.497,0 mi − ~R$ 117 mi do shopping = R$ 10.380 mi (estimativa própria), base sobre a qual o crescimento de 2026 é medido (1S26 +4,9% comparável). O EBITDA CVM de 2025 (R$ 3.134 mi) e o LTM (R$ 3.178 mi) incluem o ganho não recorrente de R$ 1.324,7 mi na venda do shopping (3.04.04) e ~R$ 105 mi/ano de EBITDA do próprio shopping; EBITDA IFRS-16 recorrente ex-shopping: 2025 ≈ R$ 1.64 bi (15,8%), LTM 2T26 ≈ R$ 1.72 bi (16,2%), 2S25 ≈ R$ 995 mi (17,8%). O P/L LTM e o EV/EBITDA LTM impressos pelo motor usam a base CVM com o ganho e ficam artificialmente baixos. DL-base (CVM 30/06/26) = dívida 2.432,2 + arrendamentos 1.241,3 − caixa e aplicações 1.136,5 = R$ 2.537,0 mi, já depois do pagamento do JCP de 2025 (R$ 412 mi com IRRF no 1S26). Ações: 502,61 mi (B3, inclui exercícios de opções depois de jun/26; tesouraria de 2.560 ações)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.05,
+   0.06,
+   0.07,
+   0.07,
+   0.065
+  ],
+  "ebitda_margin": [
+   0.185,
+   0.17,
+   0.173,
+   0.176,
+   0.178
+  ],
+  "da_pct_revenue": [
+   0.075,
+   0.075,
+   0.075,
+   0.074,
+   0.074
+  ],
+  "capex_pct_revenue": [
+   0.09,
+   0.088,
+   0.085,
+   0.083,
+   0.082
+  ],
+  "nwc_pct_revenue": 0.33,
+  "cost_of_net_debt": [
+   0.14,
+   0.145,
+   0.145,
+   0.145,
+   0.14
+  ],
+  "other_financial": [
+   -50,
+   -55,
+   -55,
+   -60,
+   -60
+  ],
+  "tax_rate": [
+   0.15,
+   0.18,
+   0.2,
+   0.22,
+   0.22
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.12,
+   0.4,
+   0.45,
+   0.5,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.13,
+  "roe": 0.14
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.3
+ },
+ "adjustments": {
+  "other_debt_like": 319,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = R$ 319 mi: (a) JCP a pagar no BPP de 30/06/26 (R$ 124,0 mi: JCP do 1T26, data-com 06/04/26; complementar, data-com 13/05/26, pagamento 28/12/26; e 2T26, data-com 30/06/26 — todos com data-com antes de hoje, o caixa ainda está na DL-base); (b) JCP do 3T26 (R$ 0,0597/ação ≈ R$ 30,0 mi, data-com 30/09/26), declarado depois do balanço e que não é do comprador de hoje (o payout de 2026 foi reduzido para que o stub de dividendos do motor ≈ só o JCP do 4T26); (c) provisões para riscos trabalhistas, fiscais e cíveis prováveis de R$ 249,6 mi × (1 − 34%) = R$ 165 mi (depósitos judiciais não abertos no BPA, não abatidos — conservador). FUNDING DA MIDWAY: a carteira de crédito (R$ 6,2 bi até 360 dias; contas a receber de R$ 5.335 mi no BPA, líquidas de PDD) é capital de giro (nwc_pct_revenue 33%); a PDD (R$ 853 mi em 2025) está no EBITDA; o funding fica na DL — debêntures GUAR17 (R$ 1,45 bi, DI+0,95%) e empréstimos de R$ 943 mi (inclui CDBs da Midway a 102–109% do CDI e linhas bancárias, composição não aberta no release) — e seu custo no resultado financeiro (custo da DL). Não separamos a financeira num SOTP: a dívida corporativa e a da Midway são geridas juntas e o release só divulga a DL consolidada. Obrigações com administradoras de cartões (R$ 2.754 mi; repasse a lojistas de compras com o cartão bandeirado) tratadas como capital de giro, contrapartida dos recebíveis (a Fitch as soma na dívida ajustada — ver risks). Ativo fiscal diferido de R$ 1.142 mi não somado (boa parte é diferença temporária de PDD). Risco sacado (Fornecedores – Antecipação, R$ 49 mi) tratado como capital de giro."
+ },
+ "target_multiples": {
+  "pe": 8.0,
+  "ev_ebitda": 4.0,
+  "pbv": 1.0,
+  "rationale": "P/L 8x sobre o LPA 2027E: entre C&A (7x) e Renner (9x) no estudo; o ROE da Riachuelo (~11–12%) é menor que o da Renner (14–18%) por causa do capital alocado à Midway. Pré-eleição (R$ 11,55 × 502,6 mi = R$ 5,8 bi) o papel negociava a ~10x o lucro recorrente LTM (~R$ 570 mi: 2S25 ajustado ~R$ 396 mi + 1S26 R$ 173 mi) e ~8x um lucro 2027E de consenso de ~R$ 0,7 bi (estimativa nossa a partir dos alvos). EV/EBITDA IFRS-16 de 4,0x sobre o EBITDA 2027E, abaixo do nível pré-eleição (valor de mercado R$ 5,8 bi + DL c/ arrendamentos R$ 2,54 bi + JCP a pagar = R$ 8,5 bi / EBITDA recorrente LTM R$ 1,72 bi = 4,9x; ~4,3x sobre o nosso EBITDA 2027E de R$ 1,96 bi) e coerente com o P/L de 8x (4,0x implica ~9x o lucro 2027E, porque a conversão EBITDA→lucro é baixa: D&A de 7,5% e juros sobre a dívida que financia a Midway); C&A 3,8x e Renner 5,0x no estudo. multiples_history vazio no pipeline (ticker novo desde fev/26; o histórico de GUAR3 não foi carregado). Referências pré-eleição: XP (19/10/26) Compra, alvo R$ 14; Safra (mar/26) alvo R$ 13. Múltiplos de mercado embutem Ke de ~13–15%, bem abaixo dos 25% do estudo. P/VP 1,0x é referência."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.03,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Ciclo de crédito vira: inadimplência >90 dias da Midway sobe de 18,9% para 22–24% (patamar de 2023), funding a CDI de 15%+ comprime o spread, SSS de vestuário vai a ~0% e o câmbio devolve parte dos ganhos de margem bruta; margem EBITDA volta a ~14–15%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Renda da classe C/D no Nordeste (isenção de IR até R$ 5 mil, salário mínimo, Bolsa Família) sustenta SSS de 6–8%, a margem bruta de vestuário segue subindo (12 trimestres seguidos) e a Midway cresce 10%+ com perdas estáveis; margem EBITDA a ~19% em 2030."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.03,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.006
+ },
+ "debt_profile": {
+  "gross_debt_mn": 2432.2,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "GUAR17 (7ª emissão, nov/25, R$ 1,45 bi) a DI+0,95%; CDBs da Midway a 102–109% do CDI; custo médio consolidado estimado em CDI+~1,0%",
+  "avg_maturity_years": 1.6,
+  "next_24m_maturities_mn": 1398,
+  "covenant_nd_ebitda": null,
+  "notes": "Dívida CVM 30/06/26: circulante R$ 672,6 mi (empréstimos 631,5 + debêntures 41,1) e não circulante R$ 1.759,5 mi (debêntures 1.447,7 + empréstimos 311,9). GUAR17 amortiza 50% em 15/10/2027 e 50% em out/2028 (agregador Mais Retorno, não o prospecto); próximos 24 meses ≈ 672,6 + 725 = R$ 1,40 bi e prazo médio ~1,6 ano são cálculos próprios. Arrendamentos IFRS-16 de R$ 1.241,3 mi (260,2 CP + 981,1 LP). Caixa e aplicações R$ 1.136,5 mi. DL ex-arrendamentos R$ 1.296 mi (0,7x EBITDA pela empresa; R$ 943 mi em base comparável ex-efeito da antecipação do JCP). Rating Fitch A+(bra) na 7ª emissão (out/25); a Fitch projetava DL ajustada/EBITDAR de 2,5x no fim de 2025, somando aluguéis e valores a repassar às administradoras de cartões. Covenants não verificados."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -12,
+  "notes": "Dívida 100% CDI (R$ 2,43 bi) contra caixa também pós-fixado (R$ 1,14 bi): +1 p.p. de CDI ≈ −R$ 13 mi antes de IR, ≈ −R$ 11–12 mi no lucro (cálculo próprio). O canal maior é indireto: a carteira da Midway (R$ 6,2 bi, cartões e empréstimo pessoal com taxas prefixadas) é financiada a CDI e reprecifica mais rápido que a carteira; e a inadimplência >90 dias (18,9% no 2T26, +1,5 p.p. a/a) reage a juros e endividamento das famílias. Juros de arrendamento (~R$ 120–145 mi/ano) são contratuais."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.109,
+  "ebitda_margin_avg_5y": 0.136,
+  "roe_avg_5y": 0.046,
+  "payout_avg_5y": 0.6,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.033,
+   "ebitda_margin": 0.171,
+   "net_income_mn": 167.9,
+   "net_debt_ebitda": 1.47
+  },
+  "notes": "CAGR 2020–25 de 10,9% parte da base da pandemia; 2019–25 = 5,1% a.a.; 3 anos (2022–25) = 7,5% a.a. Projetamos +5,0% em 2026 (1S26 +4,9% comparável; 2T26 +3,3% com vestuário +8,9% e SSS de vestuário +7,8%; 2S26 ~+5%) e 6–7% em 2027–30 (pipeline de 14 lojas novas e 7 reformas; Midway com carteira +10% a/a), média 6,3%. Margem EBITDA IFRS-16 CVM: 13,3% (2021), 11,4%, 12,0%, 15,1% (2024) e 15,8% recorrente ex-shopping em 2025 (29,9% contábil com o ganho de R$ 1,32 bi); média 2021–25 de 13,6% com 2025 recorrente. LTM recorrente 16,2%; 2S25 17,8%; 2T26 17,1% (+1,4 p.p.). A coluna 2026 (18,5%) é o run-rate do 2S26 (2S25 17,8% + ~0,7 p.p.), porque o motor só usa a fração do ano depois de 30/06; 2027–30 são margens de ano cheio (17,0% → 17,8%), ~1,2–2,0 p.p. acima do recorrente de 2025 e próximas do pico pré-pandemia (16,9% em 2019) e sem extrapolar a sequência de expansão de margem bruta. ROE contábil médio 2021–25 de 8,2% (com o ganho de 2025; 4,6% usando o lucro ajustado de R$ 512 mi em 2025); projetado ~10–13%. Payout volátil (2021 45%; 2022 >100%; 2024 25%; 2025 ~100% com o dividendo de R$ 1,1 bi da venda do shopping e o JCP de R$ 360 mi). Regra IFRS-16: capex = capex caixa (R$ 572 mi em 2025 = 5,5% da receita; 1S26 R$ 302 mi = 6,0%, acelerando com reformas) + adições de direito de uso (~2,8–3,0% da receita: depreciação de direito de uso de R$ 271 mi em 2025 e passivo de arrendamento em alta para R$ 1,24 bi). D&A 7,5% (2025: 7,2%; 1S26: 8,0%, sazonal). Capex total 9,0% → 8,2% da receita (capex caixa ~5,5–6% + direito de uso ~2,8–3%). Capital de giro 33% da receita incremental (2023–25: Δ(recebíveis + estoques − fornecedores − obrigações com cartões) de R$ 558 mi sobre Δreceita de R$ 1,70 bi = 33%; a carteira da Midway cresce acima da receita). Alíquota efetiva 15–22% (JCP ~R$ 200 mi/ano e incentivos fiscais Sudene/ICMS; 1S26 5%)."
+ },
+ "guidance": "Sem guidance numérico de receita, margem, capex ou lucro. Release 2T26 (ago/26): ambição de SSS de vestuário consistente, expansão por aberturas e modernização da base de lojas (pipeline de 14 projetos de lojas novas e 7 reformas no novo conceito), continuidade da expansão da margem bruta de vestuário, Midway como alavanca de crescimento, lucro crescendo acima do EBITDA e evolução do ROIC. Follow-on de ~R$ 400–500 mi estudado em fev/26 e abandonado em mar/26.",
+ "dividend_policy": "Estatuto: dividendo mínimo obrigatório (percentual não verificado). Prática recente: JCP trimestral — em 2026, R$ 0,0996/ação no 1T (data-com 06/04), R$ 0,0797 complementar (13/05; pagamento 28/12/26), R$ 0,0996 no 2T (30/06) e R$ 0,0597 no 3T (30/09), ~R$ 170 mi no ano até setembro, com pagamento ainda a definir para a maioria. Em dez/25, com a venda do Midway Mall, aprovou R$ 1,49 bi em dividendos intercalares e JCP (~R$ 2,98/ação): R$ 1.129 mi pagos em dez/25 e o JCP de R$ 360 mi pago no 1S26. Antes da crise: payout de 33–37% (2015–19). Sem recompras relevantes. Modelo: payout de 2026 reduzido a 12% para que o stub de dividendos do motor seja só o JCP do 4T26 (os JCP do 1T–3T26 têm data-com passada e estão em other_debt_like); 40% → 50% em 2027–30 (JCP + dividendos), coerente com DL/EBITDA estável perto de 1,4x com arrendamentos.",
+ "election_impact": "Queda de ~40% no dia (R$ 11,55 → R$ 6,90 às 13h02 de 26/10), uma das maiores do varejo: beta de small cap de consumo doméstico (beta 2 anos ~1,7), reversão do rali pré-eleição (+68% desde o ponto de partida) e, principalmente, o canal de crédito. O que de fato muda no valor: (i) Midway — carteira de R$ 6,2 bi financiada a CDI (debêntures e CDBs pós-fixados), com DI longo +250–300 bp e inadimplência >90 dias já subindo (18,9% no 2T26 vs 17,4%); (ii) dívida 100% CDI, mas DL ex-arrendamentos de só R$ 1,3 bi (efeito direto de ~−R$ 12 mi de lucro por +1 p.p.); (iii) câmbio sobre a parcela importada (a verticalização das fábricas Guararapes reduz a exposição; fatia importada não divulgada). Contrapontos: público C/D com peso grande no Nordeste, o mais beneficiado por isenção de IR até R$ 5 mil (desde jan/26), salário mínimo e Bolsa Família; real mais fraco encarece o cross-border (Shein). O dano ao lucro 2027E está no crédito e no custo de funding, não na operação de moda, que vem de 12 trimestres de SSS positivo.",
+ "summary": "Maior varejista de moda verticalizada do país (fábricas próprias Guararapes) com uma financeira relevante (Midway, carteira de R$ 6,2 bi), em plena virada operacional: margem bruta de vestuário de 59,2% e EBITDA de mercadorias de 17,0% no 2T26, os maiores em 11 anos, e lucro recorde para um 2º trimestre. A queda de ~40% em 26/10 precifica sobretudo o risco de crédito e funding da Midway com DI de 15%, que é real mas limitado; a operação de moda e o balanço (DL ex-arrendamentos de R$ 1,3 bi após devolver R$ 1,5 bi da venda do shopping) mudaram pouco.",
+ "thesis": [
+  "Virada operacional consistente: 12 trimestres seguidos de SSS de vestuário positivo (+7,8% no 2T26) e 11 de expansão da margem bruta de vestuário (57,3% → 59,2% no 2T26); EBITDA consolidado do 2T26 de R$ 461 mi (17,1%, +1,4 p.p.) e lucro de R$ 168 mi (+36%).",
+  "Midway como alavanca e risco: EBITDA de serviços financeiros de R$ 119 mi no 2T26 (+7,2%), carteira +10% a/a e FPD das novas safras em queda (cartões 3,5% em jun/26), mas inadimplência >90 dias de 18,9% — o modelo deixa a margem consolidada de 2027 em 17,0% (só +0,4 p.p. sobre o ~16,6% esperado para 2026 cheio) por causa do crédito.",
+  "Balanço limpo depois da venda do Midway Mall (R$ 1,61 bi, liquidada em dez/25): DL ex-arrendamentos de R$ 1,3 bi (0,7x EBITDA pela empresa), dívida alongada com a GUAR17 a DI+0,95% e JCP trimestral recorrente.",
+  "Preço de crise: a R$ 6,90 o valor de mercado (~R$ 3,5 bi) equivale a ~0,64x o PL de R$ 5,4 bi e a ~5–6x o lucro recorrente LTM (~R$ 570 mi)."
+ ],
+ "risks": [
+  "Crédito da Midway: inadimplência >90 dias de 18,9% (2T26) e perdas de crédito de R$ 853 mi em 2025 (8,1% da receita); juros altos e endividamento recorde das famílias (XP) podem reverter a melhora das safras.",
+  "Funding: carteira prefixada financiada a CDI (debêntures e CDBs a 102–109% do CDI); a Fitch soma valores a repassar às administradoras de cartões (R$ 2,75 bi) à dívida ajustada, o que eleva a alavancagem ajustada para ~2,5x EBITDAR.",
+  "Refinanciamento: ~R$ 1,4 bi de vencimentos em 24 meses (dívida de curto prazo de R$ 673 mi e 50% da GUAR17 em out/27) num mercado de crédito mais caro.",
+  "Câmbio e cross-border: real mais fraco encarece insumos e importados; remessas internacionais +76% a/a em ago/26 (XP); fim do imposto federal sobre compras até US$ 50.",
+  "Governança/estrutura: controle familiar e follow-on estudado e abandonado em 2026 — uma nova emissão a preço deprimido seria diluidora."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (data a confirmar; início/meados de nov/2026): primeira leitura de crédito da Midway pós-choque de juros.",
+  "Black Friday, Natal e verão com renda disponível maior (isenção de IR).",
+  "Declaração do JCP do 4T26 (dez/26) e definição da data de pagamento dos JCP de 2026.",
+  "Inaugurações e reformas do pipeline (14 lojas novas e 7 reformas)."
+ ],
+ "key_data": [
+  {
+   "label": "Preço 26/10 13h02 (B3, foto do estudo)",
+   "value": "R$ 6,90",
+   "context": "−40,3% no dia; R$ 11,55 em 23/10"
+  },
+  {
+   "label": "EBITDA IFRS-16 recorrente LTM 2T26 (ex-shopping)",
+   "value": "~R$ 1,72 bi (16,2%)",
+   "context": "CVM LTM R$ 3,18 bi inclui ganho de R$ 1,32 bi na venda do Midway Mall"
+  },
+  {
+   "label": "Lucro 2T26 / ajustado 2025",
+   "value": "R$ 167,9 mi / R$ 512 mi",
+   "context": "contábil 2025 R$ 1.475 mi com o ganho do shopping"
+  },
+  {
+   "label": "DL ex-arrendamentos / c/ arrendamentos (jun/26)",
+   "value": "R$ 1.296 mi / R$ 2.537 mi",
+   "context": "0,7x EBITDA (empresa); 1,5x EBITDA IFRS-16 recorrente LTM"
+  },
+  {
+   "label": "Midway 2T26",
+   "value": "carteira até 360d R$ 6,2 bi; EBITDA R$ 119 mi",
+   "context": "inadimplência 15–90d 6,9%; >90d 18,9%"
+  },
+  {
+   "label": "Margem bruta de vestuário 2T26",
+   "value": "59,2%",
+   "context": "+1,9 p.p.; 11º trimestre seguido de expansão"
+  },
+  {
+   "label": "JCP 2026 com data-com passada",
+   "value": "~R$ 170 mi (R$ 0,34/ação)",
+   "context": "1T, complementar, 2T e 3T26; em other_debt_like"
+  },
+  {
+   "label": "P/VP a R$ 6,90",
+   "value": "~0,64x",
+   "context": "PL R$ 5.403 mi (jun/26)"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Apresentação de resultados 2T26 (RI Riachuelo)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/0c51b75c-1d63-4db0-85ed-6a34ac67fccc/c0ef02e3-6bf5-a9be-ccce-e8dadf2441bb?origin=2"
+  },
+  {
+   "title": "InfoMoney — Riachuelo lucra R$ 168 mi no 2T26",
+   "url": "https://www.infomoney.com.br/mercados/riachuelo-riaa3-resultados-segundo-trimestre-2026/"
+  },
+  {
+   "title": "Money Times — 1T26 e recomendações (07/05/2026)",
+   "url": "https://www.moneytimes.com.br/riachuelo-riaa3-entrega-resultados-fortes-mas-acoes-caem-hora-de-comprar-ou-vender-lmrs/"
+  },
+  {
+   "title": "Investidor10 — 4T25 e ano de 2025",
+   "url": "https://investidor10.com.br/noticias/riachuelo-riaa3-lucra-r-322-milhoes-no-4t25-e-fecha-o-melhor-ano-da-sua-historia-118586/"
+  },
+  {
+   "title": "Times Brasil — lucro recorde de R$ 512 mi em 2025",
+   "url": "https://timesbrasil.com.br/empresas-e-negocios/riachuelo-registra-lucro-recorde-de-r-512-milhoes-em-2025/"
+  },
+  {
+   "title": "Brazil Journal — venda do Midway Mall e dividendos",
+   "url": "https://braziljournal.com/guararapes-vende-midway-e-paga-dividendo-monstro-acao-sobe-9"
+  },
+  {
+   "title": "Times Brasil — liquidação antecipada da venda do Midway Mall",
+   "url": "https://timesbrasil.com.br/empresas-e-negocios/controladora-da-riachuelo-oficializa-venda-do-midway-mall-para-a-capitania-capital/"
+  },
+  {
+   "title": "Mais Retorno — debênture GUAR17",
+   "url": "https://maisretorno.com/debentures/guar17"
+  },
+  {
+   "title": "Meelion — CDB Midway Financeira 108% do CDI",
+   "url": "https://www.meelion.com/renda-fixa/investimento/cdb-midway-financeira-10800cdi-2028-07-29/"
+  },
+  {
+   "title": "Money Times — XP: varejo de moda (19/10/2026)",
+   "url": "https://www.moneytimes.com.br/acoes-do-varejo-de-moda-estao-baratas-xp-ve-gatilho-para-renner-lren3-ca-ceab3-e-riachuelo-riaa3-lmrs/"
+  },
+  {
+   "title": "Money Times — Safra eleva preço-alvo (mar/26)",
+   "url": "https://www.moneytimes.com.br/safra-eleva-preco-alvo-da-riachuelo-riaa3-e-calcula-potencial-de-alta-de-40-para-a-acao-veja-os-motivos-lmrs/"
+  },
+  {
+   "title": "Money Times — Riachuelo desiste de follow-on",
+   "url": "https://www.moneytimes.com.br/riachuelo-riaa3-desiste-de-oferta-de-acoes-que-poderia-captar-r-400-milhoes-entenda-o-porque-lmrs/"
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (data/hist/RIAA3.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média — operação de moda bem documentada e balanço leve, mas a base contábil de 2025 exigiu limpeza do ganho e da receita do Midway Mall (estimativa própria de ~R$ 117 mi de receita), o resultado depende do ciclo de crédito da Midway e não há guidance numérico."
+}

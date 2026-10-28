@@ -1,20 +1,31 @@
 import Link from "next/link";
 import { HBarChart } from "@/components/charts/Bars";
 import { Scatter } from "@/components/charts/Points";
+import fs from "node:fs";
+import path from "node:path";
 import { OverviewClient } from "@/components/OverviewClient";
-import { getOverview } from "@/lib/data";
+import type { External } from "@/components/opps/OppShowcase";
+import { getCompany, getOverview } from "@/lib/data";
 
 const p0 = (v: number) => `${v > 0 ? "+" : ""}${Math.round(v * 100)}%`;
 
 export default function Page() {
   const ov = getOverview();
   const cov = new Set(ov.companies.map((c) => c.ticker));
+  const extPath = path.join(process.cwd(), "data", "external", "analise_aprofundada_2810.json");
+  const external: External | null = fs.existsSync(extPath) ? JSON.parse(fs.readFileSync(extPath, "utf8")) : null;
+  const headlines: Record<string, string> = {};
+  for (const t of ov.opportunities) {
+    const h = getCompany(t)?.report?.headline;
+    if (typeof h === "string") headlines[t] = h;
+  }
+  const valLabel = (ov as unknown as { valuation_label?: string | null }).valuation_label ?? null;
   const pts = ov.xsec.points;
   const extremes = [...pts].sort((a, b) => a.residual - b.residual);
   const labelSet = new Set([...extremes.slice(0, 6), ...extremes.slice(-4)].map((p) => p.ticker));
   return (
     <div className="space-y-8">
-      <OverviewClient rows={ov.companies} opps={ov.opportunities} market={ov.market} xsec={ov.xsec} />
+      <OverviewClient rows={ov.companies} opps={ov.opportunities} market={ov.market} xsec={ov.xsec} external={external} headlines={headlines} valLabel={valLabel} reports={ov.reports ?? []} />
 
       <section className="grid grid-cols-1 gap-6 lg:grid-cols-12">
         <div className="lg:col-span-7">

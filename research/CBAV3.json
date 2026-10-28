@@ -1,0 +1,114 @@
+{
+  "ticker": "CBAV3",
+  "name": "Companhia Brasileira de Alumínio S.A. (CBA)",
+  "sector": "Metalurgia / alumínio integrado (bauxita, alumina, primário, transformados e reciclagem) com geração própria de energia",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {"ticker": "CBAV3", "class": "ON"}
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem override: 651,07 mi ações (CVM e B3, sem tesouraria). Receita-base FY2025 CVM de R$ 8.788,8 mi. A margem projetada é o EBITDA ajustado da companhia, ex-equivalência (R$ 705 mi no 2T26, 27,4%), que exclui o MtM de contratos futuros de energia e a realização de hedge accounting das NCEs. A equivalência (~R$ 140 mi/ano) entra em other_financial e as investidas em non_operating_assets. A DL CVM (R$ 2.851 mi) inclui arrendamentos (R$ 378 mi) e não inclui o MtM de derivativos (+R$ 50 mi ativo), que entra no debt-like com sinal negativo. Pesos do blend sobrescritos (valuation_weights), porque há uma OPA obrigatória pendente; ver target_multiples.rationale."
+  },
+  "projection": {
+    "years": [2026, 2027, 2028, 2029, 2030],
+    "revenue_growth": [0.078, 0.019, 0.021, 0.028, 0.044],
+    "ebitda_margin": [0.194, 0.175, 0.158, 0.150, 0.149],
+    "da_pct_revenue": [0.089, 0.090, 0.091, 0.091, 0.089],
+    "capex_pct_revenue": [0.101, 0.105, 0.105, 0.104, 0.102],
+    "nwc_pct_revenue": 0.19,
+    "cost_of_net_debt": [0.075, 0.075, 0.075, 0.075, 0.075],
+    "other_financial": [-15, -15, -15, -15, -15],
+    "tax_rate": [0.24, 0.24, 0.24, 0.24, 0.24],
+    "minority_share_ni": 0.20,
+    "payout": [0.25, 0.30, 0.35, 0.40, 0.40],
+    "buyback_mn": [0, 0, 0, 0, 0],
+    "equity_issuance_mn": [0, 0, 0, 0, 0]
+  },
+  "terminal": {"g": 0.04, "roic": 0.10, "roe": 0.11},
+  "wacc": {
+    "kd_pre_tax": 0.085,
+    "target_debt_weight": 0.35,
+    "notes": "90% da dívida bruta em US$ (NCE/PPE, ECA, BNDES e debêntures swapadas de CDI/IPCA/EURIBOR para US$ fixo), com custo total de 6,02% a.a. equivalente em US$ e prazo de 5,2 anos. Em R$, soma-se a depreciação do deck (~1,8% a.a.): ~8%. Sobre a DL, o caixa de R$ 1,87 bi, 74% em R$ e rendendo CDI, reduz o custo líquido para ~7,5% (cost_of_net_debt). A dívida não é CDI: os swaps CDI→US$ dão carrego positivo enquanto o CDI supera o custo em US$ mais a depreciação. Kd de 8,5% e wd de 35% ≈ (DL 2,85 + debt-like 2,2 + minoritários 0,6) ÷ (isso + valor de mercado de R$ 7,2 bi). WACC ≈ 18,2%."
+  },
+  "adjustments": {
+    "other_debt_like": 2195,
+    "non_operating_assets": 500,
+    "minority_value": 600,
+    "notes": "Debt-like (R$ mi, 30/06/26): Uso do Bem Público das UHEs (UBP; concessão, corrigida por IPCA) 1.060,5 (85,5 + 975,0); risco sacado 197,3; provisões judiciais 486,2 menos depósitos judiciais de 20,1 = 466,1; desmobilização de ativos e passivo ambiental 486,1 (37,6 + 448,5); dividendos a pagar 35,0; derivativos líquidos (ativo) −50 (ativos 627,9 − passivos 577,4). Total: 2.195. Fora: contratos futuros de energia (MtM passivo de R$ 239 mi), porque o preço contratado já está na receita e o MtM é excluído do EBITDA ajustado; somá-lo contaria duas vezes. non_operating_assets: investidas do negócio de energia (contábil R$ 193 mi; equivalência de ~R$ 140 mi/ano e dividendos de R$ 64 mi/ano) a Ke de 25% ≈ R$ 500 mi. minority_value: os minoritários da CBA Energia ficam com ~R$ 115–125 mi/ano de LL (R$ 28,8 mi no 2T26 e R$ 35,0 mi no 1T26; 47% do LL em 2025, 17% no UDM). Capitalizado a Ke de 25% com g de 4%, dá ~R$ 600 mi (contábil R$ 227 mi). minority_share_ni de 20% reproduz ~R$ 90–115 mi/ano com o LL projetado."
+  },
+  "target_multiples": {
+    "pe": 19.5,
+    "ev_ebitda": 7.2,
+    "pbv": 1.3,
+    "rationale": "Múltiplos de TRANSAÇÃO. A Votorantim vendeu 68,596% a Chalco e Rio Tinto (Fato Relevante de 29/01/2026) a um preço-base de R$ 10,50/ação, corrigido pelo CDI até o fechamento e reduzido pelos dividendos pagos ao vendedor (R$ 0,0442 em mai/26). O fechamento obriga a uma OPA por alienação de controle com tag-along de 100% (Novo Mercado) e, provavelmente, a uma OPA de cancelamento de registro. Valor acumulado em 26/10: ≈ R$ 11,54 (CDI de ~14,3% a.a. por 186 dias úteis). Supondo fechamento no 1T27 e liquidação da OPA ~2 meses depois: ≈ R$ 12,44, ou R$ 10,92 a valor presente a Ke de 25%. Isso equivale a R$ 7,1 bi de equity e R$ 12,2 bi de EV (com DL 2026E, debt-like e minoritários), ou seja, EV/EBITDA de 7,2x e P/L de 19,5x sobre 2027E. São os múltiplos-alvo, e os pesos (valuation_weights: múltiplos 80%, DDM 20%) representam P(fechamento) de ~80% contra o valor standalone a Ke de 25% (DDM; o DCF standalone é negativo). Referência standalone: mediana de 5 anos de EV/EBITDA de 6,4x e de P/L de 12,3x (multiples_history); pares Alcoa e Norsk Hydro a 5–6x EV/EBITDA; a 5,0x e 8,0x 2027E, o valor de múltiplos standalone seria ~R$ 4,9. Aviso: no Monte Carlo e nos cenários, o componente de transação varia com o EBITDA 2027E, embora o preço da OPA seja contratual."
+  },
+  "valuation_weights": {"multiples": 0.8, "ddm": 0.2},
+  "scenarios": {
+    "bear": {"probability": 0.25, "revenue_growth_shift": -0.03, "ebitda_margin_shift": -0.03, "terminal_g_shift": -0.01, "capex_pct_shift": 0.0, "narrative": "A operação não fecha (autoridades chinesas, ANEEL/CCEE ou CADE) e a ação volta ao standalone, com LME a US$ 2.600–2.700 após a normalização da oferta do Golfo e o real apreciado."},
+    "bull": {"probability": 0.20, "revenue_growth_shift": 0.02, "ebitda_margin_shift": 0.015, "terminal_g_shift": 0.005, "capex_pct_shift": 0.0, "narrative": "Fechamento rápido (1T27), com OPA corrigida pelo CDI alto, LME acima de US$ 3.200 e prêmios regionais altos."}
+  },
+  "uncertainty": {"revenue_growth_sd": 0.04, "ebitda_margin_sd": 0.02, "terminal_g_sd": 0.0075, "capex_pct_sd": 0.005},
+  "debt_profile": {
+    "gross_debt_mn": 4339,
+    "pct_floating_cdi": 0.0,
+    "avg_cost": "US$ 6,02% a.a. (custo total, inclusive a parcela em R$, convertido a taxa equivalente em US$; jun/26). 90% em US$ e 10% em R$; 57% de financiamento sustentável. RCF de US$ 100 mi não sacada.",
+    "avg_maturity_years": 5.18,
+    "next_24m_maturities_mn": 314,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": 20,
+    "notes": "A CBA é líquida comprada em CDI: caixa em R$ (~R$ 1,38 bi) e swaps em que recebe CDI (nocional de R$ 1,455 bi) contra dívida em US$ fixa. +100 bp de CDI ≈ +R$ 28 mi pré-IR (~+R$ 20 mi no LL). Além disso, o preço da OPA é corrigido pelo CDI: +1 p.p. ≈ +R$ 0,11/ação por ano até o fechamento. O canal relevante é LME × câmbio: +US$ 100/t de LME ≈ +R$ 210 mi/ano de EBITDA e +R$ 0,10 no câmbio ≈ +R$ 85 mi/ano (2027E, com ~35% do custo ligado a US$)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.102,
+    "ebitda_margin_avg_5y": 0.135,
+    "roe_avg_5y": 0.032,
+    "payout_avg_5y": 0.30,
+    "last_quarter": {"period": "2T26", "revenue_yoy": 0.281, "ebitda_margin": 0.264, "net_income_mn": 381, "net_debt_ebitda": 1.60},
+    "notes": "Receita de +10,2% a.a. em 5 anos, sobre uma base de 2020 deprimida. Margem EBITDA CVM de 22,0% (2021), 18,9%, −4,3% (2023: impairment de níquel e LME baixo), 15,9% e 15,2% (2025); média de 13,5%. 1S26 recorde: margem ajustada de 24% com LME a US$ 3.199/3.571 (choque de oferta no Oriente Médio). A premissa (19,4% no 2S26, convergindo a ~15%) supõe LME de US$ 3.100 → 2.950–3.000 e custo de produção subindo ~3,5% a.a. (2T26: R$ 11.891/t). Fica perto da média histórica fora de crise. ROE médio de 3% (prejuízos em 2023–24); projetado de 5–10%. Payout: mínimo de 25% (R$ 28,7 mi sobre 2025); 37% em 2022."
+  },
+  "guidance": "Sem guidance financeiro formal. 2T26 (04/08/2026): EBITDA ajustado recorde de R$ 705 mi (27%), produção recorde de 94 kt de alumínio líquido, custo de produção de R$ 11.891/t (−1% t/t), alavancagem de 1,68x (contra 2,71x no 1T26), capex de R$ 136 mi no trimestre com parte replanejada para períodos seguintes. Resultado do 3T26 em 04/11/2026.",
+  "dividend_policy": "Estatuto: mínimo de 25% do LL ajustado. Sobre 2025: R$ 28,7 mi (R$ 0,0442/ação), data-com de 29/04/26 e pagamento em mai/26 (já fora do fluxo). Histórico baixo (R$ 324 mi em 2022; R$ 83–130 mi em 2023–24, inclusive aos minoritários da CBA Energia). Com a mudança de controle, qualquer dividendo ao vendedor reduz o preço da OPA. Projetamos 25–40% de payout (efeito pequeno no valor).",
+  "election_impact": "CBAV3 caiu só 2,1% em 26/10 (R$ 11,24 → 11,00) com SMLL −27%. A ação está ancorada pela OPA: preço-base de R$ 10,50, corrigido pelo CDI desde 29/01/26, ≈ R$ 11,5 hoje. O choque de juros eleva a correção da OPA, e o real fraco melhora o standalone: receita atrelada à LME em US$, ~65% do custo em R$, geração própria de 733 MWm contra consumo de 748 MWm. O risco que a eleição muda é regulatório e político: a operação depende de ANEEL/CCEE, CADE e autoridades chinesas; um 4º mandato Lula, com boa relação com a China, reduz o risco de veto. Ficam pendentes as concessões vencidas de 4 UHEs (Alecrim, Salto do Iporanga, Itupararanga, Sobragi), ainda sem decisão do poder concedente. A dívida é 90% em US$, então o DI não pesa; o caixa em CDI ajuda.",
+  "summary": "Única produtora integrada de alumínio primário do Brasil, com energia própria (~98% do consumo) e dívida 90% em US$. O 1S26 foi recorde (LME a US$ 3.571 no 2T26); o deck de LME a US$ 3.000 e câmbio de R$ 5,45 devolve a margem a ~15–17%. O valor para o minoritário é dominado pela OPA de Chalco e Rio Tinto: R$ 10,50 corrigidos pelo CDI, ≈ R$ 11,5 hoje, ponderada por ~80% de chance de fechar. O standalone a Ke de 25% vale muito menos.",
+  "thesis": [
+    "OPA obrigatória com tag-along de 100%: preço-base de R$ 10,50 + CDI desde 29/01/26 (≈ R$ 11,5 em 26/10), menos dividendos pagos ao vendedor; fechamento depende de CADE, China, Alemanha, Coreia, Uruguai, ANEEL e CCEE.",
+    "Energia própria: 733 MWm de geração a R$ 114/MWh contra contratos a R$ 373/MWh; excedente vendido (receita de energia de R$ 162 mi no 2T26, +37% a/a).",
+    "Desalavancagem: DL/EBITDA ajustado de 2,71x → 1,68x em um trimestre; dívida longa (5,2 anos, 34% vencendo em 2031) e 90% em US$, casada com a receita.",
+    "Sensibilidade (2027E): +US$ 100/t de LME ≈ +R$ 210 mi de EBITDA; +R$ 0,10 no câmbio ≈ +R$ 85 mi."
+  ],
+  "risks": [
+    "Quebra da operação (aprovações chinesas e brasileiras): sem a OPA, o valor converge ao standalone, muito abaixo do preço.",
+    "LME: o pico do 2T26 (US$ 3.571, conflito no Oriente Médio) já devolveu ~US$ 450; a normalização da oferta do Golfo e o avanço chinês pressionam o preço; o custo em R$ sobe ~3,5% a.a.",
+    "Concessões vencidas de 4 UHEs sem decisão do poder concedente; contrato de energia em US$ 100/MWh até 2028.",
+    "Execução operacional (refinaria, reforma de fornos) e minoritários da CBA Energia, que capturam ~R$ 120 mi/ano de LL."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (04/11/2026)",
+    "Aprovações regulatórias (CADE, SAMR/China, ANEEL/CCEE) e fechamento da compra pela Chalco e Rio Tinto",
+    "Registro e liquidação da OPA (tag-along e eventual cancelamento de registro)"
+  ],
+  "key_data": [
+    {"label": "Preço-base da OPA", "value": "R$ 10,50 + CDI", "context": "desde 29/01/26; ≈ R$ 11,5 em 26/10; menos dividendos pagos ao vendedor"},
+    {"label": "EBITDA ajustado 2T26", "value": "R$ 705 mi (27%)", "context": "recorde; LME US$ 3.571/t, câmbio 5,05"},
+    {"label": "DL / EBITDA ajustado UDM", "value": "1,68x", "context": "DL R$ 2,80 bi; 90% da dívida em US$ a 6,02%"},
+    {"label": "Debt-like (motor)", "value": "R$ 2,2 bi", "context": "UBP R$ 1,06 bi, provisões, ARO, risco sacado"},
+    {"label": "Deck LME (US$/t)", "value": "2S26 3.100 · 27 3.000 · 28–29 2.950 · 30 3.000", "context": "LME ~US$ 3.100 em 27/10; ~US$ 2.750 real 2026 no fim"},
+    {"label": "Deck câmbio (R$/US$)", "value": "2S26 5,25 · 27 5,45 · 28 5,55 · 29 5,65 · 30 5,75", "context": "dólar futuro 5,38 + diferencial de inflação de ~1,8% a.a. (mesmo deck de VALE3/PETR4)"}
+  ],
+  "sources": [
+    {"title": "CBA — Release de resultados 2T26 (04/08/2026)", "url": "https://api.mziq.com/mzfilemanager/v2/d/73a23c6c-b1fd-4abb-beba-056de474f2ec/d1dbe170-751e-3a4f-acd2-ecc96e9f2a46?origin=2"},
+    {"title": "CBA — Demonstrações financeiras 2T26", "url": "https://api.mziq.com/mzfilemanager/v2/d/73a23c6c-b1fd-4abb-beba-056de474f2ec/3f64cf69-7508-46e3-b81c-772ea404f4b6?origin=2"},
+    {"title": "CBA — Fato Relevante: mudança de controle (Chalco e Rio Tinto, R$ 10,50 + CDI; 29/01/2026)", "url": "https://api.mziq.com/mzfilemanager/v2/d/73a23c6c-b1fd-4abb-beba-056de474f2ec/36274b00-e274-7ec1-3525-f4424febc5f5?origin=2"},
+    {"title": "CBA — Fato Relevante: dividendos de 2025 (29/04/2026)", "url": "https://api.mziq.com/mzfilemanager/v2/d/73a23c6c-b1fd-4abb-beba-056de474f2ec/7b5de62d-ce94-564e-a535-bcd4ad96a078?origin=2"},
+    {"title": "CBA RI — agenda (3T26 em 04/11/2026)", "url": "https://ri.cba.com.br/"},
+    {"title": "Trading Economics — Aluminum (US$ 3.100/t, 27/10/2026)", "url": "https://tradingeconomics.com/commodity/aluminum"},
+    {"title": "CVM — DFP/ITR padronizados (data/hist/CBAV3.json)", "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"},
+    {"title": "B3 — cotação oficial (API instrumentQuotation)", "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/CBAV3"}
+  ],
+  "confidence": "média — dados oficiais sólidos (release, DF e Fato Relevante), mas o valor depende do fechamento da OPA (data e probabilidade são julgamento) e, no standalone, de um único driver (LME × câmbio). Não verificados: a taxa CDI exata acumulada, o cronograma das aprovações e o MtM recente dos hedges."
+}

@@ -36,12 +36,16 @@ export default function Page() {
             <span className="font-medium text-ink">Macro:</span> Banco Central (SGS: Selic, CDI, IPCA, PTAX; Focus) e curva de DI futuro da B3.
           </p>
           <p>
-            <span className="font-medium text-ink">Qualitativo:</span> 12 analistas setoriais leram releases, apresentações e fatos relevantes das companhias e fixaram as premissas de cada uma. Cada dossiê lista as fontes.
+            <span className="font-medium text-ink">Qualitativo:</span> 32 analistas setoriais (12 na 1ª rodada e 20 na ampliação) leram releases, apresentações e fatos relevantes das companhias e fixaram as premissas de cada uma. Cada dossiê lista as fontes.
           </p>
         </Block>
         <Block title="Cobertura">
-          <p>{ov.coverage_rule.replace("queda", "Queda").replace("ADTV 3m", "volume médio diário de 3 meses")}. Resultado: 59 empresas.</p>
-          <p>A regra é mecânica e aplicada à foto das 11h39 do pregão de 26/10/2026. As variações exibidas no painel são ao vivo.</p>
+          <p>
+            1ª rodada (26/10): queda de 20% ou mais no dia e volume médio diário de 3 meses de R$ 20 mi ou mais, no universo Ibovespa, IBrX-100 e Small Caps, na foto das 11h39. Resultado: 59 empresas, revisadas uma a uma por um segundo analista.
+          </p>
+          <p>
+            Ampliação (28/10): todas as demais ações desse universo com volume médio diário de R$ 10 mi ou mais e demonstrações padronizadas na CVM, com premissas feitas sob um checklist com as lições da revisão. Total: {ov.companies.length} empresas. As variações exibidas no painel são ao vivo.
+          </p>
           <p>
             <span className="font-medium text-ink">Melhores oportunidades:</span> {(ov as unknown as { opportunity_rule?: string }).opportunity_rule}
           </p>

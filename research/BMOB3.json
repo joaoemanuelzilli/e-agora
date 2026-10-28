@@ -1,0 +1,253 @@
+{
+  "ticker": "BMOB3",
+  "name": "Bemobi Mobile Tech S.A.",
+  "sector": "Tecnologia / Pagamentos recorrentes e SaaS para utilities, telecom e serviços",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "BMOB3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem override de base. Receita CVM ≠ receita do release: na CVM a operação de comércio da M4U (revenda de créditos pré-pagos) entra pelo valor bruto (R$ 497 mi no 2T26), e o release 'harmonizado' mostra só a margem (R$ 227 mi). Por isso a margem EBITDA CVM (~14%) é bem menor que a ajustada (34,9%). Projetamos na base CVM. DL CVM 30/06/26 = −R$ 282,5 mi (caixa líquido: caixa e aplicações 328,0 − BNDES 41,2 + arrendamentos 4,3). Ações: 83,26 mi (85,61 mi emitidas − 2,35 mi em tesouraria após a recompra de R$ 44 mi em maio)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.2,
+      0.12,
+      0.11,
+      0.1,
+      0.09
+    ],
+    "ebitda_margin": [
+      0.143,
+      0.148,
+      0.152,
+      0.155,
+      0.157
+    ],
+    "da_pct_revenue": [
+      0.039,
+      0.038,
+      0.037,
+      0.036,
+      0.036
+    ],
+    "capex_pct_revenue": [
+      0.03,
+      0.03,
+      0.03,
+      0.03,
+      0.03
+    ],
+    "nwc_pct_revenue": 0.3,
+    "cost_of_net_debt": [
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "other_financial": [
+      -15,
+      -15,
+      -15,
+      -12,
+      -10
+    ],
+    "tax_rate": [
+      0.25,
+      0.25,
+      0.26,
+      0.26,
+      0.27
+    ],
+    "minority_share_ni": 0.1,
+    "payout": [
+      1.0,
+      0.85,
+      0.85,
+      0.85,
+      0.85
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.06,
+    "roic": 0.3,
+    "roe": 0.25
+  },
+  "wacc": {
+    "kd_pre_tax": 0.15,
+    "target_debt_weight": 0.0,
+    "notes": "Caixa líquido: WACC = Ke 25% (peso da dívida 0). O 'custo' da DL negativa é o rendimento do caixa: ~10% a.a. (CDI ~14,5% menos PIS/Cofins sobre receita financeira e parte do caixa no exterior a juros baixos; o rendimento do 2T26 foi de R$ 8,6 mi sobre ~R$ 340 mi)."
+  },
+  "adjustments": {
+    "other_debt_like": 189.0,
+    "non_operating_assets": 0,
+    "minority_value": 0,
+    "notes": "other_debt_like R$ 189 mi = contraprestações a pagar R$ 172,8 mi (puts e earn-outs de aquisições: 7AZ R$ 25,6 mi, Wave Tech R$ 21,0 mi e Paytime R$ 126,2 mi — a put dos 49,9% restantes da Paytime, exercível em 2029/2031, e o earn-out de 2026–27) + JCP do 2T26 (R$ 16 mi, ex 18/08, pago 28/08/2026, após o balanço). minority_value = 0: a put da Paytime já está nas contraprestações (deduzir também o minoritário seria contar duas vezes); minority_share_ni 10% mantém o LL atribuível como reportado (1S26: 11,9%)."
+  },
+  "target_multiples": {
+    "pe": 11.0,
+    "ev_ebitda": 6.0,
+    "pbv": null,
+    "rationale": "P/L 11x LPA 2027E: data/market 5 anos — mediana 14,1x, p10 11,3x; pré-eleição ~17,6x o LL UDM, inflado pelo rali de +22% de 01 a 09/10 com a aposta na vitória da oposição. Regra 'choque neutro' (rendimento de 5,7% + 3 p.p.) → 11,5x. EV/EBITDA 6,0x EBITDA CVM 2027E: mediana histórica 5,8x, 7,6x hoje. O EBITDA CVM é deprimido pelo bruto da M4U, então o múltiplo parece baixo para uma empresa de pagamentos. Múltiplos de mercado embutem Ke de ~13–15%; ao Ke de 25%, o DCF implica ~2,5x o EBITDA de saída. Daí a distância de ~2x entre múltiplos e DCF/DDM."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.05,
+      "ebitda_margin_shift": -0.015,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Desaceleração de pagamentos (perda de cliente-âncora em utilities/telecom), Paytime com margem baixa por mais tempo e capital de giro do float consumindo o caixa."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.04,
+      "ebitda_margin_shift": 0.01,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "TPV seguindo +40–50% a.a. com novos setores (saúde, educação, saneamento) e alavancagem operacional levando a margem ajustada acima de 38%."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.04,
+    "ebitda_margin_sd": 0.012,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.004
+  },
+  "debt_profile": {
+    "gross_debt_mn": 41.2,
+    "pct_floating_cdi": null,
+    "avg_cost": "BNDES (R$ 40 mi); caixa de R$ 328 mi com parte no exterior",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": 2,
+    "notes": "Caixa líquido de ~R$ 0,1–0,3 bi: +100 bp de CDI ≈ +R$ 2–3 mi/ano pré-IR. Contrapartida: o float de pagamentos (recebíveis de adquirentes R$ 768 mi × repasses a clientes R$ 568 mi) é financiado com caixa próprio — juro alto eleva o custo de oportunidade."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.5814,
+    "ebitda_margin_avg_5y": 0.144,
+    "roe_avg_5y": 0.1088,
+    "payout_avg_5y": 0.99,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.217,
+      "ebitda_margin": 0.145,
+      "net_income_mn": 33.2,
+      "net_debt_ebitda": -1.14
+    },
+    "notes": "CVM: receita 489 (2021) → 1.476 (2022, M4U bruta) → 1.308 → 1.498 → 1.696 (2025); margem EBITDA 11–13% desde a M4U; LL 75 → 157 (2025); ROE 8–15%; caixa líquido R$ 0,3–0,6 bi. Release (harmonizado): receita triplicou em 2020–25 e o LL ajustado subiu 4,3x; 2T26 receita R$ 227 mi (+30%; orgânico +15%, +20% FXN), TPV R$ 3,9 bi (+54%). Projeção CVM: receita +20% em 2026 (Paytime consolidada desde o 1T26; 1S26 +23%) e 12%→9% depois (pagamentos +30% orgânico diluído pela M4U bruta, que cresce pouco); margem 14,3%→15,7% (alavancagem operacional: margem ajustada orgânica +2,7 p.p. a/a). D&A ~3,7%, capex 3% (R$ 14,7 mi/tri). Capital de giro 0,30 da receita incremental: o float de pagamentos consumiu R$ 88 mi em 2025 e R$ 74 mi no 1S26. IR 25–27% (1S26: 29,5%; JCP reduz). Payout 100% em 2026 (compromisso) e 85% depois (M&A recorrente e float)."
+  },
+  "guidance": "Sem guidance numérico. Compromisso (release 2T26, 12/08/2026): distribuir 100% do lucro líquido de 2026; a administração espera que a margem EBITDA ajustada siga em expansão, ainda que não de forma linear, com ganho de escala da Paytime.",
+  "dividend_policy": "JCP trimestrais (R$ 0,188/ação em mai/26; R$ 0,192 em ago/26 = R$ 16 mi) + dividendos extraordinários (R$ 1,59/ação em dez/2025) + recompras (R$ 44 mi em mai/26). Compromisso de 100% do LL de 2026. Desde o IPO, R$ 467 mi devolvidos (≈55% do valor captado).",
+  "election_impact": "BMOB3 caiu 23,9% em 26/10 (às 13h02), resíduo de −5,4 p.p. contra o beta (1,12). Boa parte da queda devolve o rali de +22% entre 01 e 09/10, quando o mercado apostava na vitória da oposição: a ação de 26/10 ficou ~13% acima do nível pré-rali. Canal macro: Ke e prêmio de small caps. Micro, pouco muda: clientes de utilities, telecom, educação e saúde e receita indexada ao TPV. A Selic alta encarece o float de pagamentos financiado com caixa próprio e o lado SMB da Paytime (adquirência); o real fraco ajuda a conversão das operações no exterior.",
+  "summary": "Plataforma de pagamentos recorrentes e SaaS para setores de contas mensais (telecom, energia, saneamento, educação, saúde), com TPV +54% a/a, caixa líquido e compromisso de distribuir 100% do lucro de 2026. O crescimento vem de pagamentos (orgânico +34%) e de aquisições (Paytime 50,1% em dez/25, com put dos 49,9% em 2029/2031). Ao Ke de 25%, o valor depende da margem e do capital de giro do float, mais que do crescimento da receita.",
+  "thesis": [
+    "Receita ajustada 2T26 +30% a/a (orgânico +15%; +20% FXN), décimo trimestre seguido de crescimento orgânico.",
+    "Pagamentos + SaaS já são ~70% da receita; TPV de R$ 3,9 bi (+54% a/a), com novos setores (Hapvida, Aegea, Qualicorp, Vitru/FMU).",
+    "Alavancagem operacional: EBITDA ajustado +33% (margem 34,9%) e conversão EBITDA−capex de 82%.",
+    "Remuneração: 100% do LL de 2026 + recompra; caixa de R$ 328 mi e quase sem dívida (BNDES R$ 40 mi)."
+  ],
+  "risks": [
+    "Base CVM inclui a M4U bruta: margem e crescimento contábeis oscilam com o mix (comércio de recargas cresce pouco).",
+    "Float de pagamentos financiado com caixa próprio: o crescimento do TPV consome capital de giro.",
+    "Aquisições: puts e earn-outs (R$ 173 mi) e integração da Paytime, que tem margem menor e exposição a SMB.",
+    "Concentração em grandes clientes de telecom e utilities; take rate em queda com o Pix.",
+    "Equity swap sobre BMOB3 (reduzido em maio) gera volatilidade no resultado financeiro."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (12/11/2026, previsto)",
+    "Distribuição complementar do lucro de 2026 (compromisso de 100%)",
+    "Novas aquisições/integração da Paytime",
+    "Incorporação da 7AZ (AGE de 30/09/2026)"
+  ],
+  "key_data": [
+    {
+      "label": "Receita ajustada 2T26",
+      "value": "R$ 227,3 mi",
+      "context": "+30% a/a; CVM R$ 497 mi (M4U bruta)"
+    },
+    {
+      "label": "TPV 2T26",
+      "value": "R$ 3,9 bi",
+      "context": "+54% a/a (36% orgânico)"
+    },
+    {
+      "label": "EBITDA ajustado 2T26",
+      "value": "R$ 79,4 mi",
+      "context": "margem 34,9%; CVM R$ 72 mi"
+    },
+    {
+      "label": "Caixa / contraprestações",
+      "value": "R$ 328 mi / R$ 173 mi",
+      "context": "puts e earn-outs (Paytime, Wave, 7AZ)"
+    },
+    {
+      "label": "Remuneração",
+      "value": "100% do LL 2026",
+      "context": "JCP R$ 0,19/ação no 2T26 + recompra R$ 44 mi"
+    },
+    {
+      "label": "Queda em 26/10 (13h02)",
+      "value": "−23,9%",
+      "context": "após rali de +22% em 01–09/10"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bemobi — Relatório de Resultados 2T26 e ITR (12/08/2026)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/deed72f2-beae-4c6f-b423-db57178bae31/021b39a9-360f-e7e2-8ea8-da26278ab6ec?origin=2"
+    },
+    {
+      "title": "Poder360 — Ações com alta superior a 50% em 2026 crescem depois do 1º turno (BMOB3 +54,6% no ano até 09/10)",
+      "url": "https://www.poder360.com.br/poder-economia/acoes-com-alta-superior-a-50-em-2026-crescem-140-depois-do-1o-turno/"
+    },
+    {
+      "title": "Eu Quero Investir — XP eleva alvo da Bemobi para R$ 31",
+      "url": "https://euqueroinvestir.com/acoes/bemobi-crescimento-de-26-em-2026-sustenta-tese-de-compra"
+    },
+    {
+      "title": "Acionista — Bemobi anuncia incorporação da 7AZ Softwares",
+      "url": "https://acionista.com.br/bemobi-bmob3-anuncia-incorporacao-da-7az-softwares-s-a/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais, consultado em 26/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "média — balanço simples (caixa líquido) e crescimento visível, mas a base CVM mistura a receita bruta da M4U, o capital de giro do float é difícil de prever e o crescimento depende de M&A."
+}

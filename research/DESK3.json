@@ -1,0 +1,267 @@
+{
+  "ticker": "DESK3",
+  "name": "Desktop S.A.",
+  "sector": "Telecomunicações / Banda larga fixa (fibra, interior de SP) — controlada pela Claro desde 01/10/2026",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "DESK3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {},
+    "notes": "Sem override de base. DL CVM 30/06/26 = R$ 1.284,7 mi (empréstimos/debêntures 1.684,7 + arrendamentos 91,9, inclusive com partes relacionadas, − caixa 491,9). Ações 116,26 mi (B3; tesouraria residual). EVENTO DOMINANTE: a Claro NXT comprou 72,83% (84.684.273 ações) em 01/10/2026 por R$ 20,63/ação (R$ 1.747 mi): R$ 19,1261/ação pagos no fechamento (com R$ 20 mi retidos para o ajuste de endividamento líquido de 30/09/26) + Parcela Diferida de R$ 1,5051/ação (R$ 127,5 mi em escrow, liberações mensais para cobrir indenizações). Em 02/10/26 protocolou a OPA unificada (alienação de controle — obrigatória — + conversão para categoria B + saída do Novo Mercado; a Claro pode desistir só das duas últimas), com preço igual ao pago aos vendedores, considerados o ajuste de endividamento e a Parcela Diferida, corrigido pela Selic desde 01/10 (Teletime). As projeções abaixo são da Desktop standalone e servem só de referência (DCF/DDM); o valor do estudo é o da OPA (ver valuation_weights e target_multiples)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.073,
+      0.06,
+      0.055,
+      0.05,
+      0.05
+    ],
+    "ebitda_margin": [
+      0.535,
+      0.54,
+      0.54,
+      0.54,
+      0.54
+    ],
+    "da_pct_revenue": [
+      0.225,
+      0.22,
+      0.215,
+      0.21,
+      0.21
+    ],
+    "capex_pct_revenue": [
+      0.24,
+      0.22,
+      0.21,
+      0.2,
+      0.2
+    ],
+    "nwc_pct_revenue": 0.05,
+    "cost_of_net_debt": [
+      0.17,
+      0.17,
+      0.165,
+      0.165,
+      0.165
+    ],
+    "other_financial": [
+      -45,
+      -40,
+      -35,
+      -30,
+      -25
+    ],
+    "tax_rate": [
+      0.4,
+      0.38,
+      0.36,
+      0.35,
+      0.34
+    ],
+    "minority_share_ni": 0.03,
+    "payout": [
+      0.25,
+      0.25,
+      0.3,
+      0.35,
+      0.4
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.15,
+    "roe": 0.18
+  },
+  "wacc": {
+    "kd_pre_tax": 0.165,
+    "target_debt_weight": 0.4,
+    "notes": "Standalone: Kd 16,5% (debêntures CDI+ ~2% sobre CDI a termo de ~14,5–15%); peso da dívida 0,40 ≈ DL ajustada R$ 1,7 bi / (DL + valor de mercado R$ 2,2 bi). Sob a Claro (AAA), o custo cairia, mas isso não chega ao minoritário — ele recebe a OPA."
+  },
+  "adjustments": {
+    "other_debt_like": 420.0,
+    "non_operating_assets": 0,
+    "minority_value": 5.0,
+    "notes": "other_debt_like R$ 420 mi = contas a pagar por aquisição de empresas R$ 207,2 mi + contas a pagar a partes relacionadas (juros sobre mútuo) R$ 91,4 mi + compra dos 30% restantes da Fasternet (R$ 98 mi, 25/08/2026, após o balanço) + dividendos a pagar R$ 5,3 mi + dividendo do 1S26 (R$ 0,0395/ação = R$ 4,6 mi, data-com 27/08) + contingências R$ 13,2 mi. minority_value R$ 5 mi: a recompra da Fasternet zera quase todo o minoritário (contábil R$ 36,5 mi; 25% do lucro no 1S26)."
+  },
+  "target_multiples": {
+    "pe": null,
+    "ev_ebitda": 5.28,
+    "pbv": null,
+    "rationale": "Valor do minoritário = OPA, não o fluxo standalone. Valor da OPA hoje ≈ R$ 19,1261 corrigido pela Selic até a liquidação estimada (meados de fev/2027 → R$ 20,07), descontado ao Ke de 25% (R$ 18,74), + Parcela Diferida de R$ 1,5051 com 75% de chance de liberação em ~1,5 ano, descontada a 25% (R$ 0,81) = ~R$ 19,55. O ajuste de endividamento líquido foi suposto zero. No motor, isso entra como EV/EBITDA-alvo de 5,28x o EBITDA 2027E (o múltiplo que reproduz esse valor do equity, depois de DL 2026E, minoritários e itens tipo dívida) com peso 100% (valuation_weights). Para comparação, a transação saiu a ~6,2x o EBITDA UDM (EV ~R$ 4,1 bi). P/L-alvo omitido de propósito: a TIR 3 anos do motor (saída a P/L) não faz sentido com a ação saindo da bolsa."
+  },
+  "valuation_weights": {
+    "ev_ebitda": 1.0
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.15,
+      "revenue_growth_shift": 0.0,
+      "ebitda_margin_shift": -0.019,
+      "terminal_g_shift": 0.0,
+      "capex_pct_shift": 0.0,
+      "narrative": "OPA atrasa para o 2S27 e parte relevante da Parcela Diferida é consumida por indenizações ou o ajuste de dívida sai negativo (−R$ 1,2/ação)."
+    },
+    "bull": {
+      "probability": 0.1,
+      "revenue_growth_shift": 0.0,
+      "ebitda_margin_shift": 0.006,
+      "terminal_g_shift": 0.0,
+      "capex_pct_shift": 0.0,
+      "narrative": "Liquidação rápida (jan/2027) com a Parcela Diferida integral e ajuste de endividamento positivo (+R$ 0,4/ação)."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.004,
+    "ebitda_margin_sd": 0.003,
+    "terminal_g_sd": 0.0,
+    "capex_pct_sd": 0.0
+  },
+  "debt_profile": {
+    "gross_debt_mn": 1684.7,
+    "pct_floating_cdi": null,
+    "avg_cost": "debêntures CDI+ (não verificado; resultado financeiro de R$ 283 mi/ano sobre DL de R$ 1,3 bi inclui juros de aquisições, mútuo e custos de transação)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": null,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": -12,
+    "notes": "Standalone: dívida bruta ~R$ 1,7 bi em CDI+ contra caixa de R$ 0,5 bi → −R$ 12 mi/ano pré-IR por +100 bp. Para o minoritário, a Selic alta AUMENTA o valor da OPA (preço corrigido pela Selic desde 01/10/2026)."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.4879,
+    "ebitda_margin_avg_5y": 0.4694,
+    "roe_avg_5y": 0.0634,
+    "payout_avg_5y": 0.033,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.081,
+      "ebitda_margin": 0.537,
+      "net_income_mn": 9.7,
+      "net_debt_ebitda": 1.93
+    },
+    "notes": "Consolidadora de ISPs no interior de SP: receita 349 (2021) → 1.219 (2025), quase toda por aquisições; orgânico recente ~+8% (2T26: base +2% a/a, saldo líquido −6 mil acessos no tri, tíquete +5,4%). Margem EBITDA CVM 37% → 51% (2025) → 53,7% no 2T26; LL controlador 26 → 102 (2023) → 71 (2025); ROE de 5–9%: o resultado financeiro (~R$ 280 mi/ano) consome 2/3 do EBIT. Standalone: receita +7,3% em 2026 e 6%→5%; margem 53,5–54%; D&A 22,5%→21%; capex 24%→20% (capex ajustado de R$ 77 mi no 2T26, −35% a/a); IR 40%→34% (1S26: 54% por itens não dedutíveis); payout 25%→40%. Valor standalone ao Ke de 25% fica muito abaixo da OPA, porque o EV a WACC de ~19% (~2x EBITDA de saída) mal cobre a dívida. Isso mostra o quanto o prêmio de controle da Claro (~6x EBITDA) vale para o minoritário."
+  },
+  "guidance": "Sem guidance (companhia em processo de OPA). Release 2T26 (12/08/2026): receita R$ 331,6 mi (+8%), EBITDA ajustado R$ 172,3 mi (+12%; margem 54%), LL ajustado R$ 29,2 mi (−17%), capex ajustado R$ 77 mi, DL R$ 1,52 bi (2,21x EBITDA pró-forma).",
+  "dividend_policy": "Mínimo legal de 25% do lucro ajustado, com payout efetivo de 2–6% em 2022–25 (prioridade a aquisições e desalavancagem). Proventos recentes: R$ 0,1024/ação (dez/25), R$ 0,0439 (data-com 29/04/26) e R$ 0,0395 (1S26, data-com 27/08/26), pagos em 08/09/26. Após a OPA e a eventual saída do Novo Mercado, a política passa a ser da Claro.",
+  "election_impact": "DESK3 caiu só 1,3% em 26/10 (às 13h02): a cotação está ancorada na OPA obrigatória da Claro (R$ 19,1261 + Selic desde 01/10, mais a Parcela Diferida). O canal macro quase não chega ao minoritário: a Selic mais alta até aumenta o preço corrigido, e o risco de crédito do ofertante (Claro/América Movil) é baixo. O que importa é o prazo de registro na CVM e o destino da Parcela Diferida. Para a empresa standalone, a alta do DI piora o custo das debêntures em CDI+ (alavancagem de ~2x EBITDA), mas isso já não muda o valor da oferta.",
+  "summary": "Desde 01/10/2026 a Desktop é controlada pela Claro NXT, que pagou R$ 20,63/ação por 72,83% e protocolou OPA unificada pelo restante, ao preço pago aos vendedores corrigido pela Selic e com a Parcela Diferida. Para quem compra hoje, o valor é o da OPA: o prazo de liquidação, a Parcela Diferida e o ajuste de dívida são os drivers, não o crescimento da fibra. O DCF standalone ao Ke de 25% fica bem abaixo e serve só de referência.",
+  "thesis": [
+    "OPA por alienação de controle é obrigatória (art. 254-A e Novo Mercado): a Claro só pode desistir da conversão de registro e da saída do Novo Mercado.",
+    "Preço da OPA: R$ 19,1261 corrigido pela Selic desde 01/10/2026 (~R$ 0,22/ação por mês) + Parcela Diferida de R$ 1,5051/ação.",
+    "Retorno de arbitragem depende só do prazo: a cotação de 26/10 (R$ 18,99) estava abaixo do preço base já corrigido (~R$ 19,29), e a correção pela Selic protege contra atraso.",
+    "CADE aprovou sem restrições (decisão definitiva em 30/09/2026) e o controle já foi transferido: não há risco de a operação não fechar."
+  ],
+  "risks": [
+    "Prazo: o registro da OPA unificada na CVM pode levar mais de 4–6 meses; cada mês a mais reduz a TIR anualizada.",
+    "Parcela Diferida (R$ 1,5051/ação) cobre indenizações de 'determinadas demandas': pode ser consumida em parte, e o cronograma de liberação ainda será publicado no edital.",
+    "Ajuste de endividamento líquido de 30/09/2026 pode reduzir o preço; R$ 20 mi ficaram retidos como garantia.",
+    "Se a Claro desistir da saída do Novo Mercado, quem não aderir fica numa ação ilíquida, com 73% do capital nas mãos da Claro."
+  ],
+  "catalysts": [
+    "Edital e data do leilão da OPA unificada (pedido protocolado em 02/10/2026)",
+    "Apuração do ajuste de endividamento de 30/09/2026",
+    "Cronograma de liberação da Parcela Diferida (no edital)",
+    "Resultado do 3T26"
+  ],
+  "key_data": [
+    {
+      "label": "Preço pago aos controladores",
+      "value": "R$ 20,63/ação",
+      "context": "R$ 1.747 mi por 72,83% (01/10/2026)"
+    },
+    {
+      "label": "Pago no fechamento",
+      "value": "R$ 19,1261/ação",
+      "context": "base da OPA, corrigida pela Selic desde 01/10"
+    },
+    {
+      "label": "Parcela Diferida (escrow)",
+      "value": "R$ 1,5051/ação",
+      "context": "R$ 127,5 mi; liberações mensais"
+    },
+    {
+      "label": "EBITDA ajustado 2T26",
+      "value": "R$ 172,3 mi",
+      "context": "+12% a/a; margem 54%"
+    },
+    {
+      "label": "DL / EBITDA (release 2T26)",
+      "value": "R$ 1,52 bi / 2,21x",
+      "context": "CVM R$ 1,28 bi (1,93x UDM)"
+    },
+    {
+      "label": "Queda em 26/10 (13h02)",
+      "value": "−1,3%",
+      "context": "ancorada na OPA"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Claro Telecom Participações — Fato Relevante e notificação da Claro NXT (01/10/2026): preço, parcela diferida, OPA unificada",
+      "url": "https://a.storyblok.com/f/238969/x/93f7f1500d/claro_participacoes_fato_relevante_e_notificacao_claro_nxt.pdf"
+    },
+    {
+      "title": "Teletime — Claro pede registro de OPA para fechar o capital da Desktop (05/10/2026)",
+      "url": "https://teletime.com.br/05/10/2026/claro-fechar-capital-desktop/"
+    },
+    {
+      "title": "Teletime — Desktop: lucro cai 17% no 2T26 (12/08/2026)",
+      "url": "https://teletime.com.br/12/08/2026/desktop-lucro-cai-17-segundo-trimestre/"
+    },
+    {
+      "title": "Seu Dinheiro — Claro assume Desktop por R$ 1,75 bi e prepara OPA (02/10/2026)",
+      "url": "https://www.seudinheiro.com/2026/empresas/mais-um-adeus-a-b3-claro-assume-desktop-desk3-por-r-175-bilhao-e-prepara-opa-o-que-muda-para-quem-tem-as-acoes-bdap/"
+    },
+    {
+      "title": "AUVP Analítica — Claro conclui aquisição da Desktop (R$ 19,12/ação no fechamento + retenções)",
+      "url": "https://analitica.auvp.com.br/noticias/claro-conclui-aquisicao-da-desktop-e-planeja-opa-para-acoes-remanescentes"
+    },
+    {
+      "title": "Monitor do Mercado — CADE aprova compra de 72,8% da Desktop pela Claro NXT sem restrições",
+      "url": "https://monitordomercado.com.br/noticias/empresas-e-acoes/428577-cade-aprova-compra-de-72-8-da-desktop-pela-claro-nxt-sem-restricoes/"
+    },
+    {
+      "title": "Investidor10 — Desktop compra restante da Fasternet (25/08/2026)",
+      "url": "https://investidor10.com.br/noticias/desktop-desk3-compra-restante-da-fasternet-provedora-de-internet-no-interior-de-sp-122262/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais, consultado em 26/10/2026)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do time)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "média — o valor depende de um único evento (OPA obrigatória de ofertante AAA, preço fixado e corrigido pela Selic), mas prazo, Parcela Diferida e ajuste de dívida não estão definidos; o cenário standalone é irrelevante para o minoritário."
+}

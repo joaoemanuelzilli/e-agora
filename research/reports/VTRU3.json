@@ -1,0 +1,164 @@
+{
+  "ticker": "VTRU3",
+  "headline": "A Vitru, maior plataforma listada de ensino superior digital (1,03 milhão de alunos), gerou R$ 410 mi de caixa livre no 1S26 e desalavancou de 2,34x para 1,36x em 12 meses. A R$ 13,39 (foto de 26/10, 13h02), negocia a 3,6x o EV/EBITDA 2027E, e o preço embute receita crescendo 1,2% a.a. até 2030, contra 6,2% no modelo.",
+  "verdict": "A R$ 13,39 (foto de 26/10, 13h02), o valor justo é R$ 16,99 (+26,9%), 82,9% das 5.000 simulações ficam acima do preço e a TIR de 3 anos é de 46,3%. A TIR de dono, de 24,5%, fica logo abaixo da Ke de 25%: o DDM (R$ 12,98; peso de 25%) vale menos que o preço porque o payout projetado só passa de 15% em 2028, e o prêmio vem do DCF (R$ 17,57; 50%) e dos múltiplos-alvo (R$ 19,82; 25%). A queda de 35,5% devolveu o rali eleitoral inteiro e foi do tamanho que o modelo de fatores previa, então o que se compra é valuation: Altman Z″ de 6,98 (zona segura), mas confiança média-baixa por dois riscos concentrados — o MEC endurecer o semipresencial e o IR de caixa subir.",
+  "reasons": [
+    {
+      "title": "Conversão de caixa alta, IR quase zero",
+      "body": "FCL (após capex, antes de juros) de R$ 410,0 mi no 1S26 (+65%; 69% do EBITDA), com PCLD caindo de 10,0% para 7,7% da ROL e IR corrente de R$ 6,5 mi contra R$ 49,2 mi no 1S25 (release e ITR 2T26). Parte é timing — o capex foi de 3,6% da ROL no semestre e o modelo usa 9,0% em 2026 —, mas o FCFF projetado para 2027E (R$ 724 mi) ainda equivale a 20,4% do EV de R$ 3,54 bi.",
+      "metric": {
+        "label": "FCL 1S26 (release 2T26)",
+        "value": "R$ 410 mi (+65%)"
+      }
+    },
+    {
+      "title": "Quem ganha participação no novo marco",
+      "body": "Sob o Decreto 12.456/2025, a captação engajada do 2T26 foi de 87,8 mil (+21,3%), 58% dela no semipresencial (+35,3%), e a receita do semipresencial cresceu 17,2% (R$ 338,6 mi). A base chegou a 1,031 milhão de alunos (+4,8%) com 9,3% menos polos (2.413), enquanto Cogna e Yduqs encolhem no digital (release 2T26). Medicina (R$ 161 mi no 1S26, 13% da ROL) é presencial e fica fora do marco do EAD.",
+      "metric": {
+        "label": "Captação engajada 2T26 a/a",
+        "value": "+21,3%"
+      }
+    },
+    {
+      "title": "Desalavancagem rápida, covenant distante",
+      "body": "A DL ex-IFRS-16 caiu R$ 630 mi em 12 meses, para R$ 1.163 mi (1,36x o EBITDA aj.; covenant de 3,0x), com follow-on primário de R$ 203,5 mi a R$ 13,00 e pré-pagamento de R$ 500 mi da 3ª emissão (CDI+2,45%); a S&P pôs o brAA- em perspectiva positiva em jul/2026. No modelo, a DL com arrendamentos vai de 1,4x (2026E) a 0,5x (2028E) e vira caixa líquido em 2030E, o que destrava dividend yield de 1,1%, 3,9% e 11,5% em 2026–28 a R$ 13,39. Piotroski de 8/9 (2025 vs 2024).",
+      "metric": {
+        "label": "DL ex-IFRS-16 / EBITDA aj. (2T25 → 2T26)",
+        "value": "2,34x → 1,36x"
+      }
+    },
+    {
+      "title": "TIR de dono logo abaixo da Ke",
+      "body": "A R$ 13,39, a TIR que iguala dividendos projetados e perpetuidade ao preço é de 24,5%, logo abaixo da Ke de 25%: o DDM (R$ 12,98) fica 3% abaixo do preço porque o payout de 5% → 60% só ganha peso a partir de 2028 (premissa nossa; o estatuto exige 1%). O valor justo de R$ 16,99 pondera DCF R$ 17,57 (50%; WACC 21,5%, EV/EBITDA de saída de 3,5x), DDM (25%) e múltiplos R$ 19,82 (25%; P/L 5,5x → R$ 19,26 e EV/EBITDA 4,5x → R$ 20,39). Comprando hoje e vendendo no fim de 2028 a R$ 27,74 (5,5x o LPA 2029E de R$ 5,04), a TIR de 3 anos é de 46,3%.",
+      "metric": {
+        "label": "TIR de dono a R$ 13,39 (Ke 25%)",
+        "value": "24,5%"
+      }
+    },
+    {
+      "title": "Múltiplo no piso desde a listagem",
+      "body": "O EV de R$ 3,54 bi equivale a 3,97x o EBITDA LTM (R$ 893 mi, CVM) e a 3,64x o de 2027E; P/L 2027E de 3,8x (IR de caixa) e P/VP de 0,50x. Nenhum mês da série desde a listagem (jun/2024) teve EV/EBITDA tão baixo (média 4,94x). Os alvos ficam abaixo das referências: 4,5x EV/EBITDA contra essa média e 5,5x P/L contra 6,5–7x de COGN3 e YDUQ3, pelo risco regulatório.",
+      "metric": {
+        "label": "EV/EBITDA 2027E a R$ 13,39",
+        "value": "3,64x"
+      }
+    },
+    {
+      "title": "Eleição: juros pesam pouco, ProUni fica",
+      "body": "Com dívida 100% em CDI e caixa remunerado, +100 bp de CDI custam ~R$ 11 mi/ano de lucro (~2,4% do lucro 2026E de R$ 455 mi), exposição que cai com a amortização. A reeleição mantém o ProUni, que isentou 77% do IR nominal no 1S26 e, com o ágio da UniCesumar dedutível desde a incorporação (01/01/2026), sustenta o IR de caixa baixo. O custo político — o fim da chance de flexibilizar o marco do EAD — está no bear.",
+      "metric": {
+        "label": "Impacto de +100 bp de CDI no lucro",
+        "value": "−R$ 11 mi/ano"
+      }
+    }
+  ],
+  "statistics": [
+    {
+      "title": "A queda foi do tamanho que os fatores previam",
+      "body": "Com beta de baixa de 1,59 e Ibovespa a −14,6% na foto das 13h02, a queda esperada era de −23,3%; a realizada foi de −35,5% (R$ 20,77 → R$ 13,39), resíduo de −12,3 p.p. (z = −4,5 na vol idiossincrática de 43,5% a.a.). Mas a regressão do dia em 147 ações (R² 0,71; beta, alavancagem, tamanho, consumo doméstico) previa −35,7%, resíduo de +0,1 p.p., e os pares de educação caíram 35–46% (COGN3 −35,2%, YDUQ3 −39,6%, ANIM3 −45,6%). Não há sobrerreação própria a capturar: a oportunidade está no valuation.",
+      "stat": "resíduo vs beta −12,3 p.p. (z = −4,5); vs multifator +0,1 p.p."
+    },
+    {
+      "title": "O crash devolveu o rali eleitoral inteiro",
+      "body": "A ação foi de R$ 12,70 em 14/08 (antes do rali) a R$ 20,77 em 23/10 (+63,5%), precificando a vitória de Flávio, e voltou a R$ 13,39: 5,4% acima do pré-rali e perto do preço do follow-on de maio (R$ 13,00). O valor de mercado caiu de R$ 3,10 bi para R$ 2,00 bi, enquanto o valor do cenário base muda pouco com a eleição — o risco regulatório pesa no bear.",
+      "stat": "rali +63,5%; atual +5,4% vs pré-rali"
+    },
+    {
+      "title": "EV/EBITDA no mínimo da série",
+      "body": "Na série mensal desde jun/2024 (n = 28), o EV/EBITDA de 3,97x tem z = −1,61 e percentil 0 (média 4,94x; p10 4,18x). O P/VP de 0,50x está perto da média (0,54x; z = −0,29), e o P/L LTM de 1,8x não informa: inclui a baixa de R$ 762,6 mi de IR diferido sem efeito caixa. A série é curta — 28 meses de B3.",
+      "stat": "z(EV/EBITDA) = −1,61; percentil 0 (n = 28)"
+    },
+    {
+      "title": "Monte Carlo: o preço está entre o p10 e o p25",
+      "body": "Em 5.000 simulações (σ de crescimento 3,5 p.p., σ de margem 2 p.p., correlação 0,5, σ de g 0,75 p.p., σ de capex 0,5 p.p.), o valor fica entre R$ 12,35 (p10) e R$ 22,14 (p90), com mediana de R$ 16,96; 82,9% dos cenários superam R$ 13,39, abaixo do p25 (R$ 14,37).",
+      "stat": "P(valor > R$ 13,39) = 82,9%; p10–p90 R$ 12,35–22,14"
+    },
+    {
+      "title": "DCF reverso: crescimento quase nulo no preço",
+      "body": "O preço exige deslocamento de −5,0 p.p. no crescimento anual: receita crescendo 1,2% a.a. em 2026–30, contra 6,2% na base, 7,3% a.a. orgânicos em 2023–25 (CVM) e +9,1% no 2T26.",
+      "stat": "crescimento implícito +1,2% a.a. vs +6,2% na base"
+    },
+    {
+      "title": "Sensibilidade e assimetria",
+      "body": "O valor fica acima do preço em toda a grade de Ke de 20% a 30% e g de 3% a 7% (R$ 13,96 a R$ 22,14). Sozinhos, margem −3 p.p. (R$ 14,48) ou crescimento −4 p.p. (R$ 14,05) não chegam ao preço; só a combinação fica abaixo (−4 p.p. e −1,5 p.p.: R$ 12,94; −2 p.p. e −3 p.p.: R$ 13,12). Bear (35%) R$ 12,14 (−9,3%), bull (15%) R$ 19,92 (+48,8%); ponderado R$ 15,73 (+17,5%).",
+      "stat": "bear −9,3% / bull +48,8%; valor > preço para Ke 20–30%"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Regulação do EAD no 4º mandato",
+      "body": "97,6% dos alunos estão em EAD/semipresencial, a enfermagem semipresencial foi suspensa em set/2025 e a reeleição tira a chance de flexibilizar o Decreto 12.456/2025; novas portarias (carga presencial, polos, cursos vedados) podem elevar custo ou cortar captação. O bear (35% de probabilidade: crescimento −3,5 p.p., margem −3 p.p., g −1 p.p.) vale R$ 12,14 (−9,3%).",
+      "mitigant": "Até aqui a Vitru é quem mais ganha com o marco (semipresencial +35,3% na captação do 2T26) e já cortou 9,3% dos polos. Alerta: captação engajada em queda a/a ou portaria que eleve a carga presencial."
+    },
+    {
+      "title": "IR de caixa e dedutibilidade do ágio",
+      "body": "O modelo usa IR de caixa de 4% em 2026 subindo a 12% na perpetuidade, apoiado no ágio da UniCesumar (dedutível até ~2030) e no ProUni. Com IR de 20% em todos os anos (≈ alíquota contábil), o valor cai para R$ 14,41 e a TIR de dono para 22,3%. Não verificado: o diferido do ágio (~R$ 6,7 mi/trimestre) sugere base fiscal menor que o ágio contábil de R$ 1,56 bi, e há risco de autuação ou de mudança legal.",
+      "mitigant": "O IR corrente do 1S26 foi de 3% do LAIR, e o ativo fiscal de prejuízos (R$ 486 mi; ~R$ 100 mi a valor presente) ficou fora do valor. Alerta: IR corrente acima da premissa (4–8% do LAIR até 2029) ou autuação sobre o ágio."
+    },
+    {
+      "title": "Alavancagem, juros e covenant",
+      "body": "São R$ 1,86 bi de debêntures 100% em CDI (CDI+1,84%; prazo médio de 2,6 anos), com R$ 723 mi vencendo em 2027–28 e R$ 733 mi em 2029. O resultado financeiro LTM (−R$ 343 mi) consome 38% do EBITDA e a cobertura EBIT/despesa financeira é de 1,42x (CVM). Os covenants são DL/EBITDA aj. ≤ 3,0x (hoje 1,36x) e EBITDA aj./resultado financeiro ≥ 2,0x; na aproximação com números CVM, o segundo está em ~2,6x — é o de menor folga.",
+      "mitigant": "Caixa de R$ 698 mi, FCFF projetado de R$ 672 mi em 2026 e rating brAA- com perspectiva positiva; o resultado financeiro cai para −R$ 239 mi em 2026E e −R$ 26 mi em 2030E (modelo). Alerta: DL ex-IFRS-16/EBITDA aj. voltando a subir."
+    },
+    {
+      "title": "Ticket parado e reversão da PCLD",
+      "body": "O ticket médio da graduação subiu só 1,5% (R$ 287/mês), há guerra de preço no EAD, e parte do ganho de margem veio da PCLD (7,7% da ROL no 1S26, contra 10,0% no 1S25; 9,3% no 2T26). No 2T26 o custo dos serviços subiu 11,3%, contra ROL +9,1%, pela presencialidade. Margem −2 p.p. em todos os anos leva o valor a R$ 15,32.",
+      "mitigant": "A premissa (37,5% a partir de 2027) já fica abaixo do LTM (38,0%) e do 2T26 (41,0%). Alerta: PCLD de volta a 10% da ROL, nível do bear."
+    },
+    {
+      "title": "Dividendos são premissa; alocação de capital é incerta",
+      "body": "O estatuto exige só 1% do lucro e o histórico é irrisório (R$ 3,5 mi pagos em jun/2026). O DDM e a TIR de dono dependem do payout de 5% → 60% em 2026–30, premissa nossa; a expansão presencial em saúde (até 36 faculdades, Portaria MEC 921, sem plano definido) ou M&A podem consumir o caixa.",
+      "mitigant": "A prioridade declarada é desalavancar, e a premissa só acelera o payout quando a DL cai abaixo de ~0,5x (2028E). Alerta: aquisição ou expansão financiada com dívida."
+    }
+  ],
+  "monitor": [
+    {
+      "kpi": "Captação engajada (semipresencial + EAD)",
+      "threshold": "Invalida se cair a/a no 3T26 ou no ciclo 2027.1 (2T26: +21,3%; semipresencial +35,3%)",
+      "next": "Resultado 3T26 — meados de nov/2026 (data não confirmada; o 3T25 saiu em 13/11/2025)"
+    },
+    {
+      "kpi": "Regras do MEC para EAD/semipresencial",
+      "threshold": "Invalida se nova portaria elevar a carga presencial, restringir polos ou vedar cursos além do Decreto 12.456/2025 (bear: R$ 12,14)",
+      "next": "Contínuo; atenção ao início do novo mandato (jan/2027)"
+    },
+    {
+      "kpi": "IR corrente / LAIR (ITR)",
+      "threshold": "Invalida se passar de 8% do LAIR antes de 2029 (1S26: 3%; premissa 4–8%) ou houver autuação sobre o ágio da UniCesumar; com IR de 20%, a TIR de dono vai a 22,3%",
+      "next": "ITR 3T26 — nov/2026"
+    },
+    {
+      "kpi": "DL ex-IFRS-16 / EBITDA aj.",
+      "threshold": "Invalida se ficar acima de 1,36x no 4T26 ou se M&A/expansão presencial for financiada com dívida",
+      "next": "3T26 (nov/2026) e 4T26 (1T27)"
+    },
+    {
+      "kpi": "PCLD / ROL",
+      "threshold": "Invalida se voltar a 10% da ROL ou mais por dois trimestres seguidos (1S26: 7,7%; 1S25: 10,0%)",
+      "next": "Release trimestral"
+    }
+  ],
+  "catalysts": [
+    {
+      "date": "meados de nov/2026",
+      "event": "Resultado do 3T26 (data não confirmada)"
+    },
+    {
+      "date": "out/2026–mar/2027",
+      "event": "Captação 2027.1 do semipresencial"
+    },
+    {
+      "date": "jan/2027 em diante",
+      "event": "Eventuais portarias do MEC no início do 4º mandato (risco e catalisador)"
+    },
+    {
+      "date": "2027–28",
+      "event": "Início de dividendos ou recompras com a DL abaixo de 1x (modelo: 0,9x em 2027E; payout de 15% → 35%)"
+    },
+    {
+      "date": "a definir",
+      "event": "Decisão sobre até 36 faculdades presenciais de saúde (Portaria MEC 921)"
+    }
+  ],
+  "bottom_line": "Para quem aceita risco regulatório concentrado (97,6% da base em EAD/semipresencial), vol de 40,2% a.a., drawdown máximo de −67% desde a listagem e liquidez de R$ 13,9 mi/dia: TIR de dono de 24,5%, logo abaixo da Ke, com bear de −9,3% e bull de +48,8%. A tese funciona enquanto o MEC não endurecer o semipresencial, a captação seguir crescendo e o IR de caixa ficar perto de zero até ~2030 — com IR de 20%, a TIR cai para 22,3%."
+}

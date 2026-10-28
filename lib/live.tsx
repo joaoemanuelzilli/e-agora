@@ -30,9 +30,16 @@ export function useQuotes(tickers: string[], ms = 30000): QuotesState {
   const [st, setSt] = useState<QuotesState>({ quotes: {}, asOf: null, loading: true, error: false });
   useVisibleInterval(() => {
     if (!key) return;
-    fetch(`/api/quotes?t=${key}`)
-      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
-      .then((d) => setSt({ quotes: d.quotes || {}, asOf: d.asOf, loading: false, error: false }))
+    // a rota atende até 90 tickers por chamada: divide em lotes de 60 e junta as respostas
+    const all = key.split(",");
+    const chunks: string[][] = [];
+    for (let i = 0; i < all.length; i += 60) chunks.push(all.slice(i, i + 60));
+    Promise.allSettled(chunks.map((c) => fetch(`/api/quotes?t=${c.join(",")}`).then((r) => (r.ok ? r.json() : Promise.reject(r.status)))))
+      .then((res) => {
+        const ok = res.filter((x): x is PromiseFulfilledResult<{ quotes?: Record<string, Quote>; asOf: string }> => x.status === "fulfilled").map((x) => x.value);
+        if (!ok.length) return setSt((s) => ({ ...s, loading: false, error: true }));
+        setSt({ quotes: Object.assign({}, ...ok.map((d) => d.quotes || {})), asOf: ok[0].asOf, loading: false, error: ok.length < chunks.length });
+      })
       .catch(() => setSt((s) => ({ ...s, loading: false, error: true })));
   }, ms);
   return st;

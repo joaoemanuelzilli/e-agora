@@ -1,0 +1,205 @@
+{
+ "ticker": "SAUD3",
+ "name": "Bradsaúde S.A. (ex-Odontoprev)",
+ "sector": "Saúde / seguradora e operadora de planos médico-hospitalares (Bradesco Saúde, Mediservice) e odontológicos (Odontoprev), não verticalizada; hospitais via JVs (Atlântica) e 24,85% do Fleury",
+ "template": "financial",
+ "as_of_quarter": "3T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "SAUD3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "equity_controlling_2025": 19931,
+   "ni_controlling_2025": 3657
+  },
+  "notes": "ESTRUTURA: a Bradsaúde é a antiga Odontoprev (mesmo CNPJ 58.119.199/0001-51, código CVM 20125; ticker ODPV3 → SAUD3), que em 01/05/2026 incorporou as ações da Bradesco Gestão de Saúde (Bradesco Saúde, Mediservice, Bradesco Operadora, Atlântica Hospitais, Orizon, Meu Doutor Novamed, 24,85% do Fleury) emitindo 2.378 mi de ações ao Bradesco, que passou a ter 91,35% (free float 8,65%, com dispensa da B3 até 30/10/2027). Por isso o FY2025 CVM (R$ 2,4 bi de receita, PL R$ 1,28 bi) é só da Odontoprev e não serve de base. TEMPLATE FINANCIAL: é seguradora/operadora regulada pela ANS, sem dívida financeira, com R$ 30,8 bi de ativos financeiros que lastreiam ~R$ 24 bi de provisões técnicas; o resultado financeiro sobre esse 'float' (R$ 3,3 bi em 12 meses, ~1/3 do resultado das operações) é receita operacional e o capital regulatório (PLA vs CBR, suficiência de R$ 1,45 bi) limita a distribuição. EBITDA/FCFF e 'dívida líquida' (a CVM mostra caixa líquido de R$ 30,4 bi) não fazem sentido econômico; o valor é ROE × PL e dividendos, como em bancos/seguradoras. BASE: lucro em BRGAAP pró-forma do release (IFRS 4, estrutura atual replicada para o passado): 2025 R$ 3.657 mi, 9M26 R$ 3.493 mi, 12M R$ 4.315 mi; a diferença para o IFRS 17 da CVM é pequena no acumulado (9M26 −R$ 23 mi; 3T26 +R$ 106 mi). PL-base pró-forma: o motor projeta PL_2026 = PL_FY2025 + LL_2026 − Div_2026 (ano cheio), e o DDM só usa a fração de 2026 após 30/09 (25%). Fixamos: LL 2026E = R$ 4.470 mi (9M26 R$ 3.493 + 4T26E R$ 977 mi) e proventos de quem compra hoje no 4T26 = R$ 1.260 mi (dividendo de R$ 1,0 bi com data-com 30/10/2026, pago em 30/03/2027, + JCP do 4T26 estimado em R$ 260 mi) ⇒ Div_2026 'cheio' = 1.260/0,252 = R$ 5.002 mi (payout 112%). PL 2026E alvo = PL CVM 30/09 R$ 19.659 mi + LL 4T26 ~R$ 1.000 mi − R$ 1.260 mi = R$ 19.399 mi ⇒ PL_FY2025 pró-forma = 19.399 + 5.002 − 4.470 = R$ 19.931 mi e ROE 2026 sobre ele de 22,4%. Os JCP com data-com já passada (R$ 230 mi de 30/06 e R$ 250 mi de 24/09) estão no passivo (dividendos/JCP a pagar R$ 527 mi) e fora do PL e dos fluxos."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   1.119,
+   0.6,
+   0.6,
+   0.65,
+   0.65
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.2243,
+   0.25,
+   0.248,
+   0.242,
+   0.235
+  ],
+  "ni_growth": null,
+  "payout": [
+   1.119,
+   0.6,
+   0.6,
+   0.65,
+   0.65
+  ]
+ },
+ "terminal": {
+  "g": 0.06,
+  "roe": 0.22
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Seguradora: sem ponte EV→equity. Participações por equivalência (R$ 5,6 bi: 24,85% do Fleury, JVs hospitalares da Atlântica com Rede D'Or/Einstein/Mater Dei, 33% da Croma) estão no PL e o resultado delas no lucro (ROE × PL). Minoritários desprezíveis (R$ 2 mi). Ativo fiscal diferido R$ 1,3–1,5 bi e provisões cíveis R$ 1,3 bi (judicialização) já no PL."
+ },
+ "target_multiples": {
+  "pe": 8.5,
+  "ev_ebitda": null,
+  "pbv": 1.9,
+  "rationale": "P/L 8,5x sobre o lucro 2027E e P/VP 1,9x sobre o PL 2026E (coerentes entre si: 8,5 × ROE normalizado de ~22% ≈ 1,9x). Histórico próprio curto e distorcido (SAUD3 negocia desde mai/2026; a série de múltiplos do data/market usa lucro CVM só da Odontoprev): na sexta pré-eleição (R$ 16,55) negociava a ~11,2x o lucro pró-forma de 12 meses (R$ 4,3 bi) e ~2,5x o PL; ODPV3 negociou entre ~13x e 18x P/L nos últimos 5 anos (estimativa, não verificada). Seguradoras listadas (data/market, mediana de 5 anos sobre lucro/PL CVM de 12 meses): PSSA3 9,1x P/L e 1,67x P/VP (ROE ~20%), BBSE3 8,6x, CXSE3 12,4x; no estudo usamos 8x/1,7x para PSSA3, 7x para BBSE3 e 10x para CXSE3 — SAUD3 a 8,5x/1,9x fica entre elas, com ROE maior que o da Porto mas lucro mais cíclico (sinistralidade) e free float de 8,65%. Com Ke de 25%, ROE terminal de 22% e g de 6%, o P/VP justo de Gordon é 0,84x e o P/L justo ~4x — os múltiplos-alvo acima são de mercado (Ke ~13–15%) e entram só na perna de múltiplos."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.04,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Ciclo de sinistralidade vira: VCMH e judicialização levam a sinistralidade de 83,4% para ~85,5–86% (cada 1 p.p. ≈ −R$ 370 mi de lucro, −1,8 p.p. de ROE), ANS aperta reajustes de coletivos/PME no 4º mandato e a Selic cai, reduzindo o float; ROE de ~20%."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "PME segue crescendo dois dígitos com sinistralidade abaixo da média, Atlântica amadurece (lucro de R$ 139 mi em 12 meses e 4.449 leitos contratados) e a Selic fica alta por mais tempo, sustentando o resultado financeiro; ROE de 26–27%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.025,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "n/a — sem dívida financeira (passivo de arrendamento de R$ 198 mi)",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null,
+  "notes": "Ativos financeiros R$ 30.776 mi (30/09/2026): IPCA+ 53,9% (R$ 16,6 bi, quase todo acima de 12 meses; R$ 12,1 bi ao custo amortizado), Selic 39,6% (R$ 12,2 bi), pré 6,5%. Lastreiam provisões técnicas (~R$ 24 bi no passivo) e o capital regulatório: PLA R$ 8.247 mi vs CBR R$ 6.798 mi nas operadoras de saúde (suficiência R$ 1.450 mi, era R$ 1.258 mi em junho). Dividendos/JCP a pagar R$ 527 mi."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 80,
+  "notes": "Sensibilidade POSITIVA no resultado: R$ 12,2 bi em ativos pós-fixados (Selic) ⇒ +100 bp ≈ +R$ 120 mi antes de IR ≈ +R$ 80 mi depois de IR (~1,7% do lucro). A carteira IPCA+ ao custo amortizado (R$ 12,1 bi) rende a taxa contratada; a parcela a valor justo em ORA (R$ 6,6 bi, dos quais R$ 4,5 bi IPCA+) sofre marcação negativa no PL quando a curva sobe (+100 bp de juro real ≈ −R$ 0,2–0,3 bi antes de IR, estimativa por duration ~6 anos)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.104,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.176,
+  "payout_avg_5y": 0.73,
+  "last_quarter": {
+   "period": "3T26",
+   "revenue_yoy": 0.092,
+   "ebitda_margin": null,
+   "net_income_mn": 1075,
+   "net_debt_ebitda": null
+  },
+  "notes": "Histórico pró-forma da Bradsaúde (release 3T26, BRGAAP) só desde 2023: receitas totais R$ 42,1 → 46,8 → 51,3 bi (2023–25; CAGR 10,4%, usado em revenue_cagr_5y) e R$ 54,9 bi em 12 meses; sinistralidade consolidada 92,1% → 88,5% → 83,4% (12M 83,4%; 3T26 84,5%); lucro R$ 1.440 → 1.910 → 3.657 mi e R$ 4.315 mi em 12 meses; ROAE 11,3% → 14,8% → 26,7% (12M 25,4%; média 2023–25 de 17,6% em roe_avg_5y). O salto do ROE veio de −8,7 p.p. de sinistralidade em dois anos: 2025 foi o ciclo mais favorável da história. payout_avg_5y = Odontoprev isolada (CVM 2021–25: 69/46/36/101/114%; média 73%). Premissas: LL 2026E R$ 4.470 mi (+22%); ROE sobre o PL inicial de 25,0% em 2027 (LL ~R$ 4,85 bi, +8,5%) caindo a 23,5% em 2030 (LL ~R$ 6,0 bi) — prêmios +9–10% com reajustes e PME, sinistralidade estável em ~83,5–84%, despesas administrativas diluindo (4,2% da receita no 3T26) e CDI a termo de 14,5–15% sustentando o float; ROE terminal de 22% embute reversão parcial do ciclo de sinistralidade e Selic estrutural menor. Payout 60–65% (mínimo estatutário de 50%; retenção para CBR crescendo ~10% a.a. e investimentos da Atlântica)."
+ },
+ "guidance": "Sem guidance numérico. Prioridades declaradas no 3T26 (21/10/2026): crescimento em PME (78% das adições do trimestre, sinistralidade abaixo da carteira), disciplina de subscrição e renovações, eficiência administrativa e expansão da Atlântica (23 hospitais, 4.449 leitos contratados até 2030; R$ 2,8 bi investidos e R$ 5,1 bi comprometidos, segundo a apresentação corporativa). Remuneração: prioridade a JCP e avaliação de dividendos adicionais.",
+ "dividend_policy": "Estatuto: mínimo de 50% do lucro líquido (dividendos e/ou JCP). Deliberados em 2026: JCP de R$ 230 mi (data-com 30/06, pago em 30/11/2026), JCP de R$ 250 mi (data-com 24/09, pago em 26/02/2027) e dividendos de R$ 1,0 bi (R$ 0,342/ação, aprovados em 21/10, data-com 30/10/2026, ex em 03/11, pagamento em 30/03/2027) — total R$ 1,48 bi. Os dois JCP têm data-com passada (não são do comprador); o dividendo de R$ 1,0 bi é. Projeção: 4T26 = R$ 1,0 bi + JCP de ~R$ 260 mi; payout de 60% em 2027–28 e 65% em 2029–30.",
+ "election_impact": "Queda de −12% (R$ 16,55 → R$ 14,51), menor que a do setor: sem dívida e com o lucro AUMENTANDO com Selic alta (+100 bp ≈ +R$ 80 mi/ano). O que pesa é (i) contágio do controlador (BBDC4 −24%) e fluxo estrangeiro; (ii) marcação a mercado da carteira IPCA+ em ORA com a curva +300 bp (efeito pequeno no PL de R$ 19,7 bi); (iii) risco regulatório de um 4º mandato de Lula sobre planos coletivos/PME (regra de reajuste e cancelamento na ANS) — a carteira é 98% coletiva, então o teto da ANS para individuais quase não afeta, mas uma regulação de reajuste de coletivos afetaria. Emprego formal e salário mínimo sustentam vidas corporativas/PME. O valor intrínseco muda pouco com a eleição; o risco real é o ciclo de sinistralidade.",
+ "summary": "Maior seguradora de saúde do país em receita (R$ 54,9 bi em 12 meses; 13,7 mi de vidas, 4,1 mi em saúde e 9,6 mi em odonto), sem verticalização e sem dívida, com ROAE de 25,4% e lucro de R$ 4,3 bi em 12 meses. A queda na eleição foi modesta e o lucro até ganha com juros altos, mas o ROE atual vem do melhor ciclo de sinistralidade da história e o papel tem só 8,65% de free float.",
+ "thesis": [
+  "Escala e mix: prêmios ganhos +9,4% no 3T26 (R$ 14,1 bi), PME a 3,1 mi de vidas (+11,6% em saúde) com sinistralidade abaixo da média; 745 mil vidas adicionadas em 12 meses.",
+  "Float e capital: R$ 30,8 bi de ativos financeiros (40% Selic, 54% IPCA+) geram R$ 3,3 bi/ano de resultado financeiro; zero dívida e suficiência regulatória de R$ 1,45 bi.",
+  "Retorno ao acionista: mínimo de 50% do lucro; R$ 1,48 bi já deliberados em 2026, incluindo R$ 1,0 bi de dividendos com data-com em 30/10 (2,4% do preço da foto)."
+ ],
+ "risks": [
+  "Ciclo de sinistralidade: 3T26 em 84,5% (+0,5 p.p.); cada 1 p.p. sobre ~R$ 56 bi de prêmios ≈ R$ 370 mi de lucro (~8%). Em 2023 a sinistralidade era 92,1% e o ROAE 11%.",
+  "Regulação da ANS para coletivos/PME e judicialização (provisões cíveis de R$ 1,3 bi) num 4º mandato.",
+  "Free float de 8,65%: oferta secundária do Bradesco para cumprir o mínimo da B3 até 30/10/2027 (overhang) e governança de controlador com 91%.",
+  "Queda estrutural da Selic reduz o resultado financeiro (~1/3 do resultado das operações).",
+  "Capital consumido pela Atlântica (R$ 5,1 bi comprometidos em hospitais com parceiros) pode limitar o payout."
+ ],
+ "catalysts": [
+  "Pagamento do dividendo de R$ 1,0 bi (data-com 30/10/2026, pagamento 30/03/2027) e JCP do 4T26",
+  "Resultado do 4T26 (fevereiro/2027; data a confirmar) e ciclo de reajustes coletivos de 2027",
+  "Oferta para recompor free float até 30/10/2027"
+ ],
+ "key_data": [
+  {
+   "label": "Lucro líquido 3T26 (BRGAAP)",
+   "value": "R$ 1.075 mi (+14,4%)",
+   "context": "IFRS 17 (CVM) R$ 1.181 mi; 9M26 R$ 3.493 mi (+23,2%)"
+  },
+  {
+   "label": "ROAE 12M",
+   "value": "25,4%",
+   "context": "24,5% até set/25; lucro 12M R$ 4.315 mi"
+  },
+  {
+   "label": "Sinistralidade consolidada",
+   "value": "84,5% (3T26)",
+   "context": "84,0% no 3T25; 12M 83,4% (2023: 92,1%)"
+  },
+  {
+   "label": "Receitas totais 3T26",
+   "value": "R$ 14.275 mi (+9,2%)",
+   "context": "12M R$ 54,9 bi; prêmios ganhos R$ 14.134 mi"
+  },
+  {
+   "label": "Ativos financeiros / PL",
+   "value": "R$ 30,8 bi / R$ 19,66 bi (IFRS)",
+   "context": "BRGAAP R$ 19,40 bi; sem dívida"
+  },
+  {
+   "label": "Ações / free float",
+   "value": "2.923,5 mi / 8,65%",
+   "context": "Bradesco 91,35%"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Bradsaúde – Relatório de Resultados 3T26 (21/10/2026)",
+   "url": "https://filemanager-cdn.mziq.com/published/c504a4a5-75e7-4404-8af7-524b50cd7e11/1db31ea0-12b9-4cde-a5f6-535e54ef329b"
+  },
+  {
+   "title": "Bradsaúde – Apresentação Corporativa (out/2026, dados do 2T26)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/c504a4a5-75e7-4404-8af7-524b50cd7e11/0f08b5af-ea2b-ba4a-c057-963a5eaf3cd3?origin=2"
+  },
+  {
+   "title": "Bloomberg Línea – Bradesco reúne negócios de saúde na Odontoprev",
+   "url": "https://www.bloomberglinea.com.br/negocios/bradesco-reune-negocios-de-saude-na-odontoprev-e-lista-operacoes-do-setor-na-bolsa/"
+  },
+  {
+   "title": "Seu Dinheiro – Balanço 3T26 da Bradsaúde e visão de analistas",
+   "url": "https://www.seudinheiro.com/2026/empresas/sinistralidade-sobe-mas-lucro-fala-mais-alto-por-que-bradsaude-saud3-agradou-mercado-rnda/"
+  },
+  {
+   "title": "CVM – ITR 3T26 padronizado (data/hist/SAUD3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 – cotação ao vivo e proventos",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/SAUD3"
+  }
+ ],
+ "confidence": "média — release oficial do 3T26 lido e reconciliado com a CVM (BRGAAP × IFRS 17), mas o histórico da estrutura atual é só pró-forma desde 2023, o ROE de 25% depende do ciclo de sinistralidade no ponto mais favorável e o PL-base do motor é pró-forma."
+}

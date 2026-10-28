@@ -1,0 +1,223 @@
+{
+ "ticker": "ITUB4",
+ "name": "Itaú Unibanco Holding S.A.",
+ "sector": "Financeiro / Banco múltiplo privado (Brasil + América Latina), seguros e cartões",
+ "template": "financial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "ITUB3",
+   "class": "ON"
+  },
+  {
+   "ticker": "ITUB4",
+   "class": "PN"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override. Base de lucro: lucro RECORRENTE em IFRS (o mesmo critério do PL controlador CVM): 1S26 = R$ 23.964 mi (2T26 R$ 12.096 mi; ROE recorrente IFRS 22,6%), contra o gerencial BRGAAP de R$ 24.689 mi (ROE 24,3–24,5%); o IFRS fica ~3% abaixo. LL 2026E = 1S26 23.964 + 2S26E ~24.800 = R$ 48,76 bi → ROE de abertura 23,84% × PL FY2025 CVM R$ 204.501 mi. Checagem de PL: o motor leva o PL a R$ 215,7 bi no fim de 2026 (payout 77%); pelo realizado, PL 2T26 R$ 217.779 mi + LL 2S26E ~24,6 bi − proventos 2S26E ~26,7 bi (2S26 regular + adicional de fim de ano para fechar ~75% do gerencial) ≈ R$ 215,7 bi. Ações: 11.021,9 mi em circulação (B3 11.026,9 mi emitidas − tesouraria CVM 30/06), já após a bonificação de 3% de dez/25; 5.615,2 mi ON + 5.406,7 mi PN. ITUB3 negocia com prêmio de ~13% sobre a ITUB4 (46,31 × 41,00 na foto), mas os direitos econômicos são iguais: o valor por ação do motor serve às duas classes."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "payout": [
+   0.77,
+   0.77,
+   0.77,
+   0.77,
+   0.77
+  ]
+ },
+ "financial_projection": {
+  "roe": [
+   0.2384,
+   0.24,
+   0.238,
+   0.234,
+   0.23
+  ],
+  "ni_growth": null,
+  "payout": [
+   0.77,
+   0.77,
+   0.77,
+   0.77,
+   0.77
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roe": 0.21
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.0
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Banco: sem ponte EV→equity. Minoritários (R$ 10,2 bi de PL; ~2,3% do lucro, LTM R$ 1.115 mi de 47.943) já estão fora do lucro e do PL controlador usados."
+ },
+ "target_multiples": {
+  "pe": 7.5,
+  "ev_ebitda": null,
+  "pbv": 1.7,
+  "rationale": "P/VP 1,70x (sobre o PL CVM 2026E) e P/L 7,5x (sobre o LPA recorrente IFRS 2027E). Histórico (data/market, base CVM): P/VP mediana 5 anos 1,74x (p10 1,50x; mínimo 1,43x), 10 anos 2,01x; P/L LTM mediana 5 anos 9,5x (p10 8,3x), 10 anos 10,4x. Na foto de 26/10: 2,08x e 9,65x LTM. Depois do choque, o DI longo subiu ~250–300 bp; com ROE de ~22–23% e Ke de mercado ~16% (g 6%), Gordon dá ~1,7x — na mediana de 5 anos e ~18% abaixo de hoje. O P/L de 7,5x sobre o 2027E (≈ 8,3x sobre o LTM) é ~15% abaixo da mediana de 5 anos e coerente com o P/VP (1,7 × VPA 2026E / LPA 2027E ≈ 7,1x). Pares: BBDC4 0,85–0,9x PL e ~6,5x; BPAC11 ~2x PL. Lembrete: esses múltiplos embutem Ke de mercado de 14–16%; com Ke 25% e ROE_T 21% o P/VP justo é ~0,8x."
+ },
+ "valuation_weights": {
+  "ddm": 0.6,
+  "pbv": 0.4
+ },
+ "valuation_weights_rationale": "Mesmo critério que o motor aplica aos demais bancos do estudo (SECTOR_WEIGHTS de BBAS3/BBDC4/BRSR6/BPAC11, definidos pelas baterias de teste em data/tests): valor = ROE contra Ke sobre o PL. O P/L sai do blend por ser redundante com o DDM e distorcido por JCP e provisões; continua usado na TIR 3 anos (saída a 7,5x).",
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "revenue_growth_shift": -0.02,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Selic acima de 15% em 2027 + fim do JCP/alta de CSLL num 4º mandato + ciclo de crédito PF/MPME: ROE de ~20–21% até 2030 (−3 pp)."
+  },
+  "bull": {
+   "probability": 0.15,
+   "revenue_growth_shift": 0.01,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Juros devolvem o choque em 2027, carteira volta a crescer ~10% e eficiência digital leva o ROE a ~25–26% sustentado."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.0
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "n/a (banco: captação é passivo operacional; ver Basileia/LCR)",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 0,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": null,
+  "notes": "Sensibilidade oficial não localizada nesta rodada. Qualitativo: o Itaú é levemente beneficiado por Selic alta via remuneração do capital próprio e passivos sem custo (margem com mercado R$ 931 mi no 2T26; 1S26 R$ 1,75 bi) e pelo JCP maior (juros mais altos elevam a dedução), mas perde via custo do crédito em PF/MPME (inadimplência 90d PF Brasil 3,7%, MPME 2,0%) e via carteira mais lenta. Choque de +250–300 bp no DI longo: marcação de títulos a valor justo no PL (não quantificada) e Nível I de 13,8% com folga sobre o mínimo de 9,6%. Câmbio: ~10% do lucro vem da América Latina (Chile/Colômbia); real fraco eleva esse lucro em reais."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.074,
+  "ebitda_margin_avg_5y": null,
+  "roe_avg_5y": 0.194,
+  "payout_avg_5y": 0.48,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.078,
+   "ebitda_margin": null,
+   "net_income_mn": 12096,
+   "net_debt_ebitda": null
+  },
+  "notes": "revenue_cagr_5y aqui = CAGR do PL controlador CVM 2020–25 (R$ 142.993 → 204.501 mi; 7,4% a.a., deprimido pelas distribuições extraordinárias de 2024–25). ROE CVM 2021–25: 18,1/18,2/18,5/20,5/21,6% (média 19,4%); LTM 2T26 22,2%. Lucro CVM 2021–25: 26,8 → 44,9 bi (CAGR 13,8%); gerencial recorrente 2024 R$ 41,4 bi → 2025 R$ 46,8 bi (+13,1%). Payout em caixa (DFC): 24/24/32/53/109% (2025 inclui R$ 20 bi extraordinários pagos em 19/12/25); declarado 2025 ~75–80% do recorrente. Projeção: LL recorrente IFRS 2026E R$ 48,8 bi (+~9%), 2027E R$ 51,8 bi (+6%), 2030E R$ 58,2 bi; ROE sobre PL médio 23,1% (2026) → 22,4% (2030), terminal 21% — abaixo do atual (22,6% IFRS / 24,3% gerencial) por concorrência, tributação e Selic alta mais longa; acima da média CVM de 5 anos. revenue_yoy do last_quarter = crescimento a/a do lucro recorrente gerencial (+7,8%); net_income_mn = recorrente IFRS."
+ },
+ "guidance": "Guidance 2026 (fev/26; revisado no 2T26 em 04/08/26 só na linha de serviços e seguros): carteira total +5,5% a +9,5% (Brasil +6,5% a +10,5%); margem financeira com clientes +5% a +9%; custo do crédito R$ 38,5–43,5 bi; serviços e resultado de seguros +2% a +5% (era +5% a +9%); despesas não decorrentes de juros +1,5% a +5,5%; alíquota efetiva 29,5–32,5% (perto do piso). Sem guidance de lucro; o ponto médio implicava ~R$ 51 bi gerencial (BBI). 1S26 gerencial R$ 24,7 bi (+9,1%). 3T26 em 03/11/2026 (após o fechamento).",
+ "dividend_policy": "Política: payout mínimo estatutário de 25%, JCP mensal (R$ 0,018182/ação) + JCP trimestral/semestral + 'dividendos adicionais' anuais do capital acima do CET1 mínimo de 11,5% definido pelo conselho (antes chamados de extraordinários). 2025: R$ 20 bi extraordinários pagos em 19/12/25 + R$ 3,4 bi de JCP; recompra aprovada em 05/02/26 (R$ 1,76 bi executados no 1T26). 1S26: JCP de R$ 3,85 bi (data-com 19/03) + R$ 3,99 bi (18/06), pagos em 28/08 — já fora do fluxo de quem compra hoje (o stub de 2026 do motor cobre só o 2S26: JCP mensal, JCP do 2S e o adicional de fim de ano). Premissa: 77% do lucro recorrente IFRS (≈ 75% do gerencial; Genial espera ~70%). CET1 12,3% (2T26) × mínimo 11,5%.",
+ "election_impact": "ITUB4 −15,1% (R$ 48,30 → 41,00; ITUB3 −12,9%) na foto de 26/10; P/VP de ~2,4x para 2,08x. É o banco menos exposto ao canal micro: sem risco de controle estatal, capital acima da meta e lucro que até se beneficia de Selic alta na margem com mercado e no JCP. O que muda de fato: (i) taxa de desconto — o DI longo subiu ~300 bp e comprime o múltiplo de um ativo de duration longa (P/L ~10x); (ii) custo do crédito PF/MPME e carteira mais lenta em 2027 (PIB Focus 1,3% pré-choque); (iii) risco tributário num 4º mandato (fim/limitação do JCP, CSLL de bancos, tributação de dividendos já em vigor desde 2026). Estimo o lucro 2027E ~2–3% abaixo da trajetória pré-eleição; quase toda a queda do preço é re-rating, não lucro.",
+ "summary": "Melhor franquia bancária do país: ROE recorrente de 22,6% (IFRS) / 24,3% (gerencial) no 2T26, inadimplência estável em 1,9% e CET1 de 12,3% acima da meta, o que sustenta payout de ~75%. O caso é de qualidade e previsibilidade: o lucro cresce perto do PL (~5–6% a.a. com payout alto) e o valor depende quase só do ROE de longo prazo contra o Ke. A ~2,1x o PL, o preço embute um custo de capital bem abaixo dos 25% do estudo.",
+ "thesis": [
+  "Lucro recorrente de R$ 12,4 bi no 2T26 (+7,8% a/a; 1S26 R$ 24,7 bi, +9,1%), ROE de 24,3% e eficiência Brasil de 35,5%.",
+  "Qualidade de crédito: inadimplência 90d estável em 1,9% pelo 6º trimestre; custo do crédito de 2,7% da carteira (R$ 10,1 bi).",
+  "Capital: CET1 de 12,3% vs mínimo de 11,5% do conselho → dividendos adicionais recorrentes; payout ~75% com crescimento do PL de ~5–6% a.a.",
+  "Duration: cada 1 pp de ROE terminal vale ~0,05x PL a Ke 25% (~R$ 11 bi); o valor é pouco sensível ao ciclo e muito sensível ao Ke."
+ ],
+ "risks": [
+  "Tributação: fim ou limitação do JCP (benefício fiscal de ~R$ 4–5 bi/ano) e alta de CSLL de bancos num 4º mandato.",
+  "Selic acima de 15% por mais tempo e desaceleração de 2027 → custo do crédito acima do guidance (R$ 38,5–43,5 bi) e carteira abaixo de 5,5%.",
+  "Receitas de serviços e seguros em desaceleração (guidance cortado para 2–5%) com concorrência de Nubank/fintechs e Pix.",
+  "Valuation: a 2,1x PL o papel é o mais sensível do setor a re-rating; múltiplo pode convergir para o p10 de 5 anos (1,5x)."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 em 03/11/2026 (após o fechamento) e teleconferência em 04/11.",
+  "Anúncio dos dividendos adicionais de 2026 (dez/26–fev/27) e do guidance 2027 (fev/27).",
+  "Sinalizações do governo sobre JCP/tributação de bancos no novo mandato."
+ ],
+ "key_data": [
+  {
+   "label": "Lucro recorrente 2T26",
+   "value": "R$ 12,4 bi gerencial (+7,8% a/a) · R$ 12,1 bi IFRS",
+   "context": "1S26 R$ 24,7 bi gerencial / R$ 24,0 bi IFRS"
+  },
+  {
+   "label": "ROE recorrente 2T26",
+   "value": "24,3% gerencial · 22,6% IFRS",
+   "context": "ROE Brasil 25,7%; 2T25 23,3%"
+  },
+  {
+   "label": "Carteira 2T26",
+   "value": "R$ 1,522 tri (+9,6% a/a)",
+   "context": "Guidance 2026 +5,5% a +9,5%"
+  },
+  {
+   "label": "Inadimplência 90d / custo do crédito",
+   "value": "1,9% / 2,7% (R$ 10,1 bi)",
+   "context": "PF Brasil 3,7%; MPME 2,0%"
+  },
+  {
+   "label": "Capital 2T26",
+   "value": "CET1 12,3% · Nível I 13,8%",
+   "context": "Mínimo do conselho CET1 11,5%"
+  },
+  {
+   "label": "PL controlador CVM 2T26",
+   "value": "R$ 217.779 mi",
+   "context": "FY2025 R$ 204.501 mi (após R$ 20 bi extraordinários)"
+  },
+  {
+   "label": "Preço PN / ON / P/VP",
+   "value": "R$ 41,00 / R$ 46,31 / 2,08x",
+   "context": "Sexta R$ 48,30 / R$ 53,16"
+  }
+ ],
+ "sources": [
+  {
+   "title": "InfoMoney — Itaú segue com ROE difícil de replicar, mas corta guidance (2T26)",
+   "url": "https://www.infomoney.com.br/mercados/itau-itub4-balanco-2t26-segue-com-roe-dificil-de-replicar-mas-corta-guidance-servicos-desempenho-acoes/"
+  },
+  {
+   "title": "Forbes Brasil — Itaú lucra R$ 12,4 bi no 2T26 e corta projeção de receitas (guidance completo, CET1)",
+   "url": "https://forbes.com.br/forbes-money/2026/08/itau-itub4-lucro-2t26-corta-projecao-receitas"
+  },
+  {
+   "title": "Investidor10 — Itaú lucra R$ 12,4 bilhões no 2T26",
+   "url": "https://investidor10.com.br/noticias/itau-itub4-lucra-r-12-4-bilhoes-no-2t26-acima-das-expectativas-121852/"
+  },
+  {
+   "title": "InfoMoney — Itaú 4T25: maior ROE desde 2015; guidance 2026",
+   "url": "https://www.infomoney.com.br/?p=3200641"
+  },
+  {
+   "title": "Itaúsa — Relatório da Administração 2T26 (dados IFRS do Itaú: lucro recorrente, PL, JCP do 1S26)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/afd9200b-9b01-4d1c-bdd9-9b2c1e9b3b4d/68055d0d-aa63-8b36-872c-f27026a2a42e?origin=2"
+  },
+  {
+   "title": "Seu Dinheiro — Calendário de balanços do 3T26 (Itaú em 03/11)",
+   "url": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/ITUB4.json, pipeline do líder)",
+   "url": "https://dados.cvm.gov.br/"
+  },
+  {
+   "title": "B3 — cotação (API oficial), foto de 26/10/2026 13h02",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/ITUB4"
+  }
+ ],
+ "confidence": "média-alta — lucro, PL e capital de fonte oficial (CVM e Itaúsa RA 2T26) e franquia previsível; incertezas são o payout exato de 2026 (dividendo adicional ainda não anunciado) e o risco tributário, e o valor é muito sensível ao ROE terminal e ao Ke."
+}

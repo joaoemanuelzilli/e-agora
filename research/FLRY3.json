@@ -1,0 +1,253 @@
+{
+ "ticker": "FLRY3",
+ "name": "Fleury S.A.",
+ "sector": "Saúde / medicina diagnóstica (B2C, B2B/hospitais, atendimento móvel) + novos elos (ortopedia, infusões/oncologia, odontologia)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "FLRY3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "net_debt": 4143
+  },
+  "notes": "DL base = DL CVM do pipeline R$ 3.371 mi (debêntures/empréstimos R$ 4.048 mi + arrendamentos IFRS-16 R$ 1.361 mi, que a CVM já põe em 2.01.04.03/2.02.01.03, − caixa e aplicações R$ 2.038 mi) + obrigações por aquisições a pagar R$ 412 mi (Moody's Local, 10/08/2026; entram no covenant da cia.) + dividendos declarados em 02/12/2025 ainda não pagos em 30/06 (2 parcelas de R$ 0,13027/ação = R$ 141,6 mi, pagáveis em 02/09/2026 e 02/09/2027) + JCP de R$ 0,40073/ação (R$ 217,8 mi) com data-com 11/08/2026 e pagamento em 28/09/2026 — saiu do caixa depois do balanço-base e não é fluxo de quem compra hoje. Total R$ 4.143 mi (DL da cia. sem arrendamentos: R$ 2.422 mi = 1,1x EBITDA covenant). Receita base = CVM FY2025 (R$ 8.291 mi). EBITDA no conceito CVM IFRS-16 (EBIT 3.05 + D&A DVA): 25,6% em 2025, 26,6% no 1S26 (cia.: 26,5% no 2T26). D&A inclui depreciação de direito de uso (~3% da ROL) e amortização de intangíveis de aquisições (PPA da Pardini e bolt-ons). Capex do modelo = capex caixa (~5% da ROL; 6,1% em 2025, 3,0% no 1S26) + principal de arrendamentos (~3,4%: pagamentos de R$ 433 mi/ano na DFC incluem juros de ~R$ 150 mi) + M&A bolt-on (~1%; R$ 174 mi pagos em 2025)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.11,
+   0.09,
+   0.08,
+   0.075,
+   0.07
+  ],
+  "ebitda_margin": [
+   0.258,
+   0.26,
+   0.262,
+   0.263,
+   0.264
+  ],
+  "da_pct_revenue": [
+   0.096,
+   0.094,
+   0.093,
+   0.093,
+   0.093
+  ],
+  "capex_pct_revenue": [
+   0.09,
+   0.095,
+   0.095,
+   0.092,
+   0.09
+  ],
+  "nwc_pct_revenue": 0.15,
+  "cost_of_net_debt": [
+   0.135,
+   0.137,
+   0.14,
+   0.142,
+   0.142
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.22,
+   0.22,
+   0.23,
+   0.23,
+   0.24
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   1.0,
+   0.8,
+   0.8,
+   0.8,
+   0.8
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.15,
+  "roe": 0.17
+ },
+ "wacc": {
+  "kd_pre_tax": 0.15,
+  "target_debt_weight": 0.2
+ },
+ "adjustments": {
+  "other_debt_like": 0,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "Itens debt-like (aquisições a pagar, dividendos/JCP declarados, arrendamentos) já na DL base. Minoritários a valor contábil (R$ 101 mi); o lucro dos não controladores é negativo (−R$ 16 mi em 2025, −R$ 6 mi no 1S26: controladas em maturação), por isso minority_share_ni = 0 (conservador ~1–2% no lucro). Participações por equivalência (R$ 169 mi; Croma, fundo Kortex) não somadas: resultado de equivalência já está no EBIT. Provisões para contingências R$ 168 mi não ajustadas (provisão contábil já no passivo; depósitos judiciais pequenos)."
+ },
+ "target_multiples": {
+  "pe": 12.0,
+  "ev_ebitda": 6.0,
+  "pbv": 1.6,
+  "rationale": "EV/EBITDA 6,0x (IFRS-16) e P/L 12x sobre 2027E. Histórico FLRY3 (data/market, 5 anos): EV/EBITDA média 6,7x, mediana 6,5x, p10 5,1x; P/L média 17,0x, mediana 15,1x, p10 11,5x; antes da eleição negociava a 7,0x EV/EBITDA LTM e 17,6x P/L LTM, no topo da faixa de 5 anos depois de subir 86% no ano. Usamos o terço inferior da faixa histórica porque esses múltiplos embutem Ke de ~13–15% e o estudo exige 25%; em linha com o que usamos para RDOR3 (6,5x / 10x), com P/L um pouco maior pela distribuição alta (payout de caixa médio de ~95% em 2021–25) e alavancagem menor."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.025,
+   "ebitda_margin_shift": -0.015,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Operadoras (Hapvida em reestruturação, Bradsaúde/SulAmérica apertando custo) cortam preço e aumentam glosas, B2B perde volume para laboratórios próprios das verticalizadas e o CDI fica acima de 15% até 2028: crescimento de 5–6% e margem de ~24,5%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.015,
+   "ebitda_margin_shift": 0.01,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Marca Fleury segue crescendo dois dígitos, novos elos (ortopedia, infusões) ganham escala, bolt-ons em MG/SP capturam sinergia e o SUS ('Agora Tem Especialistas') compra exames da rede privada: margem passa de 27%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.02,
+  "ebitda_margin_sd": 0.01,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.005
+ },
+ "debt_profile": {
+  "gross_debt_mn": 4048,
+  "pct_floating_cdi": 1.0,
+  "avg_cost": "CDI+1,0% (2T26); ~CDI+0,7% após a 11ª emissão (estimativa)",
+  "avg_maturity_years": 2.8,
+  "next_24m_maturities_mn": 600,
+  "covenant_nd_ebitda": 3.0,
+  "notes": "Dívida financeira R$ 4,05 bi (quase toda debêntures em CDI+) + arrendamentos R$ 1,36 bi + aquisições a pagar R$ 0,41 bi (Moody's Local: dívida bruta ajustada R$ 5,8 bi). Caixa R$ 2,04 bi aplicado a 100–102% do CDI. Em ago/2026 emitiu a 11ª emissão (R$ 1,825 bi; 1ª série CDI+0,42% com vencimento 2030–31; 2ª série CDI+0,53%, 2032–33) para pré-pagar R$ 1,48 bi das 5ª–8ª emissões, mais caras e curtas; o cronograma passa a concentrar vencimentos em 2028–29 em diante. Covenant: DL (dívida financeira + aquisições, sem arrendamentos)/EBITDA ≤ 3,0x, em 1,1x no 2T26; após o pré-pagamento só a 2ª série da 7ª emissão (vence abr/2029) mantém o covenant. Rating AAA.br estável. Vencimentos em 24 meses: estimativa (cronograma pós-emissão não publicado no material lido)."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -16,
+  "notes": "Exposição líquida a CDI ≈ dívida R$ 4,4 bi (pós-emissão) − caixa R$ 2,1 bi ≈ R$ 2,3 bi ⇒ +100 bp ≈ −R$ 23 mi antes de IR ≈ −R$ 16–18 mi depois de IR (~2% do lucro 2027E). Arrendamentos e aquisições a pagar têm taxas fixas/IPCA, pouco sensíveis no curto prazo."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.228,
+  "ebitda_margin_avg_5y": 0.26,
+  "roe_avg_5y": 0.135,
+  "payout_avg_5y": 0.91,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.144,
+   "ebitda_margin": 0.262,
+   "net_income_mn": 221.9,
+   "net_debt_ebitda": 1.1
+  },
+  "notes": "CAGR de 22,8% em 5 anos inclui a incorporação do Hermes Pardini (abr/2023); orgânico 2025: +7,9%; 1S26 +12,3% (inclui Confiance, Hemolab e LSL, adquiridas em 2025; B2C orgânico +11,6% no 2T26). Margem EBITDA CVM 2021–25: 27,3/26,7/24,6/25,7/25,6% (média 26%); 1S26 26,6%; o 4º tri é sazonalmente fraco (~22%). ROE CVM 2021–25: 19,5/13,6/10,9/11,9/11,9% (PL inflado pelo ágio da Pardini); LTM 13,5%. Payout de caixa 2021–25: 85/110/120/56/84%. Premissas: receita +11% em 2026 (2S26 +9,6%, base forte do 2S25) desacelerando a 7%; margem 25,8% → 26,4% (ganho de escala e mix; abaixo do pico de 27–30% pré-Pardini); D&A 9,6% → 9,3% (amortização de PPA caindo); capex total 9–9,5% (caixa + arrendamentos + bolt-ons); custo da DL 13,5–14,2% (debêntures a CDI+0,5–1,0% com CDI a termo de 14,5–15,2%, caixa rendendo CDI e arrendamentos a ~11–12% fixos; o resultado financeiro LTM de −R$ 473 mi equivale a ~13% sobre DL+aquisições); IR 22–24% (JCP e ágio dedutível; 2025: 20,8%, 1S26: 21,8%)."
+ },
+ "guidance": "Sem guidance numérico. Diretriz declarada no 2T26 (06/08/2026): crescimento orgânico e inorgânico (bolt-ons de laboratórios integráveis), disciplina de capital e alavancagem baixa; abertura de unidades (ex.: Unidade Marco 100 em maio/2026). Data do 3T26 não verificada (novembro/2026, a confirmar).",
+ "dividend_policy": "Mínimo estatutário de 25%, mas prática de distribuição alta: JCP semestral + dividendos no fim do ano. Declarado sobre 2025: JCP de R$ 0,2349/ação (dez/25) e dividendos de R$ 0,4037 + 0,1303 + 0,1303/ação com data-com 02/12/2025 (pagos em mai/26, set/26 e set/27). Em 2026: JCP de R$ 0,4007/ação (R$ 217,8 mi; data-com 11/08, pago em 28/09) — fora dos fluxos do comprador e tratado como dívida. Recompras pequenas (R$ 21 mi em 2024). Projeção: declaração de dez/2026 ≈ R$ 360 mi (payout 100% sobre o lucro do 2S26 do modelo) e 80% de 2027 a 2030.",
+ "election_impact": "Queda de −18% (R$ 27,87 → R$ 22,76) depois de alta de 86% no ano: o canal é desconto (P/L LTM de 17,6x para ~14x) e fluxo de fundos/IBOV, não lucro. A exposição a juros é pequena (+100 bp de CDI ≈ −R$ 16–18 mi/ano, ~2% do lucro), e a dívida foi alongada a CDI+0,4–0,5% em agosto. 4º mandato de Lula: neutro a levemente positivo para diagnósticos (programa 'Agora Tem Especialistas' compra exames e consultas da rede privada; envelhecimento e emprego formal sustentam a base de beneficiários) e negativo na margem por custo de pessoal (salário mínimo, PLR) e por eventual fim/redução do JCP. O valor intrínseco a Ke 25% muda pouco com a eleição; o problema é que o preço pré-eleição já embutia múltiplos altos.",
+ "summary": "Líder em medicina diagnóstica premium (marca Fleury) e nº 2 do setor com o Hermes Pardini (MG/B2B), em boa fase operacional: receita +14,4%, EBITDA +15,2% (26,5%) e lucro +45,7% no 2T26, com DL/EBITDA de 1,1x e dívida recém-alongada a spreads baixos. A queda na eleição foi de múltiplo, e o lucro cresce perto de 10% ao ano; mas a Ke de 25% exige um preço bem abaixo do atual.",
+ "thesis": [
+  "Execução: 2T26 com receita líquida R$ 2,31 bi (+14,4%), B2C +15% (orgânico +11,6%), marca Fleury +12% e EBITDA R$ 613 mi (+15,2%; margem 26,5%), acima do consenso; lucro R$ 222 mi (+45,7%).",
+  "Balanço e caixa: geração operacional R$ 696 mi no 2T26 (+42,9%), DL da cia. R$ 2,42 bi = 1,1x EBITDA (covenant 3,0x), rating AAA.br e 11ª emissão a CDI+0,42–0,53% para pré-pagar R$ 1,48 bi de dívida mais cara.",
+  "Acionista estratégico: a Bradsaúde (91% Bradesco) detém 24,85% do Fleury desde 2009 e mantém parcerias (Croma oncologia, fundo Kortex); distribuição alta (payout médio de caixa ~95% em 2021–25)."
+ ],
+ "risks": [
+  "Poder de barganha das operadoras: maiores clientes (Bradesco Saúde, SulAmérica, Amil, Hapvida) pressionam preço, glosas e prazo de recebimento (recebíveis de R$ 2,1 bi, +R$ 348 mi no 1S26).",
+  "Verticalização: operadoras e hospitais (Rede D'Or, Hapvida, Dasa) internalizam exames, reduzindo o B2B.",
+  "Custo de pessoal e serviços médicos (+17% no 1T26) acima da receita; 2S26 com base de comparação forte (Itaú BBA).",
+  "Valuation: depois de +86% no ano, a ação ainda negocia acima da média de 5 anos em P/L; a Ke de 25% torna a TIR implícita baixa mesmo após a queda.",
+  "Tributário: fim do JCP ou mudança na tributação de dividendos elevaria a alíquota efetiva (hoje ~21%)."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (novembro/2026; data a confirmar)",
+  "Declaração de JCP/dividendos de dezembro/2026",
+  "Novos bolt-ons e expansão de unidades; eventual movimento estratégico da Bradsaúde (24,85%)"
+ ],
+ "key_data": [
+  {
+   "label": "Receita líquida 2T26",
+   "value": "R$ 2.317 mi (+14,4%)",
+   "context": "1S26 R$ 4.540 mi (+12,3%); B2C orgânico +11,6%"
+  },
+  {
+   "label": "EBITDA 2T26",
+   "value": "R$ 613 mi (26,5%)",
+   "context": "+15,2% a/a; 1S26 R$ 1,22 bi (+12,9%)"
+  },
+  {
+   "label": "Lucro líquido 2T26",
+   "value": "R$ 221,9 mi (+45,7%)",
+   "context": "consenso Bloomberg R$ 172 mi; 1S26 R$ 423 mi"
+  },
+  {
+   "label": "DL da cia. / EBITDA",
+   "value": "R$ 2,42 bi / 1,1x",
+   "context": "+ arrendamentos R$ 1,36 bi; covenant 3,0x"
+  },
+  {
+   "label": "11ª emissão de debêntures",
+   "value": "R$ 1,825 bi a CDI+0,42–0,53%",
+   "context": "pré-paga R$ 1,48 bi; vencimentos 2030–33"
+  },
+  {
+   "label": "Ações em circulação",
+   "value": "543,6 mi",
+   "context": "Bradsaúde 24,85%"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Money Times – Fleury lucra R$ 221,9 milhões no 2T26 (06/08/2026)",
+   "url": "https://www.moneytimes.com.br/fleury-flry3-lucra-r-2219-milhoes-no-2t26-avanco-de-457-ceo-reforca-estrategia-de-crescimento-lmrs/"
+  },
+  {
+   "title": "Moody's Local Brasil – rating AAA.br da 11ª emissão de debêntures do Fleury (10/08/2026)",
+   "url": "https://investidor10.com.br/acoes/link_comunicado/FLRY3/47247/"
+  },
+  {
+   "title": "Exame – Fleury eleva lucro e barateia dívida (1T26)",
+   "url": "https://exame.com/invest/mercados/fleury-eleva-lucro-barateia-divida-e-ainda-vai-as-compras-mesmo-com-juros-nas-alturas/"
+  },
+  {
+   "title": "Bradsaúde – Relatório de Resultados 3T26 (participação de 24,85% no Fleury)",
+   "url": "https://filemanager-cdn.mziq.com/published/c504a4a5-75e7-4404-8af7-524b50cd7e11/1db31ea0-12b9-4cde-a5f6-535e54ef329b"
+  },
+  {
+   "title": "CVM – DFP/ITR padronizados (data/hist/FLRY3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  },
+  {
+   "title": "B3 – cotação ao vivo",
+   "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/FLRY3"
+  }
+ ],
+ "confidence": "média — base CVM limpa e coerente com o release e com o rating da Moody's; release completo do 2T26 não lido (números via imprensa e agência de rating) e o valor depende de múltiplos de saída num setor com pressão de operadoras."
+}

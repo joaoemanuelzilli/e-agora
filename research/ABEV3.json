@@ -1,0 +1,255 @@
+{
+  "ticker": "ABEV3",
+  "name": "Ambev S.A.",
+  "sector": "Consumo não cíclico / Bebidas (cerveja e não alcoólicas; Brasil, América Central e Caribe, América Latina Sul e Canadá)",
+  "template": "industrial",
+  "as_of_quarter": "2T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "ABEV3",
+      "class": "ON"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "shares_outstanding_mn": 15425.8
+    },
+    "notes": "Ações: 15.452,8 mi em data/hist (B3 15.484,7 mi emitidas, já líquidas do cancelamento posterior ao balanço, − tesouraria CVM de 30/06) menos 27,0 mi recompradas em jul/26 (nota 24.3 do ITR: R$ 430 mi) = 15.425,8 mi; o caixa gasto (R$ 430 mi) está em other_debt_like, sem contar duas vezes. Receita e DL sem ajuste: a DL CVM (−15.475,5) já inclui arrendamentos IFRS-16 (R$ 2.586,7 mi dentro de 'Empréstimos e financiamentos'; release: dívida R$ 2.949,0 mi, caixa líquido R$ 15.397,4 mi + aplicações LP R$ 78 mi). PADRONIZAÇÃO DO EBITDA (checklist 4): a CVM põe no resultado financeiro dois custos operacionais — (i) juros do ajuste a valor presente de fornecedores (AVP; R$ 647 mi no 1S26, 1,5% da receita: o CPV é registrado a valor presente e o prazo longo de fornecedor, que está no capital de giro negativo, é 'pago' via juros) e (ii) ~metade da perda cambial não derivativa, a compra de dólares para importação na Bolívia (~0,4% da receita). Ambos saem do resultado financeiro e entram na margem: ebitda_margin = margem CVM − 1,9 p.p. (margem CVM projetada: 36,0% 2026 [run-rate 2S26]; 34,5%; 34,8%; 35,0%; 34,3%). O EV/EBITDA-alvo está nessa mesma base."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue_growth": [
+      0.015,
+      0.07,
+      0.06,
+      0.055,
+      0.055
+    ],
+    "ebitda_margin": [
+      0.341,
+      0.326,
+      0.329,
+      0.331,
+      0.324
+    ],
+    "da_pct_revenue": [
+      0.069,
+      0.07,
+      0.07,
+      0.07,
+      0.07
+    ],
+    "capex_pct_revenue": [
+      0.056,
+      0.06,
+      0.06,
+      0.06,
+      0.06
+    ],
+    "nwc_pct_revenue": -0.08,
+    "cost_of_net_debt": [
+      0.075,
+      0.075,
+      0.075,
+      0.075,
+      0.075
+    ],
+    "other_financial": [
+      -2050,
+      -2150,
+      -2200,
+      -2250,
+      -2300
+    ],
+    "tax_rate": [
+      0.205,
+      0.21,
+      0.21,
+      0.21,
+      0.21
+    ],
+    "minority_share_ni": 0.03,
+    "payout": [
+      0.8,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "buyback_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "equity_issuance_mn": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roic": 0.28,
+    "roe": 0.25
+  },
+  "wacc": {
+    "kd_pre_tax": 0.155,
+    "target_debt_weight": 0.0,
+    "notes": "Caixa líquido (DL/EBITDA −0,5x): wd = 0 → WACC = Ke = 25%. cost_of_net_debt é RENDIMENTO do caixa líquido (o motor faz −kd × DL, positivo com DL negativa): rendimento pré-IR de ~9,0% a.a. (2T26: R$ 422,7 mi de juros sobre caixa e títulos, sobre caixa médio ~R$ 19 bi = 8,9%, menos juros de arrendamento de ~10,6%; mistura de CDI ~14,5–15% no Brasil com caixa no exterior a taxas menores). Como o motor aplica a alíquota efetiva (~21%, que cai por JCP) e a receita financeira é tributada a 34% na margem, informamos 9,0% × 0,66 / 0,79 = 7,5%: o rendimento líquido no modelo fica em ~5,9% = 9,0% × (1 − 34%)."
+  },
+  "adjustments": {
+    "other_debt_like": 11023,
+    "non_operating_assets": 3022,
+    "minority_value": 4500,
+    "notes": "other_debt_like (R$ mi, balanço 30/06/2026 salvo indicação): dividendos/JCP a pagar 4.194,4 (2ª e 3ª parcelas do JCP de dez/25, pagas 06/07 e 06/10/2026, e JCP de mai/26 com data-com 22/06) + JCP de jul/26 com data-com 21/09/2026, bruto R$ 0,0713 × 15.452,8 mi = 1.101,8 (do vendedor; pago até dez/26) + recompra de jul/26 430 (ver overrides) + put da CND/Tranche B (2,89% da Tenedora, ELJ) 1.217,2 + benefícios pós-emprego (assistência médica e previdência) 1.754,0 × (1 − 34%) = 1.157,6 + provisões para contingências prováveis (CP 662,2 + LP 707,6) × 0,66 = 904,1 + IR/CS a recolher de longo prazo (parcelamento) 570,3 + ICMS diferido (incentivo, financiamento estadual com juros) 660,7 + 7,4 = 668,1 + 50% do caixa restrito na Bolívia (R$ 1.558,2 mi sem conversibilidade; perdas na compra de dólares) 779,1 = 11.022,6. Derivativos (passivo 1.134 − ativo 637 = 497) são hedge de CPV e ficam fora (já refletidos no custo). non_operating_assets: créditos de PIS/COFINS da exclusão do ICMS R$ 7.554,7 mi (CP 436,6 + LP 7.118,1), monetização lenta (~R$ 0,5–1 bi/ano) → 40% ≈ valor presente a 25% = 3.022. Os juros desses créditos (Selic) ficam em other_financial só no lucro/DDM. Participações em coligadas (R$ 1.078 mi, inclui Cuba, desconsolidada em jan/26) não somadas: a equivalência já está no EBIT. minority_value: minoritários contábeis são R$ 580 mi, mas o lucro dos não controladores é R$ 507 mi UDM (3,0% do lucro total). Excluída a fatia da ELJ na CND (~R$ 70 mi, já coberta pela put), ~R$ 450 mi/ano × ~10x = 4.500. other_financial (pré-IR, R$ mi/ano, sem os juros sobre a DL e sem o AVP/Bolívia movidos para a margem): +730 juros sobre créditos tributários (cai para +400 em 2030) − 125 juros de incentivos fiscais − 390 outros juros (put CND, etc.) − 1.100 custo de carrego do hedge cambial (US$ 1,9 bi, ~9,6–10% a.a.) e de commodities − 150 câmbio residual − 210 IOF/tributos financeiros − 800 fianças/seguro garantia, juros de contingências e previdência, tarifas = −2.045 em 2026, subindo com a inflação. Calibração: 1S26 real ex-AVP −895 (semestre); 2T26 −486 total."
+  },
+  "target_multiples": {
+    "pe": 12.5,
+    "ev_ebitda": 7.0,
+    "pbv": 2.2,
+    "rationale": "Histórico (data/market): P/L mediana 5 anos 14,6x (p10 13,1x), 3 anos 14,2x; EV/EBITDA mediana 5 anos 7,8x (p10 6,5x), 3 anos 7,1x; hoje 14,6x LTM e 7,3x. Pares globais (AB InBev, Heineken, FEMSA/KOF) negociam em P/L de 13–17x. Os múltiplos de mercado embutem Ke de ~11–12% (DY de 6–7% + crescimento nominal de 5–6%), metade do Ke de 25% do estudo. Por isso usamos alvo abaixo do p10 de 5 anos: P/L 12,5x sobre o LPA 2027E e EV/EBITDA 7,0x sobre o EBITDA 2027E na base padronizada (−1,9 p.p. vs CVM, ≈ 6,6x no conceito reportado/IFRS-16). P/VP 2,2x ≈ p10 de 5 anos (2,07x)."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.02,
+      "ebitda_margin_shift": -0.02,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.005,
+      "narrative": "Imposto Seletivo sobre bebidas alcoólicas e fim dos incentivos de ICMS mais pesados que o previsto, real fraco no CPV de 2027 e volume de cerveja estagnado no Brasil."
+    },
+    "bull": {
+      "probability": 0.15,
+      "revenue_growth_shift": 0.015,
+      "ebitda_margin_shift": 0.01,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Premiumização e balanced choices seguem ganhando mix, real fraco amplia a conversão de CAC/LAS/Canadá e a margem sobe como em 2025–26 (+70–100 bp/ano)."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.025,
+    "ebitda_margin_sd": 0.015,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.005
+  },
+  "debt_profile": {
+    "gross_debt_mn": 2949,
+    "pct_floating_cdi": null,
+    "avg_cost": "Dívida bancária pequena (R$ 362 mi); o restante são arrendamentos IFRS-16 (R$ 2.587 mi, juros de ~10,6% a.a.). Caixa de R$ 18,4 bi (CDB/compromissadas no Brasil + caixa no exterior)",
+    "avg_maturity_years": null,
+    "next_24m_maturities_mn": 2350,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": 5,
+    "notes": "Caixa em reais (~R$ 11 bi) rende CDI: +100 bp ≈ +R$ 110 mi pré-IR. Mas o custo de carrego do hedge cambial (US$ 1,9 bi × R$ 5,4 × 1%) sobe ~R$ 100 mi: efeito líquido ≈ zero. O canal relevante dos juros para a Ambev é o Ke e o consumo, não o resultado financeiro."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.0861,
+    "ebitda_margin_avg_5y": 0.3119,
+    "roe_avg_5y": 0.1693,
+    "payout_avg_5y": 0.863,
+    "last_quarter": {
+      "period": "2T26",
+      "revenue_yoy": 0.0029,
+      "ebitda_margin": 0.3146,
+      "net_income_mn": 3387,
+      "net_debt_ebitda": -0.51
+    },
+    "notes": "Receita 2020–25: +8,6% a.a. (2021–22 inflados por Argentina/inflação); 3 anos: +3,5% (real forte e Argentina). Projetamos 2026 +1,5% (1S26 +0,1% reportado e +7,2% orgânico: conversão cambial −R$ 2,3 bi e Cuba desconsolidada −R$ 0,6 bi; 2S26 ~+2,5%), 2027 +7% (Brasil +6,5% e conversão de CAC/LAS/Canadá a R$ 5,4/US$ contra ~R$ 5,2 em 2026) e 5,5–6% depois (~inflação + 1–2% de volume/mix). Margem EBITDA CVM: 30,3/29,0/30,9/31,9/33,8% (2021–25; média 31,2%), 1S26 32,5%, 2S25 36,0%. A coluna 2026 usa o run-rate do 2S26 (36,0% CVM, sazonal: o 2S tem ~55% do EBITDA), porque o motor só usa a fração do ano após 30/06. 2027–29: 34,5–35,0% CVM; 2030 34,3% (−0,7 p.p. pela transição dos incentivos de ICMS, que somaram R$ 972 mi no 1S26). Na base padronizada (−1,9 p.p.): 34,1 / 32,6 / 32,9 / 33,1 / 32,4%. Lucro 2027E do modelo ≈ R$ 18 bi vs R$ 16,2 bi UDM. ROE 2021–25 médio 16,9% (PL inflado por ágio e reduzido pelos −R$ 75 bi de 'transações entre sócios'). Payout caixa médio 86% + recompras (2025: R$ 22,3 bi de proventos, antecipados por causa da nova tributação de dividendos, + R$ 1,9 bi de recompra). Payout projetado (com recompras, como pede o motor): 80% no stub de 2026. Corresponde à declaração de dez/26, já sem os JCP de mai e jul/26, que são do vendedor. Em 2027–30, 100%: o FCFE é ~105–110% do lucro (capex de 6% < D&A de 7% e capital de giro negativo), e o caixa líquido fica estável em ~0,6x o EBITDA."
+  },
+  "guidance": "Guidance 2026 mantido em 30/07/2026: CPV/hl de Cerveja Brasil (ex-D&A, ex-marketplace) entre +4,5% e +7,5%. Sem guidance de receita, EBITDA ou capex. Pelo release, a empresa 'segue retornando de forma consistente o excesso de caixa aos acionistas'.",
+  "dividend_policy": "Estatuto: mínimo de 40% do lucro ajustado. Na prática, distribui todo o excesso de caixa via JCP (maximiza o benefício fiscal, R$ 767 mi no 1S26), dividendos e recompras. 2025: R$ 22,3 bi pagos (R$ 0,4612/ação de dividendo em 30/12/25 e JCP de R$ 0,269/ação declarado em dez/25, antecipados por causa da Lei 15.270/2025) + R$ 1,9 bi em recompra. 2026: JCP de R$ 0,0449 (data-com 22/06) e R$ 0,0713 (data-com 21/09), ambos pagos até 31/12/2026 e já do vendedor. Recompra: programa de out/25 (208 mi ações) com 198,5 mi compradas (R$ 3,2 bi) até jul/26. JCP com IRRF de 17,5%; dividendos acima de R$ 50 mil/mês a pessoa física com retenção de 10% (Lei 15.270/2025).",
+  "election_impact": "ABEV3 caiu 8,2% em 26/10, pouco mais que metade do Ibovespa (−13,9% no fechamento): é defensiva, tem caixa líquido e ~45% da receita vem de fora do Brasil (CAC, LAS, Canadá), que ganha na conversão com o real fraco (dólar de R$ 5,04 para R$ 5,34–5,49). O que muda no valor: (i) o Ke e o prêmio de risco Brasil (canal dominante); (ii) CPV em dólar (alumínio, malte/cevada, açúcar): a Ambev faz hedge de ~12 meses, então 2026 está protegido e 2027 foi parcialmente travado a R$ 5,0–5,3, antes da eleição; o real a R$ 5,4 pesa no restante; (iii) carrego do hedge e caixa em CDI se compensam; (iv) consumo das classes C/D com juros altos e crédito caro. O 4º mandato Lula mantém a agenda tributária em curso: Imposto Seletivo sobre bebidas alcoólicas a partir de 2027 (alíquotas ainda por lei ordinária), transição do ICMS de 2029 a 2032 (incentivos de R$ 1,9 bi/ano) e pressão por arrecadação (JCP e tributação de dividendos já mudaram em 2025–26). Não há canal de intervenção direta. Micro intacto: 2T26 com volume de cerveja no Brasil +5%, EBITDA ajustado +8,9% orgânico e margem de 31,6%.",
+  "summary": "Líder absoluta de cerveja no Brasil e dona de operações de alta margem na América Central e Caribe (43,7% de margem EBITDA ajustada), com caixa líquido de R$ 15,4 bi e distribuição de quase todo o lucro. A eleição muda pouco o negócio: o real fraco ajuda na conversão e é coberto por hedge no CPV de curto prazo. O valor da ação depende sobretudo do custo de capital. Com Ke de 25%, um negócio de crescimento nominal de 5–6% e ROE de ~20% vale bem menos que os 12–15x de lucro que o mercado costuma pagar.",
+  "thesis": [
+    "Execução sólida no 1S26: receita orgânica +7,2%, EBITDA ajustado +9,6% e margem +70 bp. Em Cerveja Brasil, volume +5,0% e EBITDA +12,8% no 2T26.",
+    "Caixa líquido de R$ 15,4 bi (−0,5x EBITDA) e FCFE ≈ lucro: distribui ~90–100% do lucro via JCP, dividendos e recompras (R$ 5,9 bi devolvidos até 30/07/2026).",
+    "Diversificação cambial: ~45% da receita e do EBITDA fora do Brasil. O real a R$ 5,4/US$ eleva o EBITDA convertido em ~2–3% em 2027.",
+    "Premiumização e balanced choices: premium +20%, balanced choices +60%, sem álcool +20% em volume no 2T26. O BEES Marketplace cresceu 58% em GMV."
+  ],
+  "risks": [
+    "Reforma tributária: Imposto Seletivo sobre cerveja a partir de 2027 (alíquotas indefinidas) e fim dos incentivos de ICMS (R$ 972 mi no 1S26) entre 2029 e 2032.",
+    "Câmbio e commodities: alumínio, malte e açúcar em dólar. O hedge cobre ~12 meses. O real a R$ 5,4 pressiona o CPV de 2027 e o carrego do hedge (~10% a.a. sobre US$ 1,9 bi).",
+    "Contingências fiscais 'possíveis' de dezenas de bilhões (ágio, lucros no exterior, ICMS-ST) e cortes de benefícios (JCP) pelo governo.",
+    "Argentina (IAS 29) e Bolívia (falta de divisas, R$ 1,6 bi de caixa preso), mais o volume fraco no Canadá.",
+    "Consumo de baixa renda com juros altos e endividamento; clima e concorrência (Heineken, Petrópolis)."
+  ],
+  "catalysts": [
+    "Resultado do 3T26 (previsto para o início de nov/26; data não verificada)",
+    "Proventos e eventual novo programa de recompra (historicamente aprovados em out–dez)",
+    "Regulamentação das alíquotas do Imposto Seletivo (2026–27)",
+    "Guidance de CPV/hl para 2027 (fev/27)"
+  ],
+  "key_data": [
+    {
+      "label": "Caixa líquido 2T26",
+      "value": "R$ 15,4 bi",
+      "context": "−0,5x EBITDA; dívida bruta de R$ 2,9 bi, quase toda IFRS-16"
+    },
+    {
+      "label": "EBITDA ajustado 2T26",
+      "value": "R$ 6.376,7 mi",
+      "context": "+8,9% orgânico; margem de 31,6% (+80 bp)"
+    },
+    {
+      "label": "Cerveja Brasil 2T26",
+      "value": "volume +5,0%",
+      "context": "ROL/hl +3,8%; EBITDA +12,8% orgânico; margem de 33,5%"
+    },
+    {
+      "label": "Lucro líquido ajustado 2T26",
+      "value": "R$ 3.492,7 mi",
+      "context": "+23,3% a/a; LPA de R$ 0,22"
+    },
+    {
+      "label": "Exposição cambial com hedge",
+      "value": "US$ 1,9 bi",
+      "context": "carrego de ~9,6% a.a. no resultado financeiro"
+    },
+    {
+      "label": "Queda em 26/10",
+      "value": "−8,2%",
+      "context": "R$ 16,68 → R$ 15,31 (13h02), contra Ibovespa −13,9% no fechamento"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ambev — Release de Resultados 2T26 (30/07/2026) e ITR 30/06/2026",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/c8182463-4b7e-408c-9d0f-42797662435e/943b7dfa-8aab-d433-66f3-ab4c81c30c45?origin=2"
+    },
+    {
+      "title": "InfoMoney — Ambev frustra projeções no 2T, apesar de lucro forte",
+      "url": "https://www.infomoney.com.br/mercados/ambev-abev3-frustra-projecoes-no-2t-apesar-de-lucro-forte-mercado-olha-alem-do-efeito-copa-desempenho-acoes/"
+    },
+    {
+      "title": "Money Times — Ambev bate expectativa e lucro avança 24,5% no 2T26",
+      "url": "https://www.moneytimes.com.br/ambev-abev3-bate-expectativa-do-mercado-e-lucro-avanca-245-no-2t26-a-r-347-bilhoes-lmrs/"
+    },
+    {
+      "title": "Poder360 — Lucro da Ambev sobe 24,5% e vai a R$ 3,47 bi no 2º trimestre",
+      "url": "https://www.poder360.com.br/poder-economia/lucro-da-ambev-sobe-245-e-vai-a-r-347-bi-no-2o-trimestre/"
+    },
+    {
+      "title": "B3 — GetListedSupplementCompany (proventos oficiais)",
+      "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/ABEV3.json)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+    }
+  ],
+  "confidence": "média — base contábil sólida (release e ITR do 2T26 lidos na íntegra) e negócio previsível. Mas o valor no Ke de 25% depende quase só da perpetuidade, e o resultado financeiro tem itens grandes de classificação discutível (AVP de fornecedores, carrego de hedge, Bolívia). Imposto Seletivo e transição do ICMS ainda sem números."
+}

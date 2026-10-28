@@ -1,0 +1,251 @@
+{
+ "ticker": "TFCO4",
+ "name": "Track & Field Co S.A.",
+ "sector": "Varejo / moda esportiva e de bem-estar premium (franquias, lojas próprias, digital, TF Sports)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "TFCO4",
+   "class": "PN"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "shares_outstanding_mn": 151.76
+  },
+  "notes": "AÇÕES (correção importante): a B3 informa 877.251.375 ON + 65.492.864 PN = 942.744.239 ações, mas as ON (não listadas, dos fundadores) recebem exatamente 1/10 dos proventos por ação das PN — confirmado no histórico de proventos da B3 (ex.: JCP do 3T26 de R$ 0,0862492 por PN e R$ 0,0086249 por ON; dividendo de 2025 de R$ 0,0101159 por PN e R$ 0,0010116 por ON). Em base econômica, 1 ON = 0,1 PN: 87,73 mi PN-equivalentes das ON + 64,03 mi PN em circulação (65,49 − 1,46 mi em tesouraria, CVM 30/06/26) = 151,76 mi. Usamos shares_outstanding_mn = 151,76 e o preço da TFCO4 para o valor de mercado (R$ 2,22 bi a R$ 14,65 em 23/10; R$ 1,65 bi a R$ 10,86). Com as 942,7 mi ações brutas, o pipeline mostra P/L ~70–125x e EV/EBITDA ~40–80x no multiples_history, o que está errado por um fator de ~6,2. D&A: a DVA (7.04.01) não inclui a depreciação de direito de uso (2025: R$ 19,9 mi na DVA contra R$ 39,6 mi na DFC), então o EBITDA CVM do pipeline fica subestimado; o EBITDA IFRS-16 da companhia é de R$ 249,4 mi (23,8%) em 2025 e R$ 132,0 mi (24,9%) no 1S26. A dívida bruta CVM de R$ 171,8 mi é só arrendamento (sem dívida bancária) e já está na DL-base de R$ 121,4 mi (arrendamentos 171,8 − caixa 50,3)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.14,
+   0.13,
+   0.12,
+   0.11,
+   0.1
+  ],
+  "ebitda_margin": [
+   0.225,
+   0.235,
+   0.235,
+   0.235,
+   0.235
+  ],
+  "da_pct_revenue": [
+   0.038,
+   0.038,
+   0.038,
+   0.038,
+   0.038
+  ],
+  "capex_pct_revenue": [
+   0.08,
+   0.075,
+   0.07,
+   0.065,
+   0.06
+  ],
+  "nwc_pct_revenue": 0.42,
+  "cost_of_net_debt": [
+   0.14,
+   0.15,
+   0.15,
+   0.15,
+   0.15
+  ],
+  "other_financial": [
+   -18,
+   -20,
+   -22,
+   -24,
+   -26
+  ],
+  "tax_rate": [
+   0.22,
+   0.22,
+   0.22,
+   0.22,
+   0.22
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.16,
+   0.35,
+   0.35,
+   0.4,
+   0.45
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.24,
+  "roe": 0.23
+ },
+ "wacc": {
+  "kd_pre_tax": 0.16,
+  "target_debt_weight": 0.1
+ },
+ "adjustments": {
+  "other_debt_like": 39.5,
+  "non_operating_assets": 0,
+  "minority_value": null,
+  "notes": "other_debt_like = R$ 39,5 mi: (a) dividendos e JCP a pagar no BPP de 30/06/26, R$ 24,0 mi (JCP do 1T26, data-com 27/03/26, e do 2T26, data-com 26/06/26, ambos a pagar em 31/05/2027 — o caixa ainda está na DL-base e o provento é de quem tinha a ação na data-com); (b) JCP do 3T26 (R$ 0,08625/PN e R$ 0,008625/ON, data-com 24/09/26, pagamento 31/05/2027) ≈ R$ 13,1 mi brutos, declarado depois do balanço (o payout de 2026 foi reduzido para que o stub de dividendos do motor seja só o JCP do 4T26); (c) provisões para riscos de R$ 3,6 mi × 0,66 = R$ 2,4 mi. Minoritários: participação de R$ 2,9 mi (valor contábil, usado pelo motor); o lucro dos não controladores é negativo (−R$ 1,6 mi em 2025, −R$ 0,3 mi no 1S26: prejuízo de controlada nova absorvido pelo sócio) → minority_share_ni = 0 (não extrapolamos prejuízo da controlada; efeito < R$ 2 mi/ano). Não há dívida bancária; 'juros s/ empréstimo' de R$ 8,1 mi em 2025 na DFC sugere antecipação de recebíveis ou capital de giro de curto prazo, sem saldo no balanço (não verificado) — o custo está em other_financial."
+ },
+ "target_multiples": {
+  "pe": 11.0,
+  "ev_ebitda": 7.0,
+  "pbv": 2.5,
+  "rationale": "P/L 11x sobre o LPA 2027E e EV/EBITDA IFRS-16 de 7,0x sobre o EBITDA 2027E. Pré-eleição (R$ 14,65 × 151,76 mi PN-equivalentes = R$ 2,22 bi): P/L LTM de 15,1x (lucro de R$ 147 mi) e ~12,5x o nosso lucro 2027E; EV (R$ 2,22 bi + DL de arrendamentos R$ 121 mi + JCP a pagar R$ 37 mi) = 9,0x o EBITDA IFRS-16 LTM da companhia (R$ 264,6 mi). Histórico corrigido pela base de ações (multiples_history do pipeline × 0,161): P/L de ~16–20x e EV/EBITDA de ~9–11x em 2025–26. Pares no estudo: Vivara 9,5x/6,5x, Azzas 10x/5x, Renner 9x/5x, Grupo SBF 6x/4,5x. Usamos prêmio sobre os pares de moda pelo ROE de ~24% e crescimento de dois dígitos, mas abaixo do pré-eleição porque os múltiplos de mercado embutem Ke de 12–14%. P/VP 2,5x é referência ((ROE 23% − g)/(Ke de mercado ~12% − g) ≈ 2,6x)."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.04,
+   "ebitda_margin_shift": -0.025,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Consumo premium desacelera com juros de 15%, a moda de corrida perde fôlego (concorrência de Nike, Adidas, Lululemon, Alo e marcas digitais) e o SSS volta a um dígito baixo; franqueados adiam aberturas, estoques crescem e a margem EBITDA cai para ~21%."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.03,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Boom de corrida e bem-estar sustenta SSS de 15%+ (2T26: +25,9%), 40+ lojas/ano e TF Sports monetizando a base; margem EBITDA de ~25% e capital de giro mais eficiente."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.035,
+  "ebitda_margin_sd": 0.02,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.006
+ },
+ "debt_profile": {
+  "gross_debt_mn": 0.0,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "Sem dívida bancária; arrendamentos IFRS-16 de R$ 171,8 mi (juros de R$ 11,0 mi no 1S26, ~12,8% a.a.)",
+  "avg_maturity_years": 0,
+  "next_24m_maturities_mn": 35,
+  "covenant_nd_ebitda": null,
+  "notes": "CVM 30/06/26: arrendamentos de R$ 171,8 mi (17,5 CP + 154,3 LP), caixa de R$ 50,3 mi, sem empréstimos. O crescimento é financiado com geração própria, mas o capital de giro (estoques de R$ 383 mi, recebíveis de franqueados de R$ 221 mi) consome ~45% da receita incremental; se o crescimento acelerar, a empresa precisará de dívida (marginal estimado em CDI + 1,5–2%, 16% no WACC). Próximos 24 meses: só as parcelas de arrendamento (~R$ 35 mi, estimativa)."
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -1,
+  "notes": "Exposição financeira direta mínima: caixa de R$ 50 mi e nenhuma dívida; despesas financeiras além dos juros de arrendamento (~R$ 20 mi/ano, antecipação/encargos) sobem com o CDI: +1 p.p. ≈ −R$ 1 mi no lucro (cálculo próprio). O canal relevante é indireto: consumo discricionário de alta renda e custo de capital dos franqueados para abrir lojas."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.314,
+  "ebitda_margin_avg_5y": 0.243,
+  "roe_avg_5y": 0.301,
+  "payout_avg_5y": 0.2,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.155,
+   "ebitda_margin": 0.244,
+   "net_income_mn": 37.3,
+   "net_debt_ebitda": 0.46
+  },
+  "notes": "Receita CVM: 267 (2020) → 435 → 567 → 684 → 832 → 1.047 (2025); CAGR 2020–25 de 31,4% (base da pandemia), 3 anos de 22,6%; 2024 +21,7%, 2025 +25,8%, 1S26 +16,7% (2T26 +15,5%, com SSS de +25,9% no sell-out). Lojas: 448 (390 franquias + 58 próprias) no 2T26, +42 em 12 meses; sell-out de R$ 1,82 bi em 2025. Projetamos 14% (2S26) e 13% → 10% em 2027–30 (média 12%), abaixo do histórico pela maturação da rede e pelo ciclo de juros. Margem EBITDA IFRS-16 (companhia): 23,4% (2021), 25,3%, 25,4%, 23,6%, 23,8% (2025); média de 24,3%; 1S26 24,9% (−0,8 p.p. a/a); 2S25 22,4% (2S é sazonalmente pior). A coluna 2026 (22,5%) é o run-rate do 2S26; 2027–30 em 23,5% (abaixo da média histórica, por câmbio e ILP). ROE médio 2021–25 de 30,1% (27,8% em 2025); projetado 22–24%. Payout médio de 20% (JCP), mais recompras (R$ 29 mi em 2024, R$ 16 mi em 2025); em 2026 o JCP trimestral equivale a ~35% do lucro. D&A 3,8% (DFC, com direito de uso). Capex 8% → 6% (capex caixa de 4,4–4,8% + direito de uso de ~3,5%). Capital de giro de 42% da receita incremental (2023–25: Δ(recebíveis + estoques − fornecedores) de R$ 165 mi sobre Δreceita de R$ 363 mi = 45%). Custo da DL de 14–15% (arrendamentos a ~12,8% e marginal de CDI + 1,5–2% se precisar de dívida) e other_financial de −R$ 18 a −26 mi (encargos e antecipação). Alíquota de 22% (2025: 20,9%; 1S26: 21,7%, com JCP)."
+ },
+ "guidance": "Sem guidance numérico verificado (o limite de buscas da sessão acabou e o release do 2T26 não foi obtido; usei a planilha de fundamentos da RI). Planilha 2T26: 448 lojas (390 franquias e 58 próprias), SSS de +25,9% no 2T26 e +12,1% no 1T26, ticket médio de R$ 466. A estratégia conhecida é expansão por franquias, lojas próprias em praças-chave, digital e o ecossistema TF Sports (eventos e app de corrida).",
+ "dividend_policy": "JCP trimestral desde 2025: 4T25 R$ 0,0695/PN (pago em 29/05/26), 1T26 R$ 0,0845, 2T26 R$ 0,0852 e 3T26 R$ 0,0862/PN (todos a pagar em 31/05/2027); dividendo de 2025 de R$ 0,0101/PN (pago em 29/05/26). As ON recebem 1/10 por ação. Payout de 20–25% do lucro em 2021–25 mais recompras (R$ 29,2 mi em 2024; R$ 16,4 mi em 2025). Percentual estatutário mínimo não verificado. Modelo: payout de 16% no stub de 2026 (só o JCP do 4T26; o do 1T–3T26 está em other_debt_like), 35% em 2027–28, 40% e 45% em 2029–30.",
+ "election_impact": "Queda de ~26% no dia (R$ 14,65 → R$ 10,86 às 13h02 de 26/10): small cap de consumo discricionário de alta renda que já negociava com prêmio de crescimento. Canais que mudam o valor: (i) taxa de desconto sobre um crescimento de dois dígitos (é o que mais pesa); (ii) câmbio — tecidos técnicos e parte dos produtos têm componente dolarizado (fatia não verificada), com risco para a margem bruta de 57%; (iii) juros — custo de capital dos franqueados e do capital de giro, já que a empresa não tem dívida. Contrapontos: público A/B menos dependente de crédito, sem dívida, ROE de ~25% e SSS de +25,9% no 2T26. O dano ao lucro é limitado; a queda é sobretudo compressão de múltiplo.",
+ "summary": "Marca premium de moda esportiva e bem-estar (448 lojas, 87% franquias) com crescimento de 15–25% ao ano, margem EBITDA de ~24%, ROE de ~25% e balanço sem dívida bancária. A queda de 26% em 26/10 foi compressão de múltiplo de uma small cap de crescimento; o negócio muda pouco, mas o capital de giro pesado (~45% da receita incremental) limita o fluxo distribuível a Ke de 25%.",
+ "thesis": [
+  "Crescimento de qualidade: receita de R$ 267 mi (2020) para R$ 1.047 mi (2025), 1S26 +16,7%, SSS de +25,9% no 2T26 e 42 lojas novas em 12 meses (448 no total).",
+  "Rentabilidade alta e estável: margem EBITDA IFRS-16 de 23–25% desde 2021 e ROE de 27,8% em 2025, com margem bruta de ~57%.",
+  "Balanço leve: sem dívida bancária, DL composta só de arrendamentos (R$ 121 mi líquidos, ~0,5x o EBITDA) e JCP trimestral desde 2025.",
+  "Base de ações corrigida: em base econômica são 151,8 mi PN-equivalentes (ON com 1/10 dos direitos), e não 942,7 mi; a R$ 10,86 o papel negocia a ~9x o lucro 2027E do modelo."
+ ],
+ "risks": [
+  "Capital de giro: estoques de R$ 383 mi e recebíveis de franqueados de R$ 221 mi; crescimento consome caixa e pode exigir dívida com juros de 15%.",
+  "Moda/tendência: dependência do ciclo de corrida e bem-estar e da força da marca contra multinacionais e marcas digitais.",
+  "Franquias: saúde financeira dos franqueados com juros altos e risco de concentração de recebíveis.",
+  "Governança: estrutura ON (fundadores, 1/10 dos direitos econômicos, controle de voto) × PN listada; liquidez de ~R$ 13 mi/dia.",
+  "Câmbio sobre tecidos técnicos e produtos importados."
+ ],
+ "catalysts": [
+  "Resultado do 3T26 (data não verificada; início/meados de nov/2026).",
+  "Black Friday e Natal (4T é ~30% da receita anual).",
+  "Aberturas de lojas e expansão do TF Sports; pagamento dos JCP de 2026 em 31/05/2027."
+ ],
+ "key_data": [
+  {
+   "label": "Preço 26/10 13h02 (B3, foto do estudo)",
+   "value": "R$ 10,86",
+   "context": "−25,9% no dia; R$ 14,65 em 23/10"
+  },
+  {
+   "label": "Ações em base econômica",
+   "value": "151,76 mi PN-equivalentes",
+   "context": "877,25 mi ON × 0,1 + 64,03 mi PN; B3 mostra 942,7 mi brutas"
+  },
+  {
+   "label": "Receita 2025 / 1S26",
+   "value": "R$ 1.046,5 mi (+25,8%) / R$ 530,9 mi (+16,7%)",
+   "context": "sell-out de R$ 1,82 bi em 2025"
+  },
+  {
+   "label": "EBITDA IFRS-16 2025 / 2T26 (companhia)",
+   "value": "R$ 249,4 mi (23,8%) / R$ 68,3 mi (24,4%)",
+   "context": "o pipeline subestima (DVA sem direito de uso)"
+  },
+  {
+   "label": "Lucro 2025 / LTM 2T26",
+   "value": "R$ 143,9 mi / R$ 147,0 mi",
+   "context": "ROE de 27,8% em 2025"
+  },
+  {
+   "label": "Lojas 2T26",
+   "value": "448 (390 franquias + 58 próprias)",
+   "context": "SSS de +25,9%"
+  },
+  {
+   "label": "DL (só arrendamentos) / EBITDA LTM",
+   "value": "R$ 121 mi / 0,46x",
+   "context": "sem dívida bancária; JCP de R$ 37 mi a pagar em mai/27"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Planilha de fundamentos Track & Field (RI, até 2T26)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/8e49886e-dded-49c0-b8db-c35451e75eed/e287d157-ce3a-f34b-52a7-47f8e977f988?origin=2"
+  },
+  {
+   "title": "RI Track & Field — central de resultados",
+   "url": "https://www.tfco.com.br/ri/informacoes-financeiras/central-de-resultados/"
+  },
+  {
+   "title": "B3 — dados da companhia e proventos por classe (GetListedSupplementCompany TFCO)",
+   "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/eyJpc3N1aW5nQ29tcGFueSI6IlRGQ08iLCJsYW5ndWFnZSI6InB0LWJyIn0="
+  },
+  {
+   "title": "CVM — demonstrações padronizadas (data/hist/TFCO4.json)",
+   "url": "https://dados.cvm.gov.br/"
+  }
+ ],
+ "confidence": "média — negócio simples e rentável, contas limpas (sem dívida) e base de ações corrigida com dado oficial da B3; mas o release do 2T26 e o guidance não foram lidos (sem buscas disponíveis) e o valor depende de crescimento de dois dígitos e de capital de giro."
+}

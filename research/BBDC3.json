@@ -1,0 +1,220 @@
+{
+  "ticker": "BBDC3",
+  "name": "Banco Bradesco S.A.",
+  "sector": "Financeiro / Banco múltiplo privado + grupo segurador",
+  "template": "financial",
+  "as_of_quarter": "3T26",
+  "shares_per_unit": 1,
+  "listed_classes": [
+    {
+      "ticker": "BBDC3",
+      "class": "ON"
+    },
+    {
+      "ticker": "BBDC4",
+      "class": "PN"
+    }
+  ],
+  "overrides": {
+    "base": {
+      "equity_controlling_2025": 188135
+    },
+    "notes": "Ações: o número da B3 (11.196,9 mi emitidas: 5.606,7 ON + 5.590,1 PN) está CORRETO — reflete o aumento de capital por subscrição privada aprovado na RCA de 29/07/2026 (até R$ 10 bi; até 302.876.396 ON + 301.976.357 PN novas; garantia de R$ 8 bi das controladoras; JCP de R$ 6,5 bi antecipado para 15/09/2026 para viabilizar a subscrição). A CVM de 30/09/2026 ainda mostra 10.592,0 mi ações, mas o capital social já subiu para R$ 103.490 mi (vs R$ 93.770 mi após a capitalização de reservas de mar/26) → ~R$ 9,72 bi integralizados. Como o template financeiro projeta o PL a partir do FY2025 sem emissão, uso PL FY2025 pró-forma = R$ 178.415 mi + R$ 9.720 mi = R$ 188.135 mi, coerente com as ações pós-aumento. ROE 2026 calibrado ao LL recorrente 2026E de ~R$ 28,1 bi (1T 6.811 + 2T 7.050 + 3T 7.109 + 4TE ~7.150)."
+  },
+  "projection": {
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "payout": [
+      0.62,
+      0.6,
+      0.6,
+      0.6,
+      0.6
+    ]
+  },
+  "financial_projection": {
+    "roe": [
+      0.1495,
+      0.15,
+      0.155,
+      0.16,
+      0.165
+    ],
+    "ni_growth": null,
+    "payout": [
+      0.62,
+      0.6,
+      0.6,
+      0.6,
+      0.6
+    ]
+  },
+  "terminal": {
+    "g": 0.05,
+    "roe": 0.16
+  },
+  "wacc": {
+    "kd_pre_tax": 0.15,
+    "target_debt_weight": 0.0
+  },
+  "adjustments": {
+    "other_debt_like": 0,
+    "non_operating_assets": 0,
+    "minority_value": null,
+    "notes": "Banco: sem ponte EV→equity."
+  },
+  "target_multiples": {
+    "pe": 6.5,
+    "ev_ebitda": null,
+    "pbv": 0.9,
+    "rationale": "Fonte oficial (RAEF 2T26): P/L (LL recorrente 12m) 7,3x jun/25, 7,4x set/25, 7,2x dez/25, 7,4x mar/26, 6,7x jun/26; P/VP 1,0x–1,1x no mesmo período (market cap R$ 179 bi em jun/26). Alvos com desconto de ~10% (P/L 6,5x; P/VP 0,90x) pelo regime de juros mais alto e risco fiscal pós-eleição; ROE ~16% e Ke de mercado ~18–19% sustentam ~0,85–0,95x."
+  },
+  "scenarios": {
+    "bear": {
+      "probability": 0.25,
+      "revenue_growth_shift": -0.02,
+      "ebitda_margin_shift": -0.03,
+      "terminal_g_shift": -0.01,
+      "capex_pct_shift": 0.0,
+      "narrative": "Selic ~16% em 2027 piora PF/MPME (NPL 90 já 4,6%), transformação trava: ROE 12–13%."
+    },
+    "bull": {
+      "probability": 0.2,
+      "revenue_growth_shift": 0.01,
+      "ebitda_margin_shift": 0.02,
+      "terminal_g_shift": 0.005,
+      "capex_pct_shift": 0.0,
+      "narrative": "Transformação entrega ROE ≥18% até 2029 (eficiência 45%→40%, seguros ROAE 22%)."
+    }
+  },
+  "uncertainty": {
+    "revenue_growth_sd": 0.02,
+    "ebitda_margin_sd": 0.02,
+    "terminal_g_sd": 0.0075,
+    "capex_pct_sd": 0.0
+  },
+  "debt_profile": {
+    "gross_debt_mn": 0,
+    "pct_floating_cdi": 0.0,
+    "avg_cost": "n/a (banco: captação é passivo operacional; ver Basileia/LCR)",
+    "avg_maturity_years": 0,
+    "next_24m_maturities_mn": 0,
+    "covenant_nd_ebitda": null
+  },
+  "rate_sensitivity": {
+    "ni_impact_per_100bp_cdi_mn": null,
+    "notes": "Nota de risco de mercado (DFs 2T26), valor justo líquido de IR, carteiras Trading+Banking: −R$ 14,5 mi por bp em pré (≈ −R$ 1,45 bi por +100 bp) e −R$ 16,9 mi por bp em cupom de IPCA (≈ −R$ 1,69 bi); cenário 2 (~+340 bp) soma −R$ 9,4 bi sem correlação. É impacto econômico (a maior parte do banking book é a custo amortizado), não de LL. Choque de hoje (+300 bp longo) ≈ −R$ 4–6 bi de valor econômico (~2–3% do PL). Seguros (LL R$ 2,9 bi/tri) ganham com CDI alto; margem com mercado (R$ 875 mi no 3T26) é volátil."
+  },
+  "history_check": {
+    "revenue_cagr_5y": 0.041,
+    "ebitda_margin_avg_5y": null,
+    "roe_avg_5y": 0.125,
+    "payout_avg_5y": 0.64,
+    "last_quarter": {
+      "period": "3T26",
+      "revenue_yoy": 0.142,
+      "ebitda_margin": null,
+      "net_income_mn": 7109,
+      "net_debt_ebitda": null
+    },
+    "notes": "revenue_cagr_5y aqui = CAGR do PL controlador CVM 2020–25 (4,1%). ROE CVM 2021–25: 15,7/13,8/8,8/10,3/13,7% (média 12,5%); ROAE recorrente 2025 ~14,8%, 2T26 16,2%, 3T26 15,6% (16,1% ex-aumento de capital). Payout bruto (RAEF): 2022 52%, 2023 79%, 2024 62%, 2025 62% (R$ 14.499 mi), 1S26 69%. Projeção: ROE de abertura 14,95%→16,5% (≈14,5%→16% sobre PL médio) — abaixo do pico 2015–19 (~18–20%), acima da média 5a deprimida; LL 2027E R$ 29,8 bi (+6%), 2030E R$ 39,3 bi."
+  },
+  "guidance": "Guidance 2026 (fev/26), mantido no 1T26 e no 2T26: carteira expandida +8,5% a +10,5%; margem financeira líquida (MF − PDD) R$ 42–48 bi; receitas de serviços +3% a +5%; despesas operacionais +6% a +8%; seguros, previdência e capitalização +6% a +8% (ponto médio implicava LL ~R$ 27,5 bi, segundo analistas). Status no 3T26 não confirmado nesta rodada. Cenário macro do banco (jun/26): Selic fim de 2026 13,75%, 2027 11,0% — agora desatualizado pela curva.",
+  "dividend_policy": "JCP mensais + complementares; PN recebe 10% a mais que ON. 2T26: R$ 4 bi em JCP; 3T26: R$ 4,1 bi; JCP de R$ 6,5 bi antecipado para 15/09/2026. Nova recompra (3T26) de até 3,55% das ON e ~1% das PN em circulação. CET1 11,3% em jun/26 (pró-forma 13,6% com aumento de capital + efeito Bradsaúde) — capital deixou de ser restrição ao payout.",
+  "election_impact": "−20,5% (ON) / −28% (PN) hoje; market cap ~R$ 215 bi→~R$ 162 bi; P/VP ~1,10x→~0,83x (PL 3T26 R$ 195 bi). Canal macro: Selic mais alta por mais tempo (DI1F28 14,95%) → custo do crédito PF/MPME maior (PDD já +24,3% a/a no 3T26, NPL 4,6%), crescimento de carteira menor, marcação de títulos; parcialmente compensado por seguros (float a CDI) e margem de passivos. Micro/político: tributação de JCP/bancos (IR do JCP e CSLL já elevados pela LC 224/2025) pode subir de novo; não há risco de controle estatal. Estimo LL 2027E ~5% abaixo da trajetória pré-eleição; o preço da PN caiu 28%.",
+  "summary": "Turnaround entregando: 11 trimestres de alta do lucro recorrente (R$ 7,1 bi no 3T26), ROAE ~16%, eficiência 45,4% e capital reforçado (aumento de R$ ~10 bi). A ~0,85x PL e ~5,6x P/L 2027E está barato vs a própria história, mas com Ke de 25% e ROE de ~16% o P/VP justo é ~0,55x: TIR implícita ~18% a.a. (abaixo da meta); TIR 3 anos ~28% se re-rating para 6,5x P/L — melhor risco/retorno do grupo.",
+  "thesis": [
+    "Lucro recorrente 3T26 R$ 7.109 mi (+14,6% a/a), ROAE 16,1% ex-aumento de capital; seguros com LL R$ 2,9 bi e ROAE 22%.",
+    "Eficiência caiu de 50,1% para 45,4% em 12 meses; rede física enxugando (1.741 agências vs 1.844 em jun/26).",
+    "Capital: CET1 pró-forma 13,6% (2T26) após aumento de até R$ 10 bi subscrito pelas controladoras → payout ~60% sustentável.",
+    "Valuation: ~0,85x PL e ~5,6x P/L 2027E vs média jun/25–jun/26 de 1,0x e ~7,2x (RAEF); dividend yield ~10,5% a.a."
+  ],
+  "risks": [
+    "Ciclo de crédito: PDD expandida R$ 10,6 bi no 3T26 (+24,3% a/a), custo do crédito 3,7%, NPL 90 4,6% (+0,5 pp a/a) — MPME com garantia federal e baixa renda.",
+    "Selic mais alta por mais tempo (curva DI 14–15,7%) e desaceleração do PIB 2027 (Focus 1,3% pré-choque).",
+    "Mudanças tributárias sobre JCP/bancos e regulação (teto de juros de cartão, tarifas) num 4º mandato.",
+    "Diluição do aumento de capital (+5,7% de ações) e execução da transformação."
+  ],
+  "catalysts": [
+    "Guidance 2027 (fev/27).",
+    "Recompra nova (3,55% ON / ~1% PN).",
+    "Aprovação regulatória do efeito Bradsaúde no capital."
+  ],
+  "key_data": [
+    {
+      "label": "LL recorrente 3T26",
+      "value": "R$ 7.109 mi (+14,6% a/a)",
+      "context": "2T26 R$ 7.050 mi; 1T26 R$ 6.811 mi"
+    },
+    {
+      "label": "ROAE 3T26",
+      "value": "15,6% (16,1% ex-aumento de capital)",
+      "context": "2T26 16,2%; 3T25 14,7%"
+    },
+    {
+      "label": "Carteira expandida 3T26",
+      "value": "R$ 1,150 tri (+11,1% a/a)",
+      "context": "NPL 90 4,6%; PDD R$ 10,6 bi"
+    },
+    {
+      "label": "Capital (2T26)",
+      "value": "CET1 11,3% / Basileia 15,5%",
+      "context": "Pró-forma CET1 13,6%"
+    },
+    {
+      "label": "Ações (B3)",
+      "value": "11.196,9 mi (5.606,7 ON + 5.590,1 PN)",
+      "context": "CVM 30/09: 10.592,0 mi (pré-emissão)"
+    },
+    {
+      "label": "Preço ON / PN / P/VP",
+      "value": "R$ 14,35 / R$ 14,67 / ~0,83x",
+      "context": "Sexta: R$ 18,06 / R$ 20,37"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bradesco — Relatório de Análise Econômica e Financeira 2T26 (inclui DFs, guidance, Basileia)",
+      "url": "https://api.mziq.com/mzfilemanager/v2/d/80f2e993-0a30-421a-9470-a4d5c8ad5e9f/b7c34f8d-92f6-7ba4-f408-d518a7211a7a?origin=2"
+    },
+    {
+      "title": "Bradesco — Press Release 2T26",
+      "url": "https://static.poder360.com.br/uploads/2026/08/Bradesco-2T26-Press-Release.pdf"
+    },
+    {
+      "title": "InfoMoney — Bradesco tem lucro recorrente de R$ 7,1 bi no 3º tri de 2026 (22/10/2026)",
+      "url": "https://www.infomoney.com.br/mercados/bradesco-bbdc4-resultados-terceiro-trimestre-2026/"
+    },
+    {
+      "title": "Money Times — Lucro do Bradesco avança a R$ 7,1 bi no 3T26",
+      "url": "https://www.moneytimes.com.br/lucro-do-bradesco-bbdc4-3t26-rentabilidade-roe-expectativas-miql/"
+    },
+    {
+      "title": "Suno — Bradesco lucro recorrente R$ 7,1 bi no 3T26",
+      "url": "https://www.suno.com.br/noticias/bradesco-tem-lucro-liquido-recorrente-bi-no-3o-trimestre-go/"
+    },
+    {
+      "title": "Status Invest — Bradesco cai após guidance 2026",
+      "url": "https://statusinvest.com.br/noticias/bradesco-bbdc4-cai-apos-guidance-2026/amp/"
+    },
+    {
+      "title": "Seu Dinheiro — Calendário de balanços do 3T26 (19/10/2026)",
+      "url": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/"
+    },
+    {
+      "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do líder)",
+      "url": "https://dados.cvm.gov.br/"
+    },
+    {
+      "title": "B3 — cotação ao vivo (API oficial), 26/10/2026",
+      "url": "https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/"
+    }
+  ],
+  "confidence": "média-alta — documento oficial completo do 2T26 + 3T26 já na CVM; incerteza principal é o ciclo de crédito pós-choque.",
+  "copied_from": "BBDC4"
+}

@@ -1,0 +1,269 @@
+{
+ "ticker": "PRIO3",
+ "name": "PRIO S.A.",
+ "sector": "Petróleo e gás / E&P independente offshore (campos maduros: Peregrino, Frade+Wahoo, Albacora Leste, Polvo+TBMT)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "PRIO3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override. Ações: 872,5 mi emitidas − 74,3 mi em tesouraria = 798,2 mi (B3 = CVM). DL CVM R$ 21.769 mi = empréstimos US$ (R$ 15,2 bi) + debêntures (R$ 9,6 bi) + arrendamentos (R$ 0,6 bi) − caixa R$ 3,7 bi ≈ US$ 4,2 bi (release: US$ 4,0 bi ex-IFRS-16). COLUNA 2026 = 2S26 anualizado: produção 195 kboe/d (jul/26 196 kboe/d; 172 kboe/d no 2T26), vendas = 96,5% da produção (calibrado no 2T26: >15 MMbbl vendidos), Brent US$ 103 − desconto US$ 7 (2T26: US$ 6,9), câmbio 5,22. Receita CVM (≈ receita total do release, US$ 1,4 bi no 2T26) = volume × (Brent − desconto) × câmbio. O imposto de exportação de 12% (desde 12/03/2026) aparece como custo e está na margem EBITDA (2T26 62%, vs 67% no 1T26). A compra dos 20% restantes de Peregrino (prevista para out–nov/2026) NÃO está no modelo: nem a produção adicional nem o pagamento (preço não confirmado) — neutro se pago a valor justo."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   1.2255,
+   0.0042,
+   -0.1637,
+   -0.1108,
+   -0.0922
+  ],
+  "ebitda_margin": [
+   0.66,
+   0.7,
+   0.72,
+   0.7,
+   0.68
+  ],
+  "da_pct_revenue": [
+   0.246,
+   0.258,
+   0.299,
+   0.318,
+   0.337
+  ],
+  "capex_pct_revenue": [
+   0.09,
+   0.07,
+   0.086,
+   0.098,
+   0.11
+  ],
+  "nwc_pct_revenue": 0.05,
+  "cost_of_net_debt": [
+   0.11,
+   0.105,
+   0.1,
+   0.09,
+   0.09
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.15,
+   0.2,
+   0.24,
+   0.27,
+   0.3
+  ],
+  "minority_share_ni": 0.0,
+  "payout": [
+   0.3,
+   0.8,
+   1.3,
+   1.5,
+   1.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.035,
+  "roic": 0.15,
+  "roe": 0.18
+ },
+ "wacc": {
+  "kd_pre_tax": 0.105,
+  "target_debt_weight": 0.25,
+  "notes": "Dívida majoritariamente em US$ (bonds e bancos ~7–7,5%) e debêntures convertidas em US$ via swap; em R$ soma-se a depreciação do deck (~1,8% a.a.) e o custo de hedge (puts): 10,5–11%. Resultado financeiro ex-IFRS-16 do 2T26 (−US$ 120 mi sobre DL de US$ 4 bi) = ~12% anualizado. wd = DL/(DL + valor de mercado pré-eleição R$ 58,9 bi) ≈ 27%, arredondado para 25% (desalavancagem rápida)."
+ },
+ "adjustments": {
+  "other_debt_like": 2643,
+  "non_operating_assets": 0,
+  "minority_value": 0,
+  "notes": "other_debt_like = provisão de abandono/desativação (R$ 5.568 mi, toda de longo prazo) × (1 − 34%) × 50% = R$ 1.837 mi (o capex projetado é de desenvolvimento e não inclui descomissionamento; regra comum às E&Ps do estudo: 50% aproxima o valor presente, a um WACC de ~20%, de gastos que o balanço desconta a taxa muito menor) + provisões fiscais/trabalhistas/cíveis prováveis (R$ 769 mi) + derivativos passivos (R$ 37 mi). Não há dividendos declarados a pagar. Crédito fiscal diferido ativo (R$ 8,3 bi) não somado: o benefício já está na alíquota efetiva baixa projetada (15% → 30%). Earn-out de Albacora Leste já quitado (zerado em 2025)."
+ },
+ "target_multiples": {
+  "pe": 4.5,
+  "ev_ebitda": 3.0,
+  "pbv": 1.5,
+  "rationale": "EV/EBITDA 3,0x e P/L 4,5x sobre 2027E, ano de Brent ainda alto na curva (US$ 95) e de produção no platô — múltiplo de pico, abaixo da mediana de 5 anos da própria PRIO (EV/EBITDA LTM 6,2x; P/L LTM 8,5x; p10 4,1x e 3,0x), formada quando a produção dobrava (Frade, Albacora Leste, Peregrino) e o Brent estava em US$ 70–80. Ao preço de 26/10 o mercado paga ~3,2x o EBITDA 2027E do modelo. Depois de 2027 o EBITDA cai ~35% até 2030 (Brent US$ 71 e declínio de ~5% a.a.), o que não justifica múltiplo de crescimento. Prêmio a Petrobras (2,6x/4,0x) por não ter risco de controle estatal e por lifting cost de US$ 7–9/bbl; desconto a pares internacionais de E&P pelo imposto de exportação e pelo histórico de M&A alavancado. Múltiplos de mercado embutem Ke ~13–16%, abaixo dos 25% do estudo."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.06,
+   "ebitda_margin_shift": -0.06,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.02,
+   "narrative": "Imposto de exportação de 12% vira permanente no 4º mandato (financia a subvenção ao diesel), Brent volta a US$ 65–70 já em 2027 e Peregrino/Frade declinam mais rápido."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.04,
+   "ebitda_margin_shift": 0.02,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Imposto de exportação cai no 1S27, Brent fica acima de US$ 85 até 2028 e Peregrino 100% + gás importado levam lifting a < US$ 7/bbl."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.07,
+  "ebitda_margin_sd": 0.035,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.015
+ },
+ "debt_profile": {
+  "gross_debt_mn": 25463,
+  "pct_floating_cdi": 0.0,
+  "avg_cost": "US$ ~7–7,5% (bonds/bancos); debêntures R$ 9,6 bi com swap para US$ (não confirmado no material lido)",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": 4762,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": 0,
+  "notes": "Dívida efetivamente em US$; CDI quase não afeta o lucro. Sensibilidade relevante: US$ 1/bbl no Brent ≈ R$ 400 mi de receita/ano (2027E) e R$ 0,10 no câmbio ≈ R$ 640 mi."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.5226,
+  "ebitda_margin_avg_5y": 0.6708,
+  "roe_avg_5y": 0.3458,
+  "payout_avg_5y": 0.002,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 1.108,
+   "ebitda_margin": 0.623,
+   "net_income_mn": 1960,
+   "net_debt_ebitda": 1.75
+  },
+  "notes": "Receita 2020–25 +52% a.a. por aquisições (Frade, Albacora Leste, Wahoo, Peregrino); 2025 foi ano de transição (margem EBITDA 49%, lifting US$ 13,8/bbl no 2T25, Albacora com hidrato). 1S26: receita R$ 13,5 bi, EBITDA R$ 8,8 bi (US$ 1,7 bi vs US$ 1,4 bi em todo 2025). Projeção orgânica: 195 kboe/d (2S26) → 205 (2027) → 200 → 190 → 180 kboe/d (declínio natural de ~5% a.a. sem novos projetos; Wahoo no platô de 40 kbpd). Margem 66% no 2S26 (com imposto de exportação), 70–72% em 2027–28 (imposto sai no 2S27, Brent US$ 81–95), 68% em 2030 (Brent US$ 71; 2023 teve 77% com US$ 82). DD&A ~US$ 21–23/boe (amortização das aquisições) explica D&A de 25% → 34% da receita. Payout inclui recompras (US$ 114 mi no 2T26)."
+ },
+ "guidance": "Release/teleconferência do 2T26 (ago/2026): lifting cost do 3T26 de US$ 7–8/bbl; produção de 196 kboe/d em julho e meta de ~200 kboe/d antes da compra dos 20% restantes de Peregrino (out–nov/2026); 2 poços em Peregrino e 2 em Frade no 2S26; Wahoo concluído em jun/26 (40 kbpd); capex de ~US$ 600 mi no 1S26, bem menor no 2S26, ~US$ 450 mi em 2027; DL alvo US$ 3,8 bi no fim de 2026 e US$ 3,0 bi no fim de 2027; alavancagem-alvo 1x DL/EBITDA a Brent de US$ 60. Resultado do 3T26 em 04/11/2026.",
+ "dividend_policy": "Sem dividendo recorrente: estatuto prevê o mínimo legal, mas a PRIO historicamente retém lucro (reserva de investimento) e devolve capital por recompra (US$ 114 mi no 2T26; 74,3 mi de ações em tesouraria, 8,5% do capital). A política de dividendos foi adiada 'até a normalização geopolítica'; a gestão disse que poderia suspender distribuições para preservar caixa para M&A. Modelo: payout (dividendos + recompras) de 30% no 2S26, 80% em 2027 (ainda desalavancando até a meta de US$ 3 bi) e 130–150% do lucro em 2028–30 — devolução de capital de um ativo em depleção (D&A de ~R$ 8 bi/ano contra capex de ~R$ 2,5 bi): sem isso o modelo acumularia R$ 20+ bi de caixa rendendo menos que o Ke. A alternativa real é M&A, que a 25% de Ke tende a destruir valor se pago a preço de mercado.",
+ "election_impact": "PRIO3 caiu só 5,9% em 26/10 (de R$ 73,80 para R$ 69,41), metade do Ibovespa: é exportadora pura em US$ — o dólar +9% e o Brent > US$ 110 compensam o Ke maior. O canal político relevante é fiscal-tributário, não de preço: o governo criou em mar/26 o imposto de exportação de 12% sobre óleo bruto (MP 1.340, depois mantido pela Gecex em ciclos de 60 dias e judicializado pelo setor) para bancar a subvenção ao diesel; num 4º mandato com deficit maior, a chance de o imposto virar permanente sobe. Cada ano de imposto custa ~12% da receita exportada (~R$ 4 bi em 2027E). Base: imposto até o 1S27 (Brent > US$ 90), zerado a partir de 2028; bear: permanente. O real fraco ajuda: R$ 0,10 no dólar ≈ +1,9% de receita. Juros: dívida em US$, efeito pequeno.",
+ "summary": "PRIO dobrou de tamanho com Peregrino (operado desde nov/25) e Wahoo (40 kbpd desde jun/26): produção de 196 kboe/d em julho, lifting de US$ 7–9/bbl e EBITDA de US$ 1,7 bi só no 1S26. Caiu pouco na eleição porque exporta em dólar; o risco político é o imposto de exportação de 12%. Valor depende do Brent da curva (US$ 95 em 2027 → 71 em 2030), do declínio dos campos maduros e de como a PRIO usará o caixa (recompra vs. M&A).",
+ "thesis": [
+  "Produção 172 kboe/d no 2T26 (+72% a/a) e 196 kboe/d em julho; Peregrino 74,5 kbpd (+90% a/a) e Wahoo 40 kbpd.",
+  "Lifting cost US$ 8,9/bbl no 2T26 (−36% a/a), guidance US$ 7–8 no 3T26; opex de Peregrino de ~US$ 550 mi/ano (Equinor) para < US$ 200 mi/ano.",
+  "EBITDA ajustado de US$ 879 mi e lucro de US$ 413 mi no 2T26; DL de US$ 4,0 bi (1,5x) com meta de US$ 3,0 bi no fim de 2027.",
+  "Capex baixo (~US$ 450 mi em 2027) frente a EBITDA de ~US$ 4,5 bi na curva: geração de caixa de ~25–30% do valor de mercado por ano em 2026–27."
+ ],
+ "risks": [
+  "Imposto de exportação de 12% sobre óleo bruto (Gecex 938 e 957/2026) pode ser renovado indefinidamente ou elevado.",
+  "Brent em backwardation: Dez/27 US$ 87 e Dez/30 US$ 69; cessar-fogo no Golfo antecipa a queda.",
+  "Campos maduros: declínio, hidratos (Albacora Leste), falhas no FPSO de Peregrino e dependência do gasoduto de importação de gás.",
+  "Alocação de capital: histórico de M&A alavancado (compra dos 20% restantes de Peregrino em out–nov/26) em vez de dividendos.",
+  "Provisão de abandono (R$ 5,6 bi) e litígios cíveis (R$ 0,6 bi)."
+ ],
+ "catalysts": [
+  "Renovação ou fim do imposto de exportação (resolução Gecex vence no início de nov/2026)",
+  "Resultado do 3T26 (04/11/2026) e dados de produção mensais",
+  "Fechamento da compra dos 20% restantes de Peregrino (out–nov/2026)",
+  "Anúncio de política de dividendos"
+ ],
+ "key_data": [
+  {
+   "label": "Produção jul/26",
+   "value": "196 kboe/d",
+   "context": "2T26: 172 kboe/d (+72% a/a)"
+  },
+  {
+   "label": "Lifting cost 2T26",
+   "value": "US$ 8,9/bbl",
+   "context": "guidance 3T26 US$ 7–8"
+  },
+  {
+   "label": "DL 2T26",
+   "value": "US$ 4,0 bi",
+   "context": "1,5x EBITDA; meta US$ 3,0 bi fim de 2027"
+  },
+  {
+   "label": "Imposto de exportação",
+   "value": "12% do óleo bruto exportado",
+   "context": "desde 12/03/2026; renovado por 60 dias em jul e set"
+  },
+  {
+   "label": "Deck Brent (US$/bbl)",
+   "value": "2S26 103 · 27 95 · 28 81 · 29 75 · 30 71",
+   "context": "curva ICE/NYMEX de 15–28/10/2026; desconto PRIO US$ 6,5–7"
+  },
+  {
+   "label": "Deck câmbio (R$/US$)",
+   "value": "2S26 5,22 · 27 5,45 · 28 5,55 · 29 5,65 · 30 5,75",
+   "context": "dólar futuro 5,38 + ~1,8% a.a."
+  }
+ ],
+ "sources": [
+  {
+   "title": "Nord Investimentos — PRIO 2T26: produção, lifting, DL US$ 4 bi, metas de DL, capex e política de capital",
+   "url": "https://www.nordinvestimentos.com.br/blog/prio3-resultado-2t26/"
+  },
+  {
+   "title": "Money Times — PRIO lucra US$ 413 mi no 2T26, EBITDA recorde e Wahoo",
+   "url": "https://www.moneytimes.com.br/prio-prio3-ve-lucro-disparar-169-no-2t26-com-ebitda-recorde-e-avanco-da-producao-em-wahoo-pads/"
+  },
+  {
+   "title": "Suno — PRIO 2T26: receita US$ 1,2 bi líquida / US$ 1,4 bi total, EBITDA ajustado US$ 879 mi",
+   "url": "https://www.suno.com.br/noticias/?p=660481"
+  },
+  {
+   "title": "PRIO RI — calendário (3T26 em 04/11/2026) e kit do investidor",
+   "url": "https://ri.prio3.com.br/"
+  },
+  {
+   "title": "IstoÉ Dinheiro — MP 1.340/2026: imposto de exportação de 12% sobre óleo bruto (12/03/2026)",
+   "url": "https://istoedinheiro.com.br/dou-extra-subvencao-a-produtor-de-diesel-e-de-r-032-litro-aliquota-em-exportacao-e-de-50-2"
+  },
+  {
+   "title": "Poder360 — Gecex renova imposto de 12% (09/07/2026)",
+   "url": "https://www.poder360.com.br/poder-governo/governo-renova-imposto-de-exportacao-do-petroleo-e-mantem-em-12/"
+  },
+  {
+   "title": "Mayer Brown — Resolução Gecex 957/2026 (03/09/2026)",
+   "url": "https://www.mayerbrown.com/pt/insights/publications/2026/09/gecex-resolution-no-9572026-extension-of-the-12-export-tax-rate-on-crude-petroleum-oils-and-bituminous-minerals"
+  },
+  {
+   "title": "EIA — STEO outubro/2026",
+   "url": "https://www.eia.gov/outlooks/steo/archives/oct26.pdf"
+  },
+  {
+   "title": "Baratelli Institute — curva futura Brent (CME, 15/10/2026)",
+   "url": "https://baratelliinstitute.com/oil-futures-curve"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/PRIO3.json)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  }
+ ],
+ "confidence": "média — operação e caixa visíveis no CVM, mas o valor depende quase só do Brent em backwardation e do imposto de exportação; detalhes da dívida (custos, swaps) e o preço dos 20% de Peregrino não foram verificados na fonte primária."
+}

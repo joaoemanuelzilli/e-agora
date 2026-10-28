@@ -1,0 +1,278 @@
+{
+ "ticker": "SLCE3",
+ "name": "SLC Agrícola S.A.",
+ "sector": "Agronegócio / Produção de algodão, soja e milho (terras próprias e arrendadas)",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "SLCE3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {
+   "revenue_2025": 8553.15,
+   "net_debt": 9682
+  },
+  "notes": "Receita-base 2025 = receita de produtos de R$ 8.553 mi (CVM 3.01.01); a receita CVM (R$ 9.759 mi) inclui R$ 1.206 mi de variação do valor justo dos ativos biológicos (VVJAB/VRLPA), que não é caixa. Margem = EBITDA AJUSTADO do release (exclui VVJAB, a realização do valor justo no custo e baixas de imobilizado): R$ 2.665 mi em 2025 (31,2%), R$ 1.276 mi no 1S26 (28,7%), UDM R$ 2.440 mi. DL-base de R$ 9.682 mi = DL CVM de 30/06 (R$ 10.378 mi: empréstimos R$ 8.212 mi + títulos a pagar de terras R$ 223 mi + arrendamentos R$ 2.870 mi − caixa R$ 927 mi) + derivativos ligados à dívida (R$ 204 mi, como no release) − R$ 900 mi de capital de giro sazonal: 30/06 é o pico do custeio (fornecedores pagos e lavouras formadas antes da venda do algodão), que se reverte no 2S e o motor não modela. Coluna 2026 = ano-calendário estimado (não o 2S anualizado), porque a receita é sazonal: soja no 1S, algodão e milho no 2S (2S26 ≈ R$ 4,6 bi). D&A de 8% inclui a depreciação do direito de uso (terras arrendadas). Capex (sem compra de terras) = máquinas, irrigação, algodoeiras e correção de solo (~9–11% da receita) + ~3,7% de renovação de arrendamentos (o EBITDA IFRS-16 não paga aluguel de terra; pagamentos de arrendamento de terras de R$ 399 mi no 1S26). Ações: 496,3 mi (B3 498,7 mi − 2,4 mi em tesouraria; após a bonificação de 12,5% de dez/2025)."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.06,
+   0.035,
+   0.055,
+   0.055,
+   0.05
+  ],
+  "ebitda_margin": [
+   0.3,
+   0.315,
+   0.31,
+   0.31,
+   0.31
+  ],
+  "da_pct_revenue": [
+   0.08,
+   0.08,
+   0.08,
+   0.08,
+   0.08
+  ],
+  "capex_pct_revenue": [
+   0.155,
+   0.135,
+   0.125,
+   0.12,
+   0.12
+  ],
+  "nwc_pct_revenue": 0.45,
+  "cost_of_net_debt": [
+   0.142,
+   0.148,
+   0.15,
+   0.148,
+   0.145
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.22,
+   0.22,
+   0.22,
+   0.22,
+   0.22
+  ],
+  "minority_share_ni": 0.04,
+  "payout": [
+   0.8,
+   0.6,
+   0.6,
+   0.6,
+   0.6
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.18,
+  "roe": 0.15
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.45,
+  "notes": "Kd marginal de 15,5%: dívida 99% em reais a CDI + 0,22% (taxa média de 14,4% em 30/06), CDI a termo de 14,5–15,5% para 2027–30. Peso da dívida de 45% ≈ DL/(DL + valor de mercado pré-eleição) ajustado pelo giro sazonal. Custo da DL no resultado: 14,2% em 2026 → 15,0% em 2028 → 14,5% em 2030, mistura de dívida bancária/CRA (CDI+) e arrendamentos de terras (taxa implícita ~13%, AVP de R$ 380 mi/ano)."
+ },
+ "adjustments": {
+  "other_debt_like": 179,
+  "non_operating_assets": 6350,
+  "minority_value": 672.2,
+  "notes": "TERRAS — tratamento: a terra própria é operacional (a SLC planta nela e não paga aluguel), mas vale muito mais no mercado do que a 'renda evitada' capitalizada a WACC de 18%. Por isso: (i) o EBITDA e o DCF ficam como estão (já incluem a vantagem de não arrendar 204 mil ha de 1ª safra próprios); (ii) compra de terras NÃO entra no capex (é decisão de alocação, não necessária à operação); (iii) non_operating_assets = valor excedente das terras = laudo de R$ 13,5 bi (próprias + associadas aos FIPs, jun/26) × ~92% atribuível × (1 − 30% de desconto por IR sobre ganho de capital acima do custo atribuído, custo de transação e liquidez) ≈ R$ 8,7 bi, menos a renda evitada já no DCF (204 mil ha × ~15 sc/ha × R$ 125/sc ≈ R$ 380 mi/ano, líquida de IR e capitalizada a WACC − g ≈ R$ 2,35 bi) = R$ 6,35 bi. A NAV da companhia é de R$ 27,12/ação (30/06/2026). Ativo biológico (lavoura em formação) é capital de giro, não ativo não operacional. other_debt_like = provisões fiscais, trabalhistas, cíveis e ambientais (R$ 179 mi). A compra de 8,9 mil ha do Grupo Radar (pós-2T26) não teve valor divulgado no release: fica fora (dívida e terra se compensariam, salvo o desconto de 30%). Minoritários: sócios de JVs/sociedades e FIPs, ~5% do LL (R$ 26 mi no 1S26) e R$ 672 mi de PL contábil."
+ },
+ "valuation_weights": {
+  "dcf": 0.6,
+  "ddm": 0.1,
+  "multiples": 0.3
+ },
+ "valuation_weights_rationale": "DDM com peso de 10% e DCF com 60% (precedente: EZTC3): o DDM e o P/L partem do lucro operacional (ROE ~8–10%) e ignoram o valor de mercado das terras (laudo de R$ 13,5 bi; NAV de R$ 27,12/ação), que o DCF e o EV/EBITDA incluem via non_operating_assets. Múltiplos com 30%.",
+ "target_multiples": {
+  "pe": 9.5,
+  "ev_ebitda": 5.7,
+  "pbv": 1.3,
+  "rationale": "EV/EBITDA 5,7x e P/L 9,5x sobre 2027E (EBITDA ajustado IFRS-16, com arrendamentos de terra na DL). Histórico (multiples_history, base CVM): mediana de 5 anos EV/EBITDA 7,1x (p10 5,5x) e P/L 12,2x; antes da eleição, ~7,8x o EBITDA ajustado UDM. Desconto de ~20% pela diferença de Ke (mercado ~12–14% vs 25%). O EV/EBITDA da SLC embute o valor das terras; por isso a ponte do motor soma o excedente das terras. Não verificamos múltiplos de pares (BrasilAgro, Boa Safra) nesta rodada."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.04,
+   "ebitda_margin_shift": -0.04,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Clima (milho já −18% de produtividade em 2025/26), soja de volta a US$ 10,5/bu e algodão a 68 ¢/lb com real a R$ 5,0 e CDI acima de 15%: receita −4 p.p., margem −4 p.p."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.03,
+   "ebitda_margin_shift": 0.03,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Algodão acima de 85 ¢/lb e soja acima de US$ 13/bu com real fraco; irrigação viabiliza 2ª safra e as terras seguem valorizando acima do IPCA: receita +3 p.p., margem +3 p.p."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.07,
+  "ebitda_margin_sd": 0.04,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.01
+ },
+ "debt_profile": {
+  "gross_debt_mn": 8465,
+  "pct_floating_cdi": 0.95,
+  "avg_cost": "14,4% a.a. (CDI + 0,22%) em 30/06/2026; 99% em reais (crédito rural, CRA, capital de giro, BNDES)",
+  "avg_maturity_years": null,
+  "next_24m_maturities_mn": null,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -57,
+  "notes": "Dívida bruta ajustada de R$ 8,5 bi quase toda em CDI contra caixa de R$ 0,9 bi (pico de custeio): +100 bp ≈ −R$ 73 mi antes de IR (≈ −R$ 57 mi no LL, ~11% do lucro de 2027E). Arrendamentos de terras são em sacas de soja (risco de preço, não de juros)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.203,
+  "ebitda_margin_avg_5y": 0.291,
+  "roe_avg_5y": 0.213,
+  "payout_avg_5y": 0.572,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.168,
+   "ebitda_margin": 0.267,
+   "net_income_mn": 245,
+   "net_debt_ebitda": 3.09
+  },
+  "notes": "Receita CVM 2020–25 +20% a.a. (com valor justo; expansão de área: 832,6 mil ha em 2025/26, +13% com a Sierentz), mas +0,8% a.a. em 3 anos com a queda de soja e algodão desde 2022. Margem EBITDA ajustada: 31,2% em 2025, 28,7% no 1S26, UDM 27,7%; projetamos 30–31,5% (média de ciclo ~31%, abaixo dos 35–38% de 2021–22). ROE de 11–12% em 2024–25 contra 31–33% em 2021–22; o lucro recorrente projetado dá ROE de 9–10% — o retorno real do acionista vem da valorização das terras (ganho real de 8,4% a.a. em 5 anos, segundo a companhia), que não passa pelo resultado. Payout alto: 70% (2023), 83% (2024), 115% (2025). DECK: soja FOB US$ 12,0/bu para 2026/27 (35,6% travado a US$ 11,95 + 13,6% em compromissos; CBOT jan/27 US$ 12,38 e mai/27 US$ 12,55 em 28/10) e US$ 11,5–12,0 depois; algodão 79 ¢/lb em 2026/27 (55% travado a 78,88 ¢; ICE dez/26 78,10 ¢) e ~80 ¢ depois; milho R$ 55–60/sc na fazenda (B3 set/27 R$ 75,40 em Campinas). Câmbio da safra 2025/26 travado a R$ 5,61 (soja) e 5,92 (algodão); 2026/27 só 6–11% travado (5,50–5,75) + ~35% em compromissos em US$ (hedge natural). Câmbio médio 5,20 (2026), 5,40, 5,50, 5,60, 5,70. Custo/ha 2025/26 de R$ 7.021 (57% indexado ao dólar); insumos de 2026/27 já 90–100% comprados. Real fraco ajuda: cada R$ 0,10/US$ ≈ +R$ 0,1 bi/ano de EBITDA líquido do custo dolarizado, mas só na parte não travada."
+ },
+ "guidance": "Sem guidance financeiro. Safra 2025/26 (forecast 2T26): 832,6 mil ha; produtividade de soja 4.146 kg/ha (recorde), algodão 2.220/2.072 kg/ha (1ª/2ª safra, +20,6%/+3,0%), milho 6.798 kg/ha (−18%); custo médio R$ 7.021/ha. Hedge 2026/27: soja 35,6% a US$ 11,95/bu; algodão 55% a 78,88 ¢/lb. Intenção de plantio 2026/27 e resultado do 3T26 em 11/11/2026. Laudo de terras: R$ 13,5 bi; NAV R$ 27,12/ação.",
+ "dividend_policy": "Estatuto: mínimo de 25% do lucro ajustado; paga dividendos e JCP, em geral em dezembro (data-com) e após a AGO. Dez/2025: R$ 0,8605/ação de dividendos + R$ 0,0453 de JCP (data-com 12/12, pagos 22–23/12/2025; ~R$ 450 mi); bonificação de 12,5% em dez/2025. Payout de 70% (2023), 83% (2024) e 115% (2025). Projetamos 80% do lucro de 2026 (proventos de dezembro) e 60% depois, com a alavancagem em ~3x o EBITDA.",
+ "election_impact": "SLCE3 caiu só 1,3% em 26/10 (R$ 17,26 às 13h02), contra −27% do SMLL: receita em dólar (algodão, soja, milho) e ativos reais (terras). Canais: (i) câmbio — ajuda, mas a safra 2025/26 já está 83–85% travada e a 2026/27 só ~6–11% (mais ~35% de compromissos em US$), então o real fraco melhora sobretudo 2027; (ii) juros — dívida 99% em CDI (R$ 8,5 bi) e capital de giro intenso: +100 bp tira ~R$ 57 mi do lucro, e a curva DI 2027–30 de 14,5–15,5% mantém o custo financeiro perto de 1,4–1,5 bi/ano; (iii) política agrícola — Plano Safra, crédito rural e LCA/CRA dependem do governo; um 4º mandato Lula com fiscal apertado tende a encarecer o crédito subsidiado, e o risco de invasões/insegurança jurídica fundiária pesa no prêmio das terras; (iv) terras como reserva de valor real se beneficiam de inflação e câmbio. O valor depende mais de preço de grãos/algodão, clima e juros do que da eleição.",
+ "summary": "Maior produtora de algodão e soja listada do país, com 832,6 mil ha plantados e terras próprias avaliadas em R$ 13,5 bi; quase não caiu no dia da eleição (−1,3%). O lucro operacional é modesto (ROE recorrente de ~9–10%) porque a dívida em CDI e o arrendamento de terras consomem boa parte do EBITDA; o valor está nas terras, que tratamos como excedente com desconto de 30%. Drivers: preço de algodão e soja em US$, produtividade, câmbio da parcela não travada e CDI.",
+ "thesis": [
+  "Terras: laudo de R$ 13,5 bi (jun/26) e NAV de R$ 27,12/ação; ganho real de 8,4% a.a. em 5 anos no portfólio.",
+  "Eficiência agronômica: soja a 4.146 kg/ha (11,7% acima da média nacional) e algodão de 1ª safra a 2.220 kg/ha (+20,6%) em 2025/26.",
+  "Safra 2026/27 bem protegida em preço (algodão 55% a 78,88 ¢/lb; soja 35,6% a US$ 11,95/bu) e com insumos 90–100% comprados; CBOT de soja subiu para US$ 12,4–12,5/bu.",
+  "Escala e expansão: +13% de área com a Sierentz, irrigação (R$ 155 mi no 1S26) viabilizando 2ª safra e nova algodoeira em Parnaguá."
+ ],
+ "risks": [
+  "Clima: milho 2025/26 com produtividade 12,1% abaixo do orçado; risco de El Niño/La Niña na safra 2026/27.",
+  "Juros e alavancagem: DL ajustada de R$ 7,5 bi (3,09x) em 30/06, 99% em CDI; arrendamentos de R$ 2,9 bi em sacas de soja.",
+  "Preços: algodão sob pressão de oferta (área EUA +12,8% em 2026/27 segundo a companhia) e soja volátil; caroço de algodão com preço −17% a/a.",
+  "Política agrícola e fundiária: custo do crédito rural/LCA, Plano Safra e insegurança jurídica sobre terras.",
+  "O valor das terras só se realiza com venda (IR sobre ganho de capital) e a companhia historicamente não as monetiza em escala."
+ ],
+ "catalysts": [
+  "Resultado 3T26 e intenção de plantio 2026/27 (11/11/2026)",
+  "Proventos de dezembro/2026",
+  "Venda/parcerias de terras (FIPs)",
+  "Colheita de soja 2026/27 (jan–abr/2027)"
+ ],
+ "key_data": [
+  {
+   "label": "EBITDA ajustado 1S26",
+   "value": "R$ 1,28 bi (28,7%)",
+   "context": "−15% a/a; UDM R$ 2,44 bi"
+  },
+  {
+   "label": "DL ajustada / EBITDA 2T26",
+   "value": "R$ 7,54 bi · 3,09x",
+   "context": "1,97x em dez/25 (pico sazonal do custeio)"
+  },
+  {
+   "label": "Terras (laudo jun/26)",
+   "value": "R$ 13,5 bi · NAV R$ 27,12/ação",
+   "context": "próprias + associadas aos FIPs"
+  },
+  {
+   "label": "Hedge 2026/27",
+   "value": "Algodão 55% a 78,88 ¢/lb · soja 35,6% a US$ 11,95/bu",
+   "context": "câmbio só 6–11% travado"
+  },
+  {
+   "label": "Deck soja / algodão / câmbio",
+   "value": "US$ 12,0/bu · 79 ¢/lb · R$ 5,40",
+   "context": "safra 2026/27; CBOT mai/27 12,55 e ICE dez/26 78,10 em 28/10"
+  },
+  {
+   "label": "Área plantada 2025/26",
+   "value": "832,6 mil ha",
+   "context": "+13,1% (Sierentz); 204 mil ha próprios de 1ª safra"
+  }
+ ],
+ "sources": [
+  {
+   "title": "SLC Agrícola — Release 2T26 (12/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/a975c39b-3eca-4ad8-9330-2c0a0b8d1060/da017e37-1ea8-7eef-ac2c-243762280f70?origin=2"
+  },
+  {
+   "title": "SLC Agrícola — Apresentação 2T26 (NAV, laudo de terras, hedge 2026/27)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/a975c39b-3eca-4ad8-9330-2c0a0b8d1060/de86c3df-ab86-c430-4400-8c8a33d7a0bb?origin=2"
+  },
+  {
+   "title": "SLC Agrícola — Planilha de áreas (própria, arrendada, sociedades) 2025/26",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/a975c39b-3eca-4ad8-9330-2c0a0b8d1060/587c0791-d9ef-38a7-66fa-35483903c2b3?origin=2"
+  },
+  {
+   "title": "SLC Agrícola — RI (calendário: 3T26 em 11/11/2026)",
+   "url": "https://ri.slcagricola.com.br/"
+  },
+  {
+   "title": "Notícias Agrícolas — Soja CBOT, fechamento 28/10/2026",
+   "url": "https://www.noticiasagricolas.com.br/cotacoes/soja/soja-bolsa-de-chicago-cme-group"
+  },
+  {
+   "title": "Notícias Agrícolas — Algodão ICE dez/26 e indicador CEPEA (27–28/10/2026)",
+   "url": "https://www.noticiasagricolas.com.br/cotacoes/algodao"
+  },
+  {
+   "title": "Notícias Agrícolas — Milho B3, ajuste 27/10/2026",
+   "url": "https://www.noticiasagricolas.com.br/cotacoes/milho/milho-b3-prego-regular"
+  },
+  {
+   "title": "BCB — PTAX (SGS 1): 30/06/26 5,1766; 30/09/26 5,1809; 28/10/26 5,3420",
+   "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json"
+  },
+  {
+   "title": "B3 — GetListedSupplementCompany (proventos oficiais) e cotação instrumentQuotation (foto 26/10 13h02)",
+   "url": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/{TICKER}.json, pipeline do time)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  }
+ ],
+ "confidence": "baixa — o valor depende sobretudo do tratamento das terras (laudo de R$ 13,5 bi, % atribuível e desconto de 30% são premissas nossas) e de um lucro recorrente fino que oscila com clima, preço e CDI; o 3T26 só sai em 11/11 e o valor da compra da Radar não foi divulgado."
+}

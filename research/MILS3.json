@@ -1,0 +1,258 @@
+{
+ "ticker": "MILS3",
+ "name": "Mills Locação, Serviços e Logística S.A.",
+ "sector": "Locação de plataformas elevatórias, máquinas pesadas, intralogística e formas/escoramentos — em processo de venda de controle para a Loxam",
+ "template": "industrial",
+ "as_of_quarter": "2T26",
+ "shares_per_unit": 1,
+ "listed_classes": [
+  {
+   "ticker": "MILS3",
+   "class": "ON"
+  }
+ ],
+ "overrides": {
+  "base": {},
+  "notes": "Sem override de base: ações 227,88 mi (B3 234,29 mi − 6,41 mi em tesouraria; CVM 227,83 mi). DL CVM 2T26 R$ 1.220 mi = debêntures/empréstimos R$ 1.757 mi + arrendamentos IFRS-16 R$ 105 mi − caixa/aplicações R$ 642 mi (companhia: DL R$ 1.115 mi ex-IFRS-16, 1,16x o EBITDA ajustado UDM). O EBITDA CVM do 1S26 (59,1%) inclui não recorrentes (créditos extemporâneos de PIS/COFINS R$ 36,6 mi e reversão do earn-out da Next Rental R$ 26,5 mi): projeção usa a margem recorrente (50,0% no 2T26). O LL do 1S26 (R$ 303 mi) inclui ~R$ 140 mi de créditos fiscais extemporâneos não caixa; o lucro recorrente do 2T26 foi R$ 61,8 mi."
+ },
+ "projection": {
+  "years": [
+   2026,
+   2027,
+   2028,
+   2029,
+   2030
+  ],
+  "revenue_growth": [
+   0.07,
+   0.065,
+   0.065,
+   0.06,
+   0.055
+  ],
+  "ebitda_margin": [
+   0.495,
+   0.495,
+   0.5,
+   0.5,
+   0.5
+  ],
+  "da_pct_revenue": [
+   0.17,
+   0.17,
+   0.17,
+   0.17,
+   0.17
+  ],
+  "capex_pct_revenue": [
+   0.22,
+   0.235,
+   0.235,
+   0.23,
+   0.225
+  ],
+  "nwc_pct_revenue": 0.15,
+  "cost_of_net_debt": [
+   0.14,
+   0.15,
+   0.158,
+   0.16,
+   0.16
+  ],
+  "other_financial": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "tax_rate": [
+   0.31,
+   0.3,
+   0.3,
+   0.3,
+   0.3
+  ],
+  "minority_share_ni": 0.001,
+  "payout": [
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5
+  ],
+  "buyback_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "equity_issuance_mn": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "terminal": {
+  "g": 0.05,
+  "roic": 0.16,
+  "roe": 0.18
+ },
+ "wacc": {
+  "kd_pre_tax": 0.155,
+  "target_debt_weight": 0.25
+ },
+ "adjustments": {
+  "other_debt_like": 152,
+  "non_operating_assets": 130,
+  "minority_value": 3.3,
+  "notes": "other_debt_like R$ 152 mi = aquisições de controladas a pagar R$ 102 mi (CP 5,7 + 42,3; LP 54,4) + dividendos/JCP a pagar R$ 14,6 mi (data-com passada) + provisões para riscos líquidas de depósitos judiciais R$ 19 mi (23,8 − 4,4) + benefício pós-emprego R$ 4,8 mi + REFIS R$ 2,0 mi + risco sacado R$ 5,4 mi + derivativos R$ 3,7 mi. non_operating_assets R$ 130 mi = tributos a recuperar de longo prazo (R$ 146 mi, créditos extemporâneos de PIS/COFINS que serão compensados; a projeção de EBITDA e IR não os inclui), com desconto de ~10% pelo prazo. Não incluo prêmio de controle/OPA (ver dossiê)."
+ },
+ "target_multiples": {
+  "pe": 9.0,
+  "ev_ebitda": 4.5,
+  "pbv": 1.6,
+  "rationale": "Histórico (data/market): P/L mediana 5a 10,5x (p10 8,0x), EV/EBITDA mediana 5a 5,2x (p10 4,4x), P/VP 5a 1,88x; hoje 8,1x P/L UDM (lucro inflado por créditos) e 4,8x EV/EBITDA UDM. A transação com a Loxam (R$ 16/ação) avalia a Mills em ~5,2x o EBITDA recorrente UDM e ~4,8x o EBITDA 2027E, ~11x o LL 2027E — preço de comprador estratégico com custo de capital em euro. Alvo 4,5x EV/EBITDA e 9x P/L sobre 2027E (abaixo da transação e da mediana histórica, que embutem Ke de 11–14%); pares de locação (Armac, Vamos) negociam a 3–4x. Os dois alvos são coerentes: 4,5x implica P/L ~9,5x."
+ },
+ "scenarios": {
+  "bear": {
+   "probability": 0.3,
+   "revenue_growth_shift": -0.04,
+   "ebitda_margin_shift": -0.03,
+   "terminal_g_shift": -0.01,
+   "capex_pct_shift": 0.0,
+   "narrative": "Juros altos por mais tempo travam obras e indústria: inadimplência (PCE já 2,5% da receita) e guerra de preço em plataformas levam a margem a ~47% e o crescimento a ~2–3% a.a.; e o CADE barra ou atrasa a venda para a Loxam."
+  },
+  "bull": {
+   "probability": 0.2,
+   "revenue_growth_shift": 0.02,
+   "ebitda_margin_shift": 0.015,
+   "terminal_g_shift": 0.005,
+   "capex_pct_shift": 0.0,
+   "narrative": "Novo PAC/infraestrutura e mineração sustentam Pesados e Formas; contratos longos (55% da locação) e ganho de escala com a Loxam elevam a margem recorrente para 52%."
+  }
+ },
+ "uncertainty": {
+  "revenue_growth_sd": 0.035,
+  "ebitda_margin_sd": 0.015,
+  "terminal_g_sd": 0.0075,
+  "capex_pct_sd": 0.015
+ },
+ "debt_profile": {
+  "gross_debt_mn": 1757,
+  "pct_floating_cdi": 0.98,
+  "avg_cost": "CDI + 1,09% a.a. (pós-IR 10,16%), quase toda em debêntures CDI+ (8ª a 11ª emissões, CDI+0,90% a +2,00%) e FINAME CDI+0,15%; FINAME pré residual (7,0–7,1%)",
+  "avg_maturity_years": 3.5,
+  "next_24m_maturities_mn": 270,
+  "covenant_nd_ebitda": null
+ },
+ "rate_sensitivity": {
+  "ni_impact_per_100bp_cdi_mn": -8,
+  "notes": "Dívida bruta R$ 1,76 bi praticamente toda em CDI contra caixa de R$ 0,64 bi em CDI: exposição líquida ~R$ 1,1 bi → +100 bp ≈ −R$ 11 mi pré-IR ≈ −R$ 8 mi de LL (~3% do LL 2027E). O canal relevante é a demanda (construção/indústria) e a inadimplência, não a dívida. Parte da receita financeira é atualização Selic de créditos tributários (decai à medida que são compensados)."
+ },
+ "history_check": {
+  "revenue_cagr_5y": 0.294,
+  "ebitda_margin_avg_5y": 0.461,
+  "roe_avg_5y": 0.176,
+  "payout_avg_5y": 0.36,
+  "last_quarter": {
+   "period": "2T26",
+   "revenue_yoy": 0.049,
+   "ebitda_margin": 0.602,
+   "net_income_mn": 106.2,
+   "net_debt_ebitda": 1.16
+  },
+  "notes": "Receita CVM 2020–25 de R$ 506 mi para R$ 1.838 mi (+29% a.a., inclui aquisições Triengel/JM/Next Rental e o ciclo de 2021–23); 3a +19%; 2T26 +4,9% e 1S26 +8,2%. Projeção +7% em 2026 e 5,5–6,5% depois, com capex contido (6M26 −45% a/a) e maior competição em plataformas. Margem EBITDA: média 5a 46,1%; 2025 48,9%; recorrente 50,0% no 2T26 (CVM 60,2% e ajustada 56,9% incluem créditos extemporâneos e reversão de earn-out; Rental recorrente 46,4%, Formas 67,6% com indenizações pontuais) → 49,5% em 2026–27 e 50% depois. IR 30–31% (2025 27,7%; 2T26 34,1%). D&A 17% (2T26 17,2%). Capex (bruto de locação + corporativo + direito de uso − baixa) 22–23,5% vs D&A 17%: frota +6% a.a. ROE 5a 17,6%; LTM 26,5% inflado por créditos; projetado ~19–21%. Payout 5a 36% (2025 52%) → 50%. DL/EBITDA 1,16x (companhia)."
+ },
+ "guidance": "Sem guidance numérico. Em 25/05/2026 os controladores (família Nacht, fundo Sun/Southern Cross e família Oxenford) assinaram a venda de 50,3% à Loxam (França) por R$ 16,00/ação, corrigidos por 70% do CDI a partir do 31º dia até o fechamento; OPA obrigatória (tag along 100%, Novo Mercado) aos minoritários pelo mesmo preço, corrigido até a liquidação; possível cancelamento de registro. Condição: aprovação do CADE (2ª rodada de questionamentos em set/26, segundo a MLex). XP projetava liquidação em jun/2027.",
+ "dividend_policy": "Mínimo estatutário de 25%. Pagos (DFC CVM): R$ 43 mi (2021), R$ 59 mi (2022), R$ 55 mi (2023), R$ 110 mi (2024), R$ 157 mi (2025), R$ 135 mi no 1S26 (dividendo complementar de R$ 0,6596/ação pago em 30/04/2026 e JCP). Recompras de R$ 55 mi (2021), R$ 42 mi (2022), R$ 169 mi (2024) e R$ 12 mi (2025). Não verificado se dividendos pagos até o fechamento são deduzidos do preço da Loxam.",
+ "election_impact": "Caiu só 2,2% em 26/10 (R$ 16,26 → R$ 15,90) contra −27% do SMLL: o preço está ancorado na OPA da Loxam (R$ 16 corrigidos), que funciona como um título pós-fixado com risco de CADE. No fundamental, o choque de juros pesa pouco na dívida (DL 1,2x EBITDA, +100 bp ≈ −3% do LL) e mais na demanda: construção e indústria desaceleram e a inadimplência já subia no 2T26 (PCE 2,5% da receita). Lula 4 tende a manter o Novo PAC (infraestrutura, saneamento, mobilidade), que sustenta Pesados e Formas e Escoramentos.",
+ "summary": "Locadora de equipamentos com margem EBITDA recorrente de 50%, ROIC contábil de ~15–17% e alavancagem baixa (1,2x), cujo preço está preso à OPA da Loxam (R$ 16 + correção por CDI/Selic). Para quem compra hoje, o retorno até a liquidação é o da correção do preço da transação; o valor standalone só volta a importar se o CADE barrar ou atrasar muito o negócio.",
+ "thesis": [
+  "Saída garantida pela transação: Loxam paga R$ 16/ação + 70% do CDI até o fechamento (≈ R$ 3,75 bi pela companhia) e a OPA estende o mesmo preço aos minoritários.",
+  "Negócio sólido: ROIC UDM 21,7% (17–18% com IR contábil e sem não recorrentes), contratos longos já 55% da receita de locação, DL/EBITDA 1,16x.",
+  "Geração de caixa: FCO ajustado de R$ 409 mi no 1S26 (74% do EBITDA) com capex 45% menor."
+ ],
+ "risks": [
+  "CADE: segunda rodada de questionamentos (set/26); veto ou remédios fariam o preço voltar ao valor standalone.",
+  "Lucro reportado inflado por não recorrentes (créditos extemporâneos, earn-out): LL recorrente do 2T26 foi R$ 61,8 mi (−29% a/a).",
+  "Competição de pequenos locadores em plataformas elevatórias e inadimplência crescente na construção.",
+  "Possível fechamento de capital após a OPA reduz liquidez de quem não aderir."
+ ],
+ "catalysts": [
+  "Decisão do CADE sobre Loxam–Mills",
+  "Fechamento da compra do controle e lançamento da OPA (XP: liquidação ~jun/2027)",
+  "Resultado 3T26 (início de nov/26)"
+ ],
+ "key_data": [
+  {
+   "label": "Receita líquida 2T26",
+   "value": "R$ 472,2 mi (+4,9% a/a)",
+   "context": "Rental R$ 392,5 mi; Formas e Escoramentos R$ 79,7 mi"
+  },
+  {
+   "label": "EBITDA 2T26 CVM / ajustado / recorrente",
+   "value": "R$ 284 / 269 / 236 mi",
+   "context": "margens 60,2% / 56,9% / 50,0%"
+  },
+  {
+   "label": "Lucro 2T26 reportado / recorrente",
+   "value": "R$ 106,3 / 61,8 mi",
+   "context": "1T26 R$ 197 mi com créditos extemporâneos"
+  },
+  {
+   "label": "DL / DL/EBITDA",
+   "value": "R$ 1.115 mi / 1,16x",
+   "context": "custo CDI+1,09%, prazo 3,5 anos"
+  },
+  {
+   "label": "Preço Loxam",
+   "value": "R$ 16,00/ação + 70% CDI",
+   "context": "OPA a minoritários pelo mesmo preço"
+  },
+  {
+   "label": "Frota",
+   "value": "16,4 mil equipamentos (+7,7% a/a)",
+   "context": "10,9 mil Leves, 2,7 mil Pesados, 2,9 mil Intralogística"
+  },
+  {
+   "label": "Preço 26/10 vs 23/10",
+   "value": "R$ 15,90 / 16,26",
+   "context": "28/10 15h27: R$ 15,66"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Mills — Release de resultados 2T26 (05/08/2026)",
+   "url": "https://api.mziq.com/mzfilemanager/v2/d/5a4be2ff-b3a2-4792-b967-e745978e71f9/21e26ea1-3fbd-7a7a-db35-542a77442b04?origin=2"
+  },
+  {
+   "title": "Seu Dinheiro — Mills anuncia aquisição por grupo francês que fará OPA (25/05/2026)",
+   "url": "https://www.seudinheiro.com/2026/empresas/small-cap-da-adeus-a-b3-mills-mils3-anuncia-aquisicao-por-grupo-frances-que-fara-opa-kaes/"
+  },
+  {
+   "title": "Eu Quero Investir (XP) — ação da Mills pode subir 17% até o fechamento da venda",
+   "url": "https://euqueroinvestir.com/acoes/acao-da-mills-pode-subir-mais-17-ate-fechamento-de-venda"
+  },
+  {
+   "title": "MLex — Second round of queries issued in Loxam-Mills Brazil deal review (set/2026)",
+   "url": "https://www.mlex.com/mlex/mergers-acquisitions/articles/2522754/second-round-of-queries-issued-in-loxam-mills-brazil-deal-review"
+  },
+  {
+   "title": "Loxam — Acquisition of a controlling stake in Mills (comunicado)",
+   "url": "https://loxam.com/wp-content/uploads/2026/05/Loxam-Acquisition-of-a-controlling-stake-in-Mills-Locacao-Servicos-e-Logistica-S.A-1.pdf"
+  },
+  {
+   "title": "Eu Quero Investir — Safra: EBITDA da Mills inflado por não recorrentes",
+   "url": "https://euqueroinvestir.com/acoes/mills-tem-ebitda-inflado-por-efeitos-nao-recorrentes-diz-safra"
+  },
+  {
+   "title": "CVM — DFP/ITR padronizados (data/hist/MILS3.json) e B3 (cotação, proventos)",
+   "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr"
+  }
+ ],
+ "confidence": "média — balanço simples e bem documentado, mas o resultado reportado tem muito não recorrente e o preço é definido pela OPA da Loxam, não pelo fundamento; o valor intrínseco a Ke 25% não é o que o acionista recebe se o negócio fechar."
+}
