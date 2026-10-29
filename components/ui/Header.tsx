@@ -7,6 +7,7 @@ import { useKe, useMarket } from "@/lib/live";
 const NAV = [
   { href: "/", label: "Painel" },
   { href: "/investir", label: "Investir" },
+  { href: "/registro", label: "Registro" },
   { href: "/dividendos", label: "Dividendos" },
   { href: "/mercado", label: "Mercado" },
   { href: "/metodologia", label: "Metodologia" },

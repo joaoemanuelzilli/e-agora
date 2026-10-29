@@ -1,0 +1,1202 @@
+{
+ "id": "2026-10-28",
+ "titulo": "Carteira recomendada pelo estudo",
+ "data_ref": "2026-10-28",
+ "preco_ref": "Fechamento oficial da B3 em 28/10/2026",
+ "registrado_em": "2026-10-29T16:27",
+ "ke": 0.25,
+ "regra": "TIR de dono ≥ 20%, P(valor justo > preço) ≥ 45% no Monte Carlo, fora da zona de risco do Altman Z″ e confiança do analista diferente de baixa; as 8 primeiras pelo escore multifator. Seleção com o fechamento de 28/10/2026.",
+ "benchmarks": {
+  "IBOV": 171004.55,
+  "SMLL": 1939.98,
+  "CDI_aa": 0.1365
+ },
+ "carteira": {
+  "acoes": 0.6,
+  "cdi": 0.4,
+  "entrada_sugerida": 0.276,
+  "acoes_vol_normal": 0.6,
+  "metodo": "Recomendada · 8 oportunidades (50% máx. Sharpe TIR + 50% paridade de risco), setor B3 ≤ 40%, excedente em CDI",
+  "retorno_esperado": 0.2149,
+  "vol": 0.195
+ },
+ "recomendacoes": [
+  {
+   "rank": 1,
+   "ticker": "VTRU3",
+   "nome": "VITRUEDUCA",
+   "setor": "Diversos",
+   "preco_ref": 12.02,
+   "preco_foto_17h06": 11.98,
+   "teto": 12.98,
+   "compra_forte": 9.82,
+   "valor_justo": 16.99,
+   "upside": 0.4133,
+   "tir_dono": 0.2634,
+   "tir_3a": 0.5429,
+   "chance_valor_acima": 0.9194,
+   "peso_capital": 0.0809,
+   "peso_acoes": 0.1348,
+   "situacao": "na faixa de compra",
+   "confianca": "média-baixa",
+   "segunda_analise": null,
+   "tese": "A Vitru, maior plataforma listada de ensino superior digital (1,03 milhão de alunos), gerou R$ 410 mi de caixa livre no 1S26 e desalavancou de 2,34x para 1,36x em 12 meses. A R$ 13,39 (foto de 26/10, 13h02), negocia a 3,6x o EV/EBITDA 2027E, e o preço embute receita crescendo 1,2% a.a. até 2030, contra 6,2% no modelo."
+  },
+  {
+   "rank": 2,
+   "ticker": "BEEF3",
+   "nome": "MINERVA",
+   "setor": "Alimentos Processados",
+   "preco_ref": 2.89,
+   "preco_foto_17h06": 2.87,
+   "teto": 3.27,
+   "compra_forte": 2.47,
+   "valor_justo": 5.44,
+   "upside": 0.8818,
+   "tir_dono": 0.2718,
+   "tir_3a": 0.6266,
+   "chance_valor_acima": 0.7872,
+   "peso_capital": 0.2,
+   "peso_acoes": 0.3333,
+   "situacao": "na faixa de compra",
+   "confianca": "média",
+   "segunda_analise": {
+    "decisao": "Comprar",
+    "sinal": "ATRATIVA",
+    "valor_justo": 5.1
+   },
+   "tese": "A Minerva caiu 21% no dia em que o dólar subiu 9,5%, embora 57% da receita bruta seja exportação e a dívida em US$ seja hedgeada. A R$ 3,38 (13h02 de 26/10), o mercado paga 3,9x EV/EBITDA, e a TIR de dono, de 24,5%, é praticamente igual à Ke de 25%."
+  },
+  {
+   "rank": 3,
+   "ticker": "SEER3",
+   "nome": "SER EDUCA",
+   "setor": "Diversos",
+   "preco_ref": 11.11,
+   "preco_foto_17h06": 11.03,
+   "teto": 10.66,
+   "compra_forte": 8.25,
+   "valor_justo": 14.19,
+   "upside": 0.2773,
+   "tir_dono": 0.2442,
+   "tir_3a": 0.5379,
+   "chance_valor_acima": 0.8408,
+   "peso_capital": 0.0291,
+   "peso_acoes": 0.0485,
+   "situacao": "acima do teto",
+   "confianca": "média",
+   "segunda_analise": null,
+   "tese": "A Ser Educacional, a mais presencial das listadas de massa (EAD e semipresencial em ~13% da receita), devolveu quase todo o rali eleitoral e negocia a 4,2x o lucro 2027E, com DL ex-arrendamentos de 0,75x o EBITDA: o preço embute receita crescendo 1,1% a.a., contra 5,3% no modelo."
+  },
+  {
+   "rank": 4,
+   "ticker": "MDNE3",
+   "nome": "MOURA DUBEUX",
+   "setor": "Construção Civil",
+   "preco_ref": 17.05,
+   "preco_foto_17h06": 16.86,
+   "teto": 19.2,
+   "compra_forte": 15.38,
+   "valor_justo": 20.19,
+   "upside": 0.1841,
+   "tir_dono": 0.2779,
+   "tir_3a": 0.5018,
+   "chance_valor_acima": 0.7938,
+   "peso_capital": 0.1049,
+   "peso_acoes": 0.1748,
+   "situacao": "na faixa de compra",
+   "confianca": "média",
+   "segunda_analise": {
+    "decisao": "Acompanhar",
+    "sinal": "NÃO ATRATIVA",
+    "valor_justo": 24.3
+   },
+   "tese": "Com ROE de 28% e P/L de 3,6x, a Moura Dubeux continua entre as cinco oportunidades — mas, com o consumo de caixa de R$ 170 mi do 3T26 incorporado à dívida, a TIR de dono caiu para 24,5%, meio ponto abaixo do Ke de 25%."
+  },
+  {
+   "rank": 5,
+   "ticker": "PLPL3",
+   "nome": "PLANOEPLANO",
+   "setor": "Construção Civil",
+   "preco_ref": 4.79,
+   "preco_foto_17h06": 4.84,
+   "teto": 5.75,
+   "compra_forte": 4.47,
+   "valor_justo": 6.37,
+   "upside": 0.3305,
+   "tir_dono": 0.283,
+   "tir_3a": 0.4962,
+   "chance_valor_acima": 0.8234,
+   "peso_capital": 0.0851,
+   "peso_acoes": 0.1418,
+   "situacao": "na faixa de compra",
+   "confianca": "baixa-média",
+   "segunda_analise": {
+    "decisao": "Comprar",
+    "sinal": "ATRATIVA",
+    "valor_justo": 10.21
+   },
+   "tese": "A R$ 5,70, a Plano&Plano negocia a 1,0x o valor patrimonial e 3,9x o lucro 2027E, e o preço embute receita crescendo só 1,7% ao ano até 2030 — num MCMV que acabou de ser ampliado e ganhou quatro anos de continuidade com Lula."
+  },
+  {
+   "rank": 6,
+   "ticker": "TEND3",
+   "nome": "TENDA",
+   "setor": "Construção Civil",
+   "preco_ref": 21.38,
+   "preco_foto_17h06": 21.22,
+   "teto": 21.71,
+   "compra_forte": 17.04,
+   "valor_justo": 26.81,
+   "upside": 0.2542,
+   "tir_dono": 0.2543,
+   "tir_3a": 0.4685,
+   "chance_valor_acima": 0.7906,
+   "peso_capital": 0.0432,
+   "peso_acoes": 0.072,
+   "situacao": "na faixa de compra",
+   "confianca": "média",
+   "segunda_analise": {
+    "decisao": "Comprar",
+    "sinal": "ATRATIVA",
+    "valor_justo": 36.04
+   },
+   "tese": "A Tenda, a incorporadora mais exposta ao núcleo do MCMV (Faixas 1–2), negocia a 3,9x o lucro 2027E e 2,7x o EV/EBITDA, depois de elevar o guidance de 2026 em agosto — e o preço embute receita crescendo 4,9% a.a. até 2030, menos da metade dos 10,6% do modelo."
+  },
+  {
+   "rank": 7,
+   "ticker": "CEAB3",
+   "nome": "CEA MODAS",
+   "setor": "Comércio",
+   "preco_ref": 6.82,
+   "preco_foto_17h06": 6.87,
+   "teto": 5.75,
+   "compra_forte": 4.48,
+   "valor_justo": 6.91,
+   "upside": 0.0125,
+   "tir_dono": 0.2208,
+   "tir_3a": 0.5814,
+   "chance_valor_acima": 0.5022,
+   "peso_capital": 0.0271,
+   "peso_acoes": 0.0452,
+   "situacao": "acima do teto",
+   "confianca": "média",
+   "segunda_analise": null,
+   "tese": "A C&A voltou à seleção no fechamento de 28/10: a R$ 6,87, abaixo do gatilho de ~R$ 7,20, a chance de o valor justo superar o preço sobe para 50,2%."
+  },
+  {
+   "rank": 8,
+   "ticker": "COGN3",
+   "nome": "COGNA ON",
+   "setor": "Diversos",
+   "preco_ref": 1.71,
+   "preco_foto_17h06": 1.69,
+   "teto": 1.65,
+   "compra_forte": 1.28,
+   "valor_justo": 1.97,
+   "upside": 0.1534,
+   "tir_dono": 0.2456,
+   "tir_3a": 0.5444,
+   "chance_valor_acima": 0.6704,
+   "peso_capital": 0.0297,
+   "peso_acoes": 0.0495,
+   "situacao": "acima do teto",
+   "confianca": "média-baixa",
+   "segunda_analise": {
+    "decisao": "Acompanhar",
+    "sinal": "ATRATIVA",
+    "valor_justo": 3.32
+   },
+   "tese": "Cogna gerou R$ 504 mi de caixa livre no 1S26 (12,5% do valor de mercado) e negocia a 3,9x EV/EBITDA, o menor múltiplo da série de 5 anos."
+  }
+ ],
+ "universo": [
+  {
+   "ticker": "RENT3",
+   "preco_ref": 29.86,
+   "valor_justo": 15.89,
+   "tir_dono": 0.1532,
+   "chance_valor_acima": 0.0192,
+   "selecionada": false
+  },
+  {
+   "ticker": "MOVI3",
+   "preco_ref": 6.6,
+   "valor_justo": 4.19,
+   "tir_dono": 0.2306,
+   "chance_valor_acima": 0.3488,
+   "selecionada": false
+  },
+  {
+   "ticker": "VAMO3",
+   "preco_ref": 2.58,
+   "valor_justo": 0.95,
+   "tir_dono": 0.1636,
+   "chance_valor_acima": 0.0726,
+   "selecionada": false
+  },
+  {
+   "ticker": "SIMH3",
+   "preco_ref": 5.24,
+   "valor_justo": 2.26,
+   "tir_dono": null,
+   "chance_valor_acima": null,
+   "selecionada": false
+  },
+  {
+   "ticker": "ECOR3",
+   "preco_ref": 5.29,
+   "valor_justo": 2.15,
+   "tir_dono": 0.1759,
+   "chance_valor_acima": 0.0004,
+   "selecionada": false
+  },
+  {
+   "ticker": "MOTV3",
+   "preco_ref": 14.45,
+   "valor_justo": 5.34,
+   "tir_dono": 0.1271,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "RAIL3",
+   "preco_ref": 14.48,
+   "valor_justo": 4.89,
+   "tir_dono": 0.0985,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "CSAN3",
+   "preco_ref": 2.35,
+   "valor_justo": 2.1,
+   "tir_dono": null,
+   "chance_valor_acima": null,
+   "selecionada": false
+  },
+  {
+   "ticker": "VBBR3",
+   "preco_ref": 30.66,
+   "valor_justo": 6.81,
+   "tir_dono": 0.1031,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "MGLU3",
+   "preco_ref": 5.22,
+   "valor_justo": 1.31,
+   "tir_dono": 0.0654,
+   "chance_valor_acima": 0.007,
+   "selecionada": false
+  },
+  {
+   "ticker": "SBFG3",
+   "preco_ref": 5.1,
+   "valor_justo": 3.52,
+   "tir_dono": 0.232,
+   "chance_valor_acima": 0.292,
+   "selecionada": false
+  },
+  {
+   "ticker": "CEAB3",
+   "preco_ref": 6.82,
+   "valor_justo": 6.91,
+   "tir_dono": 0.2208,
+   "chance_valor_acima": 0.5022,
+   "selecionada": true
+  },
+  {
+   "ticker": "LREN3",
+   "preco_ref": 9.59,
+   "valor_justo": 8.79,
+   "tir_dono": 0.2048,
+   "chance_valor_acima": 0.3806,
+   "selecionada": false
+  },
+  {
+   "ticker": "AZZA3",
+   "preco_ref": 15.0,
+   "valor_justo": 6.9,
+   "tir_dono": 0.1331,
+   "chance_valor_acima": 0.127,
+   "selecionada": false
+  },
+  {
+   "ticker": "VIVA3",
+   "preco_ref": 17.67,
+   "valor_justo": 13.31,
+   "tir_dono": 0.1638,
+   "chance_valor_acima": 0.0174,
+   "selecionada": false
+  },
+  {
+   "ticker": "VULC3",
+   "preco_ref": 11.98,
+   "valor_justo": 9.7,
+   "tir_dono": 0.182,
+   "chance_valor_acima": 0.0958,
+   "selecionada": false
+  },
+  {
+   "ticker": "ALPA4",
+   "preco_ref": 13.4,
+   "valor_justo": 6.53,
+   "tir_dono": 0.1112,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "NATU3",
+   "preco_ref": 5.01,
+   "valor_justo": 2.81,
+   "tir_dono": 0.1346,
+   "chance_valor_acima": 0.1152,
+   "selecionada": false
+  },
+  {
+   "ticker": "ASAI3",
+   "preco_ref": 7.88,
+   "valor_justo": 2.24,
+   "tir_dono": 0.1415,
+   "chance_valor_acima": 0.0004,
+   "selecionada": false
+  },
+  {
+   "ticker": "GMAT3",
+   "preco_ref": 3.55,
+   "valor_justo": 1.23,
+   "tir_dono": 0.1342,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "PGMN3",
+   "preco_ref": 2.69,
+   "valor_justo": 2.27,
+   "tir_dono": 0.2093,
+   "chance_valor_acima": 0.3594,
+   "selecionada": false
+  },
+  {
+   "ticker": "RADL3",
+   "preco_ref": 15.7,
+   "valor_justo": 6.41,
+   "tir_dono": 0.1183,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "HYPE3",
+   "preco_ref": 21.74,
+   "valor_justo": 10.76,
+   "tir_dono": 0.1339,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "CYRE3",
+   "preco_ref": 17.78,
+   "valor_justo": 17.76,
+   "tir_dono": 0.2288,
+   "chance_valor_acima": 0.4936,
+   "selecionada": false
+  },
+  {
+   "ticker": "EZTC3",
+   "preco_ref": 9.6,
+   "valor_justo": 10.69,
+   "tir_dono": 0.174,
+   "chance_valor_acima": 0.913,
+   "selecionada": false
+  },
+  {
+   "ticker": "MDNE3",
+   "preco_ref": 17.05,
+   "valor_justo": 20.19,
+   "tir_dono": 0.2779,
+   "chance_valor_acima": 0.7938,
+   "selecionada": true
+  },
+  {
+   "ticker": "JHSF3",
+   "preco_ref": 9.6,
+   "valor_justo": 2.62,
+   "tir_dono": 0.0968,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "MRVE3",
+   "preco_ref": 4.33,
+   "valor_justo": 2.34,
+   "tir_dono": 0.1285,
+   "chance_valor_acima": 0.1808,
+   "selecionada": false
+  },
+  {
+   "ticker": "PLPL3",
+   "preco_ref": 4.79,
+   "valor_justo": 6.37,
+   "tir_dono": 0.283,
+   "chance_valor_acima": 0.8234,
+   "selecionada": true
+  },
+  {
+   "ticker": "DIRR3",
+   "preco_ref": 8.77,
+   "valor_justo": 8.59,
+   "tir_dono": 0.221,
+   "chance_valor_acima": 0.4928,
+   "selecionada": false
+  },
+  {
+   "ticker": "CURY3",
+   "preco_ref": 26.95,
+   "valor_justo": 22.89,
+   "tir_dono": 0.1985,
+   "chance_valor_acima": 0.2316,
+   "selecionada": false
+  },
+  {
+   "ticker": "TEND3",
+   "preco_ref": 21.38,
+   "valor_justo": 26.81,
+   "tir_dono": 0.2543,
+   "chance_valor_acima": 0.7906,
+   "selecionada": true
+  },
+  {
+   "ticker": "MULT3",
+   "preco_ref": 25.95,
+   "valor_justo": 14.84,
+   "tir_dono": 0.1427,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "IGTI11",
+   "preco_ref": 22.64,
+   "valor_justo": 13.6,
+   "tir_dono": 0.1363,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "ALOS3",
+   "preco_ref": 24.51,
+   "valor_justo": 13.07,
+   "tir_dono": 0.127,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "SMFT3",
+   "preco_ref": 16.03,
+   "valor_justo": 6.87,
+   "tir_dono": 0.1378,
+   "chance_valor_acima": 0.007,
+   "selecionada": false
+  },
+  {
+   "ticker": "CVCB3",
+   "preco_ref": 0.86,
+   "valor_justo": 0.13,
+   "tir_dono": null,
+   "chance_valor_acima": 0.04,
+   "selecionada": false
+  },
+  {
+   "ticker": "YDUQ3",
+   "preco_ref": 8.9,
+   "valor_justo": 7.1,
+   "tir_dono": 0.1959,
+   "chance_valor_acima": 0.3092,
+   "selecionada": false
+  },
+  {
+   "ticker": "COGN3",
+   "preco_ref": 1.71,
+   "valor_justo": 1.97,
+   "tir_dono": 0.2456,
+   "chance_valor_acima": 0.6704,
+   "selecionada": true
+  },
+  {
+   "ticker": "ANIM3",
+   "preco_ref": 2.43,
+   "valor_justo": 2.54,
+   "tir_dono": 0.2285,
+   "chance_valor_acima": 0.5148,
+   "selecionada": false
+  },
+  {
+   "ticker": "HAPV3",
+   "preco_ref": 4.25,
+   "valor_justo": 4.82,
+   "tir_dono": 0.2929,
+   "chance_valor_acima": 0.5326,
+   "selecionada": false
+  },
+  {
+   "ticker": "RDOR3",
+   "preco_ref": 33.69,
+   "valor_justo": 13.66,
+   "tir_dono": 0.1223,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "B3SA3",
+   "preco_ref": 14.69,
+   "valor_justo": 7.65,
+   "tir_dono": 0.1163,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "BPAC11",
+   "preco_ref": 56.32,
+   "valor_justo": 29.59,
+   "tir_dono": 0.1314,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "BBAS3",
+   "preco_ref": 16.79,
+   "valor_justo": 15.67,
+   "tir_dono": 0.206,
+   "chance_valor_acima": 0.2868,
+   "selecionada": false
+  },
+  {
+   "ticker": "BBDC4",
+   "preco_ref": 14.68,
+   "valor_justo": 12.37,
+   "tir_dono": 0.1852,
+   "chance_valor_acima": 0.0108,
+   "selecionada": false
+  },
+  {
+   "ticker": "BRSR6",
+   "preco_ref": 13.02,
+   "valor_justo": 10.91,
+   "tir_dono": 0.1953,
+   "chance_valor_acima": 0.102,
+   "selecionada": false
+  },
+  {
+   "ticker": "AURE3",
+   "preco_ref": 11.03,
+   "valor_justo": 1.56,
+   "tir_dono": 0.0664,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "ENGI11",
+   "preco_ref": 45.71,
+   "valor_justo": 9.87,
+   "tir_dono": 0.0821,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "EQTL3",
+   "preco_ref": 34.06,
+   "valor_justo": 5.15,
+   "tir_dono": 0.0726,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "CPLE3",
+   "preco_ref": 14.69,
+   "valor_justo": 2.79,
+   "tir_dono": 0.0845,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "ALUP11",
+   "preco_ref": 31.75,
+   "valor_justo": 9.24,
+   "tir_dono": 0.1064,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "SBSP3",
+   "preco_ref": 25.11,
+   "valor_justo": 5.36,
+   "tir_dono": 0.083,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "TOTS3",
+   "preco_ref": 34.11,
+   "valor_justo": 16.55,
+   "tir_dono": 0.1164,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "INTB3",
+   "preco_ref": 14.53,
+   "valor_justo": 8.23,
+   "tir_dono": 0.13,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "GGPS3",
+   "preco_ref": 10.95,
+   "valor_justo": 7.47,
+   "tir_dono": 0.1541,
+   "chance_valor_acima": 0.0164,
+   "selecionada": false
+  },
+  {
+   "ticker": "ORVR3",
+   "preco_ref": 15.87,
+   "valor_justo": 5.42,
+   "tir_dono": 0.0954,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "BEEF3",
+   "preco_ref": 2.89,
+   "valor_justo": 5.44,
+   "tir_dono": 0.2718,
+   "chance_valor_acima": 0.7872,
+   "selecionada": true
+  },
+  {
+   "ticker": "TTEN3",
+   "preco_ref": 10.7,
+   "valor_justo": 3.46,
+   "tir_dono": 0.1262,
+   "chance_valor_acima": 0.0074,
+   "selecionada": false
+  },
+  {
+   "ticker": "PETR4",
+   "preco_ref": 52.51,
+   "valor_justo": 29.6,
+   "tir_dono": 0.1507,
+   "chance_valor_acima": 0.059,
+   "selecionada": false
+  },
+  {
+   "ticker": "PETR3",
+   "preco_ref": 59.03,
+   "valor_justo": 29.6,
+   "tir_dono": 0.1387,
+   "chance_valor_acima": 0.0276,
+   "selecionada": false
+  },
+  {
+   "ticker": "PRIO3",
+   "preco_ref": 71.7,
+   "valor_justo": 50.96,
+   "tir_dono": 0.1381,
+   "chance_valor_acima": 0.1016,
+   "selecionada": false
+  },
+  {
+   "ticker": "BRAV3",
+   "preco_ref": 18.34,
+   "valor_justo": 6.59,
+   "tir_dono": 0.1143,
+   "chance_valor_acima": 0.1098,
+   "selecionada": false
+  },
+  {
+   "ticker": "RECV3",
+   "preco_ref": 11.06,
+   "valor_justo": 5.1,
+   "tir_dono": 0.1369,
+   "chance_valor_acima": 0.029,
+   "selecionada": false
+  },
+  {
+   "ticker": "UGPA3",
+   "preco_ref": 32.96,
+   "valor_justo": 12.79,
+   "tir_dono": 0.105,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "ENEV3",
+   "preco_ref": 26.38,
+   "valor_justo": 2.79,
+   "tir_dono": 0.0716,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "UNIP6",
+   "preco_ref": 50.66,
+   "valor_justo": 15.79,
+   "tir_dono": 0.1076,
+   "chance_valor_acima": 0.0222,
+   "selecionada": false
+  },
+  {
+   "ticker": "VALE3",
+   "preco_ref": 61.38,
+   "valor_justo": 7.46,
+   "tir_dono": 0.0573,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "BRAP4",
+   "preco_ref": 18.1,
+   "valor_justo": 3.92,
+   "tir_dono": null,
+   "chance_valor_acima": null,
+   "selecionada": false
+  },
+  {
+   "ticker": "CBAV3",
+   "preco_ref": 11.33,
+   "valor_justo": 8.93,
+   "tir_dono": 0.0594,
+   "chance_valor_acima": 0.2206,
+   "selecionada": false
+  },
+  {
+   "ticker": "GGBR4",
+   "preco_ref": 24.09,
+   "valor_justo": 10.05,
+   "tir_dono": 0.103,
+   "chance_valor_acima": 0.0048,
+   "selecionada": false
+  },
+  {
+   "ticker": "GOAU4",
+   "preco_ref": 10.65,
+   "valor_justo": 5.32,
+   "tir_dono": null,
+   "chance_valor_acima": null,
+   "selecionada": false
+  },
+  {
+   "ticker": "USIM5",
+   "preco_ref": 5.69,
+   "valor_justo": 3.49,
+   "tir_dono": 0.118,
+   "chance_valor_acima": 0.1514,
+   "selecionada": false
+  },
+  {
+   "ticker": "SUZB3",
+   "preco_ref": 48.1,
+   "valor_justo": 14.84,
+   "tir_dono": 0.1291,
+   "chance_valor_acima": 0.0498,
+   "selecionada": false
+  },
+  {
+   "ticker": "KLBN11",
+   "preco_ref": 17.49,
+   "valor_justo": 3.2,
+   "tir_dono": 0.1158,
+   "chance_valor_acima": 0.007,
+   "selecionada": false
+  },
+  {
+   "ticker": "SLCE3",
+   "preco_ref": 16.94,
+   "valor_justo": 11.56,
+   "tir_dono": 0.0942,
+   "chance_valor_acima": 0.2226,
+   "selecionada": false
+  },
+  {
+   "ticker": "WEGE3",
+   "preco_ref": 47.2,
+   "valor_justo": 11.19,
+   "tir_dono": 0.0815,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "EMBJ3",
+   "preco_ref": 97.29,
+   "valor_justo": 30.69,
+   "tir_dono": 0.0918,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "POMO4",
+   "preco_ref": 3.92,
+   "valor_justo": 3.96,
+   "tir_dono": 0.2168,
+   "chance_valor_acima": 0.522,
+   "selecionada": false
+  },
+  {
+   "ticker": "RAPT4",
+   "preco_ref": 3.68,
+   "valor_justo": 1.92,
+   "tir_dono": 0.1566,
+   "chance_valor_acima": 0.1594,
+   "selecionada": false
+  },
+  {
+   "ticker": "TUPY3",
+   "preco_ref": 15.43,
+   "valor_justo": 6.04,
+   "tir_dono": 0.1596,
+   "chance_valor_acima": 0.1308,
+   "selecionada": false
+  },
+  {
+   "ticker": "LEVE3",
+   "preco_ref": 31.31,
+   "valor_justo": 22.49,
+   "tir_dono": 0.1808,
+   "chance_valor_acima": 0.0322,
+   "selecionada": false
+  },
+  {
+   "ticker": "DXCO3",
+   "preco_ref": 4.61,
+   "valor_justo": 1.16,
+   "tir_dono": 0.1036,
+   "chance_valor_acima": 0.0032,
+   "selecionada": false
+  },
+  {
+   "ticker": "ITUB4",
+   "preco_ref": 39.78,
+   "valor_justo": 25.13,
+   "tir_dono": 0.1414,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "ITSA4",
+   "preco_ref": 12.91,
+   "valor_justo": 9.79,
+   "tir_dono": null,
+   "chance_valor_acima": null,
+   "selecionada": false
+  },
+  {
+   "ticker": "SANB11",
+   "preco_ref": 24.35,
+   "valor_justo": 16.59,
+   "tir_dono": 0.153,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "BBDC3",
+   "preco_ref": 13.38,
+   "valor_justo": 12.37,
+   "tir_dono": 0.1983,
+   "chance_valor_acima": 0.1478,
+   "selecionada": false
+  },
+  {
+   "ticker": "ABCB4",
+   "preco_ref": 23.14,
+   "valor_justo": 16.16,
+   "tir_dono": 0.1734,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "PINE4",
+   "preco_ref": 10.84,
+   "valor_justo": 9.45,
+   "tir_dono": 0.2271,
+   "chance_valor_acima": 0.2422,
+   "selecionada": false
+  },
+  {
+   "ticker": "BBSE3",
+   "preco_ref": 41.35,
+   "valor_justo": 28.26,
+   "tir_dono": 0.157,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "CXSE3",
+   "preco_ref": 21.26,
+   "valor_justo": 12.43,
+   "tir_dono": 0.1267,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "PSSA3",
+   "preco_ref": 46.7,
+   "valor_justo": 35.44,
+   "tir_dono": 0.1495,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "IRBR3",
+   "preco_ref": 56.94,
+   "valor_justo": 35.09,
+   "tir_dono": 0.1471,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "SAUD3",
+   "preco_ref": 14.78,
+   "valor_justo": 9.96,
+   "tir_dono": 0.1437,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "AXIA3",
+   "preco_ref": 48.23,
+   "valor_justo": 7.77,
+   "tir_dono": 0.0672,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "CMIG4",
+   "preco_ref": 10.14,
+   "valor_justo": 2.56,
+   "tir_dono": 0.1116,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "EGIE3",
+   "preco_ref": 27.4,
+   "valor_justo": 7.18,
+   "tir_dono": 0.097,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "CPFE3",
+   "preco_ref": 42.95,
+   "valor_justo": 12.56,
+   "tir_dono": 0.1119,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "ISAE4",
+   "preco_ref": 25.35,
+   "valor_justo": 5.13,
+   "tir_dono": 0.0632,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "TAEE11",
+   "preco_ref": 39.71,
+   "valor_justo": 11.5,
+   "tir_dono": 0.0769,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "CSMG3",
+   "preco_ref": 50.0,
+   "valor_justo": 11.89,
+   "tir_dono": 0.0955,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "SAPR11",
+   "preco_ref": 32.42,
+   "valor_justo": 10.26,
+   "tir_dono": 0.1307,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "ABEV3",
+   "preco_ref": 15.22,
+   "valor_justo": 8.7,
+   "tir_dono": 0.1189,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "MDIA3",
+   "preco_ref": 15.93,
+   "valor_justo": 11.12,
+   "tir_dono": 0.1335,
+   "chance_valor_acima": 0.049,
+   "selecionada": false
+  },
+  {
+   "ticker": "GRND3",
+   "preco_ref": 3.61,
+   "valor_justo": 2.76,
+   "tir_dono": 0.1352,
+   "chance_valor_acima": 0.0102,
+   "selecionada": false
+  },
+  {
+   "ticker": "VIVT3",
+   "preco_ref": 30.74,
+   "valor_justo": 14.8,
+   "tir_dono": 0.1197,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "TIMS3",
+   "preco_ref": 19.44,
+   "valor_justo": 11.29,
+   "tir_dono": 0.1438,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "DESK3",
+   "preco_ref": 19.38,
+   "valor_justo": 19.46,
+   "tir_dono": 0.105,
+   "chance_valor_acima": 0.6304,
+   "selecionada": false
+  },
+  {
+   "ticker": "BMOB3",
+   "preco_ref": 24.58,
+   "valor_justo": 14.93,
+   "tir_dono": 0.1404,
+   "chance_valor_acima": 0.0002,
+   "selecionada": false
+  },
+  {
+   "ticker": "LWSA3",
+   "preco_ref": 3.41,
+   "valor_justo": 2.82,
+   "tir_dono": 0.1468,
+   "chance_valor_acima": 0.0834,
+   "selecionada": false
+  },
+  {
+   "ticker": "FLRY3",
+   "preco_ref": 21.84,
+   "valor_justo": 9.35,
+   "tir_dono": 0.1135,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "PNVL3",
+   "preco_ref": 10.6,
+   "valor_justo": 4.38,
+   "tir_dono": 0.1269,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "SEER3",
+   "preco_ref": 11.11,
+   "valor_justo": 14.19,
+   "tir_dono": 0.2442,
+   "chance_valor_acima": 0.8408,
+   "selecionada": true
+  },
+  {
+   "ticker": "VTRU3",
+   "preco_ref": 12.02,
+   "valor_justo": 16.99,
+   "tir_dono": 0.2634,
+   "chance_valor_acima": 0.9194,
+   "selecionada": true
+  },
+  {
+   "ticker": "RIAA3",
+   "preco_ref": 6.36,
+   "valor_justo": 4.67,
+   "tir_dono": 0.1753,
+   "chance_valor_acima": 0.2366,
+   "selecionada": false
+  },
+  {
+   "ticker": "AUAU3",
+   "preco_ref": 3.95,
+   "valor_justo": 2.46,
+   "tir_dono": 0.1475,
+   "chance_valor_acima": 0.035,
+   "selecionada": false
+  },
+  {
+   "ticker": "TFCO4",
+   "preco_ref": 10.28,
+   "valor_justo": 6.69,
+   "tir_dono": 0.1436,
+   "chance_valor_acima": 0.0104,
+   "selecionada": false
+  },
+  {
+   "ticker": "JSLG3",
+   "preco_ref": 5.82,
+   "valor_justo": 1.53,
+   "tir_dono": 0.1487,
+   "chance_valor_acima": 0.1264,
+   "selecionada": false
+  },
+  {
+   "ticker": "MILS3",
+   "preco_ref": 15.62,
+   "valor_justo": 7.24,
+   "tir_dono": 0.1239,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  },
+  {
+   "ticker": "OPCT3",
+   "preco_ref": 9.08,
+   "valor_justo": 3.6,
+   "tir_dono": 0.1302,
+   "chance_valor_acima": 0.039,
+   "selecionada": false
+  },
+  {
+   "ticker": "PRNR3",
+   "preco_ref": 12.93,
+   "valor_justo": 4.55,
+   "tir_dono": 0.1139,
+   "chance_valor_acima": 0.0434,
+   "selecionada": false
+  },
+  {
+   "ticker": "LOGG3",
+   "preco_ref": 21.53,
+   "valor_justo": 6.71,
+   "tir_dono": 0.0877,
+   "chance_valor_acima": 0.0,
+   "selecionada": false
+  }
+ ],
+ "como_avaliar": [
+  "Retorno de cada ação = preço de agora ÷ preço de referência − 1, somado aos proventos com data-com no período.",
+  "Carteira = soma dos pesos × retornos das ações + parcela em CDI corrigida pelo CDI do período.",
+  "Comparar com o Ibovespa, o Small Caps e o CDI do mesmo período, e com a mediana das empresas não selecionadas.",
+  "Ação que perdeu a tese: ver os gatilhos de saída do relatório de cada uma."
+ ],
+ "aviso": "Estudo quantitativo com finalidade informativa; não é recomendação de investimento.",
+ "fontes": {
+  "cotacoes_val": "Fechamento de 28/10/2026",
+  "segunda_analise": "Projeto Claude do usuário (cerca de 1 hora de análise por empresa), 2026-10-28"
+ }
+}
