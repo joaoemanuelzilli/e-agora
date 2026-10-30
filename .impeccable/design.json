@@ -1,0 +1,627 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T04:14:56+00:00",
+  "title": "Design System: E agora?",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Marinho de Cabeçalho",
+        "canonical": "oklch(26.4% 0.068 255.3)",
+        "tonalRamp": [
+          "#0b2545",
+          "#163a68",
+          "#1f5fad",
+          "#3f7bc4",
+          "#6696d2",
+          "#8fb2de",
+          "#b5cbe9",
+          "#d3e1f2"
+        ],
+        "dark": "#0d2a4f",
+        "tonalRampSource": "components/registro/Registro.tsx SHADES (escala marinho usada na ficha do registro)"
+      },
+      "navy-2": {
+        "role": "primary",
+        "displayName": "Marinho de Hover",
+        "canonical": "oklch(34.9% 0.090 256.0)",
+        "tonalRamp": [
+          "#020b1c",
+          "#12253f",
+          "#284366",
+          "#416390",
+          "#6184b4",
+          "#89a7d0",
+          "#b2cbed",
+          "#e5f0fe"
+        ],
+        "dark": "#173c6c"
+      },
+      "accent": {
+        "role": "secondary",
+        "displayName": "Azul de Link",
+        "canonical": "oklch(43.1% 0.121 256.8)",
+        "tonalRamp": [
+          "#000a22",
+          "#092448",
+          "#1e4272",
+          "#34619f",
+          "#5584c4",
+          "#7fa7df",
+          "#abccfa",
+          "#e5effe"
+        ],
+        "dark": "#7fb0ea"
+      },
+      "buy": {
+        "role": "tertiary",
+        "displayName": "Verde de Compra",
+        "canonical": "oklch(52.8% 0.120 155.4)",
+        "tonalRamp": [
+          "#001103",
+          "#002e16",
+          "#02502c",
+          "#1a7345",
+          "#439665",
+          "#74b68c",
+          "#a3d8b5",
+          "#d3fadf"
+        ],
+        "dark": "#1e7a49"
+      },
+      "buy-strong": {
+        "role": "tertiary",
+        "displayName": "Verde de Compra Forte",
+        "canonical": "oklch(44.2% 0.102 154.8)",
+        "tonalRamp": [
+          "#001004",
+          "#032e17",
+          "#174e2f",
+          "#2d7149",
+          "#519369",
+          "#7db490",
+          "#aad6b8",
+          "#d7f8e1"
+        ],
+        "dark": "#17663c"
+      },
+      "wait": {
+        "role": "tertiary",
+        "displayName": "Âmbar de Espera",
+        "canonical": "oklch(50.8% 0.105 71.9)",
+        "tonalRamp": [
+          "#170700",
+          "#371f00",
+          "#5c3a01",
+          "#835714",
+          "#a6783b",
+          "#c59d6c",
+          "#e4c39c",
+          "#ffebd4"
+        ],
+        "dark": "#e7b45a"
+      },
+      "neg": {
+        "role": "tertiary",
+        "displayName": "Vermelho de Queda",
+        "canonical": "oklch(50.0% 0.182 29.5)",
+        "tonalRamp": [
+          "#220000",
+          "#4e0000",
+          "#7b130c",
+          "#ac2b1f",
+          "#d45142",
+          "#f08070",
+          "#ffb3a7",
+          "#ffe9e5"
+        ],
+        "dark": "#f07a70"
+      },
+      "series-1": {
+        "role": "data",
+        "displayName": "Série 1 Azul",
+        "canonical": "oklch(48.9% 0.140 255.8)",
+        "tonalRamp": [
+          "#000925",
+          "#02244d",
+          "#144179",
+          "#2861a9",
+          "#4a83ce",
+          "#77a8e7",
+          "#a6ccfe",
+          "#e4f0ff"
+        ],
+        "dark": "#4a8fe0"
+      },
+      "series-2": {
+        "role": "data",
+        "displayName": "Série 2 Laranja",
+        "canonical": "oklch(64.4% 0.159 45.6)",
+        "tonalRamp": [
+          "#1f0100",
+          "#421500",
+          "#6f2900",
+          "#9f4000",
+          "#c7612a",
+          "#e48b62",
+          "#ffb694",
+          "#ffeae0"
+        ],
+        "dark": "#d66a30"
+      },
+      "series-3": {
+        "role": "data",
+        "displayName": "Série 3 Verde",
+        "canonical": "oklch(62.3% 0.122 166.8)",
+        "tonalRamp": [
+          "#001008",
+          "#002d1f",
+          "#004f39",
+          "#027355",
+          "#279774",
+          "#66b898",
+          "#9ad9bf",
+          "#ccfbe7"
+        ],
+        "dark": "#20a27c"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "oklch(21.0% 0.034 263.4)",
+        "tonalRamp": [
+          "#080b12",
+          "#20252f",
+          "#3b4250",
+          "#586174",
+          "#798396",
+          "#9da5b6",
+          "#c2c9d7",
+          "#e9eff9"
+        ],
+        "dark": "#e8edf5"
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Tinta Secundária",
+        "canonical": "oklch(40.5% 0.035 256.6)",
+        "tonalRamp": [
+          "#070b12",
+          "#1e262f",
+          "#394350",
+          "#566274",
+          "#768396",
+          "#9ba6b6",
+          "#c0cad7",
+          "#e8eff9"
+        ],
+        "dark": "#b0bccd"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Cinza de Nota",
+        "canonical": "oklch(52.4% 0.031 257.1)",
+        "tonalRamp": [
+          "#080b11",
+          "#1f252e",
+          "#3a434f",
+          "#576272",
+          "#788394",
+          "#9ca6b4",
+          "#c2cad6",
+          "#e9eff8"
+        ],
+        "dark": "#97a8c0"
+      },
+      "box": {
+        "role": "neutral",
+        "displayName": "Quadro de Dados",
+        "canonical": "oklch(94.4% 0.008 253.9)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232527",
+          "#404245",
+          "#5e6165",
+          "#7f8387",
+          "#a2a5a9",
+          "#c7c9cc",
+          "#edeff1"
+        ],
+        "dark": "#172a45"
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Faixa Cinza",
+        "canonical": "oklch(96.6% 0.006 255.5)",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#242527",
+          "#404245",
+          "#5f6164",
+          "#808286",
+          "#a3a5a8",
+          "#c7c9cc",
+          "#edeef0"
+        ],
+        "dark": "#13233b"
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Fio Fino",
+        "canonical": "oklch(89.2% 0.014 254.6)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222529",
+          "#3e4248",
+          "#5c6269",
+          "#7d838a",
+          "#a0a5ac",
+          "#c5c9cf",
+          "#ebeff3"
+        ],
+        "dark": "#24354f"
+      },
+      "rule": {
+        "role": "primary",
+        "displayName": "Fio Marinho",
+        "dark": "#5b8fd1"
+      },
+      "page": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "dark": "#0a1424"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "dark": "#0f1c30"
+      },
+      "grid": {
+        "role": "neutral",
+        "displayName": "Grade",
+        "dark": "#1b2b43"
+      },
+      "axis": {
+        "role": "neutral",
+        "displayName": "Eixo",
+        "dark": "#34465f"
+      },
+      "pos": {
+        "role": "tertiary",
+        "displayName": "Alta",
+        "dark": "#4cc38a"
+      },
+      "wait-soft": {
+        "role": "tertiary",
+        "displayName": "Fundo de Espera",
+        "dark": "rgba(231, 180, 90, 0.12)"
+      },
+      "wait-line": {
+        "role": "tertiary",
+        "displayName": "Borda de Espera",
+        "dark": "#7a5a22"
+      },
+      "fill-1": {
+        "role": "data",
+        "displayName": "Preenchimento Marinho",
+        "dark": "#4a8fe0"
+      },
+      "proj": {
+        "role": "data",
+        "displayName": "Projeção",
+        "dark": "#24508c"
+      },
+      "deemph": {
+        "role": "data",
+        "displayName": "Universo Esmaecido",
+        "dark": "#45546b"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Título de página",
+        "purpose": "Título .h1 de cada página: Top picks, Investir, Registro."
+      },
+      "ticker": {
+        "displayName": "Ticker",
+        "purpose": "Ticker no cabeçalho da empresa; preço ao lado em 700/30px tabular."
+      },
+      "report-headline": {
+        "displayName": "Manchete de relatório",
+        "purpose": "Manchete da tese; 34 → 28 → 24px conforme o comprimento, máx. 40ch."
+      },
+      "headline": {
+        "displayName": "Título de seção",
+        "purpose": "Título .h2 logo abaixo do fio marinho."
+      },
+      "title": {
+        "displayName": "Título de exibição",
+        "purpose": "Título de gráfico e títulos do quadro de dados-chave."
+      },
+      "title-sm": {
+        "displayName": "Título de painel",
+        "purpose": "Título .h3 dentro de painel."
+      },
+      "figure": {
+        "displayName": "Número-chave",
+        "purpose": "Números-chave em linha no cabeçalho da empresa."
+      },
+      "prose": {
+        "displayName": "Texto de relatório",
+        "purpose": "Texto corrido de relatório e resumo, máx. 70ch; veredito em 17px."
+      },
+      "lead": {
+        "displayName": "Abertura",
+        "purpose": "Parágrafo de abertura de página, ink-2, máx. 68ch."
+      },
+      "body": {
+        "displayName": "Corpo",
+        "purpose": "Base do body."
+      },
+      "table": {
+        "displayName": "Tabela",
+        "purpose": "Corpo das tabelas principais."
+      },
+      "button": {
+        "displayName": "Botão",
+        "purpose": "Botões, navegação e controles."
+      },
+      "label": {
+        "displayName": "Rótulo",
+        "purpose": "Rótulos, notas, linhas de fonte, legendas, tooltip. Piso do HTML."
+      },
+      "table-head": {
+        "displayName": "Cabeçalho de tabela",
+        "purpose": "Cabeçalho de tabela em faixa cinza."
+      },
+      "rating-call": {
+        "displayName": "Carimbo",
+        "purpose": "Carimbo COMPRA / AGUARDAR; único texto em maiúsculas."
+      },
+      "chart-tick": {
+        "displayName": "Rótulo de gráfico",
+        "purpose": "Texto SVG de eixo e ponto; piso de 11px, medido por measure.ts."
+      }
+    },
+    "shadows": [
+      {
+        "name": "tooltip",
+        "value": "0 6px 18px rgba(10, 20, 36, 0.14)",
+        "purpose": "Única elevação do sistema: o tooltip que flutua sobre a exibição."
+      },
+      {
+        "name": "freeze-header-rule",
+        "value": "inset 0 -1px 0 var(--hairline)",
+        "purpose": "Não é elevação: fio inferior do cabeçalho de tabela congelado, que o border-collapse perderia."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-color",
+        "value": "150ms ease-out",
+        "purpose": "Transição de fundo, borda e cor de botões, links da barra e controles segmentados."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition: none; animation: none",
+        "purpose": "Com prefers-reduced-motion: reduce, toda transição e animação é desligada."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "brand-word",
+        "value": "420px",
+        "purpose": "\"Research\" aparece ao lado da marca."
+      },
+      {
+        "name": "sm",
+        "value": "640px",
+        "purpose": "Margem lateral 16px → 24px; navegação volta para a linha da marca."
+      },
+      {
+        "name": "md",
+        "value": "768px",
+        "purpose": "Lista empilhada de top picks → tabela."
+      },
+      {
+        "name": "lg",
+        "value": "1024px",
+        "purpose": "Grade de 12 colunas (9 + 3 no Painel, 7 + 5 nas exibições)."
+      },
+      {
+        "name": "xl",
+        "value": "1280px",
+        "purpose": "Tabelas congeladas passam a rolar com a página, cabeçalho preso sob --header-h."
+      },
+      {
+        "name": "container",
+        "value": "1440px",
+        "purpose": "Largura máxima da coluna central."
+      }
+    ],
+    "layout": {
+      "mastheadHeight": "56px",
+      "headerOffsetVar": "--header-h",
+      "containerMax": "1440px",
+      "gutter": {
+        "mobile": "16px",
+        "sm": "24px"
+      }
+    },
+    "themes": {
+      "light": "padrão em :root",
+      "dark": "@media (prefers-color-scheme: dark) em :root:where(:not([data-theme=light])) e :root[data-theme=dark]; preferência salva em localStorage 'theme'"
+    }
+  },
+  "components": [
+    {
+      "name": "Barra (masthead)",
+      "kind": "nav",
+      "refersTo": "masthead",
+      "description": "Barra marinho de 56px com marca em texto, navegação com fio branco no ativo, Ke segmentado e tema.",
+      "html": "<header class=\"ds-mast\"><a class=\"ds-mast-brand\" href=\"#\"><b>E agora?</b><span>Research</span></a><nav class=\"ds-mast-nav\"><a href=\"#\" aria-current=\"page\">Painel</a><a href=\"#\">Investir</a><a href=\"#\">Registro</a><a href=\"#\">Metodologia</a></nav><div class=\"ds-mast-tools\"><span class=\"ds-mast-ke-l\">Ke</span><div class=\"ds-mast-ke\"><button>20%</button><button aria-pressed=\"true\">25%</button><button>30%</button></div><button class=\"ds-mast-theme\">Tema: Auto</button></div></header>",
+      "css": ".ds-mast{font-family: \"Libre Franklin\", \"Helvetica Neue\", Arial, sans-serif;display:flex;align-items:stretch;gap:32px;height:56px;padding:0 24px;background:var(--navy,#0b2545);color:#fff}.ds-mast-brand{display:flex;align-items:baseline;gap:8px;padding-top:17px;text-decoration:none;color:#fff}.ds-mast-brand b{font-size:18px;font-weight:700;letter-spacing:-0.015em}.ds-mast-brand span{font-size:14px;font-weight:500;color:var(--on-navy-2,#b9c6d8)}.ds-mast-nav{display:flex;align-items:stretch}.ds-mast-nav a{display:flex;align-items:center;padding:0 10px;font-size:13px;font-weight:500;color:var(--on-navy-2,#b9c6d8);text-decoration:none;border-bottom:2px solid transparent;transition:color 150ms ease-out}.ds-mast-nav a:hover{color:#fff}.ds-mast-nav a[aria-current=page]{color:#fff;font-weight:600;border-bottom-color:#fff}.ds-mast-tools{margin-left:auto;display:flex;align-items:center;gap:12px}.ds-mast-ke-l{font-size:12px;font-weight:500;color:var(--on-navy-2,#b9c6d8)}.ds-mast-ke{display:flex;overflow:hidden;border:1px solid rgba(255,255,255,.25);border-radius:2px}.ds-mast-ke button{font:inherit;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;padding:4px 8px;border:0;background:transparent;color:var(--on-navy-2,#b9c6d8);cursor:pointer}.ds-mast-ke button:hover{background:rgba(255,255,255,.1);color:#fff}.ds-mast-ke button[aria-pressed=true]{background:#fff;color:var(--navy,#0b2545)}.ds-mast-theme{font:inherit;font-size:12px;font-weight:500;padding:4px 8px;border:1px solid rgba(255,255,255,.25);border-radius:2px;background:transparent;color:var(--on-navy-2,#b9c6d8);cursor:pointer}.ds-mast-theme:hover{border-color:rgba(255,255,255,.6);color:#fff}.ds-mast a:focus-visible,.ds-mast button:focus-visible{outline:2px solid var(--accent,#1d4f91);outline-offset:2px;border-radius:2px}"
+    },
+    {
+      "name": "Caixa de recomendação",
+      "kind": "custom",
+      "refersTo": "rating-call-buy",
+      "description": "O carimbo da nota: COMPRA (verde sólido) ou AGUARDAR (âmbar suave), com Preço-teto e Upside.",
+      "html": "<div class=\"ds-rating\" data-tone=\"in\"><div class=\"ds-rating-call\">Compra</div><div class=\"ds-rating-cell\"><span>Preço-teto</span><b>R$ 12,98</b></div><div class=\"ds-rating-cell\"><span>Upside</span><b>+46%</b></div></div> <div class=\"ds-rating\" data-tone=\"out\"><div class=\"ds-rating-call\">Aguardar</div><div class=\"ds-rating-cell\"><span>Preço-teto</span><b>R$ 10,66</b></div><div class=\"ds-rating-cell\"><span>Upside</span><b>+31%</b></div></div>",
+      "css": ".ds-rating{font-family: \"Libre Franklin\", \"Helvetica Neue\", Arial, sans-serif;display:inline-grid;grid-auto-flow:column;align-items:stretch;border:1px solid var(--hairline,#d5dce5);border-radius:2px;background:var(--surface,#fff);font-variant-numeric:tabular-nums lining-nums;line-height:1.2;margin:4px}.ds-rating-call{display:flex;align-items:center;justify-content:center;padding:6px 10px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}.ds-rating[data-tone=strong]{border-color:var(--buy-strong,#126339)}.ds-rating[data-tone=strong] .ds-rating-call{background:var(--buy-strong,#126339);color:#fff}.ds-rating[data-tone=in]{border-color:var(--buy,#1b7f4c)}.ds-rating[data-tone=in] .ds-rating-call{background:var(--buy,#1b7f4c);color:#fff}.ds-rating[data-tone=out]{border-color:var(--wait-line,#e2c68f)}.ds-rating[data-tone=out] .ds-rating-call{background:var(--wait-soft,#fbf1df);color:var(--wait,#8a5a0b)}.ds-rating[data-tone=none] .ds-rating-call{background:var(--surface-2,#f1f4f8);color:var(--muted,#5f6b7c)}.ds-rating-cell{padding:5px 10px;border-left:1px solid var(--hairline,#d5dce5);white-space:nowrap}.ds-rating-cell span{display:block;font-size:12px;color:var(--muted,#5f6b7c)}.ds-rating-cell b{display:block;font-size:14px;font-weight:700;color:var(--ink,#101828)}"
+    },
+    {
+      "name": "Carimbo compacto",
+      "kind": "chip",
+      "refersTo": "rating-call-wait",
+      "description": "Só o carimbo da recomendação, para tabelas densas.",
+      "html": "<span class=\"ds-chip\" data-tone=\"in\">Compra</span> <span class=\"ds-chip\" data-tone=\"out\">Aguardar</span> <span class=\"ds-chip\" data-tone=\"none\">Sem teto</span>",
+      "css": ".ds-chip{font-family: \"Libre Franklin\", \"Helvetica Neue\", Arial, sans-serif;display:inline-block;padding:3px 8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;border:1px solid var(--hairline,#d5dce5);border-radius:2px}.ds-chip[data-tone=in]{background:var(--buy,#1b7f4c);border-color:var(--buy,#1b7f4c);color:#fff}.ds-chip[data-tone=out]{background:var(--wait-soft,#fbf1df);border-color:var(--wait-line,#e2c68f);color:var(--wait,#8a5a0b)}.ds-chip[data-tone=none]{background:var(--surface-2,#f1f4f8);color:var(--muted,#5f6b7c)}"
+    },
+    {
+      "name": "Botão primário",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal do contexto, em marinho.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Ver ordens sugeridas</button>",
+      "css": ".ds-btn{font-family: \"Libre Franklin\", \"Helvetica Neue\", Arial, sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:2px;padding:7px 14px;font-size:13px;font-weight:600;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out}.ds-btn-primary{background:var(--navy,#0b2545);color:var(--on-navy,#fff);border:1px solid var(--navy,#0b2545)}.ds-btn-primary:hover{background:var(--navy-2,#163a68)}.ds-btn-primary:disabled{opacity:.4}.ds-btn:focus-visible{outline:2px solid var(--accent,#1d4f91);outline-offset:2px}"
+    },
+    {
+      "name": "Botão secundário",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ação secundária ao lado da primária.",
+      "html": "<button class=\"ds-btn2\">Registro de 28/10</button>",
+      "css": ".ds-btn2{font-family: \"Libre Franklin\", \"Helvetica Neue\", Arial, sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:2px;padding:7px 14px;font-size:13px;font-weight:600;background:var(--surface,#fff);color:var(--ink,#101828);border:1px solid var(--hairline,#d5dce5);cursor:pointer;transition:border-color 150ms ease-out}.ds-btn2:hover{border-color:var(--ink-2,#3d4a5c)}.ds-btn2:focus-visible{outline:2px solid var(--accent,#1d4f91);outline-offset:2px}"
+    },
+    {
+      "name": "Controle segmentado",
+      "kind": "chip",
+      "refersTo": "segmented-option-selected",
+      "description": "Filtro ou escolha exclusiva; opção selecionada em marinho, aria-pressed.",
+      "html": "<div class=\"ds-seg\" role=\"group\"><button aria-pressed=\"true\">Todas <span>8</span></button><button>Compra <span>6</span></button><button>Aguardar <span>2</span></button></div>",
+      "css": ".ds-seg{font-family: \"Libre Franklin\", \"Helvetica Neue\", Arial, sans-serif;display:inline-flex;overflow:hidden;border:1px solid var(--hairline,#d5dce5);border-radius:2px}.ds-seg button{font:inherit;font-size:13px;font-weight:600;padding:4px 12px;border:0;background:var(--surface,#fff);color:var(--ink-2,#3d4a5c);cursor:pointer;transition:background-color 150ms ease-out}.ds-seg button span{font-weight:500;font-variant-numeric:tabular-nums;color:var(--muted,#5f6b7c)}.ds-seg button:hover{background:var(--surface-2,#f1f4f8)}.ds-seg button[aria-pressed=true]{background:var(--navy,#0b2545);color:#fff}.ds-seg button[aria-pressed=true] span{color:var(--on-navy-2,#b9c6d8)}.ds-seg button:focus-visible{outline:2px solid var(--accent,#1d4f91);outline-offset:-2px}"
+    },
+    {
+      "name": "Quadro de dados-chave",
+      "kind": "card",
+      "refersTo": "keybox",
+      "description": "Coluna lateral cinza aberta por fio marinho, com linhas rótulo/valor.",
+      "html": "<aside class=\"ds-key\"><h3>Dados-chave</h3><dl><div><dt>Ibovespa desde a eleição<small>contra o fechamento de 23/10</small></dt><dd class=\"ds-neg\">−17,5%</dd></div><div><dt>Ibovespa 12 meses após quedas de 5%+</dt><dd class=\"ds-pos\">+56%</dd></div><div><dt>Passam na regra</dt><dd>8 de 122</dd></div></dl></aside>",
+      "css": ".ds-key{font-family: \"Libre Franklin\", \"Helvetica Neue\", Arial, sans-serif;background:var(--box,#e9edf2);border-top:2px solid var(--rule,#0b2545);padding:12px 16px 16px;max-width:300px;color:var(--ink,#101828)}.ds-key h3{margin:0;font-size:15px;font-weight:700}.ds-key dl{margin:6px 0 0}.ds-key dl div{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid var(--hairline,#d5dce5)}.ds-key dl div:last-child{border-bottom:0}.ds-key dt{font-size:13px;color:var(--ink-2,#3d4a5c)}.ds-key dt small{display:block;font-size:12px;color:var(--muted,#5f6b7c)}.ds-key dd{margin:0;font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}.ds-pos{color:var(--pos,#1b7f4c)}.ds-neg{color:var(--neg,#b42318)}"
+    },
+    {
+      "name": "Exibição (gráfico)",
+      "kind": "card",
+      "refersTo": "exhibit",
+      "description": "Gráfico como exibição de nota: fio marinho, título, subtítulo, toggle Tabela e linha de fonte.",
+      "html": "<figure class=\"ds-exh\"><figcaption><div><b>Queda mediana por setor</b><small>Universo IBOV + IBrX-100 + SMLL, variação do dia</small></div><button>Tabela</button></figcaption><svg viewBox=\"0 0 300 70\" width=\"100%\" height=\"70\"><line x1=\"0\" y1=\"66\" x2=\"300\" y2=\"66\" stroke=\"var(--axis,#b8c2cf)\"/><rect x=\"0\" y=\"6\" width=\"210\" height=\"14\" fill=\"var(--series-1,#1f5fad)\"/><rect x=\"0\" y=\"26\" width=\"150\" height=\"14\" fill=\"var(--series-1,#1f5fad)\"/><rect x=\"0\" y=\"46\" width=\"90\" height=\"14\" fill=\"var(--deemph,#b9c1cc)\"/></svg><div class=\"ds-exh-src\">Fonte: CVM, B3 e Banco Central; cálculos do e-agora.</div></figure>",
+      "css": ".ds-exh{font-family: \"Libre Franklin\", \"Helvetica Neue\", Arial, sans-serif;margin:0;border-top:2px solid var(--rule,#0b2545);padding-top:10px;color:var(--ink,#101828)}.ds-exh figcaption{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}.ds-exh b{display:block;font-size:15px;font-weight:700;line-height:1.375}.ds-exh small{display:block;margin-top:2px;font-size:12px;color:var(--muted,#5f6b7c)}.ds-exh button{font:inherit;font-size:12px;font-weight:600;padding:2px 8px;border:1px solid var(--hairline,#d5dce5);border-radius:2px;background:transparent;color:var(--ink-2,#3d4a5c);cursor:pointer}.ds-exh button:hover{border-color:var(--ink-2,#3d4a5c)}.ds-exh-src{margin-top:8px;font-size:12px;color:var(--muted,#5f6b7c)}"
+    },
+    {
+      "name": "Tabela de dados",
+      "kind": "custom",
+      "refersTo": "table-header",
+      "description": "Tabela densa com cabeçalho em faixa cinza e fio marinho de 1px no topo.",
+      "html": "<table class=\"ds-tbl\"><thead><tr><th>Ação</th><th>Preço</th><th>Valor justo</th><th>Peso</th></tr></thead><tbody><tr><td><b>VTRU3</b><small>Vitru Educação</small></td><td>R$ 11,60<small class=\"ds-neg\">−3,5% hoje</small></td><td>R$ 16,99</td><td>8,1%</td></tr><tr><td><b>BEEF3</b><small>Minerva</small></td><td>R$ 2,66<small class=\"ds-neg\">−8,0% hoje</small></td><td>R$ 5,44</td><td>20,0%</td></tr></tbody></table>",
+      "css": ".ds-tbl{font-family: \"Libre Franklin\", \"Helvetica Neue\", Arial, sans-serif;width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums lining-nums;color:var(--ink,#101828)}.ds-tbl th{font-size:12px;font-weight:600;color:var(--ink-2,#3d4a5c);text-align:right;padding:7px 10px;background:var(--surface-2,#f1f4f8);border-top:1px solid var(--rule,#0b2545);border-bottom:1px solid var(--hairline,#d5dce5);white-space:nowrap}.ds-tbl td{padding:7px 10px;text-align:right;border-bottom:1px solid var(--grid,#e6eaf0);white-space:nowrap}.ds-tbl th:first-child,.ds-tbl td:first-child{text-align:left}.ds-tbl tbody tr:hover{background:var(--surface-2,#f1f4f8)}.ds-tbl small{display:block;font-size:12px;color:var(--muted,#5f6b7c)}.ds-tbl small.ds-neg{color:var(--neg,#b42318)}"
+    },
+    {
+      "name": "Campo de valor",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Input de valor com R$ fora do campo; foco em azul de link.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-l\">Quanto investir</span><span class=\"ds-field-row\"><span class=\"ds-field-cur\">R$</span><input type=\"number\" value=\"100000\"></span></label>",
+      "css": ".ds-field{font-family: \"Libre Franklin\", \"Helvetica Neue\", Arial, sans-serif;display:block;max-width:320px}.ds-field-l{display:block;font-size:12px;color:var(--muted,#5f6b7c)}.ds-field-row{display:flex;align-items:center;gap:8px;margin-top:4px}.ds-field-cur{font-size:18px;color:var(--muted,#5f6b7c)}.ds-field input{font:inherit;width:100%;font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;padding:8px 12px;border:1px solid var(--hairline,#d5dce5);border-radius:2px;background:var(--surface,#fff);color:var(--ink,#101828);outline:none}.ds-field input:focus{border-color:var(--accent,#1d4f91)}.ds-field input:focus-visible{outline:2px solid var(--accent,#1d4f91);outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Nota de Research",
+    "overview": "O e-agora se apresenta como uma publicação de equity research de banco brasileiro, não como um painel de fintech. Cada empresa é uma nota encabeçada pela caixa de recomendação (COMPRA ou AGUARDAR, preço-teto, upside); o Painel é a nota de top picks do mês; Investir, Registro, Dividendos, Mercado, Metodologia e Testes são os anexos da mesma publicação. A barra marinho no topo é o cabeçalho do papel timbrado; abaixo dela tudo é papel branco, fios finos, quadros cinza-claros e números tabulares.\n\nA densidade é a de uma nota impressa: tabelas com cabeçalho em faixa cinza, listas de dados-chave com rótulo à esquerda e valor à direita, gráficos tratados como \"exibições\" numeradas pela fonte embaixo. A hierarquia vem do peso e do fio marinho de 2px que abre cada seção, não de cartões, sombras ou cor de fundo. Uma família só (Libre Franklin) faz títulos, texto e números. A cor é quase toda neutra; marinho é o único cromado, verde e âmbar falam só da recomendação, verde e vermelho só da variação.\n\nO mundo recusa explicitamente o painel de fintech em cartões brancos com azul e blocos de KPI. A confiança vem de mostrar o método e as fontes como no rodapé de um research (CVM, B3, Banco Central), não de decoração.",
+    "keyCharacteristics": [
+      "Barra marinho #0b2545 de 56px com a marca em texto (\"E agora?\" + \"Research\"), navegação, Ke segmentado e tema; faixa de mercado cinza logo abaixo.",
+      "Papel branco, fios de 1px #d5dce5, quadros de dados-chave em cinza #e9edf2.",
+      "Seções, exibições e quadros que abrem seção levam um fio marinho de 2px no topo; nada mais leva.",
+      "A caixa de recomendação (carimbo + Preço-teto + Upside) é o elemento-assinatura e aparece em toda decisão de compra.",
+      "Libre Franklin 400/500/600/700 em tudo, números tabulares e com sinal explícito, formato pt-BR.",
+      "Plano: a única sombra do sistema é a do tooltip.",
+      "Tema claro e escuro com a mesma estrutura; o escuro é marinho profundo, não preto."
+    ],
+    "rules": [
+      {
+        "name": "A Regra do Marinho Único",
+        "body": "O marinho é o único cromado: barra, botão primário, opção selecionada, seleção de texto. Nenhum outro azul preenche superfícies; o azul de link fica no texto e no foco.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Espera Mansa",
+        "body": "AGUARDAR é âmbar suave (texto `wait` sobre `wait-soft`, borda `wait-line`), nunca preenchido sólido e nunca vermelho. Esperar não é vender.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Sinal",
+        "body": "Cor nunca é o único sinal de alta ou queda: toda variação leva + ou − impresso; `pos`/`neg` apenas reforçam.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Família Única",
+        "body": "Libre Franklin faz tudo: título, texto, número, gráfico (`.chart text`). Sem serifada de display, sem monoespaçada.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra do Piso de 12px",
+        "body": "Nenhum texto HTML abaixo de 12px. A única exceção é o texto SVG de gráfico, com piso de 11px, medido por `components/charts/measure.ts` (larguras em em da Libre Franklin, determinístico no servidor e no cliente) e cortado com reticências ou quebrado em vez de encolhido.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra dos Números Tabulares",
+        "body": "Toda coluna de número, a caixa de recomendação, a faixa de mercado e o texto de gráfico usam `tabular-nums lining-nums`, em formato brasileiro (vírgula decimal, R$, 13,64%).",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Nota, Não do Cartão",
+        "body": "Dados vivem em linhas: tabelas, listas `dl` com rótulo à esquerda e valor à direita separados por fio fino, e a linha de números-chave do cabeçalho da empresa. Não se monta grade de cartões de KPI.",
+        "section": "layout"
+      },
+      {
+        "name": "A Regra do Papel Plano",
+        "body": "Painéis, botões, quadros, a caixa de recomendação e a barra não têm sombra. Só o tooltip flutua.",
+        "section": "elevation"
+      },
+      {
+        "name": "A Regra dos 2px",
+        "body": "Nada passa de 2px de raio: sem pílulas, sem cartões arredondados. O círculo é reservado a pontos de dado.",
+        "section": "shapes"
+      },
+      {
+        "name": "A Regra do Fio Marinho",
+        "body": "O fio marinho de 2px marca apenas uma abertura: o título de seção (`.sec`), a exibição (gráfico), o painel que abre a própria seção sem título acima (`.panel-ruled`), o quadro de dados-chave e o cabeçalho da empresa. Um painel que fica sob um título de seção mantém só o fio fino; nunca se empilham dois fios marinhos.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Faça** cada seção abrir com fio marinho de 2px + título 700/18px; quando o painel abre a própria seção sem título acima, ele leva o fio (`panel-ruled`).",
+      "**Faça** toda recomendação passar pela caixa de recomendação (carimbo + Preço-teto + Upside); em tabelas densas, use o carimbo compacto.",
+      "**Faça** dados-chave como lista de linhas: rótulo 13px `ink-2` à esquerda, valor 700 tabular à direita, nota 12px `muted`, fio fino entre linhas.",
+      "**Faça** todo gráfico como exibição: fio marinho, título 15px, subtítulo 12px, alternância Gráfico/Tabela e linha de fonte no pé.",
+      "**Faça** as séries na ordem fixa `series-1` azul, `series-2` laranja, `series-3` verde; destaque um grupo em `series-1` e deixe o resto em `deemph`.",
+      "**Faça** toda variação com sinal impresso (+1,2% / −3,5%) e `pos`/`neg` só como reforço.",
+      "**Faça** números em `tabular-nums lining-nums` e formato pt-BR (vírgula decimal, R$).",
+      "**Faça** tabelas largas com cabeçalho e primeira coluna congelados abaixo de 1280px, e listas empilhadas no lugar de tabelas abaixo de 768px.",
+      "**Faça** novos tokens de cor entrarem nos três blocos (claro, `prefers-color-scheme: dark` e `[data-theme=\"dark\"]`) e as séries novas passarem pelo validador de paleta contra #ffffff e #0f1c30."
+    ],
+    "donts": [
+      "**Não** monte grades de cartões de KPI nem blocos de números-herói; o fintech em cartões brancos com azul é o anti-mundo deste site.",
+      "**Não** coloque fio marinho em painel que já está sob um título de seção, nem empilhe dois fios marinhos.",
+      "**Não** pinte AGUARDAR de âmbar sólido nem de vermelho; ele fica âmbar suave (`wait` sobre `wait-soft`).",
+      "**Não** use cor como único sinal de alta ou queda.",
+      "**Não** use texto HTML abaixo de 12px, nem texto SVG de gráfico abaixo de 11px.",
+      "**Não** use sombra em painel, quadro, botão ou caixa de recomendação; só o tooltip flutua.",
+      "**Não** arredonde além de 2px nem use pílulas; círculo só em ponto de dado.",
+      "**Não** introduza outra família tipográfica, display serifado ou fonte monoespaçada para números.",
+      "**Não** use texto em maiúsculas com tracking como sobretítulo; as maiúsculas pertencem só ao carimbo da recomendação.",
+      "**Não** preencha superfícies com o azul de link nem crie um segundo cromado (gradientes, azul vibrante); o marinho é o único.",
+      "**Não** desenhe logotipo; a marca é o texto \"E agora?\" + \"Research\" na barra."
+    ]
+  }
+}

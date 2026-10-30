@@ -55,6 +55,7 @@ export function Frame({
   children,
   right,
   className = "",
+  source = "Fonte: CVM, B3 e Banco Central; cálculos do e-agora.",
 }: {
   title?: ReactNode;
   subtitle?: ReactNode;
@@ -63,15 +64,16 @@ export function Frame({
   children: ReactNode;
   right?: ReactNode;
   className?: string;
+  source?: string | null;
 }) {
   const [showTable, setShowTable] = useState(false);
   return (
-    <figure className={`panel p-4 ${className}`}>
+    <figure className={`exhibit ${className}`}>
       {(title || table || right) && (
         <figcaption className="mb-2 flex items-start justify-between gap-3">
           <div className="min-w-0">
-            {title && <div className="h3">{title}</div>}
-            {subtitle && <div className="mt-0.5 text-[12px] text-muted">{subtitle}</div>}
+            {title && <div className="text-[15px] font-bold leading-snug">{title}</div>}
+            {subtitle && <div className="mt-0.5 max-w-[76ch] text-[12px] text-muted">{subtitle}</div>}
           </div>
           <div className="flex shrink-0 items-center gap-2">
             {right}
@@ -79,7 +81,7 @@ export function Frame({
               <button
                 type="button"
                 onClick={() => setShowTable((v) => !v)}
-                className="no-print rounded border border-hairline px-2 py-0.5 text-[11px] text-ink-2 hover:bg-surface-2"
+                className="no-print rounded-[2px] border border-hairline px-2 py-0.5 text-[12px] font-semibold text-ink-2 hover:border-ink-2"
                 aria-pressed={showTable}
               >
                 {showTable ? "Gráfico" : "Tabela"}
@@ -117,6 +119,7 @@ export function Frame({
       ) : (
         children
       )}
+      {source && <div className="mt-2 text-[12px] text-muted">{source}</div>}
     </figure>
   );
 }

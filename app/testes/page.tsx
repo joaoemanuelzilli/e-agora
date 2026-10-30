@@ -21,7 +21,7 @@ export default function Page() {
     <div className="space-y-6">
       <header>
         <h1 className="h1">Testes e robustez</h1>
-        <p className="mt-2 max-w-[72ch] text-[15px] text-ink-2">
+        <p className="mt-2 max-w-[68ch] text-[15px] text-ink-2">
           Revisão independente das 59 avaliações, backtest de fatores desde 2017, o que funcionou depois de outros crashes, sensibilidade a pesos e premissas, métodos alternativos de valuation, carteira com testes de estresse, comparação com o consenso e a suíte automatizada de testes do código.
         </p>
       </header>

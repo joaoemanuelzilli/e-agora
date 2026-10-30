@@ -59,7 +59,7 @@ export function DividendMap({ rows, data, opps }: { rows: Row[]; data: DivData; 
     cells: c.months.map((m) => (c.price && m.valor ? m.valor / c.price : null)),
     detail: c.months.map((m) =>
       m.eventos.length ? (
-        <div className="mt-1 space-y-0.5 text-[11px] text-ink-2">
+        <div className="mt-1 space-y-0.5 text-[12px] text-ink-2">
           {m.eventos.map((e, i) => (
             <div key={i}>
               {e.tipo} de R$ {num(e.valor, 4)}, data-com {dateBR(e.dc)}
@@ -119,28 +119,22 @@ export function DividendMap({ rows, data, opps }: { rows: Row[]; data: DivData; 
   const top20 = byDy.filter((c) => c.dy > 0).slice(0, 20);
   return (
     <div className="space-y-8">
-      <section className="panel grid grid-cols-2 gap-4 p-5 md:grid-cols-4">
-        <div>
-          <div className="label">Pagaram nos últimos 12 meses</div>
-          <div className="mt-0.5 text-[26px] font-semibold leading-tight">
-            {payers.length} de {cos.length}
+      <dl className="keybox grid grid-cols-1 gap-x-10 px-4 py-2 md:grid-cols-2" aria-label="Dados-chave dos proventos">
+        {[
+          { k: "Pagaram nos últimos 12 meses", v: `${payers.length} de ${cos.length}` },
+          { k: "Yield mediano em 12 meses", v: pct(medDy, 1), n: "entre as que pagaram, ao preço de agora" },
+          { k: "Maior yield em 12 meses", v: byDy[0] ? `${byDy[0].ticker} ${pct(byDy[0].dy, 1)}` : "—" },
+          { k: "Pagamentos já aprovados a cair", v: String(upcoming.length), n: `de ${new Set(upcoming.map((u) => u.ticker)).size} empresas` },
+        ].map((x) => (
+          <div key={x.k} className="flex items-baseline justify-between gap-4 border-b border-hairline py-2 md:[&:nth-last-child(-n+2)]:border-b-0 [&:last-child]:border-b-0">
+            <dt className="text-[13.5px] text-ink-2">
+              {x.k}
+              {x.n && <span className="block text-[12px] text-muted">{x.n}</span>}
+            </dt>
+            <dd className="num shrink-0 text-[16px] font-bold">{x.v}</dd>
           </div>
-        </div>
-        <div>
-          <div className="label">Yield mediano em 12 meses</div>
-          <div className="mt-0.5 text-[26px] font-semibold leading-tight">{pct(medDy, 1)}</div>
-          <div className="text-[12px] text-muted">entre as que pagaram, ao preço de agora</div>
-        </div>
-        <div>
-          <div className="label">Maior yield em 12 meses</div>
-          <div className="mt-0.5 text-[26px] font-semibold leading-tight">{byDy[0] ? `${byDy[0].ticker} ${pct(byDy[0].dy, 1)}` : "—"}</div>
-        </div>
-        <div>
-          <div className="label">Pagamentos já aprovados a cair</div>
-          <div className="mt-0.5 text-[26px] font-semibold leading-tight">{upcoming.length}</div>
-          <div className="text-[12px] text-muted">de {new Set(upcoming.map((u) => u.ticker)).size} empresas</div>
-        </div>
-      </section>
+        ))}
+      </dl>
 
       <section className="grid grid-cols-1 gap-4 lg:grid-cols-12">
         <div className="panel overflow-x-auto p-4 lg:col-span-7">
@@ -243,7 +237,7 @@ export function DividendMap({ rows, data, opps }: { rows: Row[]; data: DivData; 
         </div>
       </section>
 
-      <section className="panel sticky-host">
+      <section className="panel panel-ruled sticky-host">
         <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-hairline px-4 py-3">
           <h2 className="h2">Quanto cada uma paga</h2>
           <span className="text-[12px] text-muted">Clique no título da coluna para ordenar</span>

@@ -77,7 +77,7 @@ function RangeChart({ rows, title, subtitle, fmt, refValue, refLabel, legend, ta
             {fin(rows[hover.i].mid) && <TipRow color={C.s1} label="Central" value={fmt(rows[hover.i].mid as number)} />}
             {fin(rows[hover.i].lo) && <TipRow label="De" value={fmt(rows[hover.i].lo as number)} />}
             {fin(rows[hover.i].hi) && <TipRow label="Até" value={fmt(rows[hover.i].hi as number)} />}
-            {rows[hover.i].note && <div className="mt-1 max-w-[260px] whitespace-normal text-[11px] text-muted">{rows[hover.i].note}</div>}
+            {rows[hover.i].note && <div className="mt-1 max-w-[260px] whitespace-normal text-[12px] text-muted">{rows[hover.i].note}</div>}
           </Tip>
         )}
       </div>
@@ -94,7 +94,15 @@ function ICHeatmap({ rows, cols, groups, title, subtitle, max = 0.4 }: {
   const labelW = Math.min(160, Math.max(110, w * 0.24));
   const gap = 10;
   const nGap = groups?.length ?? 0;
-  const cellW = Math.max(34, (w - labelW - 8 - nGap * gap) / cols.length);
+  // cada cabeçalho quebra no último espaço: a célula precisa caber a linha mais longa (≈ 6,2px por caractere a 11px)
+  const longestLine = Math.max(
+    ...cols.map((c) => {
+      const k = c.lastIndexOf(" ");
+      return k > 0 ? Math.max(k, c.length - k - 1) : c.length;
+    }),
+    1,
+  );
+  const cellW = Math.max(34, longestLine * 6.2 + 10, (w - labelW - 8 - nGap * gap) / cols.length);
   const cellH = 24;
   const top = 46;
   const xOf = (c: number) => labelW + c * cellW + (groups ? groups.filter((g) => c >= g).length * gap : 0);
@@ -141,7 +149,7 @@ function ICHeatmap({ rows, cols, groups, title, subtitle, max = 0.4 }: {
                   onPointerLeave={() => setHover(null)}
                 >
                   <rect x={xOf(j) + 1} y={top + i * cellH + 1} width={cellW - 2} height={cellH - 2} rx={3} fill={color(v)} stroke={hover?.r === i && hover?.c === j ? "var(--ink)" : "none"} />
-                  <text x={xOf(j) + cellW / 2} y={top + i * cellH + cellH / 2} dy="0.32em" textAnchor="middle" fontSize={10.5} fill={fin(v) && Math.abs(v) / max > 0.62 ? "#ffffff" : "var(--ink)"}>
+                  <text x={xOf(j) + cellW / 2} y={top + i * cellH + cellH / 2} dy="0.32em" textAnchor="middle" fontSize={11} fill={fin(v) && Math.abs(v) / max > 0.62 ? "#ffffff" : "var(--ink)"}>
                     {fin(v) ? dec(v) : "—"}
                   </text>
                 </g>

@@ -56,3 +56,16 @@ export function monthYear(iso: string): string {
   const [y, m] = iso.split("-");
   return `${MESES[Number(m) - 1]}/${y.slice(2)}`;
 }
+
+/** Nome legível da companhia: "Minerva S.A. (Minerva Foods)" → "Minerva"; "Copel — Companhia Paranaense…" → "Copel". */
+export function cleanName(raw: string | null | undefined): string {
+  let n = (raw ?? "").trim();
+  if (!n) return "";
+  const parts = n.split(/\s+[–—]\s+/);
+  n = parts.reduce((a, b) => (b.length < a.length ? b : a));
+  return n
+    .replace(/\s*\([^)]*\)/g, "")
+    .replace(/\s+S\.?\/?A\.?(?=\s|$)/gi, "")
+    .replace(/\s+(Holding|Participações|Desenvolvimento Imobiliário|Engenharia)$/i, "")
+    .trim();
+}

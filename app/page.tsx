@@ -5,7 +5,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { OverviewClient } from "@/components/OverviewClient";
 import type { External } from "@/components/opps/OppShowcase";
-import { getCompany, getOverview } from "@/lib/data";
+import { displayNames, getCompany, getOverview, getRegistros } from "@/lib/data";
+import type { Registro } from "@/components/registro/Registro";
 
 const p0 = (v: number) => `${v > 0 ? "+" : ""}${Math.round(v * 100)}%`;
 
@@ -15,17 +16,21 @@ export default function Page() {
   const extPath = path.join(process.cwd(), "data", "external", "analise_aprofundada_2810.json");
   const external: External | null = fs.existsSync(extPath) ? JSON.parse(fs.readFileSync(extPath, "utf8")) : null;
   const headlines: Record<string, string> = {};
+  const theses: Record<string, string> = {};
   for (const t of ov.opportunities) {
-    const h = getCompany(t)?.report?.headline;
-    if (typeof h === "string") headlines[t] = h;
+    const rp = getCompany(t)?.report;
+    if (typeof rp?.headline === "string") headlines[t] = rp.headline;
+    const first = rp?.reasons?.[0]?.title;
+    if (typeof first === "string") theses[t] = first;
   }
+  const registro = getRegistros<Registro>()[0] ?? null;
   const valLabel = (ov as unknown as { valuation_label?: string | null }).valuation_label ?? null;
   const pts = ov.xsec.points;
   const extremes = [...pts].sort((a, b) => a.residual - b.residual);
   const labelSet = new Set([...extremes.slice(0, 6), ...extremes.slice(-4)].map((p) => p.ticker));
   return (
     <div className="space-y-8">
-      <OverviewClient rows={ov.companies} opps={ov.opportunities} market={ov.market} xsec={ov.xsec} external={external} headlines={headlines} valLabel={valLabel} reports={ov.reports ?? []} />
+      <OverviewClient rows={ov.companies} opps={ov.opportunities} market={ov.market} xsec={ov.xsec} external={external} headlines={headlines} valLabel={valLabel} reports={ov.reports ?? []} registro={registro} names={displayNames()} theses={theses} />
 
       <section className="grid grid-cols-1 gap-6 lg:grid-cols-12">
         <div className="lg:col-span-7">
@@ -63,7 +68,7 @@ export default function Page() {
             table={{ columns: ["Setor", "Mediana", "Ações"], rows: ov.sector_stats.map((s) => [s.setor, p0(s.median), s.n]) }}
           />
           <div className="mt-3 text-right">
-            <Link href="/mercado" className="text-[13px] font-medium text-accent hover:underline">
+            <Link href="/mercado" className="link text-[13px]">
               Ver o estudo de mercado completo
             </Link>
           </div>

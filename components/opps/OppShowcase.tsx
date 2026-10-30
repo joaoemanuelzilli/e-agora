@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import type { LiveRow } from "@/components/Dashboard";
 import { OppMap } from "@/components/charts/OppMap";
-import { IrrMeter, Sparkline } from "@/components/charts/Points";
 import { Tip, TipRow, useWidth } from "@/components/charts/core";
 import { brl, num, pct, signClass } from "@/lib/format";
 import { ceilingPrice } from "@/lib/valuation";
+import { CallChip, callOf } from "@/components/ui/Rating";
 
 export type ExtRow = {
   ticker: string;
@@ -27,16 +27,8 @@ export type External = { titulo: string; autor: string; data: string; precos: st
 const fin = (x: unknown): x is number => typeof x === "number" && Number.isFinite(x);
 const r2 = (v: number) => Math.round(v * 100) / 100;
 
-type Zone = { label: string; tone: "strong" | "in" | "out" | "none"; gap: number | null };
-function zoneOf(price: number | null, ceiling: number | null, strong: number | null): Zone {
-  if (!fin(price) || !fin(ceiling)) return { label: "Sem preço-teto", tone: "none", gap: null };
-  if (fin(strong) && price <= strong) return { label: "Compra forte", tone: "strong", gap: ceiling / price - 1 };
-  if (price <= ceiling) return { label: "Na faixa de compra", tone: "in", gap: ceiling / price - 1 };
-  return { label: `Acima do teto: falta cair ${pct(1 - ceiling / price, 1)}`, tone: "out", gap: ceiling / price - 1 };
-}
-
 /** Régua de preço: faixa de compra (compra forte → teto), preço de agora, valor justo e preço pré-eleição. */
-function PriceRail({ price, strong, ceiling, fair, pre }: { price: number; strong: number | null; ceiling: number | null; fair: number | null; pre: number | null }) {
+export function PriceRail({ price, strong, ceiling, fair, pre }: { price: number; strong: number | null; ceiling: number | null; fair: number | null; pre: number | null }) {
   const [ref, w] = useWidth<HTMLDivElement>(320);
   const [hover, setHover] = useState<{ px: number; py: number } | null>(null);
   const vals = [price, strong, ceiling, fair, pre].filter(fin);
@@ -55,12 +47,12 @@ function PriceRail({ price, strong, ceiling, fair, pre }: { price: number; stron
       <svg width={w} height={h} role="img" aria-label="régua de preço" className="block">
         <line x1={6} x2={w - 6} y1={cy} y2={cy} stroke="var(--grid)" strokeWidth={2} />
         {fin(ceiling) && (
-          <rect x={r2(x(fin(strong) ? Math.min(strong, ceiling) : lo - pad))} y={cy - 7} width={Math.max(3, r2(x(ceiling) - x(fin(strong) ? Math.min(strong, ceiling) : lo - pad)))} height={14} rx={4} fill="var(--accent-soft)" />
+          <rect x={r2(x(fin(strong) ? Math.min(strong, ceiling) : lo - pad))} y={cy - 7} width={Math.max(3, r2(x(ceiling) - x(fin(strong) ? Math.min(strong, ceiling) : lo - pad)))} height={14} rx={1} fill="var(--buy-soft)" />
         )}
-        {fin(ceiling) && <line x1={r2(x(ceiling))} x2={r2(x(ceiling))} y1={cy - 9} y2={cy + 9} stroke="var(--series-1)" strokeWidth={2} />}
+        {fin(ceiling) && <line x1={r2(x(ceiling))} x2={r2(x(ceiling))} y1={cy - 9} y2={cy + 9} stroke="var(--buy)" strokeWidth={2} />}
         {fin(fair) && <line x1={r2(x(fair))} x2={r2(x(fair))} y1={cy - 9} y2={cy + 9} stroke="var(--ink)" strokeWidth={2} />}
         {fin(pre) && <circle cx={r2(x(pre))} cy={cy} r={4} fill="var(--surface)" stroke="var(--ink-2)" strokeWidth={1.5} />}
-        <circle cx={r2(x(price))} cy={cy} r={6.5} fill={inZone ? "var(--pos)" : "var(--ink-2)"} stroke="var(--surface)" strokeWidth={2} />
+        <circle cx={r2(x(price))} cy={cy} r={6.5} fill={inZone ? "var(--buy)" : "var(--wait)"} stroke="var(--surface)" strokeWidth={2} />
         <text x={r2(x(price))} y={10} textAnchor={x(price) < 40 ? "start" : x(price) > w - 40 ? "end" : "middle"} fontSize={11} fontWeight={600} fill="var(--ink)">
           {num(price)}
         </text>
@@ -69,7 +61,7 @@ function PriceRail({ price, strong, ceiling, fair, pre }: { price: number; stron
         <Tip x={hover.px} y={hover.py} w={w}>
           <TipRow label="Preço agora" value={brl(price)} />
           {fin(strong) && <TipRow label="Compra forte (Ke +5 p.p.)" value={brl(strong)} />}
-          {fin(ceiling) && <TipRow color="var(--series-1)" label="Preço-teto" value={brl(ceiling)} />}
+          {fin(ceiling) && <TipRow color="var(--buy)" label="Preço-teto" value={brl(ceiling)} />}
           {fin(fair) && <TipRow color="var(--ink)" label="Valor justo" value={brl(fair)} />}
           {fin(pre) && <TipRow label="Pré-eleição (23/10)" value={brl(pre)} />}
         </Tip>
@@ -80,96 +72,57 @@ function PriceRail({ price, strong, ceiling, fair, pre }: { price: number; stron
 
 const DEC_TONE: Record<string, string> = { Comprar: "text-[var(--pos)]", Acompanhar: "text-ink", Evitar: "text-[var(--neg)]" };
 
-function OppCard({ r, rank, ke, ext, headline, hasReport }: { r: LiveRow; rank: number; ke: number; ext?: ExtRow; headline?: string | null; hasReport: boolean }) {
+function ThesisItem({ r, rank, ke, ext, headline, hasReport, name }: { r: LiveRow; rank: number; ke: number; ext?: ExtRow; headline?: string | null; hasReport: boolean; name?: string }) {
   const href = hasReport ? `/relatorio/${r.ticker}` : `/empresa/${r.ticker}`;
   const price = r.L.price;
   const ceiling = ceilingPrice(r.engine, ke);
   const strong = ceilingPrice(r.engine, ke + 0.05);
-  const z = zoneOf(price, ceiling, strong);
-  const spark = (r.spark || []).filter(fin);
+  const c = callOf(price, ceiling, strong);
   return (
-    <article className="panel flex flex-col p-5">
-      <header className="flex items-start gap-3">
-        <div className="font-serif text-[40px] font-medium leading-none text-[var(--series-1)]" aria-label={`${rank}º`}>
-          {rank}
-        </div>
-        <div className="min-w-0 flex-1">
-          <div className="flex items-baseline justify-between gap-2">
-            <Link href={href} className="text-[20px] font-semibold tracking-[-0.01em] hover:text-accent">
+    <article className="flex flex-col border-t border-hairline pt-4">
+      <header className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
+        <div className="min-w-0">
+          <div className="flex items-baseline gap-2">
+            <span className="num text-[13px] text-muted">{rank}</span>
+            <Link href={href} className="text-[17px] font-bold tracking-[-0.01em] hover:text-accent hover:underline">
               {r.ticker}
             </Link>
-            <span className={`num text-[12.5px] ${signClass(r.chgLive)}`}>{pct(r.chgLive, 1, true)} hoje</span>
-          </div>
-          <div className="truncate text-[12.5px] text-muted">
-            {r.name}
-            {r.sector?.subsetor ? `, ${r.sector.subsetor.toLowerCase()}` : ""}
+            <span className="truncate text-[12.5px] text-muted">{name ?? r.name}</span>
           </div>
         </div>
+        <CallChip status={c.tone === "strong" ? "compra forte" : c.tone === "in" ? "na faixa" : c.tone === "out" ? "acima do teto" : "sem preço-teto"}>
+          <span className="num text-[12px] text-ink-2">teto {num(ceiling)}</span>
+        </CallChip>
       </header>
-
-      {headline && <p className="mt-3 line-clamp-3 text-[13.5px] leading-snug text-ink">{headline}</p>}
-
-      <div className="mt-4">
-        <div className="flex items-baseline justify-between gap-2">
-          <span className={`text-[12.5px] font-semibold ${z.tone === "out" ? "text-ink-2" : z.tone === "none" ? "text-muted" : "text-[var(--pos)]"}`}>{z.label}</span>
-          {fin(ceiling) && <span className="num text-[12px] text-muted">teto {num(ceiling)}</span>}
-        </div>
-        {fin(price) && <PriceRail price={price} strong={strong} ceiling={ceiling} fair={r.L.fair} pre={r.prev_close} />}
-        <div className="flex justify-between text-[11px] text-muted">
-          <span>faixa de compra em azul</span>
-          <span>traço preto: valor justo {num(r.L.fair)}</span>
-        </div>
-      </div>
-
-      <div className="mt-4 grid grid-cols-3 gap-3 border-t border-hairline pt-3">
-        <div>
-          <div className="label">TIR de dono</div>
-          <div className="num text-[20px] font-semibold">{pct(r.L.irr, 1)}</div>
-          <IrrMeter irr={r.L.irr} ke={ke} w={92} />
-        </div>
-        <div>
-          <div className="label">Upside</div>
-          <div className={`num text-[20px] font-semibold ${signClass(r.L.upside)}`}>{pct(r.L.upside, 0, true)}</div>
-          <div className="text-[11px] text-muted">até o valor justo</div>
-        </div>
-        <div>
-          <div className="label">Chance de valer mais</div>
-          <div className="num text-[20px] font-semibold">{pct(r.L.prob, 0)}</div>
-          <div className="mt-1 h-1.5 w-full rounded bg-[var(--grid)]">
-            <div className="h-1.5 rounded bg-[var(--series-1)]" style={{ width: `${Math.round(Math.max(0, Math.min(1, r.L.prob ?? 0)) * 100)}%` }} />
+      {headline && <p className="mt-2.5 line-clamp-3 max-w-[68ch] text-[13.5px] leading-relaxed text-ink">{headline}</p>}
+      {fin(price) && (
+        <div className="mt-2">
+          <PriceRail price={price} strong={strong} ceiling={ceiling} fair={r.L.fair} pre={r.prev_close} />
+          <div className="flex justify-between text-[12px] text-muted">
+            <span>{c.detail}</span>
+            <span className="num">valor justo {num(r.L.fair)}</span>
           </div>
         </div>
-      </div>
-
-      <div className="mt-4 flex items-end justify-between gap-3">
-        <div>
-          <div className="label">12 meses até a eleição</div>
-          {spark.length > 2 ? <Sparkline data={spark} w={120} h={28} down={spark[spark.length - 1] < spark[0]} /> : <span className="text-[12px] text-muted">—</span>}
-        </div>
-        <div className="text-right">
-          <div className="label">Segunda análise</div>
+      )}
+      <div className="mt-auto flex flex-wrap items-center justify-between gap-x-4 gap-y-2 pt-3">
+        <span className="text-[12px] text-ink-2">
+          Segunda análise:{" "}
           {ext ? (
-            <div className="text-[12.5px]">
-              <span className={`font-semibold ${DEC_TONE[ext.decisao] ?? ""}`}>{ext.decisao}</span>
-              <span className="text-muted">
-                {" "}
-                {ext.sinal.toLowerCase()}
-                {ext.criterios ? ` ${ext.criterios}` : ""}
-              </span>
-            </div>
+            <>
+              <b className={DEC_TONE[ext.decisao] ?? ""}>{ext.decisao}</b> <span className="text-muted">({ext.sinal.toLowerCase()})</span>
+            </>
           ) : (
-            <div className="text-[12px] text-muted">não analisada</div>
+            <span className="text-muted">não analisada</span>
           )}
-        </div>
-      </div>
-
-      <div className="mt-auto flex gap-2 pt-4">
-        <Link href={href} className="flex-1 rounded border border-hairline px-3 py-1.5 text-center text-[13px] font-medium text-ink hover:border-accent hover:text-accent">
-          {hasReport ? "Relatório" : "Análise completa"}
-        </Link>
-        <Link href="/investir" className="flex-1 rounded bg-accent px-3 py-1.5 text-center text-[13px] font-medium text-white hover:opacity-90">
-          Investir
-        </Link>
+        </span>
+        <span className="flex gap-4 text-[13px]">
+          <Link href={href} className="link">
+            {hasReport ? "Ler o relatório" : "Análise completa"}
+          </Link>
+          <Link href="/investir" className="link">
+            Montar ordem
+          </Link>
+        </span>
       </div>
     </article>
   );
@@ -183,9 +136,9 @@ function TwoOpinions({ ext, rows, opps }: { ext: External; rows: LiveRow[]; opps
     { key: "Evitar", title: "Evitar", note: "nenhuma das duas vê margem" },
   ];
   return (
-    <section className="panel p-5">
-      <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <h3 className="h3">Duas análises independentes</h3>
+    <section>
+      <div className="sec flex flex-wrap items-baseline justify-between gap-3">
+        <h2 className="h2">Duas análises independentes</h2>
         <span className="text-[12px] text-muted">
           {ext.autor}, {ext.data.split("-").reverse().join("/")}; preços de {ext.precos.split(" (")[0].toLowerCase()}
         </span>
@@ -195,19 +148,19 @@ function TwoOpinions({ ext, rows, opps }: { ext: External; rows: LiveRow[]; opps
           const items = ext.empresas.filter((e) => e.decisao === g.key);
           return (
             <div key={g.key}>
-              <div className={`text-[13px] font-semibold ${DEC_TONE[g.key]}`}>{g.title}</div>
-              <div className="text-[11.5px] text-muted">{g.note}</div>
-              <ul className="mt-2 space-y-2">
+              <div className={`text-[14px] font-bold ${DEC_TONE[g.key]}`}>{g.title}</div>
+              <div className="text-[12px] text-muted">{g.note}</div>
+              <ul className="mt-2 space-y-3">
                 {items.map((e) => {
                   const r = byT[e.ticker];
                   const inList = opps.includes(e.ticker);
                   return (
-                    <li key={e.ticker} className="rounded border border-hairline px-3 py-2">
+                    <li key={e.ticker} className="border-t border-hairline pt-2">
                       <div className="flex items-baseline justify-between gap-2">
-                        <Link href={r ? `/empresa/${e.ticker}` : "#"} className="font-semibold hover:text-accent">
+                        <Link href={r ? `/empresa/${e.ticker}` : "#"} className="font-bold hover:text-accent">
                           {e.ticker}
                         </Link>
-                        <span className="text-[11.5px] text-muted">{inList ? "na seleção do estudo" : "fora da seleção do estudo"}</span>
+                        <span className="text-[12px] text-muted">{inList ? "na seleção do estudo" : "fora da seleção do estudo"}</span>
                       </div>
                       <div className="mt-1 grid grid-cols-2 gap-2 text-[12px]">
                         <div>
@@ -229,7 +182,7 @@ function TwoOpinions({ ext, rows, opps }: { ext: External; rows: LiveRow[]; opps
                           </div>
                         </div>
                       </div>
-                      {(e.motivo_decisao || e.alerta) && <div className="mt-1 text-[11.5px] text-ink-2">{e.motivo_decisao ?? e.alerta}</div>}
+                      {(e.motivo_decisao || e.alerta) && <div className="mt-1 text-[12px] text-ink-2">{e.motivo_decisao ?? e.alerta}</div>}
                     </li>
                   );
                 })}
@@ -243,7 +196,7 @@ function TwoOpinions({ ext, rows, opps }: { ext: External; rows: LiveRow[]; opps
   );
 }
 
-export function OppShowcase({ rows, ke, opps, external, headlines, reports = [] }: { rows: LiveRow[]; ke: number; opps: string[]; external?: External | null; headlines: Record<string, string>; reports?: string[] }) {
+export function OppShowcase({ rows, ke, opps, external, headlines, reports = [], names = {} }: { rows: LiveRow[]; ke: number; opps: string[]; external?: External | null; headlines: Record<string, string>; reports?: string[]; names?: Record<string, string> }) {
   const byT = Object.fromEntries(rows.map((r) => [r.ticker, r]));
   const extBy = Object.fromEntries((external?.empresas || []).map((e) => [e.ticker, e]));
   const list = opps.map((t) => byT[t]).filter(Boolean);
@@ -260,12 +213,20 @@ export function OppShowcase({ rows, ke, opps, external, headlines, reports = [] 
     }));
   const inZoneNow = points.filter((p) => p.inZone).length;
   return (
-    <div className="space-y-5">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {list.map((r, i) => (
-          <OppCard key={r.ticker} r={r} rank={i + 1} ke={ke} ext={extBy[r.ticker]} headline={headlines[r.ticker] ?? r.summary} hasReport={reports.includes(r.ticker)} />
-        ))}
-      </div>
+    <div className="space-y-10">
+      <section aria-labelledby="teses-h">
+        <div className="sec flex flex-wrap items-baseline justify-between gap-3">
+          <h2 id="teses-h" className="h2">
+            A tese de cada recomendação
+          </h2>
+          <span className="max-w-[68ch] text-[12.5px] text-muted">Em cada régua: faixa de compra em verde, preço de agora no ponto, valor justo no traço escuro e preço pré-eleição no círculo vazio</span>
+        </div>
+        <div className="mt-3 grid grid-cols-1 gap-x-10 gap-y-6 md:grid-cols-2">
+          {list.map((r, i) => (
+            <ThesisItem key={r.ticker} r={r} rank={i + 1} ke={ke} ext={extBy[r.ticker]} headline={headlines[r.ticker] ?? r.summary} hasReport={reports.includes(r.ticker)} name={names[r.ticker]} />
+          ))}
+        </div>
+      </section>
       <OppMap
         points={points}
         ke={ke}

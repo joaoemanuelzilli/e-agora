@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>E agora? Research · Painel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B2545;--ink:#101828;--ink2:#475467;--ink3:#667085;--panel:#E9EDF2;--line:#E4E7EC;--line2:#D0D5DD;--buy:#1B7F4C;--neg:#B42318;--wait:#B7791F}
+*{box-sizing:border-box}
+html,body{width:1440px;height:900px;overflow:hidden;margin:0}
+body{background:#fff;color:var(--ink);font:400 14px/20px "Libre Franklin",system-ui,sans-serif;font-variant-numeric:tabular-nums;display:grid;grid-template-rows:56px 36px 1fr 52px}
+h1,h2,h3,p{margin:0}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+.wrap{padding:0 40px}
+.pos{color:var(--buy)}.neg{color:var(--neg)}
+header{background:var(--navy);color:#fff;display:flex;align-items:center;gap:40px}
+.brand{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.brand span{font-weight:400;color:rgba(255,255,255,.72);padding-left:10px;border-left:1px solid rgba(255,255,255,.3);line-height:18px}
+nav{display:flex;height:56px}
+nav a{display:flex;align-items:center;padding:0 12px;color:rgba(255,255,255,.72);font-weight:500;border-top:2px solid transparent;border-bottom:2px solid transparent}
+nav a[aria-current]{color:#fff;font-weight:600;border-bottom-color:#fff}
+.tools{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:13px}
+.tools label{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.72)}
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:4px;padding:2px}
+.seg button{padding:3px 10px;border-radius:3px;font-size:13px;line-height:20px;color:var(--ink2)}
+.seg .on{background:var(--ink);color:#fff;font-weight:600}
+header .seg{border-color:rgba(255,255,255,.3)}
+header .seg button{color:rgba(255,255,255,.82)}
+header .seg .on{background:#fff;color:var(--navy)}
+.theme{display:flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.3);border-radius:4px;padding:4px 10px;line-height:20px;color:#fff}
+.mkt{display:flex;align-items:center;gap:24px;background:var(--panel);border-bottom:1px solid var(--line2);font-size:12px;color:var(--ink2);white-space:nowrap}
+.mkt b{color:var(--ink);font-weight:600;font-size:13px;margin:0 4px 0 6px}
+.mkt .src{margin-left:auto;color:var(--ink3)}
+main.wrap{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;padding-top:24px;padding-bottom:24px;min-height:0}
+.lead{grid-column:1/span 9;display:flex;flex-direction:column}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.meta{font-size:13px;color:var(--ink3);margin-bottom:4px}
+h1{font-size:28px;line-height:34px;font-weight:600;letter-spacing:-.015em}
+.acts{display:flex;gap:8px}
+.btn{display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:4px;font-size:13px;font-weight:600;border:1px solid var(--line2)}
+.btn.pri{background:var(--navy);border-color:var(--navy);color:#fff}
+.lede{margin-top:12px;max-width:780px;color:var(--ink2)}
+.lede strong{color:var(--ink);font-weight:600}
+.bar{display:flex;align-items:center;gap:16px;margin:24px 0 12px}
+h2{font-size:16px;line-height:24px;font-weight:700}
+.bar .note{margin-left:auto;font-size:13px;color:var(--ink3)}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px}
+th{font-size:12px;line-height:16px;font-weight:500;color:var(--ink2);text-align:right;padding:0 8px 8px;border-bottom:1px solid var(--ink);white-space:nowrap}
+th.on{color:var(--ink);font-weight:700}
+td{height:60px;padding:0 8px;text-align:right;border-bottom:1px solid var(--line)}
+th:nth-child(-n+3),td:nth-child(-n+3){text-align:left}
+th:first-child,td:first-child{padding-left:0}
+th:last-child,td:last-child{padding-right:0}
+td:first-child{color:var(--ink3)}
+.tk{display:block;font-weight:700;font-size:14px;line-height:20px}
+.nm{display:block;font-size:12px;line-height:16px;color:var(--ink3)}
+.rb{display:inline-grid;grid-template-columns:88px 92px 64px;height:42px;border:1px solid var(--buy);border-radius:2px;text-align:left;vertical-align:middle}
+.rb b{display:grid;place-items:center;background:var(--buy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em}
+.rb span{display:flex;flex-direction:column;justify-content:center;padding:0 10px;font-weight:600;line-height:17px;white-space:nowrap}
+.rb span+span{border-left:1px solid var(--line2)}
+.rb i{font-style:normal;font-size:11px;line-height:14px;font-weight:500;color:var(--ink3)}
+.rb.w{border-color:var(--wait)}
+.rb.w b{background:var(--wait);color:var(--ink)}
+.side{grid-column:10/span 3;background:var(--panel);border-top:3px solid var(--navy);padding:16px 16px 12px;font-size:13px}
+.side h3{font-size:14px;line-height:20px;font-weight:700;margin-bottom:4px}
+.side h3:not(:first-child){margin-top:16px}
+.side h3 span{font-weight:400;color:var(--ink3)}
+.r{display:flex;justify-content:space-between;gap:12px;padding:4px 0;border-bottom:1px solid rgba(16,24,40,.09)}
+.r span{color:var(--ink2)}
+.r b{font-weight:600;white-space:nowrap}
+.r small{display:block;font-size:12px;line-height:16px;color:var(--ink3)}
+.split{display:flex;height:8px;margin:8px 0 4px;border-radius:1px;overflow:hidden}
+.split i{background:var(--navy);width:60%}
+.split i+i{background:#9AA8BA;width:40%}
+.legend{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--ink2);padding-bottom:4px;border-bottom:1px solid rgba(16,24,40,.09)}
+.fine{font-size:12px;line-height:16px;color:var(--ink3);margin-top:6px}
+footer{display:flex;align-items:center;border-top:1px solid var(--line);font-size:12px;line-height:16px;color:var(--ink3)}
+footer strong{color:var(--ink2);font-weight:600}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <a class="brand" href="#">E agora? <span>Research</span></a>
+  <nav aria-label="Principal">
+    <a href="#" aria-current="page">Painel</a><a href="#">Investir</a><a href="#">Registro</a><a href="#">Dividendos</a><a href="#">Mercado</a><a href="#">Metodologia</a><a href="#">Testes</a>
+  </nav>
+  <div class="tools">
+    <label>Ke <span class="seg" role="radiogroup"><button>20%</button><button class="on" aria-pressed="true">25%</button><button>30%</button></span></label>
+    <button class="theme"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M7 1a6 6 0 0 1 0 12z" fill="#fff"/></svg>Tema: Auto</button>
+  </div>
+</header>
+<div class="mkt wrap">
+  <span>Ibovespa<b>169.632</b><em class="neg" style="font-style:normal">−0,80%</em></span>
+  <span>Small Caps<b>1.891</b><em class="neg" style="font-style:normal">−2,52%</em></span>
+  <span>Dólar fut.<b>R$ 5,912</b><em class="pos" style="font-style:normal">+0,41%</em></span>
+  <span>DI jan/27<b>15,48%</b></span><span>DI jan/29<b>15,12%</b></span><span>Selic<b>15,00%</b></span><span>IPCA 12m<b>4,62%</b></span>
+  <span class="src">B3, 15 min de atraso</span>
+</div>
+<main class="wrap">
+  <section class="lead">
+    <div class="head">
+      <div><p class="meta">Ações Brasil · Preços do fechamento oficial de 28/10/2026 · Ke 25%</p><h1>Top picks pós-eleição — 28/10/2026</h1></div>
+      <div class="acts"><a class="btn" href="#">Registro de 28/10</a><a class="btn pri" href="#">Ver ordens sugeridas</a></div>
+    </div>
+    <p class="lede">Das 122 empresas cobertas, ficam as <strong>8 de maior score multifator</strong> entre as que têm TIR de dono ≥ 20%, chance ≥ 45% no Monte Carlo e nenhum risco Altman. Maior peso da carteira, a BEEF3 caiu 21% no dia em que o dólar subiu 9,5%, embora 57% da receita seja exportação.</p>
+    <div class="bar">
+      <h2>Carteira recomendada</h2>
+      <span class="seg" role="radiogroup"><button class="on" aria-pressed="true">Todas · 8</button><button>Compra · 5</button><button>Aguardar · 3</button></span>
+      <p class="note">Pesos somam 60,0% do capital; os outros 40% ficam em CDI</p>
+    </div>
+    <table>
+      <colgroup><col style="width:36px"><col style="width:168px"><col style="width:104px"><col style="width:96px"><col style="width:96px"><col style="width:96px"><col style="width:76px"><col style="width:72px"><col></colgroup>
+      <thead><tr><th class="on"># ▾</th><th>Ação</th><th>Setor</th><th>Preço 28/10</th><th>Valor justo</th><th>TIR de dono</th><th>Chance</th><th>Peso</th><th>Recomendação</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><span class="tk">VTRU3</span><span class="nm">Vitru Educação</span></td><td>Educação</td><td>R$ 12,02</td><td>R$ 16,99</td><td>26,3%</td><td>92%</td><td>8,1%</td><td><span class="rb"><b>COMPRA</b><span><i>Preço-teto</i>R$ 12,98</span><span><i>Upside</i>+41%</span></span></td></tr>
+        <tr><td>2</td><td><span class="tk">BEEF3</span><span class="nm">Minerva</span></td><td>Alimentos</td><td>R$ 2,89</td><td>R$ 5,44</td><td>27,2%</td><td>79%</td><td>20,0%</td><td><span class="rb"><b>COMPRA</b><span><i>Preço-teto</i>R$ 3,27</span><span><i>Upside</i>+88%</span></span></td></tr>
+        <tr><td>3</td><td><span class="tk">SEER3</span><span class="nm">Ser Educacional</span></td><td>Educação</td><td>R$ 11,11</td><td>R$ 14,19</td><td>24,4%</td><td>84%</td><td>2,9%</td><td><span class="rb w"><b>AGUARDAR</b><span><i>Preço-teto</i>R$ 10,66</span><span><i>Upside</i>+28%</span></span></td></tr>
+        <tr><td>4</td><td><span class="tk">MDNE3</span><span class="nm">Moura Dubeux</span></td><td>Construção</td><td>R$ 17,05</td><td>R$ 20,19</td><td>27,8%</td><td>79%</td><td>10,5%</td><td><span class="rb"><b>COMPRA</b><span><i>Preço-teto</i>R$ 19,20</span><span><i>Upside</i>+18%</span></span></td></tr>
+        <tr><td>5</td><td><span class="tk">PLPL3</span><span class="nm">Plano&amp;Plano</span></td><td>Construção</td><td>R$ 4,79</td><td>R$ 6,37</td><td>28,3%</td><td>82%</td><td>8,5%</td><td><span class="rb"><b>COMPRA</b><span><i>Preço-teto</i>R$ 5,75</span><span><i>Upside</i>+33%</span></span></td></tr>
+        <tr><td>6</td><td><span class="tk">TEND3</span><span class="nm">Tenda</span></td><td>Construção</td><td>R$ 21,38</td><td>R$ 26,81</td><td>25,4%</td><td>79%</td><td>4,3%</td><td><span class="rb"><b>COMPRA</b><span><i>Preço-teto</i>R$ 21,71</span><span><i>Upside</i>+25%</span></span></td></tr>
+        <tr><td>7</td><td><span class="tk">CEAB3</span><span class="nm">C&amp;A Modas</span></td><td>Varejo</td><td>R$ 6,82</td><td>R$ 6,91</td><td>22,1%</td><td>50%</td><td>2,7%</td><td><span class="rb w"><b>AGUARDAR</b><span><i>Preço-teto</i>R$ 5,75</span><span><i>Upside</i>+1%</span></span></td></tr>
+        <tr><td>8</td><td><span class="tk">COGN3</span><span class="nm">Cogna</span></td><td>Educação</td><td>R$ 1,71</td><td>R$ 1,97</td><td>24,6%</td><td>67%</td><td>3,0%</td><td><span class="rb w"><b>AGUARDAR</b><span><i>Preço-teto</i>R$ 1,65</span><span><i>Upside</i>+15%</span></span></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <aside class="side" aria-label="Dados-chave">
+    <h3>Dados-chave</h3>
+    <div class="r"><span>Ibovespa desde a eleição</span><b class="neg">−17,5%</b></div>
+    <div class="r"><span>Queda no pregão seguinte<small>3º pior dia desde 1998</small></span><b class="neg">−14,6%</b></div>
+    <div class="r"><span>Mediana da cobertura</span><b class="neg">−27,0%</b></div>
+    <div class="r"><span>Empresas cobertas</span><b>122</b></div>
+    <div class="r"><span>Passam na regra</span><b>8 de 122</b></div>
+    <div class="r"><span>Custo de capital (Ke)</span><b>25%</b></div>
+    <h3>Alocação</h3>
+    <div class="split" role="img" aria-label="60% ações, 40% CDI"><i></i><i></i></div>
+    <div class="legend"><span>Ações 60%</span><span>CDI 40%</span></div>
+    <div class="r"><span>Entrada sugerida agora</span><b>28% do capital</b></div>
+    <div class="r"><span>Retorno esperado</span><b>21,5% a.a.</b></div>
+    <div class="r"><span>Volatilidade</span><b>19,5%</b></div>
+    <p class="fine">Até 60% em ações quando a volatilidade normalizar.</p>
+    <h3>Desde a recomendação <span>· 1 pregão</span></h3>
+    <div class="r"><span>Carteira (ações + CDI)</span><b class="neg">−3,8%</b></div>
+    <div class="r"><span>Só ações</span><b class="neg">−6,3%</b></div>
+    <div class="r"><span>Ibovespa</span><b class="neg">−0,8%</b></div>
+    <div class="r"><span>Small Caps</span><b class="neg">−2,5%</b></div>
+    <div class="r"><span>CDI</span><b class="pos">+0,1%</b></div>
+    <div class="r"><span>Mediana das 114 não selecionadas</span><b class="neg">−2,1%</b></div>
+    <div class="r" style="border:0"><span>À frente do Ibovespa</span><b>0 de 8</b></div>
+  </aside>
+</main>
+<footer class="wrap">
+  <p><strong>Estudo quantitativo com finalidade informativa; não é recomendação de investimento.</strong> Fontes: CVM, B3 e Banco Central. Valor justo combina DCF, múltiplos e DDM; TIR de dono comparada a Ke de 25%; chance é a probabilidade, no Monte Carlo, de o valor justo estar acima do preço. Upside = valor justo ÷ preço de 28/10 − 1.</p>
+</footer>
+</body>
+</html>

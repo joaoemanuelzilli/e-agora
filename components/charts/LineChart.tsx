@@ -4,6 +4,7 @@ import { scaleLinear, scaleTime } from "d3-scale";
 import { area as d3area, curveMonotoneX, line as d3line } from "d3-shape";
 import { useMemo, useState } from "react";
 import { C, Frame, Tip, TipRow, YGrid, toFn, useWidth, type Fmt, type LegendItem, type TableSpec } from "./core";
+import { textW } from "./measure";
 
 export type LSeries = {
   key: string;
@@ -58,9 +59,7 @@ export function LineChart({
   const [hover, setHover] = useState<{ x: number; px: number; py: number } | null>(null);
   const yFmt = toFn(yFmtIn);
   const xFmt = xFmtIn ? toFn(xFmtIn) : undefined;
-  const m = { t: 10, r: 56, b: 24, l: 48 };
-  const iw = Math.max(50, w - m.l - m.r);
-  const ih = height - m.t - m.b;
+  const ih = height - 10 - 24;
 
   const all = series.flatMap((s) => s.data);
   const xs = extent(all, (d) => d[0]) as [number, number];
@@ -72,12 +71,15 @@ export function LineChart({
     const pad = (ys[1] - ys[0]) * 0.06 || 1;
     ys = [ys[0] - pad, ys[1] + pad];
   }
+  const y = scaleLinear().domain(ys).range([ih, 0]).nice();
+  const yt = y.ticks(5);
+  // margem esquerda cresce com o maior rótulo do eixo Y (ex.: "200.000") para não cortar
+  const m = { t: 10, r: 56, b: 24, l: Math.max(48, Math.ceil(Math.max(0, ...yt.map((t) => textW(yFmt(t), 11)))) + 10) };
+  const iw = Math.max(50, w - m.l - m.r);
   const x = useMemo(
     () => (xType === "time" ? scaleTime().domain([new Date(xs[0]), new Date(xs[1])]).range([0, iw]) : scaleLinear().domain(xs).range([0, iw])),
     [xs[0], xs[1], iw, xType],
   ) as unknown as ((v: number | Date) => number) & { ticks: (n: number) => (number | Date)[]; invert: (p: number) => number | Date };
-  const y = scaleLinear().domain(ys).range([ih, 0]).nice();
-  const yt = y.ticks(5);
   const xfmt =
     xFmt ??
     ((v: number) =>
@@ -210,7 +212,7 @@ export function LineChart({
         </svg>
         {hover && hv.length > 0 && (
           <Tip x={hover.px} y={hover.py} w={w}>
-            <div className="mb-1 text-[11px] text-muted">{xfmt(hv[0]!.d[0]).length > 8 ? xfmt(hv[0]!.d[0]) : xType === "time" ? new Date(hv[0]!.d[0]).toLocaleDateString("pt-BR", { timeZone: "UTC" }) : xfmt(hv[0]!.d[0])}</div>
+            <div className="mb-1 text-[12px] text-muted">{xfmt(hv[0]!.d[0]).length > 8 ? xfmt(hv[0]!.d[0]) : xType === "time" ? new Date(hv[0]!.d[0]).toLocaleDateString("pt-BR", { timeZone: "UTC" }) : xfmt(hv[0]!.d[0])}</div>
             {hv.map((h) => (
               <TipRow key={h!.s.key} color={h!.s.color} label={h!.s.label} value={yFmt(h!.d[1])} />
             ))}

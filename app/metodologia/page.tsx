@@ -22,7 +22,7 @@ export default function Page() {
     <div className="space-y-6">
       <header>
         <h1 className="h1">Metodologia</h1>
-        <p className="mt-2 max-w-[72ch] text-[15px] text-ink-2">Como cada número do painel foi produzido, de onde vêm os dados e quais são os limites do estudo.</p>
+        <p className="mt-2 max-w-[68ch] text-[15px] text-ink-2">Como cada número do painel foi produzido, de onde vêm os dados e quais são os limites do estudo.</p>
       </header>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Block title="Dados e fontes">

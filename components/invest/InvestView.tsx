@@ -1,4 +1,5 @@
 "use client";
+import { CallChip } from "@/components/ui/Rating";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useLiveRows, type LiveRow } from "@/components/Dashboard";
@@ -155,26 +156,24 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
   return (
     <div className="space-y-8">
       {entry !== null && (
-        <section className="panel p-5">
+        <section className="panel panel-ruled p-5">
           <h2 className="h3">Quanto do capital pôr em ações</h2>
           <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-12">
-            <div className="grid grid-cols-3 gap-4 md:col-span-7">
-              <div>
-                <div className="label">Agora</div>
-                <div className="num text-[24px] font-semibold">{pct(entry, 0)}</div>
-                <div className="text-[12px] text-muted">meio Kelly com a volatilidade de crise</div>
-              </div>
-              <div>
-                <div className="label">Volatilidade normal</div>
-                <div className="num text-[24px] font-semibold">até {pct(full, 0)}</div>
-                <div className="text-[12px] text-muted">subir aos poucos, em ordens escalonadas</div>
-              </div>
-              <div>
-                <div className="label">Resto</div>
-                <div className="num text-[24px] font-semibold">CDI</div>
-                <div className="text-[12px] text-muted">{portfolio?.cdi ? `${pct(portfolio.cdi, 2)} ao ano` : "caixa"}</div>
-              </div>
-            </div>
+            <dl className="md:col-span-7">
+              {[
+                { k: "Agora", v: `${pct(entry, 0)} do capital`, n: "meio Kelly com a volatilidade de crise" },
+                { k: "Com volatilidade normal", v: `até ${pct(full, 0)}`, n: "subir aos poucos, em ordens escalonadas" },
+                { k: "O resto", v: "CDI", n: portfolio?.cdi ? `${pct(portfolio.cdi, 2)} ao ano` : "caixa" },
+              ].map((x) => (
+                <div key={x.k} className="flex items-baseline justify-between gap-4 border-b border-hairline py-2 last:border-b-0">
+                  <dt className="text-[13.5px] text-ink-2">
+                    {x.k}
+                    <span className="block text-[12px] text-muted">{x.n}</span>
+                  </dt>
+                  <dd className="num shrink-0 text-[16px] font-bold">{x.v}</dd>
+                </div>
+              ))}
+            </dl>
             <div className="md:col-span-5">
               <label className="label" htmlFor="capital">
                 Seu capital total
@@ -189,13 +188,13 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
                   value={capital || ""}
                   placeholder="0"
                   onChange={(e) => setCapital(Math.max(0, Number(e.target.value) || 0))}
-                  className="num w-full rounded border border-hairline bg-surface px-3 py-1.5 text-[16px] outline-none focus:border-accent"
+                  className="num w-full rounded-[2px] border border-hairline bg-surface px-3 py-1.5 text-[16px] outline-none focus:border-accent"
                 />
                 <button
                   type="button"
                   disabled={!capital}
                   onClick={() => setAmount(Math.round(capital * entry))}
-                  className="whitespace-nowrap rounded bg-accent px-3 py-1.5 text-[13px] font-medium text-white disabled:opacity-40"
+                  className="btn btn-primary whitespace-nowrap !py-1.5 disabled:opacity-40"
                 >
                   Usar {capital ? brl(capital * entry, 0) : pct(entry, 0)}
                 </button>
@@ -205,7 +204,7 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
           </div>
         </section>
       )}
-      <section className="panel p-5">
+      <section className="panel panel-ruled p-5">
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <label className="label" htmlFor="valor">
@@ -220,7 +219,7 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
                 step={1000}
                 value={amount}
                 onChange={(e) => setAmount(Math.max(0, Number(e.target.value) || 0))}
-                className="num w-full rounded border border-hairline bg-surface px-3 py-2 text-[22px] font-semibold outline-none focus:border-accent"
+                className="num w-full rounded-[2px] border border-hairline bg-surface px-3 py-2 text-[22px] font-semibold outline-none focus:border-accent"
               />
             </div>
             <div className="mt-2 text-[12px] text-muted">
@@ -239,10 +238,10 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
                     if (s.id === "estudo" && portfolio?.sleeve?.length) setSel(portfolio.sleeve.map((x) => x.ticker));
                   }}
                   aria-pressed={scheme === s.id}
-                  className={`rounded border px-3 py-1.5 text-left text-[13px] ${scheme === s.id ? "border-accent bg-accent text-white" : "border-hairline text-ink-2 hover:bg-surface-2"}`}
+                  className={`rounded-[2px] border px-3 py-1.5 text-left text-[13px] transition-colors ${scheme === s.id ? "border-[var(--navy)] bg-[var(--navy)] text-white" : "border-hairline text-ink-2 hover:border-ink-2"}`}
                 >
-                  <div className="font-medium">{s.label}</div>
-                  <div className={`text-[11px] ${scheme === s.id ? "text-white/80" : "text-muted"}`}>{s.note}</div>
+                  <div className="font-semibold">{s.label}</div>
+                  <div className={`text-[12px] ${scheme === s.id ? "text-[var(--on-navy-2)]" : "text-muted"}`}>{s.note}</div>
                 </button>
               ))}
             </div>
@@ -250,9 +249,9 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
           <div className="space-y-3 lg:col-span-3">
             <div>
               <div className="label">Máximo por ação</div>
-              <div className="mt-1 flex overflow-hidden rounded border border-hairline">
+              <div className="mt-1 flex overflow-hidden rounded-[2px] border border-hairline">
                 {[0.1, 0.15, 0.2, 0.25].map((c) => (
-                  <button key={c} type="button" onClick={() => setCap(c)} aria-pressed={cap === c} className={`num flex-1 px-2 py-1 text-[12px] ${cap === c ? "bg-accent text-white" : "text-ink-2 hover:bg-surface-2"}`}>
+                  <button key={c} type="button" onClick={() => setCap(c)} aria-pressed={cap === c} className={`num flex-1 px-2 py-1 text-[12px] font-semibold ${cap === c ? "bg-[var(--navy)] text-white" : "text-ink-2 hover:bg-surface-2"}`}>
                     {Math.round(c * 100)}%
                   </button>
                 ))}
@@ -266,34 +265,23 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
         </div>
       </section>
 
-      <section className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-        <div className="panel p-4">
-          <div className="label">Executa agora</div>
-          <div className="num mt-1 text-[24px] font-semibold">{brl(sum(nowLegs), 0)}</div>
-          <div className="text-[12px] text-muted">{nowLegs.length} ordens no preço de tela ou acima dele, sem passar do teto</div>
-        </div>
-        <div className="panel p-4">
-          <div className="label">Fica aguardando</div>
-          <div className="num mt-1 text-[24px] font-semibold">{brl(sum(waitLegs), 0)}</div>
-          <div className="text-[12px] text-muted">{waitLegs.length} ordens abaixo do preço de agora, só executam se cair</div>
-        </div>
-        <div className="panel p-4">
-          <div className="label">TIR média ponderada no preço das ordens</div>
-          <div className="num mt-1 text-[24px] font-semibold">
-            {pct(
-              (() => {
-                const v = legsAll.filter((x) => x.l.qty > 0 && x.l.irr !== null);
-                const t = v.reduce((s, x) => s + x.l.total, 0);
-                return t > 0 ? v.reduce((s, x) => s + (x.l.irr as number) * x.l.total, 0) / t : null;
-              })(),
-              1,
-            )}
-          </div>
-          <div className="text-[12px] text-muted">meta (Ke) de {keLabel}</div>
-        </div>
-      </section>
+      <p className="keybox max-w-none px-4 py-3 text-[14px] leading-relaxed text-ink-2">
+        Executa agora <b className="num text-ink">{brl(sum(nowLegs), 0)}</b> em {nowLegs.length} ordens no preço de tela ou acima dele, sem passar do teto; fica aguardando{" "}
+        <b className="num text-ink">{brl(sum(waitLegs), 0)}</b> em {waitLegs.length} ordens abaixo do preço de agora, que só executam se cair. TIR média ponderada no preço das ordens:{" "}
+        <b className="num text-ink">
+          {pct(
+            (() => {
+              const v = legsAll.filter((x) => x.l.qty > 0 && x.l.irr !== null);
+              const t = v.reduce((s, x) => s + x.l.total, 0);
+              return t > 0 ? v.reduce((s, x) => s + (x.l.irr as number) * x.l.total, 0) / t : null;
+            })(),
+            1,
+          )}
+        </b>
+        , contra a meta (Ke) de {keLabel}.
+      </p>
 
-      <section className="panel sticky-host">
+      <section className="panel panel-ruled sticky-host">
         <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-hairline px-4 py-3">
           <h2 className="h2">Ordens sugeridas</h2>
           <span className="text-[12px] text-muted">
@@ -336,13 +324,12 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
                     <td>{li === 0 ? num(o.x.strong) : ""}</td>
                     <td className="text-left">
                       {li === 0 && (
-                        <span className={o.x.status === "acima do teto" ? "text-ink-2" : "pos font-medium"}>
-                          {o.x.status}
-                          {o.x.dist !== null && o.x.status === "acima do teto" ? ` (precisa cair ${pct(-o.x.dist, 1)})` : ""}
-                        </span>
+                        <CallChip status={o.x.status}>
+                          {o.x.dist !== null && o.x.status === "acima do teto" ? <span className="text-[12px] text-ink-2">precisa cair {pct(-o.x.dist, 1)}</span> : null}
+                        </CallChip>
                       )}
                       {li === 0 && o.x.warn && (
-                        <div className="text-[11.5px] font-normal text-muted">fora da seleção: {o.x.warn}</div>
+                        <div className="text-[12px] font-normal text-muted">fora da seleção: {o.x.warn}</div>
                       )}
                     </td>
                     <td>{li === 0 ? pct(o.wgt, 1) : pct(o.wgt * l.share, 1)}</td>
@@ -409,7 +396,7 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
         </section>
       )}
 
-      <section className="panel sticky-host">
+      <section className="panel panel-ruled sticky-host">
         <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-hairline px-4 py-3">
           <h2 className="h2">Preço-teto de todas as {all.length}</h2>
           <span className="text-[12px] text-muted">Marque para incluir na calculadora. Ordenado pela distância até o preço-teto.</span>
@@ -437,7 +424,7 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
                       <Link href={`/empresa/${x.r.ticker}`} className="font-semibold hover:text-accent">
                         {x.r.ticker}
                       </Link>
-                      {opps.includes(x.r.ticker) && <span className="rounded px-1 text-[10.5px] text-accent-ink" style={{ background: "var(--accent-soft)" }}>oportunidade</span>}
+                      {opps.includes(x.r.ticker) && <span className="rounded px-1 text-[12px] text-accent-ink" style={{ background: "var(--accent-soft)" }}>oportunidade</span>}
                     </label>
                   </td>
                   <td>{num(x.price)}</td>
@@ -447,8 +434,8 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
                   <td className={(x.r.L.irr ?? -1) >= ke ? "font-semibold" : ""}>{pct(x.r.L.irr, 1)}</td>
                   <td>{num(x.r.L.fair)}</td>
                   <td className="text-left">
-                    <span className={x.status === "acima do teto" || x.status === "sem preço-teto" ? "text-ink-2" : "pos font-medium"}>{x.status}</span>
-                    {x.warn && !opps.includes(x.r.ticker) && <div className="text-[11.5px] text-muted">fora da seleção: {x.warn}</div>}
+                    <CallChip status={x.status} />
+                    {x.warn && !opps.includes(x.r.ticker) && <div className="text-[12px] text-muted">fora da seleção: {x.warn}</div>}
                   </td>
                 </tr>
               ))}

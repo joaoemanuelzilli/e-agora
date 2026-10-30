@@ -36,7 +36,7 @@ export default function Page() {
     <div className="space-y-6">
       <header>
         <h1 className="h1">Investir</h1>
-        <p className="mt-2 max-w-[72ch] text-[15px] text-ink-2">
+        <p className="mt-2 max-w-[68ch] text-[15px] text-ink-2">
           Até que preço comprar cada ação para render a meta de retorno, e quantas ações pedir com o valor que você tem. Preço-teto é o menor entre o preço que dá TIR de dono igual ao Ke e o valor justo; acima dele, não compre.
         </p>
       </header>

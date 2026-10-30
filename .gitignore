@@ -16,3 +16,8 @@ __pycache__/
 npm-debug.log*
 # saídas brutas da suíte de testes
 data/tests/raw/
+# impeccable: capturas de revisão e estado das rodadas de decisão (locais)
+.impeccable/review/
+.impeccable/questions/
+.impeccable/build/
+.impeccable/config.local.json

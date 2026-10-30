@@ -1,20 +1,19 @@
 import type React from "react";
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
+import { Libre_Franklin } from "next/font/google";
 import { Header, type MacroFallback } from "@/components/ui/Header";
 import { getOverview } from "@/lib/data";
 import { Providers } from "./providers";
 import "./globals.css";
 
-const sans = IBM_Plex_Sans({ variable: "--font-plex-sans", subsets: ["latin"], weight: ["400", "500", "600"], display: "swap" });
-const serif = IBM_Plex_Serif({ variable: "--font-plex-serif", subsets: ["latin"], weight: ["400", "500"], style: ["normal", "italic"], display: "swap" });
+const franklin = Libre_Franklin({ variable: "--font-franklin", subsets: ["latin"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "E agora? Valuation pós-eleição",
   description: "Estudo de valuation das ações brasileiras mais líquidas depois da reeleição de Lula (26/10/2026): DCF, múltiplos, DDM, TIR de dono, Monte Carlo e evidência estatística, com cotações ao vivo da B3.",
 };
 
-export const viewport: Viewport = { themeColor: [{ media: "(prefers-color-scheme: light)", color: "#ffffff" }, { media: "(prefers-color-scheme: dark)", color: "#101a2b" }] };
+export const viewport: Viewport = { themeColor: [{ media: "(prefers-color-scheme: light)", color: "#0b2545" }, { media: "(prefers-color-scheme: dark)", color: "#0d2a4f" }] };
 
 const themeInit = `try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}`;
 
@@ -30,7 +29,7 @@ function macroFallback(): MacroFallback {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const fb = macroFallback();
   return (
-    <html lang="pt-BR" className={`${sans.variable} ${serif.variable}`} suppressHydrationWarning>
+    <html lang="pt-BR" className={franklin.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
@@ -38,8 +37,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <Header fallback={fb} />
           <main className="mx-auto max-w-[1440px] px-4 pb-16 pt-6 sm:px-6">{children}</main>
-          <footer className="no-print mx-auto max-w-[1440px] px-4 pb-10 text-[12px] text-muted sm:px-6">
-            Fontes: CVM (DFP/ITR), B3 (cotações, proventos, índices, COTAHIST), Banco Central (SGS, Focus). Estudo quantitativo com finalidade informativa; não é recomendação de investimento.
+          <footer className="no-print border-t border-hairline bg-surface-2">
+            <div className="mx-auto grid max-w-[1440px] gap-x-8 gap-y-3 px-4 py-6 text-[12px] leading-relaxed text-muted sm:px-6 md:grid-cols-12">
+              <div className="md:col-span-3">
+                <div className="text-[13px] font-bold text-ink">E agora? Research</div>
+                <div>Valuation pós-eleição, 26 de outubro de 2026</div>
+              </div>
+              <p className="md:col-span-5">
+                Fontes: CVM (DFP/ITR), B3 (cotações, proventos, índices, COTAHIST) e Banco Central (SGS, Focus). Cotações da B3 com até 15 minutos de atraso.
+              </p>
+              <p className="md:col-span-4">Estudo quantitativo com finalidade informativa; não é recomendação de investimento.</p>
+            </div>
           </footer>
         </Providers>
       </body>

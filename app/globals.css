@@ -1,109 +1,157 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ tokens
-   Paleta institucional "tinta e ardósia". Séries de gráfico validadas
-   (dataviz validate_palette) contra #ffffff (claro) e #101a2b (escuro). */
+   Mundo "Nota de research": barra marinho, papel branco, quadros cinza-claros,
+   caixa de recomendação (COMPRA verde, AGUARDAR âmbar). Séries de gráfico validadas
+   (dataviz validate_palette) contra #ffffff (claro) e #0f1c30 (escuro). */
 :root {
   color-scheme: light;
-  --page: #eef1f5;
+  --page: #ffffff;
   --surface: #ffffff;
-  --surface-2: #f6f8fa;
-  --ink: #0f1b2d;
-  --ink-2: #44526a;
-  --muted: #6f7b8e;
-  --hairline: #e1e5eb;
-  --grid: #e9ecf1;
-  --axis: #c3cad5;
-  --accent: #2a78d6;
-  --accent-ink: #1c5cab;
-  --accent-soft: rgba(42, 120, 214, 0.1);
-  --pos: #006300;
+  --surface-2: #f1f4f8;
+  --box: #e9edf2;
+  --ink: #101828;
+  --ink-2: #3d4a5c;
+  --muted: #5f6b7c;
+  --hairline: #d5dce5;
+  --grid: #e6eaf0;
+  --axis: #b8c2cf;
+  --navy: #0b2545;
+  --navy-2: #163a68;
+  --on-navy: #ffffff;
+  --on-navy-2: #b9c6d8;
+  --rule: #0b2545;
+  --fill-1: #0b2545;
+  --accent: #1d4f91;
+  --accent-ink: #1d4f91;
+  --accent-soft: rgba(29, 79, 145, 0.1);
+  --pos: #1b7f4c;
   --neg: #b42318;
-  --pos-soft: rgba(0, 99, 0, 0.08);
-  --neg-soft: rgba(180, 35, 24, 0.08);
-  --series-1: #2a78d6;
-  --series-2: #eb6834;
-  --series-3: #1baf7a;
-  --proj: #86b6ef;
+  --pos-soft: #e6f2eb;
+  --neg-soft: #fbeceb;
+  --buy: #1b7f4c;
+  --buy-strong: #126339;
+  --buy-soft: #e6f2eb;
+  --wait: #8a5a0b;
+  --wait-soft: #fbf1df;
+  --wait-line: #e2c68f;
+  --series-1: #1f5fad;
+  --series-2: #d9682b;
+  --series-3: #1a9e77;
+  --proj: #8fb2de;
   --deemph: #b9c1cc;
-  --div-neg: #e34948;
-  --div-mid: #f0efec;
-  --good: #0ca30c;
-  --warning: #fab219;
-  --critical: #d03b3b;
-  --ring: rgba(15, 27, 45, 0.1);
+  --div-neg: #d9534f;
+  --div-mid: #eef0f2;
+  --good: #1b7f4c;
+  --warning: #b7791f;
+  --critical: #b42318;
+  --ring: rgba(11, 37, 69, 0.12);
 }
 @media (prefers-color-scheme: dark) {
   :root:where(:not([data-theme="light"])) {
-    color-scheme: dark;
-    --page: #0a1220;
-    --surface: #101a2b;
-    --surface-2: #0d1625;
-    --ink: #e6ecf5;
-    --ink-2: #a8b3c5;
-    --muted: #7d8aa0;
-    --hairline: #1e2a3d;
-    --grid: #1a2536;
-    --axis: #33415a;
-    --accent: #3987e5;
-    --accent-ink: #86b6ef;
-    --accent-soft: rgba(57, 135, 229, 0.14);
-    --pos: #3fb950;
-    --neg: #f47067;
-    --pos-soft: rgba(63, 185, 80, 0.1);
-    --neg-soft: rgba(244, 112, 103, 0.1);
-    --series-1: #3987e5;
-    --series-2: #d95926;
-    --series-3: #199e70;
-    --proj: #1c5cab;
-    --deemph: #45526a;
+  color-scheme: dark;
+    --page: #0a1424;
+    --surface: #0f1c30;
+    --surface-2: #13233b;
+    --box: #172a45;
+    --ink: #e8edf5;
+    --ink-2: #b0bccd;
+    --muted: #97a8c0;
+    --hairline: #24354f;
+    --grid: #1b2b43;
+    --axis: #34465f;
+    --navy: #0d2a4f;
+    --navy-2: #173c6c;
+    --on-navy: #ffffff;
+    --on-navy-2: #a9b9cf;
+    --rule: #5b8fd1;
+    --fill-1: #4a8fe0;
+    --accent: #7fb0ea;
+    --accent-ink: #9cc2f0;
+    --accent-soft: rgba(127, 176, 234, 0.14);
+    --pos: #4cc38a;
+    --neg: #f07a70;
+    --pos-soft: rgba(76, 195, 138, 0.12);
+    --neg-soft: rgba(240, 122, 112, 0.12);
+    --buy: #1e7a49;
+    --buy-strong: #17663c;
+    --buy-soft: rgba(76, 195, 138, 0.12);
+    --wait: #e7b45a;
+    --wait-soft: rgba(231, 180, 90, 0.12);
+    --wait-line: #7a5a22;
+    --series-1: #4a8fe0;
+    --series-2: #d66a30;
+    --series-3: #20a27c;
+    --proj: #24508c;
+    --deemph: #45546b;
     --div-neg: #e66767;
-    --div-mid: #2a3446;
+    --div-mid: #26334a;
+    --good: #4cc38a;
+    --warning: #e7b45a;
+    --critical: #f07a70;
     --ring: rgba(255, 255, 255, 0.1);
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --page: #0a1220;
-  --surface: #101a2b;
-  --surface-2: #0d1625;
-  --ink: #e6ecf5;
-  --ink-2: #a8b3c5;
-  --muted: #7d8aa0;
-  --hairline: #1e2a3d;
-  --grid: #1a2536;
-  --axis: #33415a;
-  --accent: #3987e5;
-  --accent-ink: #86b6ef;
-  --accent-soft: rgba(57, 135, 229, 0.14);
-  --pos: #3fb950;
-  --neg: #f47067;
-  --pos-soft: rgba(63, 185, 80, 0.1);
-  --neg-soft: rgba(244, 112, 103, 0.1);
-  --series-1: #3987e5;
-  --series-2: #d95926;
-  --series-3: #199e70;
-  --proj: #1c5cab;
-  --deemph: #45526a;
-  --div-neg: #e66767;
-  --div-mid: #2a3446;
-  --ring: rgba(255, 255, 255, 0.1);
+    --page: #0a1424;
+    --surface: #0f1c30;
+    --surface-2: #13233b;
+    --box: #172a45;
+    --ink: #e8edf5;
+    --ink-2: #b0bccd;
+    --muted: #97a8c0;
+    --hairline: #24354f;
+    --grid: #1b2b43;
+    --axis: #34465f;
+    --navy: #0d2a4f;
+    --navy-2: #173c6c;
+    --on-navy: #ffffff;
+    --on-navy-2: #a9b9cf;
+    --rule: #5b8fd1;
+    --fill-1: #4a8fe0;
+    --accent: #7fb0ea;
+    --accent-ink: #9cc2f0;
+    --accent-soft: rgba(127, 176, 234, 0.14);
+    --pos: #4cc38a;
+    --neg: #f07a70;
+    --pos-soft: rgba(76, 195, 138, 0.12);
+    --neg-soft: rgba(240, 122, 112, 0.12);
+    --buy: #1e7a49;
+    --buy-strong: #17663c;
+    --buy-soft: rgba(76, 195, 138, 0.12);
+    --wait: #e7b45a;
+    --wait-soft: rgba(231, 180, 90, 0.12);
+    --wait-line: #7a5a22;
+    --series-1: #4a8fe0;
+    --series-2: #d66a30;
+    --series-3: #20a27c;
+    --proj: #24508c;
+    --deemph: #45546b;
+    --div-neg: #e66767;
+    --div-mid: #26334a;
+    --good: #4cc38a;
+    --warning: #e7b45a;
+    --critical: #f07a70;
+    --ring: rgba(255, 255, 255, 0.1);
 }
 
 @theme inline {
   --color-page: var(--page);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
+  --color-box: var(--box);
   --color-ink: var(--ink);
   --color-ink-2: var(--ink-2);
   --color-muted: var(--muted);
   --color-hairline: var(--hairline);
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
+  --color-navy: var(--navy);
   --color-pos: var(--pos);
   --color-neg: var(--neg);
-  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
-  --font-serif: var(--font-plex-serif), Georgia, serif;
+  --font-sans: var(--font-franklin), "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-franklin), "Helvetica Neue", Arial, sans-serif;
 }
 
 @layer components {
@@ -114,23 +162,61 @@ html {
 body {
   background: var(--page);
   color: var(--ink);
-  font-family: var(--font-plex-sans), system-ui, sans-serif;
+  font-family: var(--font-franklin), "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.45;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-feature-settings: "lnum" 1;
+}
+::selection {
+  background: var(--navy);
+  color: var(--on-navy);
 }
 a {
   color: inherit;
   text-decoration: none;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
-  border-radius: 3px;
+  border-radius: 2px;
+}
+* {
+  scrollbar-color: var(--axis) transparent;
+}
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+  accent-color: var(--fill-1);
+}
+select {
+  appearance: none;
+  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  background-color: var(--surface);
+  color: var(--ink);
+  padding: 4px 28px 4px 10px;
+  font-size: 13px;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-2) 50%), linear-gradient(135deg, var(--ink-2) 50%, transparent 50%);
+  background-position: calc(100% - 15px) 52%, calc(100% - 10px) 52%;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+}
+select:hover {
+  border-color: var(--ink-2);
+}
+input::placeholder {
+  color: var(--muted);
+}
+/* faixa de mercado: borda direita esmaecida indica que rola */
+.strip-fade {
+  mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
 }
 .num {
-  font-variant-numeric: tabular-nums;
+  font-variant-numeric: tabular-nums lining-nums;
 }
 .pos {
   color: var(--pos);
@@ -138,56 +224,173 @@ a {
 .neg {
   color: var(--neg);
 }
+/* quadro de nota de research: papel branco, fio fino, canto quase reto */
 .panel {
   background: var(--surface);
   border: 1px solid var(--hairline);
-  border-radius: 8px;
+  border-radius: 0;
+}
+/* quadro que abre a própria seção (sem título .sec acima): leva o fio marinho */
+.panel-ruled {
+  border-top: 2px solid var(--rule);
+}
+/* exibição da nota (gráfico): sem caixa, aberta pelo fio marinho, fonte embaixo */
+.exhibit {
+  border-top: 2px solid var(--rule);
+  padding-top: 10px;
+  min-width: 0;
+  overflow-x: clip;
+}
+/* quadro de dados-chave (cinza da nota) */
+.keybox {
+  background: var(--box);
+  border-radius: 2px;
 }
 .label {
   font-size: 12px;
   color: var(--muted);
-  letter-spacing: 0.01em;
 }
 .h1 {
-  font-size: 30px;
+  font-size: 28px;
   line-height: 1.15;
-  font-weight: 600;
-  letter-spacing: -0.015em;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  color: var(--ink);
 }
 .h2 {
   font-size: 18px;
   line-height: 1.25;
-  font-weight: 600;
-  letter-spacing: -0.005em;
+  font-weight: 700;
+  letter-spacing: -0.008em;
 }
 .h3 {
   font-size: 14px;
   line-height: 1.3;
-  font-weight: 600;
+  font-weight: 700;
+}
+/* abertura de seção da nota: fio marinho de 2px e título */
+.sec {
+  border-top: 2px solid var(--rule);
+  padding-top: 10px;
 }
 .prose-report {
-  font-family: var(--font-plex-serif), Georgia, serif;
-  font-size: 15.5px;
-  line-height: 1.62;
+  font-size: 15px;
+  line-height: 1.68;
   color: var(--ink);
-  max-width: 68ch;
+  max-width: 70ch;
+}
+p,
+dt,
+li {
+  text-wrap: pretty;
 }
 .prose-report p + p {
-  margin-top: 0.7em;
+  margin-top: 0.75em;
 }
 
-/* tabelas densas */
+/* caixa de recomendação: o carimbo da nota (COMPRA / AGUARDAR) */
+.rating {
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: stretch;
+  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  background: var(--surface);
+  font-variant-numeric: tabular-nums lining-nums;
+  line-height: 1.2;
+  text-align: left;
+}
+.rating-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.rating[data-tone="strong"] { border-color: var(--buy-strong); }
+.rating[data-tone="strong"] .rating-call { background: var(--buy-strong); color: #fff; }
+.rating[data-tone="in"] { border-color: var(--buy); }
+.rating[data-tone="in"] .rating-call { background: var(--buy); color: #fff; }
+.rating[data-tone="out"] { border-color: var(--wait-line); }
+.rating[data-tone="out"] .rating-call { background: var(--wait-soft); color: var(--wait); }
+.rating[data-tone="none"] .rating-call { background: var(--surface-2); color: var(--muted); }
+.rating-fixed {
+  grid-template-columns: 6.6rem 6rem 4.4rem;
+}
+.rating-fixed .rating-call {
+  justify-content: center;
+}
+.rating-cell {
+  padding: 5px 10px;
+  border-left: 1px solid var(--hairline);
+  white-space: nowrap;
+}
+.rating-cell span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+}
+.rating-cell b {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 2px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 150ms ease-out, border-color 150ms ease-out, color 150ms ease-out;
+}
+.btn-primary {
+  background: var(--navy);
+  color: var(--on-navy);
+  border: 1px solid var(--navy);
+}
+.btn-primary:hover {
+  background: var(--navy-2);
+}
+.btn-secondary {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+}
+.btn-secondary:hover {
+  border-color: var(--ink-2);
+}
+.link {
+  color: var(--accent);
+  font-weight: 600;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+/* tabelas densas, cabeçalho em faixa cinza como nas tabelas de research */
 table.data {
   width: 100%;
   border-collapse: collapse;
-  font-variant-numeric: tabular-nums;
+  font-variant-numeric: tabular-nums lining-nums;
 }
 table.data th {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 12px;
-  color: var(--muted);
+  color: var(--ink-2);
   text-align: right;
-  padding: 8px 10px;
+  padding: 7px 10px;
+  background: var(--surface-2);
+  border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--hairline);
   white-space: nowrap;
 }
@@ -207,18 +410,19 @@ table.data tbody tr:hover {
 
 /* gráficos */
 .chart text {
-  font-family: var(--font-plex-sans), system-ui, sans-serif;
-  font-variant-numeric: tabular-nums;
+  font-family: var(--font-franklin), "Helvetica Neue", Arial, sans-serif;
+  font-variant-numeric: tabular-nums lining-nums;
 }
 .tooltip {
   position: absolute;
   pointer-events: none;
   background: var(--surface);
   border: 1px solid var(--hairline);
-  border-radius: 6px;
+  border-top: 2px solid var(--rule);
+  border-radius: 2px;
   padding: 8px 10px;
   font-size: 12px;
-  box-shadow: 0 4px 16px rgba(10, 18, 32, 0.12);
+  box-shadow: 0 6px 18px rgba(10, 20, 36, 0.14);
   z-index: 30;
   white-space: nowrap;
 }
@@ -311,7 +515,7 @@ table.data tbody tr:hover {
   .grid > * {
     min-width: 0;
   }
-  figure.panel {
+  figure.exhibit {
     min-width: 0;
     overflow-x: clip;
   }
@@ -330,7 +534,7 @@ table.data tbody tr:hover {
     position: sticky;
     top: 0;
     z-index: 3;
-    background: var(--surface);
+    background: var(--surface-2);
     border-bottom: 0;
     box-shadow: inset 0 -1px 0 var(--hairline);
     white-space: normal;
@@ -346,6 +550,7 @@ table.data tbody tr:hover {
   }
   table.data.freeze thead th.freeze-col {
     z-index: 4;
+    background: var(--surface-2);
   }
   table.data.freeze tbody tr:hover .freeze-col {
     background: var(--surface-2);

@@ -338,7 +338,7 @@ export function Quant({ doc }: { doc: any }) {
           <ul className="mt-2 space-y-1 text-[12.5px]">
             {Object.entries(pz.signals as Record<string, boolean>).map(([k, ok]) => (
               <li key={k} className="flex items-center gap-2">
-                <span className={`inline-flex h-4 w-4 items-center justify-center rounded-full text-[10px] font-bold text-white ${ok ? "bg-[var(--good)]" : "bg-[var(--critical)]"}`} aria-hidden>
+                <span className={`inline-flex h-4 w-4 items-center justify-center rounded-full text-[12px] font-bold text-white ${ok ? "bg-[var(--good)]" : "bg-[var(--critical)]"}`} aria-hidden>
                   {ok ? "✓" : "×"}
                 </span>
                 <span className={ok ? "text-ink" : "text-ink-2"}>{k}</span>

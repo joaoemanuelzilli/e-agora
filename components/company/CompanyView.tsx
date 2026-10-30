@@ -4,9 +4,10 @@ import Link from "next/link";
 import { HBarChart } from "@/components/charts/Bars";
 import { LineChart } from "@/components/charts/LineChart";
 import { FootballField, IrrMeter } from "@/components/charts/Points";
-import { brl, isNum, mult, num, pct, signClass } from "@/lib/format";
+import { brl, cleanName, isNum, mult, num, pct, signClass } from "@/lib/format";
+import { Rating, callOf } from "@/components/ui/Rating";
 import { useKe, useMarket, useQuotes } from "@/lib/live";
-import { live, type LiveMetrics } from "@/lib/valuation";
+import { ceilingPrice, live, type LiveMetrics } from "@/lib/valuation";
 import { Dividends, Financials, Projections } from "./CompanyFin";
 import { Sources, Thesis } from "./CompanyText";
 import { Quant, Valuation } from "./CompanyVal";
@@ -37,8 +38,8 @@ function Stat({ label, value, sub, cls = "" }: { label: string; value: React.Rea
   return (
     <div className="min-w-[112px]">
       <div className="label">{label}</div>
-      <div className={`mt-0.5 text-[20px] font-semibold leading-tight tracking-[-0.01em] ${cls}`}>{value}</div>
-      {sub && <div className="mt-0.5 text-[11.5px] text-muted">{sub}</div>}
+      <div className={`num mt-0.5 text-[20px] font-bold leading-tight tracking-[-0.01em] ${cls}`}>{value}</div>
+      {sub && <div className="mt-0.5 text-[12px] text-muted">{sub}</div>}
     </div>
   );
 }
@@ -47,40 +48,45 @@ export function CompanyHeader({ doc, isOpp, report = false }: { doc: any; isOpp:
   const { row, ke, price, L, chg, ts, src } = useCompanyLive(doc);
   const v = doc.valuation || {};
   const fin = row.template === "financial";
+  const ceiling = ceilingPrice(row.engine, ke);
+  const call = callOf(price, ceiling, ceilingPrice(row.engine, ke + 0.05));
+  const name = cleanName(doc.research?.name) || row.name;
   return (
-    <section className="panel p-5">
-      <div className="flex flex-wrap items-start justify-between gap-4">
+    <section className="panel rounded-none border-t-2 border-t-[var(--rule)] p-5">
+      <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-4">
         <div>
-          <div className="flex items-baseline gap-3">
-            <h1 className="text-[32px] font-semibold leading-none tracking-[-0.02em]">{row.ticker}</h1>
-            <span className="text-[16px] text-ink-2">{row.name}</span>
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <h1 className="text-[32px] font-bold leading-none tracking-[-0.02em]">{row.ticker}</h1>
+            <span className="text-[17px] font-medium text-ink-2">{name}</span>
           </div>
           <div className="mt-1.5 text-[12.5px] text-muted">
             {[row.sector?.setor, row.sector?.subsetor, row.sector?.segmento].filter(Boolean).join(" / ")}
           </div>
         </div>
-        <div className="text-right">
-          <div className="flex items-baseline justify-end gap-3">
-            <span className="num text-[30px] font-semibold leading-none">{brl(price)}</span>
-            <span className={`num text-[15px] font-medium ${signClass(chg)}`}>{pct(chg, 2, true)}</span>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 sm:justify-end">
+          <div className="sm:text-right">
+            <div className="flex items-baseline gap-3 sm:justify-end">
+              <span className="num text-[30px] font-bold leading-none">{brl(price)}</span>
+              <span className={`num text-[15px] font-semibold ${signClass(chg)}`}>{pct(chg, 2, true)}</span>
+            </div>
+            <div className="mt-1 text-[12px] text-muted">
+              {ts ? `${src} ${ts.slice(11, 19)}` : "preço de referência do estudo"}
+              {row.prev_close ? `, pré-eleição ${brl(row.prev_close)}` : ""}
+              {row.price_pre_rally ? `, pré-rali (14/08) ${brl(row.price_pre_rally)}` : ""}
+            </div>
           </div>
-          <div className="mt-1 text-[11.5px] text-muted">
-            {ts ? `${src} ${ts.slice(11, 19)}` : "preço de referência do estudo"}
-            {row.prev_close ? `, pré-eleição ${brl(row.prev_close)}` : ""}
-            {row.price_pre_rally ? `, pré-rali (14/08) ${brl(row.price_pre_rally)}` : ""}
-          </div>
+          <Rating c={call} ceiling={ceiling} upside={L.upside} />
         </div>
       </div>
-      <div className="mt-5 flex flex-wrap gap-x-8 gap-y-4 border-t border-hairline pt-4">
+      <div className="mt-5 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-hairline pt-4 sm:flex sm:flex-wrap sm:gap-x-8">
         <Stat label={`Valor justo (Ke ${Math.round(ke * 100)}%)`} value={brl(L.fair)} sub={row.template === "holding" ? "soma das partes" : "DCF, DDM e múltiplos"} />
-        <Stat label="Upside" value={pct(L.upside, 1, true)} cls={signClass(L.upside)} />
-        <div className="min-w-[150px]">
+        <div className="col-span-2 min-w-[150px] sm:col-span-1">
           <div className="label">TIR de dono vs Ke</div>
           <div className="mt-1.5 flex items-center gap-2">
             <IrrMeter irr={L.irr} ke={ke} w={92} />
-            <span className="num text-[20px] font-semibold leading-tight">{pct(L.irr, 1)}</span>
+            <span className="num text-[20px] font-bold leading-tight">{pct(L.irr, 1)}</span>
           </div>
-          <div className="mt-0.5 text-[11.5px] text-muted">dividendos + perpetuidade</div>
+          <div className="mt-0.5 text-[12px] text-muted">dividendos + perpetuidade</div>
         </div>
         <Stat label="TIR 3 anos" value={pct(L.irr3, 1)} sub="saída ao P/L alvo em 2028" />
         <Stat label="P(valor > preço)" value={pct(L.prob, 0)} sub="Monte Carlo, 5.000 cenários" />
@@ -91,12 +97,12 @@ export function CompanyHeader({ doc, isOpp, report = false }: { doc: any; isOpp:
       {!report && (
         <nav className="no-print mt-5 flex flex-wrap gap-1 border-t border-hairline pt-3 text-[13px]">
           {SECTIONS.map(([id, label]) => (
-            <a key={id} href={`#${id}`} className="rounded px-2 py-1 text-ink-2 hover:bg-surface-2 hover:text-ink">
+            <a key={id} href={`#${id}`} className="rounded-[2px] px-2 py-1 font-medium text-ink-2 hover:bg-surface-2 hover:text-ink">
               {label}
             </a>
           ))}
           {isOpp && (
-            <Link href={`/relatorio/${row.ticker}`} className="ml-auto rounded bg-accent px-3 py-1 font-medium text-white">
+            <Link href={`/relatorio/${row.ticker}`} className="btn btn-primary ml-auto !py-1">
               Abrir relatório
             </Link>
           )}
@@ -108,9 +114,9 @@ export function CompanyHeader({ doc, isOpp, report = false }: { doc: any; isOpp:
 
 export function SectionTitle({ id, title, sub }: { id: string; title: string; sub?: string }) {
   return (
-    <div id={id} className="scroll-mt-[140px] pb-3 pt-2">
+    <div id={id} className="sec scroll-mt-[140px] pb-3">
       <h2 className="h2">{title}</h2>
-      {sub && <p className="mt-1 max-w-[80ch] text-[13px] text-ink-2">{sub}</p>}
+      {sub && <p className="mt-1 max-w-[72ch] text-[13px] text-ink-2">{sub}</p>}
     </div>
   );
 }
@@ -235,7 +241,6 @@ function Drop({ doc }: { doc: any }) {
           items={items}
           fmt="pct1s"
           rowH={34}
-          labelWidth={190}
           table={{ columns: ["Componente", "Variação"], rows: items.map((i) => [i.label, pct(i.value, 1, true)]) }}
         />
         <div className="panel grid grid-cols-3 gap-3 p-4 text-[12.5px]">

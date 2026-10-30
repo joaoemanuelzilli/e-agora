@@ -91,10 +91,10 @@ export function Screener({ rows, ke, opps }: { rows: LiveRow[]; ke: number; opps
       const vb = val(b, sort.k);
       return (va < vb ? -1 : va > vb ? 1 : 0) * sort.dir;
     });
-  const th = (k: SortKey, label: string, title?: string) => (
+  const th = (k: SortKey, label: string, title?: string, extra = "") => (
     <th
       onClick={() => setSort((s) => ({ k, dir: s.k === k ? (s.dir === 1 ? -1 : 1) : k === "ticker" || k === "pe" || k === "vsrally" ? 1 : -1 }))}
-      className={`cursor-pointer select-none hover:text-ink ${k === "ticker" ? "freeze-col" : ""}`}
+      className={`cursor-pointer select-none hover:text-ink ${k === "ticker" ? "freeze-col" : ""} ${extra}`}
       title={title}
       aria-sort={sort.k === k ? (sort.dir === 1 ? "ascending" : "descending") : "none"}
     >
@@ -103,17 +103,17 @@ export function Screener({ rows, ke, opps }: { rows: LiveRow[]; ke: number; opps
     </th>
   );
   return (
-    <section className="panel sticky-host">
+    <section className="panel panel-ruled sticky-host">
       <div className="flex flex-wrap items-center gap-3 border-b border-hairline px-4 py-3">
         <h2 className="h2 mr-2">Todas as empresas</h2>
         <input
           value={qtext}
           onChange={(e) => setQtext(e.target.value)}
           placeholder="Buscar ticker ou nome"
-          className="w-44 rounded border border-hairline bg-surface px-2 py-1 text-[13px] outline-none focus:border-accent"
+          className="w-44 rounded-[2px] border border-hairline bg-surface px-2 py-1 text-[13px] outline-none focus:border-accent"
           aria-label="Buscar"
         />
-        <select value={sector} onChange={(e) => setSector(e.target.value)} className="rounded border border-hairline bg-surface px-2 py-1 text-[13px]" aria-label="Setor">
+        <select value={sector} onChange={(e) => setSector(e.target.value)} className="rounded-[2px] border border-hairline bg-surface py-1 pl-2.5 pr-7 text-[13px]" aria-label="Setor">
           {sectors.map((s) => (
             <option key={s}>{s}</option>
           ))}
@@ -125,15 +125,15 @@ export function Screener({ rows, ke, opps }: { rows: LiveRow[]; ke: number; opps
         <span className="ml-auto text-[12px] text-muted">{list.length} empresas</span>
       </div>
       <div className="freeze-wrap">
-        <table className="data freeze min-w-[1180px] text-[13px]">
+        <table className="data freeze min-w-[640px] text-[13px] sm:min-w-[1180px]">
           <thead>
             <tr>
               {th("ticker", "Empresa")}
-              <th className="text-left">52 semanas</th>
+              <th className="hidden text-left sm:table-cell">52 semanas</th>
               <th>Preço</th>
-              {th("chg", "Dia")}
-              {th("vsrally", "vs pré-rali", "Preço atual contra o fechamento de 14/08/2026, antes do rali eleitoral")}
-              <th>Valor justo</th>
+              {th("chg", "Dia", undefined, "hidden sm:table-cell")}
+              {th("vsrally", "vs pré-rali", "Preço atual contra o fechamento de 14/08/2026, antes do rali eleitoral", "hidden sm:table-cell")}
+              <th className="hidden sm:table-cell">Valor justo</th>
               {th("upside", "Upside")}
               {th("irr", "TIR dono", "TIR implícita: dividendos projetados + perpetuidade ao preço de hoje")}
               {th("irr3", "TIR 3 anos", "Dividendos 2026–28 + saída ao P/L alvo em 2028")}
@@ -153,22 +153,24 @@ export function Screener({ rows, ke, opps }: { rows: LiveRow[]; ke: number; opps
                   <td className="freeze-col">
                     <Link href={`/empresa/${r.ticker}`} className="group flex items-baseline gap-2">
                       <span className="font-semibold group-hover:text-accent">{r.ticker}</span>
-                      <span className="max-w-[150px] truncate text-[12px] text-muted">{r.name}</span>
-                      {isOpp && <span className="rounded bg-accent-soft px-1 text-[10.5px] text-accent-ink" style={{ background: "var(--accent-soft)" }}>oportunidade</span>}
+                      <span className="hidden max-w-[150px] truncate text-[12px] text-muted sm:inline">{r.name}</span>
+                      {isOpp && <span className="rounded-[2px] bg-[var(--buy-soft)] px-1 text-[12px] font-semibold text-[var(--pos)]">seleção</span>}
                     </Link>
-                    <div className="text-[11px] text-muted">{r.sector?.subsetor}</div>
+                    <div className="max-w-[7rem] truncate text-[12px] text-muted sm:max-w-none">{r.sector?.subsetor}</div>
                   </td>
-                  <td className="text-left">
+                  <td className="hidden text-left sm:table-cell">
                     <Sparkline data={[...r.spark.slice(0, -1), r.L.price ?? r.spark[r.spark.length - 1]]} down={(r.chgLive ?? 0) < 0} />
                   </td>
                   <td>{num(r.L.price)}</td>
-                  <td className={signClass(r.chgLive)}>{pct(r.chgLive, 1, true)}</td>
-                  <td className={signClass(r.now_vs_pre_rally)}>{pct(r.now_vs_pre_rally, 0, true)}</td>
-                  <td>{num(r.L.fair)}</td>
+                  <td className={`hidden sm:table-cell ${signClass(r.chgLive)}`}>{pct(r.chgLive, 1, true)}</td>
+                  <td className={`hidden sm:table-cell ${signClass(r.now_vs_pre_rally)}`}>{pct(r.now_vs_pre_rally, 0, true)}</td>
+                  <td className="hidden sm:table-cell">{num(r.L.fair)}</td>
                   <td className={signClass(r.L.upside)}>{pct(r.L.upside, 0, true)}</td>
                   <td>
                     <div className="flex items-center justify-end gap-2">
-                      <IrrMeter irr={r.L.irr} ke={ke} w={64} />
+                      <span className="hidden sm:inline-flex">
+                        <IrrMeter irr={r.L.irr} ke={ke} w={64} />
+                      </span>
                       <span className={meets ? "font-semibold" : ""}>{pct(r.L.irr, 1)}</span>
                     </div>
                   </td>

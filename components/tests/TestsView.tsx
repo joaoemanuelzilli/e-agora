@@ -25,9 +25,9 @@ export function Md({ html, collapsed = true }: { html?: string; collapsed?: bool
 export function Section({ id, title, sub, children }: { id: string; title: string; sub?: string; children: ReactNode }) {
   return (
     <section id={id} className="scroll-mt-[140px] space-y-4">
-      <div>
+      <div className="sec">
         <h2 className="h2">{title}</h2>
-        {sub && <p className="mt-1 max-w-[80ch] text-[13px] text-ink-2">{sub}</p>}
+        {sub && <p className="mt-1 max-w-[72ch] text-[13px] text-ink-2">{sub}</p>}
       </div>
       {children}
     </section>
@@ -43,26 +43,19 @@ function Review({ rows }: { rows: any[] }) {
     .sort((a, b) => a.value - b.value);
   return (
     <div className="space-y-4">
-      <div className="panel grid grid-cols-2 gap-4 p-5 md:grid-cols-4">
-        <div>
-          <div className="label">Empresas revisadas</div>
-          <div className="text-[26px] font-semibold">
-            {reviewed.length} de {rows.length}
+      <dl className="keybox grid grid-cols-1 gap-x-10 px-4 py-2 md:grid-cols-2" aria-label="Resumo da revisão">
+        {[
+          { k: "Empresas revisadas", v: `${reviewed.length} de ${rows.length}` },
+          { k: "Premissas corrigidas", v: String(changed.length) },
+          { k: "TIR subiu", v: String(deltas.filter((d) => d.value > 0.0005).length) },
+          { k: "TIR caiu", v: String(deltas.filter((d) => d.value < -0.0005).length) },
+        ].map((x) => (
+          <div key={x.k} className="flex items-baseline justify-between gap-4 border-b border-hairline py-2 md:[&:nth-last-child(-n+2)]:border-b-0 [&:last-child]:border-b-0">
+            <dt className="text-[13.5px] text-ink-2">{x.k}</dt>
+            <dd className="num shrink-0 text-[16px] font-bold">{x.v}</dd>
           </div>
-        </div>
-        <div>
-          <div className="label">Premissas corrigidas</div>
-          <div className="text-[26px] font-semibold">{changed.length}</div>
-        </div>
-        <div>
-          <div className="label">TIR subiu</div>
-          <div className="text-[26px] font-semibold">{deltas.filter((d) => d.value > 0.0005).length}</div>
-        </div>
-        <div>
-          <div className="label">TIR caiu</div>
-          <div className="text-[26px] font-semibold">{deltas.filter((d) => d.value < -0.0005).length}</div>
-        </div>
-      </div>
+        ))}
+      </dl>
       {deltas.length > 0 && (
         <HBarChart
           title="Efeito das correções na TIR de dono"
@@ -95,7 +88,7 @@ function Review({ rows }: { rows: any[] }) {
                     <Link href={`/empresa/${r.ticker}`} className="font-semibold hover:text-accent">
                       {r.ticker}
                     </Link>
-                    {r.changed && <span className="ml-1.5 rounded px-1 text-[10.5px] text-accent-ink" style={{ background: "var(--accent-soft)" }}>ajustada</span>}
+                    {r.changed && <span className="ml-1.5 rounded px-1 text-[12px] text-accent-ink" style={{ background: "var(--accent-soft)" }}>ajustada</span>}
                   </td>
                   <td className="max-w-[360px] whitespace-normal text-left text-ink-2">{r.verdict || (r.has_review ? "revisada" : "em revisão")}</td>
                   <td>{num(r.before.fair)}</td>

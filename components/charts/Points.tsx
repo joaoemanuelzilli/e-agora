@@ -2,6 +2,7 @@
 import { scaleBand, scaleLinear, scaleLog } from "d3-scale";
 import { useState } from "react";
 import { C, Frame, Tip, TipRow, YGrid, toFn, useWidth, type Fmt, type LegendItem, type TableSpec } from "./core";
+import { ellipsize, fitTicks, lineSegs, textW } from "./measure";
 
 const r2 = (v: number) => Math.round(v * 100) / 100;
 const pctS = (v: number, d = 0) => `${v > 0 ? "+" : ""}${(v * 100).toLocaleString("pt-BR", { maximumFractionDigits: d, minimumFractionDigits: d })}%`;
@@ -214,7 +215,7 @@ export function Scatter({
               <g key={p.id}>
                 <circle cx={x(p.x)} cy={y(p.y)} r={p.highlight ? 4.5 : 3.5} fill={p.highlight ? C.s1 : C.deemph} stroke="var(--surface)" strokeWidth={2} opacity={hover && hover.i !== i ? 0.7 : 1} />
                 {p.label && (
-                  <text x={x(p.x) + 6} y={y(p.y) - 5} fontSize={10.5} fill="var(--ink)" fontWeight={500}>
+                  <text x={x(p.x) + 6} y={y(p.y) - 5} fontSize={11} fill="var(--ink)" fontWeight={500}>
                     {p.label}
                   </text>
                 )}
@@ -226,7 +227,7 @@ export function Scatter({
         {hover && points[hover.i] && (
           <Tip x={hover.px} y={hover.py} w={w}>
             <div className="mb-1 font-semibold">{points[hover.i].id}</div>
-            {points[hover.i].sub && <div className="mb-1 text-[11px] text-muted">{points[hover.i].sub}</div>}
+            {points[hover.i].sub && <div className="mb-1 text-[12px] text-muted">{points[hover.i].sub}</div>}
             <TipRow label={xLabel} value={xFmt(points[hover.i].x)} />
             <TipRow label={yLabel} value={yFmt(points[hover.i].y)} />
           </Tip>
@@ -444,7 +445,7 @@ export function Heatmap({
         </svg>
         {hover && (
           <Tip x={hover.px} y={hover.py} w={w}>
-            <div className="mb-1 text-[11px] text-muted">
+            <div className="mb-1 text-[12px] text-muted">
               {rowLabel} {rows[hover.r]} · {colLabel} {cols[hover.c]}
             </div>
             <TipRow label="Valor justo" value={values[hover.r]?.[hover.c] == null ? "—" : fmt(values[hover.r][hover.c] as number)} />
@@ -458,7 +459,8 @@ export function Heatmap({
 
 export type FFRow = { label: string; lo: number | null; hi: number | null; point?: number | null; ref?: boolean; note?: string };
 
-/** Football field: faixa de valor por método + preço atual e pré-eleição. */
+/** Football field: faixa de valor por método + preço atual e pré-eleição.
+    Em telas estreitas o nome do método sobe para cima da faixa e as linhas verticais abrem espaço para o texto. */
 export function FootballField({
   rows,
   price,
@@ -479,15 +481,49 @@ export function FootballField({
   const fmt = toFn(fmtIn);
   const [ref, w] = useWidth<HTMLDivElement>();
   const [hover, setHover] = useState<{ i: number; px: number; py: number } | null>(null);
-  const rowH = 30;
-  const labelW = Math.min(190, Math.max(110, w * 0.3));
-  const m = { t: 26, r: 18, b: 22, l: labelW };
-  const iw = Math.max(80, w - m.l - m.r);
-  const h = rows.length * rowH + m.t + m.b;
+  const need = Math.ceil(Math.max(0, ...rows.map((r) => textW(r.label, 12)))) + 14;
+  const stacked = w < 520 && need > w * 0.34;
+  const labelW = stacked ? 0 : Math.round(Math.min(Math.max(need, 96), w * 0.4));
+  const labels = rows.map((r) => ellipsize(r.label, stacked ? w - 2 : labelW - 12, 12));
+  const rowH = stacked ? 40 : 30;
+  const yC = (i: number) => (stacked ? i * rowH + 27 : i * rowH + rowH / 2);
+  const H = rows.length * rowH;
+  const r0 = { r: 18, l: labelW };
+  const iw = Math.max(80, w - r0.l - r0.r);
   const vals = rows.flatMap((r) => [r.lo, r.hi, r.point]).filter((v): v is number => typeof v === "number" && Number.isFinite(v));
   const lo = Math.min(...vals, price ?? Infinity, pre ?? Infinity);
   const hi = Math.max(...vals, price ?? -Infinity, pre ?? -Infinity);
   const x = scaleLinear().domain([Math.max(0, lo * 0.9), hi * 1.06]).range([0, iw]).nice();
+  const ticks = fitTicks(x, fmt, 5);
+
+  // rótulos de "hoje" e "pré-eleição" no topo: um de cada lado das linhas; se ainda colidirem, em duas alturas
+  type Ann = { key: string; v: number; text: string; fill: string; weight: number; x0: number; tw: number; row: number };
+  const anns: Ann[] = [];
+  if (pre) anns.push({ key: "pre", v: pre, text: `pré-eleição ${fmt(pre)}`, fill: "var(--ink-2)", weight: 400, x0: 0, tw: 0, row: 0 });
+  if (price !== null) anns.push({ key: "now", v: price, text: `hoje ${fmt(price)}`, fill: "var(--ink)", weight: 600, x0: 0, tw: 0, row: 0 });
+  anns.sort((a, b) => a.v - b.v);
+  const clampX = (x0: number, tw: number) => Math.min(iw + r0.r - tw, Math.max(-r0.l, x0));
+  for (const a of anns) {
+    a.tw = textW(a.text, 11, a.weight);
+    a.x0 = clampX(x(a.v) - a.tw / 2, a.tw);
+  }
+  if (anns.length === 2) {
+    const [a, b] = anns;
+    if (a.x0 + a.tw + 8 > b.x0) {
+      a.x0 = clampX(x(a.v) + 3 - a.tw, a.tw);
+      b.x0 = clampX(x(b.v) - 3, b.tw);
+      if (a.x0 + a.tw + 8 > b.x0) (a.key === "pre" ? a : b).row = 1;
+    }
+  }
+  const rowsUp = anns.some((a) => a.row === 1) ? 2 : 1;
+  const m = { t: 14 + rowsUp * 13, r: r0.r, b: 22, l: r0.l };
+  const h = H + m.t + m.b;
+  const annY = (a: Ann) => -12 - a.row * 13;
+
+  // no modo empilhado, linhas verticais se interrompem onde cruzariam o nome do método
+  const gaps = stacked ? labels.map((l, i) => ({ x1: textW(l, 12) + 4, y0: i * rowH, y1: i * rowH + 17 })) : [];
+  const segs = (xp: number, y0: number, y1: number) => lineSegs(xp, y0, y1, gaps);
+
   const legend: LegendItem[] = [
     { label: "Faixa (sensibilidade)", color: C.proj, kind: "rect" },
     { label: "Valor central", color: C.s1, kind: "dot" },
@@ -499,16 +535,18 @@ export function FootballField({
       <div ref={ref} className="relative w-full">
         <svg className="chart block" width={w} height={h} role="img" aria-label={title || "faixas de valor"}>
           <g transform={`translate(${m.l},${m.t})`}>
-            {x.ticks(5).map((t) => (
+            {ticks.map((t) => (
               <g key={t}>
-                <line x1={x(t)} x2={x(t)} y1={0} y2={rows.length * rowH} stroke="var(--grid)" />
-                <text x={x(t)} y={rows.length * rowH + 15} textAnchor="middle" fontSize={11} fill="var(--muted)">
+                {segs(x(t), 0, H).map(([a, b]) => (
+                  <line key={a} x1={x(t)} x2={x(t)} y1={a} y2={b} stroke="var(--grid)" />
+                ))}
+                <text x={Math.min(iw + m.r - textW(fmt(t), 11) / 2, x(t))} y={H + 15} textAnchor="middle" fontSize={11} fill="var(--muted)" className="num">
                   {fmt(t)}
                 </text>
               </g>
             ))}
             {rows.map((r, i) => {
-              const yy = i * rowH + rowH / 2;
+              const yy = yC(i);
               const a = r.lo ?? r.point ?? null;
               const b = r.hi ?? r.point ?? null;
               return (
@@ -520,11 +558,19 @@ export function FootballField({
                   }}
                   onPointerLeave={() => setHover(null)}
                 >
-                  <rect x={-labelW} y={i * rowH} width={labelW + iw} height={rowH} fill={hover?.i === i ? "var(--surface-2)" : "transparent"} />
-                  <text x={-10} y={yy} dy="0.32em" textAnchor="end" fontSize={12} fill={r.ref ? "var(--ink-2)" : "var(--ink)"}>
-                    {r.label}
-                  </text>
-                  {a !== null && b !== null && Number.isFinite(a) && Number.isFinite(b) && (
+                  <rect x={-m.l} y={i * rowH} width={w} height={rowH} fill={hover?.i === i ? "var(--surface-2)" : "transparent"} />
+                  {stacked ? (
+                    <text x={0} y={i * rowH + 13} fontSize={12} fill={r.ref ? "var(--ink-2)" : "var(--ink)"}>
+                      {labels[i] !== r.label && <title>{r.label}</title>}
+                      {labels[i]}
+                    </text>
+                  ) : (
+                    <text x={-10} y={yy} dy="0.32em" textAnchor="end" fontSize={12} fill={r.ref ? "var(--ink-2)" : "var(--ink)"}>
+                      {labels[i] !== r.label && <title>{r.label}</title>}
+                      {labels[i]}
+                    </text>
+                  )}
+                  {a !== null && b !== null && Number.isFinite(a) && Number.isFinite(b) && (r.lo != null || r.hi != null || r.point == null) && (
                     <rect x={x(Math.min(a, b))} y={yy - 6} width={Math.max(3, Math.abs(x(b) - x(a)))} height={12} rx={4} fill={r.ref ? C.deemph : C.proj} />
                   )}
                   {r.point !== null && r.point !== undefined && Number.isFinite(r.point) && (
@@ -533,22 +579,21 @@ export function FootballField({
                 </g>
               );
             })}
-            {pre ? (
-              <g>
-                <line x1={x(pre)} x2={x(pre)} y1={-8} y2={rows.length * rowH} stroke="var(--ink-2)" strokeWidth={1.25} strokeDasharray="2 3" />
-                <text x={x(pre)} y={-12} textAnchor="middle" fontSize={11} fill="var(--ink-2)">
-                  pré-eleição {fmt(pre)}
-                </text>
-              </g>
-            ) : null}
-            {price !== null && (
-              <g>
-                <line x1={x(price)} x2={x(price)} y1={-8} y2={rows.length * rowH} stroke="var(--ink)" strokeWidth={1.5} />
-                <text x={x(price)} y={pre && Math.abs(x(pre) - x(price)) < 90 ? -0 : -12} dy={pre && Math.abs(x(pre) - x(price)) < 90 ? -2 : 0} textAnchor="middle" fontSize={11} fill="var(--ink)" fontWeight={600}>
-                  {pre && Math.abs(x(pre) - x(price)) < 90 ? "" : `hoje ${fmt(price)}`}
-                </text>
-              </g>
-            )}
+            {anns.map((a) => {
+              const ax = x(a.v);
+              const top = annY(a) + 4;
+              const now = a.key === "now";
+              return (
+                <g key={a.key} pointerEvents="none">
+                  {segs(ax, top, H).map(([s0, s1]) => (
+                    <line key={s0} x1={ax} x2={ax} y1={s0} y2={s1} stroke={now ? "var(--ink)" : "var(--ink-2)"} strokeWidth={now ? 1.5 : 1.25} strokeDasharray={now ? undefined : "2 3"} />
+                  ))}
+                  <text x={a.x0} y={annY(a)} fontSize={11} fill={a.fill} fontWeight={a.weight} className="num">
+                    {a.text}
+                  </text>
+                </g>
+              );
+            })}
           </g>
         </svg>
         {hover && rows[hover.i] && (
@@ -557,7 +602,7 @@ export function FootballField({
             {rows[hover.i].point != null && <TipRow label="Central" value={fmt(rows[hover.i].point as number)} />}
             {rows[hover.i].lo != null && <TipRow label="Mínimo" value={fmt(rows[hover.i].lo as number)} />}
             {rows[hover.i].hi != null && <TipRow label="Máximo" value={fmt(rows[hover.i].hi as number)} />}
-            {rows[hover.i].note && <div className="mt-1 max-w-[260px] whitespace-normal text-[11px] text-muted">{rows[hover.i].note}</div>}
+            {rows[hover.i].note && <div className="mt-1 max-w-[260px] whitespace-normal text-[12px] text-muted">{rows[hover.i].note}</div>}
           </Tip>
         )}
       </div>

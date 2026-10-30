@@ -262,7 +262,7 @@ export function Dividends({ doc }: { doc: any }) {
     cells: months.map((m) => (isNum(price) && m.valor ? m.valor / price : null)),
     detail: months.map((m) =>
       m.eventos?.length ? (
-        <div className="mt-1 space-y-0.5 text-[11px] text-ink-2">
+        <div className="mt-1 space-y-0.5 text-[12px] text-ink-2">
           {m.eventos.map((e: any, i: number) => (
             <div key={i}>
               {e.tipo} de R$ {num(e.valor, 4)}
@@ -298,7 +298,7 @@ export function Dividends({ doc }: { doc: any }) {
             <div>
               <div className="label">Últimos 12 meses</div>
               <div className="num text-[20px] font-semibold">{pct(ttmDy, 1)}</div>
-              <div className="text-[11.5px] text-muted">{dv?.ttm?.n ?? 0} pagamentos</div>
+              <div className="text-[12px] text-muted">{dv?.ttm?.n ?? 0} pagamentos</div>
             </div>
             {["2026E", "2027E", "2028E"].map((y, i) => (
               <div key={y}>
