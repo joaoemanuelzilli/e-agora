@@ -103,6 +103,7 @@ export async function sgsRange(code: number, fromIso: string, toIso: string): Pr
     const iso = typeof x?.data === "string" ? x.data.split("/").reverse().join("-") : "";
     const v = Number(x?.valor);
     if (/^\d{4}-\d{2}-\d{2}$/.test(iso) && Number.isFinite(v)) out.push({ d: iso, v });
+    if (out.length >= 1000) break; // teto de observações: resposta inesperada do provedor não vira alocação sem limite
   }
   return out;
 }

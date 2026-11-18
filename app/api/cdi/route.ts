@@ -9,6 +9,9 @@ export async function GET(req: Request) {
   const from = new URL(req.url).searchParams.get("from") || "";
   if (!ISO.test(from) || Number.isNaN(Date.parse(from))) return Response.json({ error: "from=AAAA-MM-DD" }, { status: 400 });
   const today = new Date().toLocaleDateString("sv-SE", { timeZone: "America/Sao_Paulo" });
+  // janela limitada: o acompanhamento começa no registro de 28/10/2026; nada pede mais que ~2 anos de CDI diário
+  const minFrom = new Date(Date.now() - 800 * 864e5).toISOString().slice(0, 10);
+  if (from < minFrom || from > today) return Response.json({ error: "from fora da faixa permitida" }, { status: 400 });
   const obs = await sgsRange(12, from, today);
   if (!obs) return Response.json({ error: "Banco Central indisponível" }, { status: 502 });
   return Response.json(
