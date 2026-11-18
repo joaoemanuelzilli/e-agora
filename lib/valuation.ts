@@ -3,8 +3,8 @@
 import type { Engine } from "./types";
 
 const TAX_SHIELD = 0.34;
-// anos de 26/10/2026 a 31/12/2028 (saída da TIR de 3 anos)
-const T_EXIT_3Y = (Date.UTC(2028, 11, 31) - Date.UTC(2026, 9, 26)) / (365.25 * 864e5);
+// anos de 28/10/2026 (data de avaliação) a 31/12/2028 (saída da TIR de 3 anos)
+const T_EXIT_3Y = (Date.UTC(2028, 11, 31) - Date.UTC(2026, 9, 28)) / (365.25 * 864e5);
 
 const fin = (x: unknown): x is number => typeof x === "number" && Number.isFinite(x);
 

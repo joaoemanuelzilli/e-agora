@@ -67,6 +67,21 @@ export function useMarket(ms = 45000): MarketLive | null {
   return st;
 }
 
+/** CDI diário realizado desde `fromIso` (Banco Central, SGS 12, via /api/cdi). `null` enquanto carrega ou se a busca falhar. */
+export type CdiDaily = { from: string; days: { d: string; r: number }[]; asOf: string };
+
+export function useCdi(fromIso: string | null | undefined, ms = 30 * 60 * 1000): CdiDaily | null {
+  const [st, setSt] = useState<CdiDaily | null>(null);
+  useVisibleInterval(() => {
+    if (!fromIso) return;
+    fetch(`/api/cdi?from=${fromIso}`)
+      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then((d: CdiDaily) => (Array.isArray(d?.days) ? setSt(d) : undefined))
+      .catch(() => {});
+  }, ms);
+  return st;
+}
+
 /* Ke global (meta do usuário = 25%), ajustável e lembrado no navegador. */
 type KeCtx = { ke: number; setKe: (k: number) => void };
 const Ctx = createContext<KeCtx>({ ke: 0.25, setKe: () => {} });

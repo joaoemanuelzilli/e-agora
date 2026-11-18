@@ -41,6 +41,7 @@ PANEL_START, PANEL_END = pd.Timestamp("2017-01-31"), pd.Timestamp("2026-09-30")
 IS_END = pd.Timestamp("2022-12-31")  # amostra de estimação dos pesos; fora da amostra: retornos de 2023-01 em diante
 OOS_START = pd.Timestamp("2022-12-20")  # 1ª formação fora da amostra (fim de dez/2022 -> retorno de jan/2023)
 LAG_Q, LAG_A = 45, 90
+PIT_MODE = os.environ.get("EAGORA_PIT", "received")  # "received" = data de entrega na CVM; "fixed" = defasagem fixa 45/90 d
 ADTV_MIN = 5e6
 HORIZONS = (1, 3, 6, 12)
 STAGES = ["fund", "prices", "panel", "analysis"]
@@ -135,6 +136,41 @@ def load_store(sp, cnpjs, workers=4):
             df = cvm.latest_version(df)
         store[k] = df
     return store
+
+
+def load_received(sp, cnpjs):
+    """Data de recebimento na CVM (DT_RECEB) da versão mais alta de cada demonstração: {(cnpj, 'dfp'|'itr', DT_REFER): Timestamp}.
+
+    Os arquivos de contas da CVM trazem só a última versão de cada período; o índice (dfp/itr_cia_aberta_AAAA.csv) lista
+    todas as versões com a data de entrega. Usar a data da versão mais alta impede que uma reapresentação entre no painel
+    antes de ter sido entregue (e cobre atrasos reais de entrega, que a defasagem fixa não cobre)."""
+    raw = Path(sp) / "raw" / "cvm"
+    cn = set(cnpjs)
+    rows = []
+    for kind, years in (("dfp", range(2015, 2026)), ("itr", range(2016, 2027))):
+        for y in years:
+            zp = raw / f"{kind}_cia_aberta_{y}.zip"
+            if not zp.exists():
+                continue
+            with zipfile.ZipFile(zp) as z:
+                name = f"{kind}_cia_aberta_{y}.csv"
+                if name not in z.namelist():
+                    continue
+                d = pd.read_csv(z.open(name), sep=";", encoding="latin1", dtype=str, usecols=["CNPJ_CIA", "DT_REFER", "VERSAO", "DT_RECEB"])
+            d = d[d.CNPJ_CIA.isin(cn)].copy()
+            d["kind"] = kind
+            rows.append(d)
+    if not rows:
+        return {}, {}
+    idx = pd.concat(rows, ignore_index=True)
+    idx["VERSAO"] = pd.to_numeric(idx["VERSAO"], errors="coerce")
+    idx["DT_RECEB"] = pd.to_datetime(idx["DT_RECEB"], errors="coerce")
+    idx = idx.dropna(subset=["VERSAO", "DT_RECEB"]).sort_values("VERSAO")
+    last = idx.groupby(["CNPJ_CIA", "kind", "DT_REFER"]).tail(1)
+    first = idx.groupby(["CNPJ_CIA", "kind", "DT_REFER"]).head(1)
+    recv = {(r.CNPJ_CIA, r.kind, r.DT_REFER): r.DT_RECEB for r in last.itertuples()}
+    recv_v1 = {(r.CNPJ_CIA, r.kind, r.DT_REFER): r.DT_RECEB for r in first.itertuples()}
+    return recv, recv_v1
 
 
 def _eps(dre_rows):
@@ -243,6 +279,7 @@ def add_ltm(periods):
             ltm[k] = a + b - c if all(finite(x) for x in (a, b, c)) else None
         p["ltm"] = ltm
         p["ltm_basis"] = basis
+        p["dep_received"] = [fy.get("received"), py.get("received")]
         p["ltm_eps"] = {k: p["eps"][k] + fy["eps"][k] - py["eps"][k] for k in p["eps"] if k in fy["eps"] and k in py["eps"]}
     return periods
 
@@ -285,6 +322,8 @@ def stage_fund(sp, cache, tickers):
     cnpjs = sorted(set(t2c.values()))
     log("fundamentos: tickers com CNPJ", len(t2c), "de", len(tickers), "| CNPJs", len(cnpjs))
     store = load_store(sp, cnpjs)
+    recv, recv_v1 = load_received(sp, cnpjs)
+    log("datas de recebimento (CVM):", len(recv), "demonstrações")
     by_cnpj = {}
     for k, df in store.items():
         for cn, gg in df.groupby("CNPJ_CIA"):
@@ -298,6 +337,9 @@ def stage_fund(sp, cache, tickers):
         if not g_fin:
             continue
         periods, ftype = company_periods(g_fin)
+        for dt, p in periods.items():  # entrega real da versão usada (e da 1ª versão, para o diagnóstico)
+            p["received"] = recv.get((cn, p["kind"], dt))
+            p["received_v1"] = recv_v1.get((cn, p["kind"], dt))
         periods = add_ltm(periods)
         caps = [g[k] for k in (("dfp", "CAP", "-"), ("itr", "CAP", "-")) if k in g]
         cap = pd.concat(caps, ignore_index=True) if caps else None
@@ -538,7 +580,12 @@ def _period_index(periods):
     rows = []
     for dt, p in periods.items():
         lag = LAG_A if p["kind"] == "dfp" else LAG_Q
-        rows.append((pd.Timestamp(dt) + pd.Timedelta(days=lag), pd.Timestamp(dt), dt))
+        fixed = pd.Timestamp(dt) + pd.Timedelta(days=lag)
+        got = [x for x in [p.get("received")] + list(p.get("dep_received") or []) if x is not None and not pd.isna(x)]
+        # disponível quando a versão usada (e as peças do LTM) já tinha sido entregue à CVM, mais 1 dia; sem data de
+        # entrega, cai na defasagem fixa. PIT_MODE=fixed reproduz a convenção antiga para comparação.
+        avail = (max(got) + pd.Timedelta(days=1)) if (got and p.get("received") is not None and PIT_MODE == "received") else fixed
+        rows.append((avail, pd.Timestamp(dt), dt))
     return sorted(rows, key=lambda x: x[1])
 
 
@@ -1481,7 +1528,10 @@ def render_md(res):
     w(f"- **Fundamentos**: DFP 2015–2025 e ITR 2016–2026 brutos da CVM, extraídos com as funções de `pipeline/cvm.py`. Usa o arquivo "
       f"original de cada período, sem a reapresentação do ano seguinte, e a última versão entregue daquele período. O LTM sai da "
       f"aritmética dos acumulados (YTD + exercício anterior − YTD de um ano antes), que funciona para exercícios fora de dezembro (CAML3, SMTO3). "
-      f"Defasagem de {LAG_Q} dias para ITR e {LAG_A} dias para DFP. Os dados ficam velhos demais (descartados) após 18 meses.")
+      f"**Disponibilidade**: cada demonstração entra no painel na data em que a versão usada foi recebida pela CVM (DT_RECEB), "
+      f"e o LTM só quando as três peças já tinham sido entregues; a defasagem fixa de {LAG_Q} dias (ITR) e {LAG_A} dias (DFP) fica "
+      f"só como reserva quando não há data de entrega. Os arquivos da CVM guardam apenas a última versão de cada período: uma "
+      f"reapresentação entra, portanto, com atraso (na data da reapresentação), nunca antes. Os dados ficam velhos demais (descartados) após 18 meses.")
     w("- **Ações em circulação**: composição do capital da CVM (2020+), com escala corrigida registro a registro contra a contagem atual da "
       "B3 retroprojetada pelos eventos. Antes de 2020, retroprojeção pelos eventos, corrigida por emissões e recompras grandes (> 15%) "
       f"inferidas do lucro por ação básico ({', '.join(fixes) if fixes else 'nenhuma'}).")
@@ -1518,6 +1568,24 @@ def render_md(res):
     return "\n".join(L) + "\n"
 
 
+def pit_audit(fund):
+    """Quanto a defasagem fixa (45 d ITR / 90 d DFP) erraria: períodos cuja versão usada (ou a 1ª) chegou depois dela."""
+    n = late_used = late_v1 = restated = 0
+    for f in fund.values():
+        for dt, p in (f.get("periods") or {}).items():
+            r, r1 = p.get("received"), p.get("received_v1")
+            if r is None or pd.isna(r):
+                continue
+            n += 1
+            fixed = pd.Timestamp(dt) + pd.Timedelta(days=LAG_A if p["kind"] == "dfp" else LAG_Q)
+            late_used += r > fixed
+            late_v1 += (r1 is not None and not pd.isna(r1) and r1 > fixed)
+            restated += (r1 is not None and not pd.isna(r1) and r1 < r)
+    return {"periodos_com_data": int(n), "versao_usada_entregue_apos_defasagem_fixa": int(late_used),
+            "primeira_versao_entregue_apos_defasagem_fixa": int(late_v1), "periodos_reapresentados": int(restated),
+            "share_versao_usada_tardia": float(late_used / n) if n else None, "share_primeira_versao_tardia": float(late_v1 / n) if n else None}
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--sp", default=os.environ.get("EAGORA_SP", DEFAULT_SP), help="diretório com work/ e raw/ (scratchpad)")
@@ -1545,7 +1613,9 @@ def main():
         "gerado_em": datetime.now().isoformat(timespec="seconds"),
         "universo_base": f"{len(tickers)} tickers de data/market/quotes.json (universo líquido atual, sem as entradas 'extra') filtrados por ADTV 3m >= R$ 5 mi na data; 1 classe por emissor (maior ADTV)",
         "tickers": tickers,
-        "defasagens": {"trimestral_itr_dias": LAG_Q, "anual_dfp_dias": LAG_A},
+        "defasagens": {"modo": PIT_MODE, "trimestral_itr_dias": LAG_Q, "anual_dfp_dias": LAG_A,
+                       "nota": "modo 'received': cada período entra na data de recebimento (DT_RECEB) da versão usada, e o LTM só quando as três peças já foram entregues; 45/90 dias só como reserva quando não há data de entrega"},
+        "auditoria_pit": pit_audit(fund),
         "retornos": "retorno total (proventos em dinheiro B3 reinvestidos no ex-dia; desdobramentos, grupamentos e bonificações B3 + Yahoo + razões redondas), fim de mês a fim de mês",
         "correcoes_acoes_por_lpa": {k: v for k, v in (panel.get("share_fix") or {}).items() if v},
         "problemas_precos": prices.get("issues"),

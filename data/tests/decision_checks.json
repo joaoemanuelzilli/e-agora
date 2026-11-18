@@ -1,0 +1,666 @@
+{
+ "generated_at": "2026-11-18T14:22:11",
+ "ke": 0.25,
+ "valuation_date": "2026-10-28",
+ "eligibility": {
+  "watchlist": [
+   "VTRU3",
+   "BEEF3",
+   "SEER3",
+   "MDNE3",
+   "PLPL3",
+   "TEND3",
+   "CEAB3",
+   "COGN3"
+  ],
+  "eligible": [
+   "VTRU3",
+   "BEEF3",
+   "MDNE3",
+   "PLPL3",
+   "TEND3"
+  ],
+  "rows": [
+   {
+    "ticker": "VTRU3",
+    "price": 11.98,
+    "ceiling": 12.9451,
+    "irr": 0.2628,
+    "prob_mc": 0.9038,
+    "fair_value": 16.692,
+    "ddm": null,
+    "eligible": true,
+    "margin_to_ceiling": 0.08055926544240388
+   },
+   {
+    "ticker": "BEEF3",
+    "price": 2.87,
+    "ceiling": 3.2232,
+    "irr": 0.2691,
+    "prob_mc": 0.7486,
+    "fair_value": 5.041,
+    "ddm": null,
+    "eligible": true,
+    "margin_to_ceiling": 0.12306620209059216
+   },
+   {
+    "ticker": "SEER3",
+    "price": 11.03,
+    "ceiling": 10.4366,
+    "irr": 0.2408,
+    "prob_mc": 0.8074,
+    "fair_value": 13.8145,
+    "ddm": null,
+    "eligible": false,
+    "margin_to_ceiling": -0.0537987307343607
+   },
+   {
+    "ticker": "MDNE3",
+    "price": 16.86,
+    "ceiling": 18.647,
+    "irr": 0.2705,
+    "prob_mc": 0.765,
+    "fair_value": 19.8096,
+    "ddm": null,
+    "eligible": true,
+    "margin_to_ceiling": 0.10599051008303673
+   },
+   {
+    "ticker": "PLPL3",
+    "price": 4.84,
+    "ceiling": 5.6357,
+    "irr": 0.2781,
+    "prob_mc": 0.802,
+    "fair_value": 6.253,
+    "ddm": null,
+    "eligible": true,
+    "margin_to_ceiling": 0.16440082644628107
+   },
+   {
+    "ticker": "TEND3",
+    "price": 21.22,
+    "ceiling": 21.2241,
+    "irr": 0.25,
+    "prob_mc": 0.7704,
+    "fair_value": 26.3407,
+    "ddm": null,
+    "eligible": true,
+    "margin_to_ceiling": 0.00019321394910476464
+   },
+   {
+    "ticker": "CEAB3",
+    "price": 6.87,
+    "ceiling": 5.5961,
+    "irr": 0.2175,
+    "prob_mc": 0.4652,
+    "fair_value": 6.6495,
+    "ddm": null,
+    "eligible": false,
+    "margin_to_ceiling": -0.18542940320232904
+   },
+   {
+    "ticker": "COGN3",
+    "price": 1.69,
+    "ceiling": 1.616,
+    "irr": 0.2423,
+    "prob_mc": 0.6226,
+    "fair_value": 1.8903,
+    "ddm": null,
+    "eligible": false,
+    "margin_to_ceiling": -0.04378698224852062
+   }
+  ],
+  "irr_ge_ke_universe": [
+   {
+    "ticker": "HAPV3",
+    "irr": 0.2932,
+    "in_watchlist": false,
+    "reason_out": "confiança baixa"
+   },
+   {
+    "ticker": "PLPL3",
+    "irr": 0.2781,
+    "in_watchlist": true,
+    "reason_out": null
+   },
+   {
+    "ticker": "MDNE3",
+    "irr": 0.2705,
+    "in_watchlist": true,
+    "reason_out": null
+   },
+   {
+    "ticker": "BEEF3",
+    "irr": 0.2691,
+    "in_watchlist": true,
+    "reason_out": null
+   },
+   {
+    "ticker": "VTRU3",
+    "irr": 0.2628,
+    "in_watchlist": true,
+    "reason_out": null
+   },
+   {
+    "ticker": "TEND3",
+    "irr": 0.25,
+    "in_watchlist": true,
+    "reason_out": null
+   }
+  ]
+ },
+ "rule_sensitivity": {
+  "grid": [
+   {
+    "irr_min": 0.18,
+    "prob_min": 0.35,
+    "n_pass": 10,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3",
+     "CEAB3",
+     "COGN3",
+     "CYRE3",
+     "DIRR3"
+    ],
+    "kept_of_watchlist": 8
+   },
+   {
+    "irr_min": 0.18,
+    "prob_min": 0.45,
+    "n_pass": 9,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3",
+     "CEAB3",
+     "COGN3",
+     "DIRR3"
+    ],
+    "kept_of_watchlist": 8
+   },
+   {
+    "irr_min": 0.18,
+    "prob_min": 0.55,
+    "n_pass": 7,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3",
+     "COGN3"
+    ],
+    "kept_of_watchlist": 7
+   },
+   {
+    "irr_min": 0.18,
+    "prob_min": 0.65,
+    "n_pass": 6,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3"
+    ],
+    "kept_of_watchlist": 6
+   },
+   {
+    "irr_min": 0.2,
+    "prob_min": 0.35,
+    "n_pass": 10,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3",
+     "CEAB3",
+     "COGN3",
+     "CYRE3",
+     "DIRR3"
+    ],
+    "kept_of_watchlist": 8
+   },
+   {
+    "irr_min": 0.2,
+    "prob_min": 0.45,
+    "n_pass": 9,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3",
+     "CEAB3",
+     "COGN3",
+     "DIRR3"
+    ],
+    "kept_of_watchlist": 8
+   },
+   {
+    "irr_min": 0.2,
+    "prob_min": 0.55,
+    "n_pass": 7,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3",
+     "COGN3"
+    ],
+    "kept_of_watchlist": 7
+   },
+   {
+    "irr_min": 0.2,
+    "prob_min": 0.65,
+    "n_pass": 6,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3"
+    ],
+    "kept_of_watchlist": 6
+   },
+   {
+    "irr_min": 0.22,
+    "prob_min": 0.35,
+    "n_pass": 8,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3",
+     "COGN3",
+     "CYRE3"
+    ],
+    "kept_of_watchlist": 7
+   },
+   {
+    "irr_min": 0.22,
+    "prob_min": 0.45,
+    "n_pass": 7,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3",
+     "COGN3"
+    ],
+    "kept_of_watchlist": 7
+   },
+   {
+    "irr_min": 0.22,
+    "prob_min": 0.55,
+    "n_pass": 7,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3",
+     "COGN3"
+    ],
+    "kept_of_watchlist": 7
+   },
+   {
+    "irr_min": 0.22,
+    "prob_min": 0.65,
+    "n_pass": 6,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "SEER3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3"
+    ],
+    "kept_of_watchlist": 6
+   },
+   {
+    "irr_min": 0.25,
+    "prob_min": 0.35,
+    "n_pass": 5,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3"
+    ],
+    "kept_of_watchlist": 5
+   },
+   {
+    "irr_min": 0.25,
+    "prob_min": 0.45,
+    "n_pass": 5,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3"
+    ],
+    "kept_of_watchlist": 5
+   },
+   {
+    "irr_min": 0.25,
+    "prob_min": 0.55,
+    "n_pass": 5,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3"
+    ],
+    "kept_of_watchlist": 5
+   },
+   {
+    "irr_min": 0.25,
+    "prob_min": 0.65,
+    "n_pass": 5,
+    "tickers": [
+     "VTRU3",
+     "BEEF3",
+     "MDNE3",
+     "PLPL3",
+     "TEND3"
+    ],
+    "kept_of_watchlist": 5
+   }
+  ],
+  "by_list_size_at_base_cuts": {
+   "5": [
+    "VTRU3",
+    "BEEF3",
+    "SEER3",
+    "MDNE3",
+    "PLPL3"
+   ],
+   "6": [
+    "VTRU3",
+    "BEEF3",
+    "SEER3",
+    "MDNE3",
+    "PLPL3",
+    "TEND3"
+   ],
+   "8": [
+    "VTRU3",
+    "BEEF3",
+    "SEER3",
+    "MDNE3",
+    "PLPL3",
+    "TEND3",
+    "CEAB3",
+    "COGN3"
+   ]
+  },
+  "base": {
+   "irr_min": 0.2,
+   "prob_min": 0.45,
+   "n": 8
+  }
+ },
+ "price_effect": {
+  "n": 116,
+  "median_price_change": -0.2499975062990885,
+  "irr_median_pre": 0.1111479002806262,
+  "irr_median_post": 0.133,
+  "n_ge_25_pre": 0,
+  "n_ge_25_post": 6,
+  "n_ge_20_pre": 2,
+  "n_ge_20_post": 18,
+  "watchlist": {
+   "VTRU3": {
+    "pre": 0.18560929249730596,
+    "post": 0.2628
+   },
+   "BEEF3": {
+    "pre": 0.2097029008851366,
+    "post": 0.2691
+   },
+   "SEER3": {
+    "pre": 0.17375457469515498,
+    "post": 0.2408
+   },
+   "MDNE3": {
+    "pre": 0.17547724333436665,
+    "post": 0.2705
+   },
+   "PLPL3": {
+    "pre": 0.19007302125078407,
+    "post": 0.2781
+   },
+   "TEND3": {
+    "pre": 0.20386341328137203,
+    "post": 0.25
+   },
+   "CEAB3": {
+    "pre": 0.14030689697819165,
+    "post": 0.2175
+   },
+   "COGN3": {
+    "pre": 0.16250848144596552,
+    "post": 0.2423
+   }
+  },
+  "note": "Mesmas projeções, trocando só o preço (fechamento de 23/10 × foto de 28/10). Efeito mecânico do preço, não decomposição causal."
+ },
+ "key_sensitivities": {
+  "rows": [
+   {
+    "ticker": "VTRU3",
+    "price": 11.98,
+    "irr_base": 0.2628420712665678,
+    "fv_base": 16.69196358478151,
+    "irr_margin_m2pp": 0.2474323512932851,
+    "fv_margin_m2pp": 15.025494895813575,
+    "irr_growth_m2pp": 0.24579717756300046,
+    "fv_growth_m2pp": 15.181020398903001,
+    "margin_base_2027": 0.375
+   },
+   {
+    "ticker": "BEEF3",
+    "price": 2.87,
+    "irr_base": 0.26912619527384496,
+    "fv_base": 5.0410050259944645,
+    "irr_margin_m2pp": 0.08655084739946867,
+    "fv_margin_m2pp": 0.786676591340991,
+    "irr_growth_m2pp": 0.23716905615077366,
+    "fv_growth_m2pp": 4.196768706264815,
+    "margin_base_2027": 0.082
+   },
+   {
+    "ticker": "SEER3",
+    "price": 11.03,
+    "irr_base": 0.24083108081666132,
+    "fv_base": 13.814504040047215,
+    "irr_margin_m2pp": 0.22148325938212493,
+    "fv_margin_m2pp": 11.953340744042674,
+    "irr_growth_m2pp": 0.2256969809539776,
+    "fv_growth_m2pp": 12.646464868445113,
+    "margin_base_2027": 0.305
+   },
+   {
+    "ticker": "MDNE3",
+    "price": 16.86,
+    "irr_base": 0.2705225717123966,
+    "fv_base": 19.809590191405757,
+    "irr_margin_m2pp": 0.25094269654913837,
+    "fv_margin_m2pp": 17.852916950175135,
+    "irr_growth_m2pp": 0.2593413888610431,
+    "fv_growth_m2pp": 19.0412779142085,
+    "margin_base_2027": 0.227
+   },
+   {
+    "ticker": "PLPL3",
+    "price": 4.84,
+    "irr_base": 0.27807168290989714,
+    "fv_base": 6.25300488129573,
+    "irr_margin_m2pp": 0.24408618546354932,
+    "fv_margin_m2pp": 5.09001058318175,
+    "irr_growth_m2pp": 0.26457965622910296,
+    "fv_growth_m2pp": 5.95536560329025,
+    "margin_base_2027": 0.15
+   },
+   {
+    "ticker": "TEND3",
+    "price": 21.22,
+    "irr_base": 0.25003513111754094,
+    "fv_base": 26.34072831321484,
+    "irr_margin_m2pp": 0.22140069865627032,
+    "fv_margin_m2pp": 22.365377068972425,
+    "irr_growth_m2pp": 0.23490954234393524,
+    "fv_growth_m2pp": 24.7257889380055,
+    "margin_base_2027": 0.201
+   },
+   {
+    "ticker": "CEAB3",
+    "price": 6.87,
+    "irr_base": 0.21746406850194167,
+    "fv_base": 6.649455793319685,
+    "irr_margin_m2pp": 0.17791475773015886,
+    "fv_margin_m2pp": 4.212695790970286,
+    "irr_growth_m2pp": 0.20265735827325865,
+    "fv_growth_m2pp": 6.037499016926738,
+    "margin_base_2027": 0.195
+   },
+   {
+    "ticker": "COGN3",
+    "price": 1.69,
+    "irr_base": 0.2423310158144576,
+    "fv_base": 1.89026264080587,
+    "irr_margin_m2pp": 0.21427089762411755,
+    "fv_margin_m2pp": 1.481950529468975,
+    "irr_growth_m2pp": 0.22316789982651764,
+    "fv_growth_m2pp": 1.6642431078243651,
+    "margin_base_2027": 0.3
+   }
+  ],
+  "vtru_tax_17": {
+   "tax_base": [
+    0.04,
+    0.05,
+    0.06,
+    0.08,
+    0.12
+   ],
+   "payout_base": [
+    0.05,
+    0.15,
+    0.35,
+    0.5,
+    0.6
+   ],
+   "fv_base": 16.69196358478151,
+   "fv": 14.839586281209012,
+   "irr_base": 0.2628420712665678,
+   "irr": 0.2463045825342539
+  }
+ },
+ "valuation_date_bridge": {
+  "n": 117,
+  "fair_value_change_median": -0.019779839340392402,
+  "fair_value_change_min": -0.13635849999958827,
+  "fair_value_change_max": 0.0004382358953411991,
+  "irr_change_median": -0.0009315320491112833,
+  "irr_change_min": -0.007333978656956397,
+  "irr_median_old": 0.13440573764050398,
+  "irr_median_new": 0.13300268764909282,
+  "n_ge_25_old": 6,
+  "n_ge_25_new": 6,
+  "n_ge_20_old": 19,
+  "n_ge_20_new": 18,
+  "watchlist": {
+   "VTRU3": {
+    "fv_old": 16.987649817198367,
+    "fv_new": 16.69196358478151,
+    "irr_old": 0.2633651490443579,
+    "irr_new": 0.2628420712665678,
+    "first_tau_old": -0.07118412046543464,
+    "first_tau_new": 0.08761122518822724
+   },
+   "BEEF3": {
+    "fv_old": 5.438455263604865,
+    "fv_new": 5.0410050259944645,
+    "irr_old": 0.2718169319884153,
+    "irr_new": 0.26912619527384496,
+    "first_tau_old": -0.07118412046543464,
+    "first_tau_new": 0.08761122518822724
+   },
+   "SEER3": {
+    "fv_old": 14.190537876030108,
+    "fv_new": 13.814504040047215,
+    "irr_old": 0.24422679315634754,
+    "irr_new": 0.24083108081666132,
+    "first_tau_old": -0.07118412046543464,
+    "first_tau_new": 0.08761122518822724
+   },
+   "MDNE3": {
+    "fv_old": 20.188502501900807,
+    "fv_new": 19.809590191405757,
+    "irr_old": 0.277856550369353,
+    "irr_new": 0.2705225717123966,
+    "first_tau_old": -0.07118412046543464,
+    "first_tau_new": 0.08761122518822724
+   },
+   "PLPL3": {
+    "fv_old": 6.373076272374416,
+    "fv_new": 6.25300488129573,
+    "irr_old": 0.2830456640251954,
+    "irr_new": 0.27807168290989714,
+    "first_tau_old": -0.07118412046543464,
+    "first_tau_new": 0.08761122518822724
+   },
+   "TEND3": {
+    "fv_old": 26.814929718222373,
+    "fv_new": 26.34072831321484,
+    "irr_old": 0.2542792207002954,
+    "irr_new": 0.25003513111754094,
+    "first_tau_old": -0.07118412046543464,
+    "first_tau_new": 0.08761122518822724
+   },
+   "CEAB3": {
+    "fv_old": 6.90511742830641,
+    "fv_new": 6.649455793319685,
+    "irr_old": 0.22083446768440995,
+    "irr_new": 0.21746406850194167,
+    "first_tau_old": -0.07118412046543464,
+    "first_tau_new": 0.08761122518822724
+   },
+   "COGN3": {
+    "fv_old": 1.9723050379243616,
+    "fv_new": 1.89026264080587,
+    "irr_old": 0.24560702922093886,
+    "irr_new": 0.2423310158144576,
+    "first_tau_old": -0.07118412046543464,
+    "first_tau_new": 0.08761122518822724
+   }
+  },
+  "note": "Antiga: avaliação em 26/10 e stub de 2026 inteiro descontado no meio do stub (prazo negativo de −0,07 ano para balanço de 30/06). Atual: avaliação em 28/10; a parte do stub já decorrida vira ponte de dívida líquida e patrimônio (caixa gerado menos proventos pagos), e só os fluxos posteriores entram no DCF, no DDM e na TIR. Hipótese: fluxos uniformes dentro do stub."
+ }
+}

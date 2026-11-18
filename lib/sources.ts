@@ -93,6 +93,20 @@ export async function sgs(code: number, n = 1): Promise<SGS | null> {
   return Array.isArray(d) ? d : null;
 }
 
+/** Série diária do SGS entre duas datas (AAAA-MM-DD): uma observação por dia útil, na ordem do Banco Central. */
+export async function sgsRange(code: number, fromIso: string, toIso: string): Promise<{ d: string; v: number }[] | null> {
+  const br = (iso: string) => iso.split("-").reverse().join("/");
+  const d = (await getJSON(`https://api.bcb.gov.br/dados/serie/bcdata.sgs.${code}/dados?formato=json&dataInicial=${br(fromIso)}&dataFinal=${br(toIso)}`, 8000)) as SGS | null;
+  if (!Array.isArray(d)) return null;
+  const out: { d: string; v: number }[] = [];
+  for (const x of d) {
+    const iso = typeof x?.data === "string" ? x.data.split("/").reverse().join("-") : "";
+    const v = Number(x?.valor);
+    if (/^\d{4}-\d{2}-\d{2}$/.test(iso) && Number.isFinite(v)) out.push({ d: iso, v });
+  }
+  return out;
+}
+
 /** Contratos futuros: código do mês (F=jan … Z=dez). */
 const MONTH = "FGHJKMNQUVXZ";
 export function futureCodes(prefix: string, from: Date, count: number): string[] {

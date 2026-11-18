@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Métodos alternativos de valuation a Ke 25% e teste de pesos por template/setor (59 empresas, 26/10/2026).
+"""Métodos alternativos de valuation a Ke 25% e teste de pesos por template/setor (cobertura do estudo, foto de 28/10/2026).
 
 Reavalia todas as empresas com o motor do estudo (`pipeline/model.py`, importado SEM alteração) a partir das
 premissas atuais de `research/{T}.json`, do histórico CVM (`data/hist`) e da foto de preços do estudo
@@ -23,7 +23,7 @@ Holdings: SOTP recalculado com o novo valor justo das controladas avaliadas pelo
 
 Compara com DCF/DDM/múltiplos do estudo (dispersão, viés sistemático, divergências e causas), aplica pesos propostos
 por classe (template/setor) e mostra o efeito em valor justo, upside, ranking (upside e escore multifator do
-build.py) e nas 7 oportunidades. Checagens: RIM com a perpetuidade do DDM reproduz o DDM (identidade de clean surplus)
+build.py) e nas oportunidades. Checagens: RIM com a perpetuidade do DDM reproduz o DDM (identidade de clean surplus)
 e EVA com a perpetuidade do DCF reproduz o EV do DCF.
 
 Uso:   .venv/bin/python pipeline/tests/alt_methods.py
@@ -297,14 +297,14 @@ def rim_value(B0, ni, B, f26, taus, s0, tau_T, ke, g, roe_lr, tv_engine=None):
 def eva_value(pr, r, minority_book, s0):
     w = r["dcf"]["wacc"]
     g = r["g"]
-    f26 = pr["f26"]
+    f26 = pr["f_fwd"]
     taus = np.asarray(r["taus"], dtype=float)
     nopat = pr["ebit"] * (1 - pr["tax_rate"])
     netinv = pr["capex"] - pr["d_and_a"] + pr["d_nwc"]
     nop, inv = nopat.copy(), netinv.copy()
     nop[0] *= f26
     inv[0] *= f26
-    ic0 = pr["eq_base"] + pr["nd_base"] + minority_book
+    ic0 = pr.get("eq_val", pr["eq_base"]) + pr["nd_val"] + minority_book
     ic = ic0 + np.cumsum(inv)
     ic_prev = np.concatenate([[ic0], ic[:-1]])
     s = np.concatenate([[s0], taus])
@@ -341,7 +341,7 @@ def eva_value(pr, r, minority_book, s0):
 def apv_value(pr, r, prem):
     d = r["dcf"]
     g = r["g"]
-    f26 = pr["f26"]
+    f26 = pr["f_fwd"]
     taus = np.asarray(r["taus"], dtype=float)
     tau_T = r["tau_T"]
     wd, kd = d["wd"], d["kd"]
@@ -378,7 +378,7 @@ def apv_value(pr, r, prem):
 def fcfe_value(pr, r, prem):
     p = prem.get("projection") or {}
     g = r["g"]
-    f26 = pr["f26"]
+    f26 = pr["f_fwd"]
     taus = np.asarray(r["taus"], dtype=float)
     kd = M.arr(p.get("cost_of_net_debt"))
     of = M.arr(p.get("other_financial"))
@@ -477,7 +477,7 @@ def company_alt(t, r, cx):
     n_sh, unit = sh["outstanding_mn"], sh["per_unit"] or 1
     pr = r["proj"]
     g, roe_T = r["g"], r["roe_T"]
-    s0 = M.yf(VAL, pr["base_date"])
+    s0 = 0.0  # balanço levado à data de avaliação pela ponte do motor (eq_val, nd_val); só o stub posterior é fluxo
     taus, tau_T = r["taus"], r["tau_T"]
     adj = prem.get("adjustments") or {}
     bal = hist["balance"]
@@ -490,7 +490,7 @@ def company_alt(t, r, cx):
     # (a) RIM
     roe_lr = max(roe_T, g + 0.02)
     tv_eq = r["ddm"]["tv"]
-    rim = rim_value(pr["eq_base"], pr["ni_controlling"], pr["equity"], pr["f26"], taus, s0, tau_T, KE, g, roe_lr, tv_engine=tv_eq)
+    rim = rim_value(pr.get("eq_val", pr["eq_base"]), pr["ni_controlling"], pr["equity"], pr["f_fwd"], taus, s0, tau_T, KE, g, roe_lr, tv_engine=tv_eq)
     if rim:
         vs["rim"] = rim["value_mn"] / n_sh
         out["detail"]["rim"] = rim
@@ -500,7 +500,7 @@ def company_alt(t, r, cx):
         if tpl != "financial":
             dist = dist + M.arr(p.get("buyback_mn")) - M.arr(p.get("equity_issuance_mn"))
         fl = dist.copy()
-        fl[0] *= pr["f26"]
+        fl[0] *= pr["f_fwd"]
         ddm_tot = float(np.sum(fl / (1 + KE) ** np.asarray(taus))) + tv_eq / (1 + KE) ** tau_T
         out["checks"]["rim_engine_tv_vs_ddm_total"] = rim["value_engine_tv_mn"] / ddm_tot - 1 if ddm_tot else None
         out["checks"]["ddm_total_vs_ddm_study"] = ddm_tot / r["ddm"]["equity"] - 1 if r["ddm"]["equity"] else None
@@ -522,7 +522,7 @@ def company_alt(t, r, cx):
     if tpl != "financial":
         minority_book = M.num(bal.get("minority"))
         minority_v = r["dcf"]["minority_value"]
-        bridge = -pr["nd_base"] - minority_v + M.num(adj.get("non_operating_assets")) - M.num(adj.get("other_debt_like"))
+        bridge = -pr["nd_val"] - minority_v + M.num(adj.get("non_operating_assets")) - M.num(adj.get("other_debt_like"))
         out["detail"]["bridge_mn"] = bridge
         # (b) EVA
         ev = eva_value(pr, r, minority_book, s0)
@@ -572,7 +572,7 @@ def apply_multiples(r, cx, mults, basis):
     if basis == "fwd":
         eps = r["eps"][1]
         ebitda = pr["ebitda"][1] if tpl != "financial" else None
-        nd, mino = pr.get("nd_base"), (r.get("dcf") or {}).get("minority_value")
+        nd, mino = pr.get("nd_val", pr.get("nd_base")), (r.get("dcf") or {}).get("minority_value")
     else:
         eps = M.num(ltm.get("ni_controlling"), M.num(hist["annual"]["FY2025"].get("ni_controlling"))) / n_sh
         ebitda = fnum(ltm.get("ebitda")) if tpl != "financial" else None
@@ -1140,12 +1140,12 @@ def write_md(doc, tickers, div_rank):
     A(f"5. **Efeito.** O valor justo muda {pc(st['median_change_fair_proposed'])} na mediana (infraestrutura {pc(ce['infra_utilities']['median_change_fair'])}, "
       f"shoppings {pc(ce['renda_imobiliaria']['median_change_fair'])}, serviços {pc(ce['servicos_tecnologia']['median_change_fair'])}, bancos "
       f"{pc(ce['banco']['median_change_fair'])}, varejo {pc(ce['varejo_consumo']['median_change_fair'])}, incorporadoras {pc(ce['incorporadora']['median_change_fair'])}, "
-      f"locação {pc(ce['locacao']['median_change_fair'])}, cíclicas {pc(ce['ciclico_commodity']['median_change_fair'])}). O upside mediano das 59 passa de "
+      f"locação {pc(ce['locacao']['median_change_fair'])}, cíclicas {pc(ce['ciclico_commodity']['median_change_fair'])}). O upside mediano da cobertura passa de "
       f"{pc(rs['median_upside'])} para {pc(rp['median_upside'])}, e empresas com upside > 0: {rs['n_upside_positive']} → {rp['n_upside_positive']}. "
       f"Quase toda a queda vem de retirar os múltiplos-alvo: o esquema \"estudo sem múltiplos\" já dá {pc(rk['estudo_sem_multiplos']['median_upside'])}. "
       f"O ranking quase não muda (Spearman do escore multifator {br(rp['spearman_score_vs_study'])}; do upside {br(rp['spearman_upside_vs_study'])}), porque o "
       f"upside pesa só 10% do escore e a TIR de dono (30%), a qualidade e a solidez não dependem dos pesos.")
-    A(f"6. **As 7 oportunidades.** Com as premissas revisadas de agora, o estudo recalculado mantém {len(keep_s)} das 7 pela regra "
+    A(f"6. **As {len(opp)} oportunidades.** Com as premissas de agora, o estudo recalculado mantém {len(keep_s)} das {len(opp)} pela regra "
       f"({', '.join(keep_s)}){'; ' + ', '.join(lost_s) + ' já ficam abaixo de P(MC) 45%' if lost_s else ''}. Com os pesos propostos, ficam {len(keep_p)}: "
       + ", ".join(f"{t} (upside {pc(rp['frozen7'][t]['upside'])})" for t in keep_p)
       + (f". Saem {', '.join(f'{t} (P(MC) {pc(rp['frozen7'][t]['prob_mc'], 0, False)})' for t in lost_p)}" if lost_p else "")
@@ -1238,7 +1238,7 @@ def write_md(doc, tickers, div_rank):
     if mv:
         A("Maiores mudanças no ranking por upside (posições; + = sobe): " + ", ".join(f"{t} {d:+d}" for t, d in mv) + ".")
         A("")
-    A("## As 7 oportunidades")
+    A(f"## As {len(opp)} oportunidades")
     A("")
     A("| Empresa | Preço | Valor justo estudo → proposto | Upside estudo → proposto | Rank escore | Rank upside | P(MC) estudo → proposto | Regra (proposto) |")
     A("|---|---|---|---|---|---|---|---|")
@@ -1279,7 +1279,7 @@ def write_md(doc, tickers, div_rank):
       + ") forçam cotação ao vivo, que falha de forma intermitente e zera o componente. Aqui o cache foi semeado com o último `data/model` do motor.")
     A("- **HAPV3**: o PL de R$ 48 bi é quase todo ágio da fusão e o preço implica P/VP de 0,05×. P/VP e RIM com fade não fazem sentido ali; o fade só corrói retorno excedente.")
     A("")
-    A("## Tabela completa (59)")
+    A("## Tabela completa")
     A("")
     A("Valores por ação/unit (R$). Rank = escore multifator do build.py recalculado; ↑ = rank por upside. Ordem: rank proposto.")
     A("")

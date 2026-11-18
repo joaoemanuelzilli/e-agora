@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Teste de robustez do valuation (59 empresas, 26/10/2026): pesos do blend e premissas.
+"""Teste de robustez do valuation (cobertura do estudo, foto de 28/10/2026): pesos do blend e premissas.
 
 Reavalia todas as empresas com o motor `pipeline/model.py` (importado, SEM alteração; as premissas de
 `research/{T}.json` são copiadas em memória e perturbadas) e mede a estabilidade do valor justo e dos rankings
@@ -17,7 +17,7 @@ Grades (uma dimensão de cada vez; demais premissas na base de cada empresa):
   mc15          Monte Carlo com desvios ×1,5 (sorteios independentes por empresa; cada sorteio é uma combinação)
   conjunta      amostra aleatória do produto cartesiano pesos × Ke × g × múltiplos × margem × crescimento × Kd
 Métricas: Spearman dos rankings vs base, frequência no top 7 / top 15, p5–p95 do valor justo, lista robusta
-(top 7 em ≥ 50% e ≥ 80% das combinações), dependência das 7 oportunidades atuais (regra do build.py reproduzida
+(top 7 em ≥ 50% e ≥ 80% das combinações), dependência das oportunidades atuais (regra do build.py reproduzida
 com P(valor justo > preço) recalculada por Monte Carlo idêntico ao do motor) e impacto de pesos propostos por setor.
 
 Uso:
@@ -52,6 +52,7 @@ OUT_JSON = ROOT / "data" / "tests" / "robustness.json"
 OUT_MD = ROOT / "data" / "tests" / "robustness.md"
 KE0 = M.KE
 SEED_ENGINE = 7  # semente do Monte Carlo do motor
+K_OPP = 8  # tamanho da lista do estudo (regra do build.py: as 8 primeiras pelo escore)
 SCORE_W = {"valor": 0.30, "upside": 0.10, "qualidade": 0.20, "solidez": 0.15, "sobrerreacao": 0.10, "probabilidade": 0.15}
 METHOD_KEYS = ("dcf", "ddm", "pe", "ev_ebitda", "pbv", "multiples")
 
@@ -268,7 +269,7 @@ def _f(x):
 
 
 def eval_state(st):
-    """Avalia as 59 empresas num estado de premissas. Retorna fair, upside, irr (n) e valores por método (n×3)."""
+    """Avalia as empresas da cobertura num estado de premissas. Retorna fair, upside, irr (n) e valores por método (n×3)."""
     ke = st.get("ke", KE0)
     dg, dm, dgr = st.get("dg", 0.0), st.get("dm", 0.0), st.get("dgr", 0.0)
     shifts = {}
@@ -508,11 +509,11 @@ def grid_metrics(F, U, I, base):
 def opp_metrics(sel_lists, current):
     """sel_lists: listas (índices) selecionadas pela regra em cada cenário."""
     cur = set(IDX[t] for t in current)
-    kept = [len(set(s[:7]) & cur) for s in sel_lists]
-    freq = {t: rnd(np.mean([IDX[t] in s[:7] for s in sel_lists])) for t in ORDER}
+    kept = [len(set(s[:K_OPP]) & cur) for s in sel_lists]
+    freq = {t: rnd(np.mean([IDX[t] in s[:K_OPP] for s in sel_lists])) for t in ORDER}
     freq = {t: v for t, v in freq.items() if v and v > 0}
     return {"kept_mean": rnd(np.mean(kept)), "kept_min": int(min(kept)), "kept_dist": {str(k): int(kept.count(k)) for k in range(8)},
-            "identical_share": rnd(np.mean([set(s[:7]) == cur for s in sel_lists])),
+            "identical_share": rnd(np.mean([set(s[:K_OPP]) == cur for s in sel_lists])),
             "freq_selected": dict(sorted(freq.items(), key=lambda kv: -kv[1]))}
 
 
@@ -707,7 +708,7 @@ def main():
         }
         for t in ORDER:
             per_company_grid[t][g] = per_c[t]
-            per_company_grid[t][g]["opp_selected"] = rnd(np.mean([IDX[t] in s[:7] for s in sels]))
+            per_company_grid[t][g]["opp_selected"] = rnd(np.mean([IDX[t] in s[:K_OPP] for s in sels]))
 
     # ---------------- amostra conjunta
     FJ = np.vstack([r[0] for r in res_j])
@@ -762,7 +763,7 @@ def main():
         probs_t, ups_t = [], []
         for k in ks_w:
             _, _, sel = score_rule(res[k][2], res[k][1], prob_state[k])
-            sel_flags.append(i in sel[:7])
+            sel_flags.append(i in sel[:K_OPP])
             probs_t.append(prob_state[k][i])
             ups_t.append(res[k][1][i])
         by_mult = {}
@@ -798,7 +799,7 @@ def main():
                           "prob_base": rnd(b_prob[i]), "prob_proposed": rnd(p_prob[i]),
                           "score_base": rnd(b_score[i], 3), "score_proposed": rnd(p_score[i], 3),
                           "rank_score_base": rnd(b_rank[i], 0), "rank_score_proposed": rnd(p_rank[i], 0),
-                          "selected_base": i in b_sel[:7], "selected_proposed": i in p_sel[:7]})
+                          "selected_base": i in b_sel[:K_OPP], "selected_proposed": i in p_sel[:K_OPP]})
     # diagnóstico por setor: sinal do DCF, múltiplos/DDM, DL/EV e dispersão de cada método na amostra conjunta
     diag = {}
     for b in list(PROPOSED) + ["demais"]:
@@ -847,7 +848,7 @@ def main():
                    "min_dispersion_weights": {"w_dcf": best[0][0], "w_ddm": best[0][1], "w_mult": best[0][2], "dispersion": rnd(best[1])} if best else None}
     # impacto de um setor por vez (demais setores na base)
     by_bucket = {}
-    base_sel7 = set(ORDER[i] for i in b_sel[:7])
+    base_sel7 = set(ORDER[i] for i in b_sel[:K_OPP])
     for bname in PROPOSED:
         wm1 = {t: wmap[t] for t in NONH if bucket_of(t) == bname}
         F1, U1, I1, _ = eval_state({"wmap": wm1})
@@ -855,7 +856,7 @@ def main():
         for t in wm1:
             p1[IDX[t]] = prob_from_values(mcv[t], wm1[t], COMPS[t]["price"])
         _, _, sel1 = score_rule(I1, U1, p1)
-        s7 = [ORDER[i] for i in sel1[:7]]
+        s7 = [ORDER[i] for i in sel1[:K_OPP]]
         by_bucket[bname] = {"spearman_up_vs_base": rnd(spear(bU, U1)), "rule_top7": s7,
                             "enter": [t for t in s7 if t not in base_sel7], "leave": [t for t in ORDER if t in base_sel7 and t not in s7],
                             "fair_change_median": rnd(np.nanmedian([F1[IDX[t]] / bF[IDX[t]] - 1 for t in wm1 if bF[IDX[t]]]))}
@@ -868,7 +869,7 @@ def main():
             pv[IDX[t]] = prob_from_values(mcv[t], wmv[t], COMPS[t]["price"])
         _, _, selv = score_rule(Iv, Uv, pv)
         rv = rank_desc(Uv)
-        variants[vname] = {"override": ovr, "rule_top7": [ORDER[i] for i in selv[:7]], "spearman_up_vs_base": rnd(spear(bU, Uv)),
+        variants[vname] = {"override": ovr, "rule_top7": [ORDER[i] for i in selv[:K_OPP]], "spearman_up_vs_base": rnd(spear(bU, Uv)),
                            "top7_up": [ORDER[i] for i in sorted(topk(Uv, 7), key=lambda i: rv[i])],
                            "prob": {t: rnd(pv[IDX[t]]) for t in ("CEAB3", "LREN3", "SBFG3", "DIRR3", "COGN3", "PGMN3") if t in IDX}}
     proposed = {
@@ -913,7 +914,7 @@ def main():
             "price": c["price"], "research_mtime": c["mtime"], "research_sha1": c["sha1"],
             "base": {"fair": rnd(bF[i]), "upside": rnd(bU[i]), "irr": rnd(bI[i]), "rank_irr": rnd(bRI[i], 0), "rank_up": rnd(bRU[i], 0),
                      "prob_mc": rnd(b_prob[i]), "score": rnd(b_score[i], 3), "rank_score": rnd(b_rank[i], 0),
-                     "selected_rule": i in b_sel[:7], "values": {"dcf": rnd(bMeth[i, 0]), "ddm": rnd(bMeth[i, 1]), "multiples": rnd(bMeth[i, 2])},
+                     "selected_rule": i in b_sel[:K_OPP], "values": {"dcf": rnd(bMeth[i, 0]), "ddm": rnd(bMeth[i, 1]), "multiples": rnd(bMeth[i, 2])},
                      "weights": base_w.get(t) or {"sotp": 1.0}},
             "overview": {"fair_value": r.get("fair_value"), "upside": r.get("upside"), "irr_implied": r.get("irr_implied"),
                          "score": r.get("score"), "rank": r.get("rank"), "prob_mc": r.get("prob_mc"), "opportunity": t in current_opp},
@@ -975,7 +976,7 @@ def write_md(o):
     rl = o["robust_lists"]
     cur = o["meta"]["current_opportunities"]
     L = []
-    L.append("# Robustez do valuation: pesos do blend e premissas (26/10/2026)")
+    L.append("# Robustez do valuation: pesos do blend e premissas (foto de 28/10/2026)")
     L.append("")
     L.append(f"Gerado em {o['meta']['generated_at']} por `pipeline/tests/robustness.py`, com o motor `pipeline/model.py` sem "
              f"alteração e a foto de preços `data/market/quotes.json`. São {o['meta']['n_companies']} empresas "
@@ -1008,10 +1009,10 @@ def write_md(o):
     det = o["opportunities_vs_weights"]["detail"]
     sel_now = o["meta"]["base_check"]["rule_selection_now"]
     out_now = [t for t in cur if t not in sel_now]
-    L.append(f"- **As 7 oportunidades atuais ({', '.join(cur)}) dependem dos pesos e já das revisões.** Com as premissas revisadas e os "
-             f"pesos atuais, a regra do `build.py` seleciona {len(sel_now[:7])} ({lst_txt(sel_now[:7])})"
+    L.append(f"- **As {K_OPP} oportunidades atuais ({', '.join(cur)}) dependem dos pesos e já das revisões.** Com as premissas revisadas e os "
+             f"pesos atuais, a regra do `build.py` seleciona {len(sel_now[:K_OPP])} ({lst_txt(sel_now[:K_OPP])})"
              + (f"; {lst_e(out_now)} {'ficou' if len(out_now) == 1 else 'ficaram'} fora pelos filtros de P(MC) ≥ 45% ou TIR ≥ 20%" if out_now else "")
-             + f". Nos 66 vetores de pesos (upside, P(MC) e escore recalculados), a regra mantém em média {num(ow['kept_mean'], 1)} das 7 "
+             + f". Nos 66 vetores de pesos (upside, P(MC) e escore recalculados), a regra mantém em média {num(ow['kept_mean'], 1)} das {K_OPP} "
              f"(mínimo {ow['kept_min']}) e a lista sai idêntica em {pct(ow['identical_share'])}. Fração de vetores com cada empresa selecionada: "
              + "; ".join(f"{t} {pct(det[t]['selected_share'])}"
                          + ("" if det[t]["selected_share"] in (0, 1) else f" ({cond_txt(det[t]['selected_by_w_mult'], 'w_múlt')}; {cond_txt(det[t]['selected_by_w_dcf'], 'w_DCF')})")
@@ -1019,8 +1020,8 @@ def write_md(o):
     pw = o["proposed_weights"]
     vv = pw["variants"]
     L.append(f"- **Pesos propostos por setor:** o Spearman do upside contra a base fica em {fr(pw['spearman_up_vs_base'])} e o do escore em "
-             f"{fr(pw['spearman_score_vs_base'])}. A regra passa a selecionar {lst_txt(pw['opportunities_proposed_rule'][:7])}, "
-             f"contra {lst_txt(pw['opportunities_base_rule'][:7])} hoje. O peso dos múltiplos no varejo decide a cauda da lista: "
+             f"{fr(pw['spearman_score_vs_base'])}. A regra passa a selecionar {lst_txt(pw['opportunities_proposed_rule'][:K_OPP])}, "
+             f"contra {lst_txt(pw['opportunities_base_rule'][:K_OPP])} hoje. O peso dos múltiplos no varejo decide a cauda da lista: "
              + "; ".join(f"{k}: {lst_txt(d['rule_top7'])}" for k, d in vv.items() if k.startswith("varejo")) + ".")
     L.append("")
     # ---- base
@@ -1049,7 +1050,7 @@ def write_md(o):
     L.append("## Estabilidade do ranking por grade")
     L.append("")
     L.append("Spearman de cada combinação contra a base (mediana / mínimo), fração média do top 7 da base que continua no top 7 e "
-             "número médio de oportunidades atuais que a regra mantém (de 7).")
+             f"número médio de oportunidades atuais que a regra mantém (de {K_OPP}).")
     L.append("")
     L.append("| Grade | Combinações | Spearman TIR | Spearman upside | Spearman escore | Top 7 TIR mantido | Top 7 upside mantido | Oportunidades mantidas |")
     L.append("|---|---:|---|---|---|---:|---:|---:|")
@@ -1090,7 +1091,7 @@ def write_md(o):
                  f"{pct(gp['top7_up'])} | {pct(gm['top7_up'])} | {pct(gp.get('opp_selected'))} |")
     L.append("")
     L.append("★ = oportunidade atual. A coluna “Regra (pesos)” dá a fração das 66 combinações de pesos em que a regra do app (TIR ≥ 20%, P(MC) ≥ 45%, "
-             "Altman fora de risco, confiança não baixa, ordem pelo escore) põe a empresa entre as 7.")
+             "Altman fora de risco, confiança não baixa, ordem pelo escore) põe a empresa entre as 8.")
     L.append("")
     L.append("### Faixa p5–p95 do valor justo por grade (todas as empresas)")
     L.append("")
@@ -1117,7 +1118,7 @@ def write_md(o):
         L.append(f"| {lab} | {lst_txt(d['irr_ge80'])} | {lst_txt(d['irr_ge50'])} | {lst_txt(d['up_ge80'])} | {lst_txt(d['up_ge50'])} |")
     L.append("")
     # ---- oportunidades x pesos
-    L.append("## As 7 oportunidades atuais e os pesos")
+    L.append(f"## As {K_OPP} oportunidades atuais e os pesos")
     L.append("")
     L.append("Para cada um dos 66 vetores de pesos, o teste recalcula o upside, a P(valor justo > preço) e o escore e reaplica a regra do `build.py`. "
              "A P(MC) sai do mesmo Monte Carlo do motor, com os valores por método guardados em cada sorteio e o blend refeito. "
@@ -1133,7 +1134,7 @@ def write_md(o):
         L.append(f"| {t}{star} | {pct(d['selected_share'])} | {cond} | {pct(d['prob_min'])}–{pct(d['prob_max'])} | {pct(d['up_min'])}–{pct(d['up_max'])} | {bm} | {bd} |")
     L.append("")
     dist = ow["kept_dist"]
-    L.append("Quantas das 7 atuais a regra mantém, em número de combinações: " + ", ".join(f"{k} mantidas: {v}" for k, v in dist.items() if v) + ".")
+    L.append(f"Quantas das {K_OPP} atuais a regra mantém, em número de combinações: " + ", ".join(f"{k} mantidas: {v}" for k, v in dist.items() if v) + ".")
     L.append("")
     og = o["opportunities_vs_weights"]["by_grid"]
     L.append("Seleção pela regra nas demais grades (fração de combinações em que cada empresa está entre as 7):")
@@ -1183,7 +1184,7 @@ def write_md(o):
                  f"{ri(r['rank_score_base'])} → {ri(r['rank_score_proposed'])} | {sel} |")
     L.append("")
     L.append(f"Top 7 por upside: base {lst_txt(pw['top7_up_base'])}; proposto {lst_txt(pw['top7_up_proposed'])}. "
-             f"Regra de oportunidades: base {lst_txt(pw['opportunities_base_rule'][:7])}; proposto {lst_txt(pw['opportunities_proposed_rule'][:7])}.")
+             f"Regra de oportunidades: base {lst_txt(pw['opportunities_base_rule'][:K_OPP])}; proposto {lst_txt(pw['opportunities_proposed_rule'][:K_OPP])}.")
     L.append("")
     L.append("Decomposição, aplicando os pesos propostos a um setor por vez (os demais ficam na base):")
     L.append("")

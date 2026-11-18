@@ -47,7 +47,7 @@ export default function Page() {
             Ampliação (28/10): todas as demais ações desse universo com volume médio diário de R$ 10 mi ou mais e demonstrações padronizadas na CVM, com premissas feitas sob um checklist com as lições da revisão. Total: {ov.companies.length} empresas. As variações exibidas no painel são ao vivo.
           </p>
           <p>
-            <span className="font-medium text-ink">Melhores oportunidades:</span> {(ov as unknown as { opportunity_rule?: string }).opportunity_rule}
+            <span className="font-medium text-ink">Lista de acompanhamento e compra à meta:</span> {ov.opportunity_rule_v2 ?? ov.opportunity_rule}
           </p>
         </Block>
         <Block title="Projeções (2026–2030)">

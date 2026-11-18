@@ -117,7 +117,7 @@ describe("Coerência interna do motor TS", () => {
     if (!c.mc_q || !fin(c.prob_mc)) continue;
     test(`${c.ticker} P(valor > preço) do painel (quantis) ≈ Monte Carlo do Python (±5 p.p.)`, () => {
       const p = V.probAbove(c.mc_q, c.price_ref);
-      assert.ok(fin(p) && Math.abs(p - c.prob_mc) <= 0.05, `${c.ticker} probAbove(mc_q)=${fmt(p)} × prob_mc=${fmt(c.prob_mc)} (quantis vêm de 400 amostras das 5.000)`);
+      assert.ok(fin(p) && Math.abs(p - c.prob_mc) <= 0.05, `${c.ticker} probAbove(mc_q)=${fmt(p)} × prob_mc=${fmt(c.prob_mc)} (quantis da amostra completa de 5.000 sorteios)`);
     });
   }
 });

@@ -236,8 +236,8 @@ function Drop({ doc }: { doc: any }) {
       </div>
       <div className="space-y-4 lg:col-span-5">
         <HBarChart
-          title="Quanto da queda foi macro"
-          subtitle={`Ao vivo: queda observada e prevista pelo beta (${num(betaD, 2)} × Ibovespa ${pct(isNum(ibLive) ? ibLive : null, 1)}). Resíduo contra os fatores = observado − previsto pela regressão.`}
+          title="Queda da ação: prevista pelos fatores e resíduo"
+          subtitle={`Ao vivo: queda observada e prevista pelo beta (${num(betaD, 2)} × Ibovespa ${pct(isNum(ibLive) ? ibLive : null, 1)}). Resíduo contra os fatores = observado − previsto pela regressão entre ações; é associação, não a parcela causada por fatores macro.`}
           items={items}
           fmt="pct1s"
           rowH={34}

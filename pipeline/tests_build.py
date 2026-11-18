@@ -178,11 +178,7 @@ STRESS_LABELS = {"ibov_m20": "Ibovespa −20% (beta de baixa)", "ibov_m20_beta_h
                  "usd_p20_comov": "Dólar +20%, com a bolsa"}
 
 
-def portfolio():
-    p = load(T / "portfolio.json")
-    if not p:
-        return None
-    rec = p.get("recommended") or {}
+def _port(p, rec):
     m = rec.get("metrics") or {}
     return {"generated_at": p.get("generated_at"), "label": rec.get("label"),
             "weights": [{"ticker": w["ticker"], "w": r(w.get("w")), "irr": r(w.get("irr")), "rc": r(w.get("rc"))} for w in rec.get("weights") or []],
@@ -192,6 +188,17 @@ def portfolio():
             "sizing": rec.get("sizing"),
             "stress": [{"key": k, "label": STRESS_LABELS.get(k, k), "value": r(v)} for k, v in (rec.get("stress") or {}).items()],
             "cdi": r((p.get("params") or {}).get("cdi"))}
+
+
+def portfolio():
+    p = load(T / "portfolio.json")
+    if not p:
+        return None
+    out = _port(p, p.get("recommended") or {})
+    # regra v2: carteira só com as elegíveis à meta (TIR >= Ke e preço <= teto); a de cima segue sendo a do registro de 28/10
+    if p.get("recommended_eligible"):
+        out["eligible"] = _port(p, p["recommended_eligible"])
+    return out
 
 
 def consensus(ov):

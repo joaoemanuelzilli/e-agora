@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-10-28T17:19:34",
- "started_at": "2026-10-28T17:19:17-03:00",
- "overview_generated_at": "2026-10-28T17:19:17",
+ "generated_at": "2026-11-18T14:32:04",
+ "started_at": "2026-11-18T14:31:50-03:00",
+ "overview_generated_at": "2026-11-18T14:19:04",
  "totals": {
-  "tests": 4491,
-  "passed": 4428,
-  "failed": 51,
+  "tests": 4354,
+  "passed": 4290,
+  "failed": 52,
   "skipped": 11,
   "xfailed": 1
  },
@@ -29,21 +29,21 @@
    "xfailed": 0
   },
   "paridade": {
-   "passed": 1082,
-   "failed": 1,
+   "passed": 1083,
+   "failed": 0,
    "skipped": 1,
    "xfailed": 0
   },
   "app": {
-   "passed": 138,
+   "passed": 0,
    "failed": 0,
    "skipped": 0,
    "xfailed": 0
   }
  },
  "next_build": {
-  "rc": 0,
-  "pages": "140"
+  "rc": 1,
+  "pages": "141"
  },
  "failures": [
   {
@@ -295,11 +295,6 @@
    "block": "mercado",
    "test": "test_proventos_nao_negativos[RIAA3]",
    "message": "1 problema(s): DY TTM 52%"
-  },
-  {
-   "block": "paridade",
-   "test": "YDUQ3 P(valor > preço) do painel (quantis) ≈ Monte Carlo do Python (±5 p.p.)",
-   "message": "YDUQ3 probAbove(mc_q)=0.3613 × prob_mc=0.3092 (quantis vêm de 400 amostras das 5.000)"
   }
  ]
 }

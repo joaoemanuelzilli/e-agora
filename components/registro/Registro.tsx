@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useMemo } from "react";
-import { useMarket, useQuotes } from "@/lib/live";
+import { useCdi, useMarket, useQuotes } from "@/lib/live";
 import { num, pct, signClass } from "@/lib/format";
 import { Rating, callOf } from "@/components/ui/Rating";
 
@@ -187,6 +187,22 @@ function businessDays(fromIso: string, to: Date) {
   return n;
 }
 
+const spDay = (d: Date) => d.toLocaleDateString("sv-SE", { timeZone: "America/Sao_Paulo" });
+/** Dia (AAAA-MM-DD, horário de Brasília) de um carimbo de cotação: a B3 manda horário local sem fuso; Yahoo e brapi, ISO. */
+export function quoteDay(ts: string | null | undefined): string | null {
+  if (!ts) return null;
+  if (/^\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}/.test(ts) && !/(Z|[+-]\d{2}:?\d{2})$/.test(ts)) return ts.slice(0, 10);
+  const t = Date.parse(ts);
+  return Number.isNaN(t) ? null : spDay(new Date(t));
+}
+
+function median(a: number[]) {
+  if (!a.length) return null;
+  const s = [...a].sort((x, y) => x - y);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+}
+
 function Tile({ label, value, note, strong }: { label: string; value: number | null; note?: string; strong?: boolean }) {
   return (
     <div>
@@ -197,82 +213,150 @@ function Tile({ label, value, note, strong }: { label: string; value: number | n
   );
 }
 
+/** Proventos por ação com data-com depois da data de referência (R$ por ação). */
+export type DivMap = Record<string, { dc: string; valor: number }[]>;
+export type TrackOpts = {
+  /** CDI diário realizado (uma taxa por dia útil, a partir da data de referência); sem ele, usa a taxa anual do registro. */
+  cdiDaily?: { d: string; r: number }[] | null;
+  divs?: DivMap | null;
+  now?: Date;
+};
+
 export type Track = {
   du: number;
   cdiAcc: number;
+  /** "realizado" = CDI diário do Banco Central; "estimado" = taxa anual do registro pelos dias de segunda a sexta. */
+  cdiMode: "realizado" | "estimado";
   ib: number | null;
   sm: number | null;
   eqW: number | null;
   port: number | null;
+  /** referência com a mesma alocação: parcela de ações no Small Caps, o resto em CDI */
+  refSmCdi: number | null;
   eqEqual: number | null;
   medOthers: number | null;
   nOthers: number;
+  nOthersTotal: number;
   beat: number | null;
   nHave: number;
-  recs: (Rec & { now: number | null; ret: number | null })[];
+  /** número de proventos somados aos retornos (data-com depois da referência e até hoje) */
+  nDivs: number;
+  recs: (Rec & { now: number | null; ret: number | null; divs: number })[];
 };
 
-/** Resultado desde o preço de referência (retorno de preço, sem proventos; CDI pelos dias úteis, sem feriados). */
-export function trackRecord(r: Registro, priceOf: (t: string) => number | null | undefined, ibNow?: number | null, smNow?: number | null): Track {
-  const ret = (t: string, ref: number) => {
-    const p = priceOf(t);
-    return fin(p) && ref > 0 ? p / ref - 1 : null;
+/** Resultado da carteira-alvo desde o preço de referência. Retorno de cada ação = (preço de agora + proventos com
+ *  data-com no período) ÷ preço de referência − 1. CDI: taxas diárias realizadas de [referência, hoje), quando informadas. */
+export function trackRecord(r: Registro, priceOf: (t: string) => number | null | undefined, ibNow?: number | null, smNow?: number | null, opts: TrackOpts = {}): Track {
+  const now = opts.now ?? new Date();
+  const today = spDay(now);
+  let nDivs = 0;
+  const divOf = (t: string) => {
+    let s = 0;
+    for (const e of opts.divs?.[t] ?? []) {
+      if (e.dc > r.data_ref && e.dc <= today && fin(e.valor)) {
+        s += e.valor;
+        nDivs++;
+      }
+    }
+    return s;
   };
-  const recs = r.recomendacoes.map((x) => ({ ...x, now: priceOf(x.ticker) ?? null, ret: ret(x.ticker, x.preco_ref) }));
-  const du = businessDays(r.data_ref, new Date());
-  const cdiAcc = Math.pow(1 + r.benchmarks.CDI_aa, du / 252) - 1;
+  const ret = (t: string, ref: number, dv = 0) => {
+    const p = priceOf(t);
+    return fin(p) && ref > 0 ? (p + dv) / ref - 1 : null;
+  };
+  const recs = r.recomendacoes.map((x) => {
+    const dv = divOf(x.ticker);
+    return { ...x, now: priceOf(x.ticker) ?? null, divs: dv, ret: ret(x.ticker, x.preco_ref, dv) };
+  });
+  // a taxa do dia D remunera de D para o dia útil seguinte: do fechamento da referência até hoje entram as taxas de [referência, hoje)
+  const rates = (opts.cdiDaily ?? []).filter((x) => x.d >= r.data_ref && x.d < today && fin(x.r));
+  const realized = !!opts.cdiDaily && (rates.length > 0 || today <= r.data_ref);
+  const du = realized ? rates.length : businessDays(r.data_ref, now);
+  const cdiAcc = realized ? rates.reduce((a, x) => a * (1 + x.r), 1) - 1 : Math.pow(1 + r.benchmarks.CDI_aa, du / 252) - 1;
   const ib = fin(ibNow) ? ibNow / r.benchmarks.IBOV - 1 : null;
   const sm = fin(smNow) ? smNow / r.benchmarks.SMLL - 1 : null;
   const have = recs.filter((x) => fin(x.ret));
   const wsum = have.reduce((s, x) => s + (x.peso_capital ?? 0), 0);
   const eqW = wsum > 0 ? have.reduce((s, x) => s + (x.peso_capital ?? 0) * (x.ret as number), 0) / wsum : null;
   const port = eqW !== null ? r.carteira.acoes * eqW + r.carteira.cdi * cdiAcc : null;
+  const refSmCdi = sm !== null ? r.carteira.acoes * sm + r.carteira.cdi * cdiAcc : null;
   const eqEqual = have.length ? have.reduce((s, x) => s + (x.ret as number), 0) / have.length : null;
-  const others = r.universo
-    .filter((u) => !u.selecionada)
-    .map((u) => ret(u.ticker, u.preco_ref))
-    .filter(fin)
-    .sort((a, b) => a - b);
-  const medOthers = others.length ? others[Math.floor(others.length / 2)] : null;
+  const rest = r.universo.filter((u) => !u.selecionada);
+  const others = rest.map((u) => ret(u.ticker, u.preco_ref, divOf(u.ticker))).filter(fin);
   const beat = ib !== null ? have.filter((x) => (x.ret as number) > ib).length : null;
-  return { du, cdiAcc, ib, sm, eqW, port, eqEqual, medOthers, nOthers: others.length, beat, nHave: have.length, recs };
+  return { du, cdiAcc, cdiMode: realized ? "realizado" : "estimado", ib, sm, eqW, port, refSmCdi, eqEqual, medOthers: median(others), nOthers: others.length, nOthersTotal: rest.length, beat, nHave: have.length, nDivs, recs };
 }
 
-/** Desempenho ao vivo desde o preço de referência (retorno de preço, sem proventos). */
-export function Desempenho({ r }: { r: Registro }) {
+const diff = (a: number | null, b: number | null) => (a !== null && b !== null ? a - b : null);
+
+/** Desempenho ao vivo da carteira-alvo desde o preço de referência. */
+export function Desempenho({ r, divs = null, divsAsOf = null }: { r: Registro; divs?: DivMap | null; divsAsOf?: string | null }) {
   const tickers = useMemo(() => r.universo.map((u) => u.ticker), [r]);
   const q = useQuotes(tickers, 60000);
   const m = useMarket();
-  const { du, cdiAcc, ib, sm, eqW, port, eqEqual, medOthers, nOthers, beat, nHave, recs } = trackRecord(r, (t) => q.quotes[t]?.price, m?.indices?.IBOV?.price, m?.indices?.SMLL?.price);
+  const cdi = useCdi(r.data_ref);
+  const ibQ = m?.indices?.IBOV ?? null;
+  const smQ = m?.indices?.SMLL ?? null;
+  const tr = trackRecord(r, (t) => q.quotes[t]?.price, ibQ?.price, smQ?.price, { cdiDaily: cdi?.days ?? null, divs });
+  const { du, cdiAcc, cdiMode, ib, sm, eqW, port, refSmCdi, eqEqual, medOthers, nOthers, nOthersTotal, beat, nHave, nDivs, recs } = tr;
+  // mesma data para todas as séries: dia do carimbo de cada cotação usada (ações da lista e os dois índices)
+  const days = new Map<string, string[]>();
+  const mark = (name: string, ts: string | null | undefined) => {
+    const d = quoteDay(ts);
+    if (d) days.set(d, [...(days.get(d) ?? []), name]);
+  };
+  for (const x of r.recomendacoes) if (q.quotes[x.ticker]) mark(x.ticker, q.quotes[x.ticker].ts);
+  if (ibQ) mark("Ibovespa", ibQ.ts);
+  if (smQ) mark("Small Caps", smQ.ts);
+  const mixed = days.size > 1;
+  const lastCdi = cdi?.days?.filter((x) => x.d >= r.data_ref).at(-1)?.d ?? null;
+  const acoes = pct(r.carteira.acoes, 0);
   return (
     <section className="space-y-4">
       <div className="sec flex flex-wrap items-baseline justify-between gap-3">
-        <h2 className="h2">Desempenho desde {dataBR(r.data_ref)}</h2>
+        <h2 className="h2">Simulação da carteira-alvo desde {dataBR(r.data_ref)}</h2>
         <span className="text-[12px] text-muted">
-          {du} pregões; preços ao vivo{q.asOf ? ` às ${new Date(q.asOf).toLocaleTimeString("pt-BR")}` : ""}; retorno de preço, sem proventos; CDI pelos dias úteis, sem feriados
+          {du} {du === 1 ? "pregão" : "pregões"}; preços ao vivo{q.asOf ? ` às ${new Date(q.asOf).toLocaleTimeString("pt-BR")}` : ""}
         </span>
       </div>
-      <div className="panel grid grid-cols-2 gap-5 p-5 md:grid-cols-4 xl:grid-cols-7">
-        <Tile strong label={`Carteira (${pct(r.carteira.acoes, 0)} ações + CDI)`} value={port} />
-        <Tile label="Só as ações, pelos pesos" value={eqW} />
+      <p className="max-w-[78ch] text-[13px] text-ink-2">
+        Simula {acoes} do capital nas ações, pelos pesos do registro, desde o fechamento de {dataBR(r.data_ref)}, e o resto em CDI. Não é a execução da entrada gradual
+        {fin(r.carteira.entrada_sugerida) ? ` de ${pct(r.carteira.entrada_sugerida, 1)}` : ""} sugerida no estudo, nem desconta custos. O registro foi gravado em {dataBR(r.registrado_em)}, com os
+        fechamentos de {dataBR(r.data_ref)}: comprar a esses preços já não era possível quando a lista foi congelada.
+      </p>
+      {mixed && (
+        <p role="status" className="border-l-2 border-[var(--neg)] pl-3 text-[13px] text-ink">
+          As cotações comparadas não são do mesmo dia:{" "}
+          {[...days.entries()]
+            .sort((a, b) => a[0].localeCompare(b[0]))
+            .map(([d, names]) => `${dataBR(d)}: ${names.join(", ")}`)
+            .join("; ")}
+          . Compare os retornos só quando todas as séries tiverem a mesma data.
+        </p>
+      )}
+      <div className="panel grid grid-cols-2 gap-5 p-5 md:grid-cols-4">
+        <Tile strong label={`Carteira (${acoes} ações + CDI)`} value={port} />
+        <Tile label={`Referência: ${acoes} Small Caps + CDI`} value={refSmCdi} note={diff(port, refSmCdi) !== null ? `carteira ${pct(diff(port, refSmCdi), 1, true)} contra a referência` : undefined} />
+        <Tile label="Só as ações, pelos pesos" value={eqW} note={diff(eqW, sm) !== null ? `${pct(diff(eqW, sm), 1, true)} contra o Small Caps` : undefined} />
         <Tile label={`Pesos iguais nas ${r.recomendacoes.length}`} value={eqEqual} />
-        <Tile label="Ibovespa" value={ib} />
         <Tile label="Small Caps" value={sm} />
-        <Tile label="CDI no período" value={cdiAcc} />
-        <Tile label="Mediana das não selecionadas" value={medOthers} note={`${nOthers} ações`} />
+        <Tile label="Ibovespa" value={ib} />
+        <Tile label="CDI no período" value={cdiAcc} note={cdiMode === "realizado" ? "taxas diárias do Banco Central" : "estimado pela taxa anual do registro"} />
+        <Tile label="Mediana das não selecionadas" value={medOthers} note={`${nOthers} de ${nOthersTotal} ações com cotação`} />
       </div>
       <div className="panel overflow-x-auto">
-        <table className="data min-w-[760px] text-[13px]">
+        <table className="data min-w-[820px] text-[13px]">
           <thead>
             <tr>
               <th className="!text-left">Ação</th>
               <th>Preço 28/10</th>
               <th>Agora</th>
+              <th>Proventos</th>
               <th>Retorno</th>
               <th>Contra o Ibovespa</th>
               <th>Preço-teto</th>
               <th>Valor justo</th>
-              <th className="!text-left">Agora está</th>
+              <th className="!text-left">Ao preço de agora</th>
             </tr>
           </thead>
           <tbody>
@@ -285,18 +369,13 @@ export function Desempenho({ r }: { r: Registro }) {
                 </td>
                 <td>{num(x.preco_ref)}</td>
                 <td>{num(x.now)}</td>
+                <td>{x.divs > 0 ? num(x.divs) : "—"}</td>
                 <td className={signClass(x.ret)}>{pct(x.ret, 1, true)}</td>
                 <td className={signClass(fin(x.ret) && ib !== null ? (x.ret as number) - ib : null)}>{fin(x.ret) && ib !== null ? pct((x.ret as number) - ib, 1, true) : "—"}</td>
                 <td>{num(x.teto)}</td>
                 <td>{num(x.valor_justo)}</td>
                 <td className="text-left text-[12px] text-ink-2">
-                  {fin(x.now) && fin(x.valor_justo) && x.now >= x.valor_justo
-                    ? "no valor justo ou acima"
-                    : fin(x.now) && fin(x.teto) && x.now <= x.teto
-                      ? "na faixa de compra"
-                      : fin(x.now)
-                        ? "acima do teto"
-                        : "—"}
+                  {!fin(x.now) || !fin(x.teto) ? "—" : x.now <= x.teto ? `elegível à meta de ${Math.round(r.ke * 100)}%: preço até o teto` : "acompanhamento: acima do teto"}
                 </td>
               </tr>
             ))}
@@ -305,9 +384,22 @@ export function Desempenho({ r }: { r: Registro }) {
       </div>
       {beat !== null && (
         <p className="text-[13px] text-ink-2">
-          {beat} de {nHave} recomendações estão à frente do Ibovespa desde {dataBR(r.data_ref)}.
+          {beat} de {nHave} ações da lista estão à frente do Ibovespa desde {dataBR(r.data_ref)}.
         </p>
       )}
+      <p className="max-w-[78ch] text-[12px] text-muted">
+        {divs
+          ? nDivs > 0
+            ? `Retorno das ações com ${nDivs} ${nDivs === 1 ? "provento" : "proventos"} de data-com no período`
+            : "Retorno de preço: nenhum provento com data-com no período consta na base"
+          : "Retorno de preço, sem proventos"}
+        {divs && divsAsOf ? ` (proventos da B3 conhecidos até ${dataBR(divsAsOf)}; anúncios posteriores não entram)` : ""}. Ibovespa e Small Caps são índices de retorno total, que já incorporam proventos: sem
+        os proventos das ações, a comparação fica desfavorável à carteira.{" "}
+        {cdiMode === "realizado"
+          ? `CDI: taxas diárias realizadas (Banco Central, SGS 12)${lastCdi ? `, até ${dataBR(lastCdi)}` : ""}.`
+          : "CDI: o Banco Central não respondeu; estimado pela taxa anual do registro e pelos dias de segunda a sexta, sem excluir feriados."}{" "}
+        O preço-teto e o valor justo da tabela são os congelados no registro, no Ke de {Math.round(r.ke * 100)}%.
+      </p>
     </section>
   );
 }

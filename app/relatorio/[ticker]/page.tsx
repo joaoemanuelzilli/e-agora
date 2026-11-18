@@ -27,7 +27,7 @@ export default async function Page({ params }: { params: Promise<{ ticker: strin
   const { notes_md: _omit, review_md: _omit2, ...slim } = doc;
   void _omit;
   void _omit2;
-  const rule = (ov as unknown as { opportunity_rule?: string }).opportunity_rule ?? "";
+  const rule = ov.opportunity_rule_v2 ?? ov.opportunity_rule ?? "";
   return (
     <ReportView doc={slim} notesHtml={notesHtml} rank={ov.opportunities.indexOf(doc.row.ticker) + 1} total={ov.opportunities.length} rule={rule} dropped={dropped} />
   );

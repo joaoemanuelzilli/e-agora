@@ -5,7 +5,7 @@ import type { LiveRow } from "@/components/Dashboard";
 import { trackRecord, type Registro } from "@/components/registro/Registro";
 import { Rating, callOf, type Tone } from "@/components/ui/Rating";
 import { brl, num, pct, signClass } from "@/lib/format";
-import { useMarket } from "@/lib/live";
+import { useCdi, useMarket } from "@/lib/live";
 import { ceilingPrice } from "@/lib/valuation";
 
 const fin = (x: unknown): x is number => typeof x === "number" && Number.isFinite(x);
@@ -89,21 +89,21 @@ type Filter = "all" | "buy" | "wait";
 const isBuy = (t: Tone) => t === "in" || t === "strong";
 
 /** Tabela de top picks, com a caixa de recomendação na ponta de cada linha. */
-export function PicksTable({ picks, reg }: { picks: Pick[]; reg?: Registro | null }) {
+export function PicksTable({ picks, reg, ke = 0.25, eligible = null }: { picks: Pick[]; reg?: Registro | null; ke?: number; eligible?: string[] | null }) {
   const [f, setF] = useState<Filter>("all");
   const nBuy = picks.filter((p) => isBuy(p.tone)).length;
   const nWait = picks.filter((p) => p.tone === "out").length;
   const shown = picks.filter((p) => (f === "all" ? true : f === "buy" ? isBuy(p.tone) : p.tone === "out"));
   const opts: { k: Filter; label: string; n: number }[] = [
     { k: "all", label: "Todas", n: picks.length },
-    { k: "buy", label: "Compra", n: nBuy },
-    { k: "wait", label: "Aguardar", n: nWait },
+    { k: "buy", label: "Elegíveis à meta", n: nBuy },
+    { k: "wait", label: "Acima do teto", n: nWait },
   ];
   return (
     <section aria-labelledby="carteira-h" className="mt-6">
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
         <h2 id="carteira-h" className="h2">
-          Carteira recomendada
+          Lista de acompanhamento
         </h2>
         <div role="group" aria-label="Filtrar recomendações" className="flex overflow-hidden rounded-[2px] border border-hairline">
           {opts.map((o) => (
@@ -124,6 +124,12 @@ export function PicksTable({ picks, reg }: { picks: Pick[]; reg?: Registro | nul
           </span>
         )}
       </div>
+
+      <p className="mt-2 max-w-[78ch] text-[13px] text-ink-2">
+        A regra de seleção define quem entra na lista. Só é <b className="font-semibold text-ink">elegível para compra à meta de {Math.round(ke * 100)}% ao ano</b> a ação com preço de agora até o
+        preço-teto (TIR de dono igual ou maior que a meta e preço até o valor justo): {nBuy} de {picks.length} agora
+        {eligible ? `; ${eligible.filter((t) => picks.some((p) => p.r.ticker === t)).length} na foto do estudo` : ""}. As demais ficam em acompanhamento, à espera de preço.
+      </p>
 
       {/* desktop: tabela */}
       <div className="mt-3 hidden md:block">
@@ -244,7 +250,8 @@ function Row({ label, value, cls = "", note }: { label: string; value: string; c
 export function KeyData({ items, reg, rows }: { items: { label: string; value: string; cls?: string; note?: string }[]; reg?: Registro | null; rows: LiveRow[] }) {
   const m = useMarket();
   const byT = Object.fromEntries(rows.map((r) => [r.ticker, r]));
-  const tr = reg ? trackRecord(reg, (t) => (byT[t]?.src ? byT[t].L.price : null), m?.indices?.IBOV?.price, m?.indices?.SMLL?.price) : null;
+  const cdi = useCdi(reg?.data_ref);
+  const tr = reg ? trackRecord(reg, (t) => (byT[t]?.src ? byT[t].L.price : null), m?.indices?.IBOV?.price, m?.indices?.SMLL?.price, { cdiDaily: cdi?.days ?? null }) : null;
   const sc = (v: number | null) => signClass(v);
   return (
     <aside className="keybox rounded-none border-t-2 border-[var(--rule)] px-4 pb-4 pt-3" aria-label="Dados-chave">
@@ -276,19 +283,21 @@ export function KeyData({ items, reg, rows }: { items: { label: string; value: s
           {tr && (
             <>
               <h2 className="mt-5 text-[15px] font-bold">
-                Desde a recomendação <span className="text-[12.5px] font-medium text-muted">{tr.du === 1 ? "1 pregão" : `${tr.du} pregões`}</span>
+                Carteira-alvo desde o registro <span className="text-[12.5px] font-medium text-muted">{tr.du === 1 ? "1 pregão" : `${tr.du} pregões`}</span>
               </h2>
               <dl className="mt-1.5">
                 <Row label="Carteira (ações + CDI)" value={pct(tr.port, 1, true)} cls={sc(tr.port)} />
                 <Row label="Só ações" value={pct(tr.eqW, 1, true)} cls={sc(tr.eqW)} />
                 <Row label="Ibovespa" value={pct(tr.ib, 1, true)} cls={sc(tr.ib)} />
                 <Row label="Small Caps" value={pct(tr.sm, 1, true)} cls={sc(tr.sm)} />
+                <Row label={`Referência: ${pct(reg.carteira.acoes, 0)} Small Caps + CDI`} value={pct(tr.refSmCdi, 1, true)} cls={sc(tr.refSmCdi)} />
                 <Row label="CDI" value={pct(tr.cdiAcc, 1, true)} cls={sc(tr.cdiAcc)} />
-                <Row label={`Mediana das ${reg.universo.length - reg.recomendacoes.length} não selecionadas`} value={pct(tr.medOthers, 1, true)} cls={sc(tr.medOthers)} />
+                <Row label="Mediana das não selecionadas" value={pct(tr.medOthers, 1, true)} cls={sc(tr.medOthers)} note={`${tr.nOthers} de ${tr.nOthersTotal} com cotação`} />
                 {tr.beat !== null && <Row label="À frente do Ibovespa" value={`${tr.beat} de ${tr.nHave}`} />}
               </dl>
               <p className="mt-1 text-[12px] text-muted">
-                Preços de {dataBR(reg.data_ref)} contra agora; retorno de preço, sem proventos.{" "}
+                Simulação com {pct(reg.carteira.acoes, 0)} em ações desde o fechamento de {dataBR(reg.data_ref)}; retorno de preço, sem proventos (os índices incluem proventos); CDI{" "}
+                {tr.cdiMode === "realizado" ? "diário realizado" : "estimado pela taxa anual"}.{" "}
                 <Link href="/registro" className="link">
                   Ver registro
                 </Link>

@@ -8,9 +8,9 @@ export type Call = { tone: Tone; call: string; detail: string; gap: number | nul
 /** Recomendação a partir do preço, do preço-teto e do teto de compra forte (Ke + 5 p.p.). */
 export function callOf(price: number | null | undefined, ceiling: number | null | undefined, strong?: number | null): Call {
   if (!fin(price) || !fin(ceiling)) return { tone: "none", call: "Sem teto", detail: "sem preço-teto calculável", gap: null };
-  if (fin(strong) && price <= strong) return { tone: "strong", call: "Compra forte", detail: "abaixo do teto de compra forte", gap: ceiling / price - 1 };
-  if (price <= ceiling) return { tone: "in", call: "Compra", detail: "na faixa de compra", gap: ceiling / price - 1 };
-  return { tone: "out", call: "Aguardar", detail: `acima do teto: falta cair ${pct(1 - ceiling / price, 1)}`, gap: ceiling / price - 1 };
+  if (fin(strong) && price <= strong) return { tone: "strong", call: "Compra forte", detail: "elegível à meta: abaixo do teto de compra forte", gap: ceiling / price - 1 };
+  if (price <= ceiling) return { tone: "in", call: "Compra", detail: "elegível à meta: preço até o teto", gap: ceiling / price - 1 };
+  return { tone: "out", call: "Aguardar", detail: `acompanhamento, acima do teto: falta cair ${pct(1 - ceiling / price, 1)}`, gap: ceiling / price - 1 };
 }
 
 /** Caixa de recomendação da nota: COMPRA / AGUARDAR, preço-teto e upside até o valor justo. */

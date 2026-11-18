@@ -424,7 +424,7 @@ export function InvestView({ rows, opps, monitors, portfolio, reports = [] }: { 
                       <Link href={`/empresa/${x.r.ticker}`} className="font-semibold hover:text-accent">
                         {x.r.ticker}
                       </Link>
-                      {opps.includes(x.r.ticker) && <span className="rounded px-1 text-[12px] text-accent-ink" style={{ background: "var(--accent-soft)" }}>oportunidade</span>}
+                      {opps.includes(x.r.ticker) && <span className="rounded px-1 text-[12px] text-accent-ink" style={{ background: "var(--accent-soft)" }} title="Passa na regra de seleção; a compra à meta depende do preço-teto">acompanhamento</span>}
                     </label>
                   </td>
                   <td>{num(x.price)}</td>

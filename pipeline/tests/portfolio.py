@@ -404,6 +404,7 @@ def main():
     C = {c["ticker"]: c for c in ov["companies"]}
     U = [c["ticker"] for c in ov["companies"]]
     OPP = list(ov["opportunities"])
+    ELIG = [t for t in (ov.get("eligible") or []) if t in OPP]  # regra v2: TIR >= Ke e preço <= teto
     cdi = (1 + float(ov["macro"]["cdi"][-1]["valor"]) / 100) ** 252 - 1
     cdi_d = (1 + cdi) ** (1 / 252) - 1
     ib_today = ov["market"]["ibov_today"]
@@ -526,8 +527,10 @@ def main():
     specs = [
         ("op7_b3", OPP, "setor", f"{len(OPP)} oportunidades · setor B3 ≤ 40% (excedente em CDI)"),
         ("op7_sub", OPP, "subsetor", f"{len(OPP)} oportunidades · subsetor B3 ≤ 40%"),
-        ("u59", U, "setor", "Universo de 59 · setor B3 ≤ 40%"),
+        ("u59", U, "setor", f"Universo de {len(U)} · setor B3 ≤ 40%"),
     ]
+    if len(ELIG) >= 2:
+        specs.append(("el_b3", ELIG, "setor", f"{len(ELIG)} elegíveis à meta · setor B3 ≤ 40% (excedente em CDI)"))
     sel = {t: i for i, t in enumerate(U)}
     ports = []
     R_hist = R_fill.values  # 2016–2026 completo
@@ -554,9 +557,12 @@ def main():
                       "budget": float(w.sum()), "w": w})
     add("rec_op7_core", 0.5 * find("op7_b3_ms_tir")["w"] + 0.5 * find("op7_b3_rp")["w"],
         f"Recomendada · {len(OPP)} oportunidades (50% máx. Sharpe TIR + 50% paridade de risco), setor B3 ≤ 40%, excedente em CDI", "op7_b3")
+    if len(ELIG) >= 2:
+        add("rec_elig_core", 0.5 * find("el_b3_ms_tir")["w"] + 0.5 * find("el_b3_rp")["w"],
+            f"Elegíveis à meta · {len(ELIG)} ações com TIR ≥ Ke e preço ≤ teto (50% máx. Sharpe TIR + 50% paridade de risco), setor B3 ≤ 40%, excedente em CDI", "el_b3")
     w_ms = find("u59_ms_tir")["w"]
     k_half = float(min(1.0, (np.nansum(w_ms * mu_tir) / (w_ms @ Sig @ w_ms)) / 2))
-    add("alt_u59_halfkelly", k_half * w_ms, f"Alternativa · máx. Sharpe (TIR) do universo de 59 × meio Kelly ({k_half:.0%}), resto em CDI", "u59")
+    add("alt_u59_halfkelly", k_half * w_ms, f"Alternativa · máx. Sharpe (TIR) do universo de {len(U)} × meio Kelly ({k_half:.0%}), resto em CDI", "u59")
 
     # ---------------------------------------------------------------- métricas ex-ante, estresses, MC
     beta_v = np.array([beta[t] for t in U])
@@ -710,6 +716,9 @@ def main():
         "recommended": {"id": rec["id"], "label": rec["label"], "weights": rec["weights"], "metrics": rec["metrics"], "stress": rec["stress"],
                         "weights_equity_sleeve": [{"ticker": x["ticker"], "w": x["w"] / rec["metrics"]["invested"]} for x in rec["weights"]],
                         "sizing": sizing(rec)},
+        "recommended_eligible": (lambda e: {"id": e["id"], "label": e["label"], "weights": e["weights"], "metrics": e["metrics"], "stress": e["stress"],
+                                            "weights_equity_sleeve": [{"ticker": x["ticker"], "w": x["w"] / e["metrics"]["invested"]} for x in e["weights"]],
+                                            "sizing": sizing(e)})(next(r for r in results if r["id"] == "rec_elig_core")) if any(r["id"] == "rec_elig_core" for r in results) else None,
         "stress_long": [{"portfolio": r["id"], "scenario": k, "value": v} for r in results for k, v in r["stress"].items()],
         "backtest": bt,
     }
@@ -903,7 +912,7 @@ def render_md(out, results, stock, U, OPP, cdi):
              f"e P(abaixo do CDI) {pct(nt['p_below_cdi'], 0)}. Com 3 meses de choque, mediana {pct(ch['p50'])}, p5 {pct(ch['p5'])}, "
              f"P(perda) {pct(ch['p_loss'], 0)} e drawdown mediano {pct(ch['mdd_median'])}.")
     am = alt["metrics"]
-    L.append(f"- **Alternativa totalmente diversificável:** o máximo Sharpe do universo de 59 ({wfmt(by['u59_ms_tir']['weights'])}) "
+    L.append(f"- **Alternativa totalmente diversificável:** o máximo Sharpe do universo de {len(U)} ({wfmt(by['u59_ms_tir']['weights'])}) "
              f"tem Sharpe {num(by['u59_ms_tir']['metrics']['sharpe_tir'])}, mas inclui nomes fora das oportunidades (BBAS3, HAPV3, BRSR6). "
              f"Dimensionado a meio Kelly ({pct(am['invested'], 0)} em ações), fica com risco parecido (vol {pct(am['vol'])}, Ibovespa −20% → "
              f"{pct(alt['stress']['ibov_m20'])}).")
@@ -945,7 +954,7 @@ def render_md(out, results, stock, U, OPP, cdi):
     # ------------------------------------------------------------ todas as carteiras
     L.append("## Carteiras testadas\n")
     L.append(f"`op7_b3` = {len(OPP)} oportunidades com setor B3 ≤ 40% (máximo investível 60%, resto em CDI); `op7_sub` = {len(OPP)} oportunidades com subsetor B3 ≤ 40% "
-             "(incorporação ≤ 40%, 100% investido); `u59` = universo de 59 com setor B3 ≤ 40%.\n")
+             "(incorporação ≤ 40%, 100% investido); `u59` = universo da cobertura com setor B3 ≤ 40%.\n")
     L.append("| Carteira | Pesos (% do capital) |\n|---|---|")
     for r in results:
         L.append(f"| {r['id']} | {wfmt(r['weights'])}{' + CDI ' + str(round(r['metrics']['cash_cdi'] * 100)) if r['metrics']['cash_cdi'] > 1e-6 else ''} |")

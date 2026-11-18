@@ -217,9 +217,9 @@ export function OppShowcase({ rows, ke, opps, external, headlines, reports = [],
       <section aria-labelledby="teses-h">
         <div className="sec flex flex-wrap items-baseline justify-between gap-3">
           <h2 id="teses-h" className="h2">
-            A tese de cada recomendação
+            A tese de cada ação da lista
           </h2>
-          <span className="max-w-[68ch] text-[12.5px] text-muted">Em cada régua: faixa de compra em verde, preço de agora no ponto, valor justo no traço escuro e preço pré-eleição no círculo vazio</span>
+          <span className="max-w-[68ch] text-[12.5px] text-muted">Elegível à meta só com o preço dentro da faixa de compra. Em cada régua: faixa de compra em verde, preço de agora no ponto, valor justo no traço escuro e preço pré-eleição no círculo vazio</span>
         </div>
         <div className="mt-3 grid grid-cols-1 gap-x-10 gap-y-6 md:grid-cols-2">
           {list.map((r, i) => (

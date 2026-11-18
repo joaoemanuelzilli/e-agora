@@ -171,20 +171,36 @@ def engine(m):
     pr = m.get("proj") or {}
     sh = m.get("shares") or {}
     e = {"template": m.get("template"), "ke_base": KE, "g": m.get("g"), "roe_T": m.get("roe_T"),
-         "f26": pr.get("f26"), "taus": m.get("taus"), "tau_T": m.get("tau_T"),
+         "f26": pr.get("f_fwd", pr.get("f26")), "taus": m.get("taus"), "tau_T": m.get("tau_T"),
          "div": pr.get("dividends"), "ni_last": (pr.get("ni_controlling") or [None])[-1],
          "eps": m.get("eps"), "dps": m.get("dps"), "n_sh": sh.get("outstanding_mn"), "per_unit": sh.get("per_unit"),
          "values_share": m.get("values_share"), "weights": m.get("weights"), "pe_target": m.get("pe_target")}
     if m.get("template") != "financial":
         d = m.get("dcf") or {}
         e.update({"fcff": pr.get("fcff"), "nopat_last": (pr.get("ebit") or [0])[-1] * (1 - (pr.get("tax_rate") or [0.3])[-1]),
-                  "roic_T": d.get("roic_T"), "kd": d.get("kd"), "wd": d.get("wd"), "nd_base": pr.get("nd_base"),
-                  "minority_value": d.get("minority_value"), "eq_bridge_extra": (d.get("equity") or 0) - ((d.get("ev") or 0) - (pr.get("nd_base") or 0) - (d.get("minority_value") or 0))})
+                  "roic_T": d.get("roic_T"), "kd": d.get("kd"), "wd": d.get("wd"), "nd_base": pr.get("nd_val", pr.get("nd_base")),
+                  "minority_value": d.get("minority_value"), "eq_bridge_extra": (d.get("equity") or 0) - ((d.get("ev") or 0) - (pr.get("nd_val", pr.get("nd_base")) or 0) - (d.get("minority_value") or 0))})
     return e
+
+
+def ceiling(val):
+    """Preço-teto no Ke do estudo (por unidade negociada): o menor entre o DDM a Ke (preço em que a TIR de dono = Ke)
+    e o valor justo. Mesma definição de lib/valuation.ts (ceilingPrice). Holding: soma das partes."""
+    fv = (val or {}).get("fair_value")
+    if not val or fv is None:
+        return None
+    if val.get("template") == "holding":
+        return r(fv, 4)
+    ddm = (val.get("values") or {}).get("ddm")
+    if ddm is None or not np.isfinite(ddm) or ddm <= 0:
+        return None
+    return r(min(ddm, fv) if fv > 0 else ddm, 4)
 
 
 def mc_quantiles(m):
     mc = (m or {}).get("monte_carlo") or {}
+    if mc.get("quantiles"):  # quantis da amostra completa de 5.000 sorteios
+        return [round(float(x), 4) for x in mc["quantiles"]]
     smp = mc.get("samples")
     if not smp:
         return None
@@ -253,6 +269,7 @@ def main():
             "spark": [x[1] for x in (mt.get("daily_3y") or [])[-260:][::5]] + ([val.get("price")] if val.get("price") else []),
             "engine": engine(m) if m else None,
             "mc_q": mc_quantiles(m),
+            "ceiling": ceiling(val),
             "per_unit": (val.get("shares") or {}).get("per_unit") or h.get("shares_per_unit") or 1,
             "listed_classes": (rs or {}).get("listed_classes"),
         }
@@ -318,6 +335,12 @@ def main():
         return out
     # a regra vale para os números revisados; relatório de quem saiu continua publicado, com o motivo
     opp = [x for x in ranked if not fails(x)][:8]
+    # regra v2 (revisão de 17/11): a lista acima é de ACOMPANHAMENTO. Elegível para compra à meta é só quem, dentro
+    # dela, tem TIR de dono >= Ke e preço <= preço-teto (as duas condições coincidem quando o teto é o DDM a Ke).
+    def eligible_buy(x):
+        return (x["irr_implied"] or -1) >= KE and x.get("ceiling") is not None and x["price_ref"] is not None and x["price_ref"] <= x["ceiling"]
+    elig = [x["ticker"] for x in opp if eligible_buy(x)]
+    passed_all = [x["ticker"] for x in ranked if not fails(x)]
     reported = sorted(p.stem for p in (ROOT / "research" / "reports").glob("*.json") if not p.stem.startswith("_"))
     opp_set = {x["ticker"] for x in opp}
     by_tk = {x["ticker"]: x for x in rows}
@@ -333,8 +356,11 @@ def main():
         s = (mk["sectors"].get(x["ticker"]) or {}).get("setor") or "Outros"
         sectors.setdefault(s, []).append(x["actual"])
     sector_stats = sorted([{"setor": k, "n": len(v), "median": float(np.median(v)), "mean": float(np.mean(v))} for k, v in sectors.items()], key=lambda d: d["median"])
-    overview = {"generated_at": datetime.now().isoformat(timespec="seconds"), "ke": KE, "valuation_date": "2026-10-26",
+    overview = {"generated_at": datetime.now().isoformat(timespec="seconds"), "ke": KE, "valuation_date": "2026-10-28",
                 "companies": rows, "opportunities": [x["ticker"] for x in opp],
+                "eligible": elig, "passed_filters": passed_all,
+                "opportunity_rule_v2": "Lista de acompanhamento: TIR de dono ≥ 20%, chance ≥ 45% no Monte Carlo, fora da zona de risco do Altman Z″ e confiança diferente de baixa; as 8 primeiras pelo escore. "
+                                       "Elegível para compra à meta: dentro da lista, TIR de dono ≥ 25% (Ke) e preço ≤ preço-teto. As demais ficam em acompanhamento até o preço voltar ao teto.",
                 "reports": reported, "opportunities_dropped": dropped,
                 "valuation_label": val_label,
                 "opportunity_rule": "TIR de dono ≥ 20%, P(valor justo > preço) ≥ 45% no Monte Carlo, fora da zona de risco do Altman Z″ e confiança do analista diferente de baixa; as 8 primeiras pelo escore multifator. "

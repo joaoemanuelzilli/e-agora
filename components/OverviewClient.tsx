@@ -15,8 +15,8 @@ function median(a: number[]) {
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
 }
 
-export function OverviewClient({ rows, opps, market, xsec, external, headlines, valLabel, reports = [], registro = null, names = {}, theses = {} }: {
-  rows: Row[]; opps: string[]; market: MarketStats; xsec: XSec; external?: External | null; headlines: Record<string, string>; valLabel?: string | null; reports?: string[]; registro?: Registro | null; names?: Record<string, string>; theses?: Record<string, string>;
+export function OverviewClient({ rows, opps, market, xsec, external, headlines, valLabel, reports = [], registro = null, names = {}, theses = {}, eligible = null }: {
+  rows: Row[]; opps: string[]; market: MarketStats; xsec: XSec; external?: External | null; headlines: Record<string, string>; valLabel?: string | null; reports?: string[]; registro?: Registro | null; names?: Record<string, string>; theses?: Record<string, string>; eligible?: string[] | null;
 }) {
   const { rows: live, ke, asOf } = useLiveRows(rows);
   const m = useMarket();
@@ -37,10 +37,11 @@ export function OverviewClient({ rows, opps, market, xsec, external, headlines, 
     { label: "Ibovespa hoje", value: pct(ibChg, 1, true), cls: signClass(ibChg), note: rank && ibChg !== null && ibChg < -0.04 ? `${rank}º pior dia desde 1998` : undefined },
     { label: "Mediana da cobertura desde a eleição", value: pct(med, 1, true), cls: signClass(med) },
     { label: "Dia do crash, 26/10 às 13h02", value: pct(market.ibov_today.chg, 1, true), cls: signClass(market.ibov_today.chg), note: `${market.ibov_today.rank_since_1998 ?? "—"}º pior dia desde 1998` },
-    { label: "Quanto da queda foi macro", value: pct(xsec.r2, 0), note: `R² em ${xsec.n} ações` },
+    { label: "Variação entre ações explicada pela regressão", value: pct(xsec.r2, 0), note: `R² em ${xsec.n} ações; descreve diferenças entre ações, não a causa da queda` },
     { label: "Ibovespa 12 meses após quedas de 5%+", value: pct(f12.median, 0, true), cls: signClass(f12.median), note: `mediana de ${f12.n} episódios, alta em ${pct(f12.pct_pos, 0)}` },
     { label: `TIR de dono acima do Ke de ${Math.round(ke * 100)}%`, value: `${nKe} de ${n}` },
-    { label: "Passam na regra", value: `${opps.length} de ${n}` },
+    { label: "Lista de acompanhamento", value: `${opps.length} de ${n}`, note: "passam na regra de seleção" },
+    { label: `Elegíveis à meta de ${Math.round(ke * 100)}% agora`, value: `${picks.filter((p) => p.tone === "in" || p.tone === "strong").length} de ${opps.length}`, note: "preço até o preço-teto" },
   ];
   return (
     <div className="space-y-10">
@@ -68,9 +69,9 @@ export function OverviewClient({ rows, opps, market, xsec, external, headlines, 
           <p className="mt-4 max-w-[68ch] text-[14.5px] leading-relaxed text-ink-2">
             Lula venceu com 51,8% e a bolsa acionou o circuit breaker em 26/10. Das {n} empresas cobertas, avaliadas uma a uma com dados da CVM e da B3, ficam as{" "}
             <b className="font-semibold text-ink">{opps.length} de maior escore multifator</b> entre as que têm TIR de dono de pelo menos 20%, chance de pelo menos 45% no Monte Carlo e nenhum risco de
-            insolvência pelo Altman.
+            insolvência pelo Altman. Essa é a lista de acompanhamento; para compra à meta de {Math.round(ke * 100)}% ao ano, vale só quem está com preço até o preço-teto.
           </p>
-          <PicksTable picks={picks} reg={registro} />
+          <PicksTable picks={picks} reg={registro} ke={ke} eligible={eligible} />
         </div>
         <div className="lg:col-span-3">
           <KeyData items={keItems} reg={registro} rows={live} />

@@ -24,19 +24,19 @@ export default function Page() {
     if (typeof first === "string") theses[t] = first;
   }
   const registro = getRegistros<Registro>()[0] ?? null;
-  const valLabel = (ov as unknown as { valuation_label?: string | null }).valuation_label ?? null;
+  const valLabel = ov.valuation_label ?? null;
   const pts = ov.xsec.points;
   const extremes = [...pts].sort((a, b) => a.residual - b.residual);
   const labelSet = new Set([...extremes.slice(0, 6), ...extremes.slice(-4)].map((p) => p.ticker));
   return (
     <div className="space-y-8">
-      <OverviewClient rows={ov.companies} opps={ov.opportunities} market={ov.market} xsec={ov.xsec} external={external} headlines={headlines} valLabel={valLabel} reports={ov.reports ?? []} registro={registro} names={displayNames()} theses={theses} />
+      <OverviewClient rows={ov.companies} opps={ov.opportunities} market={ov.market} xsec={ov.xsec} external={external} headlines={headlines} valLabel={valLabel} reports={ov.reports ?? []} registro={registro} names={displayNames()} theses={theses} eligible={ov.eligible ?? null} />
 
       <section className="grid grid-cols-1 gap-6 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <Scatter
-            title="A queda de hoje foi sistêmica"
-            subtitle={`Queda prevista só por fatores (beta de baixa, alavancagem, porte, setor) contra a queda observada, ${ov.xsec.n} ações. R² = ${Math.round(ov.xsec.r2 * 100)}%. Acima da diagonal caiu menos que o previsto.`}
+            title={`Características prévias explicam ${Math.round(ov.xsec.r2 * 100)}% das diferenças de queda`}
+            subtitle={`Queda prevista só por fatores (beta de baixa, alavancagem, porte, setor) contra a queda observada, ${ov.xsec.n} ações. O R² descreve diferenças entre ações, não a parcela da queda causada por fatores macro. Acima da diagonal caiu menos que o previsto.`}
             points={pts.map((p) => ({
               id: p.ticker,
               x: p.predicted,

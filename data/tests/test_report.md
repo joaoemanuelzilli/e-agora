@@ -1,10 +1,10 @@
 # Relatório da suíte de testes automatizados
 
-*Execução iniciada em 2026-10-28T17:19:17-03:00; relatório gerado em 2026-10-28T17:19:34. Base: `data/app/overview.json` de 2026-10-28T17:19:17; `data/model` mais recente de 2026-10-28T17:07:30. Comando: `bash tests/run_all.sh`.*
+*Execução iniciada em 2026-11-18T14:31:50-03:00; relatório gerado em 2026-11-18T14:32:04. Base: `data/app/overview.json` de 2026-11-18T14:19:04; `data/model` mais recente de 2026-11-18T14:19:03. Comando: `bash tests/run_all.sh`.*
 
-**4491 testes: 4428 aprovados, 51 falhas, 11 pulados e 1 falha conhecida (xfail).** Tolerância da paridade: 0,5% (mais meia unidade da 4ª casa arredondada no `overview.json`).
+**4354 testes: 4290 aprovados, 52 falhas, 11 pulados e 1 falha conhecida (xfail).** Tolerância da paridade: 0,5% (mais meia unidade da 4ª casa arredondada no `overview.json`).
 
-Das 51 falhas de teste, **37 são de empresas da cobertura**, 12 de outras empresas com dados em `data/hist` ou `data/market` e 2 são verificações globais.
+Das 50 falhas de teste, **36 são de empresas da cobertura**, 12 de outras empresas com dados em `data/hist` ou `data/market` e 2 são verificações globais.
 
 **Paridade TS × Python:** `fairValue` a 25% 122/122; `irrImplied` 122/122; `irr3y` 122/122; upside do painel 122/122; `fairValue` em Ke 20% 122/122 e em Ke 30% 122/122 (aprovados/executados).
 
@@ -13,11 +13,13 @@ Das 51 falhas de teste, **37 são de empresas da cobertura**, 12 de outras empre
 | Integridade CVM (`data/hist`) | 988 | 947 | 30 | 10 | 1 |
 | Mercado (`data/market`) | 864 | 844 | 20 | 0 | 0 |
 | Modelo (`data/model`, `data/app`) | 1416 | 1416 | 0 | 0 | 0 |
-| Paridade do motor TS × Python | 1084 | 1082 | 1 | 1 | 0 |
-| App: rotas com `next start` | 138 | 138 | 0 | 0 | 0 |
-| `npx next build` | 1 | 1 | 0 | 0 | 0 |
+| Paridade do motor TS × Python | 1084 | 1083 | 0 | 1 | 0 |
+| App: rotas com `next start` | — | — | não executado | — | — |
+| `npx next build` | 1 | 0 | 1 | 0 | 0 |
 
-`next build`: passou; 140 páginas estáticas geradas. Rotas: `next start -p 3300` com as 4 páginas gerais, as páginas `/empresa/{T}` da cobertura, os 8 relatórios `/relatorio/{T}`, `/api/quotes?t=RENT3` e `/api/market`; o servidor é encerrado ao fim pela porta 3300.
+**Rotas não testadas** (código 1): build falhou: rotas não testadas
+
+`next build`: **falhou** (código 1); 141 páginas estáticas geradas. Rotas: `next start -p 3300` com as 4 páginas gerais, as páginas `/empresa/{T}` da cobertura, os 8 relatórios `/relatorio/{T}`, `/api/quotes?t=RENT3` e `/api/market`; o servidor é encerrado ao fim pela porta 3300.
 
 ## Bugs e correções sugeridas
 
@@ -37,13 +39,13 @@ Em ordem de impacto. A linha de cada arquivo é localizada na hora a partir do t
 
 ### 3. Beta em dias de crash estimado com só 8 a 15 observações (valores de −1,2 a 4,6 exibidos na página da empresa) — severidade baixa
 
-- **Onde:** `pipeline/market.py:174`, `components/company/CompanyVal.tsx:367`
+- **Onde:** `pipeline/market.py:247`, `components/company/CompanyVal.tsx:367`
 - **Evidência:** 1 falha; empresas: . Exemplo: 1 problema(s): sem beta diário de 2 anos
 - **Correção:** Exigir pelo menos 30 dias de crash, ou encolher a estimativa na direção do `beta_down_3y` (shrinkage de Vasicek/Blume), e ocultar o número na página quando `n_crash_days` < 30.
 
 ### 4. Salto diário > 35% sem evento societário na série ajustada — severidade baixa
 
-- **Onde:** `pipeline/market.py:154`
+- **Onde:** `pipeline/market.py:227`
 - **Evidência:** 9 falhas; empresas: BRAP4, CASH3, DASA3, HAPV3, POSI3, PRIO3, QUAL3, RANI3, USIM5 (4 da cobertura). Exemplo: 1 problema(s): 2021-12-17: -58.5% (fora da janela de 3 anos, marcado pelo pipeline como não explicado)
 - **Correção:** HAPV3 caiu 42,2% em 13/11/2025. É provavelmente um movimento real (resultado do 3T25), não um erro de ajuste. Convém registrar uma lista de eventos de mercado explicados no pipeline (ou uma nota em `research/`) para que `price_jumps_unexplained` traga só o que de fato precisa de revisão.
 
@@ -126,13 +128,9 @@ Em ordem de impacto. A linha de cada arquivo é localizada na hora a partir do t
 
 - **RIAA3**: 1 problema(s): DY TTM 52%
 
-### Paridade do motor TS × Python · `P(valor > preço) do painel (quantis) ≈ Monte Carlo do Python (±5 p.p.)` — 1 falha(s), 1 na cobertura
-
-- **YDUQ3**: YDUQ3 probAbove(mc_q)=0.3613 × prob_mc=0.3092 (quantis vêm de 400 amostras das 5.000)
-
 ## Falhas conhecidas (xfail) e testes pulados
 
-- pulado (1): CVCB3 — DDM(25%) por ação = -0.2445 ≤ 0 (lucro terminal negativo): não há preço positivo para a ida e volta
+- pulado (1): CVCB3 — DDM(25%) por ação = -0.2448 ≤ 0 (lucro terminal negativo): não há preço positivo para a ida e volta
 - pulado (10): ABCB4, BBAS3, BBDC3, BBDC4, BPAC11, BRSR6, ITUB3, ITUB4, PINE4, SANB11 — financeira: DL não se aplica
 - xfail (1): HAPV3 — IFRS 17 no ITR 2026: 3.01 do 6M26 não é comparável ao DFP 2025; base sobrescrita em research/HAPV3.json (overrides)
 

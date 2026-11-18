@@ -104,7 +104,14 @@ export type Overview = {
   ke: number;
   valuation_date: string;
   companies: Row[];
+  /** Lista de acompanhamento: passa na regra de seleção (TIR ≥ 20%, chance ≥ 45%, Altman, confiança; 8 primeiras pelo escore). */
   opportunities: string[];
+  /** Dentro da lista, elegíveis para compra à meta na foto do estudo (preço ≤ preço-teto no Ke). Opcional: vem do pipeline. */
+  eligible?: string[];
+  opportunity_rule?: string;
+  /** Regra em duas camadas (acompanhamento × elegível à meta); quando existe, substitui `opportunity_rule` na exibição. */
+  opportunity_rule_v2?: string;
+  valuation_label?: string | null;
   reports?: string[];
   opportunities_dropped?: { ticker: string; reasons: string[] }[];
   market: MarketStats;

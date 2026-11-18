@@ -20,7 +20,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 KE = 0.25
 TAX_SHIELD = 0.34
-VAL_DATE = date(2026, 10, 26)
+VAL_DATE = date(2026, 10, 28)  # mesma data-base da foto de preços (fechamento de 28/10/2026)
 YEARS = [2026, 2027, 2028, 2029, 2030]
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 N_MC = 5000
@@ -29,6 +29,18 @@ N_MC = 5000
 # ------------------------------------------------------------------ utilitários
 def yf(d0, d1):
     return (d1 - d0).days / 365.25
+
+
+def stub_elapsed(bdate):
+    """Fração do stub de 2026 (balanço-base → 31/12) já decorrida na data de avaliação.
+
+    O caixa gerado e os proventos pagos entre o balanço-base e a data de avaliação não são fluxo futuro do
+    comprador: entram pela ponte de dívida líquida (DCF) e ficam fora do DDM/TIR. Hipótese: fluxos uniformes no stub."""
+    end = date(2026, 12, 31)
+    tot = (end - bdate).days
+    if tot <= 0:
+        return 0.0
+    return max(0, min(tot, (VAL_DATE - bdate).days)) / tot
 
 
 def arr(x, n=5, default=0.0):
@@ -169,6 +181,11 @@ def project_industrial(prem, hist, shifts=None):
         div[i] = max(0.0, nic[i]) * po[i]
         cf_pre = ebitda[i] - tax[i] + fin[i] - capex[i] - dnwc[i] - (ni[i] - nic[i]) * po[i]
         frac = f26 if i == 0 else 1.0
+        if i == 0:
+            # ponte balanço-base → data de avaliação: mesma identidade de caixa, só pela parte já decorrida do stub
+            fa = stub_elapsed(bdate)
+            nd_val = prev_nd - fa * f26 * (cf_pre - div[i] - bb[i] + iss[i])
+            eq_val = prev_eq + fa * f26 * (nic[i] - div[i] - bb[i] + iss[i])
         nd[i] = prev_nd - frac * cf_pre + frac * (div[i] + bb[i] - iss[i])
         eq[i] = prev_eq + frac * (nic[i] - div[i] - bb[i] + iss[i])
         prev_rev, prev_nd, prev_eq = rev[i], nd[i], eq[i]
@@ -180,7 +197,8 @@ def project_industrial(prem, hist, shifts=None):
     return dict(rev0=rev0, revenue=rev, ebitda=ebitda, d_and_a=dep, ebit=ebit, fin_result=fin, ebt=ebt, taxes=tax,
                 net_income=ni, ni_controlling=nic, capex=capex, d_nwc=dnwc, fcff=fcff, dividends=div, net_debt=nd,
                 equity=eq, roe=roe, roic=roic, tax_rate=tx, payout=po, growth=g, margin=m,
-                nd_base=nd_base, eq_base=eq_base, eq_fy=eq_fy, base_date=bdate, f26=f26)
+                nd_base=nd_base, eq_base=eq_base, eq_fy=eq_fy, base_date=bdate, f26=f26,
+                stub_elapsed=fa, f_fwd=f26 * (1 - fa), nd_val=nd_val, eq_val=eq_val)
 
 
 def project_financial(prem, hist, shifts=None):
@@ -213,12 +231,16 @@ def project_financial(prem, hist, shifts=None):
     eq_start = np.concatenate([[eq_fy], eq[:-1]])
     roe = ni / ((eq_start + eq) / 2)
     return dict(ni0=ni0, net_income=ni, ni_controlling=ni, dividends=div, equity=eq, roe=roe, payout=po,
-                eq_fy=eq_fy, eq_base=eq_base, base_date=bdate, f26=f26, growth=np.diff(np.concatenate([[ni0], ni])) / np.abs(np.concatenate([[ni0], ni[:-1]])))
+                eq_fy=eq_fy, eq_base=eq_base, base_date=bdate, f26=f26, stub_elapsed=stub_elapsed(bdate),
+                f_fwd=f26 * (1 - stub_elapsed(bdate)),
+                eq_val=eq_base + stub_elapsed(bdate) * f26 * (ni[0] - div[0]), growth=np.diff(np.concatenate([[ni0], ni])) / np.abs(np.concatenate([[ni0], ni[:-1]])))
 
 
 # ------------------------------------------------------------------ valuation
 def timings(base_date, f26):
-    t_mid26 = date.fromordinal(base_date.toordinal() + int((date(2026, 12, 31) - base_date).days / 2))
+    # o stub descontado é só a parte posterior à data de avaliação (meio do período restante até 31/12)
+    start = max(base_date, VAL_DATE)
+    t_mid26 = date.fromordinal(start.toordinal() + int((date(2026, 12, 31) - start).days / 2))
     taus = [yf(VAL_DATE, t_mid26)] + [yf(VAL_DATE, date(y, 7, 1)) for y in YEARS[1:]]
     return np.array(taus), yf(VAL_DATE, date(2030, 12, 31))
 
@@ -274,7 +296,7 @@ def value_company(prem, hist, ke=KE, shifts=None, price=None, mcap=None, detail=
         pr = project_industrial(prem, hist, shifts)
     taus, tau_T = timings(pr["base_date"], pr["f26"])
     roe_T = num(term.get("roe"), float(np.nanmean(pr["roe"][-2:])) if np.isfinite(np.nanmean(pr["roe"][-2:])) else 0.15)
-    eq_ddm, pv_div, tv_eq = ddm_value(pr["dividends"], pr["ni_controlling"][-1], pr["f26"], taus, tau_T, ke, g, roe_T)
+    eq_ddm, pv_div, tv_eq = ddm_value(pr["dividends"], pr["ni_controlling"][-1], pr["f_fwd"], taus, tau_T, ke, g, roe_T)
     eps = pr["ni_controlling"] / n_sh
     dps = pr["dividends"] / n_sh
     bvps = pr["equity"] / n_sh
@@ -286,12 +308,12 @@ def value_company(prem, hist, ke=KE, shifts=None, price=None, mcap=None, detail=
         wd = w.get("target_debt_weight")
         if wd is None:
             pre_mcap = mcap if mcap else None
-            wd = max(0.0, min(0.6, pr["nd_base"] / (pr["nd_base"] + pre_mcap))) if pre_mcap and pr["nd_base"] > 0 else 0.0
+            wd = max(0.0, min(0.6, pr["nd_val"] / (pr["nd_val"] + pre_mcap))) if pre_mcap and pr["nd_val"] > 0 else 0.0
         wacc = (1 - wd) * ke + wd * kd * (1 - TAX_SHIELD)
         roic_T = num(term.get("roic"), float(np.nanmean(pr["roic"][-2:])) if np.isfinite(np.nanmean(pr["roic"][-2:])) else wacc)
-        ev, pv_f, tv_f = dcf_value(pr, pr["f26"], taus, tau_T, wacc, g, roic_T)
+        ev, pv_f, tv_f = dcf_value(pr, pr["f_fwd"], taus, tau_T, wacc, g, roic_T)
         minority_v = num(adj.get("minority_value"), num(bal.get("minority")))
-        eq_dcf = ev - pr["nd_base"] - minority_v + num(adj.get("non_operating_assets")) - num(adj.get("other_debt_like"))
+        eq_dcf = ev - pr["nd_val"] - minority_v + num(adj.get("non_operating_assets")) - num(adj.get("other_debt_like"))
         vals["dcf"] = eq_dcf / n_sh
         out["dcf"] = {"wacc": wacc, "kd": kd, "wd": wd, "ev": ev, "pv_explicit": pv_f, "tv": tv_f,
                       "pv_tv": tv_f / (1 + wacc) ** tau_T, "tv_share": (tv_f / (1 + wacc) ** tau_T) / ev if ev else None,
@@ -344,7 +366,7 @@ def value_company(prem, hist, ke=KE, shifts=None, price=None, mcap=None, detail=
     if price:
         p_sh = price / unit
         out["upside"] = fair / p_sh - 1 if fair else None
-        f26 = pr["f26"]
+        f26 = pr["f_fwd"]  # só os dividendos posteriores à data de avaliação pertencem ao comprador
         def pv_eq(r):
             if r <= g + 1e-4:
                 return float("inf")
@@ -366,7 +388,7 @@ def value_company(prem, hist, ke=KE, shifts=None, price=None, mcap=None, detail=
         out["pbv_now"] = p_sh / bv_now if bv_now > 0 else None
         mc_now = mcap_now or mcap
         if tpl != "financial" and mc_now:
-            ev_now = mc_now + pr["nd_base"] + out["dcf"]["minority_value"]
+            ev_now = mc_now + pr["nd_val"] + out["dcf"]["minority_value"]
             out["ev_now"] = ev_now
             ebitda_ltm = num(ltm.get("ebitda"))
             out["ev_ebitda_ltm"] = ev_now / ebitda_ltm if ebitda_ltm > 0 else None
@@ -476,6 +498,8 @@ def monte_carlo(prem, hist, price, mcap, n=N_MC, seed=7):
     return {"n": int(len(out)), "mean": float(out.mean()), "std": float(out.std()), **pct,
             "prob_above_price": float((out > price).mean()) if price else None,
             "hist": {"counts": hist_counts.tolist(), "edges": edges.tolist()},
+            # quantis 0..100 da amostra completa (o painel usa estes; antes reconstruía de 400 sorteios)
+            "quantiles": np.percentile(out, np.linspace(0, 100, 101)).round(4).tolist(),
             "samples": np.sort(rng.choice(out, size=min(400, len(out)), replace=False)).round(4).tolist(),
             "params": {"revenue_growth_sd": sd_g, "ebitda_margin_sd": sd_m, "terminal_g_sd": sd_T, "capex_pct_sd": sd_c, "corr_growth_margin": 0.5}}
 

@@ -73,7 +73,7 @@ export function Valuation({ doc }: { doc: any }) {
           { label: "VP dos fluxos 2026–30", value: d.pv_explicit },
           { label: "VP da perpetuidade", value: d.pv_tv },
           { label: "Valor da firma", value: d.ev, total: true },
-          { label: "Dívida líquida", value: -(e.nd_base ?? 0) },
+          { label: "Dívida líquida na data de avaliação", value: -(e.nd_base ?? 0) },
           { label: "Minoritários", value: -(d.minority_value ?? 0) },
           { label: "Ajustes", value: (d.equity ?? 0) - ((d.ev ?? 0) - (e.nd_base ?? 0) - (d.minority_value ?? 0)) },
           { label: "Valor do equity", value: d.equity, total: true },

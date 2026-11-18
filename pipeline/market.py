@@ -78,6 +78,79 @@ def fwd(series, d0, days):
     return float(s.iloc[days] / s.iloc[0] - 1)
 
 
+def xsec_regression(stats, sect):
+    """Regressão transversal da queda do dia do choque contra características medidas antes do pregão.
+
+    Descreve diferenças ENTRE ações (R² transversal); não mede a fração causal da queda atribuída ao macro.
+    Além do t clássico, grava t robusto a heterocedasticidade (HC3) e t com erros agrupados por setor B3."""
+    xs = []
+    for tk, st in stats.items():
+        h = ROOT / "data" / "hist" / f"{tk}.json"
+        lev, mcap = None, None
+        if h.exists():
+            hh = json.load(open(h))
+            ltm = hh.get("ltm") or {}
+            bal = hh.get("balance") or {}
+            if not hh.get("is_financial") and ltm.get("ebitda") and ltm["ebitda"] > 0 and bal.get("net_debt") is not None:
+                lev = bal["net_debt"] / ltm["ebitda"]
+            sh = (hh.get("shares") or {}).get("outstanding")
+            if sh and st["today"]["prev_close"]:
+                mcap = st["today"]["prev_close"] * sh / (hh.get("shares_per_unit") or 1) / 1e6
+        s_ = sect.get(tk, {})
+        # exportadora = materiais básicos + lista manual. O setor de petróleo da B3 ("Petróleo. Gás e Biocombustíveis") mistura
+        # produtoras e distribuidoras domésticas e fica de fora: incluí-lo baixa o R² de 0,712 para 0,707 (teste de 18/11/2026).
+        exporter = s_.get("setor") == "Materiais Básicos" or tk in ("EMBJ3", "WEGE3", "SUZB3", "KLBN11", "BEEF3", "MBRF3", "SLCE3")
+        xs.append({"ticker": tk, "y": st["today"]["chg"], "beta": st["beta_down_3y"] if st["beta_down_3y"] is not None else st["beta_2y_daily"],
+                   "lev": lev, "log_mcap": math.log(mcap) if mcap else None, "exporter": 1.0 if exporter else 0.0,
+                   "financial": 1.0 if s_.get("setor") == "Financeiro" else 0.0, "state": 1.0 if tk in STATE else 0.0,
+                   "utility": 1.0 if s_.get("setor") == "Utilidade Pública" else 0.0,
+                   "consumo": 1.0 if s_.get("setor") == "Consumo Cíclico" else 0.0, "mom": st["mom_12_1"]})
+    X = pd.DataFrame(xs).set_index("ticker")
+    X["lev_c"] = X["lev"].clip(-2, 8).fillna(X["lev"].median())
+    X["log_mcap"] = X["log_mcap"].fillna(X["log_mcap"].median())
+    X["mom"] = X["mom"].fillna(0)
+    cols = ["beta", "lev_c", "log_mcap", "exporter", "financial", "state", "utility", "consumo"]
+    Xm = X.dropna(subset=["y", "beta"])
+    A = np.column_stack([np.ones(len(Xm))] + [Xm[c].values for c in cols])
+    coef, *_ = np.linalg.lstsq(A, Xm.y.values, rcond=None)
+    pred = A @ coef
+    resid = Xm.y.values - pred
+    sst = ((Xm.y - Xm.y.mean()) ** 2).sum()
+    r2 = 1 - (resid ** 2).sum() / sst
+    s2 = (resid ** 2).sum() / (len(Xm) - len(cols) - 1)
+    cov_b = s2 * np.linalg.inv(A.T @ A)
+    tstats = coef / np.sqrt(np.diag(cov_b))
+    # erros robustos: HC3 (heterocedasticidade) e agrupados por setor B3 (dependência setorial)
+    XtX_inv = np.linalg.inv(A.T @ A)
+    hat = np.einsum("ij,jk,ik->i", A, XtX_inv, A)
+    e3 = resid / np.clip(1 - hat, 1e-6, None)
+    cov_hc3 = XtX_inv @ (A.T * e3 ** 2) @ A @ XtX_inv
+    t_hc3 = coef / np.sqrt(np.diag(cov_hc3))
+    grp = pd.Series([(sect.get(t, {}) or {}).get("setor") or "Outros" for t in Xm.index], index=Xm.index)
+    meat = np.zeros((A.shape[1], A.shape[1]))
+    for g_ in grp.unique():
+        m_ = (grp == g_).values
+        sg = A[m_].T @ resid[m_]
+        meat += np.outer(sg, sg)
+    G_, n_, k_ = grp.nunique(), len(Xm), A.shape[1]
+    cov_cl = XtX_inv @ meat @ XtX_inv * (G_ / (G_ - 1)) * ((n_ - 1) / (n_ - k_))
+    t_cl = coef / np.sqrt(np.clip(np.diag(cov_cl), 1e-18, None))
+    # só beta
+    A1 = np.column_stack([np.ones(len(Xm)), Xm.beta.values])
+    c1, *_ = np.linalg.lstsq(A1, Xm.y.values, rcond=None)
+    r2_beta = 1 - ((Xm.y.values - A1 @ c1) ** 2).sum() / sst
+    xsec = {"n": int(len(Xm)), "r2": float(r2), "r2_beta_only": float(r2_beta),
+            "coef": dict(zip(["const"] + cols, map(float, coef))), "t": dict(zip(["const"] + cols, map(float, tstats))),
+            "t_hc3": dict(zip(["const"] + cols, map(float, t_hc3))), "t_cluster_setor": dict(zip(["const"] + cols, map(float, t_cl))),
+            "n_clusters": int(G_),
+            "points": [{"ticker": t, "actual": float(a), "predicted": float(p_), "residual": float(a - p_)} for t, a, p_ in zip(Xm.index, Xm.y.values, pred)]}
+    for pnt in xsec["points"]:
+        if pnt["ticker"] in stats:
+            stats[pnt["ticker"]]["today"]["xsec_predicted"] = pnt["predicted"]
+            stats[pnt["ticker"]]["today"]["xsec_residual"] = pnt["residual"]
+    return xsec, float(r2), float(r2_beta)
+
+
 def main(cot_path, raw_b3, quotes_json):
     OUT.mkdir(parents=True, exist_ok=True)
     sup = json.load(open(Path(raw_b3) / "supplement.json"))
@@ -222,52 +295,7 @@ def main(cot_path, raw_b3, quotes_json):
         ic = d_.get("industryClassification") or ""
         parts = [x.strip() for x in ic.split("/")]
         sect[tk] = {"setor": parts[0] if parts else None, "subsetor": parts[1] if len(parts) > 1 else None, "segmento": parts[2] if len(parts) > 2 else None}
-    xs = []
-    for tk, st in stats.items():
-        h = ROOT / "data" / "hist" / f"{tk}.json"
-        lev, mcap = None, None
-        if h.exists():
-            hh = json.load(open(h))
-            ltm = hh.get("ltm") or {}
-            bal = hh.get("balance") or {}
-            if not hh.get("is_financial") and ltm.get("ebitda") and ltm["ebitda"] > 0 and bal.get("net_debt") is not None:
-                lev = bal["net_debt"] / ltm["ebitda"]
-            sh = (hh.get("shares") or {}).get("outstanding")
-            if sh and st["today"]["prev_close"]:
-                mcap = st["today"]["prev_close"] * sh / (hh.get("shares_per_unit") or 1) / 1e6
-        s_ = sect.get(tk, {})
-        exporter = s_.get("setor") in ("Materiais Básicos", "Petróleo, Gás e Biocombustíveis") or tk in ("EMBJ3", "WEGE3", "SUZB3", "KLBN11", "BEEF3", "MBRF3", "SLCE3")
-        xs.append({"ticker": tk, "y": st["today"]["chg"], "beta": st["beta_down_3y"] if st["beta_down_3y"] is not None else st["beta_2y_daily"],
-                   "lev": lev, "log_mcap": math.log(mcap) if mcap else None, "exporter": 1.0 if exporter else 0.0,
-                   "financial": 1.0 if s_.get("setor") == "Financeiro" else 0.0, "state": 1.0 if tk in STATE else 0.0,
-                   "utility": 1.0 if s_.get("setor") == "Utilidade Pública" else 0.0,
-                   "consumo": 1.0 if s_.get("setor") == "Consumo Cíclico" else 0.0, "mom": st["mom_12_1"]})
-    X = pd.DataFrame(xs).set_index("ticker")
-    X["lev_c"] = X["lev"].clip(-2, 8).fillna(X["lev"].median())
-    X["log_mcap"] = X["log_mcap"].fillna(X["log_mcap"].median())
-    X["mom"] = X["mom"].fillna(0)
-    cols = ["beta", "lev_c", "log_mcap", "exporter", "financial", "state", "utility", "consumo"]
-    Xm = X.dropna(subset=["y", "beta"])
-    A = np.column_stack([np.ones(len(Xm))] + [Xm[c].values for c in cols])
-    coef, *_ = np.linalg.lstsq(A, Xm.y.values, rcond=None)
-    pred = A @ coef
-    resid = Xm.y.values - pred
-    sst = ((Xm.y - Xm.y.mean()) ** 2).sum()
-    r2 = 1 - (resid ** 2).sum() / sst
-    s2 = (resid ** 2).sum() / (len(Xm) - len(cols) - 1)
-    cov_b = s2 * np.linalg.inv(A.T @ A)
-    tstats = coef / np.sqrt(np.diag(cov_b))
-    # só beta
-    A1 = np.column_stack([np.ones(len(Xm)), Xm.beta.values])
-    c1, *_ = np.linalg.lstsq(A1, Xm.y.values, rcond=None)
-    r2_beta = 1 - ((Xm.y.values - A1 @ c1) ** 2).sum() / sst
-    xsec = {"n": int(len(Xm)), "r2": float(r2), "r2_beta_only": float(r2_beta),
-            "coef": dict(zip(["const"] + cols, map(float, coef))), "t": dict(zip(["const"] + cols, map(float, tstats))),
-            "points": [{"ticker": t, "actual": float(a), "predicted": float(p_), "residual": float(a - p_)} for t, a, p_ in zip(Xm.index, Xm.y.values, pred)]}
-    for pnt in xsec["points"]:
-        if pnt["ticker"] in stats:
-            stats[pnt["ticker"]]["today"]["xsec_predicted"] = pnt["predicted"]
-            stats[pnt["ticker"]]["today"]["xsec_residual"] = pnt["residual"]
+    xsec, r2, r2_beta = xsec_regression(stats, sect)
 
     # ------------------------------------------------ event study (mercado)
     worst = ib_ret.nsmallest(20)
@@ -525,5 +553,30 @@ def dps_history(hh, adj, events):
     return rows
 
 
+def xsec_only():
+    """Refaz só a regressão transversal a partir do que já está em data/market (sem COTAHIST): atualiza _market.json e os
+    campos xsec_predicted / xsec_residual de cada data/market/{T}.json. Uso: python pipeline/market.py --xsec-only"""
+    mk_path = OUT / "_market.json"
+    mk = json.load(open(mk_path))
+    sect = mk["sectors"]
+    docs, stats = {}, {}
+    for tk in sect:
+        pth = OUT / f"{tk}.json"
+        if not pth.exists():
+            continue
+        d = json.load(open(pth))
+        if (d.get("stats") or {}).get("today") and d["stats"]["today"].get("chg") is not None:
+            docs[tk], stats[tk] = d, d["stats"]
+    xsec, r2, r2_beta = xsec_regression(stats, sect)
+    mk["xsec"] = xsec
+    json.dump(mk, open(mk_path, "w"), ensure_ascii=False)
+    for tk, d in docs.items():
+        json.dump(d, open(OUT / f"{tk}.json", "w"), ensure_ascii=False)
+    print("xsec refeita | n:", xsec["n"], "| R²:", round(r2, 3), "| R² só beta:", round(r2_beta, 3))
+
+
 if __name__ == "__main__":
-    main(*sys.argv[1:4])
+    if len(sys.argv) > 1 and sys.argv[1] == "--xsec-only":
+        xsec_only()
+    else:
+        main(*sys.argv[1:4])

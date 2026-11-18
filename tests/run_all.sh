@@ -3,7 +3,7 @@
 #   1) pytest  — integridade CVM (data/hist), mercado (data/market) e saídas do modelo (data/model, data/app)
 #   2) node    — paridade do motor TS (lib/valuation.ts) com o Python (pipeline/model.py) em Ke 20/25/30%
 #   3) next build
-#   4) next start -p 3300 + rotas (páginas, 59 empresas, relatórios, APIs ao vivo); derruba só o servidor iniciado aqui
+#   4) next start -p 3300 + rotas (páginas, empresas da cobertura, relatórios, APIs ao vivo); derruba só o servidor iniciado aqui
 #   5) relatório em data/tests/test_report.md (+ data/tests/test_results.json; saídas brutas em data/tests/raw/)
 # Uso: bash tests/run_all.sh
 #   variáveis: PYTHON, PORT=3300, SKIP_BUILD=1 (reusa .next), B3_SUPPLEMENT=<supplement.json da B3>,
